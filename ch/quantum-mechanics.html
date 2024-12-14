@@ -330,6 +330,12 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">Stationary States</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#representations">Representations</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">Schrodinger</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">Heisenberg</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">…</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">Matrix Mechanics</a></li>
@@ -407,7 +413,12 @@ document.write(`
   \Psi_j^{A*} &amp; = \langle \Psi | A_j \rangle \\
 \end{aligned}\end{split}\]</div>
 <ul>
-<li><p>Noramlization:</p>
+<li><p>identity operator <span class="math notranslate nohighlight">\(\sum_i | A_i \rangle \langle A_i | = \mathbb{I}\)</span>, since</p>
+<div class="math notranslate nohighlight">
+\[\sum_i | A_i \rangle \langle A_i | \Psi \rangle = \sum_i | A_i \rangle \langle A_i | \Psi_j^A A_j \rangle =
+  \sum_i | A_i \rangle \delta_{ij} \Psi_j^A = \sum_i | A_i \rangle  \Psi_i^A  = | \Psi \rangle\]</div>
+</li>
+<li><p>Normalization:</p>
 <div class="math notranslate nohighlight">
 \[1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \sum_i \left| \Psi_i^A \right|^2\]</div>
 <p>with <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span> that can be interpreted as the probability of finding the system in state <span class="math notranslate nohighlight">\(|\Psi_i^a\rangle\)</span></p>
@@ -419,6 +430,7 @@ document.write(`
             &amp; = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
             &amp; = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
             &amp; = \langle \Psi | \left( \sum_i a_i | A_i \rangle \langle A_i | \right) | \Psi \rangle = \\
+            &amp; = \langle \Psi | \hat{A} | \Psi \rangle = \\
   \end{aligned}\end{split}\]</div>
 </li>
 </ul>
@@ -444,8 +456,21 @@ $$\begin{aligned}
 <h4>Stationary States<a class="headerlink" href="#stationary-states" title="Permalink to this heading">#</a></h4>
 <p>Eigenspace of the Hamiltonian operator</p>
 <div class="math notranslate nohighlight">
-\[\hat{H} |\Psi\rangle_i = E_i |\Psi\rangle_i \ ,\]</div>
-<p>with <span class="math notranslate nohighlight">\(E_i\)</span> energy. If no eigenstates with the same eigenvalue exists, then</p>
+\[\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(E_k\)</span> possible values of energy measurements. <em>If no eigenstates with the same eigenvalue exists, then…otherwise…</em>
+<em>Without external influence</em> <strong>todo</strong> <em>be more detailed!</em>, energy values of the systems are constant in time.</p>
+</div>
+<div class="section" id="representations">
+<h4>Representations<a class="headerlink" href="#representations" title="Permalink to this heading">#</a></h4>
+<div class="section" id="schrodinger">
+<h5>Schrodinger<a class="headerlink" href="#schrodinger" title="Permalink to this heading">#</a></h5>
+</div>
+<div class="section" id="heisenberg">
+<h5>Heisenberg<a class="headerlink" href="#heisenberg" title="Permalink to this heading">#</a></h5>
+</div>
+<div class="section" id="id2">
+<h5>…<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
+</div>
 </div>
 </div>
 <div class="section" id="matrix-mechanics">
@@ -524,6 +549,12 @@ $$\begin{aligned}
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">Stationary States</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#representations">Representations</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">Schrodinger</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">Heisenberg</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">…</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">Matrix Mechanics</a></li>

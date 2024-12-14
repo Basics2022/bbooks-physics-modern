@@ -53,7 +53,13 @@ $$\begin{aligned}
   \Psi_j^{A*} & = \langle \Psi | A_j \rangle \\
 \end{aligned}$$
 
-- Noramlization:
+- identity operator $\sum_i | A_i \rangle \langle A_i | = \mathbb{I}$, since
+
+  $$\sum_i | A_i \rangle \langle A_i | \Psi \rangle = \sum_i | A_i \rangle \langle A_i | \Psi_j^A A_j \rangle =
+  \sum_i | A_i \rangle \delta_{ij} \Psi_j^A = \sum_i | A_i \rangle  \Psi_i^A  = | \Psi \rangle$$
+
+
+- Normalization:
 
   $$1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \sum_i \left| \Psi_i^A \right|^2$$
 
@@ -66,6 +72,7 @@ $$\begin{aligned}
             & = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
             & = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
             & = \langle \Psi | \left( \sum_i a_i | A_i \rangle \langle A_i | \right) | \Psi \rangle = \\
+            & = \langle \Psi | \hat{A} | \Psi \rangle = \\
   \end{aligned}$$
 
 
@@ -89,9 +96,19 @@ being $\hat{H}$ the Hamiltonian operator and $|\Psi\rangle$ the wave function, a
 #### Stationary States
 Eigenspace of the Hamiltonian operator
 
-$$\hat{H} |\Psi\rangle_i = E_i |\Psi\rangle_i \ ,$$
+$$\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,$$
 
-with $E_i$ energy. If no eigenstates with the same eigenvalue exists, then
+with $E_k$ possible values of energy measurements. *If no eigenstates with the same eigenvalue exists, then...otherwise...*
+*Without external influence* **todo** *be more detailed!*, energy values of the systems are constant in time.
+
+#### Representations
+##### Schrodinger
+##### Heisenberg
+##### ...
+
+
+
+
 
 ### Matrix Mechanics
 
