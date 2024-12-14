@@ -78,11 +78,13 @@ $$\begin{aligned}
 
   since an operator $\hat{A}$ can be written as a function of its eigenvalues and eigenvectors
 
-   $$\left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
-   = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle
-   =  \sum_i a_i | A_i \rangle c_i
-   =  \sum_i \hat{A} | A_i \rangle c_i = \hat{A} \sum_i | A_i \rangle c_i = \hat{A} | \Psi \rangle \ . 
-   $$
+   $$\begin{aligned}
+   \left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
+   & = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle = \\
+   & =  \sum_i a_i | A_i \rangle c_i = \\
+   & =  \sum_i \hat{A} | A_i \rangle c_i = \\
+   & = \hat{A} \sum_i | A_i \rangle c_i = \hat{A} | \Psi \rangle \ . 
+   \end{aligned}$$
 
 
 <!--
