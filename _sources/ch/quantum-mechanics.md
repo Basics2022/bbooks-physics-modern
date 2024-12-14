@@ -103,7 +103,15 @@ with $E_k$ possible values of energy measurements. *If no eigenstates with the s
 
 Thus, exapnding the state of the system $|\Psi\rangle$ over the stationary states gives $|\Psi_k\rangle$, $|\Psi\rangle = c_k(t) |\Psi_k\rangle$, and inserting in Schrodinger equation
 
-$$i \hbar \dot{c}_k |\Psi_k\rangle = c_k \, E_k |\Psi_k\rangle$$
+$$i \hbar \dot{c}_k |\Psi_k\rangle = c_k  E_k |\Psi_k\rangle$$
+
+and exploiting orthogonality of eigenstates, a diagonal system for the amplitudes of stationary states ariese,
+
+$$i \hbar \dot{c}_k = c_k E_k \ .$$
+
+whose solution reads
+
+$$c_k(t) = c_{k,0} \exp \left[- i \frac{E_k}{\hbar} t \right]$$
 
 #### Representations
 ##### Schrodinger
