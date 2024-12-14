@@ -134,8 +134,10 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
 
   $$\begin{aligned}
   1 = \langle \Psi | \Psi \rangle (t) 
-    = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle
-    = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \ .
+    & = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle \\
+    & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \Psi(\mathbf{r}',t) \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \left| \Psi(\mathbf{r}',t) \right|^2 \, d \mathbf{r}' \\
   \end{aligned}$$
   
 
