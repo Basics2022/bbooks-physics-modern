@@ -33,7 +33,7 @@ The state of a system is described by a wave function $|\Psi\rangle$
 
 **todo**
 - properties: domain, image,...
-- unitary $1 = \langle \Psi | \Psi \rangle$
+- unitary $1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2$, for statistical interpretation of $\left| \Psi \right|^2$ as a density probability function
 
 #### Operators and Observables
 Physical **observable** quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint).
