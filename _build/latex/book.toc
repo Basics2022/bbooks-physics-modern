@@ -1,0 +1,11 @@
+\selectlanguage *{italian}
+\contentsline {chapter}{\numberline {1}Special Relativity}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}General Relativity}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Statistical Physics}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Quantum Mechanics}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Postulates of Quantum Mechanics}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Non\sphinxhyphen {}relativistic Mechanics}{9}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Statistical Interpretation}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Schrodinger Equation}{9}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Matrix Mechanics}{9}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Many\sphinxhyphen {}body problem}{9}{section.4.3}%
