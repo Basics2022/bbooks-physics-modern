@@ -31,11 +31,13 @@ Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at le
 #### Operators and Observables
 Physical **observable** quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint).
 
-Given $\hat{A}$ and the set of its eigenvectors $\{ |A_i \rangle \}$ (**todo** *continuous or discrete spectrum..., need to treat this difference quite in details*), with associated eigenvalues $\{ a_i \}_i$
+Given $\hat{A}$ and the set of its eigenvectors $\{ |A_i \rangle \}_i$ (**todo** *continuous or discrete spectrum..., need to treat this difference quite in details*), with associated eigenvalues $\{ a_i \}_i$
 
 $$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
 
-$$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle $$
+$$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A $$
+
+$$\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = |Psi_i^A|^2$$
 
 $$\begin{aligned}
   \langle A_j| \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle 
