@@ -96,10 +96,53 @@ $$\begin{aligned}
 
 #### Space Representation
 
-Space operator $\hat{\mathbf{r}}$ has eigenvalues $\mathbf{r}$ identifying the possible measurements of the position
+**Position operator** $\hat{\mathbf{r}}$ has eigenvalues $\mathbf{r}$ identifying the possible measurements of the position
 
-$$\hat{\mathbf{r}} | \Psi \rangle = \mathbf{r} | \Psi \rangle \ ,$$
+$$\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,$$
 
+being $\mathbf{r}$ the result of the measurement (position in space, mathematically it could be a vector), and $| \mathbf{r} \rangle$ the state function corresponding to the measurement $\mathbf{r}$ of the position.
+
+- Result of measurement, $\mathbf{r}$, is a position in space. As an example, it could be a point in an Euclidean space $P \in E^n$. It could be written using properties of Dirac's delta "function"
+
+  $$
+    \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
+  $$
+
+- Projection of wave function over eigenstates of position operator
+
+  $$\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle(t) = \Psi(\mathbf{r}, t)
+  & = \int_{\mathbf{r}'} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle (t) d \mathbf{r}' = \\
+  & = \langle \mathbf{r} | \underbrace{\left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \right)}_{= \hat{\mathbf{1}}} | \Psi \rangle (t) \ .
+  \end{aligned}$$
+
+- having used orthogonality (**todo** *why? provide definition and examples of operators with continuous spectrum*)
+
+  $$\langle \mathbf{r}' | \mathbf{r} \rangle = \delta(\mathbf{r}' - \mathbf{r})$$
+
+- Expansion of a state function $|\Psi\rangle (t)$ over the basis of the position operator
+
+  $$\begin{aligned}
+  | \Psi \rangle (t) = \hat{\mathbf{1}} | \Psi \rangle(t) 
+    = \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle(t) 
+    = \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle(t) \, d \mathbf{r}' \ .
+  \end{aligned}$$
+
+- Unitariety and probability density
+
+  $$\begin{aligned}
+  1 = \langle \Psi | \Psi \rangle (t) 
+    = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle
+    = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \ .
+  \end{aligned}$$
+  
+
+- Average value of the operator
+
+$$\bar{\mathbf{r}} = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \langle \Psi | \mathbf{r} | \Psi \rangle
+= \int_{\mathbf{r}} \rho(\mathbf{r}) \mathbf{r} d \mathbf{r} $$
 
 #### Momentum Representation
 

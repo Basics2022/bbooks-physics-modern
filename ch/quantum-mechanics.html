@@ -454,9 +454,52 @@ $$\begin{aligned}
 </div>
 <div class="section" id="space-representation">
 <h4>Space Representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h4>
-<p>Space operator <span class="math notranslate nohighlight">\(\hat{\mathbf{r}}\)</span> has eigenvalues <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> identifying the possible measurements of the position</p>
+<p><strong>Position operator</strong> <span class="math notranslate nohighlight">\(\hat{\mathbf{r}}\)</span> has eigenvalues <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> identifying the possible measurements of the position</p>
 <div class="math notranslate nohighlight">
-\[\hat{\mathbf{r}} | \Psi \rangle = \mathbf{r} | \Psi \rangle \ ,\]</div>
+\[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> the result of the measurement (position in space, mathematically it could be a vector), and <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> the state function corresponding to the measurement <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> of the position.</p>
+<ul>
+<li><p>Result of measurement, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span>, is a position in space. As an example, it could be a point in an Euclidean space <span class="math notranslate nohighlight">\(P \in E^n\)</span>. It could be written using properties of Dirac’s delta «function»</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
+  \]</div>
+</li>
+<li><p>Projection of wave function over eigenstates of position operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle(t) = \Psi(\mathbf{r}, t)
+  &amp; = \int_{\mathbf{r}'} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle (t) d \mathbf{r}' = \\
+  &amp; = \langle \mathbf{r} | \underbrace{\left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \right)}_{= \hat{\mathbf{1}}} | \Psi \rangle (t) \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p>having used orthogonality (<strong>todo</strong> <em>why? provide definition and examples of operators with continuous spectrum</em>)</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r}' | \mathbf{r} \rangle = \delta(\mathbf{r}' - \mathbf{r})\]</div>
+</li>
+<li><p>Expansion of a state function <span class="math notranslate nohighlight">\(|\Psi\rangle (t)\)</span> over the basis of the position operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  | \Psi \rangle (t) = \hat{\mathbf{1}} | \Psi \rangle(t) 
+    = \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle(t) 
+    = \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle(t) \, d \mathbf{r}' \ .
+  \end{aligned}\]</div>
+</li>
+<li><p>Unitariety and probability density</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  1 = \langle \Psi | \Psi \rangle (t) 
+    = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle
+    = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \ .
+  \end{aligned}\]</div>
+</li>
+<li><p>Average value of the operator</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\bar{\mathbf{r}} = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \langle \Psi | \mathbf{r} | \Psi \rangle
+= \int_{\mathbf{r}} \rho(\mathbf{r}) \mathbf{r} d \mathbf{r} \]</div>
 </div>
 <div class="section" id="momentum-representation">
 <h4>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
