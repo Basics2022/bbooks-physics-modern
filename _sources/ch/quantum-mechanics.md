@@ -140,6 +140,7 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
     & = \int_{\mathbf{r}'} \left| \Psi(\mathbf{r}',t) \right|^2 \, d \mathbf{r}' \\
   \end{aligned}$$
   
+  and thus $\left|\Psi(\mathbf{r},t)\right|^2$ can be interpreted as the **probability density function** of measuring position of the system equal to $\mathbf{r}'$.
 
 - Average value of the operator
 
