@@ -65,6 +65,7 @@ $$\begin{aligned}
     \bar{A}_{\Psi} & = \sum_i a_i |\Psi_i^A|^2 = \\
             & = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
             & = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
+            & = \langle \Psi | \left( \sum_i a_i | A_i \rangle \langle A_i | \right) | \Psi \rangle = \\
   \end{aligned}$$
 
 
