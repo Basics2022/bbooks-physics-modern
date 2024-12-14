@@ -131,6 +131,8 @@ $$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right
 
 $$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
 
+$$\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \langle \Psi_n | \Psi \rangle$$
+
 $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 
 
