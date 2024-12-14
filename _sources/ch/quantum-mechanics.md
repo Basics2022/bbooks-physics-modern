@@ -172,7 +172,9 @@ $$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
 
   that in Cartesian coordinates reads
 
-  $$i \hbar \partial_j p_k = p_j p_k$$
+  $$i \hbar \partial_j p_k = p p_k$$
+
+  $$p_k = p_{k,0} \exp \left[ - i \frac{p}{\hbar} r_k \right]$$
 
 
 
