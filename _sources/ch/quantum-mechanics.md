@@ -38,7 +38,7 @@ $$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
 $$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle $$
 
 $$\begin{aligned}
-  \langle A_j| \Psi \rangle = \langel A_j | A_i \rangle \langle A_i | \Psi \rangle 
+  \langle A_j| \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle 
 \end{aligned}$$
 
 
