@@ -123,10 +123,13 @@ $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-
 ##### ...
 
 
-
-
-
 ### Matrix Mechanics
+
+#### Attualization of 1925 papers
+
+$$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
+
+
 
 ## Many-body problem
 Wave function with symmetries: Fermions and Bosons
