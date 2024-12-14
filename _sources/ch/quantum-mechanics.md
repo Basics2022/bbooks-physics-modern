@@ -15,8 +15,9 @@ holds for $\forall \mathbf{u} \in U, \ \mathbf{v} \in V$.
 
 ```
 
+(quantum-mechanics:math:operators:self-adjoint)=
 ```{prf:definition} Hermitian (self-adjoint) operator
-If $\hat{A}: U \rightarrow U$, it is a self-adjoint operator is $\hat{A}^* = \hat{A}$.
+If $\hat{A}: U \rightarrow U$, it is a self-adjoint operator if $\hat{A}^* = \hat{A}$.
 ```
 Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
 
@@ -28,7 +29,9 @@ Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at le
 ## Non-relativistic Mechanics
 ### Statistical Interpretation
 #### Operators and Observables
-Physical observable quantities are represented by Hermitian operators
+Physical observable quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint)
+
+
 
 #### Space Representation
 #### Momentum Representation
