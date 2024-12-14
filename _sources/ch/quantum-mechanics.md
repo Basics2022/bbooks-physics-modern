@@ -150,7 +150,7 @@ $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 
 ...to find the canonical commutation relation,
 
-$$[ \hat{mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \hat{\mathbb{I}} \ .$$
+$$[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \hat{\mathbb{I}} \ .$$
 
 
 
