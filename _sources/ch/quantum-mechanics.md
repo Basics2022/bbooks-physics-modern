@@ -33,6 +33,10 @@ Physical **observable** quantities are represented by [Hermitian operators](quan
 
 Given $\hat{A}$ and the set of its eigenvectors $\{ |A_i \rangle \}$ (**todo** *continuous or discrete spectrum..., need to treat this difference quite in details*), with associated eigenvalues $\{ a_i \}_i$
 
+$$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
+
+$$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle $$
+
 $$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle $$
 
 
