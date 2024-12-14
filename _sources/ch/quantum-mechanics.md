@@ -1,6 +1,23 @@
 (quantum-mechanics)=
 # Quantum Mechanics
 
+## Mathematical tools for quantum mechanics
+
+```{prf:definition} Operator
+```
+
+```{prf:definition} Adjoint operator
+Given an operator $\hat{A}: U \rightarrow V$, its self-adjoint $\hat{A}^*: V \rightarrow U$ is the operator s.t.
+
+$$(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}$$
+
+holds for $\forall \mathbf{u} \in U, \ \mathbf{v} \in V$.
+
+```
+
+```{prf:definition} Hermitian (self-adjoint) operator
+```
+
 ## Postulates of Quantum Mechanics
 - ...
 - Canonical Commutation Relation (CCR) *and Canonical Anti-Commutation Relation...*
@@ -8,7 +25,8 @@
 ## Non-relativistic Mechanics
 ### Statistical Interpretation
 #### Operators and Observables
-Physical observable quantities 
+Physical observable quantities are represented by Hermitian operators
+
 #### Space Representation
 #### Momentum Representation
 
@@ -23,7 +41,7 @@ Eigenspace of the Hamiltonian operator
 
 $$\hat{H} |\Psi\rangle_i = E_i |\Psi\rangle_i \ ,$$
 
-with $E_i$ energy.
+with $E_i$ energy. If no eigenstates with the same eigenvalue exists, then
 
 ### Matrix Mechanics
 
