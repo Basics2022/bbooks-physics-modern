@@ -16,7 +16,10 @@ holds for $\forall \mathbf{u} \in U, \ \mathbf{v} \in V$.
 ```
 
 ```{prf:definition} Hermitian (self-adjoint) operator
+If $\hat{A}: U \rightarrow U$, it is a self-adjoint operator is $\hat{A}^* = \hat{A}$.
 ```
+Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
+
 
 ## Postulates of Quantum Mechanics
 - ...
