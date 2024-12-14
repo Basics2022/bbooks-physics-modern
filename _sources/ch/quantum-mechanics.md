@@ -129,9 +129,9 @@ $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-
 
 $$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
-$$\langle \Psi | \hat{X} | \Psi \rangle $$
+$$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
 
-$$\langle \Psi | \hat{P} | \Psi \rangle $$
+$$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 
 
 
