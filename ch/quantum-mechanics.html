@@ -414,7 +414,11 @@ document.write(`
 </li>
 <li><p>Expected value of the physical quantity in the a state <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span>, with possible values <span class="math notranslate nohighlight">\(a_i\)</span> with probability <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span></p>
 <div class="math notranslate nohighlight">
-\[\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \]</div>
+\[\begin{split}\begin{aligned}
+    \bar{A}_{\Psi} &amp; = \sum_i a_i |\Psi_i^A|^2 = \\
+            &amp; = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
+            &amp; = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
+  \end{aligned}\end{split}\]</div>
 </li>
 </ul>
 <!--

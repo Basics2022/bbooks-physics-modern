@@ -61,7 +61,11 @@ $$\begin{aligned}
 
 - Expected value of the physical quantity in the a state $|\Psi\rangle$, with possible values $a_i$ with probability $|\Psi_i^A|^2$
 
-  $$\bar{A} = \sum_i a_i |\Psi_i^A|^2 = $$
+  $$\begin{aligned}
+    \bar{A}_{\Psi} & = \sum_i a_i |\Psi_i^A|^2 = \\
+            & = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
+            & = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
+  \end{aligned}$$
 
 
 
