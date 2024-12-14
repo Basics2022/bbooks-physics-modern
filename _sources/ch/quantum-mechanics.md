@@ -156,6 +156,10 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
 
 #### Momentum Representation
 
+**Momentum operator** as the limit of...**todo** *prove the expression of the momentum operator as the limit of the generator of translation*
+
+$$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \lange \mathbf{r} | $$
+
 ### Schrodinger Equation
 
 $$i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle $$
