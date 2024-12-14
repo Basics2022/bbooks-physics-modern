@@ -133,6 +133,9 @@ $$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
 
 $$\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \langle \Psi_n | \Psi \rangle$$
 
+$$X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle $$
+
+
 $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 
 
