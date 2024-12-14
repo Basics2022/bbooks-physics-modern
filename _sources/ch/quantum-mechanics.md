@@ -80,7 +80,7 @@ $$\begin{aligned}
 
    $$\left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
    = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle
-   = \left( \sum_i a_i | A_i \rangle c_i
+   =  \sum_i a_i | A_i \rangle c_i
    $$
 
 
