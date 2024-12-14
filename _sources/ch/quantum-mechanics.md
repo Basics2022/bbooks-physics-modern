@@ -76,6 +76,13 @@ $$\begin{aligned}
   \end{aligned}$$
 
 
+  since an operator $\hat{A}$ can be written as a function of its eigenvalues and eigenvectors
+
+   $$\left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
+   = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle
+   = \left( \sum_i a_i | A_i \rangle c_i
+   $$
+
 
 <!--
 $$\begin{aligned}
@@ -126,6 +133,7 @@ $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-
 ### Matrix Mechanics
 
 #### Attualization of 1925 papers
+
 
 $$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
