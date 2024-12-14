@@ -44,15 +44,24 @@ $$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
 
 $$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A $$
 
+$$\langle A_j | \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle = \Psi_j^A $$
+
+and thus
+
+$$\begin{aligned}
+  \Psi_j^A    & = \langle A_j  | \Psi \rangle \\
+  \Psi_j^{A*} & = \langle \Psi | A_j \rangle \\
+\end{aligned}$$
+
 - Noramlization:
 
-  $$1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2$$
+  $$1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \sum_i \left| \Psi_i^A \right|^2$$
 
   with $|\Psi_i^A|^2$ that can be interpreted as the probability of finding the system in state $|\Psi_i^a\rangle$
 
 - Expected value of the physical quantity in the a state $|\Psi\rangle$, with possible values $a_i$ with probability $|\Psi_i^A|^2$
 
-  $$\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \langle \Psi_i^A | \Psi_i^A \rangle = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle$$
+  $$\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \Psi_i^{A*} \Psi_i^A = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle$$
 
 
 

@@ -398,15 +398,23 @@ document.write(`
 \[\hat{A} |A_i \rangle = a_i |A_i\rangle\]</div>
 <div class="math notranslate nohighlight">
 \[| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A \]</div>
+<div class="math notranslate nohighlight">
+\[\langle A_j | \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle = \Psi_j^A \]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \Psi_j^A    &amp; = \langle A_j  | \Psi \rangle \\
+  \Psi_j^{A*} &amp; = \langle \Psi | A_j \rangle \\
+\end{aligned}\end{split}\]</div>
 <ul>
 <li><p>Noramlization:</p>
 <div class="math notranslate nohighlight">
-\[1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2\]</div>
+\[1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \sum_i \left| \Psi_i^A \right|^2\]</div>
 <p>with <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span> that can be interpreted as the probability of finding the system in state <span class="math notranslate nohighlight">\(|\Psi_i^a\rangle\)</span></p>
 </li>
 <li><p>Expected value of the physical quantity in the a state <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span>, with possible values <span class="math notranslate nohighlight">\(a_i\)</span> with probability <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span></p>
 <div class="math notranslate nohighlight">
-\[\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \langle \Psi_i^A | \Psi_i^A \rangle = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle\]</div>
+\[\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \Psi_i^{A*} \Psi_i^A = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle\]</div>
 </li>
 </ul>
 <!--
