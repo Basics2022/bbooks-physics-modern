@@ -148,7 +148,8 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
   \bar{\mathbf{r}} & = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
   & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \ | \hat{\mathbf{r}} | \ \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'' \\
   & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} |  \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
-  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' |  \mathbf{r}'' \rangle \mathbf{r}'' \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \underbrace{\langle \mathbf{r}' |  \mathbf{r}'' \rangle}_{=\delta(\mathbf{r}'-\mathbf{r}'')} \mathbf{r}'' \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \mathbf{r}' \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
   \end{aligned}$$
 
 #### Momentum Representation
