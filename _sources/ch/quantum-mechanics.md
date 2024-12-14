@@ -101,7 +101,7 @@ $$\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,$$
 with $E_k$ possible values of energy measurements. *If no eigenstates with the same eigenvalue exists, then...otherwise...*
 *Without external influence* **todo** *be more detailed!*, energy values and eigenstates of the systems are constant in time.
 
-Thus, exapnding the state of the system $|\Psi\rangle$ over the stationary states gives $|\Psi_k\rangle$, $|\Psi\rangle = c_k(t) |\Psi_k\rangle$, and inserting in Schrodinger equation
+Thus, exapnding the state of the system $|\Psi\rangle$ over the stationary states gives $|\Psi_k\rangle$, $|\Psi\rangle = |\Psi_k\rangle c_k(t)$, and inserting in Schrodinger equation
 
 $$i \hbar \dot{c}_k |\Psi_k\rangle = c_k  E_k |\Psi_k\rangle$$
 
@@ -115,7 +115,7 @@ $$c_k(t) = c_{k,0} \exp \left[- i \frac{E_k}{\hbar} t \right]$$
 
 Thus the state of the system evolves like a superposition of monochromatic waves with frequencies $\omega_k = \frac{E_k}{\hbar}$,
 
-$$| \Psi \rangle = c_k(t) | \Psi_k \rangle = c_{k,0} | \Psi_k \rangle \exp\left[-i \frac{E_k}{\hbar} t \right] \ .$$
+$$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right] \ .$$
 
 #### Representations
 ##### Schrodinger
