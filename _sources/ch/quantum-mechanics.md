@@ -112,7 +112,7 @@ being $\hat{H}$ the Hamiltonian operator and $|\Psi\rangle$ the wave function, a
 #### Stationary States
 Eigenspace of the Hamiltonian operator
 
-$$\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,$$
+$$\hat{H} |\Psi_k \rangle = E_k |\Psi_k \rangle \ ,$$
 
 with $E_k$ possible values of energy measurements. *If no eigenstates with the same eigenvalue exists, then...otherwise...*
 *Without external influence* **todo** *be more detailed!*, energy values and eigenstates of the systems are constant in time.
