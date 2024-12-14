@@ -1,3 +1,3 @@
 (relativity-general)=
-# General Relativity
+# Relatività generale
 

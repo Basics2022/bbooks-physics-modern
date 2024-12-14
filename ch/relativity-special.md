@@ -1,2 +1,2 @@
 (relativity-special)=
-# Relatività speciale
+# Special Relativity
