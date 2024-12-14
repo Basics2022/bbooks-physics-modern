@@ -166,6 +166,8 @@ $$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
 
   $$\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle$$
 
+  and thus the eigenvectors in space base $\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle$ are the solution of the differential equation
+
 
 
 ### Schrodinger Equation
