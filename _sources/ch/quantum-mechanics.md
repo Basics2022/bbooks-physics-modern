@@ -36,7 +36,7 @@ The state of a system is described by a wave function $|\Psi\rangle$
 - unitary $1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2$, for statistical interpretation of $\left| \Psi \right|^2$ as a density probability function
 
 #### Operators and Observables
-Physical **observable** quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint).
+Physical **observable** quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint). Possible outcomes of measurement are the eigenvalues of the operator
 
 Given $\hat{A}$ and the set of its eigenvectors $\{ |A_i \rangle \}_i$ (**todo** *continuous or discrete spectrum..., need to treat this difference quite in details*), with associated eigenvalues $\{ a_i \}_i$
 
@@ -44,12 +44,23 @@ $$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
 
 $$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A $$
 
-$$1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2$$
+- Noramlization:
 
+  $$1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2$$
+
+  with $|\Psi_i^A|^2$ that can be interpreted as the probability of finding the system in state $|\Psi_i^a\rangle$
+
+- Expected value of the physical quantity in the a state $|\Psi\rangle$, with possible values $a_i$ with probability $|\Psi_i^A|^2$
+
+  $$\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \langle \Psi_i^A | \Psi_i^A \rangle = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle$$
+
+
+
+<!--
 $$\begin{aligned}
   \langle A_j| \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle 
 \end{aligned}$$
-
+-->
 
 
 #### Space Representation

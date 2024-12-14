@@ -392,18 +392,28 @@ document.write(`
 </div>
 <div class="section" id="operators-and-observables">
 <h4>Operators and Observables<a class="headerlink" href="#operators-and-observables" title="Permalink to this heading">#</a></h4>
-<p>Physical <strong>observable</strong> quantities are represented by <a class="reference internal" href="#quantum-mechanics-math-operators-self-adjoint"><span class="std std-ref">Hermitian operators</span></a>.</p>
+<p>Physical <strong>observable</strong> quantities are represented by <a class="reference internal" href="#quantum-mechanics-math-operators-self-adjoint"><span class="std std-ref">Hermitian operators</span></a>. Possible outcomes of measurement are the eigenvalues of the operator</p>
 <p>Given <span class="math notranslate nohighlight">\(\hat{A}\)</span> and the set of its eigenvectors <span class="math notranslate nohighlight">\(\{ |A_i \rangle \}_i\)</span> (<strong>todo</strong> <em>continuous or discrete spectrum…, need to treat this difference quite in details</em>), with associated eigenvalues <span class="math notranslate nohighlight">\(\{ a_i \}_i\)</span></p>
 <div class="math notranslate nohighlight">
 \[\hat{A} |A_i \rangle = a_i |A_i\rangle\]</div>
 <div class="math notranslate nohighlight">
 \[| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A \]</div>
+<ul>
+<li><p>Noramlization:</p>
 <div class="math notranslate nohighlight">
 \[1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2\]</div>
+<p>with <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span> that can be interpreted as the probability of finding the system in state <span class="math notranslate nohighlight">\(|\Psi_i^a\rangle\)</span></p>
+</li>
+<li><p>Expected value of the physical quantity in the a state <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span>, with possible values <span class="math notranslate nohighlight">\(a_i\)</span> with probability <span class="math notranslate nohighlight">\(|\Psi_i^A|^2\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{aligned}
+\[\bar{A} = \sum_i a_i |\Psi_i^A|^2 = \sum_i a_i \langle \Psi_i^A | \Psi_i^A \rangle = \sum_i \langle \Psi_i^A | a_i \Psi_i^A \rangle\]</div>
+</li>
+</ul>
+<!--
+$$\begin{aligned}
   \langle A_j| \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle 
-\end{aligned}\]</div>
+\end{aligned}$$
+-->
 </div>
 <div class="section" id="space-representation">
 <h4>Space Representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h4>
