@@ -1,3 +1,3 @@
 (statistical-mechanics)=
-# Meccanica statistica
+# Statistical Physics
 
