@@ -137,8 +137,7 @@ $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-
 
 #### Attualization of 1925 papers
 
-
-$$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
+$$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
 $$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
 
@@ -148,6 +147,10 @@ $$X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle $$
 
 
 $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
+
+...to find the canonical commutation relation,
+
+$$[ \hat{mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \hat{\mathbb{I}} \ .$$
 
 
 
