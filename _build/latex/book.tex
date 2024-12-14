@@ -147,6 +147,38 @@ Please check out the Github repo of the project, \sphinxhref{https://github.com/
 \chapter{Quantum Mechanics}
 \label{\detokenize{ch/quantum-mechanics:quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics:id1}}\label{\detokenize{ch/quantum-mechanics::doc}}
 
+\section{Mathematical tools for quantum mechanics}
+\label{\detokenize{ch/quantum-mechanics:mathematical-tools-for-quantum-mechanics}}\label{ch/quantum-mechanics:definition-0}
+\begin{sphinxadmonition}{note}{Definition 1 (Operator)}
+
+
+\end{sphinxadmonition}
+\label{ch/quantum-mechanics:definition-1}
+\begin{sphinxadmonition}{note}{Definition 2 (Adjoint operator)}
+
+
+
+\sphinxAtStartPar
+Given an operator \(\hat{A}: U \rightarrow V\), its self\sphinxhyphen{}adjoint \(\hat{A}^*: V \rightarrow U\) is the operator s.t.
+\begin{equation*}
+\begin{split}(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+holds for \(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\).
+\end{sphinxadmonition}
+\label{ch/quantum-mechanics:definition-2}
+\begin{sphinxadmonition}{note}{Definition 3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
+
+
+
+\sphinxAtStartPar
+If \(\hat{A}: U \rightarrow U\), it is a self\sphinxhyphen{}adjoint operator if \(\hat{A}^* = \hat{A}\).
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Self\sphinxhyphen{}adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
+
+
 \section{Postulates of Quantum Mechanics}
 \label{\detokenize{ch/quantum-mechanics:postulates-of-quantum-mechanics}}\begin{itemize}
 \item {} 
@@ -155,7 +187,7 @@ Please check out the Github repo of the project, \sphinxhref{https://github.com/
 
 \item {} 
 \sphinxAtStartPar
-Canonical Commutation Relation (CCR) \sphinxstyleemphasis{and Canonical Anti\sphinxhyphen{}Commutation Realtion…}
+Canonical Commutation Relation (CCR) \sphinxstyleemphasis{and Canonical Anti\sphinxhyphen{}Commutation Relation…}
 
 \end{itemize}
 
@@ -166,13 +198,153 @@ Canonical Commutation Relation (CCR) \sphinxstyleemphasis{and Canonical Anti\sph
 \subsection{Statistical Interpretation}
 \label{\detokenize{ch/quantum-mechanics:statistical-interpretation}}
 
+\subsubsection{Wave function}
+\label{\detokenize{ch/quantum-mechanics:wave-function}}
+\sphinxAtStartPar
+The state of a system is described by a wave function \(|\Psi\rangle\)
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+properties: domain, image,…
+
+\item {} 
+\sphinxAtStartPar
+unitary \(1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2\), for statistical interpretation of \(\left| \Psi \right|^2\) as a density probability function
+
+\end{itemize}
+
+
+\subsubsection{Operators and Observables}
+\label{\detokenize{ch/quantum-mechanics:operators-and-observables}}
+\sphinxAtStartPar
+Physical \sphinxstylestrong{observable} quantities are represented by {\hyperref[\detokenize{ch/quantum-mechanics:quantum-mechanics-math-operators-self-adjoint}]{\sphinxcrossref{\DUrole{std,std-ref}{Hermitian operators}}}}. Possible outcomes of measurement are the eigenvalues of the operator
+
+\sphinxAtStartPar
+Given \(\hat{A}\) and the set of its eigenvectors \(\{ |A_i \rangle \}_i\) (\sphinxstylestrong{todo} \sphinxstyleemphasis{continuous or discrete spectrum…, need to treat this difference quite in details}), with associated eigenvalues \(\{ a_i \}_i\)
+\begin{equation*}
+\begin{split}\hat{A} |A_i \rangle = a_i |A_i\rangle\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle A_j | \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle = \Psi_j^A \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Psi_j^A    & = \langle A_j  | \Psi \rangle \\
+  \Psi_j^{A*} & = \langle \Psi | A_j \rangle \\
+\end{aligned}\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+identity operator \(\sum_i | A_i \rangle \langle A_i | = \mathbb{I}\), since
+\begin{equation*}
+\begin{split}\sum_i | A_i \rangle \langle A_i | \Psi \rangle = \sum_i | A_i \rangle \langle A_i | \Psi_j^A A_j \rangle =
+  \sum_i | A_i \rangle \delta_{ij} \Psi_j^A = \sum_i | A_i \rangle  \Psi_i^A  = | \Psi \rangle\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Normalization:
+\begin{equation*}
+\begin{split}1 =\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \sum_i \left| \Psi_i^A \right|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(|\Psi_i^A|^2\) that can be interpreted as the probability of finding the system in state \(|\Psi_i^a\rangle\)
+
+\item {} 
+\sphinxAtStartPar
+Expected value of the physical quantity in the a state \(|\Psi\rangle\), with possible values \(a_i\) with probability \(|\Psi_i^A|^2\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \bar{A}_{\Psi} & = \sum_i a_i |\Psi_i^A|^2 = \\
+            & = \sum_i a_i \Psi_i^{A*} \Psi_i^A =  \\ 
+            & = \sum_i a_i \langle \Psi | A_i \rangle \langle A_i | \Psi \rangle = \\
+            & = \langle \Psi | \left( \sum_i a_i | A_i \rangle \langle A_i | \right) | \Psi \rangle = \\
+            & = \langle \Psi | \hat{A} | \Psi \rangle = \\
+  \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+
+
+\subsubsection{Space Representation}
+\label{\detokenize{ch/quantum-mechanics:space-representation}}
+
+\subsubsection{Momentum Representation}
+\label{\detokenize{ch/quantum-mechanics:momentum-representation}}
+
 \subsection{Schrodinger Equation}
 \label{\detokenize{ch/quantum-mechanics:schrodinger-equation}}\begin{equation*}
 \begin{split}i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle \end{split}
 \end{equation*}
+\sphinxAtStartPar
+being \(\hat{H}\) the Hamiltonian operator and \(|\Psi\rangle\) the wave function, as a function of time \(t\) as an independent variable.
+
+
+\subsubsection{Stationary States}
+\label{\detokenize{ch/quantum-mechanics:stationary-states}}
+\sphinxAtStartPar
+Eigenspace of the Hamiltonian operator
+\begin{equation*}
+\begin{split}\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(E_k\) possible values of energy measurements. \sphinxstyleemphasis{If no eigenstates with the same eigenvalue exists, then…otherwise…}
+\sphinxstyleemphasis{Without external influence} \sphinxstylestrong{todo} \sphinxstyleemphasis{be more detailed!}, energy values and eigenstates of the systems are constant in time.
+
+\sphinxAtStartPar
+Thus, exapnding the state of the system \(|\Psi\rangle\) over the stationary states gives \(|\Psi_k\rangle\), \(|\Psi\rangle = |\Psi_k\rangle c_k(t)\), and inserting in Schrodinger equation
+\begin{equation*}
+\begin{split}i \hbar \dot{c}_k |\Psi_k\rangle = c_k  E_k |\Psi_k\rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and exploiting orthogonality of eigenstates, a diagonal system for the amplitudes of stationary states ariese,
+\begin{equation*}
+\begin{split}i \hbar \dot{c}_k = c_k E_k \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution reads
+\begin{equation*}
+\begin{split}c_k(t) = c_{k,0} \exp \left[- i \frac{E_k}{\hbar} t \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the state of the system evolves like a superposition of monochromatic waves with frequencies \(\omega_k = \frac{E_k}{\hbar}\),
+\begin{equation*}
+\begin{split}| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right] \ .\end{split}
+\end{equation*}
+
+\subsubsection{Representations}
+\label{\detokenize{ch/quantum-mechanics:representations}}
+
+\paragraph{Schrodinger}
+\label{\detokenize{ch/quantum-mechanics:schrodinger}}
+
+\paragraph{Heisenberg}
+\label{\detokenize{ch/quantum-mechanics:heisenberg}}
+
+\paragraph{…}
+\label{\detokenize{ch/quantum-mechanics:id2}}
 
 \subsection{Matrix Mechanics}
 \label{\detokenize{ch/quantum-mechanics:matrix-mechanics}}
+
+\subsubsection{Attualization of 1925 papers}
+\label{\detokenize{ch/quantum-mechanics:attualization-of-1925-papers}}\begin{equation*}
+\begin{split}|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \langle \Psi_n | \Psi \rangle\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle\end{split}
+\end{equation*}
 
 \section{Many\sphinxhyphen{}body problem}
 \label{\detokenize{ch/quantum-mechanics:many-body-problem}}
@@ -184,6 +356,18 @@ Wave function with symmetries: Fermions and Bosons
 
 
 
+\renewcommand{\indexname}{Proof Index}
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\bigletter{definition\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{definition-0}}
+\indexspace
+\bigletter{definition\sphinxhyphen{}1}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}1}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{definition-1}}
+\indexspace
+\bigletter{definition\sphinxhyphen{}2}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}2}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{definition-2}}
+\end{sphinxtheindex}
 
 \renewcommand{\indexname}{Indice}
 \printindex
