@@ -10,14 +10,15 @@
 \contentsline {subsubsection}{Wave function}{10}{subsubsection*.3}%
 \contentsline {subsubsection}{Operators and Observables}{10}{subsubsection*.4}%
 \contentsline {subsubsection}{Space Representation}{11}{subsubsection*.5}%
-\contentsline {subsubsection}{Momentum Representation}{11}{subsubsection*.6}%
-\contentsline {subsection}{\numberline {4.3.2}Schrodinger Equation}{11}{subsection.4.3.2}%
-\contentsline {subsubsection}{Stationary States}{11}{subsubsection*.7}%
-\contentsline {subsubsection}{Representations}{12}{subsubsection*.8}%
-\contentsline {paragraph}{Schrodinger}{12}{paragraph*.9}%
-\contentsline {paragraph}{Heisenberg}{12}{paragraph*.10}%
-\contentsline {paragraph}{…}{12}{paragraph*.11}%
-\contentsline {subsection}{\numberline {4.3.3}Matrix Mechanics}{12}{subsection.4.3.3}%
-\contentsline {subsubsection}{Attualization of 1925 papers}{12}{subsubsection*.12}%
-\contentsline {section}{\numberline {4.4}Many\sphinxhyphen {}body problem}{12}{section.4.4}%
-\contentsline {chapter}{Proof Index}{13}{section*.13}%
+\contentsline {subsubsection}{Momentum Representation}{12}{subsubsection*.6}%
+\contentsline {subsubsection}{From position to momentum representation}{13}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {4.3.2}Schrodinger Equation}{13}{subsection.4.3.2}%
+\contentsline {subsubsection}{Stationary States}{13}{subsubsection*.8}%
+\contentsline {subsubsection}{Representations}{14}{subsubsection*.9}%
+\contentsline {paragraph}{Schrodinger}{14}{paragraph*.10}%
+\contentsline {paragraph}{Heisenberg}{14}{paragraph*.11}%
+\contentsline {paragraph}{…}{14}{paragraph*.12}%
+\contentsline {subsection}{\numberline {4.3.3}Matrix Mechanics}{14}{subsection.4.3.3}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{14}{subsubsection*.13}%
+\contentsline {section}{\numberline {4.4}Many\sphinxhyphen {}body problem}{14}{section.4.4}%
+\contentsline {chapter}{Proof Index}{15}{section*.14}%

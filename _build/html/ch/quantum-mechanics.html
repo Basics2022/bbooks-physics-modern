@@ -326,6 +326,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">Operators and Observables</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">Space Representation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">Momentum Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">From position to momentum representation</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">
@@ -435,6 +436,15 @@ document.write(`
             &amp; = \langle \Psi | \left( \sum_i a_i | A_i \rangle \langle A_i | \right) | \Psi \rangle = \\
             &amp; = \langle \Psi | \hat{A} | \Psi \rangle = \\
   \end{aligned}\end{split}\]</div>
+<p>since an operator <span class="math notranslate nohighlight">\(\hat{A}\)</span> can be written as a function of its eigenvalues and eigenvectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   \left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
+   &amp; = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle = \\
+   &amp; =  \sum_i a_i | A_i \rangle c_i = \\
+   &amp; =  \sum_i \hat{A} | A_i \rangle c_i = \\
+   &amp; = \hat{A} \sum_i | A_i \rangle c_i = \hat{A} | \Psi \rangle \ . 
+   \end{aligned}\end{split}\]</div>
 </li>
 </ul>
 <!--
@@ -445,9 +455,108 @@ $$\begin{aligned}
 </div>
 <div class="section" id="space-representation">
 <h4>Space Representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h4>
+<p><strong>Position operator</strong> <span class="math notranslate nohighlight">\(\hat{\mathbf{r}}\)</span> has eigenvalues <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> identifying the possible measurements of the position</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> the result of the measurement (position in space, mathematically it could be a vector), and <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> the state function corresponding to the measurement <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> of the position.</p>
+<ul>
+<li><p>Result of measurement, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span>, is a position in space. As an example, it could be a point in an Euclidean space <span class="math notranslate nohighlight">\(P \in E^n\)</span>. It could be written using properties of Dirac’s delta «function»</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
+  \]</div>
+</li>
+<li><p>Projection of wave function over eigenstates of position operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle(t) = \Psi(\mathbf{r}, t)
+  &amp; = \int_{\mathbf{r}'} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle (t) d \mathbf{r}' = \\
+  &amp; = \langle \mathbf{r} | \underbrace{\left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \right)}_{= \hat{\mathbf{1}}} | \Psi \rangle (t) \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p>having used orthogonality (<strong>todo</strong> <em>why? provide definition and examples of operators with continuous spectrum</em>)</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r}' | \mathbf{r} \rangle = \delta(\mathbf{r}' - \mathbf{r})\]</div>
+</li>
+<li><p>Expansion of a state function <span class="math notranslate nohighlight">\(|\Psi\rangle (t)\)</span> over the basis of the position operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  | \Psi \rangle (t) = \hat{\mathbf{1}} | \Psi \rangle(t) 
+    = \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle(t) 
+    = \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle(t) \, d \mathbf{r}' \ .
+  \end{aligned}\]</div>
+</li>
+<li><p>Unitariety and probability density</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  1 = \langle \Psi | \Psi \rangle (t) 
+    &amp; = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle \\
+    &amp; = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \\
+    &amp; = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \Psi(\mathbf{r}',t) \, d \mathbf{r}' \\
+    &amp; = \int_{\mathbf{r}'} \left| \Psi(\mathbf{r}',t) \right|^2 \, d \mathbf{r}' \\
+  \end{aligned}\end{split}\]</div>
+<p>and thus <span class="math notranslate nohighlight">\(\left|\Psi(\mathbf{r},t)\right|^2\)</span> can be interpreted as the <strong>probability density function</strong> of measuring position of the system equal to <span class="math notranslate nohighlight">\(\mathbf{r}'\)</span>.</p>
+</li>
+<li><p>Average value of the operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \bar{\mathbf{r}} &amp; = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
+  &amp; = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \ | \hat{\mathbf{r}} | \ \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'' \\
+  &amp; = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} |  \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  &amp; = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \underbrace{\langle \mathbf{r}' |  \mathbf{r}'' \rangle}_{=\delta(\mathbf{r}'-\mathbf{r}'')} \mathbf{r}'' \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  &amp; = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \mathbf{r}' \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \ \mathbf{r}' \ \Psi(\mathbf{r}',t) \, d \mathbf{r}' = \\
+  &amp; = \int_{\mathbf{r}'}  \left| \Psi(\mathbf{r}',t) \right|^2 \, \mathbf{r}' \, d \mathbf{r}' \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+</ul>
 </div>
 <div class="section" id="momentum-representation">
 <h4>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
+<p><strong>Momentum operator</strong> as the limit of…<strong>todo</strong> <em>prove the expression of the momentum operator as the limit of the generator of translation</em></p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | \]</div>
+<ul>
+<li><p>Spectrum</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle\]</div>
+<p>and thus the eigenvectors in space base <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle\)</span> are the solution of the differential equation</p>
+<div class="math notranslate nohighlight">
+\[i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,\]</div>
+<p>that in Cartesian coordinates reads</p>
+<div class="math notranslate nohighlight">
+\[i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})\]</div>
+<div class="math notranslate nohighlight">
+\[p_k(\mathbf{r}) = p_{k,0} \exp \left[ - i \frac{p_j}{\hbar} r_j \right]\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p}(\mathbf{r}) = \mathbf{p}_0 \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right]\]</div>
+</li>
+</ul>
+</div>
+<div class="section" id="from-position-to-momentum-representation">
+<h4>From position to momentum representation<a class="headerlink" href="#from-position-to-momentum-representation" title="Permalink to this heading">#</a></h4>
+<p>Momentum and wave vector, <span class="math notranslate nohighlight">\(\mathbf{p} = \hbar \mathbf{k}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{p} | \Psi \rangle
+  &amp; = \langle \mathbf{p} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; =   \int_{\mathbf{r}'} \langle \mathbf{p} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{k} | \Psi \rangle
+  &amp; = \langle \mathbf{k} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; =   \int_{\mathbf{r}'} \langle \mathbf{k} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
+  &amp; = \mathscr{F}\{ \Psi(\mathbf{r}) \} (\mathbf{k})
+\end{aligned}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="schrodinger-equation">
@@ -459,7 +568,7 @@ $$\begin{aligned}
 <h4>Stationary States<a class="headerlink" href="#stationary-states" title="Permalink to this heading">#</a></h4>
 <p>Eigenspace of the Hamiltonian operator</p>
 <div class="math notranslate nohighlight">
-\[\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,\]</div>
+\[\hat{H} |\Psi_k \rangle = E_k |\Psi_k \rangle \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(E_k\)</span> possible values of energy measurements. <em>If no eigenstates with the same eigenvalue exists, then…otherwise…</em>
 <em>Without external influence</em> <strong>todo</strong> <em>be more detailed!</em>, energy values and eigenstates of the systems are constant in time.</p>
 <p>Thus, exapnding the state of the system <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span> over the stationary states gives <span class="math notranslate nohighlight">\(|\Psi_k\rangle\)</span>, <span class="math notranslate nohighlight">\(|\Psi\rangle = |\Psi_k\rangle c_k(t)\)</span>, and inserting in Schrodinger equation</p>
@@ -493,7 +602,7 @@ $$\begin{aligned}
 <div class="section" id="attualization-of-1925-papers">
 <h4>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\]</div>
+\[|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\]</div>
 <div class="math notranslate nohighlight">
 \[\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle\]</div>
 <div class="math notranslate nohighlight">
@@ -502,6 +611,9 @@ $$\begin{aligned}
 \[X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \]</div>
 <div class="math notranslate nohighlight">
 \[\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle\]</div>
+<p>…to find the canonical commutation relation,</p>
+<div class="math notranslate nohighlight">
+\[[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \, \hat{\mathbf{1}} \ .\]</div>
 </div>
 </div>
 </div>
@@ -573,6 +685,7 @@ $$\begin{aligned}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">Operators and Observables</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">Space Representation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">Momentum Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">From position to momentum representation</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">

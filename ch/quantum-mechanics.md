@@ -76,6 +76,16 @@ $$\begin{aligned}
   \end{aligned}$$
 
 
+  since an operator $\hat{A}$ can be written as a function of its eigenvalues and eigenvectors
+
+   $$\begin{aligned}
+   \left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
+   & = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle = \\
+   & =  \sum_i a_i | A_i \rangle c_i = \\
+   & =  \sum_i \hat{A} | A_i \rangle c_i = \\
+   & = \hat{A} \sum_i | A_i \rangle c_i = \hat{A} | \Psi \rangle \ . 
+   \end{aligned}$$
+
 
 <!--
 $$\begin{aligned}
@@ -85,7 +95,112 @@ $$\begin{aligned}
 
 
 #### Space Representation
+
+**Position operator** $\hat{\mathbf{r}}$ has eigenvalues $\mathbf{r}$ identifying the possible measurements of the position
+
+$$\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,$$
+
+being $\mathbf{r}$ the result of the measurement (position in space, mathematically it could be a vector), and $| \mathbf{r} \rangle$ the state function corresponding to the measurement $\mathbf{r}$ of the position.
+
+- Result of measurement, $\mathbf{r}$, is a position in space. As an example, it could be a point in an Euclidean space $P \in E^n$. It could be written using properties of Dirac's delta "function"
+
+  $$
+    \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
+  $$
+
+- Projection of wave function over eigenstates of position operator
+
+  $$\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle(t) = \Psi(\mathbf{r}, t)
+  & = \int_{\mathbf{r}'} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle (t) d \mathbf{r}' = \\
+  & = \langle \mathbf{r} | \underbrace{\left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \right)}_{= \hat{\mathbf{1}}} | \Psi \rangle (t) \ .
+  \end{aligned}$$
+
+- having used orthogonality (**todo** *why? provide definition and examples of operators with continuous spectrum*)
+
+  $$\langle \mathbf{r}' | \mathbf{r} \rangle = \delta(\mathbf{r}' - \mathbf{r})$$
+
+- Expansion of a state function $|\Psi\rangle (t)$ over the basis of the position operator
+
+  $$\begin{aligned}
+  | \Psi \rangle (t) = \hat{\mathbf{1}} | \Psi \rangle(t) 
+    = \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle(t) 
+    = \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle(t) \, d \mathbf{r}' \ .
+  \end{aligned}$$
+
+- Unitariety and probability density
+
+  $$\begin{aligned}
+  1 = \langle \Psi | \Psi \rangle (t) 
+    & = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle \\
+    & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \Psi(\mathbf{r}',t) \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \left| \Psi(\mathbf{r}',t) \right|^2 \, d \mathbf{r}' \\
+  \end{aligned}$$
+  
+  and thus $\left|\Psi(\mathbf{r},t)\right|^2$ can be interpreted as the **probability density function** of measuring position of the system equal to $\mathbf{r}'$.
+
+- Average value of the operator
+
+  $$\begin{aligned}
+  \bar{\mathbf{r}} & = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
+  & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \ | \hat{\mathbf{r}} | \ \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'' \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} |  \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \underbrace{\langle \mathbf{r}' |  \mathbf{r}'' \rangle}_{=\delta(\mathbf{r}'-\mathbf{r}'')} \mathbf{r}'' \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \mathbf{r}' \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \ \mathbf{r}' \ \Psi(\mathbf{r}',t) \, d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'}  \left| \Psi(\mathbf{r}',t) \right|^2 \, \mathbf{r}' \, d \mathbf{r}' \ .
+  \end{aligned}$$
+
 #### Momentum Representation
+
+**Momentum operator** as the limit of...**todo** *prove the expression of the momentum operator as the limit of the generator of translation*
+
+$$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
+
+- Spectrum
+
+  $$\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle$$
+
+  $$\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle$$
+
+  and thus the eigenvectors in space base $\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle$ are the solution of the differential equation
+
+  $$i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,$$
+
+  that in Cartesian coordinates reads
+
+  $$i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})$$
+
+  $$p_k(\mathbf{r}) = p_{k,0} \exp \left[ - i \frac{p_j}{\hbar} r_j \right]$$
+
+  or
+
+  $$\langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p}(\mathbf{r}) = \mathbf{p}_0 \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right]$$
+
+
+#### From position to momentum representation
+
+Momentum and wave vector, $\mathbf{p} = \hbar \mathbf{k}$
+
+$$\begin{aligned}
+  \langle \mathbf{p} | \Psi \rangle
+  & = \langle \mathbf{p} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{p} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  \langle \mathbf{k} | \Psi \rangle
+  & = \langle \mathbf{k} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{k} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
+  & = \mathscr{F}\{ \Psi(\mathbf{r}) \} (\mathbf{k})
+\end{aligned}$$
+
 
 ### Schrodinger Equation
 
@@ -96,7 +211,7 @@ being $\hat{H}$ the Hamiltonian operator and $|\Psi\rangle$ the wave function, a
 #### Stationary States
 Eigenspace of the Hamiltonian operator
 
-$$\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,$$
+$$\hat{H} |\Psi_k \rangle = E_k |\Psi_k \rangle \ ,$$
 
 with $E_k$ possible values of energy measurements. *If no eigenstates with the same eigenvalue exists, then...otherwise...*
 *Without external influence* **todo** *be more detailed!*, energy values and eigenstates of the systems are constant in time.
@@ -127,7 +242,7 @@ $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-
 
 #### Attualization of 1925 papers
 
-$$|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
+$$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
 $$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
 
@@ -137,6 +252,10 @@ $$X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle $$
 
 
 $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
+
+...to find the canonical commutation relation,
+
+$$[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \, \hat{\mathbf{1}} \ .$$
 
 
 

@@ -267,6 +267,17 @@ Expected value of the physical quantity in the a state \(|\Psi\rangle\), with po
             & = \langle \Psi | \hat{A} | \Psi \rangle = \\
   \end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+since an operator \(\hat{A}\) can be written as a function of its eigenvalues and eigenvectors
+\begin{equation*}
+\begin{split}\begin{aligned}
+   \left( \sum_i a_i | A_i \rangle \langle A_i | \right) \Psi \rangle 
+   & = \left( \sum_i a_i | A_i \rangle \langle A_i | \right) c_k | A_k \rangle = \\
+   & =  \sum_i a_i | A_i \rangle c_i = \\
+   & =  \sum_i \hat{A} | A_i \rangle c_i = \\
+   & = \hat{A} \sum_i | A_i \rangle c_i = \hat{A} | \Psi \rangle \ . 
+   \end{aligned}\end{split}
+\end{equation*}
 \end{itemize}
 
 
@@ -274,9 +285,138 @@ Expected value of the physical quantity in the a state \(|\Psi\rangle\), with po
 
 \subsubsection{Space Representation}
 \label{\detokenize{ch/quantum-mechanics:space-representation}}
+\sphinxAtStartPar
+\sphinxstylestrong{Position operator} \(\hat{\mathbf{r}}\) has eigenvalues \(\mathbf{r}\) identifying the possible measurements of the position
+\begin{equation*}
+\begin{split}\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\mathbf{r}\) the result of the measurement (position in space, mathematically it could be a vector), and \(| \mathbf{r} \rangle\) the state function corresponding to the measurement \(\mathbf{r}\) of the position.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Result of measurement, \(\mathbf{r}\), is a position in space. As an example, it could be a point in an Euclidean space \(P \in E^n\). It could be written using properties of Dirac’s delta «function»
+\begin{equation*}
+\begin{split}
+    \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
+  \end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Projection of wave function over eigenstates of position operator
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle(t) = \Psi(\mathbf{r}, t)
+  & = \int_{\mathbf{r}'} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r}',t) d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle (t) d \mathbf{r}' = \\
+  & = \langle \mathbf{r} | \underbrace{\left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \right)}_{= \hat{\mathbf{1}}} | \Psi \rangle (t) \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+having used orthogonality (\sphinxstylestrong{todo} \sphinxstyleemphasis{why? provide definition and examples of operators with continuous spectrum})
+\begin{equation*}
+\begin{split}\langle \mathbf{r}' | \mathbf{r} \rangle = \delta(\mathbf{r}' - \mathbf{r})\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Expansion of a state function \(|\Psi\rangle (t)\) over the basis of the position operator
+\begin{equation*}
+\begin{split}\begin{aligned}
+  | \Psi \rangle (t) = \hat{\mathbf{1}} | \Psi \rangle(t) 
+    = \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle(t) 
+    = \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle(t) \, d \mathbf{r}' \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Unitariety and probability density
+\begin{equation*}
+\begin{split}\begin{aligned}
+  1 = \langle \Psi | \Psi \rangle (t) 
+    & = \langle \Psi | \left( \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' d \mathbf{r}' \right) | \Psi \rangle \\
+    & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \Psi(\mathbf{r}',t) \, d \mathbf{r}' \\
+    & = \int_{\mathbf{r}'} \left| \Psi(\mathbf{r}',t) \right|^2 \, d \mathbf{r}' \\
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(\left|\Psi(\mathbf{r},t)\right|^2\) can be interpreted as the \sphinxstylestrong{probability density function} of measuring position of the system equal to \(\mathbf{r}'\).
+
+\item {} 
+\sphinxAtStartPar
+Average value of the operator
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \bar{\mathbf{r}} & = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
+  & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \ | \hat{\mathbf{r}} | \ \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'' \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} |  \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \underbrace{\langle \mathbf{r}' |  \mathbf{r}'' \rangle}_{=\delta(\mathbf{r}'-\mathbf{r}'')} \mathbf{r}'' \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \mathbf{r}' \langle \mathbf{r}' | \Psi \rangle \, d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'} \Psi^*(\mathbf{r}',t) \ \mathbf{r}' \ \Psi(\mathbf{r}',t) \, d \mathbf{r}' = \\
+  & = \int_{\mathbf{r}'}  \left| \Psi(\mathbf{r}',t) \right|^2 \, \mathbf{r}' \, d \mathbf{r}' \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
 
 \subsubsection{Momentum Representation}
 \label{\detokenize{ch/quantum-mechanics:momentum-representation}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum operator} as the limit of…\sphinxstylestrong{todo} \sphinxstyleemphasis{prove the expression of the momentum operator as the limit of the generator of translation}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | \end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Spectrum
+\begin{equation*}
+\begin{split}\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus the eigenvectors in space base \(\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle\) are the solution of the differential equation
+\begin{equation*}
+\begin{split}i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that in Cartesian coordinates reads
+\begin{equation*}
+\begin{split}i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}p_k(\mathbf{r}) = p_{k,0} \exp \left[ - i \frac{p_j}{\hbar} r_j \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p}(\mathbf{r}) = \mathbf{p}_0 \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right]\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsubsection{From position to momentum representation}
+\label{\detokenize{ch/quantum-mechanics:from-position-to-momentum-representation}}
+\sphinxAtStartPar
+Momentum and wave vector, \(\mathbf{p} = \hbar \mathbf{k}\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{p} | \Psi \rangle
+  & = \langle \mathbf{p} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{p} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{k} | \Psi \rangle
+  & = \langle \mathbf{k} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{k} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
+  & = \mathscr{F}\{ \Psi(\mathbf{r}) \} (\mathbf{k})
+\end{aligned}\end{split}
+\end{equation*}
 
 \subsection{Schrodinger Equation}
 \label{\detokenize{ch/quantum-mechanics:schrodinger-equation}}\begin{equation*}
@@ -291,7 +431,7 @@ being \(\hat{H}\) the Hamiltonian operator and \(|\Psi\rangle\) the wave functio
 \sphinxAtStartPar
 Eigenspace of the Hamiltonian operator
 \begin{equation*}
-\begin{split}\hat{H} |\Psi_k \rangle = E_i |\Psi_k \rangle \ ,\end{split}
+\begin{split}\hat{H} |\Psi_k \rangle = E_k |\Psi_k \rangle \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 with \(E_k\) possible values of energy measurements. \sphinxstyleemphasis{If no eigenstates with the same eigenvalue exists, then…otherwise…}
@@ -335,7 +475,7 @@ Thus the state of the system evolves like a superposition of monochromatic waves
 
 \subsubsection{Attualization of 1925 papers}
 \label{\detokenize{ch/quantum-mechanics:attualization-of-1925-papers}}\begin{equation*}
-\begin{split}|\Psi\rangle = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\end{split}
+\begin{split}|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle\end{split}
 \end{equation*}\begin{equation*}
@@ -344,6 +484,11 @@ Thus the state of the system evolves like a superposition of monochromatic waves
 \begin{split}X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…to find the canonical commutation relation,
+\begin{equation*}
+\begin{split}[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \, \hat{\mathbf{1}} \ .\end{split}
 \end{equation*}
 
 \section{Many\sphinxhyphen{}body problem}
