@@ -168,7 +168,11 @@ $$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
 
   and thus the eigenvectors in space base $\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle$ are the solution of the differential equation
 
-  $$i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r})$$
+  $$i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,$$
+
+  that in Cartesian coordinates reads
+
+  $$i \hbar \partial_j p_k = p_j p_k$$
 
 
 
