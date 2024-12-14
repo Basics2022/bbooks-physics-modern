@@ -144,8 +144,11 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
 
 - Average value of the operator
 
-$$\bar{\mathbf{r}} = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \langle \Psi | \mathbf{r} | \Psi \rangle
-= \int_{\mathbf{r}} \rho(\mathbf{r}) \mathbf{r} d \mathbf{r} $$
+  $$\begin{aligned}
+  \bar{\mathbf{r}} & = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
+  & = \\
+  & = \\
+  \end{aligned}$$
 
 #### Momentum Representation
 
