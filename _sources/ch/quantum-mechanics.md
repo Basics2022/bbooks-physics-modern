@@ -37,7 +37,7 @@ $$\hat{A} |A_i \rangle = a_i |A_i\rangle$$
 
 $$| \Psi \rangle = | A_i \rangle \langle A_i | \Psi \rangle =  | A_i \rangle \Psi_i^A $$
 
-$$\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = |\Psi_i^A|^2$$
+$$\langle \Psi | \Psi \rangle = \Psi_j^{A*} \underbrace{\langle A_j | A_i \rangle}_{\delta_{ij}} \Psi_i^{A} = \left| \Psi_i^A \right|^2$$
 
 $$\begin{aligned}
   \langle A_j| \Psi \rangle = \langle A_j | A_i \rangle \langle A_i | \Psi \rangle 
