@@ -147,7 +147,7 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
   $$\begin{aligned}
   \bar{\mathbf{r}} & = \langle \Psi | \hat{\mathbf{r}} | \Psi \rangle = \\
   & = \int_{\mathbf{r}'} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' \ | \hat{\mathbf{r}} | \ \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'' \\
-  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} | \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
+  & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} |  \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
   & = \int_{\mathbf{r}'} \int_{\mathbf{r}''} \langle \Psi | \mathbf{r}' \rangle \langle \mathbf{r}' | \hat{\mathbf{r}} | \int_{\mathbf{r}''} | \mathbf{r}'' \rangle \langle \mathbf{r}'' | \Psi \rangle \, d \mathbf{r}'  d \mathbf{r}'' = \\
   \end{aligned}$$
 
