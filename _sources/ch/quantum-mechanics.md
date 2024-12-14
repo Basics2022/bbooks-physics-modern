@@ -95,6 +95,12 @@ $$\begin{aligned}
 
 
 #### Space Representation
+
+Space operator $\hat{\mathbf{r}}$ has eigenvalues $\mathbf{r}$ identifying the possible measurements of the position
+
+$$\hat{\mathbf{r}} | \Psi \rangle = \mathbf{r} | \Psi \rangle \ ,$$
+
+
 #### Momentum Representation
 
 ### Schrodinger Equation
