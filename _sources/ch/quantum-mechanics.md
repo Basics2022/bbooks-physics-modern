@@ -160,6 +160,14 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
 
 $$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
 
+- Spectrum
+
+  $$\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle$$
+
+  $$\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle $$
+
+
+
 ### Schrodinger Equation
 
 $$i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle $$
