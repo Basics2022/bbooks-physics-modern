@@ -113,6 +113,10 @@ whose solution reads
 
 $$c_k(t) = c_{k,0} \exp \left[- i \frac{E_k}{\hbar} t \right]$$
 
+Thus the state of the system evolves like a superposition of monochromatic waves with frequencies $\omega_k = \frac{E_k}{\hbar}$,
+
+$$| \Psi \rangle = c_k(t) | \Psi_k \rangle = c_{k,0} | \Psi_k \rangle \exp\left[-i \frac{E_k}{\hbar} t \right] \ .$$
+
 #### Representations
 ##### Schrodinger
 ##### Heisenberg
