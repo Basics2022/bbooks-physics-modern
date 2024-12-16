@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantum Mechanics &#8212; basics book template</title>
+    <title>Quantum Mechanics &#8212; Modern Physics</title>
   
   
   
@@ -56,7 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -69,11 +68,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="../genindex.html" />
-    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Statistical Physics" href="statistical-mechanics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -158,8 +157,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="basics book template - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="basics book template - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
   
   
 </a></div>
@@ -217,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Scarica questa pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -226,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="../_sources/ch/quantum-mechanics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Scarica il file sorgente"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -244,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Stampa in PDF"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -264,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -290,7 +289,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -314,7 +313,7 @@ document.write(`
         <div id="jb-print-toc">
             
             <div>
-                <h2> Contenuti </h2>
+                <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -331,10 +330,10 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">Stationary States</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#representations">Representations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">Pictures</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">Schrodinger</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">Heisenberg</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">…</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">Interaction</a></li>
 </ul>
 </li>
 </ul>
@@ -343,6 +342,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">Attualization of 1925 papers</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-principle">Heisenberg Uncertainty “principle”</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">Many-body problem</a></li>
@@ -361,11 +361,11 @@ document.write(`
 <span id="id1"></span><h1>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h1>
 <div class="section" id="mathematical-tools-for-quantum-mechanics">
 <h2>Mathematical tools for quantum mechanics<a class="headerlink" href="#mathematical-tools-for-quantum-mechanics" title="Permalink to this heading">#</a></h2>
-<div class="proof definition admonition" id="definition-0">
+<div class="proof definition admonition" id="Operator">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span> (Operator)</p>
 <div class="definition-content section" id="proof-content">
 </div>
-</div><div class="proof definition admonition" id="definition-1">
+</div><div class="proof definition admonition" id="Adjoint Operator">
 <p class="admonition-title"><span class="caption-number">Definition 2 </span> (Adjoint operator)</p>
 <div class="definition-content section" id="proof-content">
 <p>Given an operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow V\)</span>, its self-adjoint <span class="math notranslate nohighlight">\(\hat{A}^*: V \rightarrow U\)</span> is the operator s.t.</p>
@@ -373,7 +373,7 @@ document.write(`
 \[(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}\]</div>
 <p>holds for <span class="math notranslate nohighlight">\(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\)</span>.</p>
 </div>
-</div><div class="proof definition admonition" id="definition-2">
+</div><div class="proof definition admonition" id="Self-Adjoint Operator">
 <span id="quantum-mechanics-math-operators-self-adjoint"></span><p class="admonition-title"><span class="caption-number">Definition 3 </span> (Hermitian (self-adjoint) operator)</p>
 <div class="definition-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow U\)</span>, it is a self-adjoint operator if <span class="math notranslate nohighlight">\(\hat{A}^* = \hat{A}\)</span>.</p>
@@ -460,7 +460,7 @@ $$\begin{aligned}
 \[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,\]</div>
 <p>being <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> the result of the measurement (position in space, mathematically it could be a vector), and <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> the state function corresponding to the measurement <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> of the position.</p>
 <ul>
-<li><p>Result of measurement, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span>, is a position in space. As an example, it could be a point in an Euclidean space <span class="math notranslate nohighlight">\(P \in E^n\)</span>. It could be written using properties of Dirac’s delta «function»</p>
+<li><p>Result of measurement, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span>, is a position in space. As an example, it could be a point in an Euclidean space <span class="math notranslate nohighlight">\(P \in E^n\)</span>. It could be written using properties of Dirac’s delta “function”</p>
 <div class="math notranslate nohighlight">
 \[
     \mathbf{r} = \int_{\mathbf{r}'} \delta (\mathbf{r}'-\mathbf{r}) \, \mathbf{r}' d \mathbf{r}'
@@ -517,24 +517,33 @@ $$\begin{aligned}
 <h4>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
 <p><strong>Momentum operator</strong> as the limit of…<strong>todo</strong> <em>prove the expression of the momentum operator as the limit of the generator of translation</em></p>
 <div class="math notranslate nohighlight">
-\[\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | \]</div>
+\[\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | \]</div>
 <ul>
 <li><p>Spectrum</p>
 <div class="math notranslate nohighlight">
 \[\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle\]</div>
 <div class="math notranslate nohighlight">
-\[\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle\]</div>
+\[\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = - i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle\]</div>
 <p>and thus the eigenvectors in space base <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle\)</span> are the solution of the differential equation</p>
 <div class="math notranslate nohighlight">
-\[i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,\]</div>
+\[- i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,\]</div>
 <p>that in Cartesian coordinates reads</p>
 <div class="math notranslate nohighlight">
-\[i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})\]</div>
+\[- i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})\]</div>
 <div class="math notranslate nohighlight">
-\[p_k(\mathbf{r}) = p_{k,0} \exp \left[ - i \frac{p_j}{\hbar} r_j \right]\]</div>
+\[p_k(\mathbf{r}) = p_{k,0} \exp \left[ i \frac{p_j}{\hbar} r_j \right]\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight">
 \[\langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p}(\mathbf{r}) = \mathbf{p}_0 \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right]\]</div>
+<p><strong>todo</strong></p>
+<ul>
+<li><p>normalization factor <span class="math notranslate nohighlight">\(\frac{1}{(2 \pi)^{\frac{3}{2}}}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathscr{F}\{ \delta(x) \}(k) = \int_{-\infty}^{\infty} \delta(x) e^{-ikx} \, dx = 1\]</div>
+</li>
+<li><p>Fourier transform and inverse Fourier transform: definitions and proofs (link to a math section)</p></li>
+<li><p>representation in basis of wave vector operator <span class="math notranslate nohighlight">\(\hat{\mathbf{k}}\)</span>, <span class="math notranslate nohighlight">\(\hat{\mathbf{p}} = \hbar \hat{\mathbf{k}}\)</span></p></li>
+</ul>
 </li>
 </ul>
 </div>
@@ -546,15 +555,16 @@ $$\begin{aligned}
   \langle \mathbf{p} | \Psi \rangle
   &amp; = \langle \mathbf{p} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
   &amp; =   \int_{\mathbf{r}'} \langle \mathbf{p} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
-  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
 \end{aligned}\end{split}\]</div>
+<p>Relation between position and wave-number representation can be represented with a Fourier transform</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \langle \mathbf{k} | \Psi \rangle
   &amp; = \langle \mathbf{k} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
   &amp; =   \int_{\mathbf{r}'} \langle \mathbf{k} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
-  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
-  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ -i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  &amp; = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
   &amp; = \mathscr{F}\{ \Psi(\mathbf{r}) \} (\mathbf{k})
 \end{aligned}\end{split}\]</div>
 </div>
@@ -583,17 +593,85 @@ $$\begin{aligned}
 <p>Thus the state of the system evolves like a superposition of monochromatic waves with frequencies <span class="math notranslate nohighlight">\(\omega_k = \frac{E_k}{\hbar}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right] \ .\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \bar{A}
+ &amp; = \dfrac{d}{dt} \left( \langle \Psi | \hat{A} | \Psi \rangle \right) = \\
+ &amp; = \dfrac{d}{dt} \langle \Psi | \hat{A} | \Psi \rangle + \langle \Psi | \frac{d \hat{A}}{dt} | \Psi \rangle + \langle \Psi | \hat{A} \frac{d}{dt} | \Psi \rangle = \\
+ &amp; = \langle \Psi | \frac{d \hat{A}}{dt} | \Psi \rangle + \frac{i}{\hbar} \langle \Psi | \hat{H} \hat{A} | \Psi \rangle - \frac{i}{\hbar} \langle \Psi | \hat{A} \hat{H} | \Psi \rangle = \\
+ &amp; = \langle \Psi | \left( \frac{i}{\hbar} [ \hat{H}, \hat{A} ] + \frac{d \hat{A}}{dt} \right) | \Psi \rangle \ .
+\end{aligned}\end{split}\]</div>
 </div>
-<div class="section" id="representations">
-<h4>Representations<a class="headerlink" href="#representations" title="Permalink to this heading">#</a></h4>
+<div class="section" id="pictures">
+<h4>Pictures<a class="headerlink" href="#pictures" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Schrodinger</p></li>
+<li><p>Heisenberg</p></li>
+<li><p>Interaction</p></li>
+</ul>
 <div class="section" id="schrodinger">
 <h5>Schrodinger<a class="headerlink" href="#schrodinger" title="Permalink to this heading">#</a></h5>
+<p>If <span class="math notranslate nohighlight">\(\hat{H}\)</span> not function of time</p>
+<div class="math notranslate nohighlight">
+\[| \Psi \rangle (t) = \exp\left[ - i \frac{\hat{H}}{\hbar} (t-t_0) \right] | \Psi \rangle(t_0) = \hat{U}(t,t_0) | \Psi \rangle(t_0) \]</div>
+<div class="math notranslate nohighlight">
+\[\bar{A} = \langle \Psi | \hat{A} | \Psi \rangle = \langle \Psi_0 | \hat{U}^*(t,t_0) \hat{A} \hat{U}(t,t_0) | \Psi_0 \rangle\]</div>
 </div>
 <div class="section" id="heisenberg">
 <h5>Heisenberg<a class="headerlink" href="#heisenberg" title="Permalink to this heading">#</a></h5>
+<p>…</p>
+<p>for <span class="math notranslate nohighlight">\(\hat{H}\)</span> independent from time <span class="math notranslate nohighlight">\(t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt} \bar{\mathbf{r}} &amp; = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} \\
+  \dfrac{d}{dt} \bar{\mathbf{p}} &amp; = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} \\
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Hamiltonian Mechanics<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">From Lagrange equations</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = Q_q\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(q\)</span> generalized coordinates, <span class="math notranslate nohighlight">\(p:= \frac{\partial L}{\partial \dot{q}}\)</span> generalized momenta.</p>
+<p class="sd-card-text">Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[H(p,q,t) = p \dot{q} - L(\dot{q}, q, t)\]</div>
+<p class="sd-card-text">Increment of the Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[dH = \partial_p H dp + \partial_q H dq + \partial_t H dt \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  dH &amp; = \dot{q} dp + p d \dot{q} - \partial_{\dot{q}} L d \dot{q} - \partial_{q} L d q - \partial_t L d t = \\
+     &amp; = \dot{q} dp - \partial_{q} L d q - \partial_t L d t = \\
+     &amp; = \dot{q} dp - \left( \dot{p} + Q_q \right) d q - \partial_t L d t = \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \frac{\partial H}{\partial p} = \dot{q} \\
+  \frac{\partial H}{\partial q} = - \frac{\partial L}{\partial q} = - \dot{p} + Q_q \\
+  \frac{\partial H}{\partial t} = - \frac{\partial L}{\partial t}
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text">Physical quantity <span class="math notranslate nohighlight">\(f(p(t), q(t), t)\)</span>. Its time derivative reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{d f}{dt}
+  &amp; = \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial t} = \\
+  &amp; = \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial t} = \\
+  &amp; = \{ H, f \} + \partial_t f + Q_q \partial_p f
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(Q_q = 0\)</span>, the correspondence between quantum mechanics and classical mechanics</p>
+<div class="math notranslate nohighlight">
+\[\frac{d f}{d t} = \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = \overline{\frac{i}{\hbar} [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}\]</div>
+<div class="math notranslate nohighlight">
+\[\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]\]</div>
 </div>
-<div class="section" id="id2">
-<h5>…<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
+</details></div>
+<div class="section" id="interaction">
+<h5>Interaction<a class="headerlink" href="#interaction" title="Permalink to this heading">#</a></h5>
 </div>
 </div>
 </div>
@@ -601,20 +679,80 @@ $$\begin{aligned}
 <h3>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>
 <div class="section" id="attualization-of-1925-papers">
 <h4>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
-<div class="math notranslate nohighlight">
-\[|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]\]</div>
-<div class="math notranslate nohighlight">
-\[\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle\]</div>
-<div class="math notranslate nohighlight">
-\[\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \langle \Psi_n | \Psi \rangle\]</div>
-<div class="math notranslate nohighlight">
-\[X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \]</div>
-<div class="math notranslate nohighlight">
-\[\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle\]</div>
+<!--
+$$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
+
+$$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
+
+$$\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle \langle \Psi_n | \Psi \rangle$$
+
+$$X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle $$
+
+$$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
+-->
 <p>…to find the canonical commutation relation,</p>
 <div class="math notranslate nohighlight">
-\[[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \, \hat{\mathbf{1}} \ .\]</div>
+\[[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar  \mathbb{I} \, \hat{\mathbf{1}} \ .\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right]
+ &amp; = \hat{\mathbf{r}} \hat{\mathbf{p}} - \hat{\mathbf{p}} \hat{\mathbf{r}} = \\
+ &amp; = \hat{\mathbf{r}} \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \hat{\mathbf{p}}
+   - \hat{\mathbf{p}} \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \ \hat{\mathbf{r}} \ \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \\
+ &amp; = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \hat{\mathbf{p}} \int_{\mathbf{r}} \int_{\mathbf{r}'} | \mathbf{r} \rangle \mathbf{r}' \underbrace{\langle \mathbf{r} |\mathbf{r}' \rangle}_{\delta(\mathbf{r}-\mathbf{r}')} \langle \mathbf{r}' | d \mathbf{r}' = \\
+ &amp; = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \hat{\mathbf{p}} \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} = \\
+ &amp; = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \int_{\mathbf{r}'} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \ \hat{\mathbf{p}} \ \int_{\mathbf{r}'} \mathbf{r}' | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \\
+ &amp; = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} + \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | d \mathbf{r} \int_{\mathbf{r}'} \mathbf{r}' | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \dots
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right] | \Psi \rangle 
+ &amp; = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \Psi(\mathbf{r},t) + \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \nabla \left( \mathbf{r} \Psi(\mathbf{r},t) \right) = \\
+ &amp; = - \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \left[ \mathbf{r} \nabla \Psi(\mathbf{r},t) + \mathbb{I} \Psi(\mathbf{r},t) + \mathbf{r} \nabla \Psi(\mathbf{r},t) \right] = \\
+ &amp; = i \hbar \underbrace{\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}}_{\hat{\mathbf{1}}} \, | \Psi \rangle \ ,
+\end{aligned}\end{split}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(| \Psi \rangle\)</span> is arbitrary</p>
+<div class="math notranslate nohighlight">
+\[\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right] = i \hbar \mathbb{I} \hat{\mathbf{1}} \ . \]</div>
+<div class="math notranslate nohighlight">
+\[\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . \]</div>
 </div>
+</div>
+<div class="section" id="heisenberg-uncertainty-principle">
+<h3>Heisenberg Uncertainty “principle”<a class="headerlink" href="#heisenberg-uncertainty-principle" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Heisenberg uncertainty “principle” is a relation between product of variance of two physical quantities and their commutation,</p></li>
+<li><p><strong>todo</strong> <em>relation with measurement process and outcomes. Commutation as a measurement process: first measure <span class="math notranslate nohighlight">\(B\)</span> and then <span class="math notranslate nohighlight">\(A\)</span>, or first measure <span class="math notranslate nohighlight">\(A\)</span> and then <span class="math notranslate nohighlight">\(B\)</span></em></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\sigma_A \sigma_B \ge \frac{1}{2} \left|\overline{[\hat{A}, \hat{B}]}\right| \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of Heisenberg uncertainty “principle”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \sigma^2_A \sigma^2_B
+ &amp; = \langle \Psi | \left(\hat{A} - \bar{A} \right)^2 | \Psi \rangle\langle \Psi | \left(\hat{B} - \bar{B} \right)^2 | \Psi \rangle = \\
+ &amp; = \langle (\hat{A} - \bar{A} ) \Psi |  (\hat{A} - \bar{A} ) \Psi \rangle \langle  (\hat{B} - \bar{B} ) \Psi |  (\hat{B} - \bar{B} ) \Psi \rangle = \\
+ &amp; = \| ( \hat{A} - \bar{A} ) \Psi \|^2 \| ( \hat{B} - \bar{B} ) \Psi \|^2 = \\
+ &amp; \ge \left| \langle ( \hat{A} - \bar{A} ) \Psi | ( \hat{B} - \bar{B} ) \Psi  \rangle \right|^2 = \\
+ &amp; = \left| \langle \Psi | (\hat{A} - \bar{A})(\hat{B} - \bar{B}) \Psi \rangle \right|^2 = \\
+ &amp; = \left| \langle \Psi | \hat{A}\hat{B} - \hat{A}\bar{B} - \bar{A}\hat{B} + \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ &amp; = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ &amp; = \left| \frac{\langle \Psi | \hat{A}\hat{B} - \hat{B}\hat{A} | \Psi \rangle}{2i} \right|^2 = \\
+ &amp; = \frac{ \left|\langle \Psi | [\hat{A}, \hat{B}] | \Psi \rangle \right|^2}{4} = \frac{1}{4} \left| \overline{[\hat{A}, \hat{B}]} \right|^2
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having used Cauchy triangle inequality and</p>
+<div class="math notranslate nohighlight">
+\[|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}\]</div>
+</div>
+</details><p>Hesienberg uncertainty principles applied to position and momentum reads</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{r_a} \sigma_{p_b} \ge \frac{1}{2} \left|\overline{[\hat{r}_a, \hat{p}_b]}\right| = \frac{\hbar}{2}  \delta_{ab} \ .\]</div>
 </div>
 </div>
 <div class="section" id="many-body-problem">
@@ -658,7 +796,7 @@ $$\begin{aligned}
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Statistical Physics</p>
       </div>
     </a>
@@ -673,7 +811,7 @@ $$\begin{aligned}
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenuti
+    <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -690,10 +828,10 @@ $$\begin{aligned}
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">Schrodinger Equation</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">Stationary States</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#representations">Representations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">Pictures</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">Schrodinger</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">Heisenberg</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">…</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">Interaction</a></li>
 </ul>
 </li>
 </ul>
@@ -702,6 +840,7 @@ $$\begin{aligned}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">Attualization of 1925 papers</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-principle">Heisenberg Uncertainty “principle”</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">Many-body problem</a></li>
@@ -719,7 +858,7 @@ $$\begin{aligned}
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>
