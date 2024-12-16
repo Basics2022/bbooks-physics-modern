@@ -4,9 +4,12 @@
 ## Mathematical tools for quantum mechanics
 
 ```{prf:definition} Operator
+:label: Operator
 ```
 
 ```{prf:definition} Adjoint operator
+:label: Adjoint Operator
+
 Given an operator $\hat{A}: U \rightarrow V$, its self-adjoint $\hat{A}^*: V \rightarrow U$ is the operator s.t.
 
 $$(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}$$
@@ -17,6 +20,8 @@ holds for $\forall \mathbf{u} \in U, \ \mathbf{v} \in V$.
 
 (quantum-mechanics:math:operators:self-adjoint)=
 ```{prf:definition} Hermitian (self-adjoint) operator
+:label: Self-Adjoint Operator
+
 If $\hat{A}: U \rightarrow U$, it is a self-adjoint operator if $\hat{A}^* = \hat{A}$.
 ```
 Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
@@ -158,24 +163,58 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
 
 **Momentum operator** as the limit of...**todo** *prove the expression of the momentum operator as the limit of the generator of translation*
 
-$$\langle \mathbf{r} | \hat{\mathbf{p}} = i \hbar \nabla \langle \mathbf{r} | $$
+$$\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | $$
 
 - Spectrum
 
   $$\hat{\mathbf{p}} | \mathbf{p} \rangle = \mathbf{p} | \mathbf{p} \rangle$$
 
-  $$\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle$$
+  $$\langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{p} \rangle = - i \hbar \nabla \langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p} \langle \mathbf{r} | \mathbf{p} \rangle$$
 
   and thus the eigenvectors in space base $\mathbf{p}(\mathbf{r}) = \langle \mathbf{r} | \mathbf{p} \rangle$ are the solution of the differential equation
 
-  $$i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,$$
+  $$- i \hbar \nabla \mathbf{p}(\mathbf{r}) = \mathbf{p} \mathbf{p}(\mathbf{r}) \ ,$$
 
   that in Cartesian coordinates reads
 
-  $$i \hbar \partial_j p_k = p p_k$$
+  $$- i \hbar \partial_j p_k(\mathbf{r}) = p_j p_k(\mathbf{r})$$
 
-  $$p_k = p_{k,0} \exp \left[ - i \frac{p}{\hbar} r_k \right]$$
+  $$p_k(\mathbf{r}) = p_{k,0} \exp \left[ i \frac{p_j}{\hbar} r_j \right]$$
 
+  or
+
+  $$\langle \mathbf{r} | \mathbf{p} \rangle = \mathbf{p}(\mathbf{r}) = \mathbf{p}_0 \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right]$$
+
+  **todo**
+  - normalization factor $\frac{1}{(2 \pi)^{\frac{3}{2}}}$
+
+    $$\mathscr{F}\{ \delta(x) \}(k) = \int_{-\infty}^{\infty} \delta(x) e^{-ikx} \, dx = 1$$
+
+  - Fourier transform and inverse Fourier transform: definitions and proofs (link to a math section)
+
+  - representation in basis of wave vector operator $\hat{\mathbf{k}}$, $\hat{\mathbf{p}} = \hbar \hat{\mathbf{k}}$
+
+#### From position to momentum representation
+
+Momentum and wave vector, $\mathbf{p} = \hbar \mathbf{k}$
+
+$$\begin{aligned}
+  \langle \mathbf{p} | \Psi \rangle
+  & = \langle \mathbf{p} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{p} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \frac{\mathbf{p} \cdot \mathbf{r}}{\hbar} \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+\end{aligned}$$
+
+Relation between position and wave-number representation can be represented with a Fourier transform
+
+$$\begin{aligned}
+  \langle \mathbf{k} | \Psi \rangle
+  & = \langle \mathbf{k} | \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & =   \int_{\mathbf{r}'} \langle \mathbf{k} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \mathbf{k} \cdot \mathbf{r}' \right] \langle \mathbf{r}' | \Psi\rangle d \mathbf{r}' = \\
+  & = \frac{1}{(2\pi)^{3/2}} \int_{\mathbf{r}'} \exp \left[ i \mathbf{k} \cdot \mathbf{r}' \right] \Psi(\mathbf{r}') d \mathbf{r}' = \\
+  & = \mathscr{F}\{ \Psi(\mathbf{r}) \} (\mathbf{k})
+\end{aligned}$$
 
 
 ### Schrodinger Equation
@@ -208,16 +247,96 @@ Thus the state of the system evolves like a superposition of monochromatic waves
 
 $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right] \ .$$
 
-#### Representations
+
+$$\begin{aligned}
+ \dfrac{d}{dt} \bar{A}
+ & = \dfrac{d}{dt} \left( \langle \Psi | \hat{A} | \Psi \rangle \right) = \\
+ & = \dfrac{d}{dt} \langle \Psi | \hat{A} | \Psi \rangle + \langle \Psi | \frac{d \hat{A}}{dt} | \Psi \rangle + \langle \Psi | \hat{A} \frac{d}{dt} | \Psi \rangle = \\
+ & = \langle \Psi | \frac{d \hat{A}}{dt} | \Psi \rangle + \frac{i}{\hbar} \langle \Psi | \hat{H} \hat{A} | \Psi \rangle - \frac{i}{\hbar} \langle \Psi | \hat{A} \hat{H} | \Psi \rangle = \\
+ & = \langle \Psi | \left( \frac{i}{\hbar} [ \hat{H}, \hat{A} ] + \frac{d \hat{A}}{dt} \right) | \Psi \rangle \ .
+\end{aligned}$$
+
+#### Pictures
+- Schrodinger
+- Heisenberg
+- Interaction
+
 ##### Schrodinger
+
+If $\hat{H}$ not function of time
+
+$$| \Psi \rangle (t) = \exp\left[ - i \frac{\hat{H}}{\hbar} (t-t_0) \right] | \Psi \rangle(t_0) = \hat{U}(t,t_0) | \Psi \rangle(t_0) $$
+
+$$\bar{A} = \langle \Psi | \hat{A} | \Psi \rangle = \langle \Psi_0 | \hat{U}^*(t,t_0) \hat{A} \hat{U}(t,t_0) | \Psi_0 \rangle$$
+
 ##### Heisenberg
-##### ...
+
+...
+
+for $\hat{H}$ independent from time $t$,
+
+$$\begin{aligned}
+  \dfrac{d}{dt} \bar{\mathbf{r}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} \\
+  \dfrac{d}{dt} \bar{\mathbf{p}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} \\
+\end{aligned}$$
+
+```{dropdown} Hamiltonian Mechanics
+
+From Lagrange equations
+
+$$\dfrac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = Q_q$$
+
+$q$ generalized coordinates, $p:= \frac{\partial L}{\partial \dot{q}}$ generalized momenta.
+
+Hamiltonian
+
+$$H(p,q,t) = p \dot{q} - L(\dot{q}, q, t)$$
+
+Increment of the Hamiltonian
+
+$$dH = \partial_p H dp + \partial_q H dq + \partial_t H dt $$
+
+$$\begin{aligned}
+  dH & = \dot{q} dp + p d \dot{q} - \partial_{\dot{q}} L d \dot{q} - \partial_{q} L d q - \partial_t L d t = \\
+     & = \dot{q} dp - \partial_{q} L d q - \partial_t L d t = \\
+     & = \dot{q} dp - \left( \dot{p} + Q_q \right) d q - \partial_t L d t = \\
+\end{aligned}$$
+
+$$\begin{cases}
+  \frac{\partial H}{\partial p} = \dot{q} \\
+  \frac{\partial H}{\partial q} = - \frac{\partial L}{\partial q} = - \dot{p} + Q_q \\
+  \frac{\partial H}{\partial t} = - \frac{\partial L}{\partial t}
+\end{cases}$$
+
+Physical quantity $f(p(t), q(t), t)$. Its time derivative reads
+
+$$\begin{aligned}
+\frac{d f}{dt}
+  & = \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial t} = \\
+  & = \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial t} = \\
+  & = \{ H, f \} + \partial_t f + Q_q \partial_p f
+\end{aligned}$$
+
+If $Q_q = 0$, the correspondence between quantum mechanics and classical mechanics
+
+$$\frac{d f}{d t} = \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = \overline{\frac{i}{\hbar} [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}$$
+
+$$\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]$$
+
+
+
+```
+
+
+
+##### Interaction
 
 
 ### Matrix Mechanics
 
 #### Attualization of 1925 papers
 
+<!--
 $$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
 $$\langle \Psi | \hat{\mathbf{X}} | \Psi \rangle$$
@@ -226,12 +345,68 @@ $$\langle \Psi | \Psi_m \rangle \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rang
 
 $$X_{mn} = \langle \Psi_m | \hat{\mathbf{X}} | \Psi_n \rangle $$
 
-
 $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
+-->
 
 ...to find the canonical commutation relation,
 
-$$[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar \, \hat{\mathbf{1}} \ .$$
+$$[ \hat{\mathbf{r}}, \hat{\mathbf{p}} ] = i \hbar  \mathbb{I} \, \hat{\mathbf{1}} \ .$$
+
+$$\begin{aligned}
+\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right]
+ & = \hat{\mathbf{r}} \hat{\mathbf{p}} - \hat{\mathbf{p}} \hat{\mathbf{r}} = \\
+ & = \hat{\mathbf{r}} \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \hat{\mathbf{p}}
+   - \hat{\mathbf{p}} \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \ \hat{\mathbf{r}} \ \int_{\mathbf{r}'} | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \\
+ & = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \hat{\mathbf{p}} \int_{\mathbf{r}} \int_{\mathbf{r}'} | \mathbf{r} \rangle \mathbf{r}' \underbrace{\langle \mathbf{r} |\mathbf{r}' \rangle}_{\delta(\mathbf{r}-\mathbf{r}')} \langle \mathbf{r}' | d \mathbf{r}' = \\
+ & = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \hat{\mathbf{p}} \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} = \\
+ & = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} - \int_{\mathbf{r}'} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r} \ \hat{\mathbf{p}} \ \int_{\mathbf{r}'} \mathbf{r}' | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \\
+ & = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | \, d \mathbf{r} + \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \nabla \langle \mathbf{r} | d \mathbf{r} \int_{\mathbf{r}'} \mathbf{r}' | \mathbf{r}' \rangle \langle \mathbf{r}' | d \mathbf{r}' = \dots
+\end{aligned}$$
+
+$$\begin{aligned}
+\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right] | \Psi \rangle 
+ & = - \int_{\mathbf{r}} \mathbf{r} | \mathbf{r} \rangle i \hbar \nabla \Psi(\mathbf{r},t) + \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \nabla \left( \mathbf{r} \Psi(\mathbf{r},t) \right) = \\
+ & = - \int_{\mathbf{r}} | \mathbf{r} \rangle i \hbar \left[ \mathbf{r} \nabla \Psi(\mathbf{r},t) + \mathbb{I} \Psi(\mathbf{r},t) + \mathbf{r} \nabla \Psi(\mathbf{r},t) \right] = \\
+ & = i \hbar \underbrace{\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}}_{\hat{\mathbf{1}}} \, | \Psi \rangle \ ,
+\end{aligned}$$
+
+and since $| \Psi \rangle$ is arbitrary
+
+$$\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right] = i \hbar \mathbb{I} \hat{\mathbf{1}} \ . $$
+
+$$\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . $$
+
+
+### Heisenberg Uncertainty "principle"
+
+- Heisenberg uncertainty "principle" is a relation between product of variance of two physical quantities and their commutation,
+- **todo** *relation with measurement process and outcomes. Commutation as a measurement process: first measure $B$ and then $A$, or first measure $A$ and then $B$*
+
+$$\sigma_A \sigma_B \ge \frac{1}{2} \left|\overline{[\hat{A}, \hat{B}]}\right| \ .$$
+
+```{dropdown} Proof of Heisenberg uncertainty "principle"
+$$\begin{aligned}
+ \sigma^2_A \sigma^2_B
+ & = \langle \Psi | \left(\hat{A} - \bar{A} \right)^2 | \Psi \rangle\langle \Psi | \left(\hat{B} - \bar{B} \right)^2 | \Psi \rangle = \\
+ & = \langle (\hat{A} - \bar{A} ) \Psi |  (\hat{A} - \bar{A} ) \Psi \rangle \langle  (\hat{B} - \bar{B} ) \Psi |  (\hat{B} - \bar{B} ) \Psi \rangle = \\
+ & = \| ( \hat{A} - \bar{A} ) \Psi \|^2 \| ( \hat{B} - \bar{B} ) \Psi \|^2 = \\
+ & \ge \left| \langle ( \hat{A} - \bar{A} ) \Psi | ( \hat{B} - \bar{B} ) \Psi  \rangle \right|^2 = \\
+ & = \left| \langle \Psi | (\hat{A} - \bar{A})(\hat{B} - \bar{B}) \Psi \rangle \right|^2 = \\
+ & = \left| \langle \Psi | \hat{A}\hat{B} - \hat{A}\bar{B} - \bar{A}\hat{B} + \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ & = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ & = \left| \frac{\langle \Psi | \hat{A}\hat{B} - \hat{B}\hat{A} | \Psi \rangle}{2i} \right|^2 = \\
+ & = \frac{ \left|\langle \Psi | [\hat{A}, \hat{B}] | \Psi \rangle \right|^2}{4} = \frac{1}{4} \left| \overline{[\hat{A}, \hat{B}]} \right|^2
+\end{aligned}$$
+
+having used Cauchy triangle inequality and 
+
+$$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}$$
+
+```
+
+Hesienberg uncertainty principles applied to position and momentum reads
+
+$$\sigma_{r_a} \sigma_{p_b} \ge \frac{1}{2} \left|\overline{[\hat{r}_a, \hat{p}_b]}\right| = \frac{\hbar}{2}  \delta_{ab} \ .$$
 
 
 
