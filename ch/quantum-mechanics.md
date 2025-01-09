@@ -1,6 +1,11 @@
 (quantum-mechanics)=
 # Quantum Mechanics
 
+- Principles and postulates
+  - statistics and measurements outcomes (Heisenberg built its matrix mechanics only on observables...)
+  - CCR
+- angluar momentum, spin, and atom
+
 ## Mathematical tools for quantum mechanics
 
 ```{prf:definition} Operator
@@ -30,9 +35,10 @@ Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at le
 ## Postulates of Quantum Mechanics
 - ...
 - Canonical Commutation Relation (CCR) *and Canonical Anti-Commutation Relation...*
+- ...
 
 ## Non-relativistic Mechanics
-### Statistical Interpretation
+### Statistical Interpretation and Measurement
 #### Wave function
 The state of a system is described by a wave function $|\Psi\rangle$ 
 
@@ -246,7 +252,6 @@ $$c_k(t) = c_{k,0} \exp \left[- i \frac{E_k}{\hbar} t \right]$$
 Thus the state of the system evolves like a superposition of monochromatic waves with frequencies $\omega_k = \frac{E_k}{\hbar}$,
 
 $$| \Psi \rangle = | \Psi_k \rangle c_k(t) = | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right] \ .$$
-
 
 $$\begin{aligned}
  \dfrac{d}{dt} \bar{A}
