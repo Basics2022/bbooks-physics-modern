@@ -1,25 +1,36 @@
 \selectlanguage *{english}
 \contentsline {chapter}{\numberline {1}Special Relativity}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}General Relativity}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Statistical Physics}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Quantum Mechanics}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Mathematical tools for quantum mechanics}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Postulates of Quantum Mechanics}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Non\sphinxhyphen {}relativistic Mechanics}{10}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Statistical Interpretation}{10}{subsection.4.3.1}%
-\contentsline {subsubsection}{Wave function}{10}{subsubsection*.3}%
-\contentsline {subsubsection}{Operators and Observables}{10}{subsubsection*.4}%
-\contentsline {subsubsection}{Space Representation}{11}{subsubsection*.5}%
-\contentsline {subsubsection}{Momentum Representation}{12}{subsubsection*.6}%
-\contentsline {subsubsection}{From position to momentum representation}{13}{subsubsection*.7}%
-\contentsline {subsection}{\numberline {4.3.2}Schrodinger Equation}{13}{subsection.4.3.2}%
-\contentsline {subsubsection}{Stationary States}{14}{subsubsection*.8}%
-\contentsline {subsubsection}{Pictures}{14}{subsubsection*.9}%
-\contentsline {paragraph}{Schrodinger}{14}{paragraph*.10}%
-\contentsline {paragraph}{Heisenberg}{15}{paragraph*.11}%
-\contentsline {paragraph}{Interaction}{16}{paragraph*.12}%
-\contentsline {subsection}{\numberline {4.3.3}Matrix Mechanics}{16}{subsection.4.3.3}%
-\contentsline {subsubsection}{Attualization of 1925 papers}{16}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {4.3.4}Heisenberg Uncertainty “principle”}{16}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Many\sphinxhyphen {}body problem}{17}{section.4.4}%
-\contentsline {chapter}{Proof Index}{19}{section*.14}%
+\contentsline {section}{\numberline {1.1}Dynamics}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Lagrangian approach}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Electromagnetism}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Classical electromagnetic theory}{7}{subsection.1.2.1}%
+\contentsline {subsubsection}{Maxwell equations}{7}{subsubsection*.3}%
+\contentsline {subsubsection}{Electromagnetic potentials}{7}{subsubsection*.4}%
+\contentsline {subsubsection}{Lorentz force}{7}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.2.2}Electromagnetic potential}{7}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Electromagnetic field and electromagnetic field equations}{8}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Point particle in electromagnetic field}{9}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Energy balance}{10}{subsection.1.2.5}%
+\contentsline {chapter}{\numberline {2}General Relativity}{11}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Statistical Physics}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Quantum Mechanics}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Mathematical tools for quantum mechanics}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Postulates of Quantum Mechanics}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Non\sphinxhyphen {}relativistic Mechanics}{16}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Statistical Interpretation and Measurement}{16}{subsection.4.3.1}%
+\contentsline {subsubsection}{Wave function}{16}{subsubsection*.6}%
+\contentsline {subsubsection}{Operators and Observables}{16}{subsubsection*.7}%
+\contentsline {subsubsection}{Space Representation}{17}{subsubsection*.8}%
+\contentsline {subsubsection}{Momentum Representation}{18}{subsubsection*.9}%
+\contentsline {subsubsection}{From position to momentum representation}{19}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {4.3.2}Schrodinger Equation}{19}{subsection.4.3.2}%
+\contentsline {subsubsection}{Stationary States}{20}{subsubsection*.11}%
+\contentsline {subsubsection}{Pictures}{20}{subsubsection*.12}%
+\contentsline {paragraph}{Schrodinger}{20}{paragraph*.13}%
+\contentsline {paragraph}{Heisenberg}{21}{paragraph*.14}%
+\contentsline {paragraph}{Interaction}{22}{paragraph*.15}%
+\contentsline {subsection}{\numberline {4.3.3}Matrix Mechanics}{22}{subsection.4.3.3}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{22}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {4.3.4}Heisenberg Uncertainty “principle”}{22}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Many\sphinxhyphen {}body problem}{23}{section.4.4}%
+\contentsline {chapter}{Proof Index}{25}{section*.17}%

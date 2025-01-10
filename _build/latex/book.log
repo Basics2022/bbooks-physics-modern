@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  16 DEC 2024 11:45
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  10 JAN 2025 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1640,13 +1640,13 @@ LaTeX Info: Redefining \rmfamily on input line 1.
 LaTeX Info: Redefining \sffamily on input line 1.
 LaTeX Info: Redefining \ttfamily on input line 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 6.
+(Font)              scaled to size 7.00075pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 6.
+(Font)              scaled to size 5.00053pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 6.
+(Font)              scaled to size 6.99925pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 6.
+(Font)              scaled to size 4.99947pt on input line 3.
 )
 \tf@toc=\write7
 \openout7 = `book.toc'.
@@ -1668,72 +1668,96 @@ LaTeX Info: Redefining \ttfamily on input line 130.
 ]
 Chapter 1.
 [3]
-LaTeX Info: Redefining \rmfamily on input line 135.
-LaTeX Info: Redefining \sffamily on input line 135.
-LaTeX Info: Redefining \ttfamily on input line 135.
- [4
+LaTeX Info: Redefining \rmfamily on input line 259.
+LaTeX Info: Redefining \sffamily on input line 259.
+LaTeX Info: Redefining \ttfamily on input line 259.
+ [4]
+LaTeX Info: Redefining \rmfamily on input line 326.
+LaTeX Info: Redefining \sffamily on input line 326.
+LaTeX Info: Redefining \ttfamily on input line 326.
+ [5]
+LaTeX Info: Redefining \rmfamily on input line 371.
+LaTeX Info: Redefining \sffamily on input line 371.
+LaTeX Info: Redefining \ttfamily on input line 371.
+ [6]
+LaTeX Info: Redefining \rmfamily on input line 448.
+LaTeX Info: Redefining \sffamily on input line 448.
+LaTeX Info: Redefining \ttfamily on input line 448.
+ [7]
+LaTeX Info: Redefining \rmfamily on input line 551.
+LaTeX Info: Redefining \sffamily on input line 551.
+LaTeX Info: Redefining \ttfamily on input line 551.
+ [8]
+LaTeX Info: Redefining \rmfamily on input line 623.
+LaTeX Info: Redefining \sffamily on input line 623.
+LaTeX Info: Redefining \ttfamily on input line 623.
+ [9]
+LaTeX Info: Redefining \rmfamily on input line 638.
+LaTeX Info: Redefining \sffamily on input line 638.
+LaTeX Info: Redefining \ttfamily on input line 638.
+ [10]
+Chapter 2.
+[11
 
 ]
-Chapter 2.
-[5]
-LaTeX Info: Redefining \rmfamily on input line 140.
-LaTeX Info: Redefining \sffamily on input line 140.
-LaTeX Info: Redefining \ttfamily on input line 140.
- [6
+LaTeX Info: Redefining \rmfamily on input line 643.
+LaTeX Info: Redefining \sffamily on input line 643.
+LaTeX Info: Redefining \ttfamily on input line 643.
+ [12
 
 ]
 Chapter 3.
-[7]
-LaTeX Info: Redefining \rmfamily on input line 145.
-LaTeX Info: Redefining \sffamily on input line 145.
-LaTeX Info: Redefining \ttfamily on input line 145.
- [8
+[13]
+LaTeX Info: Redefining \rmfamily on input line 648.
+LaTeX Info: Redefining \sffamily on input line 648.
+LaTeX Info: Redefining \ttfamily on input line 648.
+ [14
 
 ]
 Chapter 4.
-[9]
+[15]
 
 LaTeX Warning: Hyper reference `ch/quantum-mechanics:quantum-mechanics-math-ope
-rators-self-adjoint' on page 10 undefined on input line 221.
+rators-self-adjoint' on page 16 undefined on input line 748.
 
-LaTeX Info: Redefining \rmfamily on input line 278.
-LaTeX Info: Redefining \sffamily on input line 278.
-LaTeX Info: Redefining \ttfamily on input line 278.
-[10]
-LaTeX Info: Redefining \rmfamily on input line 341.
-LaTeX Info: Redefining \sffamily on input line 341.
-LaTeX Info: Redefining \ttfamily on input line 341.
- [11]
-LaTeX Info: Redefining \rmfamily on input line 397.
-LaTeX Info: Redefining \sffamily on input line 397.
-LaTeX Info: Redefining \ttfamily on input line 397.
- [12]
-LaTeX Info: Redefining \rmfamily on input line 449.
-LaTeX Info: Redefining \sffamily on input line 449.
-LaTeX Info: Redefining \ttfamily on input line 449.
- [13]
-LaTeX Info: Redefining \rmfamily on input line 516.
-LaTeX Info: Redefining \sffamily on input line 516.
-LaTeX Info: Redefining \ttfamily on input line 516.
- [14]
-LaTeX Info: Redefining \rmfamily on input line 578.
-LaTeX Info: Redefining \sffamily on input line 578.
-LaTeX Info: Redefining \ttfamily on input line 578.
- [15]
-LaTeX Info: Redefining \rmfamily on input line 632.
-LaTeX Info: Redefining \sffamily on input line 632.
-LaTeX Info: Redefining \ttfamily on input line 632.
- [16]
-LaTeX Info: Redefining \rmfamily on input line 669.
-LaTeX Info: Redefining \sffamily on input line 669.
-LaTeX Info: Redefining \ttfamily on input line 669.
+LaTeX Info: Redefining \rmfamily on input line 794.
+LaTeX Info: Redefining \sffamily on input line 794.
+LaTeX Info: Redefining \ttfamily on input line 794.
+[16]
+LaTeX Info: Redefining \rmfamily on input line 856.
+LaTeX Info: Redefining \sffamily on input line 856.
+LaTeX Info: Redefining \ttfamily on input line 856.
  [17]
-LaTeX Info: Redefining \rmfamily on input line 669.
-LaTeX Info: Redefining \sffamily on input line 669.
-LaTeX Info: Redefining \ttfamily on input line 669.
- [18
+LaTeX Info: Redefining \rmfamily on input line 915.
+LaTeX Info: Redefining \sffamily on input line 915.
+LaTeX Info: Redefining \ttfamily on input line 915.
+ [18]
+LaTeX Info: Redefining \rmfamily on input line 976.
+LaTeX Info: Redefining \sffamily on input line 976.
+LaTeX Info: Redefining \ttfamily on input line 976.
+ [19]
+LaTeX Info: Redefining \rmfamily on input line 1043.
+LaTeX Info: Redefining \sffamily on input line 1043.
+LaTeX Info: Redefining \ttfamily on input line 1043.
+ [20]
+LaTeX Info: Redefining \rmfamily on input line 1105.
+LaTeX Info: Redefining \sffamily on input line 1105.
+LaTeX Info: Redefining \ttfamily on input line 1105.
+ [21]
+LaTeX Info: Redefining \rmfamily on input line 1159.
+LaTeX Info: Redefining \sffamily on input line 1159.
+LaTeX Info: Redefining \ttfamily on input line 1159.
+ [22]
+LaTeX Info: Redefining \rmfamily on input line 1196.
+LaTeX Info: Redefining \sffamily on input line 1196.
+LaTeX Info: Redefining \ttfamily on input line 1196.
+ [23]
+LaTeX Info: Redefining \rmfamily on input line 1196.
+LaTeX Info: Redefining \sffamily on input line 1196.
+LaTeX Info: Redefining \ttfamily on input line 1196.
+ [24
 
-] [19
+] [25
 
 
 ] (./book.ind)
@@ -1771,29 +1795,30 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 683.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 683.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1210.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1210.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 683.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 683.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1210.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1210.
+
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 0FA4D62FDFCE084B6D08C66447E7C383;1811.
+(rerunfilecheck)             Checksum: FD18B603983F52FFBC2FE66DDFD3CFAD;2751.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42037 strings out of 481789
- 945186 string characters out of 5937152
- 1618941 words of memory out of 5000000
- 58235 multiletter control sequences out of 15000+600000
+ 42052 strings out of 481789
+ 945788 string characters out of 5937152
+ 1628941 words of memory out of 5000000
+ 58250 multiletter control sequences out of 15000+600000
  537790 words of font info for 100 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 71i,25n,109p,820b,2112s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,25n,109p,820b,2086s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (23 pages).
+Output written on book.pdf (29 pages).

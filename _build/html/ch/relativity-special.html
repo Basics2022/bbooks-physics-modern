@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -293,7 +295,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -309,6 +313,29 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">Dynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">Lagrangian approach</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">Electromagnetism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">Maxwell equations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">Electromagnetic potentials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field">Electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lorentz force</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -320,6 +347,218 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="special-relativity">
 <span id="relativity-special"></span><h1>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
+<p>An event is determined by spatio-temporal information together, <span class="math notranslate nohighlight">\(t, \vec{r}\)</span>. Absolute nature of physics needs vector algebra and calculus formalism</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{X} = c  \,t  \,\mathbf{e}_0 + \vec{r} =  c \, t \, \mathbf{e}_0 + x^1 \mathbf{e}_1 + x^2 \mathbf{e}_2 + x^3 \mathbf{e}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,\]</div>
+<p>having used Cartesian coordiantes for the space coordinate.</p>
+<p>Minkowski metric reads</p>
+<div class="math notranslate nohighlight">
+\[g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{-1, 1, 1, 1\}\]</div>
+<p>The reciprocal basis reads <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha} \cdot \mathbf{E}^{\beta} = \delta_{\alpha}^{\beta}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha} = g_{\alpha \beta} \mathbf{E}^{\beta}\)</span>, s.t. the elementary interval between two events can be written as</p>
+<div class="math notranslate nohighlight">
+\[d \mathbf{X} = d X^{\alpha} \, \mathbf{E}_{\alpha} = \underbrace{d X^{\alpha} \, g_{\alpha \beta}}_{= dX_{\beta}} \, \mathbf{E}^{\beta} = d X_{\beta} \, \mathbf{E}^{\beta} \ ,\]</div>
+<p>having used Cartesian coordinates,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{aligned}  &amp; X^0 = c t \\  &amp; X_0 = c t \end{aligned} \qquad
+  \begin{aligned}  &amp; X^1 =   x \\  &amp; X_1 =  -x \end{aligned} \qquad
+  \begin{aligned}  &amp; X^2 =   y \\  &amp; X_2 =  -y \end{aligned} \qquad
+  \begin{aligned}  &amp; X^3 =   z \\  &amp; X_3 =  -z \end{aligned}
+\end{split}\]</div>
+<p>Its “length”, or better pseudo-norm with Minkowski metric, is invariant and reads</p>
+<div class="math notranslate nohighlight">
+\[d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(ds\)</span> is invariant
+<strong>todo</strong> prove it. And/or add a section about the role of invariance.</p>
+</div>
+<p>For a co-moving observer, <span class="math notranslate nohighlight">\(d \vec{r}' = \vec{0}\)</span>, and <span class="math notranslate nohighlight">\(t'\)</span> is commonly indicated with <span class="math notranslate nohighlight">\(\tau\)</span>, and its differential is invariant itself, being the product of a constant (<span class="math notranslate nohighlight">\(c\)</span> is a universal constant in special relativity) and an invariant quantity.</p>
+<div class="math notranslate nohighlight">
+\[d s^2 = c^2 dt'^2 - |d \vec{r}'|^2 = c^2 d \tau^2 \ .\]</div>
+<p>Given the invariant nature of <span class="math notranslate nohighlight">\(d s\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[d s^2 = c^2 \, d \tau^2 = c^2 \, dt^2 - |d \vec{r}|^2 = c^2 \, dt^2 \left[ 1 - \frac{1}{c^2}\frac{|d\vec{r}|^2}{dt^2} \right] = c^2 \, dt^2 \left[ 1 - \frac{|\vec{v}|^2}{c^2} \right]\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[d s = c \, d \tau = \gamma^{-1}(v/c) \, c \, dt \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\gamma(w) = \frac{1}{\sqrt{1 - w^2}}\)</span>.</p>
+<p><strong>4-Velocity</strong> Given the parametric representation of an event in space-time as a function of its proper time, <span class="math notranslate nohighlight">\(\mathbf{X}(\tau)\)</span> or coordinate <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X}(s)\)</span> the derivative w.r.t. this parameter is defined as the 4-velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha}\)</span>, as a function of the observer time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(c t\)</span>, <span class="math notranslate nohighlight">\(x^i(t)\)</span>, and the transformation of coordinates <span class="math notranslate nohighlight">\(t(\tau)\)</span>, with differential <span class="math notranslate nohighlight">\(d t = \frac{1}{\gamma} \, d \tau\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{U}(s) := \mathbf{X}'(s) = \dfrac{d t}{ ds } \dfrac{d}{dt} \mathbf{X}(t) = \dots = \gamma(v/c) \left( \mathbf{E}_0 + \frac{\vec{v}}{c} \right) \ .\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using <span class="math notranslate nohighlight">\(s\)</span> as the parameter, <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> is non-dimensional, and has pseudo-norm = 1,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{U}(s) \cdot \mathbf{U}(s) = \gamma^2 \underbrace{\left( 1 - \frac{|\vec{v}|^2}{c^2} \right)}_{=\gamma^{-2}} = 1 \ .\]</div>
+<p>Using <span class="math notranslate nohighlight">\(\tau\)</span> as the parameter, <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> has physical dimension of a velocity and pseudo-norm = <span class="math notranslate nohighlight">\(c\)</span>.</p>
+</div>
+<p><strong>4-acceleration</strong> <span class="math notranslate nohighlight">\(\mathbf{X}''(\tau)\)</span> or <span class="math notranslate nohighlight">\(\mathbf{X}''(s)\)</span>, <strong>todo</strong></p>
+<div class="section" id="dynamics">
+<h2>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h2>
+<p><strong>4-momentum</strong></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{P} = m \mathbf{U}\]</div>
+<p>Using Cartesian coordinates and <span class="math notranslate nohighlight">\(\tau\)</span> as independent variable,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{P} = m \mathbf{U} = m \frac{d \mathbf{X}}{d \tau} = m \gamma (c, \vec{v}) \ .\]</div>
+<p>The spatial component is <span class="math notranslate nohighlight">\(\gamma\)</span> times the 3-dimensional momentum <span class="math notranslate nohighlight">\(\vec{p} = m \vec{v}\)</span>; the time component reads</p>
+<div class="math notranslate nohighlight">
+\[P^0 = m \gamma(w) c \ ,\]</div>
+<p>and for small ratio <span class="math notranslate nohighlight">\(w:= \frac{v}{c}\)</span> it can be expanded in Taylor series around <span class="math notranslate nohighlight">\(w = 0\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\gamma(w) \sim \gamma(0) + w \, \gamma'(0) + \frac{1}{2} \, w^2 \gamma''(0) + o(w^2) \ ,\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\left.\gamma(w)  \right|_{w=0} &amp; = \left.\frac{1}{\sqrt{1 - w^2}}\right|_{w=0} = 1 \\
+\left.\gamma'(w) \right|_{w=0} &amp; = \left.-\frac{1}{2}(1 - w^2)^{-\frac{3}{2}} (- 2 w)\right|_{w=0} = w (1 - w^2)^{-\frac{3}{2}}= 0 \\
+\left.\gamma''(w)\right|_{w=0} &amp; = \left. \left( (1-w^2)^{-\frac{3}{2}} + w \left(-\frac{3}{2} \right)(1-w^2)^{-\frac{5}{2}} (- 2 w)  \right)\right|_{w=0} = \\ 
+  &amp; = \left. \left( (1-w^2)^{-\frac{3}{2}} + 3 w^2 (1-w^2)^{-\frac{5}{2}} \right)\right|_{w=0} = 1 \\
+\end{aligned}\end{split}\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[\gamma(w) = 1 + \frac{1}{2} w^2 + o(w^2)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\gamma(v/c) \, m \, c \sim m \, c \left( 1 + \frac{v^2}{c^2} \right) = \frac{1}{c} \left( mc^2 + \frac{1}{2} m |\vec{v}|^2 \right) \]</div>
+<p>Thus, recognizing energy (<span class="math notranslate nohighlight">\(E = \gamma m c^2\)</span>) and 3-momentum (<span class="math notranslate nohighlight">\(\vec{p} = m_3 \vec{v}\)</span>, with <span class="math notranslate nohighlight">\(m_3 := \gamma m\)</span>), the 4-momentum can be written as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{P} = m \mathbf{U} = \gamma m \left( 1, \frac{\vec{v}}{c} \right) =: \frac{1}{c} \left( \frac{E}{c}, \vec{p} \right)\]</div>
+<p>Its pseudo-norm reads</p>
+<div class="math notranslate nohighlight">
+\[m^2 = \mathbf{P} \cdot \mathbf{P} = \frac{1}{c^4} \left( E^2 - c^2 |\vec{p}|^2 \right) \]</div>
+<p>and thus the relation between <span class="math notranslate nohighlight">\(E\)</span>, <span class="math notranslate nohighlight">\(\vec{p}\)</span>, <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(c\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E^2 = m^2 c^4 + c^2 |\vec{p}|^2 \ ,\]</div>
+<p>from which, for <span class="math notranslate nohighlight">\(\vec{v} = \vec{0} \rightarrow \vec{p} = \vec{0}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E^2 = m^2 c^4 \ ,\]</div>
+<p>and keeping only the solution with positive energy (<strong>todo</strong> <em>reference to Dirac’s equation and anti-matter?</em>)</p>
+<div class="math notranslate nohighlight">
+\[E = m c^2 \ .\]</div>
+<div class="section" id="lagrangian-approach">
+<h3>Lagrangian approach<a class="headerlink" href="#lagrangian-approach" title="Permalink to this heading">#</a></h3>
+<p><strong>Free particle.</strong></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{0} = \frac{d \mathbf{P}}{d s} = \frac{d }{d s} \left( m \mathbf{X}'(s) \right)\]</div>
+<p>Weak form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \mathbf{W}(s) \cdot \frac{d }{d s} \left( m \mathbf{X}'(s) \right) = \\
+  &amp; = \frac{d }{d s} \left[ m \mathbf{W}(s) \cdot \mathbf{X}'(s) \right] - m \mathbf{W}'(s) \cdot \mathbf{X}'(s)  = \\
+\end{aligned}\end{split}\]</div>
+<p>Using generalized coordinates <span class="math notranslate nohighlight">\(q^k(s)\)</span>, the event can be written in parametric form as <span class="math notranslate nohighlight">\(\mathbf{X}(q^k(s), s)\)</span>, while the velocity reads</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{U}(s) = \mathbf{X}'(s) = \frac{d}{ds} \mathbf{X}(q^k(s), s) = {q^k}'(s) \underbrace{\frac{\partial \mathbf{X}}{\partial q^k}(q^k(s), s)}_{=\frac{\partial \mathbf{X}'}{\partial {q^k}'}} + \frac{\partial \mathbf{X}}{\partial s}(q^k(s), s) = \mathbf{U}({q^k}'(s), q^k(s), s)\]</div>
+<p>Choosing <span class="math notranslate nohighlight">\(\mathbf{W} = \frac{\partial \mathbf{X}}{\partial q^k} = \frac{\partial \mathbf{X}'}{\partial {q^k}'}\)</span> in the weak form,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+0  
+&amp; = \frac{d }{d s} \left[ m \mathbf{W} \cdot \mathbf{X}' \right] - m \mathbf{W}' \cdot \mathbf{X}' = \\
+&amp; = \frac{d }{d s} \left[ m \frac{\partial \mathbf{X}'}{\partial {q^k}'} \cdot \mathbf{X}' \right] - m \dfrac{d}{ds} \frac{\partial \mathbf{X}}{\partial {q^k}} \cdot \mathbf{X}' = \\
+&amp; = \frac{1}{2} \left[ \frac{d}{d s} \left( \frac{\partial}{\partial {q^k}'}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right) - \frac{\partial}{\partial q^k}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right] =
+\end{aligned}\end{split}\]</div>
+<p>Defining</p>
+<div class="math notranslate nohighlight">
+\[ f\left({q^k}'(s), q^k(s), s \right) = - m \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) \cdot \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) = - m \ ,\]</div>
+<p>multiplying by a “regular” generic function <span class="math notranslate nohighlight">\(w(s)\)</span>, neglecting factor <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and integrating by parts</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0
+ &amp; = - \int_{s=s_a}^{s_b} w(s) \left[ \frac{d}{ds} \frac{\partial f}{\partial {q^k}'} - \frac{\partial f}{\partial q^k} \right] \, ds = \\
+ &amp; = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \int_{s=s_a}^{s_b} \left[ w'(s) \frac{\partial f}{\partial {q^k}'} + \frac{\partial f}{\partial q^k} \right] \, ds = \\
+ &amp; = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ .
+\end{aligned}\end{split}\]</div>
+<p>Thus, provided that <span class="math notranslate nohighlight">\(w(s_1) = w(s_2) = 0\)</span>, equation of motion of free particle implies stationariety of functional</p>
+<div class="math notranslate nohighlight">
+\[\int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ ,\]</div>
+<p>i.e.</p>
+<div class="math notranslate nohighlight">
+\[\delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds = 0\]</div>
+<p>Using <span class="math notranslate nohighlight">\(t\)</span> as independent parameter, <span class="math notranslate nohighlight">\(ds = \gamma^{-1} \, c \, dt\)</span>, the functional can be recast as</p>
+<div class="math notranslate nohighlight">
+\[\int_{t=t_a}^{t_b}  -m \, c  \, \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, dt \ ,\]</div>
+<p>to find the (3-dimensional) Lagrangian (multiply by <span class="math notranslate nohighlight">\(c\)</span> to get the right physical dimension; check if it’s required and wheter it’s possible to make <span class="math notranslate nohighlight">\(c\)</span> appear before),</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L} = - \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, m \, c^2 \ ,\]</div>
+<p>and retrieve 3-momentum as (being <span class="math notranslate nohighlight">\(\vec{v} = \dot{\vec{r}})\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{p} 
+  &amp; := \frac{\partial \mathscr{L}}{\partial \dot{\vec{r}}} = \\
+  &amp;  = - m c^2 \frac{1}{2} \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \left( - 2 \frac{\vec{v}}{c^2}\right) = \\
+  &amp;  = m \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \vec{v} = \\
+  &amp;  = \gamma \, m \, \vec{v} \ ,
+\end{aligned}\end{split}\]</div>
+<p>and energy as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E
+  &amp; := \vec{p} \cdot \vec{v} - \mathscr{L} = \\
+  &amp; = \gamma \, m \, |\vec{v}|^2 + \gamma^{-1} \, m \, c^2 = \\
+  &amp; = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + \gamma^{-2} \right) = \\
+  &amp; = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + 1 - \frac{|\vec{v}|^2}{c^2} \right) = \\
+  &amp; = \gamma \, m \, c^2 \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="electromagnetism">
+<h2>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h2>
+<div class="section" id="classical-electromagnetic-theory">
+<h3>Classical electromagnetic theory<a class="headerlink" href="#classical-electromagnetic-theory" title="Permalink to this heading">#</a></h3>
+<div class="section" id="maxwell-equations">
+<h4>Maxwell equations<a class="headerlink" href="#maxwell-equations" title="Permalink to this heading">#</a></h4>
+<p>Maxwell equations read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\nabla \cdot \vec{d} = \rho_f \\
+\nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+\nabla \cdot \vec{b} = 0 \\
+\nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
+\end{cases}\end{split}\]</div>
+<p>or in vacuum, with <span class="math notranslate nohighlight">\(\rho_f = \rho\)</span>, <span class="math notranslate nohighlight">\(\vec{j} = \vec{j}_f\)</span>, <span class="math notranslate nohighlight">\(\vec{d} = \varepsilon_0 \vec{e}\)</span>, <span class="math notranslate nohighlight">\(\vec{b} = \mu_0 \vec{h}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+\nabla \cdot \vec{b} = 0 \\
+\nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
+\end{cases}\end{split}\]</div>
+</div>
+<div class="section" id="electromagnetic-potentials">
+<h4>Electromagnetic potentials<a class="headerlink" href="#electromagnetic-potentials" title="Permalink to this heading">#</a></h4>
+<p>The electromagnetic field can be written in terms of the electromagnetic potentials</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \vec{b} = \nabla \times \vec{a} \\
+ \vec{e} = -\partial_t \vec{a} - \nabla \varphi \\
+\end{cases}\end{split}\]</div>
+</div>
+<div class="section" id="lorentz-force">
+<h4>Lorentz force<a class="headerlink" href="#lorentz-force" title="Permalink to this heading">#</a></h4>
+<p>A particle in motion in a electromagnetic field is subject to Lorentz force. In classical electromagnetism, the expression of Lorentz force reads</p>
+<div class="math notranslate nohighlight">
+\[\vec{F} = q \left( \vec{e} - \vec{b} \times \vec{v} \right) \ ,\]</div>
+<p>whose power is</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} \cdot \vec{F} = \vec{v} \cdot q \left( \vec{e} - \vec{b} \times \vec{v} \right) = q \vec{v} \cdot \vec{e} \ . \]</div>
+</div>
+</div>
+<div class="section" id="point-particle-in-electromagnetic-field">
+<h3>Point particle in electromagnetic field<a class="headerlink" href="#point-particle-in-electromagnetic-field" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="electromagnetic-field">
+<h3>Electromagnetic field<a class="headerlink" href="#electromagnetic-field" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="id1">
+<h3>Lorentz force<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -376,6 +615,35 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">Dynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">Lagrangian approach</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">Electromagnetism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">Maxwell equations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">Electromagnetic potentials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field">Electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lorentz force</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
