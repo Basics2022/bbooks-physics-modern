@@ -239,12 +239,208 @@ whose power is
 
 $$\vec{v} \cdot \vec{F} = \vec{v} \cdot q \left( \vec{e} - \vec{b} \times \vec{v} \right) = q \vec{v} \cdot \vec{e} \ . $$
 
+### Electromagnetic potential
+
+$$\begin{cases}
+ \vec{b} = \nabla \times \vec{a} \\
+ \vec{e} = -\partial_t \vec{a} - \nabla \varphi \\
+\end{cases}$$
+
+$$\mathbf{A} = \mathbf{E}_{\alpha} A^{\alpha} = \frac{\varphi}{c} \mathbf{E}_0 + \vec{a}$$
+
+$$\symbf{\nabla} \mathbf{A} =
+\left( \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}} \right) \left( A^{\beta} \mathbf{E}_{\beta} \right)
+= \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}^{\alpha} \otimes \mathbf{E}_{\beta} 
+= g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .$$
+
+whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),
+
+$$(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
+\begin{bmatrix}
+ c^{-2} \partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
+ c^{-1} \partial_t a_x     &       \partial_x a_x     &       \partial_y a_x     &       \partial_z a_x     \\
+ c^{-1} \partial_t a_y     &       \partial_x a_y     &       \partial_y a_y     &       \partial_z a_y     \\
+ c^{-1} \partial_t a_z     &       \partial_x a_z     &       \partial_y a_z     &       \partial_z a_z     \\
+\end{bmatrix}$$
+
+or covariant-covariant coomponents,
+
+$$(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\gamma}}{\partial X^{\alpha}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
+ -c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
+ -c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
+ -c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
+\end{bmatrix}$$
+
+or contravariant-contravariant coomponents,
+
+$$(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\alpha}}{\partial X^{\gamma}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi &-c^{-1}\partial_x \varphi &-c^{-1}\partial_y \varphi &-c^{-1}\partial_z \varphi \\
+  c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
+  c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
+  c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
+\end{bmatrix}$$
+
+The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,
+
+$$\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]$$
+
+whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),
+
+$$F^{\alpha \beta} = 
+\begin{bmatrix}
+                        0 & -\frac{\underline{e}^T}{c} \\
+  \frac{\underline{e}}{c} & \underline{b}_{\times}
+\end{bmatrix}
+\qquad , \qquad 
+F_{\alpha \beta} = 
+\begin{bmatrix}
+                        0 & \frac{\underline{e}^T}{c} \\
+ -\frac{\underline{e}}{c} & \underline{b}_{\times}
+\end{bmatrix}
+$$
+
+### Electromagnetic field and electromagnetic field equations
+
+The pair of Maxwell equations
+
+$$\begin{cases}
+  \rho_f    = \nabla \cdot \vec{d}  \\
+  \vec{j}_f = - \partial_t \vec{d} + \nabla \times \vec{h}  \\
+\end{cases}$$
+
+can be re-written in $4$-formalism, using $4$-gradient in Cartesian coordinates
+
+$$\symbf{\nabla} = \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}}
+ = \mathbf{E}_0 \, \frac{\partial }{c \partial t} + \mathbf{E}_i \frac{\partial}{\partial x^i}
+ = \mathbf{E}_0 \, \frac{\partial }{c \partial t} + \nabla \ ,$$
+
+and the definition of the 4-current density vector
+
+$$\mathbf{J} = J^{\alpha} \mathbf{E}_{\alpha} = c \rho \, \mathbf{E}_0 + \vec{j}$$
+
+so that
+
+$$\begin{aligned}
+  c \rho \mathbf{E}_0 + \vec{j} = \symbf{\nabla} \cdot \mathbf{F} 
+  = \symbf{\nabla} \cdot
+   [ & ( 0\, \mathbf{E}_0 + c \vec{d} ) \otimes \mathbf{E}_0 + ( - \mathbf{E}_0 c \vec{d} + \vec{h}_{\times} ) ] \ ,
+\end{aligned}$$
+
+with the displacement field tensor,
+
+$$\mathbf{D} = D^{\alpha \beta} \, \mathbf{E}_{\alpha} \, \mathbf{E}_{\beta} \ , $$
+
+with components (rows for the first index, columns for the second index)
+
+$$D^{\alpha \beta} = 
+  \begin{bmatrix}     0 & -c d_x & - c d_y & - c d_z \\
+                  c d_x &      0 & -   h_z &     h_y \\
+                  c d_y &    h_z &       0 & -   h_x \\
+                  c d_z & -  h_y &     h_x &       0 \\
+  \end{bmatrix} =
+  \begin{bmatrix} 0 & - c \underline{d}^T \\ c \underline{d} & \underline{h}_{\times} \ .
+  \end{bmatrix}
+$$
+
+
+<!--
+$$\begin{aligned}
+  \mathbf{0} = \symbf{\nabla} \cdot \mathbf{F} 
+  = \symbf{\nabla} \cdot
+   [ & ( 0\, \mathbf{E}_0 + b_x \mathbf{E}_1 + b_y \mathbf{E}_2 + b_z \mathbf{E}_3 ) \otimes \mathbf{E}_0 + \\
+   + & ( b_x \mathbf{E}_0 + 0\, \mathbf{E}_1 + e_z \mathbf{E}_2 - e_y \mathbf{E}_3 ) \otimes \mathbf{E}_1 + \\
+   + & ( b_y \mathbf{E}_0 - e_z \mathbf{E}_1 + 0\, \mathbf{E}_2 + e_x \mathbf{E}_3 ) \otimes \mathbf{E}_2 + \\
+   + & ( b_z \mathbf{E}_0 + e_y \mathbf{E}_1 - e_x \mathbf{E}_2 + 0\, \mathbf{E}_3 ) \otimes \mathbf{E}_3 ] \\
+  = \symbf{\nabla} \cdot
+   [ & ( 0\, \mathbf{E}^0 + b_x \mathbf{E}^1 + b_y \mathbf{E}^2 + b_z \mathbf{E}^3 ) \otimes \mathbf{E}_0 + \\
+   + & ( b_x \mathbf{E}^0 + 0\, \mathbf{E}^1 + e_z \mathbf{E}^2 - e_y \mathbf{E}^3 ) \otimes \mathbf{E}_1 + \\
+   + & ( b_y \mathbf{E}^0 + e_z \mathbf{E}^1 + 0\, \mathbf{E}^2 + e_x \mathbf{E}^3 ) \otimes \mathbf{E}_2 + \\
+   + & ( b_z \mathbf{E}^0 - e_y \mathbf{E}^1 + e_x \mathbf{E}^2 + 0\, \mathbf{E}^3 ) \otimes \mathbf{E}_3 ]
+\end{aligned}$$
+-->
+
+The pair of Maxwell equations
+
+$$\begin{cases}
+  \nabla \cdot \vec{b} = 0 \\
+  \partial_t \vec{b} + \nabla \times \vec{e} = \vec{0} \\
+\end{cases}$$
+
+can be re-written in $4$-formalism as
+
+$$0 = \partial_{\mu} F_{\eta \xi} + \partial_{\eta} F_{\xi \mu} + \partial_{\xi} F_{\mu \eta} $$
+
+Among these $64 = 4^3$ equations, there are only 4 independent equations.
+- If 2 indices are the same, the corresponding equation is the identity $0 = 0$. As an example, if $\mu = \eta$
+
+   $$0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , $$
+
+   thus only combinations with different indices may provide some information.
+
+- Given the ordered set of indices $(\mu, \eta, \xi)$, switching a pair of indices provides the same equation. As an example, switching $\mu$ and $\eta$
+
+  $$\begin{aligned}
+    0 & = \partial_{\eta} F_{\mu  \xi} + \partial_{\mu} F_{\xi \eta} + \partial_{\xi} F_{\eta \mu} = \\
+      & = \partial_{\eta} ( - F_{\xi \mu} ) + \partial_{\mu} ( - F_{\eta \xi} ) + \partial_{\xi} ( -F_{\mu \eta} ) \ .
+  \end{aligned}$$
+
+- Thus, only 4 combination of different indices, without taking order into account, provide independent information
+
+  $$\begin{aligned}
+    (1,2,3): & \quad 0 = \partial_{1} F_{23} + \partial_{2} F_{31} + \partial_{3} F_{12} = \partial_x (-b_x) + \partial_y (-b_y) + \partial_z (-b_z)  \\
+    (2,3,0): & \quad 0 = \partial_{2} F_{30} + \partial_{3} F_{02} + \partial_{0} F_{23} = \partial_y \left(-\frac{e_z}{c} \right) + \partial_z \left( \frac{e_y}{c} \right) + \partial_{ct} (-b_x) \\
+    (3,0,1): & \quad 0 = \partial_{3} F_{01} + \partial_{0} F_{13} + \partial_{1} F_{30} = \partial_z \left(\frac{e_x}{c}\right) + \partial_{ct} (-b_y) + \partial_x  \left(-\frac{e_z}{c}\right) \\
+    (0,1,2): & \quad 0 = \partial_{0} F_{12} + \partial_{1} F_{20} + \partial_{2} F_{01} = \partial_{ct} (-b_z) + \partial_x \left(-\frac{e_y}{c}\right) + \partial_y  \left(\frac{e_x}{c}\right)     \\
+  \end{aligned}$$
+
+  i.e.
+  
+  $$\begin{aligned}
+    (1,2,3): & \quad 0 = - \nabla \cdot \vec{b} \\
+    (2,3,0): & \quad 0 = -\frac{1}{c} \left[ \partial_t b_x + (\partial_y e_z - \partial_z e_y ) \right] \\ 
+    (3,0,1): & \quad 0 = -\frac{1}{c} \left[ \partial_t b_y + (\partial_z e_x - \partial_x e_z ) \right] \\
+    (0,1,2): & \quad 0 = -\frac{1}{c} \left[ \partial_t b_z + (\partial_x e_y - \partial_y e_x ) \right] \\
+  \end{aligned}$$
+
+  i.e.
+
+  $$\begin{cases}
+        0  = \nabla \cdot \vec{b} \\
+   \vec{0} = \partial_t \vec{b} + \nabla \times \vec{e} \\
+  \end{cases}$$
 
 ### Point particle in electromagnetic field
 
-### Electromagnetic field
+Lorentz 4-force acting on a point charge of electric charge charge $q$ reads
 
-### Lorentz force
+$$\mathbf{f} = \mathbf{F} \cdot \mathbf{J} = q \, \mathbf{F} \cdot \mathbf{U} \ .$$
+
+so that the dynamical equation reads
+
+$$m \, \mathbf{X}'' = q \, \mathbf{F} \cdot \mathbf{X}'$$
+
+
+### Energy balance
+
+$$\begin{aligned}
+  \frac{\partial u      }{\partial t} & = \\
+  \frac{\partial \vec{s}}{\partial t} & = \\
+\end{aligned}$$
+
+...
+
+$$\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}$$
+
+
+
+
+
+
+
+
 
 
 

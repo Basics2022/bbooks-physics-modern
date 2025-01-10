@@ -329,9 +329,10 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">Electromagnetic potential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">Electromagnetic field and electromagnetic field equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field">Electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lorentz force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
 </ul>
 </li>
 </ul>
@@ -549,14 +550,184 @@ document.write(`
 \[\vec{v} \cdot \vec{F} = \vec{v} \cdot q \left( \vec{e} - \vec{b} \times \vec{v} \right) = q \vec{v} \cdot \vec{e} \ . \]</div>
 </div>
 </div>
+<div class="section" id="electromagnetic-potential">
+<h3>Electromagnetic potential<a class="headerlink" href="#electromagnetic-potential" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \vec{b} = \nabla \times \vec{a} \\
+ \vec{e} = -\partial_t \vec{a} - \nabla \varphi \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} = \mathbf{E}_{\alpha} A^{\alpha} = \frac{\varphi}{c} \mathbf{E}_0 + \vec{a}\]</div>
+<div class="math notranslate nohighlight">
+\[\symbf{\nabla} \mathbf{A} =
+\left( \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}} \right) \left( A^{\beta} \mathbf{E}_{\beta} \right)
+= \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}^{\alpha} \otimes \mathbf{E}_{\beta} 
+= g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .\]</div>
+<p>whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
+\begin{bmatrix}
+ c^{-2} \partial_t \varphi &amp; c^{-1}\partial_x \varphi &amp; c^{-1}\partial_y \varphi &amp; c^{-1}\partial_z \varphi \\
+ c^{-1} \partial_t a_x     &amp;       \partial_x a_x     &amp;       \partial_y a_x     &amp;       \partial_z a_x     \\
+ c^{-1} \partial_t a_y     &amp;       \partial_x a_y     &amp;       \partial_y a_y     &amp;       \partial_z a_y     \\
+ c^{-1} \partial_t a_z     &amp;       \partial_x a_z     &amp;       \partial_y a_z     &amp;       \partial_z a_z     \\
+\end{bmatrix}\end{split}\]</div>
+<p>or covariant-covariant coomponents,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\gamma}}{\partial X^{\alpha}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi &amp; c^{-1}\partial_x \varphi &amp; c^{-1}\partial_y \varphi &amp; c^{-1}\partial_z \varphi \\
+ -c^{-1}\partial_t a_x     &amp;      -\partial_x a_x     &amp;      -\partial_y a_x     &amp;      -\partial_z a_x     \\
+ -c^{-1}\partial_t a_y     &amp;      -\partial_x a_y     &amp;      -\partial_y a_y     &amp;      -\partial_z a_y     \\
+ -c^{-1}\partial_t a_z     &amp;      -\partial_x a_z     &amp;      -\partial_y a_z     &amp;      -\partial_z a_z     \\
+\end{bmatrix}\end{split}\]</div>
+<p>or contravariant-contravariant coomponents,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\alpha}}{\partial X^{\gamma}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi &amp;-c^{-1}\partial_x \varphi &amp;-c^{-1}\partial_y \varphi &amp;-c^{-1}\partial_z \varphi \\
+  c^{-1}\partial_t a_x     &amp;      -\partial_x a_x     &amp;      -\partial_y a_x     &amp;      -\partial_z a_x     \\
+  c^{-1}\partial_t a_y     &amp;      -\partial_x a_y     &amp;      -\partial_y a_y     &amp;      -\partial_z a_y     \\
+  c^{-1}\partial_t a_z     &amp;      -\partial_x a_z     &amp;      -\partial_y a_z     &amp;      -\partial_z a_z     \\
+\end{bmatrix}\end{split}\]</div>
+<p>The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]\]</div>
+<p>whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^{\alpha \beta} = 
+\begin{bmatrix}
+                        0 &amp; -\frac{\underline{e}^T}{c} \\
+  \frac{\underline{e}}{c} &amp; \underline{b}_{\times}
+\end{bmatrix}
+\qquad , \qquad 
+F_{\alpha \beta} = 
+\begin{bmatrix}
+                        0 &amp; \frac{\underline{e}^T}{c} \\
+ -\frac{\underline{e}}{c} &amp; \underline{b}_{\times}
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="electromagnetic-field-and-electromagnetic-field-equations">
+<h3>Electromagnetic field and electromagnetic field equations<a class="headerlink" href="#electromagnetic-field-and-electromagnetic-field-equations" title="Permalink to this heading">#</a></h3>
+<p>The pair of Maxwell equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \rho_f    = \nabla \cdot \vec{d}  \\
+  \vec{j}_f = - \partial_t \vec{d} + \nabla \times \vec{h}  \\
+\end{cases}\end{split}\]</div>
+<p>can be re-written in <span class="math notranslate nohighlight">\(4\)</span>-formalism, using <span class="math notranslate nohighlight">\(4\)</span>-gradient in Cartesian coordinates</p>
+<div class="math notranslate nohighlight">
+\[\symbf{\nabla} = \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}}
+ = \mathbf{E}_0 \, \frac{\partial }{c \partial t} + \mathbf{E}_i \frac{\partial}{\partial x^i}
+ = \mathbf{E}_0 \, \frac{\partial }{c \partial t} + \nabla \ ,\]</div>
+<p>and the definition of the 4-current density vector</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{J} = J^{\alpha} \mathbf{E}_{\alpha} = c \rho \, \mathbf{E}_0 + \vec{j}\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  c \rho \mathbf{E}_0 + \vec{j} = \symbf{\nabla} \cdot \mathbf{F} 
+  = \symbf{\nabla} \cdot
+   [ &amp; ( 0\, \mathbf{E}_0 + c \vec{d} ) \otimes \mathbf{E}_0 + ( - \mathbf{E}_0 c \vec{d} + \vec{h}_{\times} ) ] \ ,
+\end{aligned}\]</div>
+<p>with the displacement field tensor,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{D} = D^{\alpha \beta} \, \mathbf{E}_{\alpha} \, \mathbf{E}_{\beta} \ , \]</div>
+<p>with components (rows for the first index, columns for the second index)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D^{\alpha \beta} = 
+  \begin{bmatrix}     0 &amp; -c d_x &amp; - c d_y &amp; - c d_z \\
+                  c d_x &amp;      0 &amp; -   h_z &amp;     h_y \\
+                  c d_y &amp;    h_z &amp;       0 &amp; -   h_x \\
+                  c d_z &amp; -  h_y &amp;     h_x &amp;       0 \\
+  \end{bmatrix} =
+  \begin{bmatrix} 0 &amp; - c \underline{d}^T \\ c \underline{d} &amp; \underline{h}_{\times} \ .
+  \end{bmatrix}
+\end{split}\]</div>
+<!--
+$$\begin{aligned}
+  \mathbf{0} = \symbf{\nabla} \cdot \mathbf{F} 
+  = \symbf{\nabla} \cdot
+   [ & ( 0\, \mathbf{E}_0 + b_x \mathbf{E}_1 + b_y \mathbf{E}_2 + b_z \mathbf{E}_3 ) \otimes \mathbf{E}_0 + \\
+   + & ( b_x \mathbf{E}_0 + 0\, \mathbf{E}_1 + e_z \mathbf{E}_2 - e_y \mathbf{E}_3 ) \otimes \mathbf{E}_1 + \\
+   + & ( b_y \mathbf{E}_0 - e_z \mathbf{E}_1 + 0\, \mathbf{E}_2 + e_x \mathbf{E}_3 ) \otimes \mathbf{E}_2 + \\
+   + & ( b_z \mathbf{E}_0 + e_y \mathbf{E}_1 - e_x \mathbf{E}_2 + 0\, \mathbf{E}_3 ) \otimes \mathbf{E}_3 ] \\
+  = \symbf{\nabla} \cdot
+   [ & ( 0\, \mathbf{E}^0 + b_x \mathbf{E}^1 + b_y \mathbf{E}^2 + b_z \mathbf{E}^3 ) \otimes \mathbf{E}_0 + \\
+   + & ( b_x \mathbf{E}^0 + 0\, \mathbf{E}^1 + e_z \mathbf{E}^2 - e_y \mathbf{E}^3 ) \otimes \mathbf{E}_1 + \\
+   + & ( b_y \mathbf{E}^0 + e_z \mathbf{E}^1 + 0\, \mathbf{E}^2 + e_x \mathbf{E}^3 ) \otimes \mathbf{E}_2 + \\
+   + & ( b_z \mathbf{E}^0 - e_y \mathbf{E}^1 + e_x \mathbf{E}^2 + 0\, \mathbf{E}^3 ) \otimes \mathbf{E}_3 ]
+\end{aligned}$$
+-->
+<p>The pair of Maxwell equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \nabla \cdot \vec{b} = 0 \\
+  \partial_t \vec{b} + \nabla \times \vec{e} = \vec{0} \\
+\end{cases}\end{split}\]</div>
+<p>can be re-written in <span class="math notranslate nohighlight">\(4\)</span>-formalism as</p>
+<div class="math notranslate nohighlight">
+\[0 = \partial_{\mu} F_{\eta \xi} + \partial_{\eta} F_{\xi \mu} + \partial_{\xi} F_{\mu \eta} \]</div>
+<p>Among these <span class="math notranslate nohighlight">\(64 = 4^3\)</span> equations, there are only 4 independent equations.</p>
+<ul>
+<li><p>If 2 indices are the same, the corresponding equation is the identity <span class="math notranslate nohighlight">\(0 = 0\)</span>. As an example, if <span class="math notranslate nohighlight">\(\mu = \eta\)</span></p>
+<div class="math notranslate nohighlight">
+\[0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , \]</div>
+<p>thus only combinations with different indices may provide some information.</p>
+</li>
+<li><p>Given the ordered set of indices <span class="math notranslate nohighlight">\((\mu, \eta, \xi)\)</span>, switching a pair of indices provides the same equation. As an example, switching <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    0 &amp; = \partial_{\eta} F_{\mu  \xi} + \partial_{\mu} F_{\xi \eta} + \partial_{\xi} F_{\eta \mu} = \\
+      &amp; = \partial_{\eta} ( - F_{\xi \mu} ) + \partial_{\mu} ( - F_{\eta \xi} ) + \partial_{\xi} ( -F_{\mu \eta} ) \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Thus, only 4 combination of different indices, without taking order into account, provide independent information</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    (1,2,3): &amp; \quad 0 = \partial_{1} F_{23} + \partial_{2} F_{31} + \partial_{3} F_{12} = \partial_x (-b_x) + \partial_y (-b_y) + \partial_z (-b_z)  \\
+    (2,3,0): &amp; \quad 0 = \partial_{2} F_{30} + \partial_{3} F_{02} + \partial_{0} F_{23} = \partial_y \left(-\frac{e_z}{c} \right) + \partial_z \left( \frac{e_y}{c} \right) + \partial_{ct} (-b_x) \\
+    (3,0,1): &amp; \quad 0 = \partial_{3} F_{01} + \partial_{0} F_{13} + \partial_{1} F_{30} = \partial_z \left(\frac{e_x}{c}\right) + \partial_{ct} (-b_y) + \partial_x  \left(-\frac{e_z}{c}\right) \\
+    (0,1,2): &amp; \quad 0 = \partial_{0} F_{12} + \partial_{1} F_{20} + \partial_{2} F_{01} = \partial_{ct} (-b_z) + \partial_x \left(-\frac{e_y}{c}\right) + \partial_y  \left(\frac{e_x}{c}\right)     \\
+  \end{aligned}\end{split}\]</div>
+<p>i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    (1,2,3): &amp; \quad 0 = - \nabla \cdot \vec{b} \\
+    (2,3,0): &amp; \quad 0 = -\frac{1}{c} \left[ \partial_t b_x + (\partial_y e_z - \partial_z e_y ) \right] \\ 
+    (3,0,1): &amp; \quad 0 = -\frac{1}{c} \left[ \partial_t b_y + (\partial_z e_x - \partial_x e_z ) \right] \\
+    (0,1,2): &amp; \quad 0 = -\frac{1}{c} \left[ \partial_t b_z + (\partial_x e_y - \partial_y e_x ) \right] \\
+  \end{aligned}\end{split}\]</div>
+<p>i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+        0  = \nabla \cdot \vec{b} \\
+   \vec{0} = \partial_t \vec{b} + \nabla \times \vec{e} \\
+  \end{cases}\end{split}\]</div>
+</li>
+</ul>
+</div>
 <div class="section" id="point-particle-in-electromagnetic-field">
 <h3>Point particle in electromagnetic field<a class="headerlink" href="#point-particle-in-electromagnetic-field" title="Permalink to this heading">#</a></h3>
+<p>Lorentz 4-force acting on a point charge of electric charge charge <span class="math notranslate nohighlight">\(q\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{f} = \mathbf{F} \cdot \mathbf{J} = q \, \mathbf{F} \cdot \mathbf{U} \ .\]</div>
+<p>so that the dynamical equation reads</p>
+<div class="math notranslate nohighlight">
+\[m \, \mathbf{X}'' = q \, \mathbf{F} \cdot \mathbf{X}'\]</div>
 </div>
-<div class="section" id="electromagnetic-field">
-<h3>Electromagnetic field<a class="headerlink" href="#electromagnetic-field" title="Permalink to this heading">#</a></h3>
-</div>
-<div class="section" id="id1">
-<h3>Lorentz force<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="section" id="energy-balance">
+<h3>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{\partial u      }{\partial t} &amp; = \\
+  \frac{\partial \vec{s}}{\partial t} &amp; = \\
+\end{aligned}\end{split}\]</div>
+<p>…</p>
+<div class="math notranslate nohighlight">
+\[\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\]</div>
 </div>
 </div>
 </div>
@@ -635,9 +806,10 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">Electromagnetic potential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">Electromagnetic field and electromagnetic field equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field">Electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lorentz force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
 </ul>
 </li>
 </ul>
