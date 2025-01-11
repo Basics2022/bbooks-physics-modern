@@ -1,4 +1,4 @@
-(relativity-special)=
+(relativity-special:notes)=
 # Special Relativity - Notes
 
 An event is determined by spatio-temporal information together, $t, \vec{r}$. Absolute nature of physics needs vector algebra and calculus formalism
