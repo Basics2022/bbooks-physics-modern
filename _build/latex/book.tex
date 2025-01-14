@@ -66,6 +66,7 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
+\addto\captionsenglish{\renewcommand{\contentsname}{Special Relativity}}
 
 \usepackage{sphinxmessages}
 
@@ -84,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Jan 10, 2025}
+\date{Jan 11, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -108,27 +109,101 @@ Please check out the Github repo of the project, \sphinxhref{https://github.com/
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/relativity-special::doc}]{\sphinxcrossref{Special Relativity}}}
+Special Relativity
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-special/intro::doc}]{\sphinxcrossref{Special Relativity}}}
 
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/relativity-general::doc}]{\sphinxcrossref{General Relativity}}}
+{\hyperref[\detokenize{ch/relativity-special/notes::doc}]{\sphinxcrossref{Special Relativity \sphinxhyphen{} Notes}}}
+
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+General Relativity
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-general/intro::doc}]{\sphinxcrossref{General Relativity}}}
 
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/statistical-mechanics::doc}]{\sphinxcrossref{Statistical Physics}}}
+{\hyperref[\detokenize{ch/relativity-general/notes::doc}]{\sphinxcrossref{General Relativity \sphinxhyphen{} Notes}}}
+
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Statistical Mechanics
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/statistical-mechanics/intro::doc}]{\sphinxcrossref{Statistical Physics}}}
 
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/quantum-mechanics::doc}]{\sphinxcrossref{Quantum Mechanics}}}
+{\hyperref[\detokenize{ch/statistical-mechanics/notes::doc}]{\sphinxcrossref{Statistical Physics \sphinxhyphen{} Notes}}}
+
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Quantum Mechanics
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/intro::doc}]{\sphinxcrossref{Quantum Mechanics}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/notes::doc}]{\sphinxcrossref{Quantum Mechanics \sphinxhyphen{} Notes}}}
+
+\end{itemize}
+\end{itemize}
+
+\sphinxstepscope
+
+
+\part{Special Relativity}
+
+\sphinxstepscope
+
+
+\chapter{Special Relativity}
+\label{\detokenize{ch/relativity-special/intro:special-relativity}}\label{\detokenize{ch/relativity-special/intro:relativity-special}}\label{\detokenize{ch/relativity-special/intro::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Electromagnetism and the need for new relativity
+
+\item {} 
+\sphinxAtStartPar
+Space\sphinxhyphen{}time, Lorentz transformations,…
+
+\item {} 
+\sphinxAtStartPar
+Mechanics: kinematics, dynamics,…
+
+\item {} 
+\sphinxAtStartPar
+Electromagnetism: Maxwell’s equations, potentials, Lorentz force, energy balance
 
 \end{itemize}
 
 \sphinxstepscope
 
 
-\chapter{Special Relativity}
-\label{\detokenize{ch/relativity-special:special-relativity}}\label{\detokenize{ch/relativity-special:relativity-special}}\label{\detokenize{ch/relativity-special::doc}}
+\chapter{Special Relativity \sphinxhyphen{} Notes}
+\label{\detokenize{ch/relativity-special/notes:special-relativity-notes}}\label{\detokenize{ch/relativity-special/notes:relativity-special-notes}}\label{\detokenize{ch/relativity-special/notes::doc}}
 \sphinxAtStartPar
 An event is determined by spatio\sphinxhyphen{}temporal information together, \(t, \vec{r}\). Absolute nature of physics needs vector algebra and calculus formalism
 \begin{equation*}
@@ -211,7 +286,7 @@ Using \(\tau\) as the parameter, \(\mathbf{U}\) has physical dimension of a velo
 
 
 \section{Dynamics}
-\label{\detokenize{ch/relativity-special:dynamics}}
+\label{\detokenize{ch/relativity-special/notes:dynamics}}
 \sphinxAtStartPar
 \sphinxstylestrong{4\sphinxhyphen{}momentum}
 \begin{equation*}
@@ -279,7 +354,7 @@ and keeping only the solution with positive energy (\sphinxstylestrong{todo} \sp
 \end{equation*}
 
 \subsection{Lagrangian approach}
-\label{\detokenize{ch/relativity-special:lagrangian-approach}}
+\label{\detokenize{ch/relativity-special/notes:lagrangian-approach}}
 \sphinxAtStartPar
 \sphinxstylestrong{Free particle.}
 \begin{equation*}
@@ -369,13 +444,13 @@ and energy as
 \end{equation*}
 
 \section{Electromagnetism}
-\label{\detokenize{ch/relativity-special:electromagnetism}}
+\label{\detokenize{ch/relativity-special/notes:electromagnetism}}
 
 \subsection{Classical electromagnetic theory}
-\label{\detokenize{ch/relativity-special:classical-electromagnetic-theory}}
+\label{\detokenize{ch/relativity-special/notes:classical-electromagnetic-theory}}
 
 \subsubsection{Maxwell equations}
-\label{\detokenize{ch/relativity-special:maxwell-equations}}
+\label{\detokenize{ch/relativity-special/notes:maxwell-equations}}
 \sphinxAtStartPar
 Maxwell equations read
 \begin{equation*}
@@ -398,7 +473,7 @@ or in vacuum, with \(\rho_f = \rho\), \(\vec{j} = \vec{j}_f\), \(\vec{d} = \vare
 \end{equation*}
 
 \subsubsection{Electromagnetic potentials}
-\label{\detokenize{ch/relativity-special:electromagnetic-potentials}}
+\label{\detokenize{ch/relativity-special/notes:electromagnetic-potentials}}
 \sphinxAtStartPar
 The electromagnetic field can be written in terms of the electromagnetic potentials
 \begin{equation*}
@@ -409,7 +484,7 @@ The electromagnetic field can be written in terms of the electromagnetic potenti
 \end{equation*}
 
 \subsubsection{Lorentz force}
-\label{\detokenize{ch/relativity-special:lorentz-force}}
+\label{\detokenize{ch/relativity-special/notes:lorentz-force}}
 \sphinxAtStartPar
 A particle in motion in a electromagnetic field is subject to Lorentz force. In classical electromagnetism, the expression of Lorentz force reads
 \begin{equation*}
@@ -422,7 +497,7 @@ whose power is
 \end{equation*}
 
 \subsection{Electromagnetic potential}
-\label{\detokenize{ch/relativity-special:electromagnetic-potential}}\begin{equation*}
+\label{\detokenize{ch/relativity-special/notes:electromagnetic-potential}}\begin{equation*}
 \begin{split}\begin{cases}
  \vec{b} = \nabla \times \vec{a} \\
  \vec{e} = -\partial_t \vec{a} - \nabla \varphi \\
@@ -491,7 +566,7 @@ F_{\alpha \beta} =
 \end{equation*}
 
 \subsection{Electromagnetic field and electromagnetic field equations}
-\label{\detokenize{ch/relativity-special:electromagnetic-field-and-electromagnetic-field-equations}}
+\label{\detokenize{ch/relativity-special/notes:electromagnetic-field-and-electromagnetic-field-equations}}
 \sphinxAtStartPar
 The pair of Maxwell equations
 \begin{equation*}
@@ -608,7 +683,7 @@ i.e.
 
 
 \subsection{Point particle in electromagnetic field}
-\label{\detokenize{ch/relativity-special:point-particle-in-electromagnetic-field}}
+\label{\detokenize{ch/relativity-special/notes:point-particle-in-electromagnetic-field}}
 \sphinxAtStartPar
 Lorentz 4\sphinxhyphen{}force acting on a point charge of electric charge charge \(q\) reads
 \begin{equation*}
@@ -621,7 +696,7 @@ so that the dynamical equation reads
 \end{equation*}
 
 \subsection{Energy balance}
-\label{\detokenize{ch/relativity-special:energy-balance}}\begin{equation*}
+\label{\detokenize{ch/relativity-special/notes:energy-balance}}\begin{equation*}
 \begin{split}\begin{aligned}
   \frac{\partial u      }{\partial t} & = \\
   \frac{\partial \vec{s}}{\partial t} & = \\
@@ -635,18 +710,43 @@ so that the dynamical equation reads
 \sphinxstepscope
 
 
+\part{General Relativity}
+
+\sphinxstepscope
+
+
 \chapter{General Relativity}
-\label{\detokenize{ch/relativity-general:general-relativity}}\label{\detokenize{ch/relativity-general:relativity-general}}\label{\detokenize{ch/relativity-general::doc}}
+\label{\detokenize{ch/relativity-general/intro:general-relativity}}\label{\detokenize{ch/relativity-general/intro:relativity-general-intro}}\label{\detokenize{ch/relativity-general/intro::doc}}
+\sphinxstepscope
+
+
+\chapter{General Relativity \sphinxhyphen{} Notes}
+\label{\detokenize{ch/relativity-general/notes:general-relativity-notes}}\label{\detokenize{ch/relativity-general/notes:relativity-general-notes}}\label{\detokenize{ch/relativity-general/notes::doc}}
+\sphinxstepscope
+
+
+\part{Statistical Mechanics}
+
 \sphinxstepscope
 
 
 \chapter{Statistical Physics}
-\label{\detokenize{ch/statistical-mechanics:statistical-physics}}\label{\detokenize{ch/statistical-mechanics:statistical-mechanics}}\label{\detokenize{ch/statistical-mechanics::doc}}
+\label{\detokenize{ch/statistical-mechanics/intro:statistical-physics}}\label{\detokenize{ch/statistical-mechanics/intro:statistical-mechanics-intro}}\label{\detokenize{ch/statistical-mechanics/intro::doc}}
+\sphinxstepscope
+
+
+\chapter{Statistical Physics \sphinxhyphen{} Notes}
+\label{\detokenize{ch/statistical-mechanics/notes:statistical-physics-notes}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes}}\label{\detokenize{ch/statistical-mechanics/notes::doc}}
+\sphinxstepscope
+
+
+\part{Quantum Mechanics}
+
 \sphinxstepscope
 
 
 \chapter{Quantum Mechanics}
-\label{\detokenize{ch/quantum-mechanics:quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics:id1}}\label{\detokenize{ch/quantum-mechanics::doc}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro}}\label{\detokenize{ch/quantum-mechanics/intro::doc}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Principles and postulates
@@ -669,12 +769,12 @@ angluar momentum, spin, and atom
 
 
 \section{Mathematical tools for quantum mechanics}
-\label{\detokenize{ch/quantum-mechanics:mathematical-tools-for-quantum-mechanics}}\label{ch/quantum-mechanics:Operator}
+\label{\detokenize{ch/quantum-mechanics/intro:mathematical-tools-for-quantum-mechanics}}\label{ch/quantum-mechanics/intro:Operator}
 \begin{sphinxadmonition}{note}{Definition 1 (Operator)}
 
 
 \end{sphinxadmonition}
-\label{ch/quantum-mechanics:Adjoint Operator}
+\label{ch/quantum-mechanics/intro:Adjoint Operator}
 \begin{sphinxadmonition}{note}{Definition 2 (Adjoint operator)}
 
 
@@ -687,7 +787,7 @@ Given an operator \(\hat{A}: U \rightarrow V\), its self\sphinxhyphen{}adjoint \
 \sphinxAtStartPar
 holds for \(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\).
 \end{sphinxadmonition}
-\label{ch/quantum-mechanics:Self-Adjoint Operator}
+\label{ch/quantum-mechanics/intro:Self-Adjoint Operator}
 \begin{sphinxadmonition}{note}{Definition 3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
 
 
@@ -701,7 +801,7 @@ Self\sphinxhyphen{}adjoint operators have real eigenvalues, and orthogonal eigen
 
 
 \section{Postulates of Quantum Mechanics}
-\label{\detokenize{ch/quantum-mechanics:postulates-of-quantum-mechanics}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:postulates-of-quantum-mechanics}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 …
@@ -718,13 +818,13 @@ Canonical Commutation Relation (CCR) \sphinxstyleemphasis{and Canonical Anti\sph
 
 
 \section{Non\sphinxhyphen{}relativistic Mechanics}
-\label{\detokenize{ch/quantum-mechanics:non-relativistic-mechanics}}
+\label{\detokenize{ch/quantum-mechanics/intro:non-relativistic-mechanics}}
 
 \subsection{Statistical Interpretation and Measurement}
-\label{\detokenize{ch/quantum-mechanics:statistical-interpretation-and-measurement}}
+\label{\detokenize{ch/quantum-mechanics/intro:statistical-interpretation-and-measurement}}
 
 \subsubsection{Wave function}
-\label{\detokenize{ch/quantum-mechanics:wave-function}}
+\label{\detokenize{ch/quantum-mechanics/intro:wave-function}}
 \sphinxAtStartPar
 The state of a system is described by a wave function \(|\Psi\rangle\)
 
@@ -743,9 +843,9 @@ unitary \(1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2\), for statist
 
 
 \subsubsection{Operators and Observables}
-\label{\detokenize{ch/quantum-mechanics:operators-and-observables}}
+\label{\detokenize{ch/quantum-mechanics/intro:operators-and-observables}}
 \sphinxAtStartPar
-Physical \sphinxstylestrong{observable} quantities are represented by {\hyperref[\detokenize{ch/quantum-mechanics:quantum-mechanics-math-operators-self-adjoint}]{\sphinxcrossref{\DUrole{std,std-ref}{Hermitian operators}}}}. Possible outcomes of measurement are the eigenvalues of the operator
+Physical \sphinxstylestrong{observable} quantities are represented by {\hyperref[\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-math-operators-self-adjoint}]{\sphinxcrossref{\DUrole{std,std-ref}{Hermitian operators}}}}. Possible outcomes of measurement are the eigenvalues of the operator
 
 \sphinxAtStartPar
 Given \(\hat{A}\) and the set of its eigenvectors \(\{ |A_i \rangle \}_i\) (\sphinxstylestrong{todo} \sphinxstyleemphasis{continuous or discrete spectrum…, need to treat this difference quite in details}), with associated eigenvalues \(\{ a_i \}_i\)
@@ -809,7 +909,7 @@ since an operator \(\hat{A}\) can be written as a function of its eigenvalues an
 
 
 \subsubsection{Space Representation}
-\label{\detokenize{ch/quantum-mechanics:space-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:space-representation}}
 \sphinxAtStartPar
 \sphinxstylestrong{Position operator} \(\hat{\mathbf{r}}\) has eigenvalues \(\mathbf{r}\) identifying the possible measurements of the position
 \begin{equation*}
@@ -887,7 +987,7 @@ Average value of the operator
 
 
 \subsubsection{Momentum Representation}
-\label{\detokenize{ch/quantum-mechanics:momentum-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:momentum-representation}}
 \sphinxAtStartPar
 \sphinxstylestrong{Momentum operator} as the limit of…\sphinxstylestrong{todo} \sphinxstyleemphasis{prove the expression of the momentum operator as the limit of the generator of translation}
 \begin{equation*}
@@ -941,7 +1041,7 @@ representation in basis of wave vector operator \(\hat{\mathbf{k}}\), \(\hat{\ma
 
 
 \subsubsection{From position to momentum representation}
-\label{\detokenize{ch/quantum-mechanics:from-position-to-momentum-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:from-position-to-momentum-representation}}
 \sphinxAtStartPar
 Momentum and wave vector, \(\mathbf{p} = \hbar \mathbf{k}\)
 \begin{equation*}
@@ -966,7 +1066,7 @@ Relation between position and wave\sphinxhyphen{}number representation can be re
 \end{equation*}
 
 \subsection{Schrodinger Equation}
-\label{\detokenize{ch/quantum-mechanics:schrodinger-equation}}\begin{equation*}
+\label{\detokenize{ch/quantum-mechanics/intro:schrodinger-equation}}\begin{equation*}
 \begin{split}i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -974,7 +1074,7 @@ being \(\hat{H}\) the Hamiltonian operator and \(|\Psi\rangle\) the wave functio
 
 
 \subsubsection{Stationary States}
-\label{\detokenize{ch/quantum-mechanics:stationary-states}}
+\label{\detokenize{ch/quantum-mechanics/intro:stationary-states}}
 \sphinxAtStartPar
 Eigenspace of the Hamiltonian operator
 \begin{equation*}
@@ -1014,7 +1114,7 @@ Thus the state of the system evolves like a superposition of monochromatic waves
 \end{equation*}
 
 \subsubsection{Pictures}
-\label{\detokenize{ch/quantum-mechanics:pictures}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:pictures}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Schrodinger
@@ -1031,7 +1131,7 @@ Interaction
 
 
 \paragraph{Schrodinger}
-\label{\detokenize{ch/quantum-mechanics:schrodinger}}
+\label{\detokenize{ch/quantum-mechanics/intro:schrodinger}}
 \sphinxAtStartPar
 If \(\hat{H}\) not function of time
 \begin{equation*}
@@ -1041,7 +1141,7 @@ If \(\hat{H}\) not function of time
 \end{equation*}
 
 \paragraph{Heisenberg}
-\label{\detokenize{ch/quantum-mechanics:heisenberg}}
+\label{\detokenize{ch/quantum-mechanics/intro:heisenberg}}
 \sphinxAtStartPar
 …
 
@@ -1103,13 +1203,13 @@ If \(Q_q = 0\), the correspondence between quantum mechanics and classical mecha
 \end{equation*}
 
 \paragraph{Interaction}
-\label{\detokenize{ch/quantum-mechanics:interaction}}
+\label{\detokenize{ch/quantum-mechanics/intro:interaction}}
 
 \subsection{Matrix Mechanics}
-\label{\detokenize{ch/quantum-mechanics:matrix-mechanics}}
+\label{\detokenize{ch/quantum-mechanics/intro:matrix-mechanics}}
 
 \subsubsection{Attualization of 1925 papers}
-\label{\detokenize{ch/quantum-mechanics:attualization-of-1925-papers}}
+\label{\detokenize{ch/quantum-mechanics/intro:attualization-of-1925-papers}}
 
 
 \sphinxAtStartPar
@@ -1144,7 +1244,7 @@ and since \(| \Psi \rangle\) is arbitrary
 \end{equation*}
 
 \subsection{Heisenberg Uncertainty “principle”}
-\label{\detokenize{ch/quantum-mechanics:heisenberg-uncertainty-principle}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:heisenberg-uncertainty-principle}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Heisenberg uncertainty “principle” is a relation between product of variance of two physical quantities and their commutation,
@@ -1183,10 +1283,15 @@ Hesienberg uncertainty principles applied to position and momentum reads
 \end{equation*}
 
 \section{Many\sphinxhyphen{}body problem}
-\label{\detokenize{ch/quantum-mechanics:many-body-problem}}
+\label{\detokenize{ch/quantum-mechanics/intro:many-body-problem}}
 \sphinxAtStartPar
 Wave function with symmetries: Fermions and Bosons
 
+\sphinxstepscope
+
+
+\chapter{Quantum Mechanics \sphinxhyphen{} Notes}
+\label{\detokenize{ch/quantum-mechanics/notes:quantum-mechanics-notes}}\label{\detokenize{ch/quantum-mechanics/notes:id1}}\label{\detokenize{ch/quantum-mechanics/notes::doc}}
 
 
 
@@ -1196,13 +1301,13 @@ Wave function with symmetries: Fermions and Bosons
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{Adjoint Operator}
-\item\relax\sphinxstyleindexentry{Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{Adjoint Operator}}
+\item\relax\sphinxstyleindexentry{Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Adjoint Operator}}
 \indexspace
 \bigletter{Operator}
-\item\relax\sphinxstyleindexentry{Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{Operator}}
+\item\relax\sphinxstyleindexentry{Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Operator}}
 \indexspace
 \bigletter{Self\sphinxhyphen{}Adjoint Operator}
-\item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics}\sphinxstyleindexpageref{ch/quantum-mechanics:\detokenize{Self-Adjoint Operator}}
+\item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}

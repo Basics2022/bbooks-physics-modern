@@ -3,8 +3,20 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: ch/relativity-special
-- file: ch/relativity-general
-- file: ch/statistical-mechanics
-- file: ch/quantum-mechanics
+parts:
+- caption: Special Relativity
+  chapters:
+  - file: ch/relativity-special/intro
+  - file: ch/relativity-special/notes
+- caption: General Relativity
+  chapters:
+  - file: ch/relativity-general/intro
+  - file: ch/relativity-general/notes
+- caption: Statistical Mechanics
+  chapters:
+  - file: ch/statistical-mechanics/intro
+  - file: ch/statistical-mechanics/notes
+- caption: Quantum Mechanics
+  chapters:
+  - file: ch/quantum-mechanics/intro
+  - file: ch/quantum-mechanics/notes

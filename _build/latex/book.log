@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  10 JAN 2025 22:07
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  11 JAN 2025 09:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,7 +1287,7 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \g__um_primekern_muskip=\muskip18
 
 (/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
-Package hyperref Info: Option `psdextra' set `true' on input line 82.
+Package hyperref Info: Option `psdextra' set `true' on input line 83.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/psdextra.def
 File: psdextra.def 2020/01/14 v7.00d Hyperref: Additions to PDF string support
 )
@@ -1303,32 +1303,32 @@ LaTeX Info: Redefining \ttfamily on input line 19.
 )
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
  ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 93.
+ on input line 94.
 
 \c@literalblock=\count347
 *geometry* driver: auto-detecting
@@ -1366,7 +1366,7 @@ your preamble.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box126
-Package hyperref Info: Link coloring ON on input line 93.
+Package hyperref Info: Link coloring ON on input line 94.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1378,29 +1378,29 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 94.
+LaTeX Info: Redefining \pageref on input line 94.
+LaTeX Info: Redefining \nameref on input line 94.
 
 (./book.out) (./book.out)
 \@outlinefile=\write6
 \openout6 = `book.out'.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FreeSerif(0)/m/n on input line 93.
+(Font)                  OT1/cmr/m/n --> TU/FreeSerif(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/FreeSerif(0)/m/it on input line 93.
+(Font)                  OT1/cmr/m/it --> TU/FreeSerif(0)/m/it on input line 94.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/b/n on input line 93.
+(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FreeSans(0)/m/n on input line 93.
+(Font)                  OT1/cmss/m/n --> TU/FreeSans(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/FreeSans(0)/b/n on input line 93.
+(Font)                  OT1/cmss/bx/n --> TU/FreeSans(0)/b/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/m/n on input line 93.
+(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/m/n on input line 94.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/b/n on input line 93.
+(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/b/n on input line 94.
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             'latinmodern-math.otf' with options
@@ -1441,15 +1441,15 @@ latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 93.
+(Font)              `operators' in the math version `normal' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 93.
+ line 94.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 93.
+(Font)              `operators' in the math version `bold' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 93.
+t line 94.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1520,15 +1520,15 @@ uage=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 93.
+(Font)              `symbols' in the math version `normal' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 93.
+t line 94.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 93.
+(Font)              `symbols' in the math version `bold' on input line 94.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 93.
+t line 94.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1582,50 +1582,50 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 9
-3.
+4.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 93.
+t line 94.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 93.
+(Font)              `largesymbols' in the math version `bold' on input line 94.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 93.
-LaTeX Info: Redefining \rmfamily on input line 93.
-LaTeX Info: Redefining \sffamily on input line 93.
-LaTeX Info: Redefining \ttfamily on input line 93.
-Package hyperref Info: Option `pageanchor' set `false' on input line 96.
+t line 94.
+LaTeX Info: Redefining \rmfamily on input line 94.
+LaTeX Info: Redefining \sffamily on input line 94.
+LaTeX Info: Redefining \ttfamily on input line 94.
+Package hyperref Info: Option `pageanchor' set `false' on input line 97.
 
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.28183pt on input line 96.
+(Font)              scaled to size 17.28183pt on input line 97.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 96.
+(Font)              scaled to size 12.00128pt on input line 97.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 96.
+(Font)              scaled to size 10.00107pt on input line 97.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.27815pt on input line 96.
+(Font)              scaled to size 17.27815pt on input line 97.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 96.
+(Font)              scaled to size 11.99872pt on input line 97.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 96.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+(Font)              scaled to size 9.99893pt on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 96
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 97
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1640,13 +1640,13 @@ LaTeX Info: Redefining \rmfamily on input line 1.
 LaTeX Info: Redefining \sffamily on input line 1.
 LaTeX Info: Redefining \ttfamily on input line 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 3.
+(Font)              scaled to size 7.00075pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 3.
+(Font)              scaled to size 5.00053pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 3.
+(Font)              scaled to size 6.99925pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 3.
+(Font)              scaled to size 4.99947pt on input line 5.
 )
 \tf@toc=\write7
 \openout7 = `book.toc'.
@@ -1656,108 +1656,154 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 ] [2
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 130.
-LaTeX Info: Redefining \sffamily on input line 130.
-LaTeX Info: Redefining \ttfamily on input line 130.
+LaTeX Info: Redefining \rmfamily on input line 177.
+LaTeX Info: Redefining \sffamily on input line 177.
+LaTeX Info: Redefining \ttfamily on input line 177.
  [1]
-LaTeX Info: Redefining \rmfamily on input line 130.
-LaTeX Info: Redefining \sffamily on input line 130.
-LaTeX Info: Redefining \ttfamily on input line 130.
+LaTeX Info: Redefining \rmfamily on input line 177.
+LaTeX Info: Redefining \sffamily on input line 177.
+LaTeX Info: Redefining \ttfamily on input line 177.
  [2
 
-]
+] [3] [4]
 Chapter 1.
-[3]
-LaTeX Info: Redefining \rmfamily on input line 259.
-LaTeX Info: Redefining \sffamily on input line 259.
-LaTeX Info: Redefining \ttfamily on input line 259.
- [4]
-LaTeX Info: Redefining \rmfamily on input line 326.
-LaTeX Info: Redefining \sffamily on input line 326.
-LaTeX Info: Redefining \ttfamily on input line 326.
- [5]
-LaTeX Info: Redefining \rmfamily on input line 371.
-LaTeX Info: Redefining \sffamily on input line 371.
-LaTeX Info: Redefining \ttfamily on input line 371.
- [6]
-LaTeX Info: Redefining \rmfamily on input line 448.
-LaTeX Info: Redefining \sffamily on input line 448.
-LaTeX Info: Redefining \ttfamily on input line 448.
- [7]
-LaTeX Info: Redefining \rmfamily on input line 551.
-LaTeX Info: Redefining \sffamily on input line 551.
-LaTeX Info: Redefining \ttfamily on input line 551.
- [8]
-LaTeX Info: Redefining \rmfamily on input line 623.
-LaTeX Info: Redefining \sffamily on input line 623.
-LaTeX Info: Redefining \ttfamily on input line 623.
- [9]
-LaTeX Info: Redefining \rmfamily on input line 638.
-LaTeX Info: Redefining \sffamily on input line 638.
-LaTeX Info: Redefining \ttfamily on input line 638.
- [10]
+[5
+
+]
+LaTeX Info: Redefining \rmfamily on input line 205.
+LaTeX Info: Redefining \sffamily on input line 205.
+LaTeX Info: Redefining \ttfamily on input line 205.
+ [6
+
+]
 Chapter 2.
-[11
+[7]
+LaTeX Info: Redefining \rmfamily on input line 334.
+LaTeX Info: Redefining \sffamily on input line 334.
+LaTeX Info: Redefining \ttfamily on input line 334.
+ [8]
+LaTeX Info: Redefining \rmfamily on input line 401.
+LaTeX Info: Redefining \sffamily on input line 401.
+LaTeX Info: Redefining \ttfamily on input line 401.
+ [9]
+LaTeX Info: Redefining \rmfamily on input line 446.
+LaTeX Info: Redefining \sffamily on input line 446.
+LaTeX Info: Redefining \ttfamily on input line 446.
+ [10]
+LaTeX Info: Redefining \rmfamily on input line 523.
+LaTeX Info: Redefining \sffamily on input line 523.
+LaTeX Info: Redefining \ttfamily on input line 523.
+ [11]
+LaTeX Info: Redefining \rmfamily on input line 626.
+LaTeX Info: Redefining \sffamily on input line 626.
+LaTeX Info: Redefining \ttfamily on input line 626.
+ [12]
+LaTeX Info: Redefining \rmfamily on input line 698.
+LaTeX Info: Redefining \sffamily on input line 698.
+LaTeX Info: Redefining \ttfamily on input line 698.
+ [13]
+LaTeX Info: Redefining \rmfamily on input line 713.
+LaTeX Info: Redefining \sffamily on input line 713.
+LaTeX Info: Redefining \ttfamily on input line 713.
+ [14] [15
 
-]
-LaTeX Info: Redefining \rmfamily on input line 643.
-LaTeX Info: Redefining \sffamily on input line 643.
-LaTeX Info: Redefining \ttfamily on input line 643.
- [12
-
-]
+] [16]
 Chapter 3.
-[13]
-LaTeX Info: Redefining \rmfamily on input line 648.
-LaTeX Info: Redefining \sffamily on input line 648.
-LaTeX Info: Redefining \ttfamily on input line 648.
- [14
+[17
+
+]
+LaTeX Info: Redefining \rmfamily on input line 723.
+LaTeX Info: Redefining \sffamily on input line 723.
+LaTeX Info: Redefining \ttfamily on input line 723.
+ [18
 
 ]
 Chapter 4.
-[15]
+[19]
+LaTeX Info: Redefining \rmfamily on input line 728.
+LaTeX Info: Redefining \sffamily on input line 728.
+LaTeX Info: Redefining \ttfamily on input line 728.
+ [20
 
-LaTeX Warning: Hyper reference `ch/quantum-mechanics:quantum-mechanics-math-ope
-rators-self-adjoint' on page 16 undefined on input line 748.
+] [21] [22]
+Chapter 5.
+[23
 
-LaTeX Info: Redefining \rmfamily on input line 794.
-LaTeX Info: Redefining \sffamily on input line 794.
-LaTeX Info: Redefining \ttfamily on input line 794.
-[16]
-LaTeX Info: Redefining \rmfamily on input line 856.
-LaTeX Info: Redefining \sffamily on input line 856.
-LaTeX Info: Redefining \ttfamily on input line 856.
- [17]
-LaTeX Info: Redefining \rmfamily on input line 915.
-LaTeX Info: Redefining \sffamily on input line 915.
-LaTeX Info: Redefining \ttfamily on input line 915.
- [18]
-LaTeX Info: Redefining \rmfamily on input line 976.
-LaTeX Info: Redefining \sffamily on input line 976.
-LaTeX Info: Redefining \ttfamily on input line 976.
- [19]
-LaTeX Info: Redefining \rmfamily on input line 1043.
-LaTeX Info: Redefining \sffamily on input line 1043.
-LaTeX Info: Redefining \ttfamily on input line 1043.
- [20]
-LaTeX Info: Redefining \rmfamily on input line 1105.
-LaTeX Info: Redefining \sffamily on input line 1105.
-LaTeX Info: Redefining \ttfamily on input line 1105.
- [21]
-LaTeX Info: Redefining \rmfamily on input line 1159.
-LaTeX Info: Redefining \sffamily on input line 1159.
-LaTeX Info: Redefining \ttfamily on input line 1159.
- [22]
-LaTeX Info: Redefining \rmfamily on input line 1196.
-LaTeX Info: Redefining \sffamily on input line 1196.
-LaTeX Info: Redefining \ttfamily on input line 1196.
- [23]
-LaTeX Info: Redefining \rmfamily on input line 1196.
-LaTeX Info: Redefining \sffamily on input line 1196.
-LaTeX Info: Redefining \ttfamily on input line 1196.
+]
+LaTeX Info: Redefining \rmfamily on input line 738.
+LaTeX Info: Redefining \sffamily on input line 738.
+LaTeX Info: Redefining \ttfamily on input line 738.
  [24
 
-] [25
+]
+Chapter 6.
+[25]
+LaTeX Info: Redefining \rmfamily on input line 743.
+LaTeX Info: Redefining \sffamily on input line 743.
+LaTeX Info: Redefining \ttfamily on input line 743.
+ [26
+
+] [27] [28]
+Chapter 7.
+[29
+
+]
+
+LaTeX Warning: Hyper reference `ch/quantum-mechanics/intro:quantum-mechanics-ma
+th-operators-self-adjoint' on page 30 undefined on input line 848.
+
+LaTeX Info: Redefining \rmfamily on input line 894.
+LaTeX Info: Redefining \sffamily on input line 894.
+LaTeX Info: Redefining \ttfamily on input line 894.
+[30]
+LaTeX Info: Redefining \rmfamily on input line 956.
+LaTeX Info: Redefining \sffamily on input line 956.
+LaTeX Info: Redefining \ttfamily on input line 956.
+ [31]
+LaTeX Info: Redefining \rmfamily on input line 1015.
+LaTeX Info: Redefining \sffamily on input line 1015.
+LaTeX Info: Redefining \ttfamily on input line 1015.
+ [32]
+LaTeX Info: Redefining \rmfamily on input line 1076.
+LaTeX Info: Redefining \sffamily on input line 1076.
+LaTeX Info: Redefining \ttfamily on input line 1076.
+ [33]
+LaTeX Info: Redefining \rmfamily on input line 1143.
+LaTeX Info: Redefining \sffamily on input line 1143.
+LaTeX Info: Redefining \ttfamily on input line 1143.
+ [34]
+LaTeX Info: Redefining \rmfamily on input line 1205.
+LaTeX Info: Redefining \sffamily on input line 1205.
+LaTeX Info: Redefining \ttfamily on input line 1205.
+ [35]
+LaTeX Info: Redefining \rmfamily on input line 1259.
+LaTeX Info: Redefining \sffamily on input line 1259.
+LaTeX Info: Redefining \ttfamily on input line 1259.
+ [36]
+LaTeX Info: Redefining \rmfamily on input line 1293.
+LaTeX Info: Redefining \sffamily on input line 1293.
+LaTeX Info: Redefining \ttfamily on input line 1293.
+ [37]
+LaTeX Info: Redefining \rmfamily on input line 1293.
+LaTeX Info: Redefining \sffamily on input line 1293.
+LaTeX Info: Redefining \ttfamily on input line 1293.
+ [38
+
+]
+Chapter 8.
+[39]
+LaTeX Info: Redefining \rmfamily on input line 1301.
+LaTeX Info: Redefining \sffamily on input line 1301.
+LaTeX Info: Redefining \ttfamily on input line 1301.
+ [40
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1311
+[]\TU/FreeMono(0)/m/n/10 Self-Adjoint Operator \TU/FreeSerif(0)/m/n/10 (\TU/Fre
+eSerif(0)/m/it/10 ch/quantum-
+ []
+
+[41
 
 
 ] (./book.ind)
@@ -1795,30 +1841,30 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1210.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1210.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1315.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1315.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1210.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1315.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1315.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: FD18B603983F52FFBC2FE66DDFD3CFAD;2751.
+(rerunfilecheck)             Checksum: AF626FF2C6ED4F4F4FE77CF0A8AE93BA;3335.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42052 strings out of 481789
- 945788 string characters out of 5937152
- 1628941 words of memory out of 5000000
- 58250 multiletter control sequences out of 15000+600000
- 537790 words of font info for 100 fonts, out of 8000000 for 9000
+ 42076 strings out of 481789
+ 946973 string characters out of 5937152
+ 1628965 words of memory out of 5000000
+ 58270 multiletter control sequences out of 15000+600000
+ 537822 words of font info for 104 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 71i,25n,109p,820b,2086s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,25n,109p,820b,2084s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (29 pages).
+Output written on book.pdf (45 pages).

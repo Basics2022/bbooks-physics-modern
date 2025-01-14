@@ -1,4 +1,4 @@
-(quantum-mechanics)=
+(quantum-mechanics:intro)=
 # Quantum Mechanics
 
 - Principles and postulates
