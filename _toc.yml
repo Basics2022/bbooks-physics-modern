@@ -16,6 +16,7 @@ parts:
   chapters:
   - file: ch/statistical-mechanics/intro
   - file: ch/statistical-mechanics/notes
+  - file: ch/statistical-mechanics/statistics
 - caption: Quantum Mechanics
   chapters:
   - file: ch/quantum-mechanics/intro

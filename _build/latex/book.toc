@@ -19,26 +19,35 @@
 \contentsline {part}{III\hspace {1em}Statistical Mechanics}{21}{part.3}%
 \contentsline {chapter}{\numberline {5}Statistical Physics}{23}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Statistical Physics \sphinxhyphen {} Notes}{25}{chapter.6}%
-\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{27}{part.4}%
-\contentsline {chapter}{\numberline {7}Quantum Mechanics}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Mathematical tools for quantum mechanics}{29}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Postulates of Quantum Mechanics}{30}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Non\sphinxhyphen {}relativistic Mechanics}{30}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Statistical Interpretation and Measurement}{30}{subsection.7.3.1}%
-\contentsline {subsubsection}{Wave function}{30}{subsubsection*.6}%
-\contentsline {subsubsection}{Operators and Observables}{30}{subsubsection*.7}%
-\contentsline {subsubsection}{Space Representation}{31}{subsubsection*.8}%
-\contentsline {subsubsection}{Momentum Representation}{32}{subsubsection*.9}%
-\contentsline {subsubsection}{From position to momentum representation}{33}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {7.3.2}Schrodinger Equation}{33}{subsection.7.3.2}%
-\contentsline {subsubsection}{Stationary States}{34}{subsubsection*.11}%
-\contentsline {subsubsection}{Pictures}{34}{subsubsection*.12}%
-\contentsline {paragraph}{Schrodinger}{34}{paragraph*.13}%
-\contentsline {paragraph}{Heisenberg}{35}{paragraph*.14}%
-\contentsline {paragraph}{Interaction}{36}{paragraph*.15}%
-\contentsline {subsection}{\numberline {7.3.3}Matrix Mechanics}{36}{subsection.7.3.3}%
-\contentsline {subsubsection}{Attualization of 1925 papers}{36}{subsubsection*.16}%
-\contentsline {subsection}{\numberline {7.3.4}Heisenberg Uncertainty “principle”}{36}{subsection.7.3.4}%
-\contentsline {section}{\numberline {7.4}Many\sphinxhyphen {}body problem}{37}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Quantum Mechanics \sphinxhyphen {} Notes}{39}{chapter.8}%
-\contentsline {chapter}{Proof Index}{41}{section*.17}%
+\contentsline {section}{\numberline {6.1}Ensembles}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Microcanonical ensemble}{25}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Canonical ensemble}{25}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Macrocanonical esemble}{25}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Statistics}{25}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Maxwell\sphinxhyphen {}Boltzmann}{26}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Bose\sphinxhyphen {}Einstein}{26}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Fermi\sphinxhyphen {}Dirac}{30}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {7}Statistical Physics \sphinxhyphen {} Statistics Miscellanea}{33}{chapter.7}%
+\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{35}{part.4}%
+\contentsline {chapter}{\numberline {8}Quantum Mechanics}{37}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Mathematical tools for quantum mechanics}{37}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Postulates of Quantum Mechanics}{38}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Non\sphinxhyphen {}relativistic Mechanics}{38}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Statistical Interpretation and Measurement}{38}{subsection.8.3.1}%
+\contentsline {subsubsection}{Wave function}{38}{subsubsection*.6}%
+\contentsline {subsubsection}{Operators and Observables}{38}{subsubsection*.7}%
+\contentsline {subsubsection}{Space Representation}{39}{subsubsection*.8}%
+\contentsline {subsubsection}{Momentum Representation}{40}{subsubsection*.9}%
+\contentsline {subsubsection}{From position to momentum representation}{41}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {8.3.2}Schrodinger Equation}{41}{subsection.8.3.2}%
+\contentsline {subsubsection}{Stationary States}{42}{subsubsection*.11}%
+\contentsline {subsubsection}{Pictures}{42}{subsubsection*.12}%
+\contentsline {paragraph}{Schrodinger}{42}{paragraph*.13}%
+\contentsline {paragraph}{Heisenberg}{43}{paragraph*.14}%
+\contentsline {paragraph}{Interaction}{44}{paragraph*.15}%
+\contentsline {subsection}{\numberline {8.3.3}Matrix Mechanics}{44}{subsection.8.3.3}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{44}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {8.3.4}Heisenberg Uncertainty “principle”}{44}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Many\sphinxhyphen {}body problem}{45}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Quantum Mechanics \sphinxhyphen {} Notes}{47}{chapter.9}%
+\contentsline {chapter}{Proof Index}{49}{section*.17}%

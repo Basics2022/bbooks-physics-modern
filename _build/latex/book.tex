@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Jan 27, 2025}
+\date{Mar 11, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -151,6 +151,10 @@ Statistical Mechanics
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/statistical-mechanics/notes::doc}]{\sphinxcrossref{Statistical Physics \sphinxhyphen{} Notes}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/statistical-mechanics/statistics::doc}]{\sphinxcrossref{Statistical Physics \sphinxhyphen{} Statistics Miscellanea}}}
 
 \end{itemize}
 \end{itemize}
@@ -737,6 +741,437 @@ so that the dynamical equation reads
 
 \chapter{Statistical Physics \sphinxhyphen{} Notes}
 \label{\detokenize{ch/statistical-mechanics/notes:statistical-physics-notes}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes}}\label{\detokenize{ch/statistical-mechanics/notes::doc}}
+
+\section{Ensembles}
+\label{\detokenize{ch/statistical-mechanics/notes:ensembles}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes-ensembles}}
+
+\section{Microcanonical ensemble}
+\label{\detokenize{ch/statistical-mechanics/notes:microcanonical-ensemble}}\label{\detokenize{ch/statistical-mechanics/notes:id1}}
+
+\section{Canonical ensemble}
+\label{\detokenize{ch/statistical-mechanics/notes:canonical-ensemble}}\label{\detokenize{ch/statistical-mechanics/notes:id2}}
+
+\section{Macrocanonical esemble}
+\label{\detokenize{ch/statistical-mechanics/notes:macrocanonical-esemble}}\label{\detokenize{ch/statistical-mechanics/notes:id3}}
+
+\section{Statistics}
+\label{\detokenize{ch/statistical-mechanics/notes:statistics}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes-distributions}}
+\sphinxAtStartPar
+Each of the \(N\) components of the system is in an \sphinxstylestrong{energy level} \(i\). Energy level \(i\) has \(g_i\) sublevels with the same energy level.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+energy levels, \(E_i\) of each component
+
+\item {} 
+\sphinxAtStartPar
+occupation number \(N_i\) of level \(i\)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Central role of energy.} In a system macroscopically at rest, the energy of a system is the only macroscopic meaningful non\sphinxhyphen{}zero mechanical quantity, constant for closed and isolated systems
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Principle of maximum uncertainty}, \sphinxstylestrong{maximum entropy}, \sphinxstylestrong{minimum information}: given a measurement of a macroscopic variable \(V\), describing the macrostate of the system, the feasible un\sphinxhyphen{}observed/able microstates of the system are the microstates consistent with it: there’s usually a sharp maximum of in the probability density of the micrsotates.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Given a macrostate, what’s the number of ways \(W(N_i; g_i)\) to get a consistent microstate? Once the expression is found, constrained optimization follows: optimization w.r.t. \(N_i\) is usually performed in the limit of \(N_i \rightarrow +\infty\) (why in Fermi\sphinxhyphen{}Dirac distribution, obeying Pauli exclusion principle?), with the values of the macroscopic variables as constraints usually treated with Lagrange multiplier.
+
+
+\subsection{Maxwell\sphinxhyphen{}Boltzmann}
+\label{\detokenize{ch/statistical-mechanics/notes:maxwell-boltzmann}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes-distributions-mb}}
+\sphinxAtStartPar
+Statistics of distinguishible components.
+
+
+\subsection{Bose\sphinxhyphen{}Einstein}
+\label{\detokenize{ch/statistical-mechanics/notes:bose-einstein}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes-distributions-be}}
+\sphinxAtStartPar
+Statistics of undistinguishable components that can be in the same (sub)level.
+Given the number of elementary components \(\sum_{i} N_i = N\) and the energy \(\sum_{i} N_i E_i = E\),
+\begin{equation}\label{equation:ch/statistical-mechanics/notes:eq:be}
+\begin{split}W_{BE,i} = \frac{(N_i + g_i - 1)!}{N_i! (g_i-1)!} \qquad , \qquad W_{BE} = \prod_i W_{BE,i} \ .\end{split}
+\end{equation}\subsubsection*{Counting microstates}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} write page \sphinxstyleemphasis{Combinatorics} and add link
+
+\sphinxAtStartPar
+\sphinxstylestrong{Most likely microstate.} Instead of maximizing \eqref{equation:ch/statistical-mechanics/notes:eq:be}, the objective function is \(\ln W_{BE}\), after using Stirling approximation in the limit of large \(N_i\) and \(g_i\), \(N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}\). The approximate occupation number of one of the \(G_i\) sublevels of the \(i^{th}\) level of the most likely microstate is
+\begin{equation*}
+\begin{split}n_i := \frac{N_i}{G_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .\end{split}
+\end{equation*}\subsubsection*{Optimization}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  J(N_i, \alpha, \beta)
+  & = \ln W_{BE} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  & = \sum_i \left\{ \ln(N_i + g_i -1)! - \ln N_i! - \ln (g_i-1)! \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) \simeq \\
+  & \simeq \sum_i \left\{ (N_i+g_i-1)\ln(N_i+g_i-1) - N_i\ln N_i - (g_i-1) \ln (g_i-1) + N_i + g_i -1 - N_i - (g_i-1) \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  & = \sum_i \left\{ (N_i+g_i-1)\ln(N_i+g_i-1) - N_i\ln N_i - (g_i-1) \ln (g_i-1) \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using \(\partial_{n} (n+a) \ln (n+a) = \ln (n+a) + 1\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 = \partial_{N_k} J 
+  & \simeq \left\{ \ln (N_k+g_k-1) - \ln N_k \right\} - \alpha - \beta E_k \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\ln \frac{N_k + g_k - 1}{N_k} = \alpha + \beta E_k \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\frac{N_k + g_k - 1}{N_i} = e^{\alpha + \beta E_k}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}N_k = \frac{g_k - 1}{e^{\alpha + \beta E_k}-1} \simeq \frac{g_k}{e^{\alpha + \beta E_k}-1} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, in the limit of \(g_k \gg 1\), the  occupation number of the \(k\) level is
+\begin{equation*}
+\begin{split}N_k = \frac{G_k}{e^{\alpha + \beta E_k} - 1} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the average occupation number of one of the \(g_k\) sublevels in the \(k\) level is
+\begin{equation*}
+\begin{split}n_k := \frac{N_k}{G_k} = \frac{1}{e^{\alpha + \beta E_k} - 1}\end{split}
+\end{equation*}\subsubsection*{\sphinxstylestrong{Meaning of \protect\(\alpha\protect\), \protect\(\beta\protect\)}}
+\label{ch/statistical-mechanics/notes:example-0}
+\begin{sphinxadmonition}{note}{Example 1 (Black\sphinxhyphen{}body radiation: Planck, Wien, and Stefan\sphinxhyphen{}Boltzmann laws)}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Planck’s law.} Energy density w.r.t. frequency
+\begin{equation*}
+\begin{split}u_{f}(f, T) = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\frac{hf}{k_B T}} - 1}\end{split}
+\end{equation*}\subsubsection*{Planck’s law in a cubic box}
+
+\sphinxAtStartPar
+Planck’s law uses:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+relation between pulsation and wave vector, or frequency and wave number and the speed of light \(c\) for light waves
+\begin{equation*}
+\begin{split}c = \frac{\omega}{|\vec{k}|} = \lambda f\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}f = \frac{\omega}{2\pi} = \frac{c |\vec{k}|}{2 \pi}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Planck assumption that the minimum non\sphinxhyphen{}zero energy of a mode with frequency \(f\) is \(E = h f\), and all the possible values of the energy of the mode is
+\begin{equation*}
+\begin{split}E_m = m h f \quad , \quad m \in \mathbb{N} \ .\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Taking a cubic box with sides \(L_x = L_y = L_z = L\), the possibile modes have (\sphinxstylestrong{todo} \sphinxstyleemphasis{why? Which boundary condition? Periodic? Some physical? Just fictitious discretization?}) in each direction wave\sphinxhyphen{}lengths \(\lambda_n = \frac{L}{|\vec{n}|} = \frac{2 \pi}{|\vec{k}|}\),
+\begin{equation*}
+\begin{split}\vec{k} = \frac{2 \pi}{L} \vec{n} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Mode density in \(\vec{n}\)\sphinxhyphen{}domain is 2 mode per each volume of unit length (2 polarization), and thus the number of modes \(d N\) in an elementary volume is
+\begin{equation*}
+\begin{split}d N = 2 \, d^3 \vec{n} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Changing variables, it’s possible to find the mode density w.r.t. wave vector \(\vec{k}\),
+\begin{equation*}
+\begin{split}d N = 2 \, d^3 \vec{n} = 2 \, \frac{L^3}{(2 \pi)^3} \, d^3 \vec{k} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or with its absolute value, exploiting the isotropy of the density function \sphinxhyphen{} and writing the elementary volume using “spherical coordinates” \(d^3 \vec{k} = 4 \pi \left| \vec{k} \right|^2 d \, \left| \vec{k} \right|\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d N
+  & = \frac{V}{(2 \pi)^3} 8 \pi \left| \vec{k} \right|^2 d \left| \vec{k} \right| = \\
+  & = \frac{V}{(2 \pi)^3} 8 \pi \frac{8 \pi^3}{c^3} f^2 d f = \\
+  & = V \frac{8 \pi}{c^3} f^2 df =: V g(f) df \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Average energy of a mode}
+
+\sphinxAtStartPar
+Using Boltzmann distribution (\sphinxstylestrong{why?}) for the energy distribution in a single mode,
+\begin{equation*}
+\begin{split}P(E_r) = \frac{e^{-\beta E_r}}{Z} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(E_r = r h f\), and the partition function
+\begin{equation*}
+\begin{split}Z = \sum_{s} e^{- \beta E_s} = \sum_s e^{-\beta h f s} = \frac{1}{1 - e^{-\beta h f}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The average energy of the mode reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle E \rangle
+  & = \sum_r E_r P(E_r) = \\
+  & = \sum_r r h f \frac{e^{- \beta h f r}}{Z} = \\
+  & = h f (1-e^{-\beta h f}) \sum_r r e^{- \beta h f r} = \\
+  & = h f (1-e^{-\beta h f}) \frac{e^{- \beta h f}}{(1-e^{-\beta h f})^2} = \\
+  & = \frac{h f}{e^{\beta h f} - 1}  \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Putting together the mode number density and the average energy of a mode, the energy density per unit volume, per frequency reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  u(f, T)
+  & = \langle E \rangle(f) \, g(f) = \\
+  & = \frac{hf}{e^{\beta h f} - 1} \frac{8 \pi}{c^3} f^2 = \\
+  & = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\beta h f} - 1} \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Property of the series}
+\begin{equation*}
+\begin{split}\sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Proof.} If the series is convergent (is this the required condition?)
+\begin{equation*}
+\begin{split}\frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \frac{d}{dx} \frac{1}{1 - x} = \frac{1}{(1-x)^2}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^{n-1}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}x \frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Sperctral radiance}, \(B_{f}\), so that an infinitesiaml amount of power radiated by a surface … is \(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)
+\begin{equation*}
+\begin{split}B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This expression is obtained{[}\textasciicircum{}nano\sphinxhyphen{}hub{]} assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole \sphinxhyphen{} so factor \(\frac{1}{2}\) in front of the energy density \sphinxhyphen{} through a solid angle \(2 \pi\) \sphinxhyphen{} and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor \(\frac{1}{4 \pi}\). The flux of energy “has velocity” \(c\) and thus
+\begin{equation*}
+\begin{split}B_{f}(f, T) = \frac{1}{4 \pi} u_{f}(f,T) c \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Wien’s law.} Wien’s law tells that the frequency \(f^*\) corresponding to the maximum of the spectral radiance of a black\sphinxhyphen{}body radiation described by Planck’s law is proportional to its temperature.
+
+\sphinxAtStartPar
+From direct evaluation of the derivative of the spectral radiance as a function of \(f\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_f B_{f}(f,T)
+  & = \frac{2 h}{c^2} \left[ 3 f^2 \frac{1}{e^{\frac{hf}{k_B T}}-1} + f^3 \left(-\frac{\frac{h}{k_B T} e^{\frac{hf}{k_B T}}}{\left( e^{\frac{hf}{k_B T}} - 1 \right)^2}  \right) \right] = \\
+  & = \frac{2 h f^2 e^{\frac{hf}{k_B T}}}{c^2 \left( e^{\frac{hf}{k_B T}} - 1 \right)^2} \left[ 3 \left( 1 - e^{-\frac{hf}{k_B T}} \right) - \frac{h f}{k_B T}  \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, if \(\partial_f B_{f}(f,T) = 0\) the frequency is either \(f = 0\), or the solution of the nonlinear algebraic equation
+\begin{equation*}
+\begin{split}0 = 3 \left(1 - e^{-\frac{h f}{k_B T}} \right) - \frac{hf}{k_B T} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Defining \(x := \frac{h f}{k_B T}\), this equation becomes
+\begin{equation*}
+\begin{split}0 = 3 (1 - e^x) - x \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution \(x^* \approx 2.82\) can be easily evaluated with an iterative method (or expressed in term of the Lambert’s function \(W\), so loved at Stanford and on Youtube: they’d probaly like to look at tabulated values, or pose). Once the solution \(x^*\) of this non\sphinxhyphen{}dimensional equation is found, the frequency where maximum energy density occurs reads
+\begin{equation*}
+\begin{split}f^* = \frac{k_B T}{h} x^* \simeq 2.82 \frac{k_B}{h} T \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Stefan\sphinxhyphen{}Boltzmann law.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{P}{A} 
+  & = \int B_{f}(f,T) \cos \phi \, df \, d\Omega = \\
+  & = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
+  & = \pi \int_{f=0}^{+\infty} B_{f}(f,T) \, d f = \\
+  & = \frac{2 \pi h}{c^2} \int_{f=0}^{+\infty} \frac{f^3}{e^{\frac{hf}{k_B T}} - 1} \, d f = \\
+  & = \frac{2 \pi h}{c^2} \left( \frac{k_B T}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u - 1} \, d u \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The value of the integral is \(\frac{\pi^4}{15}\) and thus
+\begin{equation*}
+\begin{split}\frac{P}{A} = \sigma T^4 \qquad , \qquad \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/statistical-mechanics/notes:example-1}
+\begin{sphinxadmonition}{note}{Example 2 (Energy density and radiance)}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Radiance.} The radiance \(L_{e,\Omega}\) of a surface is the flux of energy per unit solid angle, per unit projected area of the source.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Spectral radiance in frequency} is the radiance per unit frequency, \(L_{e, \Omega, f} = \frac{\partial L_{e,\Omega}}{\partial f}\).
+\end{sphinxadmonition}
+
+
+\subsection{Fermi\sphinxhyphen{}Dirac}
+\label{\detokenize{ch/statistical-mechanics/notes:fermi-dirac}}\label{\detokenize{ch/statistical-mechanics/notes:statistical-mechanics-notes-distributions-fd}}
+\sphinxAtStartPar
+Statistics of undistinguishable components that can’t be in the same (sub)level, obeying to the Pauli exclusion principle.
+Given the number of elementary components \(\sum_{i} N_i = N\) and the energy \(\sum_{i} N_i E_i = E\),
+\begin{equation}\label{equation:ch/statistical-mechanics/notes:eq:fd}
+\begin{split}W_{FD,i} = \frac{G_i!}{(G_i-N_i)! N_i!} \qquad , \qquad W_{FD} = \prod_i W_{FD,i} \ .\end{split}
+\end{equation}\subsubsection*{Counting microstates}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} write page \sphinxstyleemphasis{Combinatorics} and add link
+
+\sphinxAtStartPar
+\sphinxstylestrong{Most likely microstate.} The approximate occupation number of the \(i^{th}\) level of the most likely microstate is
+\begin{equation*}
+\begin{split}n_i := \frac{N_i}{G_i} = \frac{1}{1 + e^{\alpha + \beta E_i}} \ .\end{split}
+\end{equation*}\subsubsection*{Optimization}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  J(N_i, \alpha, \beta)
+  & = \ln W_{FD} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  & = \sum_i \left\{ \ln G_i! - \ln(G_i - N_i)! - \ln N_i!  \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  & = \sum_i \left\{ G_i \ln G_i - (G_i - N_i) \ln(G_i - N_i) - N_i \ln N_i \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using \(\partial_{n} (n+a) \ln (n+a) = \ln (n+a) + 1\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 = \partial_{N_k} J 
+  & \simeq \left\{ \ln (G_k - N_k) - \ln N_k \right\} - \alpha - \beta E_k \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\ln \frac{G_k - N_k}{N_k} = \alpha + \beta E_k \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\frac{G_k}{N_k} - 1 = e^{\alpha + \beta E_k} \ \end{split}
+\end{equation*}
+\sphinxAtStartPar
+The occupation number of the \(k\) level is
+\begin{equation*}
+\begin{split}N_k = \frac{G_k}{1 + e^{\alpha + \beta E_k}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The average occupation of the \(G_k\) sublevels of the \(k\) level is
+\begin{equation*}
+\begin{split}n_k := \frac{N_k}{G_k} = \frac{1}{1 + e^{\alpha + \beta E_k}} \ .\end{split}
+\end{equation*}\subsubsection*{\sphinxstylestrong{Meaning of \protect\(\alpha\protect\), \protect\(\beta\protect\)}}
+
+\sphinxstepscope
+
+
+\chapter{Statistical Physics \sphinxhyphen{} Statistics Miscellanea}
+\label{\detokenize{ch/statistical-mechanics/statistics:statistical-physics-statistics-miscellanea}}\label{\detokenize{ch/statistical-mechanics/statistics:statistical-mechanics-statistics}}\label{\detokenize{ch/statistical-mechanics/statistics::doc}}\subsubsection*{Information content and Entropy}
+
+\sphinxAtStartPar
+Given a discrete random variable \(X\) with probability mass function \(p_X(x)\), the self\sphinxhyphen{}information (\sphinxstylestrong{todo} \sphinxstyleemphasis{what about mutual information of random variables?}) is defined as the opposite of the logaritm of the mass function \(p_X(x)\),
+\begin{equation*}
+\begin{split}I_X(x) := - \ln \left( p_X(x) \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Information content of indenpendent random variables is additive. Since \(p_{X,Y}(x,y) = p_X(x) p_Y(y)\),
+\begin{equation*}
+\begin{split}I_{X,Y}(x,y) = - \ln \left( p_{X,Y}(x,y) \right) = -\ln \left( p_X(x) p_Y(y) \right) = - \ln p_X(x) - \ln p_Y(y) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Shannon entropy.} Shannon entropy of a discrete random variable \(X\) is defined as the expected value of the information content,
+\begin{equation*}
+\begin{split}H(X) := \mathbb{E}[ I_X(X)] = \sum p_X(x) I_X(x) = - \sum p_X \ln p_X(x) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Gibbs entropy.} Gibbs entropy was defined by J.W.Gibbs in 1878,
+\begin{equation*}
+\begin{split}S = - k_B \sum_i p_i \ln p_i \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Additivity holds for independent random variables.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Boltzmann entropy.} Boltmann entropy holds for uniform distributions over \(\Omega\) possible states, \(p_i = \frac{1}{\Omega}\). Gibbs’ entropy of this uniform distribution becomes
+\begin{equation*}
+\begin{split}S = - k_B \Omega \frac{1}{\Omega} \ln \frac{1}{\Omega} = k_B \ln \Omega \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Entropy in Quantum Mechanics.} \sphinxstylestrong{todo}
+\subsubsection*{Boltzmann distribution}
+
+\sphinxAtStartPar
+Given a set of discrete states with probability \(p_i\), and the average measure as “macroscopic quantity” \(E = \sum_i p_i E_i\), Boltzann distribution maximizes the entropy (\sphinxstylestrong{todo} \sphinxstyleemphasis{Link to min info, max uncertainty})
+\begin{equation*}
+\begin{split}S = - k_B \sum_i p_i \ln p_i \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The distribution follows from the constrained optimization
+\begin{equation*}
+\begin{split}\widetilde{S} = S - \alpha \left( \sum_i p_i -1  \right) - \beta \left( \sum_i p_i E_i - E \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \partial_{\alpha} \widetilde{S} = - \sum_i p_i - 1 \\
+  0 & = \partial_{\beta}  \widetilde{S} = - \sum_i p_i E_i - E \\
+  0 & = \partial_{p_k}    \widetilde{S} = -k_B \left( \ln p_k + 1 \right) - \alpha - \beta E_k \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}p_k = e^{- 1 - \frac{\alpha}{k_B} - \frac{\beta}{k_B} E_k} = e^{-\left( 1 + \frac{\alpha}{k_B} \right)} e^{- \frac{\beta}{k_B} E_k} = C e^{-\frac{\beta}{k_B} E_k} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the normalization constant \(C\) is determined by normalization condition
+\begin{equation*}
+\begin{split}1 = \sum_k p_k = C \sum_{k} e^{-\frac{\beta E_k}{k_B}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The inverse \(Z = C^{-1}\) is defined as the \sphinxstylestrong{partition function},
+\begin{equation*}
+\begin{split} Z = C^{-1} = \sum_k e^{-\frac{\beta E_k}{k_B}}\ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the probability distribution becomes
+\begin{equation*}
+\begin{split}p_k = \frac{e^{-\frac{\beta E_k}{k_B}}}{Z} =  \frac{e^{-\frac{\beta E_k}{k_B}}}{ \sum_{i} e^{-\frac{\beta E_i}{k_B}}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Properties.}
+\begin{equation*}
+\begin{split}\frac{p_k}{p_i} = e^{-\frac{\beta}{k_B}(E_k - E_i)} \ .\end{split}
+\end{equation*}\subsubsection*{Thermodynamics. Comparison of statistics and classical thermodynamics}
+
+\sphinxAtStartPar
+First principle of classical thermodynamics (for a monocomponent gas with no electric charge,…) reads
+\begin{equation*}
+\begin{split}T \, dS = d E + P \, dV\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Entropy for Boltzmann distribution} reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  S 
+  & = - k_B \sum_i p_i \ln p_i = \\
+  & = - k_B \sum_i \left[ p_i \left( - \frac{\beta E_i}{k_B} - \ln Z \right) \right] = \\
+  & = \beta \langle E \rangle + k_B \ln Z
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{1}{T}
+  & = \left.\left( \dfrac{\partial S}{\partial E} \right)\right|_x = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{\partial \ln Z}{\partial E} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+write the derivative above clearly in terms of composite functions
+
+\item {} 
+\sphinxAtStartPar
+microscopical/statistical approach to the first principle of thermodynamics
+
+\end{itemize}
+
 \sphinxstepscope
 
 
@@ -1308,6 +1743,12 @@ Wave function with symmetries: Fermions and Bosons
 \indexspace
 \bigletter{Self\sphinxhyphen{}Adjoint Operator}
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
+\indexspace
+\bigletter{example\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-0}}
+\indexspace
+\bigletter{example\sphinxhyphen{}1}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-1}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}
