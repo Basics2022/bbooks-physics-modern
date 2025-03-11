@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/notes';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -307,7 +309,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -323,6 +327,23 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">Ensembles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">Microcanonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">Canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">Macrocanonical esemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">Bose-Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">Fermi-Dirac</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -334,6 +355,298 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="statistical-physics-notes">
 <span id="statistical-mechanics-notes"></span><h1>Statistical Physics - Notes<a class="headerlink" href="#statistical-physics-notes" title="Permalink to this heading">#</a></h1>
+<div class="section" id="ensembles">
+<span id="statistical-mechanics-notes-ensembles"></span><h2>Ensembles<a class="headerlink" href="#ensembles" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="microcanonical-ensemble">
+<span id="id1"></span><h2>Microcanonical ensemble<a class="headerlink" href="#microcanonical-ensemble" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="canonical-ensemble">
+<span id="id2"></span><h2>Canonical ensemble<a class="headerlink" href="#canonical-ensemble" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="macrocanonical-esemble">
+<span id="id3"></span><h2>Macrocanonical esemble<a class="headerlink" href="#macrocanonical-esemble" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="statistics">
+<span id="statistical-mechanics-notes-distributions"></span><h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
+<p>Each of the <span class="math notranslate nohighlight">\(N\)</span> components of the system is in an <strong>energy level</strong> <span class="math notranslate nohighlight">\(i\)</span>. Energy level <span class="math notranslate nohighlight">\(i\)</span> has <span class="math notranslate nohighlight">\(g_i\)</span> sublevels with the same energy level.</p>
+<ul class="simple">
+<li><p>energy levels, <span class="math notranslate nohighlight">\(E_i\)</span> of each component</p></li>
+<li><p>occupation number <span class="math notranslate nohighlight">\(N_i\)</span> of level <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><strong>Central role of energy.</strong> In a system macroscopically at rest, the energy of a system is the only macroscopic meaningful non-zero mechanical quantity, constant for closed and isolated systems</p></li>
+<li><p><strong>Principle of maximum uncertainty</strong>, <strong>maximum entropy</strong>, <strong>minimum information</strong>: given a measurement of a macroscopic variable <span class="math notranslate nohighlight">\(V\)</span>, describing the macrostate of the system, the feasible un-observed/able microstates of the system are the microstates consistent with it: there’s usually a sharp maximum of in the probability density of the micrsotates.</p></li>
+</ul>
+<p>Given a macrostate, what’s the number of ways <span class="math notranslate nohighlight">\(W(N_i; g_i)\)</span> to get a consistent microstate? Once the expression is found, constrained optimization follows: optimization w.r.t. <span class="math notranslate nohighlight">\(N_i\)</span> is usually performed in the limit of <span class="math notranslate nohighlight">\(N_i \rightarrow +\infty\)</span> (why in Fermi-Dirac distribution, obeying Pauli exclusion principle?), with the values of the macroscopic variables as constraints usually treated with Lagrange multiplier.</p>
+<div class="section" id="maxwell-boltzmann">
+<span id="statistical-mechanics-notes-distributions-mb"></span><h3>Maxwell-Boltzmann<a class="headerlink" href="#maxwell-boltzmann" title="Permalink to this heading">#</a></h3>
+<p>Statistics of distinguishible components.</p>
+</div>
+<div class="section" id="bose-einstein">
+<span id="statistical-mechanics-notes-distributions-be"></span><h3>Bose-Einstein<a class="headerlink" href="#bose-einstein" title="Permalink to this heading">#</a></h3>
+<p>Statistics of undistinguishable components that can be in the same (sub)level.
+Given the number of elementary components <span class="math notranslate nohighlight">\(\sum_{i} N_i = N\)</span> and the energy <span class="math notranslate nohighlight">\(\sum_{i} N_i E_i = E\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-be">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-be" title="Permalink to this equation">#</a></span>\[W_{BE,i} = \frac{(N_i + g_i - 1)!}{N_i! (g_i-1)!} \qquad , \qquad W_{BE} = \prod_i W_{BE,i} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Counting microstates<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> write page <em>Combinatorics</em> and add link</p>
+</div>
+</details><p><strong>Most likely microstate.</strong> Instead of maximizing <a class="reference internal" href="#equation-eq-be">(1)</a>, the objective function is <span class="math notranslate nohighlight">\(\ln W_{BE}\)</span>, after using Stirling approximation in the limit of large <span class="math notranslate nohighlight">\(N_i\)</span> and <span class="math notranslate nohighlight">\(g_i\)</span>, <span class="math notranslate nohighlight">\(N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}\)</span>. The approximate occupation number of one of the <span class="math notranslate nohighlight">\(G_i\)</span> sublevels of the <span class="math notranslate nohighlight">\(i^{th}\)</span> level of the most likely microstate is</p>
+<div class="math notranslate nohighlight">
+\[n_i := \frac{N_i}{G_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Optimization<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  J(N_i, \alpha, \beta)
+  &amp; = \ln W_{BE} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  &amp; = \sum_i \left\{ \ln(N_i + g_i -1)! - \ln N_i! - \ln (g_i-1)! \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) \simeq \\
+  &amp; \simeq \sum_i \left\{ (N_i+g_i-1)\ln(N_i+g_i-1) - N_i\ln N_i - (g_i-1) \ln (g_i-1) + N_i + g_i -1 - N_i - (g_i-1) \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  &amp; = \sum_i \left\{ (N_i+g_i-1)\ln(N_i+g_i-1) - N_i\ln N_i - (g_i-1) \ln (g_i-1) \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(\partial_{n} (n+a) \ln (n+a) = \ln (n+a) + 1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  0 = \partial_{N_k} J 
+  &amp; \simeq \left\{ \ln (N_k+g_k-1) - \ln N_k \right\} - \alpha - \beta E_k \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\ln \frac{N_k + g_k - 1}{N_k} = \alpha + \beta E_k \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{N_k + g_k - 1}{N_i} = e^{\alpha + \beta E_k}\]</div>
+<div class="math notranslate nohighlight">
+\[N_k = \frac{g_k - 1}{e^{\alpha + \beta E_k}-1} \simeq \frac{g_k}{e^{\alpha + \beta E_k}-1} \ , \]</div>
+<p class="sd-card-text">Thus, in the limit of <span class="math notranslate nohighlight">\(g_k \gg 1\)</span>, the  occupation number of the <span class="math notranslate nohighlight">\(k\)</span> level is</p>
+<div class="math notranslate nohighlight">
+\[N_k = \frac{G_k}{e^{\alpha + \beta E_k} - 1} \ ,\]</div>
+<p class="sd-card-text">and the average occupation number of one of the <span class="math notranslate nohighlight">\(g_k\)</span> sublevels in the <span class="math notranslate nohighlight">\(k\)</span> level is</p>
+<div class="math notranslate nohighlight">
+\[n_k := \frac{N_k}{G_k} = \frac{1}{e^{\alpha + \beta E_k} - 1}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Meaning of <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span></strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 1 </span> (Black-body radiation: Planck, Wien, and Stefan-Boltzmann laws)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>Planck’s law.</strong> Energy density w.r.t. frequency</p>
+<div class="math notranslate nohighlight">
+\[u_{f}(f, T) = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\frac{hf}{k_B T}} - 1}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Planck’s law in a cubic box<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Planck’s law uses:</p>
+<ul>
+<li><p class="sd-card-text">relation between pulsation and wave vector, or frequency and wave number and the speed of light <span class="math notranslate nohighlight">\(c\)</span> for light waves</p>
+<div class="math notranslate nohighlight">
+\[c = \frac{\omega}{|\vec{k}|} = \lambda f\]</div>
+<div class="math notranslate nohighlight">
+\[f = \frac{\omega}{2\pi} = \frac{c |\vec{k}|}{2 \pi}\]</div>
+</li>
+<li><p class="sd-card-text">Planck assumption that the minimum non-zero energy of a mode with frequency <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(E = h f\)</span>, and all the possible values of the energy of the mode is</p>
+<div class="math notranslate nohighlight">
+\[E_m = m h f \quad , \quad m \in \mathbb{N} \ .\]</div>
+</li>
+</ul>
+<p class="sd-card-text">Taking a cubic box with sides <span class="math notranslate nohighlight">\(L_x = L_y = L_z = L\)</span>, the possibile modes have (<strong>todo</strong> <em>why? Which boundary condition? Periodic? Some physical? Just fictitious discretization?</em>) in each direction wave-lengths <span class="math notranslate nohighlight">\(\lambda_n = \frac{L}{|\vec{n}|} = \frac{2 \pi}{|\vec{k}|}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{k} = \frac{2 \pi}{L} \vec{n} \ .\]</div>
+<p class="sd-card-text">Mode density in <span class="math notranslate nohighlight">\(\vec{n}\)</span>-domain is 2 mode per each volume of unit length (2 polarization), and thus the number of modes <span class="math notranslate nohighlight">\(d N\)</span> in an elementary volume is</p>
+<div class="math notranslate nohighlight">
+\[d N = 2 \, d^3 \vec{n} \ ,\]</div>
+<p class="sd-card-text">Changing variables, it’s possible to find the mode density w.r.t. wave vector <span class="math notranslate nohighlight">\(\vec{k}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[d N = 2 \, d^3 \vec{n} = 2 \, \frac{L^3}{(2 \pi)^3} \, d^3 \vec{k} \ ,\]</div>
+<p class="sd-card-text">or with its absolute value, exploiting the isotropy of the density function - and writing the elementary volume using “spherical coordinates” <span class="math notranslate nohighlight">\(d^3 \vec{k} = 4 \pi \left| \vec{k} \right|^2 d \, \left| \vec{k} \right|\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d N
+  &amp; = \frac{V}{(2 \pi)^3} 8 \pi \left| \vec{k} \right|^2 d \left| \vec{k} \right| = \\
+  &amp; = \frac{V}{(2 \pi)^3} 8 \pi \frac{8 \pi^3}{c^3} f^2 d f = \\
+  &amp; = V \frac{8 \pi}{c^3} f^2 df =: V g(f) df \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Average energy of a mode<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using Boltzmann distribution (<strong>why?</strong>) for the energy distribution in a single mode,</p>
+<div class="math notranslate nohighlight">
+\[P(E_r) = \frac{e^{-\beta E_r}}{Z} \ ,\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(E_r = r h f\)</span>, and the partition function</p>
+<div class="math notranslate nohighlight">
+\[Z = \sum_{s} e^{- \beta E_s} = \sum_s e^{-\beta h f s} = \frac{1}{1 - e^{-\beta h f}} \ .\]</div>
+<p class="sd-card-text">The average energy of the mode reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle E \rangle
+  &amp; = \sum_r E_r P(E_r) = \\
+  &amp; = \sum_r r h f \frac{e^{- \beta h f r}}{Z} = \\
+  &amp; = h f (1-e^{-\beta h f}) \sum_r r e^{- \beta h f r} = \\
+  &amp; = h f (1-e^{-\beta h f}) \frac{e^{- \beta h f}}{(1-e^{-\beta h f})^2} = \\
+  &amp; = \frac{h f}{e^{\beta h f} - 1}  \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Putting together the mode number density and the average energy of a mode, the energy density per unit volume, per frequency reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  u(f, T)
+  &amp; = \langle E \rangle(f) \, g(f) = \\
+  &amp; = \frac{hf}{e^{\beta h f} - 1} \frac{8 \pi}{c^3} f^2 = \\
+  &amp; = \frac{8 \pi h f^3}{c^3} \frac{1}{e^{\beta h f} - 1} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Property of the series<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\]</div>
+<p class="sd-card-text"><strong>Proof.</strong> If the series is convergent (is this the required condition?)</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \frac{d}{dx} \frac{1}{1 - x} = \frac{1}{(1-x)^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^{n-1}\]</div>
+<div class="math notranslate nohighlight">
+\[x \frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\]</div>
+</div>
+</details><p><strong>Sperctral radiance</strong>, <span class="math notranslate nohighlight">\(B_{f}\)</span>, so that an infinitesiaml amount of power radiated by a surface … is <span class="math notranslate nohighlight">\(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)</span></p>
+<div class="math notranslate nohighlight">
+\[B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\]</div>
+<p>This expression is obtained[^nano-hub] assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole - so factor <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> in front of the energy density - through a solid angle <span class="math notranslate nohighlight">\(2 \pi\)</span> - and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor <span class="math notranslate nohighlight">\(\frac{1}{4 \pi}\)</span>. The flux of energy “has velocity” <span class="math notranslate nohighlight">\(c\)</span> and thus</p>
+<div class="math notranslate nohighlight">
+\[B_{f}(f, T) = \frac{1}{4 \pi} u_{f}(f,T) c \ .\]</div>
+<p><strong>Wien’s law.</strong> Wien’s law tells that the frequency <span class="math notranslate nohighlight">\(f^*\)</span> corresponding to the maximum of the spectral radiance of a black-body radiation described by Planck’s law is proportional to its temperature.</p>
+<p>From direct evaluation of the derivative of the spectral radiance as a function of <span class="math notranslate nohighlight">\(f\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_f B_{f}(f,T)
+  &amp; = \frac{2 h}{c^2} \left[ 3 f^2 \frac{1}{e^{\frac{hf}{k_B T}}-1} + f^3 \left(-\frac{\frac{h}{k_B T} e^{\frac{hf}{k_B T}}}{\left( e^{\frac{hf}{k_B T}} - 1 \right)^2}  \right) \right] = \\
+  &amp; = \frac{2 h f^2 e^{\frac{hf}{k_B T}}}{c^2 \left( e^{\frac{hf}{k_B T}} - 1 \right)^2} \left[ 3 \left( 1 - e^{-\frac{hf}{k_B T}} \right) - \frac{h f}{k_B T}  \right] \ .
+\end{aligned}\end{split}\]</div>
+<p>Now, if <span class="math notranslate nohighlight">\(\partial_f B_{f}(f,T) = 0\)</span> the frequency is either <span class="math notranslate nohighlight">\(f = 0\)</span>, or the solution of the nonlinear algebraic equation</p>
+<div class="math notranslate nohighlight">
+\[0 = 3 \left(1 - e^{-\frac{h f}{k_B T}} \right) - \frac{hf}{k_B T} \ .\]</div>
+<p>Defining <span class="math notranslate nohighlight">\(x := \frac{h f}{k_B T}\)</span>, this equation becomes</p>
+<div class="math notranslate nohighlight">
+\[0 = 3 (1 - e^x) - x \ ,\]</div>
+<p>whose solution <span class="math notranslate nohighlight">\(x^* \approx 2.82\)</span> can be easily evaluated with an iterative method (or expressed in term of the Lambert’s function <span class="math notranslate nohighlight">\(W\)</span>, so loved at Stanford and on Youtube: they’d probaly like to look at tabulated values, or pose). Once the solution <span class="math notranslate nohighlight">\(x^*\)</span> of this non-dimensional equation is found, the frequency where maximum energy density occurs reads</p>
+<div class="math notranslate nohighlight">
+\[f^* = \frac{k_B T}{h} x^* \simeq 2.82 \frac{k_B}{h} T \ .\]</div>
+<p><strong>Stefan-Boltzmann law.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{P}{A} 
+  &amp; = \int B_{f}(f,T) \cos \phi \, df \, d\Omega = \\
+  &amp; = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
+  &amp; = \pi \int_{f=0}^{+\infty} B_{f}(f,T) \, d f = \\
+  &amp; = \frac{2 \pi h}{c^2} \int_{f=0}^{+\infty} \frac{f^3}{e^{\frac{hf}{k_B T}} - 1} \, d f = \\
+  &amp; = \frac{2 \pi h}{c^2} \left( \frac{k_B T}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u - 1} \, d u \ .
+\end{aligned}\end{split}\]</div>
+<p>The value of the integral is <span class="math notranslate nohighlight">\(\frac{\pi^4}{15}\)</span> and thus</p>
+<div class="math notranslate nohighlight">
+\[\frac{P}{A} = \sigma T^4 \qquad , \qquad \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} \ .\]</div>
+</div>
+</div><div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 2 </span> (Energy density and radiance)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>Radiance.</strong> The radiance <span class="math notranslate nohighlight">\(L_{e,\Omega}\)</span> of a surface is the flux of energy per unit solid angle, per unit projected area of the source.</p>
+<p><strong>Spectral radiance in frequency</strong> is the radiance per unit frequency, <span class="math notranslate nohighlight">\(L_{e, \Omega, f} = \frac{\partial L_{e,\Omega}}{\partial f}\)</span>.</p>
+</div>
+</div></div>
+<div class="section" id="fermi-dirac">
+<span id="statistical-mechanics-notes-distributions-fd"></span><h3>Fermi-Dirac<a class="headerlink" href="#fermi-dirac" title="Permalink to this heading">#</a></h3>
+<p>Statistics of undistinguishable components that can’t be in the same (sub)level, obeying to the Pauli exclusion principle.
+Given the number of elementary components <span class="math notranslate nohighlight">\(\sum_{i} N_i = N\)</span> and the energy <span class="math notranslate nohighlight">\(\sum_{i} N_i E_i = E\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-fd">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-fd" title="Permalink to this equation">#</a></span>\[W_{FD,i} = \frac{G_i!}{(G_i-N_i)! N_i!} \qquad , \qquad W_{FD} = \prod_i W_{FD,i} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Counting microstates<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> write page <em>Combinatorics</em> and add link</p>
+</div>
+</details><p><strong>Most likely microstate.</strong> The approximate occupation number of the <span class="math notranslate nohighlight">\(i^{th}\)</span> level of the most likely microstate is</p>
+<div class="math notranslate nohighlight">
+\[n_i := \frac{N_i}{G_i} = \frac{1}{1 + e^{\alpha + \beta E_i}} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Optimization<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  J(N_i, \alpha, \beta)
+  &amp; = \ln W_{FD} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  &amp; = \sum_i \left\{ \ln G_i! - \ln(G_i - N_i)! - \ln N_i!  \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+  &amp; = \sum_i \left\{ G_i \ln G_i - (G_i - N_i) \ln(G_i - N_i) - N_i \ln N_i \right\} + \alpha \left( N - \sum_i N_i \right) + \beta \left(E - \sum_i N_i E_i \right) = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(\partial_{n} (n+a) \ln (n+a) = \ln (n+a) + 1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  0 = \partial_{N_k} J 
+  &amp; \simeq \left\{ \ln (G_k - N_k) - \ln N_k \right\} - \alpha - \beta E_k \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\ln \frac{G_k - N_k}{N_k} = \alpha + \beta E_k \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{G_k}{N_k} - 1 = e^{\alpha + \beta E_k} \ \]</div>
+<p class="sd-card-text">The occupation number of the <span class="math notranslate nohighlight">\(k\)</span> level is</p>
+<div class="math notranslate nohighlight">
+\[N_k = \frac{G_k}{1 + e^{\alpha + \beta E_k}} \ .\]</div>
+<p class="sd-card-text">The average occupation of the <span class="math notranslate nohighlight">\(G_k\)</span> sublevels of the <span class="math notranslate nohighlight">\(k\)</span> level is</p>
+<div class="math notranslate nohighlight">
+\[n_k := \frac{N_k}{G_k} = \frac{1}{1 + e^{\alpha + \beta E_k}} \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Meaning of <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span></strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -390,6 +703,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">Ensembles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">Microcanonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">Canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">Macrocanonical esemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">Bose-Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">Fermi-Dirac</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
