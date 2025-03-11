@@ -356,6 +356,7 @@ Information content and Entropy<div class="sd-summary-down docutils">
 <p class="sd-card-text"><strong>Gibbs entropy.</strong> Gibbs entropy was defined by J.W.Gibbs in 1878,</p>
 <div class="math notranslate nohighlight">
 \[S = - k_B \sum_i p_i \ln p_i \ .\]</div>
+<p class="sd-card-text">Additivity holds for independent random variables.</p>
 <p class="sd-card-text"><strong>Boltzmann entropy.</strong> Boltmann entropy holds for uniform distributions over <span class="math notranslate nohighlight">\(\Omega\)</span> possible states, <span class="math notranslate nohighlight">\(p_i = \frac{1}{\Omega}\)</span>. Gibbs’ entropy of this uniform distribution becomes</p>
 <div class="math notranslate nohighlight">
 \[S = - k_B \Omega \frac{1}{\Omega} \ln \frac{1}{\Omega} = k_B \ln \Omega \ .\]</div>
@@ -368,14 +369,71 @@ Boltzmann distribution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Given a set of discrete states with probability <span class="math notranslate nohighlight">\(p_i\)</span>, and the average measure as “macroscopic quantity” <span class="math notranslate nohighlight">\(E = \sum_i p_i E_i\)</span>, Boltzann distribution maximizes the entropy (<strong>todo</strong> <em>Link to min info, max uncertainty</em>)</p>
+<div class="math notranslate nohighlight">
+\[S = - k_B \sum_i p_i \ln p_i \ .\]</div>
+<p class="sd-card-text">The distribution follows from the constrained optimization</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{S} = S - \alpha \left( \sum_i p_i -1  \right) - \beta \left( \sum_i p_i E_i - E \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \partial_{\alpha} \widetilde{S} = - \sum_i p_i - 1 \\
+  0 &amp; = \partial_{\beta}  \widetilde{S} = - \sum_i p_i E_i - E \\
+  0 &amp; = \partial_{p_k}    \widetilde{S} = -k_B \left( \ln p_k + 1 \right) - \alpha - \beta E_k \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[p_k = e^{- 1 - \frac{\alpha}{k_B} - \frac{\beta}{k_B} E_k} = e^{-\left( 1 + \frac{\alpha}{k_B} \right)} e^{- \frac{\beta}{k_B} E_k} = C e^{-\frac{\beta}{k_B} E_k} \ ,\]</div>
+<p class="sd-card-text">and the normalization constant <span class="math notranslate nohighlight">\(C\)</span> is determined by normalization condition</p>
+<div class="math notranslate nohighlight">
+\[1 = \sum_k p_k = C \sum_{k} e^{-\frac{\beta E_k}{k_B}}\]</div>
+<p class="sd-card-text">The inverse <span class="math notranslate nohighlight">\(Z = C^{-1}\)</span> is defined as the <strong>partition function</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ Z = C^{-1} = \sum_k e^{-\frac{\beta E_k}{k_B}}\ ,\]</div>
+<p class="sd-card-text">and the probability distribution becomes</p>
+<div class="math notranslate nohighlight">
+\[p_k = \frac{e^{-\frac{\beta E_k}{k_B}}}{Z} =  \frac{e^{-\frac{\beta E_k}{k_B}}}{ \sum_{i} e^{-\frac{\beta E_i}{k_B}}} \ .\]</div>
+<p class="sd-card-text"><strong>Properties.</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{p_k}{p_i} = e^{-\frac{\beta}{k_B}(E_k - E_i)} \ .\]</div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+Thermodynamics. Comparison of statistics and classical thermodynamics<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First principle of classical thermodynamics (for a monocomponent gas with no electric charge,…) reads</p>
+<div class="math notranslate nohighlight">
+\[T \, dS = d E + P \, dV\]</div>
+<p class="sd-card-text"><strong>Entropy for Boltzmann distribution</strong> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  S 
+  &amp; = - k_B \sum_i p_i \ln p_i = \\
+  &amp; = - k_B \sum_i \left[ p_i \left( - \frac{\beta E_i}{k_B} - \ln Z \right) \right] = \\
+  &amp; = \beta \langle E \rangle + k_B \ln Z
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">From classical thermodyamics, temperature <span class="math notranslate nohighlight">\(T\)</span> can be defined as the partial derivative of the entropy of a system w.r.t. its internal energy keeping constant all the other independent variables,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{1}{T}
+  &amp; = \left.\left( \dfrac{\partial S}{\partial E} \right)\right|_X = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{\partial \ln Z}{\partial E} = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial E} = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial \beta} \frac{\partial \beta}{\partial E} = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \left( - \sum_i \frac{E_i}{k_B} e^{-\frac{\beta E_i}{k_B}} \right) \frac{\partial \beta}{\partial E} = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta - \left( \sum_i E_i p_i \right) \frac{\partial \beta}{\partial E} = \\
+  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta - E \frac{\partial \beta}{\partial E} = \beta \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>todo</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">write the derivative above clearly in terms of composite functions</p></li>
+<li><p class="sd-card-text">microscopical/statistical approach to the first principle of thermodynamics</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[d E = d \left( \sum_i p_i E_i \right) = \sum_i E_i \, d p_i + \sum_i p_i d E_i\]</div>
 </div>
 </details></div>
 
