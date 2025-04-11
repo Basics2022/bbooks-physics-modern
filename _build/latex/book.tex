@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Mar 12, 2025}
+\date{Apr 11, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1696,11 +1696,14 @@ and since \(| \Psi \rangle\) is arbitrary
 \begin{split}\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . \end{split}
 \end{equation*}
 
-\subsection{Heisenberg Uncertainty “principle”}
-\label{\detokenize{ch/quantum-mechanics/intro:heisenberg-uncertainty-principle}}\begin{itemize}
+\subsection{Heisenberg Uncertainty relation}
+\label{\detokenize{ch/quantum-mechanics/intro:heisenberg-uncertainty-relation}}
+\sphinxAtStartPar
+Uncertainty principle is a relation that holds for “wave descriptions” as it can be proved in the generic framework of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html}{Fourier transform}, see \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html\#uncertainty-relation}{Fourier transform:Uncertainty relation}.
+\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-Heisenberg uncertainty “principle” is a relation between product of variance of two physical quantities and their commutation,
+Heisenberg uncertainty relation is a relation between product of the variance of two physical quantities and their commutator,
 
 \item {} 
 \sphinxAtStartPar
@@ -1719,16 +1722,18 @@ Heisenberg uncertainty “principle” is a relation between product of variance
  & \ge \left| \langle ( \hat{A} - \bar{A} ) \Psi | ( \hat{B} - \bar{B} ) \Psi  \rangle \right|^2 = \\
  & = \left| \langle \Psi | (\hat{A} - \bar{A})(\hat{B} - \bar{B}) \Psi \rangle \right|^2 = \\
  & = \left| \langle \Psi | \hat{A}\hat{B} - \hat{A}\bar{B} - \bar{A}\hat{B} + \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
- & = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ & = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 \ge && \text{(1)} \\
  & = \left| \frac{\langle \Psi | \hat{A}\hat{B} - \hat{B}\hat{A} | \Psi \rangle}{2i} \right|^2 = \\
  & = \frac{ \left|\langle \Psi | [\hat{A}, \hat{B}] | \Psi \rangle \right|^2}{4} = \frac{1}{4} \left| \overline{[\hat{A}, \hat{B}]} \right|^2
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having used Cauchy triangle inequality and
+having used Cauchy\sphinxhyphen{}Schwartz triangle inequality in (1),
 \begin{equation*}
-\begin{split}|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}\end{split}
+\begin{split}|z| \ge | \text{im}(z) | = \frac{z - z^*}{2 i} \ .\end{split}
 \end{equation*}
+
+
 \sphinxAtStartPar
 Hesienberg uncertainty principles applied to position and momentum reads
 \begin{equation*}

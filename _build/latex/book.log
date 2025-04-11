@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  12 MAR 2025 13:28
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  11 APR 2025 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1828,29 +1828,29 @@ LaTeX Info: Redefining \rmfamily on input line 1658.
 LaTeX Info: Redefining \sffamily on input line 1658.
 LaTeX Info: Redefining \ttfamily on input line 1658.
  [45]
-LaTeX Info: Redefining \rmfamily on input line 1712.
-LaTeX Info: Redefining \sffamily on input line 1712.
-LaTeX Info: Redefining \ttfamily on input line 1712.
+LaTeX Info: Redefining \rmfamily on input line 1715.
+LaTeX Info: Redefining \sffamily on input line 1715.
+LaTeX Info: Redefining \ttfamily on input line 1715.
  [46]
-LaTeX Info: Redefining \rmfamily on input line 1746.
-LaTeX Info: Redefining \sffamily on input line 1746.
-LaTeX Info: Redefining \ttfamily on input line 1746.
+LaTeX Info: Redefining \rmfamily on input line 1751.
+LaTeX Info: Redefining \sffamily on input line 1751.
+LaTeX Info: Redefining \ttfamily on input line 1751.
  [47]
-LaTeX Info: Redefining \rmfamily on input line 1746.
-LaTeX Info: Redefining \sffamily on input line 1746.
-LaTeX Info: Redefining \ttfamily on input line 1746.
+LaTeX Info: Redefining \rmfamily on input line 1751.
+LaTeX Info: Redefining \sffamily on input line 1751.
+LaTeX Info: Redefining \ttfamily on input line 1751.
  [48
 
 ]
 Chapter 9.
 [49]
-LaTeX Info: Redefining \rmfamily on input line 1754.
-LaTeX Info: Redefining \sffamily on input line 1754.
-LaTeX Info: Redefining \ttfamily on input line 1754.
+LaTeX Info: Redefining \rmfamily on input line 1759.
+LaTeX Info: Redefining \sffamily on input line 1759.
+LaTeX Info: Redefining \ttfamily on input line 1759.
  [50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1763--1764
+Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
 []\TU/FreeMono(0)/m/n/10 Self-Adjoint Operator \TU/FreeSerif(0)/m/n/10 (\TU/Fre
 eSerif(0)/m/it/10 ch/quantum-
  []
@@ -1893,18 +1893,18 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1774.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1774.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1779.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1779.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1774.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1774.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1779.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1779.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: A450C466A7D5E8BCFEEE11775B673B04;3963.
+(rerunfilecheck)             Checksum: 3069F2801635C0F26F8ABBEE10948EE0;3962.
 
 
 LaTeX Warning: There were undefined references.
@@ -1912,7 +1912,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  42132 strings out of 481789
- 949181 string characters out of 5937152
+ 949180 string characters out of 5937152
  1632965 words of memory out of 5000000
  58314 multiletter control sequences out of 15000+600000
  540112 words of font info for 122 fonts, out of 8000000 for 9000

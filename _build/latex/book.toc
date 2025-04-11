@@ -47,7 +47,7 @@
 \contentsline {paragraph}{Interaction}{46}{paragraph*.16}%
 \contentsline {subsection}{\numberline {8.3.3}Matrix Mechanics}{46}{subsection.8.3.3}%
 \contentsline {subsubsection}{Attualization of 1925 papers}{46}{subsubsection*.17}%
-\contentsline {subsection}{\numberline {8.3.4}Heisenberg Uncertainty “principle”}{46}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.4}Heisenberg Uncertainty relation}{46}{subsection.8.3.4}%
 \contentsline {section}{\numberline {8.4}Many\sphinxhyphen {}body problem}{47}{section.8.4}%
 \contentsline {chapter}{\numberline {9}Quantum Mechanics \sphinxhyphen {} Notes}{49}{chapter.9}%
 \contentsline {chapter}{Proof Index}{51}{section*.18}%
