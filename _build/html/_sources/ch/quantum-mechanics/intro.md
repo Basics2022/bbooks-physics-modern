@@ -382,6 +382,7 @@ $$\left[ \hat{\mathbf{r}}, \hat{\mathbf{p}} \right] = i \hbar \mathbb{I} \hat{\m
 $$\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . $$
 
 
+(quantum-mechanics:heisenber-uncertainty-relation)=
 ### Heisenberg Uncertainty relation
 
 Uncertainty principle is a relation that holds for "wave descriptions" as it can be proved in the generic framework of [Fourier transform](https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html), see [Fourier transform:Uncertainty relation](https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html#uncertainty-relation).
