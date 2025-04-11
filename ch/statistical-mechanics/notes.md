@@ -102,7 +102,6 @@ Planck's law uses:
 
   $$E_m = m h f \quad , \quad m \in \mathbb{N} \ .$$
 
-
 Taking a cubic box with sides $L_x = L_y = L_z = L$, the possibile modes have (**todo** *why? Which boundary condition? Periodic? Some physical? Just fictitious discretization?*) in each direction wave-lengths $\lambda_n = \frac{L}{|\vec{n}|} = \frac{2 \pi}{|\vec{k}|}$,
 
 $$\vec{k} = \frac{2 \pi}{L} \vec{n} \ .$$
@@ -165,7 +164,6 @@ $$\begin{aligned}
 
 ```
 
-
 ```{dropdown} Property of the series
 :open:
 
@@ -180,11 +178,11 @@ $$x \frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^n = \frac{
 ```
 
 
-**Sperctral radiance**, $B_{f}$, so that an infinitesiaml amount of power radiated by a surface ... is $d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f$
+**Sperctral radiance**, $B_{f}$, so that an infinitesimal amount of power radiated by a surface ... is $d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f$
 
 $$B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .$$
 
-This expression is obtained[^nano-hub] assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole - so factor $\frac{1}{2}$ in front of the energy density - through a solid angle $2 \pi$ - and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor $\frac{1}{4 \pi}$. The flux of energy "has velocity" $c$ and thus
+This expression is obtained[^nano-hub-planck] assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole - so factor $\frac{1}{2}$ in front of the energy density - through a solid angle $2 \pi$ - and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor $\frac{1}{4 \pi}$. The flux of energy "has velocity" $c$ and thus
 
 $$B_{f}(f, T) = \frac{1}{4 \pi} u_{f}(f,T) c \ .$$
 
@@ -216,7 +214,7 @@ $$f^* = \frac{k_B T}{h} x^* \simeq 2.82 \frac{k_B}{h} T \ .$$
 $$\begin{aligned}
   \frac{P}{A} 
   & = \int B_{f}(f,T) \cos \phi \, df \, d\Omega = \\
-  & = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
+  & = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{\pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
   & = \pi \int_{f=0}^{+\infty} B_{f}(f,T) \, d f = \\
   & = \frac{2 \pi h}{c^2} \int_{f=0}^{+\infty} \frac{f^3}{e^{\frac{hf}{k_B T}} - 1} \, d f = \\
   & = \frac{2 \pi h}{c^2} \left( \frac{k_B T}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u - 1} \, d u \ .

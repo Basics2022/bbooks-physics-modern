@@ -390,6 +390,8 @@ $$\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . $$
 $$\sigma_A \sigma_B \ge \frac{1}{2} \left|\overline{[\hat{A}, \hat{B}]}\right| \ .$$
 
 ```{dropdown} Proof of Heisenberg uncertainty "principle"
+:open:
+
 $$\begin{aligned}
  \sigma^2_A \sigma^2_B
  & = \langle \Psi | \left(\hat{A} - \bar{A} \right)^2 | \Psi \rangle\langle \Psi | \left(\hat{B} - \bar{B} \right)^2 | \Psi \rangle = \\
@@ -398,14 +400,18 @@ $$\begin{aligned}
  & \ge \left| \langle ( \hat{A} - \bar{A} ) \Psi | ( \hat{B} - \bar{B} ) \Psi  \rangle \right|^2 = \\
  & = \left| \langle \Psi | (\hat{A} - \bar{A})(\hat{B} - \bar{B}) \Psi \rangle \right|^2 = \\
  & = \left| \langle \Psi | \hat{A}\hat{B} - \hat{A}\bar{B} - \bar{A}\hat{B} + \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
- & = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ & = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 \ge && \text{(1)} \\
  & = \left| \frac{\langle \Psi | \hat{A}\hat{B} - \hat{B}\hat{A} | \Psi \rangle}{2i} \right|^2 = \\
  & = \frac{ \left|\langle \Psi | [\hat{A}, \hat{B}] | \Psi \rangle \right|^2}{4} = \frac{1}{4} \left| \overline{[\hat{A}, \hat{B}]} \right|^2
 \end{aligned}$$
 
-having used Cauchy triangle inequality and 
+having used Cauchy-Schwartz triangle inequality in (1),
 
+$$|z| \ge | \text{im}(z) | = \frac{z - z^*}{2 i} \ .$$
+
+<!--
 $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}$$
+-->
 
 ```
 

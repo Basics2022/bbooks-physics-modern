@@ -28,26 +28,26 @@
 \contentsline {subsection}{\numberline {6.5.2}Bose\sphinxhyphen {}Einstein}{26}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Fermi\sphinxhyphen {}Dirac}{30}{subsection.6.5.3}%
 \contentsline {chapter}{\numberline {7}Statistical Physics \sphinxhyphen {} Statistics Miscellanea}{33}{chapter.7}%
-\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{35}{part.4}%
-\contentsline {chapter}{\numberline {8}Quantum Mechanics}{37}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Mathematical tools for quantum mechanics}{37}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Postulates of Quantum Mechanics}{38}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Non\sphinxhyphen {}relativistic Mechanics}{38}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Statistical Interpretation and Measurement}{38}{subsection.8.3.1}%
-\contentsline {subsubsection}{Wave function}{38}{subsubsection*.6}%
-\contentsline {subsubsection}{Operators and Observables}{38}{subsubsection*.7}%
-\contentsline {subsubsection}{Space Representation}{39}{subsubsection*.8}%
-\contentsline {subsubsection}{Momentum Representation}{40}{subsubsection*.9}%
-\contentsline {subsubsection}{From position to momentum representation}{41}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {8.3.2}Schrodinger Equation}{41}{subsection.8.3.2}%
-\contentsline {subsubsection}{Stationary States}{42}{subsubsection*.11}%
-\contentsline {subsubsection}{Pictures}{42}{subsubsection*.12}%
-\contentsline {paragraph}{Schrodinger}{42}{paragraph*.13}%
-\contentsline {paragraph}{Heisenberg}{43}{paragraph*.14}%
-\contentsline {paragraph}{Interaction}{44}{paragraph*.15}%
-\contentsline {subsection}{\numberline {8.3.3}Matrix Mechanics}{44}{subsection.8.3.3}%
-\contentsline {subsubsection}{Attualization of 1925 papers}{44}{subsubsection*.16}%
-\contentsline {subsection}{\numberline {8.3.4}Heisenberg Uncertainty “principle”}{44}{subsection.8.3.4}%
-\contentsline {section}{\numberline {8.4}Many\sphinxhyphen {}body problem}{45}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Quantum Mechanics \sphinxhyphen {} Notes}{47}{chapter.9}%
-\contentsline {chapter}{Proof Index}{49}{section*.17}%
+\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{37}{part.4}%
+\contentsline {chapter}{\numberline {8}Quantum Mechanics}{39}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Mathematical tools for quantum mechanics}{39}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Postulates of Quantum Mechanics}{40}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Non\sphinxhyphen {}relativistic Mechanics}{40}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Statistical Interpretation and Measurement}{40}{subsection.8.3.1}%
+\contentsline {subsubsection}{Wave function}{40}{subsubsection*.7}%
+\contentsline {subsubsection}{Operators and Observables}{40}{subsubsection*.8}%
+\contentsline {subsubsection}{Space Representation}{41}{subsubsection*.9}%
+\contentsline {subsubsection}{Momentum Representation}{42}{subsubsection*.10}%
+\contentsline {subsubsection}{From position to momentum representation}{43}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {8.3.2}Schrodinger Equation}{43}{subsection.8.3.2}%
+\contentsline {subsubsection}{Stationary States}{44}{subsubsection*.12}%
+\contentsline {subsubsection}{Pictures}{44}{subsubsection*.13}%
+\contentsline {paragraph}{Schrodinger}{44}{paragraph*.14}%
+\contentsline {paragraph}{Heisenberg}{45}{paragraph*.15}%
+\contentsline {paragraph}{Interaction}{46}{paragraph*.16}%
+\contentsline {subsection}{\numberline {8.3.3}Matrix Mechanics}{46}{subsection.8.3.3}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{46}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {8.3.4}Heisenberg Uncertainty “principle”}{46}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Many\sphinxhyphen {}body problem}{47}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Quantum Mechanics \sphinxhyphen {} Notes}{49}{chapter.9}%
+\contentsline {chapter}{Proof Index}{51}{section*.18}%

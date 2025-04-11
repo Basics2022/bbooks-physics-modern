@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Mar 11, 2025}
+\date{Mar 12, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -941,12 +941,16 @@ Putting together the mode number density and the average energy of a mode, the e
 \begin{split}x \frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Sperctral radiance}, \(B_{f}\), so that an infinitesiaml amount of power radiated by a surface … is \(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)
+\sphinxstylestrong{Sperctral radiance}, \(B_{f}\), so that an infinitesimal amount of power radiated by a surface … is \(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)
 \begin{equation*}
 \begin{split}B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-This expression is obtained{[}\textasciicircum{}nano\sphinxhyphen{}hub{]} assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole \sphinxhyphen{} so factor \(\frac{1}{2}\) in front of the energy density \sphinxhyphen{} through a solid angle \(2 \pi\) \sphinxhyphen{} and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor \(\frac{1}{4 \pi}\). The flux of energy “has velocity” \(c\) and thus
+This expression is obtained%
+\begin{footnote}[1]\sphinxAtStartFootnote
+\sphinxhref{https://nanohub.org/wiki/DerivationofPlancksLaw}{Derivation of Planck’s Law}.
+%
+\end{footnote} assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole \sphinxhyphen{} so factor \(\frac{1}{2}\) in front of the energy density \sphinxhyphen{} through a solid angle \(2 \pi\) \sphinxhyphen{} and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor \(\frac{1}{4 \pi}\). The flux of energy “has velocity” \(c\) and thus
 \begin{equation*}
 \begin{split}B_{f}(f, T) = \frac{1}{4 \pi} u_{f}(f,T) c \ .\end{split}
 \end{equation*}
@@ -983,7 +987,7 @@ whose solution \(x^* \approx 2.82\) can be easily evaluated with an iterative me
 \begin{split}\begin{aligned}
   \frac{P}{A} 
   & = \int B_{f}(f,T) \cos \phi \, df \, d\Omega = \\
-  & = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
+  & = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{\pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
   & = \pi \int_{f=0}^{+\infty} B_{f}(f,T) \, d f = \\
   & = \frac{2 \pi h}{c^2} \int_{f=0}^{+\infty} \frac{f^3}{e^{\frac{hf}{k_B T}} - 1} \, d f = \\
   & = \frac{2 \pi h}{c^2} \left( \frac{k_B T}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u - 1} \, d u \ .
@@ -1057,6 +1061,10 @@ The average occupation of the \(G_k\) sublevels of the \(k\) level is
 \begin{equation*}
 \begin{split}n_k := \frac{N_k}{G_k} = \frac{1}{1 + e^{\alpha + \beta E_k}} \ .\end{split}
 \end{equation*}\subsubsection*{\sphinxstylestrong{Meaning of \protect\(\alpha\protect\), \protect\(\beta\protect\)}}
+
+
+\bigskip\hrule\bigskip
+
 
 \sphinxstepscope
 
@@ -1152,11 +1160,19 @@ First principle of classical thermodynamics (for a monocomponent gas with no ele
   & = - k_B \sum_i \left[ p_i \left( - \frac{\beta E_i}{k_B} - \ln Z \right) \right] = \\
   & = \beta \langle E \rangle + k_B \ln Z
 \end{aligned}\end{split}
-\end{equation*}\begin{equation*}
+\end{equation*}
+\sphinxAtStartPar
+From classical thermodyamics, temperature \(T\) can be defined as the partial derivative of the entropy of a system w.r.t. its internal energy keeping constant all the other independent variables,
+\begin{equation*}
 \begin{split}\begin{aligned}
   \frac{1}{T}
-  & = \left.\left( \dfrac{\partial S}{\partial E} \right)\right|_x = \\
+  & = \left.\left( \dfrac{\partial S}{\partial E} \right)\right|_X = \\
   & = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{\partial \ln Z}{\partial E} = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial E} = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial \beta} \frac{\partial \beta}{\partial E} = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \left( - \sum_i \frac{E_i}{k_B} e^{-\frac{\beta E_i}{k_B}} \right) \frac{\partial \beta}{\partial E} = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta - \left( \sum_i E_i p_i \right) \frac{\partial \beta}{\partial E} = \\
+  & = \dfrac{\partial \beta}{\partial E} E + \beta - E \frac{\partial \beta}{\partial E} = \beta \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -1171,7 +1187,9 @@ write the derivative above clearly in terms of composite functions
 microscopical/statistical approach to the first principle of thermodynamics
 
 \end{itemize}
-
+\begin{equation*}
+\begin{split}d E = d \left( \sum_i p_i E_i \right) = \sum_i E_i \, d p_i + \sum_i p_i d E_i\end{split}
+\end{equation*}
 \sphinxstepscope
 
 
