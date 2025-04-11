@@ -544,10 +544,10 @@ Property of the series<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[x \frac{d}{d x} \sum_{n=0}^{+\infty} x^n = \sum_{n=0}^{+\infty} n x^n = \frac{x}{(1-x)^2}\]</div>
 </div>
-</details><p><strong>Sperctral radiance</strong>, <span class="math notranslate nohighlight">\(B_{f}\)</span>, so that an infinitesiaml amount of power radiated by a surface … is <span class="math notranslate nohighlight">\(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)</span></p>
+</details><p><strong>Sperctral radiance</strong>, <span class="math notranslate nohighlight">\(B_{f}\)</span>, so that an infinitesimal amount of power radiated by a surface … is <span class="math notranslate nohighlight">\(d P = B_f(f,T) \cos \theta \, dA \, d\Omega \, d f\)</span></p>
 <div class="math notranslate nohighlight">
 \[B_{f}(f, T) = \frac{2 h f^3}{c^2}\frac{1}{e^{\frac{hf}{k_B T}} - 1} \ .\]</div>
-<p>This expression is obtained[^nano-hub] assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole - so factor <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> in front of the energy density - through a solid angle <span class="math notranslate nohighlight">\(2 \pi\)</span> - and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor <span class="math notranslate nohighlight">\(\frac{1}{4 \pi}\)</span>. The flux of energy “has velocity” <span class="math notranslate nohighlight">\(c\)</span> and thus</p>
+<p>This expression is obtained<a class="footnote-reference brackets" href="#nano-hub-planck" id="id4">1</a> assuming homogeneous radiation from a small hole cut into a wall of the box. Only half of the energy radiates through the hole - so factor <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> in front of the energy density - through a solid angle <span class="math notranslate nohighlight">\(2 \pi\)</span> - and thus this process give the same result as a radiation of all the energy density in all the space directions, just providing the same factor <span class="math notranslate nohighlight">\(\frac{1}{4 \pi}\)</span>. The flux of energy “has velocity” <span class="math notranslate nohighlight">\(c\)</span> and thus</p>
 <div class="math notranslate nohighlight">
 \[B_{f}(f, T) = \frac{1}{4 \pi} u_{f}(f,T) c \ .\]</div>
 <p><strong>Wien’s law.</strong> Wien’s law tells that the frequency <span class="math notranslate nohighlight">\(f^*\)</span> corresponding to the maximum of the spectral radiance of a black-body radiation described by Planck’s law is proportional to its temperature.</p>
@@ -572,7 +572,7 @@ Property of the series<div class="sd-summary-down docutils">
 \[\begin{split}\begin{aligned}
   \frac{P}{A} 
   &amp; = \int B_{f}(f,T) \cos \phi \, df \, d\Omega = \\
-  &amp; = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
+  &amp; = \int_{f=0}^{+\infty} \int_{\phi = 0}^{\frac{\pi}{2}} \int_{\theta=0}^{2\pi} B_{f}(f,T) \cos \phi \sin \phi \, df \, d\phi \, d \theta = \\
   &amp; = \pi \int_{f=0}^{+\infty} B_{f}(f,T) \, d f = \\
   &amp; = \frac{2 \pi h}{c^2} \int_{f=0}^{+\infty} \frac{f^3}{e^{\frac{hf}{k_B T}} - 1} \, d f = \\
   &amp; = \frac{2 \pi h}{c^2} \left( \frac{k_B T}{h} \right)^4 \int_{u=0}^{+\infty} \frac{u^3}{e^u - 1} \, d u \ .
@@ -646,7 +646,13 @@ Optimization<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 </div>
-</details></div>
+</details><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="nano-hub-planck"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p><a class="reference external" href="https://nanohub.org/wiki/DerivationofPlancksLaw">Derivation of Planck’s Law</a>.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 

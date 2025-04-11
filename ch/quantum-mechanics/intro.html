@@ -358,7 +358,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-principle">Heisenberg Uncertainty “principle”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">Many-body problem</a></li>
@@ -744,15 +744,16 @@ $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 \[\left[ \hat{r}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ . \]</div>
 </div>
 </div>
-<div class="section" id="heisenberg-uncertainty-principle">
-<h3>Heisenberg Uncertainty “principle”<a class="headerlink" href="#heisenberg-uncertainty-principle" title="Permalink to this heading">#</a></h3>
+<div class="section" id="heisenberg-uncertainty-relation">
+<h3>Heisenberg Uncertainty relation<a class="headerlink" href="#heisenberg-uncertainty-relation" title="Permalink to this heading">#</a></h3>
+<p>Uncertainty principle is a relation that holds for “wave descriptions” as it can be proved in the generic framework of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html">Fourier transform</a>, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html#uncertainty-relation">Fourier transform:Uncertainty relation</a>.</p>
 <ul class="simple">
-<li><p>Heisenberg uncertainty “principle” is a relation between product of variance of two physical quantities and their commutation,</p></li>
+<li><p>Heisenberg uncertainty relation is a relation between product of the variance of two physical quantities and their commutator,</p></li>
 <li><p><strong>todo</strong> <em>relation with measurement process and outcomes. Commutation as a measurement process: first measure <span class="math notranslate nohighlight">\(B\)</span> and then <span class="math notranslate nohighlight">\(A\)</span>, or first measure <span class="math notranslate nohighlight">\(A\)</span> and then <span class="math notranslate nohighlight">\(B\)</span></em></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\sigma_A \sigma_B \ge \frac{1}{2} \left|\overline{[\hat{A}, \hat{B}]}\right| \ .\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Proof of Heisenberg uncertainty “principle”<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -768,13 +769,16 @@ Proof of Heisenberg uncertainty “principle”<div class="sd-summary-down docut
  &amp; \ge \left| \langle ( \hat{A} - \bar{A} ) \Psi | ( \hat{B} - \bar{B} ) \Psi  \rangle \right|^2 = \\
  &amp; = \left| \langle \Psi | (\hat{A} - \bar{A})(\hat{B} - \bar{B}) \Psi \rangle \right|^2 = \\
  &amp; = \left| \langle \Psi | \hat{A}\hat{B} - \hat{A}\bar{B} - \bar{A}\hat{B} + \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
- &amp; = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 = \\
+ &amp; = \left| \langle \Psi | \hat{A}\hat{B} - \bar{A}\bar{B} | \Psi \rangle \right|^2 \ge &amp;&amp; \text{(1)} \\
  &amp; = \left| \frac{\langle \Psi | \hat{A}\hat{B} - \hat{B}\hat{A} | \Psi \rangle}{2i} \right|^2 = \\
  &amp; = \frac{ \left|\langle \Psi | [\hat{A}, \hat{B}] | \Psi \rangle \right|^2}{4} = \frac{1}{4} \left| \overline{[\hat{A}, \hat{B}]} \right|^2
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">having used Cauchy triangle inequality and</p>
+<p class="sd-card-text">having used Cauchy-Schwartz triangle inequality in (1),</p>
 <div class="math notranslate nohighlight">
-\[|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}\]</div>
+\[|z| \ge | \text{im}(z) | = \frac{z - z^*}{2 i} \ .\]</div>
+<!--
+$$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \text{im}\{z^*\}}{2i}$$
+-->
 </div>
 </details><p>Hesienberg uncertainty principles applied to position and momentum reads</p>
 <div class="math notranslate nohighlight">
@@ -875,7 +879,7 @@ Proof of Heisenberg uncertainty “principle”<div class="sd-summary-down docut
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-principle">Heisenberg Uncertainty “principle”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">Many-body problem</a></li>
