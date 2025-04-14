@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -402,7 +393,7 @@ document.write(`
 </div><div class="proof definition admonition" id="Adjoint Operator">
 <p class="admonition-title"><span class="caption-number">Definition 2 </span> (Adjoint operator)</p>
 <div class="definition-content section" id="proof-content">
-<p>Given an operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow V\)</span>, its self-adjoint <span class="math notranslate nohighlight">\(\hat{A}^*: V \rightarrow U\)</span> is the operator s.t.</p>
+<p>Given an operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow V\)</span>, its adjoint operator <span class="math notranslate nohighlight">\(\hat{A}^*: V \rightarrow U\)</span> is the operator s.t.</p>
 <div class="math notranslate nohighlight">
 \[(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}\]</div>
 <p>holds for <span class="math notranslate nohighlight">\(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\)</span>.</p>
@@ -410,7 +401,9 @@ document.write(`
 </div><div class="proof definition admonition" id="Self-Adjoint Operator">
 <span id="quantum-mechanics-math-operators-self-adjoint"></span><p class="admonition-title"><span class="caption-number">Definition 3 </span> (Hermitian (self-adjoint) operator)</p>
 <div class="definition-content section" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow U\)</span>, it is a self-adjoint operator if <span class="math notranslate nohighlight">\(\hat{A}^* = \hat{A}\)</span>.</p>
+<p>The operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow U\)</span> is a self-adjoint operator if</p>
+<div class="math notranslate nohighlight">
+\[\hat{A}^* = \hat{A} \ .\]</div>
 </div>
 </div><p>Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).</p>
 </div>
