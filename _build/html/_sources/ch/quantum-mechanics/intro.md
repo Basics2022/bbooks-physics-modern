@@ -15,7 +15,7 @@
 ```{prf:definition} Adjoint operator
 :label: Adjoint Operator
 
-Given an operator $\hat{A}: U \rightarrow V$, its self-adjoint $\hat{A}^*: V \rightarrow U$ is the operator s.t.
+Given an operator $\hat{A}: U \rightarrow V$, its adjoint operator $\hat{A}^*: V \rightarrow U$ is the operator s.t.
 
 $$(\mathbf{v}, \ \hat{A} \mathbf{u})_{V} = (\mathbf{u}, \hat{A}^* \mathbf{v} )_{U}$$
 
@@ -23,12 +23,18 @@ holds for $\forall \mathbf{u} \in U, \ \mathbf{v} \in V$.
 
 ```
 
+
+
 (quantum-mechanics:math:operators:self-adjoint)=
 ```{prf:definition} Hermitian (self-adjoint) operator
 :label: Self-Adjoint Operator
 
-If $\hat{A}: U \rightarrow U$, it is a self-adjoint operator if $\hat{A}^* = \hat{A}$.
+The operator $\hat{A}: U \rightarrow U$ is a self-adjoint operator if 
+
+$$\hat{A}^* = \hat{A} \ .$$
+
 ```
+
 Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  11 APR 2025 20:39
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  14 APR 2025 09:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1802,55 +1802,55 @@ Chapter 8.
 ]
 
 LaTeX Warning: Hyper reference `ch/quantum-mechanics/intro:quantum-mechanics-ma
-th-operators-self-adjoint' on page 40 undefined on input line 1301.
+th-operators-self-adjoint' on page 40 undefined on input line 1303.
 
-LaTeX Info: Redefining \rmfamily on input line 1347.
-LaTeX Info: Redefining \sffamily on input line 1347.
-LaTeX Info: Redefining \ttfamily on input line 1347.
+LaTeX Info: Redefining \rmfamily on input line 1349.
+LaTeX Info: Redefining \sffamily on input line 1349.
+LaTeX Info: Redefining \ttfamily on input line 1349.
 [40]
-LaTeX Info: Redefining \rmfamily on input line 1409.
-LaTeX Info: Redefining \sffamily on input line 1409.
-LaTeX Info: Redefining \ttfamily on input line 1409.
+LaTeX Info: Redefining \rmfamily on input line 1411.
+LaTeX Info: Redefining \sffamily on input line 1411.
+LaTeX Info: Redefining \ttfamily on input line 1411.
  [41]
-LaTeX Info: Redefining \rmfamily on input line 1468.
-LaTeX Info: Redefining \sffamily on input line 1468.
-LaTeX Info: Redefining \ttfamily on input line 1468.
+LaTeX Info: Redefining \rmfamily on input line 1470.
+LaTeX Info: Redefining \sffamily on input line 1470.
+LaTeX Info: Redefining \ttfamily on input line 1470.
  [42]
-LaTeX Info: Redefining \rmfamily on input line 1529.
-LaTeX Info: Redefining \sffamily on input line 1529.
-LaTeX Info: Redefining \ttfamily on input line 1529.
+LaTeX Info: Redefining \rmfamily on input line 1531.
+LaTeX Info: Redefining \sffamily on input line 1531.
+LaTeX Info: Redefining \ttfamily on input line 1531.
  [43]
-LaTeX Info: Redefining \rmfamily on input line 1596.
-LaTeX Info: Redefining \sffamily on input line 1596.
-LaTeX Info: Redefining \ttfamily on input line 1596.
+LaTeX Info: Redefining \rmfamily on input line 1598.
+LaTeX Info: Redefining \sffamily on input line 1598.
+LaTeX Info: Redefining \ttfamily on input line 1598.
  [44]
-LaTeX Info: Redefining \rmfamily on input line 1658.
-LaTeX Info: Redefining \sffamily on input line 1658.
-LaTeX Info: Redefining \ttfamily on input line 1658.
+LaTeX Info: Redefining \rmfamily on input line 1660.
+LaTeX Info: Redefining \sffamily on input line 1660.
+LaTeX Info: Redefining \ttfamily on input line 1660.
  [45]
-LaTeX Info: Redefining \rmfamily on input line 1715.
-LaTeX Info: Redefining \sffamily on input line 1715.
-LaTeX Info: Redefining \ttfamily on input line 1715.
+LaTeX Info: Redefining \rmfamily on input line 1717.
+LaTeX Info: Redefining \sffamily on input line 1717.
+LaTeX Info: Redefining \ttfamily on input line 1717.
  [46]
-LaTeX Info: Redefining \rmfamily on input line 1751.
-LaTeX Info: Redefining \sffamily on input line 1751.
-LaTeX Info: Redefining \ttfamily on input line 1751.
+LaTeX Info: Redefining \rmfamily on input line 1753.
+LaTeX Info: Redefining \sffamily on input line 1753.
+LaTeX Info: Redefining \ttfamily on input line 1753.
  [47]
-LaTeX Info: Redefining \rmfamily on input line 1751.
-LaTeX Info: Redefining \sffamily on input line 1751.
-LaTeX Info: Redefining \ttfamily on input line 1751.
+LaTeX Info: Redefining \rmfamily on input line 1753.
+LaTeX Info: Redefining \sffamily on input line 1753.
+LaTeX Info: Redefining \ttfamily on input line 1753.
  [48
 
 ]
 Chapter 9.
 [49]
-LaTeX Info: Redefining \rmfamily on input line 1759.
-LaTeX Info: Redefining \sffamily on input line 1759.
-LaTeX Info: Redefining \ttfamily on input line 1759.
+LaTeX Info: Redefining \rmfamily on input line 1761.
+LaTeX Info: Redefining \sffamily on input line 1761.
+LaTeX Info: Redefining \ttfamily on input line 1761.
  [50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
+Underfull \hbox (badness 10000) in paragraph at lines 1770--1771
 []\TU/FreeMono(0)/m/n/10 Self-Adjoint Operator \TU/FreeSerif(0)/m/n/10 (\TU/Fre
 eSerif(0)/m/it/10 ch/quantum-
  []
@@ -1893,15 +1893,15 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1779.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1779.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1781.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1781.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1779.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1779.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1781.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1781.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 3069F2801635C0F26F8ABBEE10948EE0;3962.
