@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Relativity &#8212; Modern Physics</title>
+    <title>1. Special Relativity &#8212; Modern Physics</title>
   
   
   
@@ -64,11 +64,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special/intro';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Special Relativity - Notes" href="notes.html" />
+    <link rel="next" title="2. Special Relativity - Notes" href="notes.html" />
     <link rel="prev" title="Modern physics" href="../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -80,15 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-X6MNXBVGKF');
-</script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
 </script>
 
   
@@ -183,24 +176,25 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Special Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">Special Relativity - Notes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">General Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">General Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">4. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">5. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">6. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">7. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">8. Statistical Physics - Statistics Miscellanea</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">9. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">10. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -352,13 +346,27 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="special-relativity">
-<span id="relativity-special"></span><h1>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
+<span id="relativity-special"></span><h1><span class="section-number">1. </span>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
+<p><strong>Principles.</strong> (1) invariant nature of physical laws, (2) <span class="math notranslate nohighlight">\(c\)</span> as the maximum speed of propagation of information in space. Every inertial observer measures the same speed of light.</p>
+<p><strong>Lorentz’s transformation</strong> as a special coordinate transformations for space-time description as seen by two inertial observers in relative motion with uniform velocity. Physical laws governing a physical process have the same expressions if seen by two inertial observers. In a homogeneous time-space the expression of equations of physics doesn’t depend on translation of origin of time-space coordinates; in a isotropic space the expression of equations of physics doesn’t depend on rotations space rotation; as two inertial observers may write the same expressions of the physical equations using their own coordinates, the expression of equations of physics doesn’t depend on Lorentz’s transformations.</p>
 <ul class="simple">
-<li><p>Electromagnetism and the need for new relativity</p></li>
-<li><p>Space-time, Lorentz transformations,…</p></li>
-<li><p>Mechanics: kinematics, dynamics,…</p></li>
-<li><p>Electromagnetism: Maxwell’s equations, potentials, Lorentz force, energy balance</p></li>
+<li><p>standard configuration</p></li>
+<li><p>composition of transformations and general Lorentz’s transformation</p></li>
 </ul>
+<p><strong>Some consequences and examples</strong>:</p>
+<ul class="simple">
+<li><p><strong>Finite speed of propagation and loss of simultaneity.</strong></p></li>
+<li><p><strong>Speed of light and causality.</strong> Causality follows from the principle that <span class="math notranslate nohighlight">\(c\)</span> is the maximum speed of information: all the observers perceive causes before consequences.</p></li>
+<li><p><strong>Length contraction and time dilation</strong></p></li>
+</ul>
+<p><strong>Mechanics.</strong> Point kinematics: 4-velocity and 4-acceleration; dynamics of free particle: 4-momentum, energy-momentum relation, rest energy; dynamics of particles in external force filed: which field? For particles in EM field, Lorentz’s force; Lagrangian approach</p>
+<p><strong>Electromagnetism.</strong> Special relativity and equations of electromagnetism. From classical electromagnetism to electromagnetism in special relativity theory; EM potentials, gauge condition, 4-current and EM field tensor; EM field equations; motion of a point charge in an EM field; energy balance equations. Relativity of electromagnetism: low-speed relativity for classical electromagnetism. Lagrangian approach for the equations of motion of charges in an EM field, and for the EM field equations.</p>
+<!--
+- Electromagnetism and the need for new relativity
+- Space-time, Lorentz transformations,...
+- Mechanics: kinematics, dynamics,...
+- Electromagnetism: Maxwell's equations, potentials, Lorentz force, energy balance
+-->
 </div>
 
     <script type="text/x-thebe-config">
@@ -405,7 +413,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Special Relativity - Notes</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Special Relativity - Notes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

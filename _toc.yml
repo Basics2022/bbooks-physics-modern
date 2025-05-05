@@ -3,21 +3,28 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
 parts:
 - caption: Special Relativity
+  numbered: True
   chapters:
   - file: ch/relativity-special/intro
   - file: ch/relativity-special/notes
+  - file: ch/relativity-special/lorentz
 - caption: General Relativity
+  numbered: True
   chapters:
   - file: ch/relativity-general/intro
   - file: ch/relativity-general/notes
 - caption: Statistical Mechanics
+  numbered: True
   chapters:
   - file: ch/statistical-mechanics/intro
   - file: ch/statistical-mechanics/notes
   - file: ch/statistical-mechanics/statistics
 - caption: Quantum Mechanics
+  numbered: True
   chapters:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes

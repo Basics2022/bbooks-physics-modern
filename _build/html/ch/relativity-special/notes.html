@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Relativity - Notes &#8212; Modern Physics</title>
+    <title>2. Special Relativity - Notes &#8212; Modern Physics</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="General Relativity" href="../relativity-general/intro.html" />
-    <link rel="prev" title="Special Relativity" href="intro.html" />
+    <link rel="next" title="3. Inertial reference frames and Lorentz’s transformations" href="lorentz.html" />
+    <link rel="prev" title="1. Special Relativity" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -82,15 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-X6MNXBVGKF');
-</script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
 </script>
 
   
@@ -185,24 +176,25 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Special Relativity</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">General Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">General Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">4. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">5. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">6. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">7. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">8. Statistical Physics - Statistics Miscellanea</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">9. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">10. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -351,21 +343,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">Dynamics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">Lagrangian approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">2.1. Dynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">2.1.1. Lagrangian approach</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">Electromagnetism</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">Maxwell equations</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">Electromagnetic potentials</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">2.2. Electromagnetism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">2.2.1. Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">2.2.1.1. Maxwell equations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">2.2.1.2. Electromagnetic potentials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">2.2.1.3. Lorentz force</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">Electromagnetic potential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">Electromagnetic field and electromagnetic field equations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">2.2.2. Electromagnetic potential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">2.2.3. Electromagnetic field and electromagnetic field equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">2.2.4. Point particle in electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">2.2.5. Energy balance</a></li>
 </ul>
 </li>
 </ul>
@@ -380,14 +372,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="special-relativity-notes">
-<span id="relativity-special-notes"></span><h1>Special Relativity - Notes<a class="headerlink" href="#special-relativity-notes" title="Permalink to this heading">#</a></h1>
+<span id="relativity-special-notes"></span><h1><span class="section-number">2. </span>Special Relativity - Notes<a class="headerlink" href="#special-relativity-notes" title="Permalink to this heading">#</a></h1>
 <p>An event is determined by spatio-temporal information together, <span class="math notranslate nohighlight">\(t, \vec{r}\)</span>. Absolute nature of physics needs vector algebra and calculus formalism</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{X} = c  \,t  \,\mathbf{e}_0 + \vec{r} =  c \, t \, \mathbf{e}_0 + x^1 \mathbf{e}_1 + x^2 \mathbf{e}_2 + x^3 \mathbf{e}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,\]</div>
 <p>having used Cartesian coordiantes for the space coordinate.</p>
 <p>Minkowski metric reads</p>
 <div class="math notranslate nohighlight">
-\[g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{-1, 1, 1, 1\}\]</div>
+\[g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{1, -1, -1, -1\}\]</div>
 <p>The reciprocal basis reads <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha} \cdot \mathbf{E}^{\beta} = \delta_{\alpha}^{\beta}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha} = g_{\alpha \beta} \mathbf{E}^{\beta}\)</span>, s.t. the elementary interval between two events can be written as</p>
 <div class="math notranslate nohighlight">
 \[d \mathbf{X} = d X^{\alpha} \, \mathbf{E}_{\alpha} = \underbrace{d X^{\alpha} \, g_{\alpha \beta}}_{= dX_{\beta}} \, \mathbf{E}^{\beta} = d X_{\beta} \, \mathbf{E}^{\beta} \ ,\]</div>
@@ -432,7 +424,7 @@ document.write(`
 </div>
 <p><strong>4-acceleration</strong> <span class="math notranslate nohighlight">\(\mathbf{X}''(\tau)\)</span> or <span class="math notranslate nohighlight">\(\mathbf{X}''(s)\)</span>, <strong>todo</strong></p>
 <div class="section" id="dynamics">
-<h2>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h2>
 <p><strong>4-momentum</strong></p>
 <div class="math notranslate nohighlight">
 \[\mathbf{P} = m \mathbf{U}\]</div>
@@ -475,7 +467,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[E = m c^2 \ .\]</div>
 <div class="section" id="lagrangian-approach">
-<h3>Lagrangian approach<a class="headerlink" href="#lagrangian-approach" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.1.1. </span>Lagrangian approach<a class="headerlink" href="#lagrangian-approach" title="Permalink to this heading">#</a></h3>
 <p><strong>Free particle.</strong></p>
 <div class="math notranslate nohighlight">
 \[\mathbf{0} = \frac{d \mathbf{P}}{d s} = \frac{d }{d s} \left( m \mathbf{X}'(s) \right)\]</div>
@@ -542,11 +534,11 @@ document.write(`
 </div>
 </div>
 <div class="section" id="electromagnetism">
-<h2>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.2. </span>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h2>
 <div class="section" id="classical-electromagnetic-theory">
-<h3>Classical electromagnetic theory<a class="headerlink" href="#classical-electromagnetic-theory" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1. </span>Classical electromagnetic theory<a class="headerlink" href="#classical-electromagnetic-theory" title="Permalink to this heading">#</a></h3>
 <div class="section" id="maxwell-equations">
-<h4>Maxwell equations<a class="headerlink" href="#maxwell-equations" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">2.2.1.1. </span>Maxwell equations<a class="headerlink" href="#maxwell-equations" title="Permalink to this heading">#</a></h4>
 <p>Maxwell equations read</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -565,7 +557,7 @@ document.write(`
 \end{cases}\end{split}\]</div>
 </div>
 <div class="section" id="electromagnetic-potentials">
-<h4>Electromagnetic potentials<a class="headerlink" href="#electromagnetic-potentials" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">2.2.1.2. </span>Electromagnetic potentials<a class="headerlink" href="#electromagnetic-potentials" title="Permalink to this heading">#</a></h4>
 <p>The electromagnetic field can be written in terms of the electromagnetic potentials</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -574,7 +566,7 @@ document.write(`
 \end{cases}\end{split}\]</div>
 </div>
 <div class="section" id="lorentz-force">
-<h4>Lorentz force<a class="headerlink" href="#lorentz-force" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">2.2.1.3. </span>Lorentz force<a class="headerlink" href="#lorentz-force" title="Permalink to this heading">#</a></h4>
 <p>A particle in motion in a electromagnetic field is subject to Lorentz force. In classical electromagnetism, the expression of Lorentz force reads</p>
 <div class="math notranslate nohighlight">
 \[\vec{F} = q \left( \vec{e} - \vec{b} \times \vec{v} \right) \ ,\]</div>
@@ -584,7 +576,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="electromagnetic-potential">
-<h3>Electromagnetic potential<a class="headerlink" href="#electromagnetic-potential" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.2. </span>Electromagnetic potential<a class="headerlink" href="#electromagnetic-potential" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
  \vec{b} = \nabla \times \vec{a} \\
@@ -643,7 +635,7 @@ F_{\alpha \beta} =
 \end{split}\]</div>
 </div>
 <div class="section" id="electromagnetic-field-and-electromagnetic-field-equations">
-<h3>Electromagnetic field and electromagnetic field equations<a class="headerlink" href="#electromagnetic-field-and-electromagnetic-field-equations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.3. </span>Electromagnetic field and electromagnetic field equations<a class="headerlink" href="#electromagnetic-field-and-electromagnetic-field-equations" title="Permalink to this heading">#</a></h3>
 <p>The pair of Maxwell equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -676,8 +668,8 @@ F_{\alpha \beta} =
                   c d_y &amp;    h_z &amp;       0 &amp; -   h_x \\
                   c d_z &amp; -  h_y &amp;     h_x &amp;       0 \\
   \end{bmatrix} =
-  \begin{bmatrix} 0 &amp; - c \underline{d}^T \\ c \underline{d} &amp; \underline{h}_{\times} \ .
-  \end{bmatrix}
+  \begin{bmatrix} 0 &amp; - c \underline{d}^T \\ c \underline{d} &amp; \underline{h}_{\times}
+  \end{bmatrix} \ .
 \end{split}\]</div>
 <!--
 $$\begin{aligned}
@@ -707,7 +699,7 @@ $$\begin{aligned}
 <ul>
 <li><p>If 2 indices are the same, the corresponding equation is the identity <span class="math notranslate nohighlight">\(0 = 0\)</span>. As an example, if <span class="math notranslate nohighlight">\(\mu = \eta\)</span></p>
 <div class="math notranslate nohighlight">
-\[0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , \]</div>
+\[0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu \xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , \]</div>
 <p>thus only combinations with different indices may provide some information.</p>
 </li>
 <li><p>Given the ordered set of indices <span class="math notranslate nohighlight">\((\mu, \eta, \xi)\)</span>, switching a pair of indices provides the same equation. As an example, switching <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span></p>
@@ -743,7 +735,7 @@ $$\begin{aligned}
 </ul>
 </div>
 <div class="section" id="point-particle-in-electromagnetic-field">
-<h3>Point particle in electromagnetic field<a class="headerlink" href="#point-particle-in-electromagnetic-field" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.4. </span>Point particle in electromagnetic field<a class="headerlink" href="#point-particle-in-electromagnetic-field" title="Permalink to this heading">#</a></h3>
 <p>Lorentz 4-force acting on a point charge of electric charge charge <span class="math notranslate nohighlight">\(q\)</span> reads</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{f} = \mathbf{F} \cdot \mathbf{J} = q \, \mathbf{F} \cdot \mathbf{U} \ .\]</div>
@@ -752,7 +744,7 @@ $$\begin{aligned}
 \[m \, \mathbf{X}'' = q \, \mathbf{F} \cdot \mathbf{X}'\]</div>
 </div>
 <div class="section" id="energy-balance">
-<h3>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.5. </span>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \frac{\partial u      }{\partial t} &amp; = \\
@@ -801,15 +793,15 @@ $$\begin{aligned}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Special Relativity</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Special Relativity</p>
       </div>
     </a>
     <a class="right-next"
-       href="../relativity-general/intro.html"
+       href="lorentz.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">General Relativity</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Inertial reference frames and Lorentz’s transformations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -828,21 +820,21 @@ $$\begin{aligned}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">Dynamics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">Lagrangian approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics">2.1. Dynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">2.1.1. Lagrangian approach</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">Electromagnetism</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">Maxwell equations</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">Electromagnetic potentials</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">Lorentz force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">2.2. Electromagnetism</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-electromagnetic-theory">2.2.1. Classical electromagnetic theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-equations">2.2.1.1. Maxwell equations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potentials">2.2.1.2. Electromagnetic potentials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force">2.2.1.3. Lorentz force</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">Electromagnetic potential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">Electromagnetic field and electromagnetic field equations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">Point particle in electromagnetic field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-potential">2.2.2. Electromagnetic potential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-field-and-electromagnetic-field-equations">2.2.3. Electromagnetic field and electromagnetic field equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#point-particle-in-electromagnetic-field">2.2.4. Point particle in electromagnetic field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">2.2.5. Energy balance</a></li>
 </ul>
 </li>
 </ul>

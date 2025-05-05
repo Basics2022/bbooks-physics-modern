@@ -9,7 +9,7 @@ having used Cartesian coordiantes for the space coordinate.
 
 Minkowski metric reads
 
-$$g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{-1, 1, 1, 1\}$$
+$$g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{1, -1, -1, -1\}$$
 
 The reciprocal basis reads $\mathbf{E}_{\alpha} \cdot \mathbf{E}^{\beta} = \delta_{\alpha}^{\beta}$, $\mathbf{E}_{\alpha} = g_{\alpha \beta} \mathbf{E}^{\beta}$, s.t. the elementary interval between two events can be written as
 
@@ -341,8 +341,8 @@ $$D^{\alpha \beta} =
                   c d_y &    h_z &       0 & -   h_x \\
                   c d_z & -  h_y &     h_x &       0 \\
   \end{bmatrix} =
-  \begin{bmatrix} 0 & - c \underline{d}^T \\ c \underline{d} & \underline{h}_{\times} \ .
-  \end{bmatrix}
+  \begin{bmatrix} 0 & - c \underline{d}^T \\ c \underline{d} & \underline{h}_{\times}
+  \end{bmatrix} \ .
 $$
 
 
@@ -376,7 +376,7 @@ $$0 = \partial_{\mu} F_{\eta \xi} + \partial_{\eta} F_{\xi \mu} + \partial_{\xi}
 Among these $64 = 4^3$ equations, there are only 4 independent equations.
 - If 2 indices are the same, the corresponding equation is the identity $0 = 0$. As an example, if $\mu = \eta$
 
-   $$0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , $$
+   $$0 =  \partial_{\mu} F_{\mu \xi} + \partial_{\mu} \underbrace{F_{\xi \mu}}_{-F_{\mu \xi}} + \partial_{\xi} \underbrace{F_{\mu \mu}}_{=0} = 0 \ , $$
 
    thus only combinations with different indices may provide some information.
 

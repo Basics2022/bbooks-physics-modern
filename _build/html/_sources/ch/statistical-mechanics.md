@@ -1,3 +1,0 @@
-(statistical-mechanics)=
-# Statistical Physics
-
