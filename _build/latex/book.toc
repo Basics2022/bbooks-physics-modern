@@ -1,0 +1,59 @@
+\selectlanguage *{english}
+\contentsline {part}{I\hspace {1em}Special Relativity}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Special Relativity}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Special Relativity \sphinxhyphen {} Notes}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Dynamics}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Lagrangian approach}{9}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Electromagnetism}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Classical electromagnetic theory}{11}{subsection.2.2.1}%
+\contentsline {subsubsection}{Maxwell equations}{11}{subsubsection*.3}%
+\contentsline {subsubsection}{Electromagnetic potentials}{11}{subsubsection*.4}%
+\contentsline {subsubsection}{Lorentz force}{11}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {2.2.2}Electromagnetic potential}{11}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Electromagnetic field and electromagnetic field equations}{12}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Point particle in electromagnetic field}{13}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Energy balance}{14}{subsection.2.2.5}%
+\contentsline {chapter}{\numberline {3}Inertial reference frames and Lorentz’s transformations}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lorentz’s transformations}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Lorentz’s transformations in standard configuration}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Lorentz’s transformation in general configuration}{16}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Transformation of vector components and vectors of the bases}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Transformation of tensor components}{17}{section.3.3}%
+\contentsline {part}{II\hspace {1em}General Relativity}{21}{part.2}%
+\contentsline {chapter}{\numberline {4}General Relativity}{23}{chapter.4}%
+\contentsline {chapter}{\numberline {5}General Relativity \sphinxhyphen {} Notes}{25}{chapter.5}%
+\contentsline {part}{III\hspace {1em}Statistical Mechanics}{27}{part.3}%
+\contentsline {chapter}{\numberline {6}Statistical Physics}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Statistical Physics \sphinxhyphen {} Notes}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ensembles}{31}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Microcanonical ensemble}{31}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Canonical ensemble}{31}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Macrocanonical esemble}{31}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Statistics}{31}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Maxwell\sphinxhyphen {}Boltzmann}{32}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Bose\sphinxhyphen {}Einstein}{32}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Fermi\sphinxhyphen {}Dirac}{36}{subsection.7.5.3}%
+\contentsline {chapter}{\numberline {8}Statistical Physics \sphinxhyphen {} Statistics Miscellanea}{39}{chapter.8}%
+\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{43}{part.4}%
+\contentsline {chapter}{\numberline {9}Quantum Mechanics}{45}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mathematical tools for quantum mechanics}{45}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Postulates of Quantum Mechanics}{46}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Non\sphinxhyphen {}relativistic Mechanics}{46}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Statistical Interpretation and Measurement}{46}{subsection.9.3.1}%
+\contentsline {subsubsection}{Wave function}{46}{subsubsection*.7}%
+\contentsline {subsubsection}{Operators and Observables}{46}{subsubsection*.8}%
+\contentsline {subsubsection}{Space Representation}{47}{subsubsection*.9}%
+\contentsline {subsubsection}{Momentum Representation}{48}{subsubsection*.10}%
+\contentsline {subsubsection}{From position to momentum representation}{49}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {9.3.2}Schrodinger Equation}{49}{subsection.9.3.2}%
+\contentsline {subsubsection}{Stationary States}{50}{subsubsection*.12}%
+\contentsline {subsubsection}{Pictures}{50}{subsubsection*.13}%
+\contentsline {paragraph}{Schrodinger}{50}{paragraph*.14}%
+\contentsline {paragraph}{Heisenberg}{51}{paragraph*.15}%
+\contentsline {paragraph}{Interaction}{52}{paragraph*.16}%
+\contentsline {subsection}{\numberline {9.3.3}Matrix Mechanics}{52}{subsection.9.3.3}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{52}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {9.3.4}Heisenberg Uncertainty relation}{52}{subsection.9.3.4}%
+\contentsline {section}{\numberline {9.4}Many\sphinxhyphen {}body problem}{53}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Quantum Mechanics \sphinxhyphen {} Notes}{55}{chapter.10}%
+\contentsline {chapter}{Proof Index}{57}{section*.18}%
