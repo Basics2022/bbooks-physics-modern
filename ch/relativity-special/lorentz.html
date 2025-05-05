@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Inertial reference frames and Lorentz’s transformations &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special/lorentz';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. General Relativity" href="../relativity-general/intro.html" />
+    <link rel="prev" title="2. Special Relativity - Notes" href="notes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X6MNXBVGKF');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Inertial reference frames and Lorentz’s transformations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">4. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">5. General Relativity - Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">6. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">7. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">8. Statistical Physics - Statistics Miscellanea</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">9. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">10. Quantum Mechanics - Notes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ch/relativity-special/lorentz.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Inertial reference frames and Lorentz’s transformations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformations">3.1. Lorentz’s transformations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformations-in-standard-configuration">3.1.1. Lorentz’s transformations in standard configuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformation-in-general-configuration">3.1.2. Lorentz’s transformation in general configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-of-vector-components-and-vectors-of-the-bases">3.2. Transformation of vector components and vectors of the bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-of-tensor-components">3.3. Transformation of tensor components</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="inertial-reference-frames-and-lorentz-s-transformations">
+<span id="relativity-special-lorentz"></span><h1><span class="section-number">3. </span>Inertial reference frames and Lorentz’s transformations<a class="headerlink" href="#inertial-reference-frames-and-lorentz-s-transformations" title="Permalink to this heading">#</a></h1>
+<p>Equations of physics as seen by inertial reference frames (<strong>todo</strong> <em>but what’s an inertial reference frame?</em>) have the same expressions. Change of observer can be related to change of coordinates (and choice of basis vectors, in special relativity) used to describe a physical phenomenon, that is invariant to this change for its very nature: reality doesn’t change if observed from different point of view (if observations don’t interact with reality itself, at least). Proper mathematical tools for dealing with invariance are vectors and tensors in general.</p>
+<p>Using 2 different sets of coordinates associated with constant and uniform basis vectors <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{E}'_{\beta}\)</span> a vector can be written as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{V} = V^{\alpha} \mathbf{E}_{\alpha} = V^{'\beta} \mathbf{E}'_{\beta} \ . \]</div>
+<p>Lorentz transformation describe the change of description between two inertial reference frames.</p>
+<div class="section" id="lorentz-s-transformations">
+<span id="relativity-special-lorentz-transformation"></span><h2><span class="section-number">3.1. </span>Lorentz’s transformations<a class="headerlink" href="#lorentz-s-transformations" title="Permalink to this heading">#</a></h2>
+<div class="section" id="lorentz-s-transformations-in-standard-configuration">
+<span id="relativity-special-lorentz-transformation-std"></span><h3><span class="section-number">3.1.1. </span>Lorentz’s transformations in standard configuration<a class="headerlink" href="#lorentz-s-transformations-in-standard-configuration" title="Permalink to this heading">#</a></h3>
+<p>Standard configuration is defined for two observers with Cartesian bases for the space components, with the axes aligned, and with relative motion along <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x'\)</span> axes.</p>
+<p>…<strong>todo</strong> <em>derivation…see material for <span class="xref myst">high school</span>: <a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/modern/einstein-special.html#relativita-speciale">Special Relativity</a>:<a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/modern/einstein-special.html#relativita-e-trasformazioni-di-lorentz">Relativity and Lorentz’s transformations</a></em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  ct' &amp; = \gamma ( ct - v x ) \\
+   x' &amp; = \gamma ( - v ct + x) \\
+   y' &amp; = y         \\
+   z' &amp; = z         \\
+\end{aligned} \ ,\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\gamma := \dfrac{1}{\sqrt{1 - v^2}}\)</span>, so that the coordinates transformations can be written using matrix of change of coordinates</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \begin{bmatrix} ct' \\ x' \\ y' \\ z'  \end{bmatrix} &amp; = \begin{bmatrix} \gamma &amp; - \gamma v &amp; 0 &amp; 0 \\ - \gamma v &amp; \gamma &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1  \end{bmatrix} \begin{bmatrix} ct \\ x \\ y \\ z \end{bmatrix} \\ \\
+  X^{'\alpha} &amp; = \Lambda_{\beta}^{\alpha} X^{\beta}  \ .
+\end{aligned}\end{split}\]</div>
+<p>This is the same transformation of the components of all the vectors of the 4-dimensional space as seen by two different inertial observers</p>
+</div>
+<div class="section" id="lorentz-s-transformation-in-general-configuration">
+<span id="relativity-special-lorentz-transformation-general"></span><h3><span class="section-number">3.1.2. </span>Lorentz’s transformation in general configuration<a class="headerlink" href="#lorentz-s-transformation-in-general-configuration" title="Permalink to this heading">#</a></h3>
+<p>Beside change of origin of the coordinates, general transformation can be derived composing Lorentz’s transformations in stanrdard configuration (the only one derived so far), and rotations of the space coordinates.</p>
+<p>As an example, the general expression of Lorentz’s transformation between two inertial reference frames with general relative (space) velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span> - and aligned axes - can be derived introducing two intermediate inertial reference frames: reference <span class="math notranslate nohighlight">\(Otxyz\)</span> and <span class="math notranslate nohighlight">\(O't'x'y'z'\)</span> are the two refence frames we’d like to link with a Lorentz transformation; <span class="math notranslate nohighlight">\(O_a t_a x_a y_a z_a\)</span> is a reference frame at rest w.r.t. <span class="math notranslate nohighlight">\(Otxyz\)</span> with the <span class="math notranslate nohighlight">\(x_a\)</span> axis with the same direction of the relative (space) velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>, <span class="math notranslate nohighlight">\(O_b t_b x_b y_a z_b\)</span> is in standard configuration with <span class="math notranslate nohighlight">\(O_a\)</span>. The transformation of coordinates reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \begin{bmatrix} x'_0 \\ \mathbf{r}' \end{bmatrix}
+  &amp; = \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix} \begin{bmatrix} x_{b,0} \\ \mathbf{x}_b \end{bmatrix} = \\
+  &amp; = \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix} \begin{bmatrix} \gamma &amp; - \gamma v &amp; &amp; \\ - \gamma v &amp; \gamma &amp; &amp; \\ &amp; &amp; 1 &amp; \\ &amp; &amp; &amp; 1 \end{bmatrix} \begin{bmatrix} x_{a,0} \\ \mathbf{x}_a \end{bmatrix}   = \\
+  &amp; = \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix} \left(  \begin{bmatrix} \gamma &amp; - \gamma v &amp; &amp; \\ - \gamma v &amp; \gamma - 1 &amp; &amp; \\ &amp; &amp; 0 &amp;  \\ &amp; &amp; &amp;  0 \end{bmatrix} + \begin{bmatrix} 0 &amp; &amp; &amp; \\ &amp; 1 &amp; &amp; \\ &amp; &amp; 1 &amp; \\ &amp; &amp; &amp; 1 \end{bmatrix} \right) \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R} \end{bmatrix}  \begin{bmatrix} x_{0} \\ \mathbf{x} \end{bmatrix} \ ,
+\end{aligned}\end{split}\]</div>
+<p>and the two contributions give</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix}  \begin{bmatrix} \gamma &amp; - \gamma v &amp; &amp; \\ - \gamma v &amp; \gamma - 1 &amp; &amp; \\ &amp; &amp; 0 &amp;  \\ &amp; &amp; &amp;  0 \end{bmatrix} \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R} \end{bmatrix}
+ &amp; = \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix} \begin{bmatrix} \gamma &amp; - \gamma v \mathbf{R}_{1,:} \\ - \gamma v &amp; (\gamma-1)\mathbf{R}_{1,:} \\ \mathbf{0}_{2,1} &amp; \mathbf{0}_{2,4} \end{bmatrix} = \\
+ &amp; = \begin{bmatrix} \gamma &amp; - \gamma v \mathbf{R}_{1,:} \\ - \gamma v \mathbf{R}_{1,:}^T &amp; (\gamma-1)  \mathbf{R}_{1,:}^T \mathbf{R}_{1,:} \end{bmatrix} = \\
+ &amp; = \begin{bmatrix} \gamma &amp; - \gamma R_{11} v &amp; - \gamma R_{12} v &amp; - \gamma R_{13} v \\
+   - \gamma R_{11} v &amp; (\gamma-1) R_{11} R_{11} &amp;  (\gamma-1) R_{11} R_{12} &amp;  (\gamma-1) R_{11} R_{13} \\
+   - \gamma R_{12} v &amp; (\gamma-1) R_{12} R_{11} &amp;  (\gamma-1) R_{12} R_{12} &amp;  (\gamma-1) R_{12} R_{13} \\
+   - \gamma R_{13} v &amp; (\gamma-1) R_{13} R_{11} &amp;  (\gamma-1) R_{13} R_{12} &amp;  (\gamma-1) R_{13} R_{13} \\
+\end{bmatrix} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R}^T \end{bmatrix}  \begin{bmatrix} 0 &amp; \\ &amp; \mathbf{I}_3  \end{bmatrix} \begin{bmatrix} 1 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{R} \end{bmatrix} = \begin{bmatrix} 0 &amp; \\ &amp; \mathbf{I}_3 \end{bmatrix}\end{split}\]</div>
+<p>Here, components <span class="math notranslate nohighlight">\((R_{11} v, R_{12} v, R_{13} v)\)</span> are the components of velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span> as seen by observer <span class="math notranslate nohighlight">\(O\)</span>, and thus the matrix for coordinate transformation reads</p>
+<div class="math notranslate nohighlight" id="equation-lorentz-transformations-general-matrix">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-lorentz-transformations-general-matrix" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  \symbf{\Lambda}
+  &amp; = \begin{bmatrix} 0 &amp; \\ &amp; \mathbf{I}_3 \end{bmatrix} + \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix} = \\
+  &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix}
+\end{aligned}\end{split}\]</div>
+<p>and the transformation of coordinates can be written as</p>
+<div class="math notranslate nohighlight" id="equation-lorentz-transformations-general-time-space">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-lorentz-transformations-general-time-space" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{cases} 
+  c t'     &amp; = \gamma ( ct - \vec{v} \cdot \vec{r} )  \\
+  \vec{r}' &amp; = - \gamma c t \vec{v} + (\gamma-1) \, \hat{v} \otimes \hat{v} \cdot \vec{r} + \vec{r} = \\
+           &amp; = - \gamma c t \vec{v} + \underbrace{\left[ \mathbb{I} - \hat{v} \otimes \hat{v} \right]}_{\mathbb{P}_{\perp\hat{v}}} \cdot \vec{r} + \gamma \, \underbrace{\hat{v} \otimes \hat{v}}_{\mathbb{P}_{\parallel\hat{v}}}  \cdot \vec{r} \ ,
+\end{cases}\end{split}\]</div>
+<p>having introduced the two orthogonal projectors in directions parallel and orthogonal to the direction of the velocity, <span class="math notranslate nohighlight">\(\hat{v}\)</span>.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 3.1 </span> (Standard configuration, as a special case.)</p>
+<div class="example-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\vec{v} = v \hat{x}\)</span>, Lorentz’s transformation for two inertial observers in starndard configuration is retrieved from the general expression of Lorentz’s transformation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  c t' &amp; = \gamma(ct - v x) \\
+  \vec{r}' &amp; = -\gamma v ct \hat{x} + y \hat{y} + z \hat{z} + \gamma v x \hat{x}
+\end{cases}\end{split}\]</div>
+</div>
+</div></div>
+</div>
+<div class="section" id="transformation-of-vector-components-and-vectors-of-the-bases">
+<h2><span class="section-number">3.2. </span>Transformation of vector components and vectors of the bases<a class="headerlink" href="#transformation-of-vector-components-and-vectors-of-the-bases" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\mathbf{V} = V^{\alpha} \mathbf{E}_{\alpha} = V^{'\beta} \mathbf{E}'_{\beta}\]</div>
+<div class="math notranslate nohighlight">
+\[V^{'\beta} = \Lambda_{\alpha}^{\beta} V^{\alpha} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> the indice of columns and rows of matrix <span class="math notranslate nohighlight">\(\symbf{\Lambda}\)</span> of change of coordinates of the general Lorentz’s transformation <a class="reference internal" href="#equation-lorentz-transformations-general-matrix">(3.1)</a>. In order to keep invariance, vectors of the bases transform with the transpose transformation, namely</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{V} = V^{\alpha} \mathbf{E}_{\alpha} = V^{'\beta} \mathbf{E}'_{\beta} =  V^{\alpha} \underbrace{\Lambda_{\alpha}^{\beta}  \mathbf{E}'_{\beta}}_{\mathbf{E}_{\alpha}}\]</div>
+<div class="math notranslate nohighlight" id="equation-vector-transformation-bases">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-vector-transformation-bases" title="Permalink to this equation">#</a></span>\[\mathbf{E}_{\alpha} = \Lambda_{\alpha}^{\beta}  \mathbf{E}'_{\beta} \ .\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \Lambda^{-1} \right]^{\alpha}_{\phi}\mathbf{E}_{\alpha} = \underbrace{[\Lambda^{-1}]^{\alpha}_{\phi} \Lambda_{\alpha}^{\beta}}_{= \delta_{\phi}^{\beta}}  \mathbf{E}'_{\beta} \\
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="transformation-of-tensor-components">
+<h2><span class="section-number">3.3. </span>Transformation of tensor components<a class="headerlink" href="#transformation-of-tensor-components" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\mathbf{D} = D^{\alpha \beta} \mathbf{E}_{\alpha} \mathbf{E}_{\beta} = D^{'\phi \eta} \mathbf{E}'_{\phi} \mathbf{E}'_{\eta} = \]</div>
+<p>and using the rule of transformation of vectors of the bases <a class="reference internal" href="#equation-vector-transformation-bases">(3.3)</a></p>
+<div class="math notranslate nohighlight">
+\[D^{' \phi \eta} = D^{\alpha \beta} \Lambda^{\phi}_{\alpha} \Lambda^{\eta}_{\beta} \ ,\]</div>
+<p>or using matrix notation (<strong>todo</strong> <em>avoid abuse of notation! Use underline for arrays of coomponents, bold for vectors and tensors</em>)</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{D}' = \symbf{\Lambda} \mathbf{D} \symbf{\Lambda}^T\]</div>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 3.2 </span> (Electromagnetic field tensor)</p>
+<div class="example-content section" id="proof-content">
+<p>Contravariant components of the electromagnetic field tensor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \begin{bmatrix} 0 &amp; - c \mathbf{d}'^T \\ c \mathbf{d}' &amp; \mathbf{h}'_{\times} \end{bmatrix} 
+  &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} 0 &amp; - c \mathbf{d}^T \\ c \mathbf{d} &amp; \mathbf{h}_{\times}\end{bmatrix} \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+  &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} \gamma c v d_v &amp; - c \mathbf{d}^T - (\gamma-1) c d_v \hat{\mathbf{v}}^T \\ \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} &amp; -\gamma c \mathbf{d} \mathbf{v}^T + \mathbf{h}_\times + (\gamma-1) \mathbf{h}_\times \mathbf{\hat{v}} \mathbf{\hat{v}}^T \end{bmatrix} = \\
+  &amp; = \begin{bmatrix} 0 &amp; \text{anti-sym} \\ c \mathbf{d}' &amp; \mathbf{h}'_{\times} \end{bmatrix} = \\
+\end{aligned}\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  c \mathbf{d}'
+  &amp; = - \gamma^2 c v^2 \mathbf{\hat{v}} d_v + \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} + \gamma(\gamma-1) c \hat{\mathbf{v}}d_v
+  = \\
+  &amp; = c \gamma^2 \hat{\mathbf{v}} d_v \underbrace{(1 - v^2)}_{= \gamma^{-2}} + \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} - \gamma c \hat{\mathbf{v}} d_v = \\
+  &amp; = \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} + ( 1 - \gamma ) c \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{d} \ ,
+\end{aligned}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{h}'_{\times} &amp; = &amp;&amp; (1) \\
+  &amp; = \gamma c v \hat{\mathbf{v}} \mathbf{d}^T + \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + \\
+  &amp; - \gamma c v \mathbf{d} \hat{\mathbf{v}} + \mathbf{h}_{\times} + (\gamma - 1) (\mathbf{h} \times \hat{\mathbf{v}}) \hat{\mathbf{v}}^T - \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + (\gamma-1) \hat{\mathbf{v}} \mathbf{v}^T \mathbf{h}_{\times} + \mathbf{0} = &amp;&amp; (2) \\
+  &amp; = \gamma c v \left( \hat{\mathbf{v}} \mathbf{d}^T - \mathbf{d} \hat{\mathbf{v}}^T \right) + \mathbf{h}_{\times} + (\gamma-1) \left( \left( \mathbf{h}_\times \hat{\mathbf{v}}  \right) \hat{\mathbf{v}}^T  - \hat{\mathbf{v}} \left( \mathbf{h}_\times \hat{\mathbf{v}}\right)^T \right) = &amp;&amp; (3) \\
+  &amp; = \gamma c v \left( \mathbf{d} \times \hat{\mathbf{v}} \right)_{\times} + \mathbf{h}_{\times} + (\gamma-1) \left( \hat{\mathbf{v}} \times (\mathbf{h} \times \hat{\mathbf{v}}) \right)_{\times}
+\end{aligned}\end{split}\]</div>
+<p>having (1) recognized that <span class="math notranslate nohighlight">\(\hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{h}_\times \hat{\mathbf{v}} \hat{\mathbf{v}}^T = \hat{\mathbf{v}}( \hat{\mathbf{v}} \cdot ( \mathbf{h} \times \hat{\mathbf{v}}) ) \hat{\mathbf{v}} = \mathbf{0}\)</span>, (2) <span class="math notranslate nohighlight">\(\{ \mathbf{v}^T \mathbf{h}_{\times} \}_k = v_i \varepsilon_{ijk} h_j = - \{ \mathbf{h}\times \hat{\mathbf{v}} \}_k\)</span> and (3)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \left(\mathbf{a}_{\times} \mathbf{b} \right)_{\times} \right]_{ij} 
+  &amp; = \varepsilon_{ikj} \varepsilon_{klm} a_l b_m = \\
+  &amp; = \left( \delta_{jl} \delta_{im} - \delta_{jm} \delta_{il} \right) a_l b_m = \\
+  &amp; = a_j b_i - a_i b_j = \left[ \mathbf{b} \mathbf{a}^T - \mathbf{a} \mathbf{b}^T \right]_{ij} \ . 
+\end{aligned}\end{split}\]</div>
+<p>Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{h}' 
+  &amp; = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) (\mathbf{h} \times \hat{\mathbf{v}}) \times \hat{\mathbf{v}} = \\
+  &amp; = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \left( \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} - \mathbf{h}  \right) = \\
+  &amp; = \gamma \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} \ .
+\end{aligned}\end{split}\]</div>
+<p>Going back from non dimensional velocity to dimensional velocity <span class="math notranslate nohighlight">\(c \mathbf{v} \rightarrow \mathbf{v}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{d}' &amp; = \gamma \left( \mathbf{d} - \dfrac{\mathbf{h} \times \mathbf{v}}{c^2} \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{d} \\
+  \mathbf{h}' &amp; = \gamma \left( \mathbf{h} - \mathbf{v} \times \mathbf{d} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{h} \\
+\end{aligned}\end{split}\]</div>
+<p>Repeating the same process for the electromagnetic field tensor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[\mathbf{F}\right]^{\alpha \beta} = \begin{bmatrix} 0 &amp; - \dfrac{\mathbf{e}^T}{c} \\ \dfrac{\mathbf{e}}{c} &amp; \mathbf{b}_{\times} \end{bmatrix} 
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e}' &amp; = \gamma \left( \mathbf{e} -        \mathbf{b} \times \mathbf{v}       \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{e} \\
+  \mathbf{b}' &amp; = \gamma \left( \mathbf{b} - \dfrac{\mathbf{v} \times \mathbf{e}}{c^2} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{b} \\
+\end{aligned}\end{split}\]</div>
+</div>
+</div><div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 3.3 </span> (4-Current)</p>
+<div class="example-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\mathbf{J}' = \symbf{\Lambda} \mathbf{J}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  c \rho' &amp; = \gamma c \rho - \gamma v \mathbf{j} \\
+  \mathbf{j}' &amp; = - \gamma v c \rho + \gamma \mathbf{j} 
+\end{aligned}\end{split}\]</div>
+</div>
+</div><div class="proof example admonition" id="example-3">
+<p class="admonition-title"><span class="caption-number">Example 3.4 </span> (Constitutive equations)</p>
+<div class="example-content section" id="proof-content">
+<p>Linear isotropic medium</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{d} &amp; = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
+  \mathbf{b} &amp; = \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \\
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(c^2 = \dfrac{1}{\varepsilon_0 \mu_0}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  c \mathbf{d} &amp; = \varepsilon_0 c^2 \dfrac{\mathbf{e}}{c} + c \mathbf{p} = \dfrac{1}{\mu_0} \dfrac{\mathbf{e}}{c} + c \mathbf{p} \\
+  \mathbf{h} &amp; = \dfrac{1}{ \mu_0} \mathbf{b} - \mathbf{m} \\
+\end{aligned}\end{split}\]</div>
+<p>the constitutive equations can be written in 4-dimensional form as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{D} = \dfrac{1}{\mu_0} \mathbf{F} + \mathbf{P}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+                 \begin{bmatrix} 0 &amp; - c \mathbf{d}^T  \\ c \mathbf{d} &amp;  \mathbf{h}_{\times} \end{bmatrix} = 
+\dfrac{1}{\mu_0} \begin{bmatrix} 0 &amp; -\mathbf{e}^T / c \\ \mathbf{e}/c &amp;  \mathbf{b}_{\times} \end{bmatrix} + 
+                 \begin{bmatrix} 0 &amp; - c \mathbf{p}^T  \\ c \mathbf{p} &amp; -\mathbf{m}_{\times} \end{bmatrix}
+\end{split}\]</div>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/relativity-special"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Special Relativity - Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../relativity-general/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>General Relativity</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformations">3.1. Lorentz’s transformations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformations-in-standard-configuration">3.1.1. Lorentz’s transformations in standard configuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-s-transformation-in-general-configuration">3.1.2. Lorentz’s transformation in general configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-of-vector-components-and-vectors-of-the-bases">3.2. Transformation of vector components and vectors of the bases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-of-tensor-components">3.3. Transformation of tensor components</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
