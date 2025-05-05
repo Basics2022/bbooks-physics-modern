@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Statistical Physics - Notes &#8212; Modern Physics</title>
+    <title>8. Statistical Physics - Notes &#8212; Modern Physics</title>
   
   
   
@@ -70,20 +70,11 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8. Statistical Physics - Statistics Miscellanea" href="statistics.html" />
-    <link rel="prev" title="6. Statistical Physics" href="intro.html" />
+    <link rel="next" title="9. Statistical Physics - Statistics Miscellanea" href="statistics.html" />
+    <link rel="prev" title="7. Statistical Physics" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -179,22 +170,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">4. General Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">5. General Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">6. Statistical Physics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">8. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">9. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">10. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">10. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">11. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -343,14 +335,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">7.1. Ensembles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">7.2. Microcanonical ensemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">7.3. Canonical ensemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">7.4. Macrocanonical esemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">7.5. Statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">7.5.1. Maxwell-Boltzmann</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">7.5.2. Bose-Einstein</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">7.5.3. Fermi-Dirac</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">8.1. Ensembles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">8.2. Microcanonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">8.3. Canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">8.4. Macrocanonical esemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">8.5. Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">8.5.1. Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">8.5.2. Bose-Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">8.5.3. Fermi-Dirac</a></li>
 </ul>
 </li>
 </ul>
@@ -365,21 +357,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="statistical-physics-notes">
-<span id="statistical-mechanics-notes"></span><h1><span class="section-number">7. </span>Statistical Physics - Notes<a class="headerlink" href="#statistical-physics-notes" title="Permalink to this heading">#</a></h1>
+<span id="statistical-mechanics-notes"></span><h1><span class="section-number">8. </span>Statistical Physics - Notes<a class="headerlink" href="#statistical-physics-notes" title="Permalink to this heading">#</a></h1>
 <div class="section" id="ensembles">
-<span id="statistical-mechanics-notes-ensembles"></span><h2><span class="section-number">7.1. </span>Ensembles<a class="headerlink" href="#ensembles" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-notes-ensembles"></span><h2><span class="section-number">8.1. </span>Ensembles<a class="headerlink" href="#ensembles" title="Permalink to this heading">#</a></h2>
 </div>
 <div class="section" id="microcanonical-ensemble">
-<span id="id1"></span><h2><span class="section-number">7.2. </span>Microcanonical ensemble<a class="headerlink" href="#microcanonical-ensemble" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2><span class="section-number">8.2. </span>Microcanonical ensemble<a class="headerlink" href="#microcanonical-ensemble" title="Permalink to this heading">#</a></h2>
 </div>
 <div class="section" id="canonical-ensemble">
-<span id="id2"></span><h2><span class="section-number">7.3. </span>Canonical ensemble<a class="headerlink" href="#canonical-ensemble" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2><span class="section-number">8.3. </span>Canonical ensemble<a class="headerlink" href="#canonical-ensemble" title="Permalink to this heading">#</a></h2>
 </div>
 <div class="section" id="macrocanonical-esemble">
-<span id="id3"></span><h2><span class="section-number">7.4. </span>Macrocanonical esemble<a class="headerlink" href="#macrocanonical-esemble" title="Permalink to this heading">#</a></h2>
+<span id="id3"></span><h2><span class="section-number">8.4. </span>Macrocanonical esemble<a class="headerlink" href="#macrocanonical-esemble" title="Permalink to this heading">#</a></h2>
 </div>
 <div class="section" id="statistics">
-<span id="statistical-mechanics-notes-distributions"></span><h2><span class="section-number">7.5. </span>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-notes-distributions"></span><h2><span class="section-number">8.5. </span>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
 <p>Each of the <span class="math notranslate nohighlight">\(N\)</span> components of the system is in an <strong>energy level</strong> <span class="math notranslate nohighlight">\(i\)</span>. Energy level <span class="math notranslate nohighlight">\(i\)</span> has <span class="math notranslate nohighlight">\(g_i\)</span> sublevels with the same energy level.</p>
 <ul class="simple">
 <li><p>energy levels, <span class="math notranslate nohighlight">\(E_i\)</span> of each component</p></li>
@@ -389,15 +381,15 @@ document.write(`
 </ul>
 <p>Given a macrostate, what’s the number of ways <span class="math notranslate nohighlight">\(W(N_i; g_i)\)</span> to get a consistent microstate? Once the expression is found, constrained optimization follows: optimization w.r.t. <span class="math notranslate nohighlight">\(N_i\)</span> is usually performed in the limit of <span class="math notranslate nohighlight">\(N_i \rightarrow +\infty\)</span> (why in Fermi-Dirac distribution, obeying Pauli exclusion principle?), with the values of the macroscopic variables as constraints usually treated with Lagrange multiplier.</p>
 <div class="section" id="maxwell-boltzmann">
-<span id="statistical-mechanics-notes-distributions-mb"></span><h3><span class="section-number">7.5.1. </span>Maxwell-Boltzmann<a class="headerlink" href="#maxwell-boltzmann" title="Permalink to this heading">#</a></h3>
+<span id="statistical-mechanics-notes-distributions-mb"></span><h3><span class="section-number">8.5.1. </span>Maxwell-Boltzmann<a class="headerlink" href="#maxwell-boltzmann" title="Permalink to this heading">#</a></h3>
 <p>Statistics of distinguishible components.</p>
 </div>
 <div class="section" id="bose-einstein">
-<span id="statistical-mechanics-notes-distributions-be"></span><h3><span class="section-number">7.5.2. </span>Bose-Einstein<a class="headerlink" href="#bose-einstein" title="Permalink to this heading">#</a></h3>
+<span id="statistical-mechanics-notes-distributions-be"></span><h3><span class="section-number">8.5.2. </span>Bose-Einstein<a class="headerlink" href="#bose-einstein" title="Permalink to this heading">#</a></h3>
 <p>Statistics of undistinguishable components that can be in the same (sub)level.
 Given the number of elementary components <span class="math notranslate nohighlight">\(\sum_{i} N_i = N\)</span> and the energy <span class="math notranslate nohighlight">\(\sum_{i} N_i E_i = E\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-be">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq-be" title="Permalink to this equation">#</a></span>\[W_{BE,i} = \frac{(N_i + g_i - 1)!}{N_i! (g_i-1)!} \qquad , \qquad W_{BE} = \prod_i W_{BE,i} \ .\]</div>
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-eq-be" title="Permalink to this equation">#</a></span>\[W_{BE,i} = \frac{(N_i + g_i - 1)!}{N_i! (g_i-1)!} \qquad , \qquad W_{BE} = \prod_i W_{BE,i} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Counting microstates<div class="sd-summary-down docutils">
@@ -407,7 +399,7 @@ Counting microstates<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>todo</strong> write page <em>Combinatorics</em> and add link</p>
 </div>
-</details><p><strong>Most likely microstate.</strong> Instead of maximizing <a class="reference internal" href="#equation-eq-be">(7.1)</a>, the objective function is <span class="math notranslate nohighlight">\(\ln W_{BE}\)</span>, after using Stirling approximation in the limit of large <span class="math notranslate nohighlight">\(N_i\)</span> and <span class="math notranslate nohighlight">\(g_i\)</span>, <span class="math notranslate nohighlight">\(N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}\)</span>. The approximate occupation number of one of the <span class="math notranslate nohighlight">\(G_i\)</span> sublevels of the <span class="math notranslate nohighlight">\(i^{th}\)</span> level of the most likely microstate is</p>
+</details><p><strong>Most likely microstate.</strong> Instead of maximizing <a class="reference internal" href="#equation-eq-be">(8.1)</a>, the objective function is <span class="math notranslate nohighlight">\(\ln W_{BE}\)</span>, after using Stirling approximation in the limit of large <span class="math notranslate nohighlight">\(N_i\)</span> and <span class="math notranslate nohighlight">\(g_i\)</span>, <span class="math notranslate nohighlight">\(N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}\)</span>. The approximate occupation number of one of the <span class="math notranslate nohighlight">\(G_i\)</span> sublevels of the <span class="math notranslate nohighlight">\(i^{th}\)</span> level of the most likely microstate is</p>
 <div class="math notranslate nohighlight">
 \[n_i := \frac{N_i}{G_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -454,7 +446,7 @@ Optimization<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 </div>
 </details><div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 7.1 </span> (Black-body radiation: Planck, Wien, and Stefan-Boltzmann laws)</p>
+<p class="admonition-title"><span class="caption-number">Example 8.1 </span> (Black-body radiation: Planck, Wien, and Stefan-Boltzmann laws)</p>
 <div class="example-content section" id="proof-content">
 <p><strong>Planck’s law.</strong> Energy density w.r.t. frequency</p>
 <div class="math notranslate nohighlight">
@@ -592,18 +584,18 @@ Property of the series<div class="sd-summary-down docutils">
 \[\frac{P}{A} = \sigma T^4 \qquad , \qquad \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} \ .\]</div>
 </div>
 </div><div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 7.2 </span> (Energy density and radiance)</p>
+<p class="admonition-title"><span class="caption-number">Example 8.2 </span> (Energy density and radiance)</p>
 <div class="example-content section" id="proof-content">
 <p><strong>Radiance.</strong> The radiance <span class="math notranslate nohighlight">\(L_{e,\Omega}\)</span> of a surface is the flux of energy per unit solid angle, per unit projected area of the source.</p>
 <p><strong>Spectral radiance in frequency</strong> is the radiance per unit frequency, <span class="math notranslate nohighlight">\(L_{e, \Omega, f} = \frac{\partial L_{e,\Omega}}{\partial f}\)</span>.</p>
 </div>
 </div></div>
 <div class="section" id="fermi-dirac">
-<span id="statistical-mechanics-notes-distributions-fd"></span><h3><span class="section-number">7.5.3. </span>Fermi-Dirac<a class="headerlink" href="#fermi-dirac" title="Permalink to this heading">#</a></h3>
+<span id="statistical-mechanics-notes-distributions-fd"></span><h3><span class="section-number">8.5.3. </span>Fermi-Dirac<a class="headerlink" href="#fermi-dirac" title="Permalink to this heading">#</a></h3>
 <p>Statistics of undistinguishable components that can’t be in the same (sub)level, obeying to the Pauli exclusion principle.
 Given the number of elementary components <span class="math notranslate nohighlight">\(\sum_{i} N_i = N\)</span> and the energy <span class="math notranslate nohighlight">\(\sum_{i} N_i E_i = E\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-fd">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-eq-fd" title="Permalink to this equation">#</a></span>\[W_{FD,i} = \frac{G_i!}{(G_i-N_i)! N_i!} \qquad , \qquad W_{FD} = \prod_i W_{FD,i} \ .\]</div>
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-eq-fd" title="Permalink to this equation">#</a></span>\[W_{FD,i} = \frac{G_i!}{(G_i-N_i)! N_i!} \qquad , \qquad W_{FD} = \prod_i W_{FD,i} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Counting microstates<div class="sd-summary-down docutils">
@@ -702,7 +694,7 @@ Optimization<div class="sd-summary-down docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Statistical Physics</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Statistical Physics</p>
       </div>
     </a>
     <a class="right-next"
@@ -710,7 +702,7 @@ Optimization<div class="sd-summary-down docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Statistical Physics - Statistics Miscellanea</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Statistical Physics - Statistics Miscellanea</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -729,14 +721,14 @@ Optimization<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">7.1. Ensembles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">7.2. Microcanonical ensemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">7.3. Canonical ensemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">7.4. Macrocanonical esemble</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">7.5. Statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">7.5.1. Maxwell-Boltzmann</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">7.5.2. Bose-Einstein</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">7.5.3. Fermi-Dirac</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensembles">8.1. Ensembles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microcanonical-ensemble">8.2. Microcanonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">8.3. Canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">8.4. Macrocanonical esemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">8.5. Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">8.5.1. Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">8.5.2. Bose-Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">8.5.3. Fermi-Dirac</a></li>
 </ul>
 </li>
 </ul>
