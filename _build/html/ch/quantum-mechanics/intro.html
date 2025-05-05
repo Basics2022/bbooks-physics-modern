@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Quantum Mechanics &#8212; Modern Physics</title>
+    <title>10. Quantum Mechanics &#8212; Modern Physics</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10. Quantum Mechanics - Notes" href="notes.html" />
-    <link rel="prev" title="8. Statistical Physics - Statistics Miscellanea" href="../statistical-mechanics/statistics.html" />
+    <link rel="next" title="11. Quantum Mechanics - Notes" href="notes.html" />
+    <link rel="prev" title="9. Statistical Physics - Statistics Miscellanea" href="../statistical-mechanics/statistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,22 +179,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">4. General Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">5. General Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">6. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">7. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">8. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">8. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">10. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">11. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -343,35 +344,35 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools-for-quantum-mechanics">9.1. Mathematical tools for quantum mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">9.2. Postulates of Quantum Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-relativistic-mechanics">9.3. Non-relativistic Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-interpretation-and-measurement">9.3.1. Statistical Interpretation and Measurement</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-function">9.3.1.1. Wave function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">9.3.1.2. Operators and Observables</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">9.3.1.3. Space Representation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">9.3.1.4. Momentum Representation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">9.3.1.5. From position to momentum representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools-for-quantum-mechanics">10.1. Mathematical tools for quantum mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">10.2. Postulates of Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-relativistic-mechanics">10.3. Non-relativistic Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-interpretation-and-measurement">10.3.1. Statistical Interpretation and Measurement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-function">10.3.1.1. Wave function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">10.3.1.2. Operators and Observables</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">10.3.1.3. Space Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">10.3.1.4. Momentum Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">10.3.1.5. From position to momentum representation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">9.3.2. Schrodinger Equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">9.3.2.1. Stationary States</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">9.3.2.2. Pictures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">9.3.2.2.1. Schrodinger</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">9.3.2.2.2. Heisenberg</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">9.3.2.2.3. Interaction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">10.3.2. Schrodinger Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">10.3.2.1. Stationary States</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">10.3.2.2. Pictures</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">10.3.2.2.1. Schrodinger</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">10.3.2.2.2. Heisenberg</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">10.3.2.2.3. Interaction</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">9.3.3. Matrix Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">9.3.3.1. Attualization of 1925 papers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">10.3.3. Matrix Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">10.3.3.1. Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">9.3.4. Heisenberg Uncertainty relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">10.3.4. Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">9.4. Many-body problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">10.4. Many-body problem</a></li>
 </ul>
             </nav>
         </div>
@@ -384,7 +385,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="quantum-mechanics">
-<span id="quantum-mechanics-intro"></span><h1><span class="section-number">9. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h1>
+<span id="quantum-mechanics-intro"></span><h1><span class="section-number">10. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Principles and postulates</p>
 <ul>
@@ -395,13 +396,13 @@ document.write(`
 <li><p>angluar momentum, spin, and atom</p></li>
 </ul>
 <div class="section" id="mathematical-tools-for-quantum-mechanics">
-<h2><span class="section-number">9.1. </span>Mathematical tools for quantum mechanics<a class="headerlink" href="#mathematical-tools-for-quantum-mechanics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.1. </span>Mathematical tools for quantum mechanics<a class="headerlink" href="#mathematical-tools-for-quantum-mechanics" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="Operator">
-<p class="admonition-title"><span class="caption-number">Definition 9.1 </span> (Operator)</p>
+<p class="admonition-title"><span class="caption-number">Definition 10.1 </span> (Operator)</p>
 <div class="definition-content section" id="proof-content">
 </div>
 </div><div class="proof definition admonition" id="Adjoint Operator">
-<p class="admonition-title"><span class="caption-number">Definition 9.2 </span> (Adjoint operator)</p>
+<p class="admonition-title"><span class="caption-number">Definition 10.2 </span> (Adjoint operator)</p>
 <div class="definition-content section" id="proof-content">
 <p>Given an operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow V\)</span>, its adjoint operator <span class="math notranslate nohighlight">\(\hat{A}^*: V \rightarrow U\)</span> is the operator s.t.</p>
 <div class="math notranslate nohighlight">
@@ -409,7 +410,7 @@ document.write(`
 <p>holds for <span class="math notranslate nohighlight">\(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\)</span>.</p>
 </div>
 </div><div class="proof definition admonition" id="Self-Adjoint Operator">
-<span id="quantum-mechanics-math-operators-self-adjoint"></span><p class="admonition-title"><span class="caption-number">Definition 9.3 </span> (Hermitian (self-adjoint) operator)</p>
+<span id="quantum-mechanics-math-operators-self-adjoint"></span><p class="admonition-title"><span class="caption-number">Definition 10.3 </span> (Hermitian (self-adjoint) operator)</p>
 <div class="definition-content section" id="proof-content">
 <p>The operator <span class="math notranslate nohighlight">\(\hat{A}: U \rightarrow U\)</span> is a self-adjoint operator if</p>
 <div class="math notranslate nohighlight">
@@ -418,7 +419,7 @@ document.write(`
 </div><p>Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).</p>
 </div>
 <div class="section" id="postulates-of-quantum-mechanics">
-<h2><span class="section-number">9.2. </span>Postulates of Quantum Mechanics<a class="headerlink" href="#postulates-of-quantum-mechanics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.2. </span>Postulates of Quantum Mechanics<a class="headerlink" href="#postulates-of-quantum-mechanics" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>…</p></li>
 <li><p>Canonical Commutation Relation (CCR) <em>and Canonical Anti-Commutation Relation…</em></p></li>
@@ -426,11 +427,11 @@ document.write(`
 </ul>
 </div>
 <div class="section" id="non-relativistic-mechanics">
-<h2><span class="section-number">9.3. </span>Non-relativistic Mechanics<a class="headerlink" href="#non-relativistic-mechanics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.3. </span>Non-relativistic Mechanics<a class="headerlink" href="#non-relativistic-mechanics" title="Permalink to this heading">#</a></h2>
 <div class="section" id="statistical-interpretation-and-measurement">
-<h3><span class="section-number">9.3.1. </span>Statistical Interpretation and Measurement<a class="headerlink" href="#statistical-interpretation-and-measurement" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.1. </span>Statistical Interpretation and Measurement<a class="headerlink" href="#statistical-interpretation-and-measurement" title="Permalink to this heading">#</a></h3>
 <div class="section" id="wave-function">
-<h4><span class="section-number">9.3.1.1. </span>Wave function<a class="headerlink" href="#wave-function" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.1. </span>Wave function<a class="headerlink" href="#wave-function" title="Permalink to this heading">#</a></h4>
 <p>The state of a system is described by a wave function <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span></p>
 <p><strong>todo</strong></p>
 <ul class="simple">
@@ -439,7 +440,7 @@ document.write(`
 </ul>
 </div>
 <div class="section" id="operators-and-observables">
-<h4><span class="section-number">9.3.1.2. </span>Operators and Observables<a class="headerlink" href="#operators-and-observables" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.2. </span>Operators and Observables<a class="headerlink" href="#operators-and-observables" title="Permalink to this heading">#</a></h4>
 <p>Physical <strong>observable</strong> quantities are represented by <a class="reference internal" href="#quantum-mechanics-math-operators-self-adjoint"><span class="std std-ref">Hermitian operators</span></a>. Possible outcomes of measurement are the eigenvalues of the operator</p>
 <p>Given <span class="math notranslate nohighlight">\(\hat{A}\)</span> and the set of its eigenvectors <span class="math notranslate nohighlight">\(\{ |A_i \rangle \}_i\)</span> (<strong>todo</strong> <em>continuous or discrete spectrum…, need to treat this difference quite in details</em>), with associated eigenvalues <span class="math notranslate nohighlight">\(\{ a_i \}_i\)</span></p>
 <div class="math notranslate nohighlight">
@@ -492,7 +493,7 @@ $$\begin{aligned}
 -->
 </div>
 <div class="section" id="space-representation">
-<h4><span class="section-number">9.3.1.3. </span>Space Representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.3. </span>Space Representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h4>
 <p><strong>Position operator</strong> <span class="math notranslate nohighlight">\(\hat{\mathbf{r}}\)</span> has eigenvalues <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> identifying the possible measurements of the position</p>
 <div class="math notranslate nohighlight">
 \[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle \ ,\]</div>
@@ -552,7 +553,7 @@ $$\begin{aligned}
 </ul>
 </div>
 <div class="section" id="momentum-representation">
-<h4><span class="section-number">9.3.1.4. </span>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.4. </span>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
 <p><strong>Momentum operator</strong> as the limit of…<strong>todo</strong> <em>prove the expression of the momentum operator as the limit of the generator of translation</em></p>
 <div class="math notranslate nohighlight">
 \[\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | \]</div>
@@ -586,7 +587,7 @@ $$\begin{aligned}
 </ul>
 </div>
 <div class="section" id="from-position-to-momentum-representation">
-<h4><span class="section-number">9.3.1.5. </span>From position to momentum representation<a class="headerlink" href="#from-position-to-momentum-representation" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.5. </span>From position to momentum representation<a class="headerlink" href="#from-position-to-momentum-representation" title="Permalink to this heading">#</a></h4>
 <p>Momentum and wave vector, <span class="math notranslate nohighlight">\(\mathbf{p} = \hbar \mathbf{k}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -608,12 +609,12 @@ $$\begin{aligned}
 </div>
 </div>
 <div class="section" id="schrodinger-equation">
-<h3><span class="section-number">9.3.2. </span>Schrodinger Equation<a class="headerlink" href="#schrodinger-equation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.2. </span>Schrodinger Equation<a class="headerlink" href="#schrodinger-equation" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle \]</div>
 <p>being <span class="math notranslate nohighlight">\(\hat{H}\)</span> the Hamiltonian operator and <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span> the wave function, as a function of time <span class="math notranslate nohighlight">\(t\)</span> as an independent variable.</p>
 <div class="section" id="stationary-states">
-<h4><span class="section-number">9.3.2.1. </span>Stationary States<a class="headerlink" href="#stationary-states" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.2.1. </span>Stationary States<a class="headerlink" href="#stationary-states" title="Permalink to this heading">#</a></h4>
 <p>Eigenspace of the Hamiltonian operator</p>
 <div class="math notranslate nohighlight">
 \[\hat{H} |\Psi_k \rangle = E_k |\Psi_k \rangle \ ,\]</div>
@@ -641,14 +642,14 @@ $$\begin{aligned}
 \end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="pictures">
-<h4><span class="section-number">9.3.2.2. </span>Pictures<a class="headerlink" href="#pictures" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.2.2. </span>Pictures<a class="headerlink" href="#pictures" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Schrodinger</p></li>
 <li><p>Heisenberg</p></li>
 <li><p>Interaction</p></li>
 </ul>
 <div class="section" id="schrodinger">
-<h5><span class="section-number">9.3.2.2.1. </span>Schrodinger<a class="headerlink" href="#schrodinger" title="Permalink to this heading">#</a></h5>
+<h5><span class="section-number">10.3.2.2.1. </span>Schrodinger<a class="headerlink" href="#schrodinger" title="Permalink to this heading">#</a></h5>
 <p>If <span class="math notranslate nohighlight">\(\hat{H}\)</span> not function of time</p>
 <div class="math notranslate nohighlight">
 \[| \Psi \rangle (t) = \exp\left[ - i \frac{\hat{H}}{\hbar} (t-t_0) \right] | \Psi \rangle(t_0) = \hat{U}(t,t_0) | \Psi \rangle(t_0) \]</div>
@@ -656,7 +657,7 @@ $$\begin{aligned}
 \[\bar{A} = \langle \Psi | \hat{A} | \Psi \rangle = \langle \Psi_0 | \hat{U}^*(t,t_0) \hat{A} \hat{U}(t,t_0) | \Psi_0 \rangle\]</div>
 </div>
 <div class="section" id="heisenberg">
-<h5><span class="section-number">9.3.2.2.2. </span>Heisenberg<a class="headerlink" href="#heisenberg" title="Permalink to this heading">#</a></h5>
+<h5><span class="section-number">10.3.2.2.2. </span>Heisenberg<a class="headerlink" href="#heisenberg" title="Permalink to this heading">#</a></h5>
 <p>…</p>
 <p>for <span class="math notranslate nohighlight">\(\hat{H}\)</span> independent from time <span class="math notranslate nohighlight">\(t\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -709,14 +710,14 @@ Hamiltonian Mechanics<div class="sd-summary-down docutils">
 </div>
 </details></div>
 <div class="section" id="interaction">
-<h5><span class="section-number">9.3.2.2.3. </span>Interaction<a class="headerlink" href="#interaction" title="Permalink to this heading">#</a></h5>
+<h5><span class="section-number">10.3.2.2.3. </span>Interaction<a class="headerlink" href="#interaction" title="Permalink to this heading">#</a></h5>
 </div>
 </div>
 </div>
 <div class="section" id="matrix-mechanics">
-<h3><span class="section-number">9.3.3. </span>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.3. </span>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>
 <div class="section" id="attualization-of-1925-papers">
-<h4><span class="section-number">9.3.3.1. </span>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.3.1. </span>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
 <!--
 $$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
@@ -757,7 +758,7 @@ $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 </div>
 </div>
 <div class="section" id="heisenberg-uncertainty-relation">
-<span id="quantum-mechanics-heisenber-uncertainty-relation"></span><h3><span class="section-number">9.3.4. </span>Heisenberg Uncertainty relation<a class="headerlink" href="#heisenberg-uncertainty-relation" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-heisenber-uncertainty-relation"></span><h3><span class="section-number">10.3.4. </span>Heisenberg Uncertainty relation<a class="headerlink" href="#heisenberg-uncertainty-relation" title="Permalink to this heading">#</a></h3>
 <p>Uncertainty principle is a relation that holds for “wave descriptions” as it can be proved in the generic framework of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html">Fourier transform</a>, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html#uncertainty-relation">Fourier transform:Uncertainty relation</a>.</p>
 <ul class="simple">
 <li><p>Heisenberg uncertainty relation is a relation between product of the variance of two physical quantities and their commutator,</p></li>
@@ -798,7 +799,7 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
 </div>
 </div>
 <div class="section" id="many-body-problem">
-<h2><span class="section-number">9.4. </span>Many-body problem<a class="headerlink" href="#many-body-problem" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.4. </span>Many-body problem<a class="headerlink" href="#many-body-problem" title="Permalink to this heading">#</a></h2>
 <p>Wave function with symmetries: Fermions and Bosons</p>
 </div>
 </div>
@@ -839,7 +840,7 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Statistical Physics - Statistics Miscellanea</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Statistical Physics - Statistics Miscellanea</p>
       </div>
     </a>
     <a class="right-next"
@@ -847,7 +848,7 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Quantum Mechanics - Notes</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Quantum Mechanics - Notes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -866,35 +867,35 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools-for-quantum-mechanics">9.1. Mathematical tools for quantum mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">9.2. Postulates of Quantum Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-relativistic-mechanics">9.3. Non-relativistic Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-interpretation-and-measurement">9.3.1. Statistical Interpretation and Measurement</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-function">9.3.1.1. Wave function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">9.3.1.2. Operators and Observables</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">9.3.1.3. Space Representation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">9.3.1.4. Momentum Representation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">9.3.1.5. From position to momentum representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-tools-for-quantum-mechanics">10.1. Mathematical tools for quantum mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">10.2. Postulates of Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-relativistic-mechanics">10.3. Non-relativistic Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-interpretation-and-measurement">10.3.1. Statistical Interpretation and Measurement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-function">10.3.1.1. Wave function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-and-observables">10.3.1.2. Operators and Observables</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">10.3.1.3. Space Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-representation">10.3.1.4. Momentum Representation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-position-to-momentum-representation">10.3.1.5. From position to momentum representation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">9.3.2. Schrodinger Equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">9.3.2.1. Stationary States</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">9.3.2.2. Pictures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">9.3.2.2.1. Schrodinger</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">9.3.2.2.2. Heisenberg</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">9.3.2.2.3. Interaction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation">10.3.2. Schrodinger Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">10.3.2.1. Stationary States</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pictures">10.3.2.2. Pictures</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">10.3.2.2.1. Schrodinger</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg">10.3.2.2.2. Heisenberg</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction">10.3.2.2.3. Interaction</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">9.3.3. Matrix Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">9.3.3.1. Attualization of 1925 papers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">10.3.3. Matrix Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">10.3.3.1. Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">9.3.4. Heisenberg Uncertainty relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">10.3.4. Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">9.4. Many-body problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">10.4. Many-body problem</a></li>
 </ul>
   </nav></div>
 

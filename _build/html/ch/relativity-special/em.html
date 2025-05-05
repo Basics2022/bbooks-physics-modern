@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Statistical Physics - Statistics Miscellanea &#8212; Modern Physics</title>
+    <title>4. Electromagnetism &#8212; Modern Physics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/statistics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special/em';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10. Quantum Mechanics" href="../quantum-mechanics/intro.html" />
-    <link rel="prev" title="8. Statistical Physics - Notes" href="notes.html" />
+    <link rel="next" title="5. General Relativity" href="../relativity-general/intro.html" />
+    <link rel="prev" title="3. Inertial reference frames and Lorentz’s transformations" href="lorentz.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,11 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="nav bd-sidenav">
@@ -187,10 +187,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Statistical Physics - Statistics Miscellanea</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">8. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
@@ -250,7 +250,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/statistical-mechanics/statistics.md" target="_blank"
+      <li><a href="../../_sources/ch/relativity-special/em.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +332,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Statistical Physics - Statistics Miscellanea</h1>
+    <h1>Electromagnetism</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -346,107 +346,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="statistical-physics-statistics-miscellanea">
-<span id="statistical-mechanics-statistics"></span><h1><span class="section-number">9. </span>Statistical Physics - Statistics Miscellanea<a class="headerlink" href="#statistical-physics-statistics-miscellanea" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="electromagnetism">
+<span id="relativity-special-em"></span><h1><span class="section-number">4. </span>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h1>
+<p><strong>From 3-dimensional to 4-dimensional formalism.</strong> In this section the 4-dimensional formalism is introduced, and the 4-dimensional version of governing equations of electromagnetism that naturally suits special relativity theory is derived starting from the governing equations of <span class="xref myst">classical electromagnetism</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Information content and Entropy<div class="sd-summary-down docutils">
+Definition of physical quantities<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Given a discrete random variable <span class="math notranslate nohighlight">\(X\)</span> with probability mass function <span class="math notranslate nohighlight">\(p_X(x)\)</span>, the self-information (<strong>todo</strong> <em>what about mutual information of random variables?</em>) is defined as the opposite of the logaritm of the mass function <span class="math notranslate nohighlight">\(p_X(x)\)</span>,</p>
+<ul>
+<li><p class="sd-card-text">4-potential vector, <span class="math notranslate nohighlight">\(\mathbf{A} = \frac{\phi}{c} \mathbf{E}_0 + a^i \mathbf{E}_i\)</span></p></li>
+<li><p class="sd-card-text">4-current vector, <span class="math notranslate nohighlight">\(\mathbf{J} = c \rho \mathbf{E}_0 + j^i \mathbf{E}_i\)</span></p></li>
+<li><p class="sd-card-text">EM field tensor,</p>
 <div class="math notranslate nohighlight">
-\[I_X(x) := - \ln \left( p_X(x) \right) \ .\]</div>
-<p class="sd-card-text">Information content of indenpendent random variables is additive. Since <span class="math notranslate nohighlight">\(p_{X,Y}(x,y) = p_X(x) p_Y(y)\)</span>,</p>
+\[\begin{split}\begin{aligned}
+      \mathbf{F} &amp; = - \mathbf{E}_0 \otimes \mathbf{E}_i \dfrac{e_i}{c} + \dfrac{e_i}{c} \mathbf{E}_i \otimes \mathbf{E}_0 + \varepsilon_{ijk} b_j \mathbf{E}_i \otimes \mathbf{E}_k \\
+      \mathbf{D} &amp; = - \mathbf{E}_0 \otimes \mathbf{E}_i c d_i + d_i \mathbf{E}_i \otimes \mathbf{E}_0 + \varepsilon_{ijk} h_j \mathbf{E}_i \otimes \mathbf{E}_k \\
+    \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or</p>
 <div class="math notranslate nohighlight">
-\[I_{X,Y}(x,y) = - \ln \left( p_{X,Y}(x,y) \right) = -\ln \left( p_X(x) p_Y(y) \right) = - \ln p_X(x) - \ln p_Y(y) \ .\]</div>
-<p class="sd-card-text"><strong>Shannon entropy.</strong> Shannon entropy of a discrete random variable <span class="math notranslate nohighlight">\(X\)</span> is defined as the expected value of the information content,</p>
-<div class="math notranslate nohighlight">
-\[H(X) := \mathbb{E}[ I_X(X)] = \sum p_X(x) I_X(x) = - \sum p_X \ln p_X(x) \ .\]</div>
-<p class="sd-card-text"><strong>Gibbs entropy.</strong> Gibbs entropy was defined by J.W.Gibbs in 1878,</p>
-<div class="math notranslate nohighlight">
-\[S = - k_B \sum_i p_i \ln p_i \ .\]</div>
-<p class="sd-card-text">Additivity holds for independent random variables.</p>
-<p class="sd-card-text"><strong>Boltzmann entropy.</strong> Boltmann entropy holds for uniform distributions over <span class="math notranslate nohighlight">\(\Omega\)</span> possible states, <span class="math notranslate nohighlight">\(p_i = \frac{1}{\Omega}\)</span>. Gibbs’ entropy of this uniform distribution becomes</p>
-<div class="math notranslate nohighlight">
-\[S = - k_B \Omega \frac{1}{\Omega} \ln \frac{1}{\Omega} = k_B \ln \Omega \ .\]</div>
-<p class="sd-card-text"><strong>Entropy in Quantum Mechanics.</strong> <strong>todo</strong></p>
+\[\begin{split}\begin{aligned}
+      \left[F^{\alpha \beta}\right] = \begin{bmatrix} 0 &amp; - \mathbf{e}^T / c \\ \mathbf{e}/c &amp; \mathbf{b}_{\times}  \end{bmatrix}  \qquad , \qquad
+      \left[D^{\alpha \beta}\right] = \begin{bmatrix} 0 &amp; - c \mathbf{d}^T   \\ c \mathbf{d} &amp; \mathbf{h}_{\times}  \end{bmatrix}  \\
+    \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text">4-momentum-energy density tensor, <span class="math notranslate nohighlight">\(\mathbf{T}\)</span></p></li>
+</ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Boltzmann distribution<div class="sd-summary-down docutils">
+Definitions, relations and equations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Given a set of discrete states with probability <span class="math notranslate nohighlight">\(p_i\)</span>, and the average measure as “macroscopic quantity” <span class="math notranslate nohighlight">\(E = \sum_i p_i E_i\)</span>, Boltzann distribution maximizes the entropy (<strong>todo</strong> <em>Link to min info, max uncertainty</em>)</p>
-<div class="math notranslate nohighlight">
-\[S = - k_B \sum_i p_i \ln p_i \ .\]</div>
-<p class="sd-card-text">The distribution follows from the constrained optimization</p>
-<div class="math notranslate nohighlight">
-\[\widetilde{S} = S - \alpha \left( \sum_i p_i -1  \right) - \beta \left( \sum_i p_i E_i - E \right)\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  0 &amp; = \partial_{\alpha} \widetilde{S} = - \sum_i p_i - 1 \\
-  0 &amp; = \partial_{\beta}  \widetilde{S} = - \sum_i p_i E_i - E \\
-  0 &amp; = \partial_{p_k}    \widetilde{S} = -k_B \left( \ln p_k + 1 \right) - \alpha - \beta E_k \\
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">and thus</p>
-<div class="math notranslate nohighlight">
-\[p_k = e^{- 1 - \frac{\alpha}{k_B} - \frac{\beta}{k_B} E_k} = e^{-\left( 1 + \frac{\alpha}{k_B} \right)} e^{- \frac{\beta}{k_B} E_k} = C e^{-\frac{\beta}{k_B} E_k} \ ,\]</div>
-<p class="sd-card-text">and the normalization constant <span class="math notranslate nohighlight">\(C\)</span> is determined by normalization condition</p>
-<div class="math notranslate nohighlight">
-\[1 = \sum_k p_k = C \sum_{k} e^{-\frac{\beta E_k}{k_B}}\]</div>
-<p class="sd-card-text">The inverse <span class="math notranslate nohighlight">\(Z = C^{-1}\)</span> is defined as the <strong>partition function</strong>,</p>
-<div class="math notranslate nohighlight">
-\[ Z = C^{-1} = \sum_k e^{-\frac{\beta E_k}{k_B}}\ ,\]</div>
-<p class="sd-card-text">and the probability distribution becomes</p>
-<div class="math notranslate nohighlight">
-\[p_k = \frac{e^{-\frac{\beta E_k}{k_B}}}{Z} =  \frac{e^{-\frac{\beta E_k}{k_B}}}{ \sum_{i} e^{-\frac{\beta E_i}{k_B}}} \ .\]</div>
-<p class="sd-card-text"><strong>Properties.</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{p_k}{p_i} = e^{-\frac{\beta}{k_B}(E_k - E_i)} \ .\]</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Thermodynamics. Comparison of statistics and classical thermodynamics<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">First principle of classical thermodynamics (for a monocomponent gas with no electric charge,…) reads</p>
-<div class="math notranslate nohighlight">
-\[T \, dS = d E + P \, dV\]</div>
-<p class="sd-card-text"><strong>Entropy for Boltzmann distribution</strong> reads</p>
+<ul>
+<li><p class="sd-card-text">Lorentz’s gauge, <span class="math notranslate nohighlight">\(\nabla \cdot \mathbf{A} = 0\)</span></p></li>
+<li><p class="sd-card-text">EM field tensor, <span class="math notranslate nohighlight">\(\mathbf{F} = \nabla \mathbf{A} - \left( \nabla \mathbf{A} \right)^T\)</span></p></li>
+<li><p class="sd-card-text">4-current continuity equation, <span class="math notranslate nohighlight">\(\nabla \cdot \mathbf{J} = 0\)</span></p></li>
+<li><p class="sd-card-text">Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  S 
-  &amp; = - k_B \sum_i p_i \ln p_i = \\
-  &amp; = - k_B \sum_i \left[ p_i \left( - \frac{\beta E_i}{k_B} - \ln Z \right) \right] = \\
-  &amp; = \beta \langle E \rangle + k_B \ln Z
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">From classical thermodyamics, temperature <span class="math notranslate nohighlight">\(T\)</span> can be defined as the partial derivative of the entropy of a system w.r.t. its internal energy keeping constant all the other independent variables,</p>
+      \mathbf{\nabla} \cdot \mathbf{D} &amp; = \mathbf{J}^f \\
+      \nabla \cdot \left( \symbf{\epsilon} : \mathbf{F} \right) &amp; = \mathbf{0}
+    \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text">Constitutive equations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \frac{1}{T}
-  &amp; = \left.\left( \dfrac{\partial S}{\partial E} \right)\right|_X = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{\partial \ln Z}{\partial E} = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial E} = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \frac{\partial Z}{\partial \beta} \frac{\partial \beta}{\partial E} = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta + k_B \frac{1}{Z} \left( - \sum_i \frac{E_i}{k_B} e^{-\frac{\beta E_i}{k_B}} \right) \frac{\partial \beta}{\partial E} = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta - \left( \sum_i E_i p_i \right) \frac{\partial \beta}{\partial E} = \\
-  &amp; = \dfrac{\partial \beta}{\partial E} E + \beta - E \frac{\partial \beta}{\partial E} = \beta \ .
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text"><strong>todo</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">write the derivative above clearly in terms of composite functions</p></li>
-<li><p class="sd-card-text">microscopical/statistical approach to the first principle of thermodynamics</p></li>
+\[\mathbf{D} = \dfrac{1}{\mu_0} \mathbf{F} + \mathbf{P}\]</div>
+</li>
+<li><p class="sd-card-text">Wave equation for the pontential (what about wave equations for the EM field?)</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \nabla \mathbf{A} = \mu_0 \mathbf{J}\]</div>
+</li>
+<li><p class="sd-card-text">Energy balance equation</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\]</div>
+</li>
+<li><p class="sd-card-text">Equation of motion of a point charge in a EM field,</p>
+<div class="math notranslate nohighlight">
+\[m \mathbf{X}'' = q \mathbf{F} \cdot \mathbf{X}'\]</div>
+</li>
 </ul>
-<div class="math notranslate nohighlight">
-\[d E = d \left( \sum_i p_i E_i \right) = \sum_i E_i \, d p_i + \sum_i p_i d E_i\]</div>
 </div>
-</details></div>
+</details><p><strong>Einstein’s special relativity and Lorentz’s transformations for the EM quantities.</strong> After the equations are derived, Lorentz’s transformations are used to discuss special relativity. Low-speed relations, used in classical electromagnetism for systems with charateristic speed <span class="math notranslate nohighlight">\(v \ll c\)</span>, are derived.</p>
+<p><strong>Lagrangian approach to electromagnetism in special relativity.</strong> Weak form of the equations are derived, and the Lagrangian approach to electromagnetism in special relativity is discussed: both field equations and dynamical equations of charges moving in an electromagnetic field are re-derived with a Lagrangian approach.</p>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -461,7 +428,7 @@ Thermodynamics. Comparison of statistics and classical thermodynamics<div class=
         },
         kernelOptions: {
             name: "python3",
-            path: "./ch/statistical-mechanics"
+            path: "./ch/relativity-special"
         },
         predefinedOutput: true
     }
@@ -479,20 +446,20 @@ Thermodynamics. Comparison of statistics and classical thermodynamics<div class=
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="notes.html"
+       href="lorentz.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Statistical Physics - Notes</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Inertial reference frames and Lorentz’s transformations</p>
       </div>
     </a>
     <a class="right-next"
-       href="../quantum-mechanics/intro.html"
+       href="../relativity-general/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>General Relativity</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

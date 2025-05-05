@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Please check out the Github repo of the project, \sphinxhref{https://github.com/Basics2022}{basics\sphinxhyphen{}book project}.
@@ -123,6 +123,10 @@ Special Relativity
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/relativity-special/lorentz::doc}]{\sphinxcrossref{Inertial reference frames and Lorentz’s transformations}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-special/em::doc}]{\sphinxcrossref{Electromagnetism}}}
 
 \end{itemize}
 \end{itemize}
@@ -197,7 +201,7 @@ Quantum Mechanics
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-standard configuration
+standard configuration: derivation of Lorentz’s transformations from principles and symmetry considerations
 
 \item {} 
 \sphinxAtStartPar
@@ -539,7 +543,7 @@ whose power is
 \begin{split}\symbf{\nabla} \mathbf{A} =
 \left( \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}} \right) \left( A^{\beta} \mathbf{E}_{\beta} \right)
 = \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}^{\alpha} \otimes \mathbf{E}_{\beta} 
-= g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .\end{split}
+= g^{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
 whose components may be collected in a 2\sphinxhyphen{}dimensional array (first index for rows, second index for columns),
@@ -1007,6 +1011,100 @@ the constitutive equations can be written in 4\sphinxhyphen{}dimensional form as
 \sphinxstepscope
 
 
+\chapter{Electromagnetism}
+\label{\detokenize{ch/relativity-special/em:electromagnetism}}\label{\detokenize{ch/relativity-special/em:relativity-special-em}}\label{\detokenize{ch/relativity-special/em::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{From 3\sphinxhyphen{}dimensional to 4\sphinxhyphen{}dimensional formalism.} In this section the 4\sphinxhyphen{}dimensional formalism is introduced, and the 4\sphinxhyphen{}dimensional version of governing equations of electromagnetism that naturally suits special relativity theory is derived starting from the governing equations of \DUrole{xref,myst}{classical electromagnetism}.
+\subsubsection*{Definition of physical quantities}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+4\sphinxhyphen{}potential vector, \(\mathbf{A} = \frac{\phi}{c} \mathbf{E}_0 + a^i \mathbf{E}_i\)
+
+\item {} 
+\sphinxAtStartPar
+4\sphinxhyphen{}current vector, \(\mathbf{J} = c \rho \mathbf{E}_0 + j^i \mathbf{E}_i\)
+
+\item {} 
+\sphinxAtStartPar
+EM field tensor,
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \mathbf{F} & = - \mathbf{E}_0 \otimes \mathbf{E}_i \dfrac{e_i}{c} + \dfrac{e_i}{c} \mathbf{E}_i \otimes \mathbf{E}_0 + \varepsilon_{ijk} b_j \mathbf{E}_i \otimes \mathbf{E}_k \\
+      \mathbf{D} & = - \mathbf{E}_0 \otimes \mathbf{E}_i c d_i + d_i \mathbf{E}_i \otimes \mathbf{E}_0 + \varepsilon_{ijk} h_j \mathbf{E}_i \otimes \mathbf{E}_k \\
+    \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \left[F^{\alpha \beta}\right] = \begin{bmatrix} 0 & - \mathbf{e}^T / c \\ \mathbf{e}/c & \mathbf{b}_{\times}  \end{bmatrix}  \qquad , \qquad
+      \left[D^{\alpha \beta}\right] = \begin{bmatrix} 0 & - c \mathbf{d}^T   \\ c \mathbf{d} & \mathbf{h}_{\times}  \end{bmatrix}  \\
+    \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+4\sphinxhyphen{}momentum\sphinxhyphen{}energy density tensor, \(\mathbf{T}\)
+
+\end{itemize}
+\subsubsection*{Definitions, relations and equations}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Lorentz’s gauge, \(\nabla \cdot \mathbf{A} = 0\)
+
+\item {} 
+\sphinxAtStartPar
+EM field tensor, \(\mathbf{F} = \nabla \mathbf{A} - \left( \nabla \mathbf{A} \right)^T\)
+
+\item {} 
+\sphinxAtStartPar
+4\sphinxhyphen{}current continuity equation, \(\nabla \cdot \mathbf{J} = 0\)
+
+\item {} 
+\sphinxAtStartPar
+Maxwell’s equations
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \mathbf{\nabla} \cdot \mathbf{D} & = \mathbf{J}^f \\
+      \nabla \cdot \left( \symbf{\epsilon} : \mathbf{F} \right) & = \mathbf{0}
+    \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Constitutive equations
+\begin{equation*}
+\begin{split}\mathbf{D} = \dfrac{1}{\mu_0} \mathbf{F} + \mathbf{P}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Wave equation for the pontential (what about wave equations for the EM field?)
+\begin{equation*}
+\begin{split}\nabla \cdot \nabla \mathbf{A} = \mu_0 \mathbf{J}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Energy balance equation
+\begin{equation*}
+\begin{split}\nabla \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Equation of motion of a point charge in a EM field,
+\begin{equation*}
+\begin{split}m \mathbf{X}'' = q \mathbf{F} \cdot \mathbf{X}'\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Einstein’s special relativity and Lorentz’s transformations for the EM quantities.} After the equations are derived, Lorentz’s transformations are used to discuss special relativity. Low\sphinxhyphen{}speed relations, used in classical electromagnetism for systems with charateristic speed \(v \ll c\), are derived.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrangian approach to electromagnetism in special relativity.} Weak form of the equations are derived, and the Lagrangian approach to electromagnetism in special relativity is discussed: both field equations and dynamical equations of charges moving in an electromagnetic field are re\sphinxhyphen{}derived with a Lagrangian approach.
+
+\sphinxstepscope
+
+
 \part{General Relativity}
 
 \sphinxstepscope
@@ -1134,7 +1232,7 @@ and the average occupation number of one of the \(g_k\) sublevels in the \(k\) l
 \begin{split}n_k := \frac{N_k}{G_k} = \frac{1}{e^{\alpha + \beta E_k} - 1}\end{split}
 \end{equation*}\subsubsection*{\sphinxstylestrong{Meaning of \protect\(\alpha\protect\), \protect\(\beta\protect\)}}
 \label{ch/statistical-mechanics/notes:example-0}
-\begin{sphinxadmonition}{note}{Example 7.5.1 (Black\sphinxhyphen{}body radiation: Planck, Wien, and Stefan\sphinxhyphen{}Boltzmann laws)}
+\begin{sphinxadmonition}{note}{Example 8.5.1 (Black\sphinxhyphen{}body radiation: Planck, Wien, and Stefan\sphinxhyphen{}Boltzmann laws)}
 
 
 
@@ -1292,7 +1390,7 @@ The value of the integral is \(\frac{\pi^4}{15}\) and thus
 \begin{split}\frac{P}{A} = \sigma T^4 \qquad , \qquad \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} \ .\end{split}
 \end{equation*}\end{sphinxadmonition}
 \label{ch/statistical-mechanics/notes:example-1}
-\begin{sphinxadmonition}{note}{Example 7.5.2 (Energy density and radiance)}
+\begin{sphinxadmonition}{note}{Example 8.5.2 (Energy density and radiance)}
 
 
 
@@ -1516,12 +1614,12 @@ angluar momentum, spin, and atom
 
 \section{Mathematical tools for quantum mechanics}
 \label{\detokenize{ch/quantum-mechanics/intro:mathematical-tools-for-quantum-mechanics}}\label{ch/quantum-mechanics/intro:Operator}
-\begin{sphinxadmonition}{note}{Definition 9.1.1 (Operator)}
+\begin{sphinxadmonition}{note}{Definition 10.1.1 (Operator)}
 
 
 \end{sphinxadmonition}
 \label{ch/quantum-mechanics/intro:Adjoint Operator}
-\begin{sphinxadmonition}{note}{Definition 9.1.2 (Adjoint operator)}
+\begin{sphinxadmonition}{note}{Definition 10.1.2 (Adjoint operator)}
 
 
 
@@ -1534,7 +1632,7 @@ Given an operator \(\hat{A}: U \rightarrow V\), its adjoint operator \(\hat{A}^*
 holds for \(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\).
 \end{sphinxadmonition}
 \label{ch/quantum-mechanics/intro:Self-Adjoint Operator}
-\begin{sphinxadmonition}{note}{Definition 9.1.3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
+\begin{sphinxadmonition}{note}{Definition 10.1.3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
 
 
 

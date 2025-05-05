@@ -12,6 +12,7 @@ parts:
   - file: ch/relativity-special/intro
   - file: ch/relativity-special/notes
   - file: ch/relativity-special/lorentz
+  - file: ch/relativity-special/em
 - caption: General Relativity
   numbered: True
   chapters:

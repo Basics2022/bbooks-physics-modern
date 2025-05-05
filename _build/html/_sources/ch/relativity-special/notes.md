@@ -251,7 +251,7 @@ $$\mathbf{A} = \mathbf{E}_{\alpha} A^{\alpha} = \frac{\varphi}{c} \mathbf{E}_0 +
 $$\symbf{\nabla} \mathbf{A} =
 \left( \mathbf{E}^{\alpha} \frac{\partial}{\partial X^{\alpha}} \right) \left( A^{\beta} \mathbf{E}_{\beta} \right)
 = \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}^{\alpha} \otimes \mathbf{E}_{\beta} 
-= g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .$$
+= g^{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .$$
 
 whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),
 
