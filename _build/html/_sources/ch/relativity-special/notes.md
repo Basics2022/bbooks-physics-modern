@@ -3,13 +3,15 @@
 
 An event is determined by spatio-temporal information together, $t, \vec{r}$. Absolute nature of physics needs vector algebra and calculus formalism
 
-$$\mathbf{X} = c  \,t  \,\mathbf{e}_0 + \vec{r} =  c \, t \, \mathbf{e}_0 + x^1 \mathbf{e}_1 + x^2 \mathbf{e}_2 + x^3 \mathbf{e}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,$$
+$$\mathbf{X} = c  t  \mathbf{E}_0 + \vec{r} =  c  t  \mathbf{E}_0 + x^1 \mathbf{E}_1 + x^2 \mathbf{E}_2 + x^3 \mathbf{E}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,$$
 
 having used Cartesian coordiantes for the space coordinate.
 
-Minkowski metric reads
+**Geometry of time-space in special relativity.** Minkowski metric reads
 
 $$g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{1, -1, -1, -1\}$$
+
+```{dropdown} Reciprocal basis
 
 The reciprocal basis reads $\mathbf{E}_{\alpha} \cdot \mathbf{E}^{\beta} = \delta_{\alpha}^{\beta}$, $\mathbf{E}_{\alpha} = g_{\alpha \beta} \mathbf{E}^{\beta}$, s.t. the elementary interval between two events can be written as
 
@@ -23,16 +25,18 @@ $$
   \begin{aligned}  & X^2 =   y \\  & X_2 =  -y \end{aligned} \qquad
   \begin{aligned}  & X^3 =   z \\  & X_3 =  -z \end{aligned}
 $$
-
+```
+<!--
 Its "length", or better pseudo-norm with Minkowski metric, is invariant and reads
+-->
+
+**Elementary interval** between two events
 
 $$d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 $$
 
-```{note} $ds$ is invariant
-**todo** prove it. And/or add a section about the role of invariance.
-```
+## Kinematics of point
 
-For a co-moving observer, $d \vec{r}' = \vec{0}$, and $t'$ is commonly indicated with $\tau$, and its differential is invariant itself, being the product of a constant ($c$ is a universal constant in special relativity) and an invariant quantity.
+**Proper time.** For a co-moving observer, $d \vec{r}' = \vec{0}$, and $t'$ is commonly indicated with $\tau$, and its differential is invariant itself, being the product of a constant ($c$ is a universal constant in special relativity) and an invariant quantity.
 
 $$d s^2 = c^2 dt'^2 - |d \vec{r}'|^2 = c^2 d \tau^2 \ .$$
 
@@ -46,7 +50,12 @@ $$d s = c \, d \tau = \gamma^{-1}(v/c) \, c \, dt \ ,$$
 
 with $\gamma(w) = \frac{1}{\sqrt{1 - w^2}}$. 
 
-**4-Velocity** Given the parametric representation of an event in space-time as a function of its proper time, $\mathbf{X}(\tau)$ or coordinate $s$, $\mathbf{X}(s)$ the derivative w.r.t. this parameter is defined as the 4-velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis $\mathbf{E}_{\alpha}$, as a function of the observer time $t$, $c t$, $x^i(t)$, and the transformation of coordinates $t(\tau)$, with differential $d t = \frac{1}{\gamma} \, d \tau$
+```{note} $ds$ is invariant
+**todo** prove it. And/or add a section about the role of invariance.
+```
+
+
+**4-Velocity.** Given the parametric representation of an event in space-time as a function of its proper time, $\mathbf{X}(\tau)$ or coordinate $s$, $\mathbf{X}(s)$ the derivative w.r.t. this parameter is defined as the 4-velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis $\mathbf{E}_{\alpha}$, as a function of the observer time $t$, $c t$, $x^i(t)$, and the transformation of coordinates $t(\tau)$, with differential $d t = \frac{1}{\gamma} \, d \tau$
 
 $$\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)$$
 
@@ -64,7 +73,7 @@ Using $\tau$ as the parameter, $\mathbf{U}$ has physical dimension of a velocity
 
 **4-acceleration** $\mathbf{X}''(\tau)$ or $\mathbf{X}''(s)$, **todo**
 
-## Dynamics
+## Dynamics of a point mass
 
 **4-momentum**
 
@@ -73,6 +82,8 @@ $$\mathbf{P} = m \mathbf{U}$$
 Using Cartesian coordinates and $\tau$ as independent variable,
 
 $$\mathbf{P} = m \mathbf{U} = m \frac{d \mathbf{X}}{d \tau} = m \gamma (c, \vec{v}) \ .$$
+
+```{dropdown} Low-speed limit - classical mechanics
 
 The spatial component is $\gamma$ times the 3-dimensional momentum $\vec{p} = m \vec{v}$; the time component reads
 
@@ -98,8 +109,12 @@ $$\gamma(w) = 1 + \frac{1}{2} w^2 + o(w^2)$$
 and
 
 $$\gamma(v/c) \, m \, c \sim m \, c \left( 1 + \frac{v^2}{c^2} \right) = \frac{1}{c} \left( mc^2 + \frac{1}{2} m |\vec{v}|^2 \right) $$
+```
 
-Thus, recognizing energy ($E = \gamma m c^2$) and 3-momentum ($\vec{p} = m_3 \vec{v}$, with $m_3 := \gamma m$), the 4-momentum can be written as
+```{dropdown} Energy-momentum relation
+Recognizing energy ($E = \gamma m c^2$) and 3-momentum ($\vec{p} = m_3 \vec{v}$, with $m_3 := \gamma m$)[^e-p-from-lagrange], the 4-momentum can be written as
+
+[^e-p-from-lagrange]: This definitions naturally arise in Lagrange approach.
 
 $$\mathbf{P} = m \mathbf{U} = \gamma m \left( 1, \frac{\vec{v}}{c} \right) =: \frac{1}{c} \left( \frac{E}{c}, \vec{p} \right)$$
 
@@ -119,81 +134,124 @@ and keeping only the solution with positive energy (**todo** *reference to Dirac
 
 $$E = m c^2 \ .$$
 
+```
+
+**4-force and dynamical equation for a point mass.** The dynamical equation of a point mass subject to a 4-force $\mathbf{f}$ reads
+
+$$\dfrac{d \mathbf{P}}{d \tau} = \mathbf{f} \ .$$ (eq:point:dynamics)
+
+Examples:
+- **Free particle** is subject to no net force, $\mathbf{f}$,
+- Point charge $q$ in EM field is subject to **Lorentz force**, $\mathbf{f} = q \mathbf{F} \cdot \mathbf{U}$, being $\mathbf{F}$ the EM field tensor, {eq}`eq:tensor:em-field`,
+
+   $$\mathbf{F} = \nabla \mathbf{A} - \left( \nabla \mathbf{A} \right)^T \ .$$
+
 ### Lagrangian approach
 
-**Free particle.**
+Here variational approach to the motion of point particle in a force field $\mathbf{f}$ is derived from the weak form of the dynamical equation {eq}`eq:point:dynamics`. In particular, the derivation is performed for a particle moving in a known EM field. The motion of a free particle immediately follows if the EM field is zero.
 
-$$\mathbf{0} = \frac{d \mathbf{P}}{d s} = \frac{d }{d s} \left( m \mathbf{X}'(s) \right)$$
+$$m \dfrac{d \mathbf{U}}{d \tau} = q \mathbf{F} \cdot \mathbf{U}$$
 
-Weak form
+The equation of motion can be manipulated to get Lagrange equations
 
 $$\begin{aligned}
-  0
-  & = \mathbf{W}(s) \cdot \frac{d }{d s} \left( m \mathbf{X}'(s) \right) = \\
-  & = \frac{d }{d s} \left[ m \mathbf{W}(s) \cdot \mathbf{X}'(s) \right] - m \mathbf{W}'(s) \cdot \mathbf{X}'(s)  = \\
+  \mathbf{0} 
+  & = m \dfrac{d \mathbf{U}}{d \tau} - q \nabla \mathbf{A} \cdot \mathbf{U} + q \left( \nabla \mathbf{A} \right)^T \cdot \mathbf{U} = \\
+  & = \dfrac{d}{d\tau} \left[ m \mathbf{U} + q \mathbf{A}(\mathbf{X}(\tau)) \right] - \nabla \left( q \mathbf{A} \cdot \mathbf{U} \right) = (1) \\
+  & = \dfrac{d}{d\tau} \left[ \mathbf{E}^\alpha \dfrac{\partial}{\partial U^\alpha} \left( m c \sqrt{\mathbf{U} \cdot \mathbf{U}}  + q \mathbf{A}(\mathbf{X}(\tau)) \cdot \mathbf{U} \right) \right] - \mathbf{E}^\alpha \dfrac{\partial}{\partial X^\alpha} \left( m c \sqrt{\mathbf{U} \cdot \mathbf{U}}  + q \mathbf{A} \cdot \mathbf{U} \right) = (2) \\
+  & = \mathbf{E}^{\alpha} \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial X^{'\alpha}} - \dfrac{\partial \mathscr{L}}{\partial X^{\alpha}} \right] = \\
+  & = \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}}
+\end{aligned}$$ (eq:point:dynamics:lagrange)
+
+since (1) $\mathbf{U} = \mathbf{E}^{\alpha} U_\alpha = c \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}$, see {eq}`eq:proof:vel:der-c2`, and $\sqrt{\mathbf{U} \cdot \mathbf{U}}$ independent from $\mathbf{X}$, and equal to $c^2$ and (2) with the definition of the **Lagrangian function**
+
+$$\mathscr{L}(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau) := - m c \sqrt{\mathbf{X}'(\tau) \cdot \mathbf{X}'(\tau)} - q \mathbf{A}(\mathbf{X}(\tau)) \cdot \mathbf{X}'(\tau)$$
+
+```{dropdown} Proof of the relation used in (1)
+:open:
+
+$$\begin{aligned}
+   \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}
+   & = \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{ g_{\beta \gamma} U^{\beta} U^{\gamma}} = \\
+   & = \mathbf{E}^{\alpha} \dfrac{1}{2 \sqrt{U^\beta U_\beta}} \left( g_{\beta \gamma} \delta^{\beta}_{\alpha} U^{\gamma} +  g_{\beta \gamma} U^{\beta}\delta_{\alpha}^{\gamma} \right) = \\
+   & = \mathbf{E}^{\alpha} \dfrac{1}{2 \sqrt{U^\beta U_\beta}} \left( 2 U_{\alpha} \right) = \\
+   & = \mathbf{E}^{\alpha} \dfrac{U_{\alpha}}{\sqrt{U^\beta U_\beta}} = \\
+   & = \dfrac{\mathbf{U}}{\sqrt{\mathbf{U} \cdot \mathbf{U}}}     
+     = \dfrac{\mathbf{U}}{c}  \ .
+\end{aligned}$$ (eq:proof:vel:der-c2)
+
+since $\mathbf{U} \cdot \mathbf{U} = c^2$ and the components of the metric tensor are independent from the velocity.
+
+```
+
+Weak form of the problem is derived from the Lagrange equation {eq}`eq:point:dynamics:lagrange`, with dot product with arbitrary 4-vector $\mathbf{W}$,
+
+$$\begin{aligned}
+  0 
+  & = \mathbf{W} \cdot \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \ .
 \end{aligned}$$
 
-Using generalized coordinates $q^k(s)$, the event can be written in parametric form as $\mathbf{X}(q^k(s), s)$, while the velocity reads
-
-$$\mathbf{U}(s) = \mathbf{X}'(s) = \frac{d}{ds} \mathbf{X}(q^k(s), s) = {q^k}'(s) \underbrace{\frac{\partial \mathbf{X}}{\partial q^k}(q^k(s), s)}_{=\frac{\partial \mathbf{X}'}{\partial {q^k}'}} + \frac{\partial \mathbf{X}}{\partial s}(q^k(s), s) = \mathbf{U}({q^k}'(s), q^k(s), s)$$
-
-Choosing $\mathbf{W} = \frac{\partial \mathbf{X}}{\partial q^k} = \frac{\partial \mathbf{X}'}{\partial {q^k}'}$ in the weak form,
+and integrating over an interval of proper time and using integration by parts,
 
 $$\begin{aligned}
-0  
-& = \frac{d }{d s} \left[ m \mathbf{W} \cdot \mathbf{X}' \right] - m \mathbf{W}' \cdot \mathbf{X}' = \\
-& = \frac{d }{d s} \left[ m \frac{\partial \mathbf{X}'}{\partial {q^k}'} \cdot \mathbf{X}' \right] - m \dfrac{d}{ds} \frac{\partial \mathbf{X}}{\partial {q^k}} \cdot \mathbf{X}' = \\
-& = \frac{1}{2} \left[ \frac{d}{d s} \left( \frac{\partial}{\partial {q^k}'}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right) - \frac{\partial}{\partial q^k}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right] =
+  0 
+  & = \int_{\tau = \tau_0}^{\tau_1} \mathbf{W} \cdot \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \, d \tau = \\
+  & = \left.\left[ \mathbf{W}(\tau) \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}'}(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau) \right]\right|_{\tau_0}^{\tau_1} - \int_{\tau = \tau_0}^{\tau_1} \left[ \mathbf{W}' \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} +  \mathbf{W} \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \, d \tau \ .
 \end{aligned}$$
 
-Defining
+With the choice of the test function $\mathbf{W}(\tau)$ as the variation of the position of the particle, $\mathbf{W} = \delta \mathbf{X}$ just to remember its variational nature, with given values at $\tau_0$, $\tau_1$ and thus $\mathbf{W}(\tau_0) = \mathbf{W}(\tau_1) = 0$, the weak form of the dynamical equations is thus recast as the stationary condition of an action functional in a **variational principle**,
 
-$$ f\left({q^k}'(s), q^k(s), s \right) = - m \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) \cdot \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) = - m \ ,$$
+$$0 = - \delta S = - \delta \int_{\tau = \tau_0}^{\tau_1} \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, d \tau \ .$$
 
-multiplying by a "regular" generic function $w(s)$, neglecting factor $\frac{1}{2}$ and integrating by parts
+**todo** *Repeat the process using generalized coordinates $q^k(\tau)$, $\mathbf{X}(q^k(\tau), \tau)$*...
+```{dropdown} Lagrange equations and variational principle with generalized coordinates
+
+
+Choosing the test function as it's usually done in deriving Lagrange formulation of mechanics from the strong formulation, after writing the position and its velocity of the particle as a function of generalized coordinates $q^k$,
 
 $$\begin{aligned}
- 0
- & = - \int_{s=s_a}^{s_b} w(s) \left[ \frac{d}{ds} \frac{\partial f}{\partial {q^k}'} - \frac{\partial f}{\partial q^k} \right] \, ds = \\
- & = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \int_{s=s_a}^{s_b} \left[ w'(s) \frac{\partial f}{\partial {q^k}'} + \frac{\partial f}{\partial q^k} \right] \, ds = \\
- & = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ .
+  & \mathbf{X}\left(q^k(\tau), \tau \right) \\
+  & \mathbf{U}\left(q^k(\tau), \tau \right) = \dfrac{d \mathbf{X}}{d \tau} = q^{k'}(\tau) \underbrace{\dfrac{\partial \mathbf{X}}{\partial q^k}}_{= \dfrac{\partial \mathbf{X}'}{\partial q^{k'}}} + \dfrac{\partial \mathbf{X}}{\partial \tau} \\
 \end{aligned}$$
 
-Thus, provided that $w(s_1) = w(s_2) = 0$, equation of motion of free particle implies stationariety of functional 
 
-$$\int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ ,$$
+With the particular choice of the test function, $\mathbf{W} = w^k(\tau) \dfrac{\partial \mathbf{X}}{\partial q^k}(q^l(\tau),\tau)$
 
-i.e.
+```
 
-$$\delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds = 0$$
-
-Using $t$ as independent parameter, $ds = \gamma^{-1} \, c \, dt$, the functional can be recast as
-
-$$\int_{t=t_a}^{t_b}  -m \, c  \, \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, dt \ ,$$
-
-to find the (3-dimensional) Lagrangian (multiply by $c$ to get the right physical dimension; check if it's required and wheter it's possible to make $c$ appear before),
-
-$$\mathscr{L} = - \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, m \, c^2 \ ,$$
-
-and retrieve 3-momentum as (being $\vec{v} = \dot{\vec{r}})$
+**Variational principle as a function of time.** Using the relation between proper time $\tau$ and the observer time $t$, $d \tau = \gamma^{-1} \, d t = \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} d t$,
 
 $$\begin{aligned}
-  \vec{p} 
-  & := \frac{\partial \mathscr{L}}{\partial \dot{\vec{r}}} = \\
-  &  = - m c^2 \frac{1}{2} \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \left( - 2 \frac{\vec{v}}{c^2}\right) = \\
-  &  = m \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \vec{v} = \\
-  &  = \gamma \, m \, \vec{v} \ ,
+  S
+  & = \int_{\tau = \tau_0}^{\tau_1} \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, d \tau = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, \gamma^{-1} \, d t = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \sqrt{1 - \dfrac{|\vec{v}|^2}{c^2}} \left( - m c^2 - \gamma q \phi(\vec{r},t) + \gamma q \vec{a}(\vec{r},t) \cdot \vec{v}(t) \right) \, d t = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \left( - \sqrt{1 - \dfrac{|\vec{v}|^2}{c^2}} m c^2 - q \phi(\vec{r},t) + q \vec{a}(\vec{r},t) \cdot \vec{v}(t) \right) \, d t = \\
+  & = \int_{t = t_0}^{t_1} L\left(\vec{v}(t), \vec{r}(t), t \right) \, dt
 \end{aligned}$$
 
-and energy as
+**Three-dimensional momentum** can be defined as the partial derivative of the Lagrangian function $L$ w.r.t. the velocity $\vec{v}$,
+
+$$\vec{p} := \dfrac{\partial L}{\partial \vec{v}} = \gamma \dfrac{\vec{v}}{c^2}  m c^2 + q \vec{a} = \gamma m \vec{v} + q \vec{a}$$
+
+The Hamiltoninan function reads
 
 $$\begin{aligned}
-  E
-  & := \vec{p} \cdot \vec{v} - \mathscr{L} = \\
-  & = \gamma \, m \, |\vec{v}|^2 + \gamma^{-1} \, m \, c^2 = \\
-  & = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + \gamma^{-2} \right) = \\
-  & = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + 1 - \frac{|\vec{v}|^2}{c^2} \right) = \\
-  & = \gamma \, m \, c^2 \ .
+  H
+  & = \vec{v} \cdot \dfrac{\partial L}{\partial \vec{v}} - L = \\
+  & = \gamma m |\vec{v}|^2 + q \vec{a} \cdot \vec{v} + \gamma^{-1} m c^2 + q \phi - q \vec{a} \cdot \vec{v} = \\
+  & = \gamma m |\vec{v}|^2 \left[ 1 + \left( 1 - \dfrac{|\vec{v}|^2}{c^2} \right) \dfrac{c^2}{|\vec{v}|^2} \right] + q \phi = \\
+  & = \gamma m c^2 + q \phi \ .
+\end{aligned}$$
+
+The expressions of the Hamiltonian function (divided by the light speed) and the three-dimensional momentum can be recognized to be respectively the time and space components of 4-momentum,
+
+$$\mathbf{P} = m \mathbf{U} + q \mathbf{A} \ ,$$
+
+remembering the expression of the contravariant components of the 4-velocity and the 4-EM potential,
+
+$$\begin{aligned}
+  \left[\mathbf{P}\right]^{\alpha} = \left( \gamma m c + q \dfrac{\phi}{c} , \ \gamma m \vec{v} + q \vec{a} \right) = \left( \dfrac{H}{c} , \ \vec{p}  \right)
 \end{aligned}$$
 
 
@@ -285,7 +343,7 @@ $$(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\al
 
 The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,
 
-$$\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]$$
+$$\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]$$ (eq:tensor:em-field)
 
 whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),
 
