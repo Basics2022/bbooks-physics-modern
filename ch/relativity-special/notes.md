@@ -483,9 +483,27 @@ $$m \, \mathbf{X}'' = q \, \mathbf{F} \cdot \mathbf{X}'$$
 
 ### Energy balance
 
+Continuity
+
+$$\nabla \cdot \mathbf{J} = 0$$
+
+Maxwell's equations
+
 $$\begin{aligned}
-  \frac{\partial u      }{\partial t} & = \\
-  \frac{\partial \vec{s}}{\partial t} & = \\
+  \nabla \cdot \mathbf{D} = \mathbf{J} \\
+  \nabla \cdot \left( \symbf{\varepsilon} : \mathbf{F} \right) = \mathbf{0} \\
+\end{aligned}$$
+
+Energy
+
+$$\begin{aligned}
+  \frac{\partial u      }{\partial t} + \nabla \cdot \vec{s} & = - \vec{e} \cdot \vec{j}^f \\
+  \frac{\partial \vec{s}}{\partial t} + \nabla \cdot \left\{ c^2 \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] \right\} & = - c^2 (\rho^f \vec{e} - \vec{b} \times \vec{j}^f) \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) & = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
+  \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] & = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
 \end{aligned}$$
 
 ...
@@ -493,6 +511,11 @@ $$\begin{aligned}
 $$\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}$$
 
 
+$$\dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} = J^{\beta}$$
+
+$$\begin{aligned}
+  - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} & = - F_{\gamma \beta} J^{\beta}
+\end{aligned}$$
 
 
 

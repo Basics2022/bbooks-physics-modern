@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -822,14 +813,35 @@ $$\begin{aligned}
 </div>
 <div class="section" id="energy-balance">
 <h3><span class="section-number">2.3.5. </span>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h3>
+<p>Continuity</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \mathbf{J} = 0\]</div>
+<p>Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \frac{\partial u      }{\partial t} &amp; = \\
-  \frac{\partial \vec{s}}{\partial t} &amp; = \\
+  \nabla \cdot \mathbf{D} = \mathbf{J} \\
+  \nabla \cdot \left( \symbf{\varepsilon} : \mathbf{F} \right) = \mathbf{0} \\
+\end{aligned}\end{split}\]</div>
+<p>Energy</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{\partial u      }{\partial t} + \nabla \cdot \vec{s} &amp; = - \vec{e} \cdot \vec{j}^f \\
+  \frac{\partial \vec{s}}{\partial t} + \nabla \cdot \left\{ c^2 \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] \right\} &amp; = - c^2 (\rho^f \vec{e} - \vec{b} \times \vec{j}^f) \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) &amp; = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
+  \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] &amp; = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
 \end{aligned}\end{split}\]</div>
 <p>…</p>
 <div class="math notranslate nohighlight">
 \[\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\]</div>
+<div class="math notranslate nohighlight">
+\[\dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} = J^{\beta}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} &amp; = - F_{\gamma \beta} J^{\beta}
+\end{aligned}\]</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="e-p-from-lagrange"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
