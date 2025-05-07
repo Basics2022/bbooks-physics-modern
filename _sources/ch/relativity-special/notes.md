@@ -626,146 +626,63 @@ $$\begin{aligned}
 ```{dropdown} Energy-momentum-stress tensor
 :open:
 
+**todo** *Complete*
+
 Contravariant (Cartesian in space) components of the energy-momentu-stress tensor can be collected in a symmetric matrix
+
+$$\mathbf{T}' = \symbf{\Lambda} \mathbf{T} \symbf{\Lambda}^T$$
+
+$$\mathbf{T} = \begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}$$
+
+$$\symbf{\Lambda} = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} = \gamma \begin{bmatrix} 1 & - \mathbf{v}^T \\ -\mathbf{v} & \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} + \begin{bmatrix} 0 & \mathbf{0}^T \\ \mathbf{0} & \mathbf{I} - \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix}
+= \begin{bmatrix}  \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} $$
+
+
+$$\begin{aligned}
+ \mathbf{T}' 
+ & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix}
+\begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} = \\
+ & =
+\begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & \frac{\gamma}{c} \mathbf{s}^T - \gamma \mathbf{v}^T \symbf{\sigma} \\ -\gamma u \mathbf{v} + \mathbf{P} \frac{\mathbf{s}}{c} & -\frac{\gamma}{c} \mathbf{v} \mathbf{s}^T + \mathbf{P} \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P}  \end{bmatrix} = \\
+ & =\begin{bmatrix}
+      \gamma^2 u - 2 \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} + \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{v} &
+      -\gamma^2 u \mathbf{v}^T + \frac{\gamma^2}{c} \mathbf{s}^T \mathbf{v} \mathbf{v}^T + \frac{\gamma}{c} \mathbf{s}^T \mathbf{P} - \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{P} \\
+      -\gamma^2 u \mathbf{v} + \frac{\gamma}{c} \mathbf{P} \mathbf{s} + \frac{\gamma^2}{c} \mathbf{v} \mathbf{s}^T \mathbf{v}  - \gamma  \mathbf{P}\symbf{\sigma} \mathbf{v} &
+      \gamma^2 u \mathbf{v} \mathbf{v}^T - \frac{\gamma}{c} \left( \mathbf{P} \mathbf{s} \mathbf{v}^T + \mathbf{v} \mathbf{s}^T \mathbf{P} \right) + \mathbf{P} \symbf{\sigma} \mathbf{P}
+    \end{bmatrix}
+\end{aligned}$$
+
+<!--
 
 $$\begin{aligned}
   \begin{bmatrix} u' & \mathbf{s}^{'T}/c \\ \mathbf{s}'/c & \symbf{\sigma}' \end{bmatrix} 
   & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
-  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} \gamma c v d_v & - c \mathbf{d}^T - (\gamma-1) c d_v \hat{\mathbf{v}}^T \\ \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} & -\gamma c \mathbf{d} \mathbf{v}^T + \mathbf{h}_\times + (\gamma-1) \mathbf{h}_\times \mathbf{\hat{v}} \mathbf{\hat{v}}^T \end{bmatrix} = \\
-  & = \begin{bmatrix} 0 & \text{anti-sym} \\ c \mathbf{d}' & \mathbf{h}'_{\times} \end{bmatrix} = \\
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+\end{aligned}$$
+
+$$\begin{aligned}
+& = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix}  \begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & - \gamma u \mathbf{v}^T + \frac{1}{c} \left( \mathbf{s}^T + (\gamma-1) \mathbf{s}^T \hat{\mathbf{v}} \hat{\mathbf{v}}^T \right) \\ \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v}  & - \frac{\gamma}{c} \mathbf{s}\mathbf{v}^T + \symbf{\sigma} + (\gamma - 1)\symbf{\sigma} \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} = \\
+  & = \begin{bmatrix}  u' & \mathbf{s}'^T / c \\ \mathbf{s}' / c & \symbf{\sigma}' \end{bmatrix} \ ,
 \end{aligned}$$
 
 with
 
-$$\begin{aligned}
-  c \mathbf{d}'
-  & = - \gamma^2 c v^2 \mathbf{\hat{v}} d_v + \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} + \gamma(\gamma-1) c \hat{\mathbf{v}}d_v
-  = \\
-  & = c \gamma^2 \hat{\mathbf{v}} d_v \underbrace{(1 - v^2)}_{= \gamma^{-2}} + \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} - \gamma c \hat{\mathbf{v}} d_v = \\
-  & = \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} + ( 1 - \gamma ) c \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{d} \ ,
-\end{aligned}$$
-
-and
+$$
+ u' = \gamma^2 \left( u - 2 \frac{1}{c} \mathbf{v}^T \mathbf{s} + \gamma^2 \mathbf{v}^T \symbf{\sigma} \mathbf{v} \right)
+$$
 
 $$\begin{aligned}
-  \mathbf{h}'_{\times} & = && (1) \\
-  & = \gamma c v \hat{\mathbf{v}} \mathbf{d}^T + \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + \\
-  & - \gamma c v \mathbf{d} \hat{\mathbf{v}} + \mathbf{h}_{\times} + (\gamma - 1) (\mathbf{h} \times \hat{\mathbf{v}}) \hat{\mathbf{v}}^T - \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + (\gamma-1) \hat{\mathbf{v}} \mathbf{v}^T \mathbf{h}_{\times} + \mathbf{0} = && (2) \\
-  & = \gamma c v \left( \hat{\mathbf{v}} \mathbf{d}^T - \mathbf{d} \hat{\mathbf{v}}^T \right) + \mathbf{h}_{\times} + (\gamma-1) \left( \left( \mathbf{h}_\times \hat{\mathbf{v}}  \right) \hat{\mathbf{v}}^T  - \hat{\mathbf{v}} \left( \mathbf{h}_\times \hat{\mathbf{v}}\right)^T \right) = && (3) \\
-  & = \gamma c v \left( \mathbf{d} \times \hat{\mathbf{v}} \right)_{\times} + \mathbf{h}_{\times} + (\gamma-1) \left( \hat{\mathbf{v}} \times (\mathbf{h} \times \hat{\mathbf{v}}) \right)_{\times}
-\end{aligned}$$
-
-having (1) recognized that $\hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{h}_\times \hat{\mathbf{v}} \hat{\mathbf{v}}^T = \hat{\mathbf{v}}( \hat{\mathbf{v}} \cdot ( \mathbf{h} \times \hat{\mathbf{v}}) ) \hat{\mathbf{v}} = \mathbf{0}$, (2) $\{ \mathbf{v}^T \mathbf{h}_{\times} \}_k = v_i \varepsilon_{ijk} h_j = - \{ \mathbf{h}\times \hat{\mathbf{v}} \}_k$ and (3)
-
-$$\begin{aligned}
-  \left[ \left(\mathbf{a}_{\times} \mathbf{b} \right)_{\times} \right]_{ij} 
-  & = \varepsilon_{ikj} \varepsilon_{klm} a_l b_m = \\
-  & = \left( \delta_{jl} \delta_{im} - \delta_{jm} \delta_{il} \right) a_l b_m = \\
-  & = a_j b_i - a_i b_j = \left[ \mathbf{b} \mathbf{a}^T - \mathbf{a} \mathbf{b}^T \right]_{ij} \ . 
-\end{aligned}$$
-
-Thus 
-
-$$\begin{aligned}
-\mathbf{h}' 
-  & = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) (\mathbf{h} \times \hat{\mathbf{v}}) \times \hat{\mathbf{v}} = \\
-  & = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \left( \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} - \mathbf{h}  \right) = \\
-  & = \gamma \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} \ .
-\end{aligned}$$
-
-Going back from non dimensional velocity to dimensional velocity $c \mathbf{v} \rightarrow \mathbf{v}$,
-
-$$\begin{aligned}
-  \mathbf{d}' & = \gamma \left( \mathbf{d} - \dfrac{\mathbf{h} \times \mathbf{v}}{c^2} \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{d} \\
-  \mathbf{h}' & = \gamma \left( \mathbf{h} - \mathbf{v} \times \mathbf{d} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{h} \\
-\end{aligned}$$
-
-Repeating the same process for the electromagnetic field tensor
-
-$$\begin{aligned}
-  \left[\mathbf{F}\right]^{\alpha \beta} = \begin{bmatrix} 0 & - \dfrac{\mathbf{e}^T}{c} \\ \dfrac{\mathbf{e}}{c} & \mathbf{b}_{\times} \end{bmatrix} 
+  \frac{\mathbf{s}'}{c} 
+  & = -\gamma u \mathbf{v} - \frac{\gamma}{c} \mathbf{v} \mathbf{v}^T \mathbf{s} + \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v} + \frac{\gamma}{c}(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{s} - \gamma(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \symbf{\sigma} \mathbf{v} \\
 \end{aligned}$$
 
 $$\begin{aligned}
-  \mathbf{e}' & = \gamma \left( \mathbf{e} -        \mathbf{b} \times \mathbf{v}       \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{e} \\
-  \mathbf{b}' & = \gamma \left( \mathbf{b} - \dfrac{\mathbf{v} \times \mathbf{e}}{c^2} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{b} \\
+  \symbf{\sigma}'
+  & = \\
 \end{aligned}$$
-
-
-
-```
-
-
-
-
-
-
-```{dropdown} Electromagnetic field tensor
-Contravariant components of the electromagnetic field tensor
-
-$$\begin{aligned}
-  \begin{bmatrix} 0 & - c \mathbf{d}'^T \\ c \mathbf{d}' & \mathbf{h}'_{\times} \end{bmatrix} 
-  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} 0 & - c \mathbf{d}^T \\ c \mathbf{d} & \mathbf{h}_{\times}\end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
-  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} \gamma c v d_v & - c \mathbf{d}^T - (\gamma-1) c d_v \hat{\mathbf{v}}^T \\ \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} & -\gamma c \mathbf{d} \mathbf{v}^T + \mathbf{h}_\times + (\gamma-1) \mathbf{h}_\times \mathbf{\hat{v}} \mathbf{\hat{v}}^T \end{bmatrix} = \\
-  & = \begin{bmatrix} 0 & \text{anti-sym} \\ c \mathbf{d}' & \mathbf{h}'_{\times} \end{bmatrix} = \\
-\end{aligned}$$
-
-with
-
-$$\begin{aligned}
-  c \mathbf{d}'
-  & = - \gamma^2 c v^2 \mathbf{\hat{v}} d_v + \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} + \gamma(\gamma-1) c \hat{\mathbf{v}}d_v
-  = \\
-  & = c \gamma^2 \hat{\mathbf{v}} d_v \underbrace{(1 - v^2)}_{= \gamma^{-2}} + \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} - \gamma c \hat{\mathbf{v}} d_v = \\
-  & = \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} + ( 1 - \gamma ) c \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{d} \ ,
-\end{aligned}$$
-
-and
-
-$$\begin{aligned}
-  \mathbf{h}'_{\times} & = && (1) \\
-  & = \gamma c v \hat{\mathbf{v}} \mathbf{d}^T + \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + \\
-  & - \gamma c v \mathbf{d} \hat{\mathbf{v}} + \mathbf{h}_{\times} + (\gamma - 1) (\mathbf{h} \times \hat{\mathbf{v}}) \hat{\mathbf{v}}^T - \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + (\gamma-1) \hat{\mathbf{v}} \mathbf{v}^T \mathbf{h}_{\times} + \mathbf{0} = && (2) \\
-  & = \gamma c v \left( \hat{\mathbf{v}} \mathbf{d}^T - \mathbf{d} \hat{\mathbf{v}}^T \right) + \mathbf{h}_{\times} + (\gamma-1) \left( \left( \mathbf{h}_\times \hat{\mathbf{v}}  \right) \hat{\mathbf{v}}^T  - \hat{\mathbf{v}} \left( \mathbf{h}_\times \hat{\mathbf{v}}\right)^T \right) = && (3) \\
-  & = \gamma c v \left( \mathbf{d} \times \hat{\mathbf{v}} \right)_{\times} + \mathbf{h}_{\times} + (\gamma-1) \left( \hat{\mathbf{v}} \times (\mathbf{h} \times \hat{\mathbf{v}}) \right)_{\times}
-\end{aligned}$$
-
-having (1) recognized that $\hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{h}_\times \hat{\mathbf{v}} \hat{\mathbf{v}}^T = \hat{\mathbf{v}}( \hat{\mathbf{v}} \cdot ( \mathbf{h} \times \hat{\mathbf{v}}) ) \hat{\mathbf{v}} = \mathbf{0}$, (2) $\{ \mathbf{v}^T \mathbf{h}_{\times} \}_k = v_i \varepsilon_{ijk} h_j = - \{ \mathbf{h}\times \hat{\mathbf{v}} \}_k$ and (3)
-
-$$\begin{aligned}
-  \left[ \left(\mathbf{a}_{\times} \mathbf{b} \right)_{\times} \right]_{ij} 
-  & = \varepsilon_{ikj} \varepsilon_{klm} a_l b_m = \\
-  & = \left( \delta_{jl} \delta_{im} - \delta_{jm} \delta_{il} \right) a_l b_m = \\
-  & = a_j b_i - a_i b_j = \left[ \mathbf{b} \mathbf{a}^T - \mathbf{a} \mathbf{b}^T \right]_{ij} \ . 
-\end{aligned}$$
-
-Thus 
-
-$$\begin{aligned}
-\mathbf{h}' 
-  & = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) (\mathbf{h} \times \hat{\mathbf{v}}) \times \hat{\mathbf{v}} = \\
-  & = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \left( \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} - \mathbf{h}  \right) = \\
-  & = \gamma \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} \ .
-\end{aligned}$$
-
-Going back from non dimensional velocity to dimensional velocity $c \mathbf{v} \rightarrow \mathbf{v}$,
-
-$$\begin{aligned}
-  \mathbf{d}' & = \gamma \left( \mathbf{d} - \dfrac{\mathbf{h} \times \mathbf{v}}{c^2} \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{d} \\
-  \mathbf{h}' & = \gamma \left( \mathbf{h} - \mathbf{v} \times \mathbf{d} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{h} \\
-\end{aligned}$$
-
-Repeating the same process for the electromagnetic field tensor
-
-$$\begin{aligned}
-  \left[\mathbf{F}\right]^{\alpha \beta} = \begin{bmatrix} 0 & - \dfrac{\mathbf{e}^T}{c} \\ \dfrac{\mathbf{e}}{c} & \mathbf{b}_{\times} \end{bmatrix} 
-\end{aligned}$$
-
-$$\begin{aligned}
-  \mathbf{e}' & = \gamma \left( \mathbf{e} -        \mathbf{b} \times \mathbf{v}       \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{e} \\
-  \mathbf{b}' & = \gamma \left( \mathbf{b} - \dfrac{\mathbf{v} \times \mathbf{e}}{c^2} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{b} \\
-\end{aligned}$$
-
+-->
 
 
 ```
