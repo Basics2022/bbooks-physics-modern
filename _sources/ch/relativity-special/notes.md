@@ -630,7 +630,7 @@ Contravariant (Cartesian in space) components of the energy-momentu-stress tenso
 
 $$\begin{aligned}
   \begin{bmatrix} u' & \mathbf{s}^{'T}/c \\ \mathbf{s}'/c & \symbf{\sigma}' \end{bmatrix} 
-  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u' & \mathbf{s}^{'T}/c \\ \mathbf{s}'/c & \symbf{\sigma}' \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
   & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} \gamma c v d_v & - c \mathbf{d}^T - (\gamma-1) c d_v \hat{\mathbf{v}}^T \\ \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} & -\gamma c \mathbf{d} \mathbf{v}^T + \mathbf{h}_\times + (\gamma-1) \mathbf{h}_\times \mathbf{\hat{v}} \mathbf{\hat{v}}^T \end{bmatrix} = \\
   & = \begin{bmatrix} 0 & \text{anti-sym} \\ c \mathbf{d}' & \mathbf{h}'_{\times} \end{bmatrix} = \\
 \end{aligned}$$
