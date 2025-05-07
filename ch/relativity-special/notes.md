@@ -313,7 +313,7 @@ $$\symbf{\nabla} \mathbf{A} =
 
 whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),
 
-$$(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
+$$(\nabla \mathbf{A})_{\alpha}^{\ \ \beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
 \begin{bmatrix}
  c^{-2} \partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
  c^{-1} \partial_t a_x     &       \partial_x a_x     &       \partial_y a_x     &       \partial_z a_x     \\
@@ -323,22 +323,22 @@ $$(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\
 
 or covariant-covariant coomponents,
 
-$$(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\gamma}}{\partial X^{\alpha}} = 
-\begin{bmatrix}
-  c^{-2}\partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
- -c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
- -c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
- -c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
-\end{bmatrix}$$
-
-or contravariant-contravariant coomponents,
-
-$$(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\alpha}}{\partial X^{\gamma}} = 
+$$(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} =\frac{\partial A^{\gamma}}{\partial X^{\alpha}} g_{\gamma \beta}  = 
 \begin{bmatrix}
   c^{-2}\partial_t \varphi &-c^{-1}\partial_x \varphi &-c^{-1}\partial_y \varphi &-c^{-1}\partial_z \varphi \\
   c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
   c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
   c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
+\end{bmatrix}$$
+
+or contravariant-contravariant coomponents,
+
+$$(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\gamma}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
+ -c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
+ -c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
+ -c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
 \end{bmatrix}$$
 
 The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,
@@ -357,6 +357,19 @@ F_{\alpha \beta} =
 \begin{bmatrix}
                         0 & \frac{\underline{e}^T}{c} \\
  -\frac{\underline{e}}{c} & \underline{b}_{\times}
+\end{bmatrix}
+$$
+$$
+F_{\alpha}^{\ \ \beta} = 
+\begin{bmatrix}
+                        0 &-\frac{\underline{e}^T}{c} \\
+ -\frac{\underline{e}}{c} &-\underline{b}_{\times}
+\end{bmatrix}
+\qquad , \qquad 
+F^{\alpha}_{\ \ \beta} = 
+\begin{bmatrix}
+                        0 & \frac{\underline{e}^T}{c} \\
+  \frac{\underline{e}}{c} &-\underline{b}_{\times}
 \end{bmatrix}
 $$
 
@@ -494,7 +507,7 @@ $$\begin{aligned}
   \nabla \cdot \left( \symbf{\varepsilon} : \mathbf{F} \right) = \mathbf{0} \\
 \end{aligned}$$
 
-Energy
+Energy and momentum balance equation of the EM field using 3-dimensional formalism,
 
 $$\begin{aligned}
   \frac{\partial u      }{\partial t} + \nabla \cdot \vec{s} & = - \vec{e} \cdot \vec{j}^f \\
@@ -504,19 +517,108 @@ $$\begin{aligned}
 $$\begin{aligned}
   \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) & = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
   \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] & = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
-\end{aligned}$$
+\end{aligned}$$ (eq:energy-momentum-equation:3d)
 
-...
+The governing equations of energy and momentum of the EM field can be recast in 4-dimensional formalism,
 
 $$\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}$$
 
+with the **energy-momentum-stress tensor**, $\mathbf{T}$, 
 
+$$\begin{aligned}
+  T^{\alpha \beta} & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} D^{\beta}_{\ \ \nu} = \\
+                   & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} g^{\beta \mu} D_{\mu \nu} = \\
+                   & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} + F^{\alpha \nu} D_{\nu \mu} g^{\mu \beta} \\
+\end{aligned}$$ (eq:energy-momentum-tensor:0)
+
+```{dropdown} Term $\ \mathbf{g} \ \mathbf{F} : \mathbf{D} $
+
+$$\mathbf{F} : \mathbf{D} = F_{\mu \nu} D^{\mu \nu} =
+  \begin{bmatrix} 0 & \frac{\underline{e}^T}{c} \\ -\frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} :
+  \begin{bmatrix} 0 & -c \underline{d}^T \\ c \underline{d} & \underline{h}_{\times} \end{bmatrix} = - 2 \underline{e}^T \underline{d} + 2 \underline{b}^T \underline{h} = 2 \left( - \vec{e} \cdot \vec{d} + \vec{b} \cdot \vec{h} \right) \ .
+$$ (eq:energy-momentum-tensor:1)
+
+```
+
+```{dropdown} Term $\ F^{\alpha \nu} D^{\beta}_{\ \ \nu}$
+
+$$F^{\alpha \nu} D^{\beta}_{\ \ \nu} =
+  \begin{bmatrix} 0 & -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} 
+  \begin{bmatrix} 0 & c \underline{d}^T \\ c \underline{d} & -\underline{h}^T_{\times} \end{bmatrix} = 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} & \frac{\left( \underline{h} \times \underline{e} \right)^T}{c} \\
+      c  \underline{b} \times \underline{d} & \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix}
+$$ (eq:energy-momentum-tensor:2)
+
+being
+
+$$\underline{e}^T \underline{h}^T_{\times} = e_i \varepsilon_{kji} h_j = \left( \vec{h} \times \vec{e} \right)_k$$
+
+$$\left[ \underline{b}_{\times} \underline{h}_{\times} \right]_{im} = \varepsilon_{ijk} b_{j} \varepsilon_{klm} h_{l} = \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) b_j h_l = h_i b_m - b_l h_l \delta_{im} = \underline{h} \underline{b}^T - \underline{b}^T \underline{h} \underline{\underline{I}}_3 \ .$$
+
+```
+
+```{dropdown} Energy-stress tensor
+:open:
+
+Putting together the expression {eq}`eq:energy-momentum-tensor:1` of term $\frac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu}$ and {eq}`eq:energy-momentum-tensor:2` of term $F^{\alpha \nu} D^{\beta}_{\ \ \nu}$, with $\underline{d} = \varepsilon \underline{e}$, $\underline{b} = \mu \underline{h}$ (**todo** do energy balance for all charges and currents and spearating contributions of free and bound charges and currents)
+
+$$\begin{aligned}
+ T^{\alpha \beta}
+& =
+\dfrac{1}{4} \begin{bmatrix} 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) & \underline{0}^T \\ \underline{0} & - 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}} \end{bmatrix}
+- 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} & \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\
+      c \underline{b} \times \underline{d} & \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix} = \\
+& =
+\begin{bmatrix} \dfrac{1}{2}\left(\underline{e}^T \underline{d} + \underline{b}^T \underline{h} \right) & \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\ \frac{\underline{e} \times \underline{h}}{c} & \dfrac{1}{2}(\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}}_3 - \underline{e} \underline{d}^T - \underline{b} \underline{h}^T \end{bmatrix} = \\
+& =
+\begin{bmatrix} u & \dfrac{\vec{s}}{c} \\ \dfrac{\vec{s}}{c} & u \mathbb{I} - \vec{e} \otimes \vec{d} - \vec{b} \otimes \vec{h} \end{bmatrix}
+\end{aligned}$$
+
+```
+
+```{dropdown} Energy-stress equation in 4-dimensional formalism
+:open:
+
+Energy and momentum balance equations {eq}`eq:energy-momentum-equation:3d` can be recast using 4-dimensional formalism,
+
+$$\begin{aligned}
+  \nabla \cdot \mathbf{T} & = - \mathbf{F} \cdot \mathbf{J}  \\
+  \dfrac{\partial T^{\nu \mu} }{\partial X^{\nu}} & = - F^{\mu \nu} J_{\nu}
+\end{aligned}$$
+
+as
+
+<!--
+$$F^{\alpha}_{\ \ \beta} J^{\beta} = \begin{bmatrix} 0 & - \frac{\underline{e}^T}{c} \\ - \frac{\underline{e}}{c} & - \underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ \underline{j} \end{bmatrix} = $$
+-->
+
+<!--
+$$F^{\alpha}_{\ \ \beta} J^{\beta} = \begin{bmatrix} 0 &   \frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} &-\underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ \underline{j} \end{bmatrix} = \begin{bmatrix} \frac{1}{c} \underline{e}^T \underline{j} \\ \rho \underline{e} - \underline{b}_\times \underline{j} \end{bmatrix}$$
+
+or equivalently
+-->
+
+$$F^{\mu \nu} J_{\nu} = \begin{bmatrix} 0 &  -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ - \underline{j} \end{bmatrix} = \begin{bmatrix} \frac{1}{c} \underline{e}^T \underline{j} \\ \rho \underline{e} - \underline{b}_\times \underline{j} \end{bmatrix}$$
+
+$$\begin{aligned}
+  0   & : \quad \dfrac{\partial T^{\nu 0}}{\partial X^{\nu}} = - F^{0 \nu} J_{\nu} && \dfrac{1}{c}\dfrac{\partial}{\partial t} u + \dfrac{\partial}{\partial x_k} \dfrac{s_k}{c} = - \dfrac{1}{c} e_k j_k \\
+  1:3 & : \quad \dfrac{\partial T^{\nu i}}{\partial X^{\nu}} = - F^{i \nu} J_{\nu} && \dfrac{1}{c}\dfrac{\partial}{\partial t} \dfrac{s_i}{c} + \dfrac{\partial \sigma_{ki}}{\partial x_k} = - \rho e_i + \varepsilon_{ijk} b_j j_k  \\
+\end{aligned}$$
+
+```
+
+<!--
 $$\dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} = J^{\beta}$$
 
 $$\begin{aligned}
   - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} & = - F_{\gamma \beta} J^{\beta}
 \end{aligned}$$
-
+-->
 
 
 

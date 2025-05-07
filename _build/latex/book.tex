@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{May 05, 2025}
+\date{May 07, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -242,16 +242,17 @@ composition of transformations and general Lorentz’s transformation
 \sphinxAtStartPar
 An event is determined by spatio\sphinxhyphen{}temporal information together, \(t, \vec{r}\). Absolute nature of physics needs vector algebra and calculus formalism
 \begin{equation*}
-\begin{split}\mathbf{X} = c  \,t  \,\mathbf{e}_0 + \vec{r} =  c \, t \, \mathbf{e}_0 + x^1 \mathbf{e}_1 + x^2 \mathbf{e}_2 + x^3 \mathbf{e}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,\end{split}
+\begin{split}\mathbf{X} = c  t  \mathbf{E}_0 + \vec{r} =  c  t  \mathbf{E}_0 + x^1 \mathbf{E}_1 + x^2 \mathbf{E}_2 + x^3 \mathbf{E}_3 = X^{\alpha} \mathbf{E}_{\alpha} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 having used Cartesian coordiantes for the space coordinate.
 
 \sphinxAtStartPar
-Minkowski metric reads
+\sphinxstylestrong{Geometry of time\sphinxhyphen{}space in special relativity.} Minkowski metric reads
 \begin{equation*}
 \begin{split}g_{\alpha \beta} = \mathbf{E}_{\alpha} \cdot \mathbf{E}_{\beta} = \text{diag}\{1, -1, -1, -1\}\end{split}
-\end{equation*}
+\end{equation*}\subsubsection*{Reciprocal basis}
+
 \sphinxAtStartPar
 The reciprocal basis reads \(\mathbf{E}_{\alpha} \cdot \mathbf{E}^{\beta} = \delta_{\alpha}^{\beta}\), \(\mathbf{E}_{\alpha} = g_{\alpha \beta} \mathbf{E}^{\beta}\), s.t. the elementary interval between two events can be written as
 \begin{equation*}
@@ -267,19 +268,18 @@ having used Cartesian coordinates,
   \begin{aligned}  & X^3 =   z \\  & X_3 =  -z \end{aligned}
 \end{split}
 \end{equation*}
+
+
 \sphinxAtStartPar
-Its “length”, or better pseudo\sphinxhyphen{}norm with Minkowski metric, is invariant and reads
+\sphinxstylestrong{Elementary interval} between two events
 \begin{equation*}
 \begin{split}d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 \end{split}
 \end{equation*}
-\begin{sphinxadmonition}{note}{Note:}
-\sphinxAtStartPar
-\(ds\) is invariant
-\sphinxstylestrong{todo} prove it. And/or add a section about the role of invariance.
-\end{sphinxadmonition}
 
+\section{Kinematics of point}
+\label{\detokenize{ch/relativity-special/notes:kinematics-of-point}}
 \sphinxAtStartPar
-For a co\sphinxhyphen{}moving observer, \(d \vec{r}' = \vec{0}\), and \(t'\) is commonly indicated with \(\tau\), and its differential is invariant itself, being the product of a constant (\(c\) is a universal constant in special relativity) and an invariant quantity.
+\sphinxstylestrong{Proper time.} For a co\sphinxhyphen{}moving observer, \(d \vec{r}' = \vec{0}\), and \(t'\) is commonly indicated with \(\tau\), and its differential is invariant itself, being the product of a constant (\(c\) is a universal constant in special relativity) and an invariant quantity.
 \begin{equation*}
 \begin{split}d s^2 = c^2 dt'^2 - |d \vec{r}'|^2 = c^2 d \tau^2 \ .\end{split}
 \end{equation*}
@@ -296,8 +296,14 @@ and thus
 \sphinxAtStartPar
 with \(\gamma(w) = \frac{1}{\sqrt{1 - w^2}}\).
 
+\begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
-\sphinxstylestrong{4\sphinxhyphen{}Velocity} Given the parametric representation of an event in space\sphinxhyphen{}time as a function of its proper time, \(\mathbf{X}(\tau)\) or coordinate \(s\), \(\mathbf{X}(s)\) the derivative w.r.t. this parameter is defined as the 4\sphinxhyphen{}velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis \(\mathbf{E}_{\alpha}\), as a function of the observer time \(t\), \(c t\), \(x^i(t)\), and the transformation of coordinates \(t(\tau)\), with differential \(d t = \frac{1}{\gamma} \, d \tau\)
+\(ds\) is invariant
+\sphinxstylestrong{todo} prove it. And/or add a section about the role of invariance.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}Velocity.} Given the parametric representation of an event in space\sphinxhyphen{}time as a function of its proper time, \(\mathbf{X}(\tau)\) or coordinate \(s\), \(\mathbf{X}(s)\) the derivative w.r.t. this parameter is defined as the 4\sphinxhyphen{}velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis \(\mathbf{E}_{\alpha}\), as a function of the observer time \(t\), \(c t\), \(x^i(t)\), and the transformation of coordinates \(t(\tau)\), with differential \(d t = \frac{1}{\gamma} \, d \tau\)
 \begin{equation*}
 \begin{split}\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)\end{split}
 \end{equation*}
@@ -320,8 +326,8 @@ Using \(\tau\) as the parameter, \(\mathbf{U}\) has physical dimension of a velo
 \sphinxstylestrong{4\sphinxhyphen{}acceleration} \(\mathbf{X}''(\tau)\) or \(\mathbf{X}''(s)\), \sphinxstylestrong{todo}
 
 
-\section{Dynamics}
-\label{\detokenize{ch/relativity-special/notes:dynamics}}
+\section{Dynamics of a point mass}
+\label{\detokenize{ch/relativity-special/notes:dynamics-of-a-point-mass}}
 \sphinxAtStartPar
 \sphinxstylestrong{4\sphinxhyphen{}momentum}
 \begin{equation*}
@@ -331,7 +337,8 @@ Using \(\tau\) as the parameter, \(\mathbf{U}\) has physical dimension of a velo
 Using Cartesian coordinates and \(\tau\) as independent variable,
 \begin{equation*}
 \begin{split}\mathbf{P} = m \mathbf{U} = m \frac{d \mathbf{X}}{d \tau} = m \gamma (c, \vec{v}) \ .\end{split}
-\end{equation*}
+\end{equation*}\subsubsection*{Low\sphinxhyphen{}speed limit \sphinxhyphen{} classical mechanics}
+
 \sphinxAtStartPar
 The spatial component is \(\gamma\) times the 3\sphinxhyphen{}dimensional momentum \(\vec{p} = m \vec{v}\); the time component reads
 \begin{equation*}
@@ -361,9 +368,14 @@ and thus
 and
 \begin{equation*}
 \begin{split}\gamma(v/c) \, m \, c \sim m \, c \left( 1 + \frac{v^2}{c^2} \right) = \frac{1}{c} \left( mc^2 + \frac{1}{2} m |\vec{v}|^2 \right) \end{split}
-\end{equation*}
+\end{equation*}\subsubsection*{Energy\sphinxhyphen{}momentum relation}
+
 \sphinxAtStartPar
-Thus, recognizing energy (\(E = \gamma m c^2\)) and 3\sphinxhyphen{}momentum (\(\vec{p} = m_3 \vec{v}\), with \(m_3 := \gamma m\)), the 4\sphinxhyphen{}momentum can be written as
+Recognizing energy (\(E = \gamma m c^2\)) and 3\sphinxhyphen{}momentum (\(\vec{p} = m_3 \vec{v}\), with \(m_3 := \gamma m\))%
+\begin{footnote}[1]\sphinxAtStartFootnote
+This definitions naturally arise in Lagrange approach.
+%
+\end{footnote}, the 4\sphinxhyphen{}momentum can be written as
 \begin{equation*}
 \begin{split}\mathbf{P} = m \mathbf{U} = \gamma m \left( 1, \frac{\vec{v}}{c} \right) =: \frac{1}{c} \left( \frac{E}{c}, \vec{p} \right)\end{split}
 \end{equation*}
@@ -387,94 +399,140 @@ and keeping only the solution with positive energy (\sphinxstylestrong{todo} \sp
 \begin{equation*}
 \begin{split}E = m c^2 \ .\end{split}
 \end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}force and dynamical equation for a point mass.} The dynamical equation of a point mass subject to a 4\sphinxhyphen{}force \(\mathbf{f}\) reads
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:point:dynamics}
+\begin{split}\dfrac{d \mathbf{P}}{d \tau} = \mathbf{f} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+Examples:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Free particle} is subject to no net force, \(\mathbf{f}\),
+
+\item {} 
+\sphinxAtStartPar
+Point charge \(q\) in EM field is subject to \sphinxstylestrong{Lorentz force}, \(\mathbf{f} = q \mathbf{F} \cdot \mathbf{U}\), being \(\mathbf{F}\) the EM field tensor, \eqref{equation:ch/relativity-special/notes:eq:tensor:em-field},
+\begin{equation*}
+\begin{split}\mathbf{F} = \nabla \mathbf{A} - \left( \nabla \mathbf{A} \right)^T \ .\end{split}
+\end{equation*}
+\end{itemize}
+
 
 \subsection{Lagrangian approach}
 \label{\detokenize{ch/relativity-special/notes:lagrangian-approach}}
 \sphinxAtStartPar
-\sphinxstylestrong{Free particle.}
+Here variational approach to the motion of point particle in a force field \(\mathbf{f}\) is derived from the weak form of the dynamical equation \eqref{equation:ch/relativity-special/notes:eq:point:dynamics}. In particular, the derivation is performed for a particle moving in a known EM field. The motion of a free particle immediately follows if the EM field is zero.
 \begin{equation*}
-\begin{split}\mathbf{0} = \frac{d \mathbf{P}}{d s} = \frac{d }{d s} \left( m \mathbf{X}'(s) \right)\end{split}
+\begin{split}m \dfrac{d \mathbf{U}}{d \tau} = q \mathbf{F} \cdot \mathbf{U}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Weak form
+The equation of motion can be manipulated to get Lagrange equations
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:point:dynamics:lagrange}
+\begin{split}\begin{aligned}
+  \mathbf{0} 
+  & = m \dfrac{d \mathbf{U}}{d \tau} - q \nabla \mathbf{A} \cdot \mathbf{U} + q \left( \nabla \mathbf{A} \right)^T \cdot \mathbf{U} = \\
+  & = \dfrac{d}{d\tau} \left[ m \mathbf{U} + q \mathbf{A}(\mathbf{X}(\tau)) \right] - \nabla \left( q \mathbf{A} \cdot \mathbf{U} \right) = (1) \\
+  & = \dfrac{d}{d\tau} \left[ \mathbf{E}^\alpha \dfrac{\partial}{\partial U^\alpha} \left( m c \sqrt{\mathbf{U} \cdot \mathbf{U}}  + q \mathbf{A}(\mathbf{X}(\tau)) \cdot \mathbf{U} \right) \right] - \mathbf{E}^\alpha \dfrac{\partial}{\partial X^\alpha} \left( m c \sqrt{\mathbf{U} \cdot \mathbf{U}}  + q \mathbf{A} \cdot \mathbf{U} \right) = (2) \\
+  & = \mathbf{E}^{\alpha} \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial X^{'\alpha}} - \dfrac{\partial \mathscr{L}}{\partial X^{\alpha}} \right] = \\
+  & = \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}}
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+since (1) \(\mathbf{U} = \mathbf{E}^{\alpha} U_\alpha = c \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}\), see \eqref{equation:ch/relativity-special/notes:eq:proof:vel:der-c2}, and \(\sqrt{\mathbf{U} \cdot \mathbf{U}}\) independent from \(\mathbf{X}\), and equal to \(c^2\) and (2) with the definition of the \sphinxstylestrong{Lagrangian function}
+\begin{equation*}
+\begin{split}\mathscr{L}(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau) := - m c \sqrt{\mathbf{X}'(\tau) \cdot \mathbf{X}'(\tau)} - q \mathbf{A}(\mathbf{X}(\tau)) \cdot \mathbf{X}'(\tau)\end{split}
+\end{equation*}\subsubsection*{Proof of the relation used in (1)}
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:proof:vel:der-c2}
+\begin{split}\begin{aligned}
+   \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}
+   & = \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{ g_{\beta \gamma} U^{\beta} U^{\gamma}} = \\
+   & = \mathbf{E}^{\alpha} \dfrac{1}{2 \sqrt{U^\beta U_\beta}} \left( g_{\beta \gamma} \delta^{\beta}_{\alpha} U^{\gamma} +  g_{\beta \gamma} U^{\beta}\delta_{\alpha}^{\gamma} \right) = \\
+   & = \mathbf{E}^{\alpha} \dfrac{1}{2 \sqrt{U^\beta U_\beta}} \left( 2 U_{\alpha} \right) = \\
+   & = \mathbf{E}^{\alpha} \dfrac{U_{\alpha}}{\sqrt{U^\beta U_\beta}} = \\
+   & = \dfrac{\mathbf{U}}{\sqrt{\mathbf{U} \cdot \mathbf{U}}}     
+     = \dfrac{\mathbf{U}}{c}  \ .
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+since \(\mathbf{U} \cdot \mathbf{U} = c^2\) and the components of the metric tensor are independent from the velocity.
+
+\sphinxAtStartPar
+Weak form of the problem is derived from the Lagrange equation \eqref{equation:ch/relativity-special/notes:eq:point:dynamics:lagrange}, with dot product with arbitrary 4\sphinxhyphen{}vector \(\mathbf{W}\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  0
-  & = \mathbf{W}(s) \cdot \frac{d }{d s} \left( m \mathbf{X}'(s) \right) = \\
-  & = \frac{d }{d s} \left[ m \mathbf{W}(s) \cdot \mathbf{X}'(s) \right] - m \mathbf{W}'(s) \cdot \mathbf{X}'(s)  = \\
+  0 
+  & = \mathbf{W} \cdot \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Using generalized coordinates \(q^k(s)\), the event can be written in parametric form as \(\mathbf{X}(q^k(s), s)\), while the velocity reads
-\begin{equation*}
-\begin{split}\mathbf{U}(s) = \mathbf{X}'(s) = \frac{d}{ds} \mathbf{X}(q^k(s), s) = {q^k}'(s) \underbrace{\frac{\partial \mathbf{X}}{\partial q^k}(q^k(s), s)}_{=\frac{\partial \mathbf{X}'}{\partial {q^k}'}} + \frac{\partial \mathbf{X}}{\partial s}(q^k(s), s) = \mathbf{U}({q^k}'(s), q^k(s), s)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Choosing \(\mathbf{W} = \frac{\partial \mathbf{X}}{\partial q^k} = \frac{\partial \mathbf{X}'}{\partial {q^k}'}\) in the weak form,
+and integrating over an interval of proper time and using integration by parts,
 \begin{equation*}
 \begin{split}\begin{aligned}
-0  
-& = \frac{d }{d s} \left[ m \mathbf{W} \cdot \mathbf{X}' \right] - m \mathbf{W}' \cdot \mathbf{X}' = \\
-& = \frac{d }{d s} \left[ m \frac{\partial \mathbf{X}'}{\partial {q^k}'} \cdot \mathbf{X}' \right] - m \dfrac{d}{ds} \frac{\partial \mathbf{X}}{\partial {q^k}} \cdot \mathbf{X}' = \\
-& = \frac{1}{2} \left[ \frac{d}{d s} \left( \frac{\partial}{\partial {q^k}'}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right) - \frac{\partial}{\partial q^k}\left( m \mathbf{X}' \cdot \mathbf{X}' \right)  \right] =
+  0 
+  & = \int_{\tau = \tau_0}^{\tau_1} \mathbf{W} \cdot \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \, d \tau = \\
+  & = \left.\left[ \mathbf{W}(\tau) \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}'}(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau) \right]\right|_{\tau_0}^{\tau_1} - \int_{\tau = \tau_0}^{\tau_1} \left[ \mathbf{W}' \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} +  \mathbf{W} \cdot \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}} \right] \, d \tau \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Defining
+With the choice of the test function \(\mathbf{W}(\tau)\) as the variation of the position of the particle, \(\mathbf{W} = \delta \mathbf{X}\) just to remember its variational nature, with given values at \(\tau_0\), \(\tau_1\) and thus \(\mathbf{W}(\tau_0) = \mathbf{W}(\tau_1) = 0\), the weak form of the dynamical equations is thus recast as the stationary condition of an action functional in a \sphinxstylestrong{variational principle},
 \begin{equation*}
-\begin{split} f\left({q^k}'(s), q^k(s), s \right) = - m \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) \cdot \mathbf{X}'\left({q^k}'(s), q^k(s), s\right) = - m \ ,\end{split}
+\begin{split}0 = - \delta S = - \delta \int_{\tau = \tau_0}^{\tau_1} \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, d \tau \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-multiplying by a “regular” generic function \(w(s)\), neglecting factor \(\frac{1}{2}\) and integrating by parts
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Repeat the process using generalized coordinates \(q^k(\tau)\), \(\mathbf{X}(q^k(\tau), \tau)\)}…
+\subsubsection*{Lagrange equations and variational principle with generalized coordinates}
+
+\sphinxAtStartPar
+Choosing the test function as it’s usually done in deriving Lagrange formulation of mechanics from the strong formulation, after writing the position and its velocity of the particle as a function of generalized coordinates \(q^k\),
 \begin{equation*}
 \begin{split}\begin{aligned}
- 0
- & = - \int_{s=s_a}^{s_b} w(s) \left[ \frac{d}{ds} \frac{\partial f}{\partial {q^k}'} - \frac{\partial f}{\partial q^k} \right] \, ds = \\
- & = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \int_{s=s_a}^{s_b} \left[ w'(s) \frac{\partial f}{\partial {q^k}'} + \frac{\partial f}{\partial q^k} \right] \, ds = \\
- & = - \left.\left[ w(s) \frac{\partial f}{\partial {q^k}'} \right]\right|_{s=s_a}^{s_b} + \delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ .
+  & \mathbf{X}\left(q^k(\tau), \tau \right) \\
+  & \mathbf{U}\left(q^k(\tau), \tau \right) = \dfrac{d \mathbf{X}}{d \tau} = q^{k'}(\tau) \underbrace{\dfrac{\partial \mathbf{X}}{\partial q^k}}_{= \dfrac{\partial \mathbf{X}'}{\partial q^{k'}}} + \dfrac{\partial \mathbf{X}}{\partial \tau} \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Thus, provided that \(w(s_1) = w(s_2) = 0\), equation of motion of free particle implies stationariety of functional
-\begin{equation*}
-\begin{split}\int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds \ ,\end{split}
-\end{equation*}
+With the particular choice of the test function, \(\mathbf{W} = w^k(\tau) \dfrac{\partial \mathbf{X}}{\partial q^k}(q^l(\tau),\tau)\)
+
 \sphinxAtStartPar
-i.e.
-\begin{equation*}
-\begin{split}\delta \int_{s=s_a}^{s_b} f\left( {q^k}'(s), q^k(s), s \right) \, ds = 0\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Using \(t\) as independent parameter, \(ds = \gamma^{-1} \, c \, dt\), the functional can be recast as
-\begin{equation*}
-\begin{split}\int_{t=t_a}^{t_b}  -m \, c  \, \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, dt \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-to find the (3\sphinxhyphen{}dimensional) Lagrangian (multiply by \(c\) to get the right physical dimension; check if it’s required and wheter it’s possible to make \(c\) appear before),
-\begin{equation*}
-\begin{split}\mathscr{L} = - \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} \, m \, c^2 \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and retrieve 3\sphinxhyphen{}momentum as (being \(\vec{v} = \dot{\vec{r}})\)
+\sphinxstylestrong{Variational principle as a function of time.} Using the relation between proper time \(\tau\) and the observer time \(t\), \(d \tau = \gamma^{-1} \, d t = \sqrt{1 - \frac{|\vec{v}|^2}{c^2}} d t\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \vec{p} 
-  & := \frac{\partial \mathscr{L}}{\partial \dot{\vec{r}}} = \\
-  &  = - m c^2 \frac{1}{2} \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \left( - 2 \frac{\vec{v}}{c^2}\right) = \\
-  &  = m \left(1-\frac{|\vec{v}|^2}{c^2} \right)^{-\frac{1}{2}} \vec{v} = \\
-  &  = \gamma \, m \, \vec{v} \ ,
+  S
+  & = \int_{\tau = \tau_0}^{\tau_1} \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, d \tau = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \mathscr{L}\left(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau \right) \, \gamma^{-1} \, d t = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \sqrt{1 - \dfrac{|\vec{v}|^2}{c^2}} \left( - m c^2 - \gamma q \phi(\vec{r},t) + \gamma q \vec{a}(\vec{r},t) \cdot \vec{v}(t) \right) \, d t = \\
+  & = \int_{ t   =  t_0  }^{ t_1  } \left( - \sqrt{1 - \dfrac{|\vec{v}|^2}{c^2}} m c^2 - q \phi(\vec{r},t) + q \vec{a}(\vec{r},t) \cdot \vec{v}(t) \right) \, d t = \\
+  & = \int_{t = t_0}^{t_1} L\left(\vec{v}(t), \vec{r}(t), t \right) \, dt
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-and energy as
+\sphinxstylestrong{Three\sphinxhyphen{}dimensional momentum} can be defined as the partial derivative of the Lagrangian function \(L\) w.r.t. the velocity \(\vec{v}\),
+\begin{equation*}
+\begin{split}\vec{p} := \dfrac{\partial L}{\partial \vec{v}} = \gamma \dfrac{\vec{v}}{c^2}  m c^2 + q \vec{a} = \gamma m \vec{v} + q \vec{a}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The Hamiltoninan function reads
 \begin{equation*}
 \begin{split}\begin{aligned}
-  E
-  & := \vec{p} \cdot \vec{v} - \mathscr{L} = \\
-  & = \gamma \, m \, |\vec{v}|^2 + \gamma^{-1} \, m \, c^2 = \\
-  & = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + \gamma^{-2} \right) = \\
-  & = \gamma \, m \, c^2 \left( \frac{|\vec{v}|^2}{c^2} + 1 - \frac{|\vec{v}|^2}{c^2} \right) = \\
-  & = \gamma \, m \, c^2 \ .
+  H
+  & = \vec{v} \cdot \dfrac{\partial L}{\partial \vec{v}} - L = \\
+  & = \gamma m |\vec{v}|^2 + q \vec{a} \cdot \vec{v} + \gamma^{-1} m c^2 + q \phi - q \vec{a} \cdot \vec{v} = \\
+  & = \gamma m |\vec{v}|^2 \left[ 1 + \left( 1 - \dfrac{|\vec{v}|^2}{c^2} \right) \dfrac{c^2}{|\vec{v}|^2} \right] + q \phi = \\
+  & = \gamma m c^2 + q \phi \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The expressions of the Hamiltonian function (divided by the light speed) and the three\sphinxhyphen{}dimensional momentum can be recognized to be respectively the time and space components of 4\sphinxhyphen{}momentum,
+\begin{equation*}
+\begin{split}\mathbf{P} = m \mathbf{U} + q \mathbf{A} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+remembering the expression of the contravariant components of the 4\sphinxhyphen{}velocity and the 4\sphinxhyphen{}EM potential,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[\mathbf{P}\right]^{\alpha} = \left( \gamma m c + q \dfrac{\phi}{c} , \ \gamma m \vec{v} + q \vec{a} \right) = \left( \dfrac{H}{c} , \ \vec{p}  \right)
 \end{aligned}\end{split}
 \end{equation*}
 
@@ -548,7 +606,7 @@ whose power is
 \sphinxAtStartPar
 whose components may be collected in a 2\sphinxhyphen{}dimensional array (first index for rows, second index for columns),
 \begin{equation*}
-\begin{split}(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
+\begin{split}(\nabla \mathbf{A})_{\alpha}^{\ \ \beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
 \begin{bmatrix}
  c^{-2} \partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
  c^{-1} \partial_t a_x     &       \partial_x a_x     &       \partial_y a_x     &       \partial_z a_x     \\
@@ -559,18 +617,7 @@ whose components may be collected in a 2\sphinxhyphen{}dimensional array (first 
 \sphinxAtStartPar
 or covariant\sphinxhyphen{}covariant coomponents,
 \begin{equation*}
-\begin{split}(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\gamma}}{\partial X^{\alpha}} = 
-\begin{bmatrix}
-  c^{-2}\partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
- -c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
- -c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
- -c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
-\end{bmatrix}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-or contravariant\sphinxhyphen{}contravariant coomponents,
-\begin{equation*}
-\begin{split}(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\alpha}}{\partial X^{\gamma}} = 
+\begin{split}(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} =\frac{\partial A^{\gamma}}{\partial X^{\alpha}} g_{\gamma \beta}  = 
 \begin{bmatrix}
   c^{-2}\partial_t \varphi &-c^{-1}\partial_x \varphi &-c^{-1}\partial_y \varphi &-c^{-1}\partial_z \varphi \\
   c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
@@ -579,10 +626,21 @@ or contravariant\sphinxhyphen{}contravariant coomponents,
 \end{bmatrix}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-The electromagnetic field tensor is defined as the anti\sphinxhyphen{}symmetric part of the gradient of the 4\sphinxhyphen{}electromagnetic potential,
+or contravariant\sphinxhyphen{}contravariant coomponents,
 \begin{equation*}
-\begin{split}\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]\end{split}
+\begin{split}(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\gamma}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi & c^{-1}\partial_x \varphi & c^{-1}\partial_y \varphi & c^{-1}\partial_z \varphi \\
+ -c^{-1}\partial_t a_x     &      -\partial_x a_x     &      -\partial_y a_x     &      -\partial_z a_x     \\
+ -c^{-1}\partial_t a_y     &      -\partial_x a_y     &      -\partial_y a_y     &      -\partial_z a_y     \\
+ -c^{-1}\partial_t a_z     &      -\partial_x a_z     &      -\partial_y a_z     &      -\partial_z a_z     \\
+\end{bmatrix}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+The electromagnetic field tensor is defined as the anti\sphinxhyphen{}symmetric part of the gradient of the 4\sphinxhyphen{}electromagnetic potential,
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:tensor:em-field}
+\begin{split}\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]\end{split}
+\end{equation}
 \sphinxAtStartPar
 whose components may be collected in a 2\sphinxhyphen{}dimensional array (first index for rows, second index for columns),
 \begin{equation*}
@@ -596,6 +654,20 @@ F_{\alpha \beta} =
 \begin{bmatrix}
                         0 & \frac{\underline{e}^T}{c} \\
  -\frac{\underline{e}}{c} & \underline{b}_{\times}
+\end{bmatrix}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+F_{\alpha}^{\ \ \beta} = 
+\begin{bmatrix}
+                        0 &-\frac{\underline{e}^T}{c} \\
+ -\frac{\underline{e}}{c} &-\underline{b}_{\times}
+\end{bmatrix}
+\qquad , \qquad 
+F^{\alpha}_{\ \ \beta} = 
+\begin{bmatrix}
+                        0 & \frac{\underline{e}^T}{c} \\
+  \frac{\underline{e}}{c} &-\underline{b}_{\times}
 \end{bmatrix}
 \end{split}
 \end{equation*}
@@ -731,17 +803,118 @@ so that the dynamical equation reads
 \end{equation*}
 
 \subsection{Energy balance}
-\label{\detokenize{ch/relativity-special/notes:energy-balance}}\begin{equation*}
+\label{\detokenize{ch/relativity-special/notes:energy-balance}}
+\sphinxAtStartPar
+Continuity
+\begin{equation*}
+\begin{split}\nabla \cdot \mathbf{J} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Maxwell’s equations
+\begin{equation*}
 \begin{split}\begin{aligned}
-  \frac{\partial u      }{\partial t} & = \\
-  \frac{\partial \vec{s}}{\partial t} & = \\
+  \nabla \cdot \mathbf{D} = \mathbf{J} \\
+  \nabla \cdot \left( \symbf{\varepsilon} : \mathbf{F} \right) = \mathbf{0} \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-…
+Energy and momentum balance equation of the EM field using 3\sphinxhyphen{}dimensional formalism,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{\partial u      }{\partial t} + \nabla \cdot \vec{s} & = - \vec{e} \cdot \vec{j}^f \\
+  \frac{\partial \vec{s}}{\partial t} + \nabla \cdot \left\{ c^2 \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] \right\} & = - c^2 (\rho^f \vec{e} - \vec{b} \times \vec{j}^f) \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation}\label{equation:ch/relativity-special/notes:eq:energy-momentum-equation:3d}
+\begin{split}\begin{aligned}
+  \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) & = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
+  \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] & = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+The governing equations of energy and momentum of the EM field can be recast in 4\sphinxhyphen{}dimensional formalism,
 \begin{equation*}
 \begin{split}\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+with the \sphinxstylestrong{energy\sphinxhyphen{}momentum\sphinxhyphen{}stress tensor}, \(\mathbf{T}\),
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:energy-momentum-tensor:0}
+\begin{split}\begin{aligned}
+  T^{\alpha \beta} & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} D^{\beta}_{\ \ \nu} = \\
+                   & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} g^{\beta \mu} D_{\mu \nu} = \\
+                   & = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} + F^{\alpha \nu} D_{\nu \mu} g^{\mu \beta} \\
+\end{aligned}\end{split}
+\end{equation}\subsubsection*{Term \protect\(\ \mathbf{g} \ \mathbf{F} : \mathbf{D} \protect\)}
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:energy-momentum-tensor:1}
+\begin{split}\mathbf{F} : \mathbf{D} = F_{\mu \nu} D^{\mu \nu} =
+  \begin{bmatrix} 0 & \frac{\underline{e}^T}{c} \\ -\frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} :
+  \begin{bmatrix} 0 & -c \underline{d}^T \\ c \underline{d} & \underline{h}_{\times} \end{bmatrix} = - 2 \underline{e}^T \underline{d} + 2 \underline{b}^T \underline{h} = 2 \left( - \vec{e} \cdot \vec{d} + \vec{b} \cdot \vec{h} \right) \ .
+\end{split}
+\end{equation}\subsubsection*{Term \protect\(\ F^{\alpha \nu} D^{\beta}_{\ \ \nu}\protect\)}
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:energy-momentum-tensor:2}
+\begin{split}F^{\alpha \nu} D^{\beta}_{\ \ \nu} =
+  \begin{bmatrix} 0 & -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} 
+  \begin{bmatrix} 0 & c \underline{d}^T \\ c \underline{d} & -\underline{h}^T_{\times} \end{bmatrix} = 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} & \frac{\left( \underline{h} \times \underline{e} \right)^T}{c} \\
+      c  \underline{b} \times \underline{d} & \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix}
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+being
+\begin{equation*}
+\begin{split}\underline{e}^T \underline{h}^T_{\times} = e_i \varepsilon_{kji} h_j = \left( \vec{h} \times \vec{e} \right)_k\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\left[ \underline{b}_{\times} \underline{h}_{\times} \right]_{im} = \varepsilon_{ijk} b_{j} \varepsilon_{klm} h_{l} = \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) b_j h_l = h_i b_m - b_l h_l \delta_{im} = \underline{h} \underline{b}^T - \underline{b}^T \underline{h} \underline{\underline{I}}_3 \ .\end{split}
+\end{equation*}\subsubsection*{Energy\sphinxhyphen{}stress tensor}
+
+\sphinxAtStartPar
+Putting together the expression \eqref{equation:ch/relativity-special/notes:eq:energy-momentum-tensor:1} of term \(\frac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu}\) and \eqref{equation:ch/relativity-special/notes:eq:energy-momentum-tensor:2} of term \(F^{\alpha \nu} D^{\beta}_{\ \ \nu}\), with \(\underline{d} = \varepsilon \underline{e}\), \(\underline{b} = \mu \underline{h}\) (\sphinxstylestrong{todo} do energy balance for all charges and currents and spearating contributions of free and bound charges and currents)
+\begin{equation*}
+\begin{split}\begin{aligned}
+ T^{\alpha \beta}
+& =
+\dfrac{1}{4} \begin{bmatrix} 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) & \underline{0}^T \\ \underline{0} & - 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}} \end{bmatrix}
+- 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} & \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\
+      c \underline{b} \times \underline{d} & \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix} = \\
+& =
+\begin{bmatrix} \dfrac{1}{2}\left(\underline{e}^T \underline{d} + \underline{b}^T \underline{h} \right) & \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\ \frac{\underline{e} \times \underline{h}}{c} & \dfrac{1}{2}(\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}}_3 - \underline{e} \underline{d}^T - \underline{b} \underline{h}^T \end{bmatrix} = \\
+& =
+\begin{bmatrix} u & \dfrac{\vec{s}}{c} \\ \dfrac{\vec{s}}{c} & u \mathbb{I} - \vec{e} \otimes \vec{d} - \vec{b} \otimes \vec{h} \end{bmatrix}
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Energy\sphinxhyphen{}stress equation in 4\sphinxhyphen{}dimensional formalism}
+
+\sphinxAtStartPar
+Energy and momentum balance equations \eqref{equation:ch/relativity-special/notes:eq:energy-momentum-equation:3d} can be recast using 4\sphinxhyphen{}dimensional formalism,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \nabla \cdot \mathbf{T} & = - \mathbf{F} \cdot \mathbf{J}  \\
+  \dfrac{\partial T^{\nu \mu} }{\partial X^{\nu}} & = - F^{\mu \nu} J_{\nu}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as
+
+
+
+
+\begin{equation*}
+\begin{split}F^{\mu \nu} J_{\nu} = \begin{bmatrix} 0 &  -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} & \underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ - \underline{j} \end{bmatrix} = \begin{bmatrix} \frac{1}{c} \underline{e}^T \underline{j} \\ \rho \underline{e} - \underline{b}_\times \underline{j} \end{bmatrix}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  0   & : \quad \dfrac{\partial T^{\nu 0}}{\partial X^{\nu}} = - F^{0 \nu} J_{\nu} && \dfrac{1}{c}\dfrac{\partial}{\partial t} u + \dfrac{\partial}{\partial x_k} \dfrac{s_k}{c} = - \dfrac{1}{c} e_k j_k \\
+  1:3 & : \quad \dfrac{\partial T^{\nu i}}{\partial X^{\nu}} = - F^{i \nu} J_{\nu} && \dfrac{1}{c}\dfrac{\partial}{\partial t} \dfrac{s_i}{c} + \dfrac{\partial \sigma_{ki}}{\partial x_k} = - \rho e_i + \varepsilon_{ijk} b_j j_k  \\
+\end{aligned}\end{split}
+\end{equation*}
+
+
+
+\bigskip\hrule\bigskip
+
+
 \sphinxstepscope
 
 
