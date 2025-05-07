@@ -953,7 +953,74 @@ $$\begin{aligned}
   - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} & = - F_{\gamma \beta} J^{\beta}
 \end{aligned}$$
 -->
-<hr class="footnotes docutils" />
+<p><strong>Relativity under Lorentz’s transformation.</strong> Components of the description of two inertial observers in relative motion, with aligned Cartesian space coordinates, are related by Lorentz’s transformation</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Electromagnetic field tensor<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Contravariant components of the electromagnetic field tensor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \begin{bmatrix} 0 &amp; - c \mathbf{d}'^T \\ c \mathbf{d}' &amp; \mathbf{h}'_{\times} \end{bmatrix} 
+  &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} 0 &amp; - c \mathbf{d}^T \\ c \mathbf{d} &amp; \mathbf{h}_{\times}\end{bmatrix} \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+  &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} \gamma c v d_v &amp; - c \mathbf{d}^T - (\gamma-1) c d_v \hat{\mathbf{v}}^T \\ \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} &amp; -\gamma c \mathbf{d} \mathbf{v}^T + \mathbf{h}_\times + (\gamma-1) \mathbf{h}_\times \mathbf{\hat{v}} \mathbf{\hat{v}}^T \end{bmatrix} = \\
+  &amp; = \begin{bmatrix} 0 &amp; \text{anti-sym} \\ c \mathbf{d}' &amp; \mathbf{h}'_{\times} \end{bmatrix} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  c \mathbf{d}'
+  &amp; = - \gamma^2 c v^2 \mathbf{\hat{v}} d_v + \gamma c \mathbf{d} - \gamma \mathbf{h}_\times \mathbf{v} + \gamma(\gamma-1) c \hat{\mathbf{v}}d_v
+  = \\
+  &amp; = c \gamma^2 \hat{\mathbf{v}} d_v \underbrace{(1 - v^2)}_{= \gamma^{-2}} + \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} - \gamma c \hat{\mathbf{v}} d_v = \\
+  &amp; = \gamma c \mathbf{d} - \gamma \mathbf{h} \times \mathbf{v} + ( 1 - \gamma ) c \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{d} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{h}'_{\times} &amp; = &amp;&amp; (1) \\
+  &amp; = \gamma c v \hat{\mathbf{v}} \mathbf{d}^T + \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + \\
+  &amp; - \gamma c v \mathbf{d} \hat{\mathbf{v}} + \mathbf{h}_{\times} + (\gamma - 1) (\mathbf{h} \times \hat{\mathbf{v}}) \hat{\mathbf{v}}^T - \gamma (\gamma - 1) c v d_v \hat{\mathbf{v}} \hat{\mathbf{v}}^T + (\gamma-1) \hat{\mathbf{v}} \mathbf{v}^T \mathbf{h}_{\times} + \mathbf{0} = &amp;&amp; (2) \\
+  &amp; = \gamma c v \left( \hat{\mathbf{v}} \mathbf{d}^T - \mathbf{d} \hat{\mathbf{v}}^T \right) + \mathbf{h}_{\times} + (\gamma-1) \left( \left( \mathbf{h}_\times \hat{\mathbf{v}}  \right) \hat{\mathbf{v}}^T  - \hat{\mathbf{v}} \left( \mathbf{h}_\times \hat{\mathbf{v}}\right)^T \right) = &amp;&amp; (3) \\
+  &amp; = \gamma c v \left( \mathbf{d} \times \hat{\mathbf{v}} \right)_{\times} + \mathbf{h}_{\times} + (\gamma-1) \left( \hat{\mathbf{v}} \times (\mathbf{h} \times \hat{\mathbf{v}}) \right)_{\times}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having (1) recognized that <span class="math notranslate nohighlight">\(\hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{h}_\times \hat{\mathbf{v}} \hat{\mathbf{v}}^T = \hat{\mathbf{v}}( \hat{\mathbf{v}} \cdot ( \mathbf{h} \times \hat{\mathbf{v}}) ) \hat{\mathbf{v}} = \mathbf{0}\)</span>, (2) <span class="math notranslate nohighlight">\(\{ \mathbf{v}^T \mathbf{h}_{\times} \}_k = v_i \varepsilon_{ijk} h_j = - \{ \mathbf{h}\times \hat{\mathbf{v}} \}_k\)</span> and (3)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \left(\mathbf{a}_{\times} \mathbf{b} \right)_{\times} \right]_{ij} 
+  &amp; = \varepsilon_{ikj} \varepsilon_{klm} a_l b_m = \\
+  &amp; = \left( \delta_{jl} \delta_{im} - \delta_{jm} \delta_{il} \right) a_l b_m = \\
+  &amp; = a_j b_i - a_i b_j = \left[ \mathbf{b} \mathbf{a}^T - \mathbf{a} \mathbf{b}^T \right]_{ij} \ . 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{h}' 
+  &amp; = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) (\mathbf{h} \times \hat{\mathbf{v}}) \times \hat{\mathbf{v}} = \\
+  &amp; = \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \left( \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} - \mathbf{h}  \right) = \\
+  &amp; = \gamma \mathbf{h} - \gamma c \mathbf{v} \times \mathbf{d} + (1 -\gamma) \hat{\mathbf{v}} \hat{\mathbf{v}} \cdot \mathbf{h} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Going back from non dimensional velocity to dimensional velocity <span class="math notranslate nohighlight">\(c \mathbf{v} \rightarrow \mathbf{v}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{d}' &amp; = \gamma \left( \mathbf{d} - \dfrac{\mathbf{h} \times \mathbf{v}}{c^2} \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{d} \\
+  \mathbf{h}' &amp; = \gamma \left( \mathbf{h} - \mathbf{v} \times \mathbf{d} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{h} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Repeating the same process for the electromagnetic field tensor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[\mathbf{F}\right]^{\alpha \beta} = \begin{bmatrix} 0 &amp; - \dfrac{\mathbf{e}^T}{c} \\ \dfrac{\mathbf{e}}{c} &amp; \mathbf{b}_{\times} \end{bmatrix} 
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e}' &amp; = \gamma \left( \mathbf{e} -        \mathbf{b} \times \mathbf{v}       \right) + (1-\gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{e} \\
+  \mathbf{b}' &amp; = \gamma \left( \mathbf{b} - \dfrac{\mathbf{v} \times \mathbf{e}}{c^2} \right) + (1 - \gamma) \hat{\mathbf{v}} \, \hat{\mathbf{v}} \cdot \mathbf{b} \\
+\end{aligned}\end{split}\]</div>
+</div>
+</details><hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="e-p-from-lagrange"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>This definitions naturally arise in Lagrange approach.</p>
