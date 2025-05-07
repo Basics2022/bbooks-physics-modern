@@ -962,7 +962,70 @@ $$\begin{aligned}
   - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} & = - F_{\gamma \beta} J^{\beta}
 \end{aligned}$$
 -->
-<hr class="footnotes docutils" />
+<p><strong>Relativity under Lorentz’s transformation.</strong> Components of the description of two inertial observers in relative motion, with aligned Cartesian space coordinates, are related by Lorentz’s transformation</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Energy-momentum-stress tensor<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> <em>Complete</em></p>
+<p class="sd-card-text">Contravariant (Cartesian in space) components of the energy-momentu-stress tensor can be collected in a symmetric matrix</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}' = \symbf{\Lambda} \mathbf{T} \symbf{\Lambda}^T\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{T} = \begin{bmatrix} u &amp; \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} &amp; \symbf{\sigma} \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\symbf{\Lambda} = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} = \gamma \begin{bmatrix} 1 &amp; - \mathbf{v}^T \\ -\mathbf{v} &amp; \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} + \begin{bmatrix} 0 &amp; \mathbf{0}^T \\ \mathbf{0} &amp; \mathbf{I} - \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix}
+= \begin{bmatrix}  \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{P} \end{bmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \mathbf{T}' 
+ &amp; = \begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{P} \end{bmatrix}
+\begin{bmatrix} u &amp; \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} &amp; \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{P} \end{bmatrix} = \\
+ &amp; =
+\begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} &amp; \frac{\gamma}{c} \mathbf{s}^T - \gamma \mathbf{v}^T \symbf{\sigma} \\ -\gamma u \mathbf{v} + \mathbf{P} \frac{\mathbf{s}}{c} &amp; -\frac{\gamma}{c} \mathbf{v} \mathbf{s}^T + \mathbf{P} \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma &amp; - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} &amp; \mathbf{P}  \end{bmatrix} = \\
+ &amp; =\begin{bmatrix}
+      \gamma^2 u - 2 \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} + \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{v} &amp;
+      -\gamma^2 u \mathbf{v}^T + \frac{\gamma^2}{c} \mathbf{s}^T \mathbf{v} \mathbf{v}^T + \frac{\gamma}{c} \mathbf{s}^T \mathbf{P} - \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{P} \\
+      -\gamma^2 u \mathbf{v} + \frac{\gamma}{c} \mathbf{P} \mathbf{s} + \frac{\gamma^2}{c} \mathbf{v} \mathbf{s}^T \mathbf{v}  - \gamma  \mathbf{P}\symbf{\sigma} \mathbf{v} &amp;
+      \gamma^2 u \mathbf{v} \mathbf{v}^T - \frac{\gamma}{c} \left( \mathbf{P} \mathbf{s} \mathbf{v}^T + \mathbf{v} \mathbf{s}^T \mathbf{P} \right) + \mathbf{P} \symbf{\sigma} \mathbf{P}
+    \end{bmatrix}
+\end{aligned}\end{split}\]</div>
+<!--
+
+$$\begin{aligned}
+  \begin{bmatrix} u' & \mathbf{s}^{'T}/c \\ \mathbf{s}'/c & \symbf{\sigma}' \end{bmatrix} 
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+\end{aligned}$$
+
+$$\begin{aligned}
+& = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix}  \begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & - \gamma u \mathbf{v}^T + \frac{1}{c} \left( \mathbf{s}^T + (\gamma-1) \mathbf{s}^T \hat{\mathbf{v}} \hat{\mathbf{v}}^T \right) \\ \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v}  & - \frac{\gamma}{c} \mathbf{s}\mathbf{v}^T + \symbf{\sigma} + (\gamma - 1)\symbf{\sigma} \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} = \\
+  & = \begin{bmatrix}  u' & \mathbf{s}'^T / c \\ \mathbf{s}' / c & \symbf{\sigma}' \end{bmatrix} \ ,
+\end{aligned}$$
+
+with
+
+$$
+ u' = \gamma^2 \left( u - 2 \frac{1}{c} \mathbf{v}^T \mathbf{s} + \gamma^2 \mathbf{v}^T \symbf{\sigma} \mathbf{v} \right)
+$$
+
+$$\begin{aligned}
+  \frac{\mathbf{s}'}{c} 
+  & = -\gamma u \mathbf{v} - \frac{\gamma}{c} \mathbf{v} \mathbf{v}^T \mathbf{s} + \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v} + \frac{\gamma}{c}(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{s} - \gamma(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \symbf{\sigma} \mathbf{v} \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  \symbf{\sigma}'
+  & = \\
+\end{aligned}$$
+-->
+</div>
+</details><hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="e-p-from-lagrange"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>This definitions naturally arise in Lagrange approach.</p>

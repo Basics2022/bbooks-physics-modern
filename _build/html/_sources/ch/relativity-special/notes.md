@@ -621,7 +621,71 @@ $$\begin{aligned}
 -->
 
 
+**Relativity under Lorentz's transformation.** Components of the description of two inertial observers in relative motion, with aligned Cartesian space coordinates, are related by Lorentz's transformation
 
+```{dropdown} Energy-momentum-stress tensor
+:open:
+
+**todo** *Complete*
+
+Contravariant (Cartesian in space) components of the energy-momentu-stress tensor can be collected in a symmetric matrix
+
+$$\mathbf{T}' = \symbf{\Lambda} \mathbf{T} \symbf{\Lambda}^T$$
+
+$$\mathbf{T} = \begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}$$
+
+$$\symbf{\Lambda} = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} = \gamma \begin{bmatrix} 1 & - \mathbf{v}^T \\ -\mathbf{v} & \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} + \begin{bmatrix} 0 & \mathbf{0}^T \\ \mathbf{0} & \mathbf{I} - \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix}
+= \begin{bmatrix}  \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} $$
+
+
+$$\begin{aligned}
+ \mathbf{T}' 
+ & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix}
+\begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} = \\
+ & =
+\begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & \frac{\gamma}{c} \mathbf{s}^T - \gamma \mathbf{v}^T \symbf{\sigma} \\ -\gamma u \mathbf{v} + \mathbf{P} \frac{\mathbf{s}}{c} & -\frac{\gamma}{c} \mathbf{v} \mathbf{s}^T + \mathbf{P} \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P}  \end{bmatrix} = \\
+ & =\begin{bmatrix}
+      \gamma^2 u - 2 \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} + \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{v} &
+      -\gamma^2 u \mathbf{v}^T + \frac{\gamma^2}{c} \mathbf{s}^T \mathbf{v} \mathbf{v}^T + \frac{\gamma}{c} \mathbf{s}^T \mathbf{P} - \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{P} \\
+      -\gamma^2 u \mathbf{v} + \frac{\gamma}{c} \mathbf{P} \mathbf{s} + \frac{\gamma^2}{c} \mathbf{v} \mathbf{s}^T \mathbf{v}  - \gamma  \mathbf{P}\symbf{\sigma} \mathbf{v} &
+      \gamma^2 u \mathbf{v} \mathbf{v}^T - \frac{\gamma}{c} \left( \mathbf{P} \mathbf{s} \mathbf{v}^T + \mathbf{v} \mathbf{s}^T \mathbf{P} \right) + \mathbf{P} \symbf{\sigma} \mathbf{P}
+    \end{bmatrix}
+\end{aligned}$$
+
+<!--
+
+$$\begin{aligned}
+  \begin{bmatrix} u' & \mathbf{s}^{'T}/c \\ \mathbf{s}'/c & \symbf{\sigma}' \end{bmatrix} 
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+  & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} \begin{bmatrix} u & \mathbf{s}^{T}/c \\ \mathbf{s}/c & u \mathbf{I} - \mathbf{e} \mathbf{d}^T - \mathbf{b} \mathbf{h}^T \end{bmatrix} \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T \end{bmatrix}^T = \\
+\end{aligned}$$
+
+$$\begin{aligned}
+& = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix}  \begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & - \gamma u \mathbf{v}^T + \frac{1}{c} \left( \mathbf{s}^T + (\gamma-1) \mathbf{s}^T \hat{\mathbf{v}} \hat{\mathbf{v}}^T \right) \\ \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v}  & - \frac{\gamma}{c} \mathbf{s}\mathbf{v}^T + \symbf{\sigma} + (\gamma - 1)\symbf{\sigma} \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} = \\
+  & = \begin{bmatrix}  u' & \mathbf{s}'^T / c \\ \mathbf{s}' / c & \symbf{\sigma}' \end{bmatrix} \ ,
+\end{aligned}$$
+
+with
+
+$$
+ u' = \gamma^2 \left( u - 2 \frac{1}{c} \mathbf{v}^T \mathbf{s} + \gamma^2 \mathbf{v}^T \symbf{\sigma} \mathbf{v} \right)
+$$
+
+$$\begin{aligned}
+  \frac{\mathbf{s}'}{c} 
+  & = -\gamma u \mathbf{v} - \frac{\gamma}{c} \mathbf{v} \mathbf{v}^T \mathbf{s} + \frac{\gamma}{c} \mathbf{s} - \gamma \symbf{\sigma} \mathbf{v} + \frac{\gamma}{c}(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \mathbf{s} - \gamma(\gamma-1) \hat{\mathbf{v}} \hat{\mathbf{v}}^T \symbf{\sigma} \mathbf{v} \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  \symbf{\sigma}'
+  & = \\
+\end{aligned}$$
+-->
+
+
+```
 
 
 

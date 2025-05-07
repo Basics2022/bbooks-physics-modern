@@ -911,6 +911,41 @@ as
 \end{equation*}
 
 
+\sphinxAtStartPar
+\sphinxstylestrong{Relativity under Lorentz’s transformation.} Components of the description of two inertial observers in relative motion, with aligned Cartesian space coordinates, are related by Lorentz’s transformation
+\subsubsection*{Energy\sphinxhyphen{}momentum\sphinxhyphen{}stress tensor}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Complete}
+
+\sphinxAtStartPar
+Contravariant (Cartesian in space) components of the energy\sphinxhyphen{}momentu\sphinxhyphen{}stress tensor can be collected in a symmetric matrix
+\begin{equation*}
+\begin{split}\mathbf{T}' = \symbf{\Lambda} \mathbf{T} \symbf{\Lambda}^T\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\mathbf{T} = \begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\symbf{\Lambda} = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{I}_3 + (\gamma-1) \mathbf{\hat{v}}\mathbf{\hat{v}}^T  \end{bmatrix} = \gamma \begin{bmatrix} 1 & - \mathbf{v}^T \\ -\mathbf{v} & \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix} + \begin{bmatrix} 0 & \mathbf{0}^T \\ \mathbf{0} & \mathbf{I} - \hat{\mathbf{v}} \hat{\mathbf{v}}^T \end{bmatrix}
+= \begin{bmatrix}  \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+ \mathbf{T}' 
+ & = \begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix}
+\begin{bmatrix} u & \frac{\mathbf{s}^T}{c} \\ \frac{\mathbf{s}}{c} & \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P} \end{bmatrix} = \\
+ & =
+\begin{bmatrix} \gamma u - \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} & \frac{\gamma}{c} \mathbf{s}^T - \gamma \mathbf{v}^T \symbf{\sigma} \\ -\gamma u \mathbf{v} + \mathbf{P} \frac{\mathbf{s}}{c} & -\frac{\gamma}{c} \mathbf{v} \mathbf{s}^T + \mathbf{P} \symbf{\sigma} \end{bmatrix}
+\begin{bmatrix} \gamma & - \gamma \mathbf{v}^T \\ -\gamma \mathbf{v} & \mathbf{P}  \end{bmatrix} = \\
+ & =\begin{bmatrix}
+      \gamma^2 u - 2 \frac{\gamma}{c} \mathbf{s}^T \mathbf{v} + \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{v} &
+      -\gamma^2 u \mathbf{v}^T + \frac{\gamma^2}{c} \mathbf{s}^T \mathbf{v} \mathbf{v}^T + \frac{\gamma}{c} \mathbf{s}^T \mathbf{P} - \gamma \mathbf{v}^T \symbf{\sigma} \mathbf{P} \\
+      -\gamma^2 u \mathbf{v} + \frac{\gamma}{c} \mathbf{P} \mathbf{s} + \frac{\gamma^2}{c} \mathbf{v} \mathbf{s}^T \mathbf{v}  - \gamma  \mathbf{P}\symbf{\sigma} \mathbf{v} &
+      \gamma^2 u \mathbf{v} \mathbf{v}^T - \frac{\gamma}{c} \left( \mathbf{P} \mathbf{s} \mathbf{v}^T + \mathbf{v} \mathbf{s}^T \mathbf{P} \right) + \mathbf{P} \symbf{\sigma} \mathbf{P}
+    \end{bmatrix}
+\end{aligned}\end{split}
+\end{equation*}
+
+
 
 \bigskip\hrule\bigskip
 
