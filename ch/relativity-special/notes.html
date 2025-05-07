@@ -659,7 +659,7 @@ Lagrange equations and variational principle with generalized coordinates<div cl
 = g^{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\alpha}} \mathbf{E}_{\gamma} \otimes \mathbf{E}_{\beta}  \ .\]</div>
 <p>whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}(\nabla \mathbf{A})_{\alpha}^{\beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
+\[\begin{split}(\nabla \mathbf{A})_{\alpha}^{\ \ \beta} = \frac{\partial A^{\beta}}{\partial X^{\alpha}} =
 \begin{bmatrix}
  c^{-2} \partial_t \varphi &amp; c^{-1}\partial_x \varphi &amp; c^{-1}\partial_y \varphi &amp; c^{-1}\partial_z \varphi \\
  c^{-1} \partial_t a_x     &amp;       \partial_x a_x     &amp;       \partial_y a_x     &amp;       \partial_z a_x     \\
@@ -668,21 +668,21 @@ Lagrange equations and variational principle with generalized coordinates<div cl
 \end{bmatrix}\end{split}\]</div>
 <p>or covariant-covariant coomponents,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\gamma}}{\partial X^{\alpha}} = 
-\begin{bmatrix}
-  c^{-2}\partial_t \varphi &amp; c^{-1}\partial_x \varphi &amp; c^{-1}\partial_y \varphi &amp; c^{-1}\partial_z \varphi \\
- -c^{-1}\partial_t a_x     &amp;      -\partial_x a_x     &amp;      -\partial_y a_x     &amp;      -\partial_z a_x     \\
- -c^{-1}\partial_t a_y     &amp;      -\partial_x a_y     &amp;      -\partial_y a_y     &amp;      -\partial_z a_y     \\
- -c^{-1}\partial_t a_z     &amp;      -\partial_x a_z     &amp;      -\partial_y a_z     &amp;      -\partial_z a_z     \\
-\end{bmatrix}\end{split}\]</div>
-<p>or contravariant-contravariant coomponents,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\beta \gamma} \frac{\partial A^{\alpha}}{\partial X^{\gamma}} = 
+\[\begin{split}(\nabla \mathbf{A})_{\alpha \beta} = \frac{\partial A_{\beta}}{\partial X^{\alpha}} =\frac{\partial A^{\gamma}}{\partial X^{\alpha}} g_{\gamma \beta}  = 
 \begin{bmatrix}
   c^{-2}\partial_t \varphi &amp;-c^{-1}\partial_x \varphi &amp;-c^{-1}\partial_y \varphi &amp;-c^{-1}\partial_z \varphi \\
   c^{-1}\partial_t a_x     &amp;      -\partial_x a_x     &amp;      -\partial_y a_x     &amp;      -\partial_z a_x     \\
   c^{-1}\partial_t a_y     &amp;      -\partial_x a_y     &amp;      -\partial_y a_y     &amp;      -\partial_z a_y     \\
   c^{-1}\partial_t a_z     &amp;      -\partial_x a_z     &amp;      -\partial_y a_z     &amp;      -\partial_z a_z     \\
+\end{bmatrix}\end{split}\]</div>
+<p>or contravariant-contravariant coomponents,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\nabla \mathbf{A})^{\alpha \beta} = \frac{\partial A^{\beta}}{\partial X_{\alpha}} = g_{\alpha \gamma} \frac{\partial A^{\beta}}{\partial X^{\gamma}} = 
+\begin{bmatrix}
+  c^{-2}\partial_t \varphi &amp; c^{-1}\partial_x \varphi &amp; c^{-1}\partial_y \varphi &amp; c^{-1}\partial_z \varphi \\
+ -c^{-1}\partial_t a_x     &amp;      -\partial_x a_x     &amp;      -\partial_y a_x     &amp;      -\partial_z a_x     \\
+ -c^{-1}\partial_t a_y     &amp;      -\partial_x a_y     &amp;      -\partial_y a_y     &amp;      -\partial_z a_y     \\
+ -c^{-1}\partial_t a_z     &amp;      -\partial_x a_z     &amp;      -\partial_y a_z     &amp;      -\partial_z a_z     \\
 \end{bmatrix}\end{split}\]</div>
 <p>The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,</p>
 <div class="math notranslate nohighlight" id="equation-eq-tensor-em-field">
@@ -699,6 +699,20 @@ F_{\alpha \beta} =
 \begin{bmatrix}
                         0 &amp; \frac{\underline{e}^T}{c} \\
  -\frac{\underline{e}}{c} &amp; \underline{b}_{\times}
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F_{\alpha}^{\ \ \beta} = 
+\begin{bmatrix}
+                        0 &amp;-\frac{\underline{e}^T}{c} \\
+ -\frac{\underline{e}}{c} &amp;-\underline{b}_{\times}
+\end{bmatrix}
+\qquad , \qquad 
+F^{\alpha}_{\ \ \beta} = 
+\begin{bmatrix}
+                        0 &amp; \frac{\underline{e}^T}{c} \\
+  \frac{\underline{e}}{c} &amp;-\underline{b}_{\times}
 \end{bmatrix}
 \end{split}\]</div>
 </div>
@@ -822,26 +836,123 @@ $$\begin{aligned}
   \nabla \cdot \mathbf{D} = \mathbf{J} \\
   \nabla \cdot \left( \symbf{\varepsilon} : \mathbf{F} \right) = \mathbf{0} \\
 \end{aligned}\end{split}\]</div>
-<p>Energy</p>
+<p>Energy and momentum balance equation of the EM field using 3-dimensional formalism,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \frac{\partial u      }{\partial t} + \nabla \cdot \vec{s} &amp; = - \vec{e} \cdot \vec{j}^f \\
   \frac{\partial \vec{s}}{\partial t} + \nabla \cdot \left\{ c^2 \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] \right\} &amp; = - c^2 (\rho^f \vec{e} - \vec{b} \times \vec{j}^f) \\
 \end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<div class="math notranslate nohighlight" id="equation-eq-energy-momentum-equation-3d">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-energy-momentum-equation-3d" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) &amp; = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
   \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] &amp; = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
 \end{aligned}\end{split}\]</div>
-<p>…</p>
+<p>The governing equations of energy and momentum of the EM field can be recast in 4-dimensional formalism,</p>
 <div class="math notranslate nohighlight">
 \[\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\]</div>
+<p>with the <strong>energy-momentum-stress tensor</strong>, <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-0">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-0" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  T^{\alpha \beta} &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} D^{\beta}_{\ \ \nu} = \\
+                   &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} g^{\beta \mu} D_{\mu \nu} = \\
+                   &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} + F^{\alpha \nu} D_{\nu \mu} g^{\mu \beta} \\
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Term <span class="math notranslate nohighlight">\(\ \mathbf{g} \ \mathbf{F} : \mathbf{D} \)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-1">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-1" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{F} : \mathbf{D} = F_{\mu \nu} D^{\mu \nu} =
+  \begin{bmatrix} 0 &amp; \frac{\underline{e}^T}{c} \\ -\frac{\underline{e}}{c} &amp; \underline{b}_{\times} \end{bmatrix} :
+  \begin{bmatrix} 0 &amp; -c \underline{d}^T \\ c \underline{d} &amp; \underline{h}_{\times} \end{bmatrix} = - 2 \underline{e}^T \underline{d} + 2 \underline{b}^T \underline{h} = 2 \left( - \vec{e} \cdot \vec{d} + \vec{b} \cdot \vec{h} \right) \ .
+\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Term <span class="math notranslate nohighlight">\(\ F^{\alpha \nu} D^{\beta}_{\ \ \nu}\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-2">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-2" title="Permalink to this equation">#</a></span>\[\begin{split}F^{\alpha \nu} D^{\beta}_{\ \ \nu} =
+  \begin{bmatrix} 0 &amp; -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} &amp; \underline{b}_{\times} \end{bmatrix} 
+  \begin{bmatrix} 0 &amp; c \underline{d}^T \\ c \underline{d} &amp; -\underline{h}^T_{\times} \end{bmatrix} = 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} &amp; \frac{\left( \underline{h} \times \underline{e} \right)^T}{c} \\
+      c  \underline{b} \times \underline{d} &amp; \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix}
+\end{split}\]</div>
+<p class="sd-card-text">being</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} = J^{\beta}\]</div>
+\[\underline{e}^T \underline{h}^T_{\times} = e_i \varepsilon_{kji} h_j = \left( \vec{h} \times \vec{e} \right)_k\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{aligned}
-  - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} &amp; = - F_{\gamma \beta} J^{\beta}
-\end{aligned}\]</div>
+\[\left[ \underline{b}_{\times} \underline{h}_{\times} \right]_{im} = \varepsilon_{ijk} b_{j} \varepsilon_{klm} h_{l} = \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) b_j h_l = h_i b_m - b_l h_l \delta_{im} = \underline{h} \underline{b}^T - \underline{b}^T \underline{h} \underline{\underline{I}}_3 \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Energy-stress tensor<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Putting together the expression <a class="reference internal" href="#equation-eq-energy-momentum-tensor-1">(2.7)</a> of term <span class="math notranslate nohighlight">\(\frac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu}\)</span> and <a class="reference internal" href="#equation-eq-energy-momentum-tensor-2">(2.8)</a> of term <span class="math notranslate nohighlight">\(F^{\alpha \nu} D^{\beta}_{\ \ \nu}\)</span>, with <span class="math notranslate nohighlight">\(\underline{d} = \varepsilon \underline{e}\)</span>, <span class="math notranslate nohighlight">\(\underline{b} = \mu \underline{h}\)</span> (<strong>todo</strong> do energy balance for all charges and currents and spearating contributions of free and bound charges and currents)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ T^{\alpha \beta}
+&amp; =
+\dfrac{1}{4} \begin{bmatrix} 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) &amp; \underline{0}^T \\ \underline{0} &amp; - 2(-\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}} \end{bmatrix}
+- 
+  \begin{bmatrix}
+    - \underline{e}^T \underline{d} &amp; \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\
+      c \underline{b} \times \underline{d} &amp; \underline{e} \underline{d}^T + \underline{b}_{\times} \underline{h}_{\times}
+  \end{bmatrix} = \\
+&amp; =
+\begin{bmatrix} \dfrac{1}{2}\left(\underline{e}^T \underline{d} + \underline{b}^T \underline{h} \right) &amp; \frac{\left( \underline{e} \times \underline{h} \right)^T}{c} \\ \frac{\underline{e} \times \underline{h}}{c} &amp; \dfrac{1}{2}(\underline{e}^T \underline{d} + \underline{b}^T \underline{h}) \underline{\underline{I}}_3 - \underline{e} \underline{d}^T - \underline{b} \underline{h}^T \end{bmatrix} = \\
+&amp; =
+\begin{bmatrix} u &amp; \dfrac{\vec{s}}{c} \\ \dfrac{\vec{s}}{c} &amp; u \mathbb{I} - \vec{e} \otimes \vec{d} - \vec{b} \otimes \vec{h} \end{bmatrix}
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Energy-stress equation in 4-dimensional formalism<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Energy and momentum balance equations <a class="reference internal" href="#equation-eq-energy-momentum-equation-3d">(2.5)</a> can be recast using 4-dimensional formalism,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \nabla \cdot \mathbf{T} &amp; = - \mathbf{F} \cdot \mathbf{J}  \\
+  \dfrac{\partial T^{\nu \mu} }{\partial X^{\nu}} &amp; = - F^{\mu \nu} J_{\nu}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as</p>
+<!--
+$$F^{\alpha}_{\ \ \beta} J^{\beta} = \begin{bmatrix} 0 & - \frac{\underline{e}^T}{c} \\ - \frac{\underline{e}}{c} & - \underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ \underline{j} \end{bmatrix} = $$
+-->
+<!--
+$$F^{\alpha}_{\ \ \beta} J^{\beta} = \begin{bmatrix} 0 &   \frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} &-\underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ \underline{j} \end{bmatrix} = \begin{bmatrix} \frac{1}{c} \underline{e}^T \underline{j} \\ \rho \underline{e} - \underline{b}_\times \underline{j} \end{bmatrix}$$
+
+or equivalently
+-->
+<div class="math notranslate nohighlight">
+\[\begin{split}F^{\mu \nu} J_{\nu} = \begin{bmatrix} 0 &amp;  -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} &amp; \underline{b}_{\times} \end{bmatrix} \begin{bmatrix} \rho c \\ - \underline{j} \end{bmatrix} = \begin{bmatrix} \frac{1}{c} \underline{e}^T \underline{j} \\ \rho \underline{e} - \underline{b}_\times \underline{j} \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0   &amp; : \quad \dfrac{\partial T^{\nu 0}}{\partial X^{\nu}} = - F^{0 \nu} J_{\nu} &amp;&amp; \dfrac{1}{c}\dfrac{\partial}{\partial t} u + \dfrac{\partial}{\partial x_k} \dfrac{s_k}{c} = - \dfrac{1}{c} e_k j_k \\
+  1:3 &amp; : \quad \dfrac{\partial T^{\nu i}}{\partial X^{\nu}} = - F^{i \nu} J_{\nu} &amp;&amp; \dfrac{1}{c}\dfrac{\partial}{\partial t} \dfrac{s_i}{c} + \dfrac{\partial \sigma_{ki}}{\partial x_k} = - \rho e_i + \varepsilon_{ijk} b_j j_k  \\
+\end{aligned}\end{split}\]</div>
+</div>
+</details><!--
+$$\dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} = J^{\beta}$$
+
+$$\begin{aligned}
+  - F_{\gamma \beta} \dfrac{\partial D^{\alpha \beta}}{\partial X^{\alpha}} & = - F_{\gamma \beta} J^{\beta}
+\end{aligned}$$
+-->
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="e-p-from-lagrange"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
