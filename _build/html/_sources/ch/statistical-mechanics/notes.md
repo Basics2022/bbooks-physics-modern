@@ -25,10 +25,12 @@ Each of the $N$ components of the system is in an **energy level** $i$. Energy l
 
 Given a macrostate, what's the number of ways $W(N_i; g_i)$ to get a consistent microstate? Once the expression is found, constrained optimization follows: optimization w.r.t. $N_i$ is usually performed in the limit of $N_i \rightarrow +\infty$ (why in Fermi-Dirac distribution, obeying Pauli exclusion principle?), with the values of the macroscopic variables as constraints usually treated with Lagrange multiplier.
 
-(statistical-mechanics:notes:distributions:mb)=
-### Maxwell-Boltzmann
+(statistical-mechanics:notes:distributions:b)=
+### Boltzmann
 
-Statistics of distinguishible components.
+Statistics of distinguishible components. Let $N_i$ the number of elementary components in the energy level $i$ with energy $E_i$. Let the number of elementary components $N = \sum_i N_i$ and the total energy of the system $E = \sum_i N_i E_i$ be given.
+
+
 
 
 (statistical-mechanics:notes:distributions:be)=
@@ -45,7 +47,7 @@ $$W_{BE,i} = \frac{(N_i + g_i - 1)!}{N_i! (g_i-1)!} \qquad , \qquad W_{BE} = \pr
 
 **Most likely microstate.** Instead of maximizing {eq}`eq:be`, the objective function is $\ln W_{BE}$, after using Stirling approximation in the limit of large $N_i$ and $g_i$, $N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}$. The approximate occupation number of one of the $G_i$ sublevels of the $i^{th}$ level of the most likely microstate is
 
-$$n_i := \frac{N_i}{G_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .$$
+$$n_i := \frac{N_i}{g_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .$$
 
 ```{dropdown} Optimization
 $$\begin{aligned}

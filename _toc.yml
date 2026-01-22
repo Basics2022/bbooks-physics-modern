@@ -24,6 +24,11 @@ parts:
   - file: ch/statistical-mechanics/intro
   - file: ch/statistical-mechanics/notes
   - file: ch/statistical-mechanics/statistics
+  - file: ch/statistical-mechanics/ising
+    sections:
+    - file: ch/statistical-mechanics/ising-notes
+    - file: ch/statistical-mechanics/markov-process-notes
+    - file: ch/statistical-mechanics/ising-numerics
 - caption: Quantum Mechanics
   numbered: True
   chapters:

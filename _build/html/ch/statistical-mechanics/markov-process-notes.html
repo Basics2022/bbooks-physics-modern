@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.2. Markov processes &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/markov-process-notes';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10.3. Ising model - Numerics" href="ising-numerics.html" />
+    <link rel="prev" title="10.1. Ising model - Notes" href="ising-notes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">10.1. Ising model - Notes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">10.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ch/statistical-mechanics/markov-process-notes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Markov processes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">10.2.1. State transition matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">10.2.2. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">10.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">10.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">10.2.2.3. Detailed balance</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="markov-processes">
+<span id="statistical-mechanics-markov-process"></span><h1><span class="section-number">10.2. </span>Markov processes<a class="headerlink" href="#markov-processes" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/rl/mdp.html"><strong>Markov Process.</strong></a> Let <span class="math notranslate nohighlight">\(S\)</span> a finite set of state <span class="math notranslate nohighlight">\(s\)</span> that can be indexed with integer indices <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(P\)</span> the transition probability between two states at consecutive time-steps, <span class="math notranslate nohighlight">\(P_{ss'} = P(s'|s)\)</span>, and <span class="math notranslate nohighlight">\(p_0\)</span> the initial probability. A Markox process is uniquely defined by the triple</p>
+<div class="math notranslate nohighlight">
+\[\langle S, P, p_0 \rangle \ .\]</div>
+<p>If the Markov process is <strong>time-homogeneous</strong>, state transition matrix <span class="math notranslate nohighlight">\(P\)</span> is independent from the time-step.</p>
+<div class="section" id="state-transition-matrix">
+<span id="statistical-mechanics-markov-process-transition-matrix"></span><h2><span class="section-number">10.2.1. </span>State transition matrix<a class="headerlink" href="#state-transition-matrix" title="Permalink to this heading">#</a></h2>
+<p>Given the finite set of states with integer indices, their probabilities at time <span class="math notranslate nohighlight">\(n\)</span> can be collected in the <span class="math notranslate nohighlight">\(|S|\)</span>-dimensional vector <span class="math notranslate nohighlight">\(\mathbf{p}_n\)</span>. Transition from time <span class="math notranslate nohighlight">\(n-1\)</span> to <span class="math notranslate nohighlight">\(n\)</span> can be represented as</p>
+<div class="math notranslate nohighlight">
+\[p_n(s') = \sum_s P (s'|s) p_{n-1}(s) = \sum_s P_{ss'} p_{n-1}(s)  \ ,\]</div>
+<p>or using matrix formalism</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}^T_{n} = \mathbf{p}^T_{n-1} \mathbf{P} \ .\]</div>
+<p>As <span class="math notranslate nohighlight">\(\mathbf{p}_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> represents probability, their elements are non-negative. As the <span class="math notranslate nohighlight">\(i^{th}\)</span> element of <span class="math notranslate nohighlight">\(\mathbf{p}_n\)</span> represents the probability of the system of being in state <span class="math notranslate nohighlight">\(i\)</span> at time <span class="math notranslate nohighlight">\(n\)</span>, it follows</p>
+<div class="math notranslate nohighlight">
+\[\sum_i \left\{ \mathbf{p}_n \right\}_i = \sum_i p_n(i) = 1 \ .\]</div>
+<p>As the element <span class="math notranslate nohighlight">\(P_{ij} = P(i|j)\)</span> represents the conditional probability of reaching <span class="math notranslate nohighlight">\(j\)</span> from state <span class="math notranslate nohighlight">\(i\)</span> in one step, it follows</p>
+<div class="math notranslate nohighlight">
+\[\sum_{j} \left\{ \mathbf{P} \right\}_{ij} = \sum_j P(j|i) = 1 \ .\]</div>
+</div>
+<div class="section" id="properties">
+<span id="statistical-mechanics-markov-process-properties"></span><h2><span class="section-number">10.2.2. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
+<div class="section" id="eigenvalue-s-1-and-stationary-state-boldsymbol-pi">
+<h3><span class="section-number">10.2.2.1. </span>Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span><a class="headerlink" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi" title="Permalink to this heading">#</a></h3>
+<p>The sum of the elements of each row of <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> is equal to <span class="math notranslate nohighlight">\(1\)</span>, as <span class="math notranslate nohighlight">\(\sum_{s'} P_{ss'} = \sum_{s'} P(s' | s) = 1\)</span>. Equivalently, state transition matrix <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> has an eigenvalue <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, with the uniform right eigenvector <span class="math notranslate nohighlight">\(\mathbf{1}\)</span>, i.e. <span class="math notranslate nohighlight">\(\mathbf{P} \mathbf{1} = \mathbf{1}\)</span>.</p>
+<p>The corresponding left eigenvector is a stationary state <span class="math notranslate nohighlight">\(\boldsymbol\pi\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol\pi^T \mathbf{P} = \boldsymbol\pi^T \ .\]</div>
+</div>
+<div class="section" id="spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">
+<h3><span class="section-number">10.2.2.2. </span>Spectrum of the transition matrix and asymptotic behavior of the system<a class="headerlink" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system" title="Permalink to this heading">#</a></h3>
+<p><strong>todo</strong> <em>Are all the transition matrices diagonalizable?</em></p>
+<p>Assuming the transition matrix can be diagonalized, the evolution of the system from the initial probability <span class="math notranslate nohighlight">\(\mathbf{p}_0\)</span> can be easily represented. The initial probabbility is written as <span class="math notranslate nohighlight">\(\mathbf{p}_0 = c_k \mathbf{w}_k\)</span>, being <span class="math notranslate nohighlight">\(\mathbf{w}_k\)</span> the left eigenvectors of the transition matrix, and</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \mathbf{p}^T_n
+  =\mathbf{p}^T_{n-1} \mathbf{P}
+  =\mathbf{p}^T_{0} \underbrace{\mathbf{P} \dots \mathbf{P}}_{ n \text{ times} }
+  =a_k \underbrace{\mathbf{w}^T_k \mathbf{P}}_{= \lambda_k \mathbf{w}_k^T} \dots \mathbf{P}
+  =a_k \lambda_k^n \mathbf{w}_k^T \ .
+\end{aligned}\]</div>
+<p>As <span class="math notranslate nohighlight">\(n \rightarrow +\infty\)</span> only the contributions of the eigenvectors with <span class="math notranslate nohighlight">\(|\lambda_k| = 1\)</span> survive. If there’s only one of these eigenvalues, <span class="math notranslate nohighlight">\(\lambda_1 = 1\)</span>, the system converges to <span class="math notranslate nohighlight">\(\mathbf{1}\)</span>. If there are many eigenvalues with <span class="math notranslate nohighlight">\(\lambda_i = 1\)</span>, there system converges with probability <span class="math notranslate nohighlight">\(a_i\)</span> to those stationary states, being <span class="math notranslate nohighlight">\(a_i\)</span> the component of the initial state of the system along the <span class="math notranslate nohighlight">\(i^{th}\)</span> eigenvector,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_n \sim a_k \mathbf{w}_k \ .\]</div>
+<p>Components <span class="math notranslate nohighlight">\(a_i\)</span> can be evaluated as the dot product between the <strong>dual basis</strong> <span class="math notranslate nohighlight">\(\{ \mathbf{v}_i \}_i\)</span> w.r.t. the left eigenvectors and the initial state <span class="math notranslate nohighlight">\(\mathbf{p}_0\)</span>, as</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{p}_0^T \mathbf{v}_i = a_k \underbrace{\mathbf{w}_k^T \mathbf{v}_i}_{ = \delta_{ik} \text{, def. of dual basis} } = a_i \ . \]</div>
+<!--
+, defined as $\mathbf{w}_k^T \mathbf{v}_i := \delta_{ki}$, so tha
+-->
+<p>Existence of eigenvalues <span class="math notranslate nohighlight">\(|s_j| = 1\)</span>, <span class="math notranslate nohighlight">\(s_j = e^{i \theta_j}\)</span> makes limit cycles possible as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_n \sim \mathbf{w}_j e^{i n \theta_j} \text{ + c.c.} = 2 \left( \text{re}\{ \mathbf{w}_j \} \cos \theta_j - \text{im}\{ \mathbf{w}_j \} \cos \theta_j \right) \ .\]</div>
+<p><strong>todo</strong> <em>Discuss the possibility (?) of negative components. What’s a negative probability?</em></p>
+</div>
+<div class="section" id="detailed-balance">
+<span id="statistical-mechanics-markov-process-properties-detailed-balance"></span><h3><span class="section-number">10.2.2.3. </span>Detailed balance<a class="headerlink" href="#detailed-balance" title="Permalink to this heading">#</a></h3>
+<p>By definition, a <strong>reversible Markov chain</strong> has a positive stationary distribution <span class="math notranslate nohighlight">\(\boldsymbol\pi\)</span> that satisfies the detailed balance equations</p>
+<div class="math notranslate nohighlight">
+\[\pi_i P_{ij} = \pi_j P_{ji} \ ,\]</div>
+<p>i.e. the flow between each pair of states <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span> is individaully balanced. Reversibility is a sufficient - even not necessary - condition for the existence of a stationary state.</p>
+<p>Let <span class="math notranslate nohighlight">\(\pi_i \ne 0\)</span> for <span class="math notranslate nohighlight">\(\forall i\)</span>, it’s possible to define a symmetric matrix via a similarity transformation, as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \sqrt{\pi_i}\sqrt{\pi_i} P_{ij} &amp; = \sqrt{\pi_j}\sqrt{\pi_j} P_{ji} \\
+  \sqrt{\pi_i} P_{ij} \frac{1}{\sqrt{\pi_j}} &amp; = \sqrt{\pi_j} P_{ji} \frac{1}{\sqrt{\pi_i}} \\
+  S_{ij} &amp; = S_{ji} \ ,
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{S} = \mathbf{D} \mathbf{P} \mathbf{D}^{-1}\)</span>, with <span class="math notranslate nohighlight">\(\mathbf{D} = \text{diag}\{ \sqrt{\pi_i} \}\)</span>. As the matrices <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> are related via a similarity transformation, they have the same eigenvalues</p>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p><em>Discuss the meaning of “reveresible”</em></p></li>
+</ul>
+<p><strong>Ergodicity.</strong> …<strong>todo</strong> <em>start from <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_chain#Ergodicity">https://en.wikipedia.org/wiki/Markov_chain#Ergodicity</a></em></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/statistical-mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ising-notes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">10.1. </span>Ising model - Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ising-numerics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10.3. </span>Ising model - Numerics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">10.2.1. State transition matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">10.2.2. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">10.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">10.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">10.2.2.3. Detailed balance</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
