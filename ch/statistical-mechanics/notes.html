@@ -84,15 +84,6 @@ const thebe_selector_output = ".output, .cell_output"
   gtag('config', 'G-E07F6PFC9G');
 </script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -358,7 +349,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">8.3. Canonical ensemble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">8.4. Macrocanonical esemble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">8.5. Statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">8.5.1. Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann">8.5.1. Boltzmann</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">8.5.2. Bose-Einstein</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">8.5.3. Fermi-Dirac</a></li>
 </ul>
@@ -398,9 +389,9 @@ document.write(`
 <li><p><strong>Principle of maximum uncertainty</strong>, <strong>maximum entropy</strong>, <strong>minimum information</strong>: given a measurement of a macroscopic variable <span class="math notranslate nohighlight">\(V\)</span>, describing the macrostate of the system, the feasible un-observed/able microstates of the system are the microstates consistent with it: there’s usually a sharp maximum of in the probability density of the micrsotates.</p></li>
 </ul>
 <p>Given a macrostate, what’s the number of ways <span class="math notranslate nohighlight">\(W(N_i; g_i)\)</span> to get a consistent microstate? Once the expression is found, constrained optimization follows: optimization w.r.t. <span class="math notranslate nohighlight">\(N_i\)</span> is usually performed in the limit of <span class="math notranslate nohighlight">\(N_i \rightarrow +\infty\)</span> (why in Fermi-Dirac distribution, obeying Pauli exclusion principle?), with the values of the macroscopic variables as constraints usually treated with Lagrange multiplier.</p>
-<div class="section" id="maxwell-boltzmann">
-<span id="statistical-mechanics-notes-distributions-mb"></span><h3><span class="section-number">8.5.1. </span>Maxwell-Boltzmann<a class="headerlink" href="#maxwell-boltzmann" title="Permalink to this heading">#</a></h3>
-<p>Statistics of distinguishible components.</p>
+<div class="section" id="boltzmann">
+<span id="statistical-mechanics-notes-distributions-b"></span><h3><span class="section-number">8.5.1. </span>Boltzmann<a class="headerlink" href="#boltzmann" title="Permalink to this heading">#</a></h3>
+<p>Statistics of distinguishible components. Let <span class="math notranslate nohighlight">\(N_i\)</span> the number of elementary components in the energy level <span class="math notranslate nohighlight">\(i\)</span> with energy <span class="math notranslate nohighlight">\(E_i\)</span>. Let the number of elementary components <span class="math notranslate nohighlight">\(N = \sum_i N_i\)</span> and the total energy of the system <span class="math notranslate nohighlight">\(E = \sum_i N_i E_i\)</span> be given.</p>
 </div>
 <div class="section" id="bose-einstein">
 <span id="statistical-mechanics-notes-distributions-be"></span><h3><span class="section-number">8.5.2. </span>Bose-Einstein<a class="headerlink" href="#bose-einstein" title="Permalink to this heading">#</a></h3>
@@ -419,7 +410,7 @@ Counting microstates<div class="sd-summary-down docutils">
 </div>
 </details><p><strong>Most likely microstate.</strong> Instead of maximizing <a class="reference internal" href="#equation-eq-be">(8.1)</a>, the objective function is <span class="math notranslate nohighlight">\(\ln W_{BE}\)</span>, after using Stirling approximation in the limit of large <span class="math notranslate nohighlight">\(N_i\)</span> and <span class="math notranslate nohighlight">\(g_i\)</span>, <span class="math notranslate nohighlight">\(N_i! \sim \left(\frac{N_i}{e} \right)^{N_i}\)</span>. The approximate occupation number of one of the <span class="math notranslate nohighlight">\(G_i\)</span> sublevels of the <span class="math notranslate nohighlight">\(i^{th}\)</span> level of the most likely microstate is</p>
 <div class="math notranslate nohighlight">
-\[n_i := \frac{N_i}{G_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .\]</div>
+\[n_i := \frac{N_i}{g_i} = \frac{1}{e^{\alpha + \beta E_i} - 1} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Optimization<div class="sd-summary-down docutils">
@@ -744,7 +735,7 @@ Optimization<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-ensemble">8.3. Canonical ensemble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macrocanonical-esemble">8.4. Macrocanonical esemble</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">8.5. Statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-boltzmann">8.5.1. Maxwell-Boltzmann</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann">8.5.1. Boltzmann</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bose-einstein">8.5.2. Bose-Einstein</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac">8.5.3. Fermi-Dirac</a></li>
 </ul>

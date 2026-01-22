@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12. Quantum Mechanics - Notes &#8212; Modern Physics</title>
+    <title>10. Ising model &#8212; Modern Physics</title>
   
   
   
@@ -64,23 +64,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/notes';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/ising';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="11. Quantum Mechanics" href="intro.html" />
+    <link rel="next" title="10.1. Ising model - Notes" href="ising-notes.html" />
+    <link rel="prev" title="9. Statistical Physics - Statistics Miscellanea" href="statistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -184,19 +176,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../statistical-mechanics/ising.html">10. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-notes.html">10.1. Ising model - Notes</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">10.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">10.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">10.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Quantum Mechanics - Notes</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -251,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/quantum-mechanics/notes.md" target="_blank"
+      <li><a href="../../_sources/ch/statistical-mechanics/ising.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +327,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quantum Mechanics - Notes</h1>
+    <h1>Ising model</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -347,8 +341,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="quantum-mechanics-notes">
-<span id="id1"></span><h1><span class="section-number">12. </span>Quantum Mechanics - Notes<a class="headerlink" href="#quantum-mechanics-notes" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="ising-model">
+<span id="statistical-mechanics-ising"></span><h1><span class="section-number">10. </span>Ising model<a class="headerlink" href="#ising-model" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Introduction, and some notes about analytical results and numerical methods. Ising model on regular lattices</p></li>
+<li><p><strong>todo</strong> <em>Notebook implementing methods and showing some examples</em></p></li>
+</ul>
+<p><strong>References.</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://rajeshrinet.github.io/blog/2014/ising-model/#:~:text=Flip%20the%20spin%20of%20a,Repeat%202%2D4">https://rajeshrinet.github.io/blog/2014/ising-model/#:~:text=Flip the spin of a,Repeat 2-4</a></p></li>
+<li><p><a class="reference external" href="https://mattbierbaum.github.io/ising.js/">https://mattbierbaum.github.io/ising.js/</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -364,7 +369,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./ch/quantum-mechanics"
+            path: "./ch/statistical-mechanics"
         },
         predefinedOutput: true
     }
@@ -382,13 +387,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="statistics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Statistical Physics - Statistics Miscellanea</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="ising-notes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10.1. </span>Ising model - Notes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
