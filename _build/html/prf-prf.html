@@ -78,6 +78,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -183,19 +192,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ch/statistical-mechanics/ising.html">10. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/ising-notes.html">10.1. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/markov-process-notes.html">10.2. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/ising-numerics.html">10.3. Ising model - Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ch/statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ch/quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -308,7 +318,8 @@ document.write(`
    <a href="#cap-example-0"><strong>example-0</strong></a> | 
    <a href="#cap-example-1"><strong>example-1</strong></a> | 
    <a href="#cap-example-2"><strong>example-2</strong></a> | 
-   <a href="#cap-example-3"><strong>example-3</strong></a>
+   <a href="#cap-example-3"><strong>example-3</strong></a> | 
+   <a href="#cap-theorem-0"><strong>theorem-0</strong></a>
    </div>
 
    <table class="indextable modindextable">
@@ -342,7 +353,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="ch/statistical-mechanics/ising-notes.html#example-0"><code class="xref">example-0</code></a> <em>(ch/statistical-mechanics/ising-notes)</em></td><td>
+       <a href="ch/statistical-mechanics/notes.html#example-0"><code class="xref">example-0</code></a> <em>(ch/statistical-mechanics/notes)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-1"><td></td><td>
@@ -350,7 +361,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="ch/statistical-mechanics/ising-notes.html#example-1"><code class="xref">example-1</code></a> <em>(ch/statistical-mechanics/ising-notes)</em></td><td>
+       <a href="ch/statistical-mechanics/notes.html#example-1"><code class="xref">example-1</code></a> <em>(ch/statistical-mechanics/notes)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-2"><td></td><td>
@@ -368,6 +379,14 @@ document.write(`
        <td>
        <a href="ch/relativity-special/lorentz.html#example-3"><code class="xref">example-3</code></a> <em>(ch/relativity-special/lorentz)</em></td><td>
        <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-0"><td></td><td>
+       <strong>theorem-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ch/statistical-mechanics/liouville-boltzmann.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(ch/statistical-mechanics/liouville-boltzmann)</em></td><td>
+       <em>theorem</em></td></tr>
    </table>
 
 

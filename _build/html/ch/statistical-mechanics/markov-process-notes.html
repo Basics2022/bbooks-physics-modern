@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10.2. Markov processes &#8212; Modern Physics</title>
+    <title>11.2. Markov processes &#8212; Modern Physics</title>
   
   
   
@@ -70,11 +70,20 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10.3. Ising model - Numerics" href="ising-numerics.html" />
-    <link rel="prev" title="10.1. Ising model - Notes" href="ising-notes.html" />
+    <link rel="next" title="11.3. Ising model - Numerics" href="ising-numerics.html" />
+    <link rel="prev" title="11.1. Ising model - Notes" href="ising-notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -180,19 +189,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">10.1. Ising model - Notes</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.2. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">10.3. Ising model - Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -341,11 +351,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">10.2.1. State transition matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">10.2.2. Properties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">10.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">10.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">10.2.2.3. Detailed balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">11.2.1. State transition matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">11.2.2. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">11.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">11.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">11.2.2.3. Detailed balance</a></li>
 </ul>
 </li>
 </ul>
@@ -360,13 +370,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="markov-processes">
-<span id="statistical-mechanics-markov-process"></span><h1><span class="section-number">10.2. </span>Markov processes<a class="headerlink" href="#markov-processes" title="Permalink to this heading">#</a></h1>
+<span id="statistical-mechanics-markov-process"></span><h1><span class="section-number">11.2. </span>Markov processes<a class="headerlink" href="#markov-processes" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/rl/mdp.html"><strong>Markov Process.</strong></a> Let <span class="math notranslate nohighlight">\(S\)</span> a finite set of state <span class="math notranslate nohighlight">\(s\)</span> that can be indexed with integer indices <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(P\)</span> the transition probability between two states at consecutive time-steps, <span class="math notranslate nohighlight">\(P_{ss'} = P(s'|s)\)</span>, and <span class="math notranslate nohighlight">\(p_0\)</span> the initial probability. A Markox process is uniquely defined by the triple</p>
 <div class="math notranslate nohighlight">
 \[\langle S, P, p_0 \rangle \ .\]</div>
 <p>If the Markov process is <strong>time-homogeneous</strong>, state transition matrix <span class="math notranslate nohighlight">\(P\)</span> is independent from the time-step.</p>
 <div class="section" id="state-transition-matrix">
-<span id="statistical-mechanics-markov-process-transition-matrix"></span><h2><span class="section-number">10.2.1. </span>State transition matrix<a class="headerlink" href="#state-transition-matrix" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-markov-process-transition-matrix"></span><h2><span class="section-number">11.2.1. </span>State transition matrix<a class="headerlink" href="#state-transition-matrix" title="Permalink to this heading">#</a></h2>
 <p>Given the finite set of states with integer indices, their probabilities at time <span class="math notranslate nohighlight">\(n\)</span> can be collected in the <span class="math notranslate nohighlight">\(|S|\)</span>-dimensional vector <span class="math notranslate nohighlight">\(\mathbf{p}_n\)</span>. Transition from time <span class="math notranslate nohighlight">\(n-1\)</span> to <span class="math notranslate nohighlight">\(n\)</span> can be represented as</p>
 <div class="math notranslate nohighlight">
 \[p_n(s') = \sum_s P (s'|s) p_{n-1}(s) = \sum_s P_{ss'} p_{n-1}(s)  \ ,\]</div>
@@ -381,16 +391,16 @@ document.write(`
 \[\sum_{j} \left\{ \mathbf{P} \right\}_{ij} = \sum_j P(j|i) = 1 \ .\]</div>
 </div>
 <div class="section" id="properties">
-<span id="statistical-mechanics-markov-process-properties"></span><h2><span class="section-number">10.2.2. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-markov-process-properties"></span><h2><span class="section-number">11.2.2. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
 <div class="section" id="eigenvalue-s-1-and-stationary-state-boldsymbol-pi">
-<h3><span class="section-number">10.2.2.1. </span>Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span><a class="headerlink" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">11.2.2.1. </span>Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span><a class="headerlink" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi" title="Permalink to this heading">#</a></h3>
 <p>The sum of the elements of each row of <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> is equal to <span class="math notranslate nohighlight">\(1\)</span>, as <span class="math notranslate nohighlight">\(\sum_{s'} P_{ss'} = \sum_{s'} P(s' | s) = 1\)</span>. Equivalently, state transition matrix <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> has an eigenvalue <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, with the uniform right eigenvector <span class="math notranslate nohighlight">\(\mathbf{1}\)</span>, i.e. <span class="math notranslate nohighlight">\(\mathbf{P} \mathbf{1} = \mathbf{1}\)</span>.</p>
 <p>The corresponding left eigenvector is a stationary state <span class="math notranslate nohighlight">\(\boldsymbol\pi\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol\pi^T \mathbf{P} = \boldsymbol\pi^T \ .\]</div>
 </div>
 <div class="section" id="spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">
-<h3><span class="section-number">10.2.2.2. </span>Spectrum of the transition matrix and asymptotic behavior of the system<a class="headerlink" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">11.2.2.2. </span>Spectrum of the transition matrix and asymptotic behavior of the system<a class="headerlink" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system" title="Permalink to this heading">#</a></h3>
 <p><strong>todo</strong> <em>Are all the transition matrices diagonalizable?</em></p>
 <p>Assuming the transition matrix can be diagonalized, the evolution of the system from the initial probability <span class="math notranslate nohighlight">\(\mathbf{p}_0\)</span> can be easily represented. The initial probabbility is written as <span class="math notranslate nohighlight">\(\mathbf{p}_0 = c_k \mathbf{w}_k\)</span>, being <span class="math notranslate nohighlight">\(\mathbf{w}_k\)</span> the left eigenvectors of the transition matrix, and</p>
 <div class="math notranslate nohighlight">
@@ -416,7 +426,7 @@ document.write(`
 <p><strong>todo</strong> <em>Discuss the possibility (?) of negative components. What’s a negative probability?</em></p>
 </div>
 <div class="section" id="detailed-balance">
-<span id="statistical-mechanics-markov-process-properties-detailed-balance"></span><h3><span class="section-number">10.2.2.3. </span>Detailed balance<a class="headerlink" href="#detailed-balance" title="Permalink to this heading">#</a></h3>
+<span id="statistical-mechanics-markov-process-properties-detailed-balance"></span><h3><span class="section-number">11.2.2.3. </span>Detailed balance<a class="headerlink" href="#detailed-balance" title="Permalink to this heading">#</a></h3>
 <p>By definition, a <strong>reversible Markov chain</strong> has a positive stationary distribution <span class="math notranslate nohighlight">\(\boldsymbol\pi\)</span> that satisfies the detailed balance equations</p>
 <div class="math notranslate nohighlight">
 \[\pi_i P_{ij} = \pi_j P_{ji} \ ,\]</div>
@@ -474,7 +484,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10.1. </span>Ising model - Notes</p>
+        <p class="prev-next-title"><span class="section-number">11.1. </span>Ising model - Notes</p>
       </div>
     </a>
     <a class="right-next"
@@ -482,7 +492,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10.3. </span>Ising model - Numerics</p>
+        <p class="prev-next-title"><span class="section-number">11.3. </span>Ising model - Numerics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -501,11 +511,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">10.2.1. State transition matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">10.2.2. Properties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">10.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">10.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">10.2.2.3. Detailed balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-matrix">11.2.1. State transition matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">11.2.2. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalue-s-1-and-stationary-state-boldsymbol-pi">11.2.2.1. Eigenvalue <span class="math notranslate nohighlight">\(s = 1\)</span>, and stationary state <span class="math notranslate nohighlight">\(\ \boldsymbol\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-the-transition-matrix-and-asymptotic-behavior-of-the-system">11.2.2.2. Spectrum of the transition matrix and asymptotic behavior of the system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detailed-balance">11.2.2.3. Detailed balance</a></li>
 </ul>
 </li>
 </ul>
