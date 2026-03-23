@@ -59,7 +59,7 @@ it's possible to find the "convective form" of the Liouville's theorem
 $$\begin{aligned}
   0
   & = \frac{\partial f}{\partial t} + \nabla_{\mathbf{r},i} \cdot \left( \mathbf{v}_i f \right) + \nabla_{\mathbf{v},i} \cdot \left( \mathbf{a}_i f \right) = \\
-  & = \frac{\partial f}{\partial t} + f \underbrace{\left( \nabla_{\mathbf{r},i} \cdot \mathbf{v}_i f + \nabla_{\mathbf{v},i} \cdot \mathbf{a}_i f \right)}_{=0} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \mathbf{a}_i \cdot \nabla_{\mathbf{v},i} f \ ,
+  & = \frac{\partial f}{\partial t} + f \underbrace{\left( \nabla_{\mathbf{r},i} \cdot \mathbf{v}_i + \nabla_{\mathbf{v},i} \cdot \mathbf{a}_i \right)}_{=0} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \mathbf{a}_i \cdot \nabla_{\mathbf{v},i} f \ ,
 \end{aligned}$$
 
 i.e.
