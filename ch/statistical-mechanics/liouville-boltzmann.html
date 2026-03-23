@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Quantum Mechanics - Notes &#8212; Modern Physics</title>
+    <title>8. Liouville and Boltzmann equations &#8212; Modern Physics</title>
   
   
   
@@ -64,11 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/notes';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/liouville-boltzmann';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="12. Quantum Mechanics" href="intro.html" />
+    <link rel="next" title="9. Statistical Physics - Notes" href="notes.html" />
+    <link rel="prev" title="7. Statistical Physics" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,22 +187,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">12. Quantum Mechanics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Quantum Mechanics - Notes</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -254,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/quantum-mechanics/notes.md" target="_blank"
+      <li><a href="../../_sources/ch/statistical-mechanics/liouville-boltzmann.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +328,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -336,11 +341,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quantum Mechanics - Notes</h1>
+    <h1>Liouville and Boltzmann equations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-equation">8.1. Liouville equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann-equation">8.2. Boltzmann equation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -350,8 +364,71 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="quantum-mechanics-notes">
-<span id="id1"></span><h1><span class="section-number">13. </span>Quantum Mechanics - Notes<a class="headerlink" href="#quantum-mechanics-notes" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="liouville-and-boltzmann-equations">
+<span id="statistical-mechanics-liouville-boltzmann"></span><h1><span class="section-number">8. </span>Liouville and Boltzmann equations<a class="headerlink" href="#liouville-and-boltzmann-equations" title="Permalink to this heading">#</a></h1>
+<div class="section" id="liouville-equation">
+<span id="statistical-mechanics-liouville"></span><h2><span class="section-number">8.1. </span>Liouville equation<a class="headerlink" href="#liouville-equation" title="Permalink to this heading">#</a></h2>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 8.1 </span> (Liouville’s theorem)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f(\mathbf{r}_i, \mathbf{v}_i, t)\)</span> the <strong>multi-particle</strong> probability density function. Liouville’s equations reads</p>
+<div class="math notranslate nohighlight">
+\[
+0 = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v},i} f \ .
+\]</div>
+</div>
+</div><p>Let <span class="math notranslate nohighlight">\(f(\mathbf{r}_i, \mathbf{v}_i, t)\)</span> be the <span class="math notranslate nohighlight">\(N\)</span>-particle distribution of a system as a function of the <span class="math notranslate nohighlight">\(2 d N\)</span> coordinates and components of the velocity. Probability is normalized to 1</p>
+<div class="math notranslate nohighlight">
+\[1 = \int_{\overline{\Omega}} f(\mathbf{r}_i, \mathbf{v}_i, t) d \mathbf{r}_i d \mathbf{v}_i \ .\]</div>
+<p>The governing equations of each particle read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \dot{\mathbf{r}}_i = \mathbf{v}_i \\
+  \dot{\mathbf{v}}_i = \frac{\mathbf{F}_i}{m} \ .
+\end{cases}\end{split}\]</div>
+<p>A governing equation for the probability <span class="math notranslate nohighlight">\(P_{\Omega}\)</span> of the system to be in a state belonging to an arbitrary “material” volume <span class="math notranslate nohighlight">\(\Omega_t\)</span> in the state space reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 = \frac{d}{dt} P_{\Omega} 
+  &amp; = \frac{d}{dt} \int_{\Omega_t} f = \\
+  &amp; = \int_{\Omega_t} \frac{\partial f}{\partial t} + \oint_{\partial \Omega_t} \left( \hat{\mathbf{n}}_{\mathbf{r},i} \cdot \mathbf{v}_i + \hat{\mathbf{n}}_{\mathbf{v},i} \cdot \mathbf{a}_i \right) f = \\
+  &amp; = \int_{\Omega_t} \left\{ \frac{\partial f}{\partial t} + \nabla_{\mathbf{r},i} \cdot \left( \mathbf{v}_i f \right) + \nabla_{\mathbf{v},i} \cdot \left( \mathbf{a}_i f \right) \right\} \ ,
+\end{aligned}\end{split}\]</div>
+<p>having used <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html#volume-density">Reynolds’ transport theorem</a> in the state space, applied the multi-dimensional version of the divergence theorem. As this balance holds for any arbitrary volume <span class="math notranslate nohighlight">\(\Omega_t\)</span>, the differential form follows</p>
+<div class="math notranslate nohighlight">
+\[
+0 = \frac{\partial f}{\partial t} + \nabla_{\mathbf{r},i} \cdot \left( \mathbf{v}_i f \right) + \nabla_{\mathbf{v},i} \cdot \left( \mathbf{a}_i f \right) \ .
+\]</div>
+<p>Now, using <a class="reference external" href="https://basics2022.github.io/bbooks-physics-mechanics/ch/hamilton.html">Hamilton equations</a> in absence of non-conservative forces, in terms of generalized coordinates and generalized momenta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \dot{\mathbf{q}}^i =  \frac{\partial \mathscr{H}}{\partial \mathbf{p}_i} \\
+  \dot{\mathbf{p}}_i = -\frac{\partial \mathscr{H}}{\partial \mathbf{q}^i} \ ,
+\end{cases}\end{split}\]</div>
+<p>or in terms of positions and velocities</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \mathbf{v}_i = \dot{\mathbf{r}}_i =  \frac{1}{m} \nabla_{\mathbf{v}_i} \mathscr{H} \\
+  \mathbf{a}_i = \dot{\mathbf{v}}_i = -\frac{1}{m} \nabla_{\mathbf{r}_i} \mathscr{H} \ ,
+\end{cases}\end{split}\]</div>
+<p>it’s possible to find the “convective form” of the Liouville’s theorem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \frac{\partial f}{\partial t} + \nabla_{\mathbf{r},i} \cdot \left( \mathbf{v}_i f \right) + \nabla_{\mathbf{v},i} \cdot \left( \mathbf{a}_i f \right) = \\
+  &amp; = \frac{\partial f}{\partial t} + f \underbrace{\left( \nabla_{\mathbf{r},i} \cdot \mathbf{v}_i f + \nabla_{\mathbf{v},i} \cdot \mathbf{a}_i f \right)}_{=0} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \mathbf{a}_i \cdot \nabla_{\mathbf{v},i} f \ ,
+\end{aligned}\end{split}\]</div>
+<p>i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \mathbf{a}_i \cdot \nabla_{\mathbf{v},i} f \\
+0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v},i} f \ .
+\end{split}\]</div>
+</div>
+<div class="section" id="boltzmann-equation">
+<span id="statistical-mechanics-boltzmann"></span><h2><span class="section-number">8.2. </span>Boltzmann equation<a class="headerlink" href="#boltzmann-equation" title="Permalink to this heading">#</a></h2>
+<p>Integrating all but one particle,…</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -367,7 +444,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./ch/quantum-mechanics"
+            path: "./ch/statistical-mechanics"
         },
         predefinedOutput: true
     }
@@ -390,8 +467,17 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Statistical Physics</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="notes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Statistical Physics - Notes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -399,6 +485,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-equation">8.1. Liouville equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann-equation">8.2. Boltzmann equation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

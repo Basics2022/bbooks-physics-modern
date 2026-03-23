@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10.1. Ising model - Notes &#8212; Modern Physics</title>
+    <title>11.1. Ising model - Notes &#8212; Modern Physics</title>
   
   
   
@@ -70,11 +70,20 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10.2. Markov processes" href="markov-process-notes.html" />
-    <link rel="prev" title="10. Ising model" href="ising.html" />
+    <link rel="next" title="11.2. Markov processes" href="markov-process-notes.html" />
+    <link rel="prev" title="11. Ising model" href="ising.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -180,19 +189,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.1. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">10.2. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">10.3. Ising model - Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -341,9 +351,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-evolution">10.1.2. Time evolution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metropolis-hastings">10.1.2.1. Metropolis-Hastings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">11.1.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-evolution">11.1.2. Time evolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metropolis-hastings">11.1.2.1. Metropolis-Hastings</a></li>
 </ul>
 </li>
 </ul>
@@ -358,14 +368,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="ising-model-notes">
-<span id="statistical-mechanics-ising-notes"></span><h1><span class="section-number">10.1. </span>Ising model - Notes<a class="headerlink" href="#ising-model-notes" title="Permalink to this heading">#</a></h1>
+<span id="statistical-mechanics-ising-notes"></span><h1><span class="section-number">11.1. </span>Ising model - Notes<a class="headerlink" href="#ising-model-notes" title="Permalink to this heading">#</a></h1>
 <div class="section" id="introduction">
-<span id="statistical-mechanics-ising-introduction"></span><h2><span class="section-number">10.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-ising-introduction"></span><h2><span class="section-number">11.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 </div>
 <div class="section" id="time-evolution">
-<span id="statistical-mechanics-ising-time-evolution"></span><h2><span class="section-number">10.1.2. </span>Time evolution<a class="headerlink" href="#time-evolution" title="Permalink to this heading">#</a></h2>
+<span id="statistical-mechanics-ising-time-evolution"></span><h2><span class="section-number">11.1.2. </span>Time evolution<a class="headerlink" href="#time-evolution" title="Permalink to this heading">#</a></h2>
 <div class="section" id="metropolis-hastings">
-<span id="id1"></span><h3><span class="section-number">10.1.2.1. </span>Metropolis-Hastings<a class="headerlink" href="#metropolis-hastings" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3><span class="section-number">11.1.2.1. </span>Metropolis-Hastings<a class="headerlink" href="#metropolis-hastings" title="Permalink to this heading">#</a></h3>
 <p>Metropolis-Hastings algorithm is designed to generate a collection of states according to a desired distribution <span class="math notranslate nohighlight">\(p(s)\)</span>, using a <strong>Markov process</strong> with a unique <strong>stationary distribution</strong> <span class="math notranslate nohighlight">\(\pi(s) = p(s)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
@@ -399,12 +409,12 @@ Algorithm<div class="sd-summary-down docutils">
 <p><strong>todo</strong> <em>check if Metropolis choice fulfills the necessary conditions.</em></p>
 <p><strong>Example: Boltmann distribution with uniform proposal.</strong> Let a system have Boltzmann stationary distribution, <span class="math notranslate nohighlight">\(p(s) \propto \exp\left( - \beta E(s) \right)\)</span>, and uniform proposal conditional probability <span class="math notranslate nohighlight">\(g(s'|s) = \frac{1}{N}\)</span>, with <span class="math notranslate nohighlight">\(N\)</span> the number of accessible states from the state <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 10.1 </span> (Ising model on a 2D lattice with 1 flip per update)</p>
+<p class="admonition-title"><span class="caption-number">Example 11.1 </span> (Ising model on a 2D lattice with 1 flip per update)</p>
 <div class="example-content section" id="proof-content">
 <p>As an example, for an Ising model on a 2D lattice with dimension <span class="math notranslate nohighlight">\(m \times n\)</span> with proposal update with <span class="math notranslate nohighlight">\(1\)</span> flip <span class="math notranslate nohighlight">\(N = mn\)</span>.</p>
 </div>
 </div><div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 10.2 </span> (Ising model on a 2D lattice with <span class="math notranslate nohighlight">\(k\)</span> flips per update)</p>
+<p class="admonition-title"><span class="caption-number">Example 11.2 </span> (Ising model on a 2D lattice with <span class="math notranslate nohighlight">\(k\)</span> flips per update)</p>
 <div class="example-content section" id="proof-content">
 <p><strong>todo</strong> <em>Is a probability built with independent successive flips ok? Target states at each flip have the same probability, s.t. the probability of reaching steps <span class="math notranslate nohighlight">\(s_k\)</span> after <span class="math notranslate nohighlight">\(k\)</span> flips starting from <span class="math notranslate nohighlight">\(s_0\)</span> is not uniform.</em></p>
 <!--
@@ -480,7 +490,7 @@ As an example, for an Ising model on a 2D lattice with dimension $m \times n$ wi
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Ising model</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Ising model</p>
       </div>
     </a>
     <a class="right-next"
@@ -488,7 +498,7 @@ As an example, for an Ising model on a 2D lattice with dimension $m \times n$ wi
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10.2. </span>Markov processes</p>
+        <p class="prev-next-title"><span class="section-number">11.2. </span>Markov processes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -507,9 +517,9 @@ As an example, for an Ising model on a 2D lattice with dimension $m \times n$ wi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-evolution">10.1.2. Time evolution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metropolis-hastings">10.1.2.1. Metropolis-Hastings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">11.1.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-evolution">11.1.2. Time evolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metropolis-hastings">11.1.2.1. Metropolis-Hastings</a></li>
 </ul>
 </li>
 </ul>

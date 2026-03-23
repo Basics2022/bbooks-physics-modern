@@ -11,7 +11,7 @@
 ## Canonical ensemble
 
 (statistical-mechanics:notes:ensembles)=
-## Macrocanonical esemble
+## Macrocanonical ensemble
 
 (statistical-mechanics:notes:distributions)=
 ## Statistics

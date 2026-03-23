@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Ising model &#8212; Modern Physics</title>
+    <title>11. Ising model &#8212; Modern Physics</title>
   
   
   
@@ -68,11 +68,20 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10.1. Ising model - Notes" href="ising-notes.html" />
-    <link rel="prev" title="9. Statistical Physics - Statistics Miscellanea" href="statistics.html" />
+    <link rel="next" title="11.1. Ising model - Notes" href="ising-notes.html" />
+    <link rel="prev" title="10. Statistical Physics - Statistics Miscellanea" href="statistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -178,19 +187,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">10.1. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">10.2. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">10.3. Ising model - Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -342,7 +352,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="ising-model">
-<span id="statistical-mechanics-ising"></span><h1><span class="section-number">10. </span>Ising model<a class="headerlink" href="#ising-model" title="Permalink to this heading">#</a></h1>
+<span id="statistical-mechanics-ising"></span><h1><span class="section-number">11. </span>Ising model<a class="headerlink" href="#ising-model" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Introduction, and some notes about analytical results and numerical methods. Ising model on regular lattices</p></li>
 <li><p><strong>todo</strong> <em>Notebook implementing methods and showing some examples</em></p></li>
@@ -392,7 +402,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Statistical Physics - Statistics Miscellanea</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Statistical Physics - Statistics Miscellanea</p>
       </div>
     </a>
     <a class="right-next"
@@ -400,7 +410,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10.1. </span>Ising model - Notes</p>
+        <p class="prev-next-title"><span class="section-number">11.1. </span>Ising model - Notes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

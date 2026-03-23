@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10.3. Ising model - Numerics &#8212; Modern Physics</title>
+    <title>11.3. Ising model - Numerics &#8212; Modern Physics</title>
   
   
   
@@ -70,11 +70,20 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11. Quantum Mechanics" href="../quantum-mechanics/intro.html" />
-    <link rel="prev" title="10.2. Markov processes" href="markov-process-notes.html" />
+    <link rel="next" title="12. Quantum Mechanics" href="../quantum-mechanics/intro.html" />
+    <link rel="prev" title="11.2. Markov processes" href="markov-process-notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -180,19 +189,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">8. Statistical Physics - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">9. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">10. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">10.1. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">10.2. Markov processes</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.3. Ising model - Numerics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liouville-boltzmann.html">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">11. Quantum Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">12. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">12. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">13. Quantum Mechanics - Notes</a></li>
 </ul>
 
     </div>
@@ -341,7 +351,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m-times-n-lattice">10.3.1. <span class="math notranslate nohighlight">\(m \times n\)</span> lattice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m-times-n-lattice">11.3.1. <span class="math notranslate nohighlight">\(m \times n\)</span> lattice</a></li>
 </ul>
             </nav>
         </div>
@@ -354,7 +364,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="ising-model-numerics">
-<span id="statistical-mechanics-ising-numerics"></span><h1><span class="section-number">10.3. </span>Ising model - Numerics<a class="headerlink" href="#ising-model-numerics" title="Permalink to this heading">#</a></h1>
+<span id="statistical-mechanics-ising-numerics"></span><h1><span class="section-number">11.3. </span>Ising model - Numerics<a class="headerlink" href="#ising-model-numerics" title="Permalink to this heading">#</a></h1>
 <p>Some references:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://farside.ph.utexas.edu/teaching/329/lectures/node110.html">https://farside.ph.utexas.edu/teaching/329/lectures/node110.html</a></p></li>
@@ -383,7 +393,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="m-times-n-lattice">
-<h2><span class="section-number">10.3.1. </span><span class="math notranslate nohighlight">\(m \times n\)</span> lattice<a class="headerlink" href="#m-times-n-lattice" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">11.3.1. </span><span class="math notranslate nohighlight">\(m \times n\)</span> lattice<a class="headerlink" href="#m-times-n-lattice" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&gt; Useful functions for ising model on 2D lattice</span>
@@ -782,7 +792,7 @@ Magnetization: 16
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10.2. </span>Markov processes</p>
+        <p class="prev-next-title"><span class="section-number">11.2. </span>Markov processes</p>
       </div>
     </a>
     <a class="right-next"
@@ -790,7 +800,7 @@ Magnetization: 16
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Quantum Mechanics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -809,7 +819,7 @@ Magnetization: 16
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m-times-n-lattice">10.3.1. <span class="math notranslate nohighlight">\(m \times n\)</span> lattice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m-times-n-lattice">11.3.1. <span class="math notranslate nohighlight">\(m \times n\)</span> lattice</a></li>
 </ul>
   </nav></div>
 
