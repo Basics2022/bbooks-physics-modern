@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Liouville and Boltzmann equations &#8212; Modern Physics</title>
+    <title>8. Liouville theorem and Boltzmann equation &#8212; Modern Physics</title>
   
   
   
@@ -189,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">7. Statistical Physics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Liouville and Boltzmann equations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Liouville theorem and Boltzmann equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -341,7 +341,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Liouville and Boltzmann equations</h1>
+    <h1>Liouville theorem and Boltzmann equation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -351,8 +351,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-equation">8.1. Liouville equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-theorem">8.1. Liouville theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann-equation">8.2. Boltzmann equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#h-theorem">8.3. H-theorem</a></li>
 </ul>
             </nav>
         </div>
@@ -364,10 +365,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="liouville-and-boltzmann-equations">
-<span id="statistical-mechanics-liouville-boltzmann"></span><h1><span class="section-number">8. </span>Liouville and Boltzmann equations<a class="headerlink" href="#liouville-and-boltzmann-equations" title="Permalink to this heading">#</a></h1>
-<div class="section" id="liouville-equation">
-<span id="statistical-mechanics-liouville"></span><h2><span class="section-number">8.1. </span>Liouville equation<a class="headerlink" href="#liouville-equation" title="Permalink to this heading">#</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="liouville-theorem-and-boltzmann-equation">
+<span id="statistical-mechanics-liouville-boltzmann"></span><h1><span class="section-number">8. </span>Liouville theorem and Boltzmann equation<a class="headerlink" href="#liouville-theorem-and-boltzmann-equation" title="Permalink to this heading">#</a></h1>
+<div class="section" id="liouville-theorem">
+<span id="statistical-mechanics-liouville"></span><h2><span class="section-number">8.1. </span>Liouville theorem<a class="headerlink" href="#liouville-theorem" title="Permalink to this heading">#</a></h2>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 8.1 </span> (Liouville’s theorem)</p>
 <div class="theorem-content section" id="proof-content">
@@ -422,13 +423,121 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}
 0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \mathbf{a}_i \cdot \nabla_{\mathbf{v},i} f \\
-0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v},i} f \ .
+0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v},i} f \\
+0 &amp; = \frac{\partial f}{\partial t} + \mathbf{v}_i \cdot \nabla_{\mathbf{r},i} f + \frac{\mathbf{F}_i^{ext}}{m} \cdot \nabla_{\mathbf{v},i} f + \sum_{j \ne i} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v},i} f  \ .
 \end{split}\]</div>
 </div>
 <div class="section" id="boltzmann-equation">
 <span id="statistical-mechanics-boltzmann"></span><h2><span class="section-number">8.2. </span>Boltzmann equation<a class="headerlink" href="#boltzmann-equation" title="Permalink to this heading">#</a></h2>
-<p>Integrating all but one particle,…</p>
+<p><strong>Indistinguishable particles.</strong> <em>State counting…</em></p>
+<p><strong>1-particle probability distribution function.</strong> Integrating all but one particle (marginalizing over all the variables expect for <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>),</p>
+<div class="math notranslate nohighlight">
+\[f_1(\mathbf{r}_1, \mathbf{v}_1, t) = \int_{\mathbf{r}_{k=2:N}} \int_{\mathbf{v}_{k=2:N}} f(\mathbf{r}_i,\mathbf{v}_i, t) d \mathbf{r}_k d \mathbf{v}_k \ ,\]</div>
+<p><strong><span class="math notranslate nohighlight">\(s\)</span>-particle probability distribution function.</strong></p>
+<div class="math notranslate nohighlight">
+\[f_s(\mathbf{r}_{j=1:s}, \mathbf{v}_{j=1:s}, t) = \int_{\mathbf{r}_{k=s+1:N}} \int_{\mathbf{v}_{k=s+1:N}} f(\mathbf{r}_i,\mathbf{v}_i, t) d \mathbf{r}_k d \mathbf{v}_k \ ,\]</div>
+<p><strong>Time derivative.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_t f_s
+  &amp; = \partial_t \int_{\mathbf{r}_{k=s+1:N}} \int_{\mathbf{v}_{k=s+1:N}} f(\mathbf{r}_i,\mathbf{v}_i, t) d \mathbf{r}_k d \mathbf{v}_k = \\
+  &amp; = - \int_{\mathbf{r}_{k=s+1:N}} \int_{\mathbf{v}_{k=s+1:N}} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f + \frac{\mathbf{F}_i^{ext}}{m} \cdot \nabla_{\mathbf{v}_i} f + \sum_{j \ne i} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f \right\} d \mathbf{r}_k d \mathbf{v}_k = \\
+\end{aligned}\end{split}\]</div>
+<p>Using Hamilton’s equation to get a divergence, and assuming zero probability at infinity (impossible to be at infinite distance, impossible to have infinite velocity. Sounds likely),</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \int_{\mathbf{r}_k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v}_i} f \right\}
+  &amp; = \int_{\mathbf{r}_k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v}_i} f + f \left( \nabla_{\mathbf{r}_i} \cdot \mathbf{v}_i + \nabla_{\mathbf{v}_i} \cdot \frac{\mathbf{F}_i}{m} \right) \right\} = \\
+  &amp; = \int_{\mathbf{r}_k} \left\{ \nabla_{\mathbf{r}_i} \cdot \left(  f \mathbf{v}_i \right) + \nabla_{\mathbf{v}_i} \cdot \left( f \frac{\mathbf{F}_i}{m} \right) \right\} = \\
+  &amp; = \sum_{i \ne k} \int_{\mathbf{r}_k} \left\{ \nabla_{\mathbf{r}_i} \cdot \left(  f \mathbf{v}_i \right) + \nabla_{\mathbf{v}_i} \cdot \left( f \frac{\mathbf{F}_i}{m} \right) \right\} = \\
+  &amp; = \sum_{i \ne k} \int_{\mathbf{r}_k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f + \frac{\mathbf{F}_i}{m} \cdot \nabla_{\mathbf{v}_i} f \right\} = \\
+  &amp; = \sum_{i \ne k} \int_{\mathbf{r}_k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f + \left( \frac{\mathbf{F}^{ext}_i}{m} + \sum_{j \in K} \frac{\mathbf{F}_{ij}}{m} + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \right) \cdot \nabla_{\mathbf{v}_i} f \right\} = \\
+  &amp; = \sum_{i \ne k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} \int_{\mathbf{r}_k} f + \frac{\mathbf{F}^{ext}_i}{m} \cdot \nabla_{\mathbf{v}_i} \int_{\mathbf{r}_k} f + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} \int_{\mathbf{r}_k} f  \right\} + \sum_{i \ne k} \sum_{j \in K} \int_{\mathbf{r}_k} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f  = \\
+  &amp; = \sum_{i \ne k} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f_s + \frac{\mathbf{F}^{ext}_i}{m} \cdot \nabla_{\mathbf{v}_i} f_s + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f_s \right\} + \sum_{i \ne k} \sum_{j \in K} \int_{\mathbf{r}_k} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f  = \\
+\end{aligned}\end{split}\]</div>
 </div>
+</details><div class="math notranslate nohighlight">
+\[
+  0 = \partial_t f_s + \sum_{i \notin K} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f_s + \frac{\mathbf{F}^{ext}_i}{m} \cdot \nabla_{\mathbf{v}_i} f_s + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f_s \right\} + \sum_{i \notin K} \sum_{j \in K} \int_{\mathbf{r}_k} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f \ .
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(K = s+1:N\)</span>.</p>
+<p><strong>1-particle equation.</strong> With <span class="math notranslate nohighlight">\(K = 2:N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+  0 = \partial_t f_1 + \mathbf{v}_1 \cdot \nabla_{\mathbf{r}_1} f_1 + \frac{\mathbf{F}^{ext}_1}{m} \cdot \nabla_{\mathbf{v}_1} f_1 + \sum_{j = 2:N} \int_{\mathbf{r}_k, k \in K} \frac{\mathbf{F}_{1j}}{m} \cdot \nabla_{\mathbf{v}_1} f \, d \mathbf{r}_k d \mathbf{v}_k \ .
+\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">…</p>
+</div>
+</details><p><strong>Collision integral.</strong> Assumptions</p>
+<ul class="simple">
+<li><p>only 2-particle collision. Good assumption for “dilute systems”.</p></li>
+<li><p>a collision occurs when 2 particles are in the same position (i.e. the dimension of the particles is negligible), <span class="math notranslate nohighlight">\(\mathbf{r}_2 = \mathbf{r}_1\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\propto \int_{} \Gamma_{\mathbf{p}_1',\mathbf{p}_2' \rightarrow \mathbf{p}_1, \mathbf{p}_2} f(\mathbf{r}_1, \mathbf{r}_2, \mathbf{p}_1', \mathbf{p}'_2) - \Gamma_{\mathbf{p}_1 ,\mathbf{p}_2  \rightarrow \mathbf{p}_1', \mathbf{p}_2'} f(\mathbf{r}_1, \mathbf{r}_2, \mathbf{p}_1, \mathbf{p}_2)\]</div>
+<p>with</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Gamma_{\mathbf{p}_1', \mathbf{p}_2' \rightarrow \mathbf{p}_1, \mathbf{p}_2}\)</span> representing the probability of starting from <span class="math notranslate nohighlight">\(\mathbf{p}_i'\)</span> before the collision and ending with momenta <span class="math notranslate nohighlight">\(\mathbf{p}_i\)</span></p>
+<ul>
+<li><p>this probability is determined by the analysis of 2-particle collision dynamics</p></li>
+<li><p>this probability is “scaled” by the probability of being in the state before the collision <span class="math notranslate nohighlight">\(f(\mathbf{r}_1, \mathbf{r}_2 = \mathbf{r}_1, \mathbf{p}_1', \mathbf{p}_2')\)</span></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Molecular chaos (Stosszahlansatz).</strong> Before and after the collision</p>
+<div class="math notranslate nohighlight">
+\[f_2(\mathbf{v}_1, \mathbf{v}_2, t) \sim f_1(\mathbf{v}_1) \, f(\mathbf{v}_2,t)\]</div>
+</div>
+<div class="section" id="h-theorem">
+<h2><span class="section-number">8.3. </span>H-theorem<a class="headerlink" href="#h-theorem" title="Permalink to this heading">#</a></h2>
+<p>Starting from Boltzmann equation for the 1-particle probability density function, with the molecular chaos assumption,</p>
+<div class="math notranslate nohighlight">
+\[D_t f_1 = \int d \mathbf{v}_2 \int d\Omega \sigma(\Omega) |\mathbf{v}_1 - \mathbf{v}_2| \left( f'_1 f'_2 - f_1 f_2 \right)\]</div>
+<p>Functional <span class="math notranslate nohighlight">\(H(t)\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[H(t) = \int f(\mathbf{v},t) \ln f(\mathbf{v},t) d \mathbf{v}\]</div>
+<p>Taking time derivative (integration domain is unbounded. Use divergence theorem and boundary conditions to prove that flux contributions are zero)</p>
+<div class="math notranslate nohighlight">
+\[d_t H(t) = \int \partial_t \left( f \ln f \right) d \mathbf{v} = \int \partial_t f \left( 1 + \ln f \right) d \mathbf{v} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> <em>include convective terms of Boltzmann equation</em></p>
+<p class="sd-card-text"><strong>todo</strong> <em>prove each step</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d_t H(t) 
+  &amp; = \int \partial_t f \left( 1 + \ln f \right) d \mathbf{v} = \\
+  &amp; = \int \int_{\mathbf{v}_1} |\mathbf{v}_1 - \mathbf{v}_2| (f'_1 f'_2 - f_1 f_2) \left( 1 + \ln f_1 \right) \sigma_{\Omega} d \mathbf{v}_1 d \mathbf{v}_2 d\Omega = \\
+  &amp; = \frac{1}{2} \int \int_{\mathbf{v}_1} |\mathbf{v}_1 - \mathbf{v}_2| (f'_1 f'_2 - f_1 f_2) \left( \ln f_1 + \ln f_2 \right) \sigma_{\Omega} d \mathbf{v}_1 d \mathbf{v}_2 d\Omega = \\
+  &amp; = \frac{1}{4} \int \int_{\mathbf{v}_1} |\mathbf{v}_1 - \mathbf{v}_2| (f'_1 f'_2 - f_1 f_2) \left( \ln f_1 + \ln f_2 - \ln f'_1 - \ln f'_2 \right) \sigma_{\Omega} d \mathbf{v}_1 d \mathbf{v}_2 d\Omega = \\
+  &amp; = \frac{1}{4} \int \int_{\mathbf{v}_1} |\mathbf{v}_1 - \mathbf{v}_2| (f'_1 f'_2 - f_1 f_2) \ln \frac{ f_1 f_2 }{f'_1 f'_2} \sigma_{\Omega} d \mathbf{v}_1 d \mathbf{v}_2 d\Omega = \\
+  &amp; \le 0 \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as</p>
+<div class="math notranslate nohighlight">
+\[(a-b) \ln \frac{b}{a} \le 0 \ ,\]</div>
+<p class="sd-card-text">since, if <span class="math notranslate nohighlight">\(a &gt; b\)</span> the first factor is positive and the second negative, and viceversa, and <span class="math notranslate nohighlight">\(a = b\)</span> implies equality.</p>
+</div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -494,8 +603,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-equation">8.1. Liouville equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liouville-theorem">8.1. Liouville theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boltzmann-equation">8.2. Boltzmann equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#h-theorem">8.3. H-theorem</a></li>
 </ul>
   </nav></div>
 
