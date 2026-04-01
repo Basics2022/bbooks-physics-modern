@@ -110,7 +110,7 @@ $$\begin{aligned}
 ```
 
 $$
-  0 = \partial_t f_s + \sum_{i \notin K} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f_s + \frac{\mathbf{F}^{ext}_i}{m} \cdot \nabla_{\mathbf{v}_i} f_s + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f_s \right\} + \sum_{i \notin K} \sum_{j \in K} \int_{\mathbf{r}_k} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f \ .
+  0 = \partial_t f_s + \sum_{i \notin K} \left\{ \mathbf{v}_i \cdot \nabla_{\mathbf{r}_i} f_s + \frac{\mathbf{F}^{ext}_i}{m} \cdot \nabla_{\mathbf{v}_i} f_s + \sum_{j \notin K} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f_s \right\} + \sum_{i \notin K} \sum_{j \in K} \int_{\mathbf{x}_k} \frac{\mathbf{F}_{ij}}{m} \cdot \nabla_{\mathbf{v}_i} f \ .
 $$
 
 with $K = s+1:N$.
@@ -118,17 +118,43 @@ with $K = s+1:N$.
 **1-particle equation.** With $K = 2:N$,
 
 $$
-  0 = \partial_t f_1 + \mathbf{v}_1 \cdot \nabla_{\mathbf{r}_1} f_1 + \frac{\mathbf{F}^{ext}_1}{m} \cdot \nabla_{\mathbf{v}_1} f_1 + \sum_{j = 2:N} \int_{\mathbf{r}_k, k \in K} \frac{\mathbf{F}_{1j}}{m} \cdot \nabla_{\mathbf{v}_1} f \, d \mathbf{r}_k d \mathbf{v}_k \ .
+  0 = \partial_t f_1 + \mathbf{v}_1 \cdot \nabla_{\mathbf{r}_1} f_1 + \frac{\mathbf{F}^{ext}_1}{m} \cdot \nabla_{\mathbf{v}_1} f_1 + \sum_{j = 2:N} \int_{\mathbf{x}_k, k = 2:N} \frac{\mathbf{F}_{1j}}{m} \cdot \nabla_{\mathbf{v}_1} f \, d \mathbf{r}_k d \mathbf{v}_k \ .
 $$
 
 ```{dropdown} Details
 :open:
 
-...
+Force $\mathbf{F}_{1j}$ only depends on variables of particle $1$ and $j$. Therefore,
+
+$$\begin{aligned}
+  \sum_{j = 2:N} \int_{\mathbf{r}_k, k = 2:N} \frac{\mathbf{F}_{1j}}{m} \cdot \nabla_{\mathbf{v}_1} f \, d \mathbf{r}_k d \mathbf{v}_k 
+  & = \sum_{j = 2:N} \int_{\mathbf{x}_j} \frac{\mathbf{F}_{1j}}{m} \cdot  \int_{\mathbf{r}_k, k = 2:N, k \ne j} \nabla_{\mathbf{v}_1} f \, d \mathbf{r}_k d \mathbf{v}_k = \\
+  & = \sum_{j = 2:N} \int_{\mathbf{x}_j} \frac{\mathbf{F}_{1j}}{m} \cdot  \nabla_{\mathbf{v}_1} \int_{\mathbf{x}_k, k = 2:N, k \ne j} f \, d \mathbf{r}_k d \mathbf{v}_k = \\
+  & = \sum_{j = 2:N} \int_{\mathbf{x}_j} \frac{\mathbf{F}_{1j}}{m} \cdot  \nabla_{\mathbf{v}_1} f_2^{K/\{1, j\}} (\mathbf{r}_1, \mathbf{v}_1, \mathbf{r}_j, \mathbf{v}_j, t) d \mathbf{r}_j d \mathbf{v}_j \ .
+\end{aligned}$$
+
+For identical particles, the summation becomes $(N-1) \int_{\mathbf{x}_2} \frac{\mathbf{F}_{12}}{m} \cdot \nabla_{\mathbf{v}_1} f_2(\mathbf{x}_1, \mathbf{x}_2,t)$
 
 ```
 
 **Collision integral.** Assumptions
+
+
+```{dropdown} Details
+:open:
+
+When a collision occurs, the dynamics of a particle is not smooth anymore. Thus, is it possible to use partial derivative in time? Force is impulsive. Thus, either function in the sense of distribution and/or integration in time is required
+
+
+<!--
+$$(N-1) \int_{\mathbf{x}_2} \frac{\mathbf{F}_{12}}{m} \cdot \nabla_{\mathbf{v}_1} f_2(\mathbf{x}_1, \mathbf{x}_2,t) d\mathbf{r}_2 d \mathbf{v}_2 \ .$$
+
+For rigid sphere model, collision only occurs if $|\mathbf{r}_2 - \mathbf{r}_1| = 2R$.
+-->
+
+```
+
+```{dropdown} Trash
 
 - only 2-particle collision. Good assumption for "dilute systems". 
 - a collision occurs when 2 particles are in the same position (i.e. the dimension of the particles is negligible), $\mathbf{r}_2 = \mathbf{r}_1$
@@ -140,6 +166,7 @@ with
   - this probability is determined by the analysis of 2-particle collision dynamics
   - this probability is "scaled" by the probability of being in the state before the collision $f(\mathbf{r}_1, \mathbf{r}_2 = \mathbf{r}_1, \mathbf{p}_1', \mathbf{p}_2')$
 
+```
 
 **Molecular chaos (Stosszahlansatz).** Before and after the collision
 

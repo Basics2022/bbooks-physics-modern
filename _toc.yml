@@ -30,6 +30,7 @@ parts:
     - file: ch/statistical-mechanics/ising-notes
     - file: ch/statistical-mechanics/markov-process-notes
     - file: ch/statistical-mechanics/ising-numerics
+  - file: ch/statistical-mechanics/entropy
 - caption: Quantum Mechanics
   numbered: True
   chapters:
