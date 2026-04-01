@@ -366,8 +366,17 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="entropy-and-arrow-of-time">
 <span id="statistical-mechanics-entropy"></span><h1><span class="section-number">12. </span>Entropy and arrow of time<a class="headerlink" href="#entropy-and-arrow-of-time" title="Permalink to this heading">#</a></h1>
+<p><strong>Microscopic view vs. macroscopic view.</strong> Usually we don’t know it accurately/we don’t care to know it, and summarize it with a macroscopic view: in this description some information is lost</p>
+<p>Usually:</p>
+<ul class="simple">
+<li><p>Microscopic symmetry, with uniform transition matrix</p></li>
+<li><p>Many microstates correspond to the same macrostate</p></li>
+<li><p>As the system evolves, its macrostate may evolve towards a stationary state, corrsponding with the macrostate with the most microstates. This evolution has a preferred direction - defining an <strong>arrow of time</strong> -, the one with <strong>non-decreasing</strong> expected <strong>entropy</strong>. This evolution can also be described in terms of <strong>increasing ignorance</strong></p></li>
+<li><p>A macroscopic equilibrium corresponds to a stationary distribution of the macrostates with quite sharp maximum. While the macroscopic view looks stationary, the system is still evolving at the microscopic level. The amplitude of oscillations around an equilibrium decreases as <span class="math notranslate nohighlight">\(\sim \frac{1}{\sqrt{N}}\)</span></p></li>
+</ul>
 <div class="section" id="box-occupation-example">
 <span id="statistical-mechanics-entropy-box-occupation"></span><h2><span class="section-number">12.1. </span>Box occupation example<a class="headerlink" href="#box-occupation-example" title="Permalink to this heading">#</a></h2>
+<p><strong>Remark.</strong> In this example, the microscopic dynamics of the system is not deterministic.</p>
 <p>A box with two rooms contains <span class="math notranslate nohighlight">\(N\)</span> chambers. This balls are numbered so that they are distingushable if you can see their labels.</p>
 <p><strong>Macrostate definition.</strong> A macrostate of the system is defined here by the number of balls in each room, <span class="math notranslate nohighlight">\((N_L, N_R)\)</span>. As the total number of balls is given and constant, the number of balls in one chamber, e.g. <span class="math notranslate nohighlight">\(N_L\)</span> in the left chamber, is enough to determine the macrostate being <span class="math notranslate nohighlight">\(N_R = N - N_L\)</span>.</p>
 <p><strong>Microstate counting.</strong> The number of microstates producing the macrostate <span class="math notranslate nohighlight">\(N_L\)</span> is the number of combinations, <span class="math notranslate nohighlight">\(C_{N, N_L}\)</span></p>
@@ -454,7 +463,8 @@ Proof<div class="sd-summary-down docutils">
  &amp; = \frac{1}{2^N} \frac{N!}{(N-n)!n!} \ .
 \end{aligned}\end{split}\]</div>
 </div>
-</details><p><strong>Statistics of the stationary distribution.</strong></p>
+</details><p><strong>Statistics of the stochastic process.</strong> …</p>
+<p><strong>Statistics of the stationary distribution.</strong></p>
 <ul class="simple">
 <li><p>Average <span class="math notranslate nohighlight">\(\mu = \frac{N}{2}\)</span></p></li>
 <li><p>Variance <span class="math notranslate nohighlight">\(\sigma^2 = \frac{N}{4}\)</span></p></li>

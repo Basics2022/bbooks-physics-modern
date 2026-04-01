@@ -1,8 +1,19 @@
 (statistical-mechanics:entropy)=
 # Entropy and arrow of time
 
+**Microscopic view vs. macroscopic view.** Usually we don't know it accurately/we don't care to know it, and summarize it with a macroscopic view: in this description some information is lost
+
+Usually:
+* Microscopic symmetry, with uniform transition matrix
+* Many microstates correspond to the same macrostate
+* As the system evolves, its macrostate may evolve towards a stationary state, corrsponding with the macrostate with the most microstates. This evolution has a preferred direction - defining an **arrow of time** -, the one with **non-decreasing** expected **entropy**. This evolution can also be described in terms of **increasing ignorance**
+* A macroscopic equilibrium corresponds to a stationary distribution of the macrostates with quite sharp maximum. While the macroscopic view looks stationary, the system is still evolving at the microscopic level. The amplitude of oscillations around an equilibrium decreases as $\sim \frac{1}{\sqrt{N}}$
+
+
 (statistical-mechanics:entropy:box-occupation)=
 ## Box occupation example
+
+**Remark.** In this example, the microscopic dynamics of the system is not deterministic.
 
 A box with two rooms contains $N$ chambers. This balls are numbered so that they are distingushable if you can see their labels.
 
@@ -102,6 +113,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 ```
+
+**Statistics of the stochastic process.** ...
 
 **Statistics of the stationary distribution.** 
 
