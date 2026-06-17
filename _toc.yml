@@ -36,3 +36,8 @@ parts:
   chapters:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes
+- caption: Solid State Physics
+  numbered: True
+  chapters:
+  - file: ch/solid-state/intro
+  - file: ch/solid-state/notes
