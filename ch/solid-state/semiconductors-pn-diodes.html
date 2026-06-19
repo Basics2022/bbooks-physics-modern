@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>14. Quantum Mechanics - Notes &#8212; Modern Physics</title>
+    <title>17.6. \(p\)-\(n\) Diodes &#8212; Modern Physics</title>
   
   
   
@@ -64,12 +64,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/notes';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/solid-state/semiconductors-pn-diodes';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="15. Introduction to Solid State Physics" href="../solid-state/intro.html" />
-    <link rel="prev" title="13. Quantum Mechanics" href="intro.html" />
+    <link rel="prev" title="17.5. \(p\)-\(n\) Junctions" href="semiconductors-pn-junctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,14 +200,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">13. Quantum Mechanics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. Quantum Mechanics - Notes</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">14. Quantum Mechanics - Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">15. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes.html">16. Notes about Solid State Physics</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">15. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">16. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="semiconductors-intro.html">17. Introduction to Semiconductors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="semiconductors-solids-qm.html">17.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semiconductors-equilibrium.html">17.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semiconductors-transport-phenomena.html">17.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semiconductors-non-equilibrium.html">17.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semiconductors-pn-junctions.html">17.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">17.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -261,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/quantum-mechanics/notes.md" target="_blank"
+      <li><a href="../../_sources/ch/solid-state/semiconductors-pn-diodes.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +353,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quantum Mechanics - Notes</h1>
+    <h1>p-n Diodes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,8 +367,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="quantum-mechanics-notes">
-<span id="id1"></span><h1><span class="section-number">14. </span>Quantum Mechanics - Notes<a class="headerlink" href="#quantum-mechanics-notes" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="p-n-diodes">
+<span id="semiconductors-pn-diodes"></span><h1><span class="section-number">17.6. </span><span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes<a class="headerlink" href="#p-n-diodes" title="Permalink to this heading">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -374,7 +384,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./ch/quantum-mechanics"
+            path: "./ch/solid-state"
         },
         predefinedOutput: true
     }
@@ -392,22 +402,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="semiconductors-pn-junctions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">17.5. </span><span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../solid-state/intro.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">15. </span>Introduction to Solid State Physics</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
