@@ -41,3 +41,11 @@ parts:
   chapters:
   - file: ch/solid-state/intro
   - file: ch/solid-state/notes
+  - file: ch/solid-state/semiconductors-intro
+    sections:
+    - file: ch/solid-state/semiconductors-solids-qm
+    - file: ch/solid-state/semiconductors-equilibrium
+    - file: ch/solid-state/semiconductors-transport-phenomena
+    - file: ch/solid-state/semiconductors-non-equilibrium
+    - file: ch/solid-state/semiconductors-pn-junctions
+    - file: ch/solid-state/semiconductors-pn-diodes

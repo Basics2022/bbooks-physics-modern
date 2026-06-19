@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="14. Quantum Mechanics - Notes" href="notes.html" />
-    <link rel="prev" title="12.4. Ising model - Numerics" href="../statistical-mechanics/ising-numerics.html" />
+    <link rel="prev" title="12. Entropy and arrow of time" href="../statistical-mechanics/entropy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,18 +192,32 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/ising.html">11. Ising model</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-notes.html">12.2. Ising model - Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/markov-process-notes.html">12.3. Markov processes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-numerics.html">12.4. Ising model - Numerics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">14. Quantum Mechanics - Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">15. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes.html">16. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">17. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">17.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">17.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">17.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">17.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">17.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">17.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -563,8 +577,8 @@ $$\begin{aligned}
 <div class="section" id="momentum-representation">
 <h4><span class="section-number">13.3.1.4. </span>Momentum Representation<a class="headerlink" href="#momentum-representation" title="Permalink to this heading">#</a></h4>
 <p><strong>Momentum operator</strong> as the limit of…<strong>todo</strong> <em>prove the expression of the momentum operator as the limit of the generator of translation</em></p>
-<div class="math notranslate nohighlight">
-\[\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | \]</div>
+<div class="math notranslate nohighlight" id="equation-eq-qm-momentum-operator">
+<span class="eqno">(13.1)<a class="headerlink" href="#equation-eq-qm-momentum-operator" title="Permalink to this equation">#</a></span>\[\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | \]</div>
 <ul>
 <li><p>Spectrum</p>
 <div class="math notranslate nohighlight">
@@ -843,12 +857,12 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../statistical-mechanics/ising-numerics.html"
+       href="../statistical-mechanics/entropy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12.4. </span>Ising model - Numerics</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Entropy and arrow of time</p>
       </div>
     </a>
     <a class="right-next"

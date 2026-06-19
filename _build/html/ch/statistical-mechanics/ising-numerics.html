@@ -205,6 +205,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">14. Quantum Mechanics - Notes</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">15. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes.html">16. Notes about Solid State Physics</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -533,38 +538,8 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lattice dimensions: 32,32
 Initial conditions:
 Energy       : -16.0
-N. of spin up: 520
-Magnetization: 16
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Magnetization: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">isi</span><span class="o">.</span><span class="n">state</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1">#&gt; Run Metropolis-Hastings algorithm</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">Es</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">states</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">metropolis_hastings_run</span><span class="p">(</span><span class="n">n_steps</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">),</span> <span class="n">output_states</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">Cell In[2], line 74,</span> in <span class="ni">IsingLattice.metropolis_hastings_run</span><span class="nt">(self, n_steps, output_states)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span> <span class="n">i_step</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="k">for</span> <span class="n">i_step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="c1">#&gt; 1 step of Metropolis-Hastings algorithm</span>
-<span class="ne">---&gt; </span><span class="mi">74</span>     <span class="n">dE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metropolis_hastings_step</span><span class="p">()</span>   <span class="c1"># Updating state with flip</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">E</span> <span class="o">+=</span> <span class="n">dE</span>                                <span class="c1"># Update system energy</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="c1">#&gt; Update output arrays</span>
-
-<span class="nn">Cell In[2], line 92,</span> in <span class="ni">IsingLattice.metropolis_hastings_step</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;  &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="c1">#&gt; Proposal step</span>
-<span class="ne">---&gt; </span><span class="mi">92</span> <span class="n">i_flip</span><span class="p">,</span> <span class="n">j_flip</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flip_indices</span><span class="p">()</span>                 <span class="c1"># random sampling of the flip indices</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span> <span class="n">dE</span> <span class="o">=</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_local_energy</span><span class="p">(</span><span class="n">i_flip</span><span class="p">,</span> <span class="n">j_flip</span><span class="p">)</span> <span class="c1"># evaluate delta energy</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span> <span class="k">if</span> <span class="n">dE</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># accept</span>
-
-<span class="nn">Cell In[2], line 23,</span> in <span class="ni">IsingLattice.flip_indices</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">def</span> <span class="nf">flip_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;  &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">23</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+N. of spin up: 486
+Magnetization: -52
 </pre></div>
 </div>
 </div>
@@ -617,8 +592,8 @@ Magnetization: 16
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b.png" src="../../_images/9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b.png" />
-<img alt="../../_images/62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002.png" src="../../_images/62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002.png" />
+<img alt="../../_images/69cdb05ece654a656c516cd8bb823371db8e63093fa24b9cbd5f7420ea13d23d.png" src="../../_images/69cdb05ece654a656c516cd8bb823371db8e63093fa24b9cbd5f7420ea13d23d.png" />
+<img alt="../../_images/5889b34092b643ce270f55ba71735e1a498bb09e92e86415e0aa1bfd2697a473.png" src="../../_images/5889b34092b643ce270f55ba71735e1a498bb09e92e86415e0aa1bfd2697a473.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -672,8 +647,8 @@ Magnetization: 16
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;P(M)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a.png" src="../../_images/7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a.png" />
-<img alt="../../_images/4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83.png" src="../../_images/4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83.png" />
+<img alt="../../_images/184645d26c96da38e5079585b9730fb97ea77cfe9cf7ced400d55ff2a0f5f858.png" src="../../_images/184645d26c96da38e5079585b9730fb97ea77cfe9cf7ced400d55ff2a0f5f858.png" />
+<img alt="../../_images/f6dfc5ce851033cd8eb259bf317dee35ac3fae00d8948f015783ad1da4deb5ce.png" src="../../_images/f6dfc5ce851033cd8eb259bf317dee35ac3fae00d8948f015783ad1da4deb5ce.png" />
 </div>
 </div>
 <div class="cell docutils container">
