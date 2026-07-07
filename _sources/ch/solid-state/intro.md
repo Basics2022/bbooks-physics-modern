@@ -1,12 +1,13 @@
 (solid-state:intro)=
 # Introduction to Solid State Physics
 
-* Solid State Physics
+**Contents.**
 
+* [Solid State Physics](solid-state:notes)
 * [Semiconductors](semiconductors-intro)
 
 
-**References.**
+```{dropdown} References
 
 * D.Tong, University of Cambridge, Solid State Physics
   * Particles in a Magnetic Field
@@ -40,4 +41,5 @@
       * Laser diodes
 
 * [LibreTexts Engineering, Material Science](https://eng.libretexts.org/Bookshelves/Materials_Science), [Supplemental Modules: Semiconductors](https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Semiconductors)
-   
+
+```

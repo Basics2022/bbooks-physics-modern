@@ -208,7 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">15. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">16. Notes about Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes-solid-state.html">16. Notes about Solid State Physics</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="semiconductors-intro.html">17. Introduction to Semiconductors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="semiconductors-solids-qm.html">17.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="semiconductors-equilibrium.html">17.2. Semiconductors in Equilibrium</a></li>
@@ -366,9 +366,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias">17.5.1. Zero bias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-bias">17.5.2. Forward bias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bias">17.5.3. Reverse bias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-pn-junction-and-its-operational-regimes">17.5.1. Introduction to the pn Junction and its Operational Regimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-depletion-approximation-and-shockley-transport">17.5.2. The Depletion Approximation and Shockley Transport</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-thermal-equilibrium">17.5.2.1. Zero Bias (Thermal Equilibrium)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-bias-under-shockley-assumptions">17.5.2.2. Forward Bias Under Shockley Assumptions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bias">17.5.2.3. Reverse Bias</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-description-quasi-fermi-levels-and-non-equilibrium-transport">17.5.3. Advanced Description: Quasi-Fermi Levels and Non-Equilibrium Transport</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carrier-statistics-under-non-equilibrium">17.5.3.1. 3.1 Carrier Statistics under Non-Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-formulations-via-quasi-fermi-gradients">17.5.3.2. 3.2 Current Formulations via Quasi-Fermi Gradients</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -382,14 +391,160 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="p-n-junctions">
 <span id="semiconductors-pn-junctions"></span><h1><span class="section-number">17.5. </span><span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions<a class="headerlink" href="#p-n-junctions" title="Permalink to this heading">#</a></h1>
-<div class="section" id="zero-bias">
-<span id="semiconductors-pn-junctions-zero-bias"></span><h2><span class="section-number">17.5.1. </span>Zero bias<a class="headerlink" href="#zero-bias" title="Permalink to this heading">#</a></h2>
+<!--
+(semiconductors:pn-junctions:regimes)=
+## Regimes
+
+(semiconductors:pn-junctions:zero-bias)=
+## Zero bias
+
+(semiconductors:pn-junctions:fwd-bias)=
+## Forward bias
+
+(semiconductors:pn-junctions:reverse-bias)=
+## Reverse bias
+
+-->
+<div class="section" id="introduction-to-the-pn-junction-and-its-operational-regimes">
+<h2><span class="section-number">17.5.1. </span>Introduction to the pn Junction and its Operational Regimes<a class="headerlink" href="#introduction-to-the-pn-junction-and-its-operational-regimes" title="Permalink to this heading">#</a></h2>
+<p>When a <span class="math notranslate nohighlight">\(p\)</span>-type and an <span class="math notranslate nohighlight">\(n\)</span>-type semiconductor are brought into intimate contact, the immense carrier concentration gradients at the interface drive a transient diffusion process. Mobile electrons and holes annihilate each other at the metallurgical interface, leaving behind uncompensated, fixed dopant ions. This region, stripped of mobile carriers, is known as the <strong>depletion region</strong>. The fixed charges generate an internal electric field that opposes further diffusion, establishing a balance.</p>
+<p>Depending on the external voltage <span class="math notranslate nohighlight">\(V_a\)</span> applied across the device, the junction operates in one of three primary regimes:</p>
+<ul class="simple">
+<li><p><strong>Zero Bias (Thermal Equilibrium, <span class="math notranslate nohighlight">\(V_a = 0\)</span>):</strong> No external voltage is applied. The internal electric field perfectly balances the carrier diffusion gradients. The net current density for both electrons and holes is identically zero (<span class="math notranslate nohighlight">\(J_n = 0, J_p = 0\)</span>).</p></li>
+<li><p><strong>Forward Bias (<span class="math notranslate nohighlight">\(V_a &gt; 0\)</span>):</strong> A positive potential is applied to the <span class="math notranslate nohighlight">\(p\)</span>-side relative to the <span class="math notranslate nohighlight">\(n\)</span>-side. This external potential opposes the built-in field, lowering the electrostatic barrier and narrowing the depletion width. Diffusion forces win over drift, resulting in an exponential injection of minority carriers across the junction.</p></li>
+<li><p><strong>Reverse Bias (<span class="math notranslate nohighlight">\(V_a &lt; 0\)</span>):</strong> A negative potential is applied to the <span class="math notranslate nohighlight">\(p\)</span>-side relative to the <span class="math notranslate nohighlight">\(n\)</span>-side. The external voltage reinforces the built-in field, widening the depletion region and increasing the potential barrier. Diffusion drops to zero, and the current is limited to a minute reverse saturation current driven by thermal generation.</p></li>
+</ul>
 </div>
-<div class="section" id="forward-bias">
-<span id="semiconductors-pn-junctions-fwd-bias"></span><h2><span class="section-number">17.5.2. </span>Forward bias<a class="headerlink" href="#forward-bias" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<div class="section" id="the-depletion-approximation-and-shockley-transport">
+<h2><span class="section-number">17.5.2. </span>The Depletion Approximation and Shockley Transport<a class="headerlink" href="#the-depletion-approximation-and-shockley-transport" title="Permalink to this heading">#</a></h2>
+<p>To derive closed-form analytical expressions for the electrostatics and current-voltage relations, we employ the <strong>Depletion Approximation</strong> (also called the <em>Abrupt Junction Approximation</em>). This framework assumes that the transition between doping zones is perfectly sharp and that the depletion region is completely devoid of mobile carriers (<span class="math notranslate nohighlight">\(\rho = \text{constant}\)</span> inside the zone, <span class="math notranslate nohighlight">\(\rho = 0\)</span> outside).</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Concentration</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(p\)</span>-bulk</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(p\)</span>-interface</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(n\)</span>-interface</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(n\)</span>-bulk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(N_A^-\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_A\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_A\)</span></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(N_D^+\)</span></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_D\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_D\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_A^-\)</span></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sim N_D^+\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-N_A^- q\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(N_D^+ q\)</span></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="zero-bias-thermal-equilibrium">
+<h3><span class="section-number">17.5.2.1. </span>Zero Bias (Thermal Equilibrium)<a class="headerlink" href="#zero-bias-thermal-equilibrium" title="Permalink to this heading">#</a></h3>
+<p>By applying the depletion approximation, the net space-charge density <span class="math notranslate nohighlight">\(\rho(x)\)</span> is treated as piecewise constant:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho(x) = \begin{cases} 
+  0 &amp; x \lt x_p \\
+ -q N_A &amp; x_p \le x &lt; 0 \\
+  q N_D &amp; 0 \le x \le x_n \\
+  0 &amp; x \gt x_n \ .
+\end{cases}\end{split}\]</div>
+<p>Integrating Gauss’ law, <span class="math notranslate nohighlight">\(\partial_x e(x) = \frac{\rho(x)}{\varepsilon}\)</span>, with the assumption of electrical neutrality, <span class="math notranslate nohighlight">\(0 = q (N_A x_p + N_D x_n)\)</span>, and zero field outsied the interface,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e(x) = \begin{cases}
+  0 &amp; x \lt x_p \\
+  -\frac{q N_A}{\varepsilon} \left( x - x_p \right) &amp; x_p \le x &lt; 0 \\
+   \frac{q N_D}{\varepsilon} \left( x - x_n \right) &amp; 0 \le x \le x_n \\
+  0 &amp; x \gt x_n \ .
+\end{cases}\end{split}\]</div>
+<p>Integrating Poisson’s equation, <span class="math notranslate nohighlight">\(\frac{d^2\psi}{dx^2} = -\frac{\rho}{\varepsilon_s}\)</span>, across this profile yields a linear electric field <span class="math notranslate nohighlight">\(E(x)\)</span> that peaks at the metallurgical interface (<span class="math notranslate nohighlight">\(x=0\)</span>), and a quadratic electrostatic potential <span class="math notranslate nohighlight">\(\psi(x)\)</span>.</p>
+<p>The total voltage drop across the region is the <strong>built-in potential</strong> <span class="math notranslate nohighlight">\(V_{bi}\)</span>, determined by the bulk doping concentrations and the Law of Mass Action (<span class="math notranslate nohighlight">\(n_0 p_0 = n_i^2\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[V_{bi} = V_t \ln\left(\frac{N_A N_D}{n_i^2}\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_t = \frac{k_B T}{q}\)</span> is the thermal voltage. Global charge neutrality requires <span class="math notranslate nohighlight">\(N_A x_p = N_D x_n\)</span>, yielding the equilibrium depletion width <span class="math notranslate nohighlight">\(W_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[W_0 = x_p + x_n = \sqrt{\frac{2\varepsilon_s V_{bi}}{q} \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}\]</div>
+</div>
+<div class="section" id="forward-bias-under-shockley-assumptions">
+<h3><span class="section-number">17.5.2.2. </span>Forward Bias Under Shockley Assumptions<a class="headerlink" href="#forward-bias-under-shockley-assumptions" title="Permalink to this heading">#</a></h3>
+<p>To find the explicit <span class="math notranslate nohighlight">\(I\text{-}V\)</span> relationship, we introduce the <strong>Shockley Ideal Conditions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Low-level injection (<span class="math notranslate nohighlight">\(n \ll N_A\)</span> in the <span class="math notranslate nohighlight">\(p\)</span>-bulk; <span class="math notranslate nohighlight">\(p \ll N_D\)</span> in the <span class="math notranslate nohighlight">\(n\)</span>-bulk).</p></li>
+<li><p>No recombination or generation occurs inside the depletion region.</p></li>
+<li><p>The electric field in the neutral bulk regions is negligible; transport there is purely diffusion-driven.</p></li>
+</ol>
+<p>The applied forward voltage <span class="math notranslate nohighlight">\(V_a\)</span> lowers the barrier, modifying the depletion width to:</p>
+<div class="math notranslate nohighlight">
+\[W(V_a) = \sqrt{\frac{2\varepsilon_s (V_{bi} - V_a)}{q} \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}\]</div>
+<p>The lower barrier allows carriers to scale the potential wall. The carrier concentrations at the edges of the depletion region follow the <strong>Law of the Junction</strong>:</p>
+<div class="math notranslate nohighlight">
+\[n(-x_p) = n_{p0} \exp\left(\frac{V_a}{V_t}\right), \quad p(x_n) = p_{n0} \exp\left(\frac{V_a}{V_t}\right)\]</div>
+<p>In the neutral bulk, these injected minority carriers move via diffusion while continuously recombining with the abundant majority carriers. Solving the steady-state minority carrier diffusion equation, <span class="math notranslate nohighlight">\(D_p \frac{d^2\Delta p_n}{dx^2} = \frac{\Delta p_n}{\tau_p}\)</span>, reveals an exponentially decaying carrier profile away from the boundaries:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p_n(x) = p_{n0} \left[ \exp\left(\frac{V_a}{V_t}\right) - 1 \right] \exp\left(-\frac{x - x_n}{L_p}\right)\]</div>
+<p>Evaluating the diffusion current density (<span class="math notranslate nohighlight">\(J_p = -q D_p \frac{d\Delta p_n}{dx}\)</span>) at the boundaries and summing both carrier contributions yields the classic <strong>Shockley Diode Equation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[I = I_0 \left[ \exp\left(\frac{V_a}{V_t}\right) - 1 \right] \quad \text{where} \quad I_0 = A_j q n_i^2 \left( \frac{D_n}{L_n N_A} + \frac{D_p}{L_p N_D} \right)\]</div>
 </div>
 <div class="section" id="reverse-bias">
-<span id="semiconductors-pn-junctions-reverse-bias"></span><h2><span class="section-number">17.5.3. </span>Reverse bias<a class="headerlink" href="#reverse-bias" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">17.5.2.3. </span>Reverse Bias<a class="headerlink" href="#reverse-bias" title="Permalink to this heading">#</a></h3>
+<p>Under reverse bias, <span class="math notranslate nohighlight">\(V_a\)</span> is negative. The effective potential barrier increases to <span class="math notranslate nohighlight">\(V_{bi} + |V_a|\)</span>, and the depletion region widens, increasing the internal electric field. Diffusion currents drop to zero. The current is governed by the minority carriers in the bulk wandering near the depletion edge, where they are immediately caught by the strong electric field and swept across. This results in a tiny, voltage-independent current equal to <span class="math notranslate nohighlight">\(-I_0\)</span>.</p>
+<hr class="docutils" />
+<p><strong>todo</strong></p>
+</div>
+</div>
+<div class="section" id="advanced-description-quasi-fermi-levels-and-non-equilibrium-transport">
+<h2><span class="section-number">17.5.3. </span>Advanced Description: Quasi-Fermi Levels and Non-Equilibrium Transport<a class="headerlink" href="#advanced-description-quasi-fermi-levels-and-non-equilibrium-transport" title="Permalink to this heading">#</a></h2>
+<p>While the depletion approximation and Shockley models provide excellent analytical insights, they break down when trying to model intermediate zones, high-injection regimes, or continuous spatial profiles. Under non-equilibrium conditions (<span class="math notranslate nohighlight">\(V_a \neq 0\)</span>), the Law of Mass Action is violated (<span class="math notranslate nohighlight">\(n \cdot p \neq n_i^2\)</span>), meaning a single Fermi level <span class="math notranslate nohighlight">\(E_F\)</span> can no longer describe the system.</p>
+<p>To build a rigorous, continuous model, we split the equilibrium Fermi level into two independent parameters: <strong><span class="math notranslate nohighlight">\(E_{Fn}(x)\)</span></strong> (the quasi-Fermi level for electrons) and <strong><span class="math notranslate nohighlight">\(E_{Fp}(x)\)</span></strong> (the quasi-Fermi level for holes).</p>
+<div class="section" id="carrier-statistics-under-non-equilibrium">
+<h3><span class="section-number">17.5.3.1. </span>3.1 Carrier Statistics under Non-Equilibrium<a class="headerlink" href="#carrier-statistics-under-non-equilibrium" title="Permalink to this heading">#</a></h3>
+<p>We express the continuous free carrier concentrations using these independent variables relative to the intrinsic energy level <span class="math notranslate nohighlight">\(E_i(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[n(x) = n_i \exp\left(\frac{E_{Fn}(x) - E_i(x)}{k_B T}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[p(x) = n_i \exp\left(\frac{E_i(x) - E_{Fp}(x)}{k_B T}\right)\]</div>
+<p>Multiplying these equations demonstrates how the splitting of the quasi-Fermi levels tracks the deviation from thermal equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[n(x) \cdot p(x) = n_i^2 \exp\left(\frac{E_{Fn}(x) - E_{Fp}(x)}{k_B T}\right)\]</div>
+<ul class="simple">
+<li><p>In <strong>Forward Bias</strong>, <span class="math notranslate nohighlight">\(E_{Fn} &gt; E_{Fp}\)</span>, meaning <span class="math notranslate nohighlight">\(n \cdot p &gt; n_i^2\)</span>, indicating a net excess of mobile carriers.</p></li>
+<li><p>In <strong>Reverse Bias</strong>, <span class="math notranslate nohighlight">\(E_{Fn} &lt; E_{Fp}\)</span>, meaning <span class="math notranslate nohighlight">\(n \cdot p &lt; n_i^2\)</span>, representing a net suppression of mobile carriers.</p></li>
+</ul>
+</div>
+<div class="section" id="current-formulations-via-quasi-fermi-gradients">
+<h3><span class="section-number">17.5.3.2. </span>3.2 Current Formulations via Quasi-Fermi Gradients<a class="headerlink" href="#current-formulations-via-quasi-fermi-gradients" title="Permalink to this heading">#</a></h3>
+<p>Substituting these non-equilibrium statistics into the classic drift-diffusion current density equations (<span class="math notranslate nohighlight">\(J_n = -q\mu_n n \frac{d\psi}{dx} + qD_n \frac{dn}{dx}\)</span>) leads to a vital physical simplification:</p>
+<div class="math notranslate nohighlight">
+\[J_n(x) = \mu_n n(x) \frac{dE_{Fn}}{dx}\]</div>
+<div class="math notranslate nohighlight">
+\[J_p(x) = \mu_p p(x) \frac{dE_{Fp}}{dx}\]</div>
+<p>This formulation demonstrates that net current flows if and only if there is a spatial gradient in the quasi-Fermi levels.</p>
+<p>In the neutral bulk regions under low-level forward injection, the majority carrier quasi-Fermi level remains nearly flat, while the minority carrier quasi-Fermi level slopes sharply, driving the diffusion current. Inside the depletion region, both levels split by an amount exactly equal to the applied electrical bias: <span class="math notranslate nohighlight">\(E_{Fn} - E_{Fp} = q V_a\)</span>.</p>
+<p>This continuous framework forms the mathematical foundation required to solve the coupled drift-diffusion equations numerically without relying on piecewise zone assumptions.</p>
+</div>
 </div>
 </div>
 
@@ -456,9 +611,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias">17.5.1. Zero bias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-bias">17.5.2. Forward bias</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bias">17.5.3. Reverse bias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-pn-junction-and-its-operational-regimes">17.5.1. Introduction to the pn Junction and its Operational Regimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-depletion-approximation-and-shockley-transport">17.5.2. The Depletion Approximation and Shockley Transport</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-thermal-equilibrium">17.5.2.1. Zero Bias (Thermal Equilibrium)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-bias-under-shockley-assumptions">17.5.2.2. Forward Bias Under Shockley Assumptions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bias">17.5.2.3. Reverse Bias</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-description-quasi-fermi-levels-and-non-equilibrium-transport">17.5.3. Advanced Description: Quasi-Fermi Levels and Non-Equilibrium Transport</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carrier-statistics-under-non-equilibrium">17.5.3.1. 3.1 Carrier Statistics under Non-Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-formulations-via-quasi-fermi-gradients">17.5.3.2. 3.2 Current Formulations via Quasi-Fermi Gradients</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
