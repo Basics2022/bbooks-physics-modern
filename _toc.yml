@@ -40,7 +40,7 @@ parts:
   numbered: True
   chapters:
   - file: ch/solid-state/intro
-  - file: ch/solid-state/notes
+  - file: ch/solid-state/notes-solid-state
   - file: ch/solid-state/semiconductors-intro
     sections:
     - file: ch/solid-state/semiconductors-solids-qm
