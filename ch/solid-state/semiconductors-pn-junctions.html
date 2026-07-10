@@ -552,15 +552,63 @@ The applied forward voltage <span class="math notranslate nohighlight">\(V_a\)</
   \Delta n(x_p) &amp; = n_{p0} \left[ \exp\left( \frac{V_a}{V_t} \right) - 1 \right] \\
   \Delta p(x_n) &amp; = p_{n0} \left[ \exp\left( \frac{V_a}{V_t} \right) - 1 \right] \\
 \end{aligned}\end{split}\]</div>
-<p><strong>Charge transport dynamics.</strong> If Shockley conditions hold, no recombination in the depletion region occurs (and thus current is constant there); recombination occurs in the bulk of <span class="math notranslate nohighlight">\(p\)</span>- and <span class="math notranslate nohighlight">\(n\)</span>- sections: here the electric field <span class="math notranslate nohighlight">\(\vec{e}\)</span> is negligible, and thus the current is driven by diffusion only.</p>
-<p>Assuming <em>steady-state diffusion equation</em> (<strong>todo</strong> *discuss characteristic dimensions of the problem, here characteristic time mainly. Why does diffusion equation <span class="math notranslate nohighlight">\(\partial_t p - D_p \partial_{xx} p = 0\)</span> becomes <span class="math notranslate nohighlight">\(\frac{p}{\tau} - D_p \partial_{xx} p = 0\)</span>?) governs the diffusion of the minority charge carriers in the bulk</p>
+<p><strong>Charge transport dynamics.</strong> If Shockley conditions hold, no recombination in the depletion region occurs; recombination occurs in the bulk of <span class="math notranslate nohighlight">\(p\)</span>- and <span class="math notranslate nohighlight">\(n\)</span>- sections: in bulk regions, the electric field <span class="math notranslate nohighlight">\(\vec{e}\)</span> is negligible, and thus the current is driven by diffusion only.</p>
+<p>Governing equation of the holes in the <span class="math notranslate nohighlight">\(n\)</span>-bulk immediately follows from equation <a class="reference internal" href="semiconductors-transport-phenomena.html#equation-eq-semi-num-balance">(17.6)</a>, with the assumption of no drift current in <a class="reference internal" href="semiconductors-transport-phenomena.html#equation-eq-semi-charge-current-p">(17.3)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_t \Delta p_n  
+  &amp; = - \nabla \cdot \left( \frac{j_{p,diff}}{q} \right) + \Delta ( G - R ) = \\
+  &amp; = - \nabla \cdot \left( - D \Delta p_n \nabla n \right) + \Delta ( G - R ) \ ,
+\end{aligned}\end{split}\]</div>
+<p>or in 1-dimensional problems with constant coefficients</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \Delta p_n = D \partial_{xx} \Delta p_n + \Delta ( G - R )\]</div>
+<p>Assuming <em>steady-state diffusion equation</em> (<strong>todo</strong> <em>justify this limit</em>) governs the diffusion of the minority charge carriers in the bulk, and using <strong>the law of mass action</strong> to write the source term (see box below), the governing equation becomes</p>
+<div class="math notranslate nohighlight">
+\[D_p \Delta p_n'' = \frac{1}{\tau_p} \Delta p_n \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\tau_p = \frac{1}{k_r n_{n0}}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Law of mass action for <span class="math notranslate nohighlight">\(\ G - R\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the <span class="math notranslate nohighlight">\(n\)</span>-bulk region,</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n_{n0} \gg p_{n0}\)</span>,</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta n = \Delta p\)</span> if the electrical charge remains zero</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta p_n \gg p_{n0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta n_n \ll n_{n0}\)</span></p></li>
+</ul>
+<p class="sd-card-text">Thus the source term becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+R - G 
+&amp; = k_r p n - k_r p_0 n_0 = \\
+&amp; = k_r ( p_{n0} + \Delta p_n ) ( n_{n0} + \Delta n_n ) - k_r p_{n0} n_{n0} = \\
+&amp; = k_r ( p_{n0} \Delta n_n + n_{n0} \Delta p_n + \Delta n_n \Delta p_n ) = \\
+&amp; \simeq k_r n_{n0} \Delta p_n
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(G \sim G_0 = R_0\)</span> at equilibrium. <strong>todo</strong> <em>Find some time/space to justify all these sentences about equilibrium</em></p></li>
+<li><p class="sd-card-text">the conditions at the beginning of the box give:</p>
+<ul>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n_{n0} \Delta p_n \gg p_{n0} \Delta n_n\)</span> (because the deltas are equal, and <span class="math notranslate nohighlight">\(n_{n0} \gg p_{n0}\)</span>)</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n_{n0} \Delta p_n \gg \Delta p_n \Delta n_n\)</span> (because the deltas are equal, and <span class="math notranslate nohighlight">\(n_{n0} \gg \Delta n_{n}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</details><p>The differential porblem supplied with proper boundary conditions becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left\{ \begin{aligned}
   &amp; \frac{\Delta p_n(x)}{\tau_p} = D_p \Delta p''_n(x) \\
   &amp; p(x_n) = p_{n0} \left[  \exp\left( \frac{V_a}{V_t} \right) - 1 \right] \\
   &amp; p(x \rightarrow +\infty) = 0 \\
 \end{aligned} \right.\end{split}\]</div>
-<p>whose solution reads</p>
+<p>and its solution reads</p>
 <div class="math notranslate nohighlight">
 \[\Delta p_n(x) = p_{n0} \left[ \exp \left( \frac{V_a}{V_t} \right) - 1 \right] \exp\left( - \frac{x - x_n}{L_p} \right) \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(L_p = \sqrt{ \tau_p D_p }\)</span> for the holes in the <span class="math notranslate nohighlight">\(n\)</span>-bulk, <span class="math notranslate nohighlight">\(x &gt; x_n\)</span></p>
@@ -590,7 +638,7 @@ The applied forward voltage <span class="math notranslate nohighlight">\(V_a\)</
    \end{aligned}\end{split}\]</div>
 <p>This equation readily gives the <span class="math notranslate nohighlight">\(V(I)\)</span> relation for an ideal <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> junction,</p>
 <div class="math notranslate nohighlight" id="equation-eq-semiconductors-pn-junction-iv">
-<span class="eqno">(17.6)<a class="headerlink" href="#equation-eq-semiconductors-pn-junction-iv" title="Permalink to this equation">#</a></span>\[ I(V) = I_0 \left[ \exp \left( \frac{V}{V_t} \right) - 1  \right] \ , \]</div>
+<span class="eqno">(17.7)<a class="headerlink" href="#equation-eq-semiconductors-pn-junction-iv" title="Permalink to this equation">#</a></span>\[ I(V) = I_0 \left[ \exp \left( \frac{V}{V_t} \right) - 1  \right] \ , \]</div>
 <p>with <span class="math notranslate nohighlight">\(I_0 = q A \left( \dots \right) = q A n_i^2 \left( \frac{D_n}{L_n N_A} + \frac{D_p}{L_p N_D} \right)\)</span>.</p>
 </li>
 <li><p><span class="math notranslate nohighlight">\(n\)</span>-bulk, <span class="math notranslate nohighlight">\(x \in [ x_n, +\infty)\)</span>. In this region, the electric field is assumed to be negligible, and thus only diffusion drives the current of the charge carriers. For the holes,</p>

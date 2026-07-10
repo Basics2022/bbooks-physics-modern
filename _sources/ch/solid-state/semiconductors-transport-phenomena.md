@@ -1,9 +1,14 @@
 (semiconductors:transport-phenomena)=
 # Carrier Transport Phenomena
 
+In this section:
+- [Currents in semiconductors](semiconductors:transport-phenomena:currents):hole and electron number current, and electric current density
+- [Einstein relation](semiconductors:transport-phenomena:einstein-relation)
+- [Balance equations](semiconductors:transport-phenomena:equations): number and charge density dynamical equations
+
 
 (semiconductors:transport-phenomena:currents)=
-## Electric charge current density
+## Currents in semiconductors
 
 Two main processes:
 1. **diffusion** due to non-uniform density
@@ -65,6 +70,23 @@ $$\rho_R = \frac{1}{\sigma} = \frac{1}{q (\mu_n n + \mu_p p)} \ .$$ (eq:semi:res
 
 $$\frac{D_n}{\mu_n} = \frac{D_p}{\mu_p} = \frac{k T}{q} \ .$$ (eq:semi:einstein-relation)
 
+(semiconductors:transport-phenomena:equations)=
+## Balance equations
+
+The density of free electrons and holes are governed by the following PDEs
+
+$$\begin{aligned}
+  & \partial_t n - \nabla \cdot \left( \frac{\mathbf{j}_n}{q} \right) = ( G_n - R_n ) \\
+  & \partial_t p + \nabla \cdot \left( \frac{\mathbf{j}_p}{q} \right) = ( G_p - R_p ) \\
+\end{aligned}$$ (eq:semi:num-balance)
+
+where the expression of current densities $\mathbf{j}_n$, $\mathbf{j}_p$ are given in {eq}`eq:semi:charge-current-n`, {eq}`eq:semi:charge-current-p` respectively, and the terms $G_{n,p}$, $R_{n,p}$ represent source and sink terms representing **generation** or **recombination** of free charges and holes.
+
+As for a new free electron there's a new hole, then $G_n = G_p$. As recombination occurs between the same number of free electrons and holes, $R_n = R_g$.
+
+Multiplying the first and the second equation in {eq}`eq:semi:num-balance` by $-q$ and $q$ respectively, the balance equation for the *free* charge density $\rho_f = - q n + q p$,
+
+$$\partial_t \rho_f + \nabla \cdot \mathbf{j} = 0 \ .$$
 
 
 
