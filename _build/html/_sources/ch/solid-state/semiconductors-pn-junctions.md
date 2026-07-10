@@ -150,9 +150,56 @@ $$\begin{aligned}
   \Delta p(x_n) & = p_{n0} \left[ \exp\left( \frac{V_a}{V_t} \right) - 1 \right] \\
 \end{aligned}$$
 
-**Charge transport dynamics.** If Shockley conditions hold, no recombination in the depletion region occurs (and thus current is constant there); recombination occurs in the bulk of $p$- and $n$- sections: here the electric field $\vec{e}$ is negligible, and thus the current is driven by diffusion only.
+**Charge transport dynamics.** If Shockley conditions hold, no recombination in the depletion region occurs; recombination occurs in the bulk of $p$- and $n$- sections: in bulk regions, the electric field $\vec{e}$ is negligible, and thus the current is driven by diffusion only.
 
-Assuming *steady-state diffusion equation* (**todo** *discuss characteristic dimensions of the problem, here characteristic time mainly. Why does diffusion equation $\partial_t p - D_p \partial_{xx} p = 0$ becomes $\frac{p}{\tau} - D_p \partial_{xx} p = 0$?) governs the diffusion of the minority charge carriers in the bulk
+Governing equation of the holes in the $n$-bulk immediately follows from equation {eq}`eq:semi:num-balance`, with the assumption of no drift current in {eq}`eq:semi:charge-current-p`,
+
+$$\begin{aligned}
+  \partial_t \Delta p_n  
+  & = - \nabla \cdot \left( \frac{j_{p,diff}}{q} \right) + \Delta ( G - R ) = \\
+  & = - \nabla \cdot \left( - D \Delta p_n \nabla n \right) + \Delta ( G - R ) \ ,
+\end{aligned}$$
+
+or in 1-dimensional problems with constant coefficients
+
+$$\partial_t \Delta p_n = D \partial_{xx} \Delta p_n + \Delta ( G - R )$$
+
+Assuming *steady-state diffusion equation* (**todo** *justify this limit*) governs the diffusion of the minority charge carriers in the bulk, and using **the law of mass action** to write the source term (see box below), the governing equation becomes
+
+$$D_p \Delta p_n'' = \frac{1}{\tau_p} \Delta p_n \ ,$$
+
+with $\tau_p = \frac{1}{k_r n_{n0}}$.
+
+
+```{dropdown} Law of mass action for $\ G - R$
+:open:
+
+In the $n$-bulk region, 
+* $n_{n0} \gg p_{n0}$, 
+* $\Delta n = \Delta p$ if the electrical charge remains zero
+* $\Delta p_n \gg p_{n0}$
+* $\Delta n_n \ll n_{n0}$
+
+Thus the source term becomes
+
+$$\begin{aligned}
+R - G 
+& = k_r p n - k_r p_0 n_0 = \\
+& = k_r ( p_{n0} + \Delta p_n ) ( n_{n0} + \Delta n_n ) - k_r p_{n0} n_{n0} = \\
+& = k_r ( p_{n0} \Delta n_n + n_{n0} \Delta p_n + \Delta n_n \Delta p_n ) = \\
+& \simeq k_r n_{n0} \Delta p_n
+\end{aligned}$$
+
+as:
+* $G \sim G_0 = R_0$ at equilibrium. **todo** *Find some time/space to justify all these sentences about equilibrium*
+* the conditions at the beginning of the box give:
+  * $n_{n0} \Delta p_n \gg p_{n0} \Delta n_n$ (because the deltas are equal, and $n_{n0} \gg p_{n0}$)
+  * $n_{n0} \Delta p_n \gg \Delta p_n \Delta n_n$ (because the deltas are equal, and $n_{n0} \gg \Delta n_{n}$
+
+
+```
+
+The differential porblem supplied with proper boundary conditions becomes
 
 $$\left\{ \begin{aligned}
   & \frac{\Delta p_n(x)}{\tau_p} = D_p \Delta p''_n(x) \\
@@ -160,7 +207,7 @@ $$\left\{ \begin{aligned}
   & p(x \rightarrow +\infty) = 0 \\
 \end{aligned} \right.$$
 
-whose solution reads
+and its solution reads
 
 $$\Delta p_n(x) = p_{n0} \left[ \exp \left( \frac{V_a}{V_t} \right) - 1 \right] \exp\left( - \frac{x - x_n}{L_p} \right) \ ,$$
 

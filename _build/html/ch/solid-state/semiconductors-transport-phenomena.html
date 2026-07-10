@@ -208,7 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">15. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">16. Notes about Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes-solid-state.html">16. Notes about Solid State Physics</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="semiconductors-intro.html">17. Introduction to Semiconductors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="semiconductors-solids-qm.html">17.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="semiconductors-equilibrium.html">17.2. Semiconductors in Equilibrium</a></li>
@@ -366,8 +366,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-charge-current-density">17.3.1. Electric charge current density</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#currents-in-semiconductors">17.3.1. Currents in semiconductors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einstein-relation">17.3.2. Einstein relation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-equations">17.3.3. Balance equations</a></li>
 </ul>
             </nav>
         </div>
@@ -381,8 +382,14 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="carrier-transport-phenomena">
 <span id="semiconductors-transport-phenomena"></span><h1><span class="section-number">17.3. </span>Carrier Transport Phenomena<a class="headerlink" href="#carrier-transport-phenomena" title="Permalink to this heading">#</a></h1>
-<div class="section" id="electric-charge-current-density">
-<span id="semiconductors-transport-phenomena-currents"></span><h2><span class="section-number">17.3.1. </span>Electric charge current density<a class="headerlink" href="#electric-charge-current-density" title="Permalink to this heading">#</a></h2>
+<p>In this section:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#semiconductors-transport-phenomena-currents"><span class="std std-ref">Currents in semiconductors</span></a>:hole and electron number current, and electric current density</p></li>
+<li><p><a class="reference internal" href="#semiconductors-transport-phenomena-einstein-relation"><span class="std std-ref">Einstein relation</span></a></p></li>
+<li><p><a class="reference internal" href="#semiconductors-transport-phenomena-equations"><span class="std std-ref">Balance equations</span></a>: number and charge density dynamical equations</p></li>
+</ul>
+<div class="section" id="currents-in-semiconductors">
+<span id="semiconductors-transport-phenomena-currents"></span><h2><span class="section-number">17.3.1. </span>Currents in semiconductors<a class="headerlink" href="#currents-in-semiconductors" title="Permalink to this heading">#</a></h2>
 <p>Two main processes:</p>
 <ol class="arabic simple">
 <li><p><strong>diffusion</strong> due to non-uniform density</p></li>
@@ -451,6 +458,20 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-eq-semi-einstein-relation">
 <span class="eqno">(17.5)<a class="headerlink" href="#equation-eq-semi-einstein-relation" title="Permalink to this equation">#</a></span>\[\frac{D_n}{\mu_n} = \frac{D_p}{\mu_p} = \frac{k T}{q} \ .\]</div>
 </div>
+<div class="section" id="balance-equations">
+<span id="semiconductors-transport-phenomena-equations"></span><h2><span class="section-number">17.3.3. </span>Balance equations<a class="headerlink" href="#balance-equations" title="Permalink to this heading">#</a></h2>
+<p>The density of free electrons and holes are governed by the following PDEs</p>
+<div class="math notranslate nohighlight" id="equation-eq-semi-num-balance">
+<span class="eqno">(17.6)<a class="headerlink" href="#equation-eq-semi-num-balance" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  &amp; \partial_t n - \nabla \cdot \left( \frac{\mathbf{j}_n}{q} \right) = ( G_n - R_n ) \\
+  &amp; \partial_t p + \nabla \cdot \left( \frac{\mathbf{j}_p}{q} \right) = ( G_p - R_p ) \\
+\end{aligned}\end{split}\]</div>
+<p>where the expression of current densities <span class="math notranslate nohighlight">\(\mathbf{j}_n\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}_p\)</span> are given in <a class="reference internal" href="#equation-eq-semi-charge-current-n">(17.2)</a>, <a class="reference internal" href="#equation-eq-semi-charge-current-p">(17.3)</a> respectively, and the terms <span class="math notranslate nohighlight">\(G_{n,p}\)</span>, <span class="math notranslate nohighlight">\(R_{n,p}\)</span> represent source and sink terms representing <strong>generation</strong> or <strong>recombination</strong> of free charges and holes.</p>
+<p>As for a new free electron there’s a new hole, then <span class="math notranslate nohighlight">\(G_n = G_p\)</span>. As recombination occurs between the same number of free electrons and holes, <span class="math notranslate nohighlight">\(R_n = R_g\)</span>.</p>
+<p>Multiplying the first and the second equation in <a class="reference internal" href="#equation-eq-semi-num-balance">(17.6)</a> by <span class="math notranslate nohighlight">\(-q\)</span> and <span class="math notranslate nohighlight">\(q\)</span> respectively, the balance equation for the <em>free</em> charge density <span class="math notranslate nohighlight">\(\rho_f = - q n + q p\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho_f + \nabla \cdot \mathbf{j} = 0 \ .\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -516,8 +537,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-charge-current-density">17.3.1. Electric charge current density</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#currents-in-semiconductors">17.3.1. Currents in semiconductors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einstein-relation">17.3.2. Einstein relation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-equations">17.3.3. Balance equations</a></li>
 </ul>
   </nav></div>
 
