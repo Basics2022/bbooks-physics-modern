@@ -36,6 +36,11 @@ parts:
   chapters:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes
+  - file: ch/quantum-mechanics/history
+    sections:
+    - file: ch/quantum-mechanics/history/topics
+    - file: ch/quantum-mechanics/history/timeline
+    - file: ch/quantum-mechanics/history/light-dispersion
 - caption: Solid State Physics
   numbered: True
   chapters:
