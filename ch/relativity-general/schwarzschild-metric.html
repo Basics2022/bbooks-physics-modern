@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.2. Einstein’s equation &#8212; Modern Physics</title>
+    <title>6.3.1. Schwarzschild metrics &#8212; Modern Physics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-general/einstein-equation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-general/schwarzschild-metric';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.3. Examples" href="examples.html" />
-    <link rel="prev" title="6.1. Differential Geometry" href="differential-geometry.html" />
+    <link rel="next" title="7. Statistical Physics" href="../statistical-mechanics/intro.html" />
+    <link rel="prev" title="6.3. Examples" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,9 +186,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">5. General Relativity</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="notes.html">6. General Relativity - Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">6.1. Differential Geometry</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.2. Einstein’s equation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">6.3. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.3.1. Schwarzschild metrics</a></li>
 </ul>
 </li>
 </ul>
@@ -286,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/relativity-general/einstein-equation.md" target="_blank"
+      <li><a href="../../_sources/ch/relativity-general/schwarzschild-metric.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Einstein’s equation</h1>
+    <h1>Schwarzschild metrics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,8 +380,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-expression-of-einstein-s-equations">6.2.1. Alternative expression of Einstein’s equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">6.2.2. Classical limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.3.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.3.1.2. Christoffel Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.3.1.3. Components of the Ricci Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.3.1.4. Solving the Differential Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.3.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.3.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
 </ul>
             </nav>
         </div>
@@ -393,98 +397,161 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="einstein-s-equation">
-<span id="relativity-general-notes-einstein-equation"></span><h1><span class="section-number">6.2. </span>Einstein’s equation<a class="headerlink" href="#einstein-s-equation" title="Permalink to this heading">#</a></h1>
-<p>Idea:</p>
-<ol class="arabic">
-<li><p>Try with <strong>the simplest relation</strong> between momentum-energy tensor <span class="math notranslate nohighlight">\(\mathsf{T}\)</span> and a second order tensor representing the geometry of space, i.e. <strong>proportionality</strong> with Ricci’s curvature tensor <span class="math notranslate nohighlight">\(\mathsf{R}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\mathsf{R} = \kappa \mathsf{T} \ .\]</div>
-<p><strong>Remark.</strong> This relationship doesn’t agree with local energy-momentum balance <span class="math notranslate nohighlight">\(\nabla \cdot \mathsf{T} = \mathbf{0}\)</span>, as <span class="math notranslate nohighlight">\(\nabla \cdot \mathsf{R} \ne \mathbf{0}\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-     \nabla_{\mu} R^{\mu}_{\ \ \nu} &amp; = \frac{1}{2} \nabla_{\nu} R \\
-     \nabla_{\mu} R^{\mu \sigma} &amp; = \nabla_{\mu} \left( g^{\sigma \nu} R^{\mu}_{\ \ \nu} \right) = g^{\sigma \nu} \nabla_{\mu} R^{\mu}_{\ \ \nu} = \frac{1}{2}  g^{\sigma \nu }\nabla_{\nu} R = \nabla_{\mu} \left( \frac{1}{2} g^{\sigma \mu} R \right) , \\
-   \end{aligned}\end{split}\]</div>
-<p>as the covariant derivative of the metric components of the metric tensor are identically zero. Moving the extreme terms of this equality on the same side of the equal sign, <span class="math notranslate nohighlight">\(\nabla_{\mu} \left( R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R \right) = 0\)</span>.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="schwarzschild-metrics">
+<span id="relativity-general-notes-examples-schwarzschild"></span><h1><span class="section-number">6.3.1. </span>Schwarzschild metrics<a class="headerlink" href="#schwarzschild-metrics" title="Permalink to this heading">#</a></h1>
+<p><strong>Spatially spherically symmetric</strong> and <strong>static vacuum</strong> solution of the Einstein equation, representing the exterior gravitational field of a <strong>non-rotating</strong>, <strong>uncharged</strong> massive body.</p>
+<p>Schwarzschild metrics gives</p>
+<div class="math notranslate nohighlight" id="equation-eq-schwarzschild-metrics">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-schwarzschild-metrics" title="Permalink to this equation">#</a></span>\[
+ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
+\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Covariant derivative of the metric tensor<div class="sd-summary-down docutils">
+Vacuum equation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
-  \nabla_{\nu} g_{\mu \eta}
-  &amp; = \partial_{\nu} g_{\mu \eta} - \Gamma_{\nu \mu}^{\sigma} g_{\sigma \eta} - \Gamma_{\nu \eta}^{\sigma} g_{\mu \sigma} = 0 \ ,
-\end{aligned}\]</div>
-<p class="sd-card-text">as <span class="math notranslate nohighlight">\(\partial_{\nu} g_{\mu \eta} = \Gamma_{\nu \mu}^{\sigma} g_{\sigma \eta} + \Gamma_{\nu \eta}^{\sigma} g_{\mu \sigma}\)</span> (see the derivative of the components of the metric tensor in <a class="reference internal" href="differential-geometry.html#relativity-general-notes-differential-geometry"><span class="std std-ref">Differential geometry for general relativity</span></a>.</p>
+<p class="sd-card-text">Without mass density and electric charge and current, <span class="math notranslate nohighlight">\(\mathsf{T} = \mathsf{0}\)</span>. From the expression of <a class="reference internal" href="einstein-equation.html#equation-eq-einstein-alternative">(6.2)</a>, it immediately follows, <span class="math notranslate nohighlight">\(\mathsf{R} = \mathsf{0}\)</span>.</p>
 </div>
-</details></li>
-<li><p>Correct the relation, replacing Ricci’s tensor with its divergence-free part</p>
-<div class="math notranslate nohighlight">
-\[R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \kappa T^{\mu \sigma} \ ,\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\mathsf{R} - \frac{1}{2} \mathsf{g} R = \kappa \mathsf{T} \ .\]</div>
-</li>
-<li><p>Check against the classical limit, to find:</p>
-<ul class="simple">
-<li><p>if Newton gravitation is the classical limit of general relativity</p></li>
-<li><p>the values of the constants involved in the model, <span class="math notranslate nohighlight">\(\kappa\)</span></p></li>
-</ul>
-<p>Under some assumptions:</p>
-<ul class="simple">
-<li><p><strong>weak gravitation</strong> for the linearization of the metric tensor <span class="math notranslate nohighlight">\(g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}\)</span> around Minkowski flat time-space (here <span class="math notranslate nohighlight">\(\eta_{\mu \nu}\)</span> describing Minkowski metrics).</p></li>
-<li><p><strong>pressure-less mass distribution at rest</strong></p></li>
-<li><p><strong>mass</strong> distribution “at rest” (w.r.t. the “quasi inertial observer”)</p></li>
-</ul>
-</li>
+</details><div class="section" id="metric-ansatz-symmetry-assumptions">
+<h2><span class="section-number">6.3.1.1. </span>Metric Ansatz &amp; Symmetry Assumptions<a class="headerlink" href="#metric-ansatz-symmetry-assumptions" title="Permalink to this heading">#</a></h2>
+<p>The four coordinates used to parametrize the space-time are <span class="math notranslate nohighlight">\((t, r, \theta, \phi)\)</span>. The two physical symmetry constraints in Schwarzschild solution of EFE are</p>
+<ol class="arabic simple">
+<li><p><strong>Spherical Symmetry:</strong> the spatial geometry is invariant under rotation, s.t. the angular part of the metric is given by the standard round metric on <span class="math notranslate nohighlight">\(S^2\)</span>, <span class="math notranslate nohighlight">\(d\Omega^2 = d \theta^2 + \sin^2 \theta \, d\phi^2\)</span></p></li>
+<li><p><strong>Staticity:</strong> the metric coefficients are independent of the time coordinate <span class="math notranslate nohighlight">\(t\)</span> (<span class="math notranslate nohighlight">\(\partial_t g_{\mu
+u} = 0\)</span>); the further assumption that the line element is invariant under time reversal eliminates cross-terms such as <span class="math notranslate nohighlight">\(dt\,dr\)</span>.</p></li>
 </ol>
-<div class="section" id="alternative-expression-of-einstein-s-equations">
-<span id="relativity-general-notes-einstein-equation-alternative"></span><h2><span class="section-number">6.2.1. </span>Alternative expression of Einstein’s equations<a class="headerlink" href="#alternative-expression-of-einstein-s-equations" title="Permalink to this heading">#</a></h2>
-<p>Let’s evaluate the trace of <span class="math notranslate nohighlight">\(\mathsf{R}\)</span>, i.e. <span class="math notranslate nohighlight">\(R = R^{\sigma}_{\ \ \sigma}\)</span> as a function of the trace of <span class="math notranslate nohighlight">\(\mathsf{T}\)</span>.</p>
+<p>Under these assumptions, the general line element can be parameterized using two undetermined functions of radius, <span class="math notranslate nohighlight">\(A(r)\)</span> and <span class="math notranslate nohighlight">\(B(r)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ds^2 = -e^{2A(r)} c^2 dt^2 + e^{2B(r)} dr^2 + r^2 \left( d \theta^2 + \sin^2 \theta \, d\phi^2 \right)\]</div>
+<p><strong>Remark.</strong> Using exponential parameterizations <span class="math notranslate nohighlight">\(e^{2A(r)}\)</span> and <span class="math notranslate nohighlight">\(e^{2B(r)}\)</span> ensures that <span class="math notranslate nohighlight">\(g_{tt} &lt; 0\)</span> and <span class="math notranslate nohighlight">\(g_{rr} &gt; 0\)</span> outside any horizon. <strong>todo</strong> <em>Add some remark/examples about the role of time, and its consequence on metrics</em></p>
+<p>From the choosen parametrization, the non-zero covariant components of the metric tensors are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  R
-  &amp; := R^{\sigma}_{\ \ \sigma} = \\
-  &amp; = g_{\sigma \varphi} R^{\varphi \sigma} = \\
-  &amp; = g_{\sigma \varphi} \left( \frac{1}{2} g^{\varphi \sigma} R + \kappa T^{\varphi \sigma} \right) = 2 R + \kappa T \\
+  g_{tt} &amp; = - e^{- 2 A(r)} c^2 \\
+  g_{rr} &amp; =   e^{  2 B(r)}     \\
+  g_{\theta \theta} &amp; = r^2    \\
+  g_{\phi \phi} &amp; =  r^2 \sin^2 \theta     \\
 \end{aligned}\end{split}\]</div>
-<p>and thus the relation <span class="math notranslate nohighlight">\(R = - \kappa T\)</span> holds between the trace of Ricci and energy-momentum tensors (here <span class="math notranslate nohighlight">\(g_{\sigma \varphi} g^{\sigma \varphi} = \delta_{\sigma}^{\sigma} = 4\)</span> in the 4-dimensional time-space). Thus, Einstein equation can be recast as</p>
-<div class="math notranslate nohighlight" id="equation-eq-einstein-alternative">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-einstein-alternative" title="Permalink to this equation">#</a></span>\[\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .\]</div>
+<p>As the metric tensor is diagonal, it’s contravariant components are just the inverse of its covariant components.</p>
 </div>
-<div class="section" id="classical-limit">
-<span id="relativity-general-notes-einstein-equation-classical-limit"></span><h2><span class="section-number">6.2.2. </span>Classical limit<a class="headerlink" href="#classical-limit" title="Permalink to this heading">#</a></h2>
-<p><strong>1. Linearization of the metric tensor.</strong> <span class="math notranslate nohighlight">\(g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}\)</span>, and the inverse (linearized) relation gives <span class="math notranslate nohighlight">\(g^{\mu \nu} = \eta^{\mu \nu} - h^{\mu \nu}\)</span></p>
-<p><strong>2. Linearization of Christoffel symbols.</strong></p>
+<div class="section" id="christoffel-symbols">
+<h2><span class="section-number">6.3.1.2. </span>Christoffel Symbols<a class="headerlink" href="#christoffel-symbols" title="Permalink to this heading">#</a></h2>
+<p>The Christoffel symbols of the second kind are computed via the expression <a class="reference internal" href="differential-geometry.html#equation-eqn-differential-geometry-gamma-g">(6.1)</a>,</p>
 <div class="math notranslate nohighlight">
-\[\Gamma_{00}^{i} = - \frac{1}{2} \partial_i h_{00}\]</div>
-<p>in the static limit, <span class="math notranslate nohighlight">\(\partial_0 \equiv 0\)</span>, for the spatial components, <span class="math notranslate nohighlight">\(i = 1:3\)</span>.</p>
-<p><strong>3. Linearization of the geodesics equation.</strong></p>
+\[\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right) \ .\]</div>
+<p>Writing the derivative w.r.t. <span class="math notranslate nohighlight">\(r\)</span> as <span class="math notranslate nohighlight">\(\partial_r A(r) = A'(r)\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Gamma^t_{tr} = \Gamma^t_{rt} = \frac{1}{2} g^{t d} \left( \partial_r g_{t d} + \partial_t g_{dr} - \partial_d g_{tr}  \right) = - \frac{1}{2} e^{2 A} c^{-2} \cdot ( - 2 A' ) e^{-2A} c^2 = A'\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^r_{tt} = A' e^{2(A-B)} c^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^r_{rr} = B'\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^r_{\theta \theta} = -r e^{-2B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^r_{\phi\phi} = -r \sin^2  \theta \, e^{-2B}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^\theta_{r \theta} = \Gamma^\theta_{\theta r} = \frac{1}{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos \theta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^\phi_{r\phi} = \Gamma^\phi_{\phi r} = \frac{1}{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot \theta\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="components-of-the-ricci-tensor">
+<h2><span class="section-number">6.3.1.3. </span>Components of the Ricci Tensor<a class="headerlink" href="#components-of-the-ricci-tensor" title="Permalink to this heading">#</a></h2>
+<p>The Ricci tensor is defined by contracting the Riemann curvature tensor:</p>
 <div class="math notranslate nohighlight">
-\[\ddot{q}^{\mu} + \Gamma_{\nu \sigma}^{\mu} \dot{q}^{\nu} \dot{q}^{\mu} = 0\]</div>
-<p>For <span class="math notranslate nohighlight">\(\mu = i = 1:3\)</span>, as the <span class="math notranslate nohighlight">\(\tau \sim t\)</span> in the slow-regime limit, and <span class="math notranslate nohighlight">\(q^0 \sim c t\)</span> and <span class="math notranslate nohighlight">\(q^i = x_i\)</span>,</p>
+\[R_{\mu
+u} = \partial_{\lambda}\Gamma^{\lambda}_{\mu
+u} - \partial_{
+u}\Gamma^{\lambda}_{\mu\lambda} + \Gamma^{\lambda}_{\mu
+u}\Gamma^{\sigma}_{\lambda\sigma} - \Gamma^{\sigma}_{\mu\lambda}\Gamma^{\lambda}_{
+u\sigma}\]</div>
+<p>Evaluating the non-zero independent components yields:</p>
+<ul>
+<li><p><strong>Time-Time Component (<span class="math notranslate nohighlight">\(R_{tt}\)</span>)</strong></p>
 <div class="math notranslate nohighlight">
-\[\ddot{x}_i = - c^2 \Gamma_{00}^i = \frac{c^2}{2} \partial_i h_{00} \ .\]</div>
-<p>This equation must be compared with the dynamical equation of the Newtonian mechanics, <span class="math notranslate nohighlight">\(\ddot{\vec{r}} = - \nabla \Phi\)</span>. In order to get the same equation, <span class="math notranslate nohighlight">\(\partial_i h_{00} = - \frac{2}{c^2} \partial_i \Phi\)</span>, and thus - except for an arbitrary constant (irrelevant) - <span class="math notranslate nohighlight">\(h_{00} = - \frac{2}{c^2} \Phi\)</span>.</p>
-<p><strong>4. Linearized Einstein equation</strong>, with energy-momentum tensor (of the pressure-less medium) <span class="math notranslate nohighlight">\(T^{\mu \nu} = \rho c^2 \delta^{\mu}_0 \delta^{\nu}_0\)</span>, so that its trace reads <span class="math notranslate nohighlight">\(T = \rho c^2\)</span>. Thus the linearized <span class="math notranslate nohighlight">\(00\)</span> component of Einstein equation reads</p>
+\[R_{tt} = e^{2(A-B)} c^2 \left[ A'' + (A')^2 - A'B' + \frac{2A'}{r} \right]\]</div>
+</li>
+<li><p><strong>Radial-Radial Component (<span class="math notranslate nohighlight">\(R_{rr}\)</span>)</strong></p>
 <div class="math notranslate nohighlight">
-\[R_{00} = \kappa \left( \rho c^2 - \frac{1}{2} \rho c^2 \right) = \kappa \frac{1}{2} \rho c^2\]</div>
-<p><strong>5. Linearized relation between curvature tensor and the linearized metrics.</strong></p>
+\[R_{rr} = -A'' - (A')^2 + A'B' + \frac{2B'}{r}\]</div>
+</li>
+<li><p><strong>Angular Component (<span class="math notranslate nohighlight">\(R_{\theta \theta}\)</span>)</strong></p>
 <div class="math notranslate nohighlight">
-\[R_{00} = \partial_i \Gamma^{i}_{00} = - \frac{1}{2} \partial_{ii} h_{00} = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi\]</div>
-<p><strong>6. Comparison of the two expressions of <span class="math notranslate nohighlight">\(R_{00}\)</span>.</strong></p>
+\[R_{\theta \theta} = 1 - e^{-2B} \left[ 1 + r(A' - B') \right]\]</div>
+</li>
+</ul>
+<p><strong>Remarks.</strong></p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\(R_{\phi\phi}\)</span> component yields <span class="math notranslate nohighlight">\(R_{\phi\phi} = R_{\theta \theta} \sin^2 \theta\)</span>, providing no independent equation).</p></li>
+<li><p>The non-diagonal components are identically zero (<strong>todo</strong> <em>prove it!</em>)</p></li>
+</ul>
+</div>
+<div class="section" id="solving-the-differential-equations">
+<h2><span class="section-number">6.3.1.4. </span>Solving the Differential Equations<a class="headerlink" href="#solving-the-differential-equations" title="Permalink to this heading">#</a></h2>
+<p><strong>Combining <span class="math notranslate nohighlight">\(R_{tt}\)</span> and <span class="math notranslate nohighlight">\(R_{rr}\)</span></strong> (linear combination <span class="math notranslate nohighlight">\(e^{-2(A-B)} \frac{R_{tt}}{c^2} + R_{rr} = 0\)</span>) immediately gives</p>
 <div class="math notranslate nohighlight">
-\[\frac{\kappa}{2} \rho c^2 = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi \ , \]</div>
-<p>or rearranging,</p>
+\[A'(r) = -B'(r) \ .\]</div>
+<p>and integrating with respect to <span class="math notranslate nohighlight">\(r\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\nabla^2 \Phi = \frac{\kappa c^4}{2} \rho \ .\]</div>
-<p>By direct comparison with the Poisson equation for Newtonian gravitation, <span class="math notranslate nohighlight">\(\nabla^2 \Phi = 4 \pi G \rho\)</span>, it follows that</p>
+\[A(r) + B(r) = C = \text{const.}\]</div>
+<p><strong>Boundary conditions at infinity.</strong> To satisfy the boundary condition of asymptotic flatness—that spacetime approaches flat Minkowski space as <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\kappa = \frac{8 \pi G}{c^4} \ .\]</div>
+\[\begin{split}\begin{aligned}
+  g_{tt} &amp; = - e^{2A(r)} \rightarrow - 1 &amp;&amp; A(r) \rightarrow 0 \\
+  g_{rr} &amp; =   e^{2B(r)} \rightarrow   1 &amp;&amp; B(r) \rightarrow 0
+\end{aligned}\end{split}\]</div>
+<p>and thus <span class="math notranslate nohighlight">\(C = 0\)</span>, and <span class="math notranslate nohighlight">\(A(r) = - B(r)\)</span>.</p>
+<p><strong>Solving for <span class="math notranslate nohighlight">\(A(r)\)</span> via <span class="math notranslate nohighlight">\(R_{\theta \theta}\)</span>.</strong> Substituting <span class="math notranslate nohighlight">\(B' = -A'\)</span> and <span class="math notranslate nohighlight">\(e^{-2B} = e^{2A}\)</span> into <span class="math notranslate nohighlight">\(R_{\theta \theta} = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = R_{\theta \theta} = \\
+  &amp; = 1 - e^{2A} \left( 1 + 2rA' \right) = \\
+  &amp; = 1 - \dfrac{d}{dr} \left( r e^{2 A} \right)  \ ,
+\end{aligned}\end{split}\]</div>
+<p>and thus, integrating in <span class="math notranslate nohighlight">\(r\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[r e^{2 A(r)} = r + C \ .\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[e^{2A(r)} = 1 + \frac{C}{r}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant of integration. Since <span class="math notranslate nohighlight">\(e^{2B(r)} = e^{-2A(r)}\)</span>, it follows <span class="math notranslate nohighlight">\(e^{2B(r)} = \left(1 + \frac{C}{r} \right)^{-1}\)</span>.</p>
+</div>
+<div class="section" id="determining-the-integration-constant-c-the-newtonian-limit">
+<h2><span class="section-number">6.3.1.5. </span>Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)<a class="headerlink" href="#determining-the-integration-constant-c-the-newtonian-limit" title="Permalink to this heading">#</a></h2>
+<p>To determine <span class="math notranslate nohighlight">\(C\)</span>, we examine the metric in the weak-field, low-velocity limit (<span class="math notranslate nohighlight">\(r \to \infty\)</span>). In this limit, general relativity recovers <strong>Newtonian gravity</strong>, as shown in <a class="reference internal" href="einstein-equation.html#relativity-general-notes-einstein-equation-classical-limit"><span class="std std-ref">classical limit</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[g_{tt} = \eta_{tt} + h_{tt} \approx - 1 - \frac{2}{c^2} \Phi \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Phi(r) = - \frac{GM}{r}\)</span> is the Newtonian gravitational potential of a central mass <span class="math notranslate nohighlight">\(M\)</span>. Equating the two expression of the coefficient <span class="math notranslate nohighlight">\(g_{tt}\)</span></p>
+<div class="math notranslate nohighlight">
+\[g_{tt} = -e^{2A(r)} = - 1 - \frac{C}{r} = - 1 + \frac{2}{c^2} \frac{G M}{r} \]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[C = - \frac{2GM}{c^2} \ .\]</div>
+<p>Defining the <strong>Schwarzschild radius</strong> <span class="math notranslate nohighlight">\(r_s := \frac{2GM}{c^2}\)</span>, the expression of <strong>Schwarzschild metric</strong> becomes</p>
+<div class="math notranslate nohighlight">
+\[
+ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
+\]</div>
+</div>
+<div class="section" id="special-case-complete-vacuum-m-0">
+<h2><span class="section-number">6.3.1.6. </span>Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)<a class="headerlink" href="#special-case-complete-vacuum-m-0" title="Permalink to this heading">#</a></h2>
+<p>If the spacetime contains no mass (<span class="math notranslate nohighlight">\(M = 0\)</span>), the Minkowski flat spacetime follows</p>
+<div class="math notranslate nohighlight">
+\[ds^2 = -c^2 dt^2 + d r^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 = - c^2 dt^2 + |d \vec{r}|^2 \ , \]</div>
+<p>or, using the common transformation between spherical and Cartesian space coordinates,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  t = t \\
+  x = r \sin \theta \cos \phi \\
+  y = r \sin \theta \sin \phi \\
+  z = r \cos \theta \ ,
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[ds^2 = - c^2 dt^2 + dx^2 + dy^2 + dz^2 \ .\]</div>
 </div>
 </div>
 
@@ -519,20 +586,20 @@ Covariant derivative of the metric tensor<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="differential-geometry.html"
+       href="examples.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.1. </span>Differential Geometry</p>
+        <p class="prev-next-title"><span class="section-number">6.3. </span>Examples</p>
       </div>
     </a>
     <a class="right-next"
-       href="examples.html"
+       href="../statistical-mechanics/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.3. </span>Examples</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Statistical Physics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -551,8 +618,12 @@ Covariant derivative of the metric tensor<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-expression-of-einstein-s-equations">6.2.1. Alternative expression of Einstein’s equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">6.2.2. Classical limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.3.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.3.1.2. Christoffel Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.3.1.3. Components of the Ricci Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.3.1.4. Solving the Differential Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.3.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.3.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
 </ul>
   </nav></div>
 

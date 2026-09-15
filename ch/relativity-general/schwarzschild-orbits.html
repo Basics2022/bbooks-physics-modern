@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Special Relativity &#8212; Modern Physics</title>
+    <title>6.3.2. Planetary orbits in Schwarzschild spacetime &#8212; Modern Physics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special/intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-general/schwarzschild-orbits';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Special Relativity - Notes" href="notes.html" />
-    <link rel="prev" title="Modern physics" href="../../intro.html" />
+    <link rel="next" title="7. Statistical Physics" href="../statistical-mechanics/intro.html" />
+    <link rel="prev" title="6.3.1. Schwarzschild metrics" href="schwarzschild-metric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,20 +175,21 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Special Relativity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notes.html">2. Special Relativity - Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="em.html">4. Electromagnetism</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../relativity-general/intro.html">5. General Relativity</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="notes.html">6. General Relativity - Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">6.3. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
 </ul>
 </li>
 </ul>
@@ -286,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/relativity-special/intro.md" target="_blank"
+      <li><a href="../../_sources/ch/relativity-general/schwarzschild-orbits.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Special Relativity</h1>
+    <h1>Planetary orbits in Schwarzschild spacetime</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,28 +383,103 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="special-relativity">
-<span id="relativity-special"></span><h1><span class="section-number">1. </span>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
-<p><strong>Principles.</strong> (1) invariant nature of physical laws, (2) <span class="math notranslate nohighlight">\(c\)</span> as the maximum speed of propagation of information in space. Every inertial observer measures the same speed of light.</p>
-<p><strong>Lorentz’s transformation</strong> as a special coordinate transformations for space-time description as seen by two inertial observers in relative motion with uniform velocity. Physical laws governing a physical process have the same expressions if seen by two inertial observers. In a homogeneous time-space the expression of equations of physics doesn’t depend on translation of origin of time-space coordinates; in a isotropic space the expression of equations of physics doesn’t depend on rotations space rotation; as two inertial observers may write the same expressions of the physical equations using their own coordinates, the expression of equations of physics doesn’t depend on Lorentz’s transformations.</p>
-<ul class="simple">
-<li><p>standard configuration: derivation of Lorentz’s transformations from principles and symmetry considerations</p></li>
-<li><p>composition of transformations and general Lorentz’s transformation</p></li>
-</ul>
-<p><strong>Some consequences and examples</strong>:</p>
-<ul class="simple">
-<li><p><strong>Finite speed of propagation and loss of simultaneity.</strong></p></li>
-<li><p><strong>Speed of light and causality.</strong> Causality follows from the principle that <span class="math notranslate nohighlight">\(c\)</span> is the maximum speed of information: all the observers perceive causes before consequences.</p></li>
-<li><p><strong>Length contraction and time dilation</strong></p></li>
-</ul>
-<p><strong>Mechanics.</strong> Point kinematics: 4-velocity and 4-acceleration; dynamics of free particle: 4-momentum, energy-momentum relation, rest energy; dynamics of particles in external force filed: which field? For particles in EM field, Lorentz’s force; Lagrangian approach</p>
-<p><strong>Electromagnetism.</strong> Special relativity and equations of electromagnetism. From classical electromagnetism to electromagnetism in special relativity theory; EM potentials, gauge condition, 4-current and EM field tensor; EM field equations; motion of a point charge in an EM field; energy balance equations. Relativity of electromagnetism: low-speed relativity for classical electromagnetism. Lagrangian approach for the equations of motion of charges in an EM field, and for the EM field equations.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="planetary-orbits-in-schwarzschild-spacetime">
+<span id="relativity-general-notes-examples-schwarzschild-orbits"></span><h1><span class="section-number">6.3.2. </span>Planetary orbits in Schwarzschild spacetime<a class="headerlink" href="#planetary-orbits-in-schwarzschild-spacetime" title="Permalink to this heading">#</a></h1>
+<p>Schwarzschild metrics <a class="reference internal" href="schwarzschild-metric.html#equation-eq-schwarzschild-metrics">(6.3)</a> provides the metrics induced by a massive object in the vacuum spacetime around. The motion of a light object approximately doesn’t affect the massive object generating the steady Schwarzschild metrics. The light object moves following the geodesics.
+Let the motion occurs in the equatorial plane, i.e. <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span>, and <span class="math notranslate nohighlight">\(d \theta = 0\)</span>. Thus</p>
+<div class="math notranslate nohighlight">
+\[
+- c^2 d \tau^2 = ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 \, d\phi^2 \ .
+\]</div>
 <!--
-- Electromagnetism and the need for new relativity
-- Space-time, Lorentz transformations,...
-- Mechanics: kinematics, dynamics,...
-- Electromagnetism: Maxwell's equations, potentials, Lorentz force, energy balance
+```{dropdown} Rearranging $\ ds^2$
+
+$$\begin{aligned}
+  ds^2
+  & = - \left( 1 - \frac{1}{\rho} \right) c^2 dt^2 + \frac{1}{1-\frac{1}{\rho}} dr^2 + r^2 d \phi^2 = \\
+  & = - \left( 1 - \frac{1}{\rho} \right) c^2 dt^2 + \frac{\frac{1}{\rho}}{1 - \frac{1}{\rho}} dr^2 + dr^2 + r^2 d \phi^2 = \\
+  & = - \frac{\rho - 1}{\rho} c^2 dt^2 + \frac{1}{\rho - 1}  dr^2 + dr^2 + r^2 d \phi^2 \ .
+\end{aligned}$$
+
+```
 -->
+<p><strong>Geodesics.</strong> With <span class="math notranslate nohighlight">\(A(r) = \frac{1}{2} \ln \left( 1 - \frac{r_s}{r} \right)\)</span>, <span class="math notranslate nohighlight">\(A'(r) = \frac{1}{2} \frac{1}{1 - \frac{r_s}{r}} \frac{r_s}{r^2}\)</span></p>
+<div class="math notranslate nohighlight">
+\[0 = \ddot{q}^k + \Gamma_{a b}^k \dot{q}^{a} \dot{q}^b\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  t : \qquad 
+  0 &amp; = \ddot{t} + \Gamma_{ab}^t \dot{q}^a \dot{q}^b = \\
+    &amp; = \ddot{t} + 2 \Gamma_{tr}^t \dot{t} \dot{r} = \\
+    &amp; = \ddot{t} + \frac{1}{1 - \frac{r_s}{r}} \frac{r_s}{r^2} \dot{t} \dot{r} \\
+  0 &amp; = \left(1 - \frac{r_s}{r} \right)^{-1} \left[ \left( 1-\frac{r_s}{r}\right) \ddot{t} + \frac{r_s}{r^2} \dot{t} \dot{r} \right] = \\
+  0 &amp; = \left(1 - \frac{r_s}{r} \right)^{-1} \dfrac{d}{d \tau} \left[ \left( 1-\frac{r_s}{r} \right) \dot{t} \right] \quad \rightarrow \quad \left( 1-\frac{r_s}{r} \right) \dot{t} =: \frac{E}{c} = \text{const.} \\
+  r : \qquad 
+  0 &amp; = \ddot{r} + \Gamma_{ab}^r \dot{q}^a \dot{q}^b = \\
+    &amp; = \ddot{r} + \Gamma_{tt}^r \dot{t}^2 + \Gamma_{rr}^r \dot{r}^2 + \Gamma_{\theta \theta}^{r} \dot{\theta}^2 + \Gamma_{\phi \phi}^{r} \dot{\phi}^2 = &amp;&amp; (\dot{\theta} = 0 )\\
+    &amp; = \ddot{r} + \Gamma_{tt}^r \dot{t}^2 + \Gamma_{rr}^r \dot{r}^2 + \Gamma_{\phi \phi}^{r} \dot{\phi}^2 = \\
+    &amp; = \ddot{r} + A' e^{4 A} c^2 \dot{t}^2 - A'(r) \dot{r}^2 - r \sin^2 \theta e^{2 A} \dot{\phi}^2 = \\
+    &amp; = \ddot{r} + A' e^{4 A} c^2 \dot{t}^2 - A'(r) \dot{r}^2 - r \theta e^{2 A} \dot{\phi}^2 = \\
+  \phi : \qquad 
+  0 &amp; = \ddot{\phi} + \Gamma_{ab}^{\phi} \dot{q}^a \dot{q}^b  \\
+    &amp; = \ddot{\phi} + 2 \Gamma_{r \phi}^\phi \dot{r} \dot{\phi} + 2 \Gamma_{\theta \phi}^\phi \dot{\theta} \dot{\phi} =  &amp;&amp; ( \dot{\theta} = 0 ) \\
+    &amp; = \ddot{\phi} + 2 \Gamma_{r \phi}^\phi \dot{r} \dot{\phi} = \\
+    &amp; = \ddot{\phi} + 2 \frac{1}{r} \dot{r} \dot{\phi} \ , \\
+  0 &amp; = \frac{1}{r^2} \dfrac{d}{d \tau} \left( r^2 \dot{\phi} \right) \quad \rightarrow \quad r^2(\tau) \dot{\phi}(\tau) =: L = \text{const.} \\
+  \theta : \qquad 
+  0 &amp; = \ddot{\theta} + \Gamma_{ab}^{\theta} \dot{q}^a \dot{q}^b  \\
+    &amp; = \ddot{\theta} + 2 \Gamma_{r \phi}^\theta \dot{\theta} \dot{\phi} + \Gamma_{\phi \phi}^\theta \dot{\phi}^2 = &amp;&amp; ( \dot{\theta} = 0 ) \\
+    &amp; = \ddot{\theta} - \sin \theta \cos \theta \Gamma_{\phi \phi}^\theta \dot{\phi}^2 = \\
+    &amp; = \ddot{\theta} \ .
+\end{aligned}\end{split}\]</div>
+<p>Replacing the expression for <span class="math notranslate nohighlight">\(\dot{t}\)</span> and <span class="math notranslate nohighlight">\(\dot{\phi}\)</span> into the relation <span class="math notranslate nohighlight">\(u^\mu u_{\mu} = - c^2\)</span> (from <span class="math notranslate nohighlight">\(ds^2/d \tau^2\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  -c^2 
+  &amp; = - \left( 1 - \frac{r_s}{r} \right) c^2 \dot{t}^2 + \left( 1 - \frac{r_s}{r} \right)^{-1} \dot{r}^2 + r^2 \dot{\phi}^2 = \\
+  &amp; = - \left( \right)^{-1} E^2  + \left(  \right)^{-1} \dot{r}^2 + \frac{L}{r^2} \\
+\end{aligned}\end{split}\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[
+  \dot{r}^2 = E^2 - c^2 \left( 1 - \frac{r_s}{r} \right) \left( 1 + \frac{L}{r^2 c^2} \right) \ .
+\]</div>
+<p>Now, changing variable <span class="math notranslate nohighlight">\(u := \frac{1}{r}\)</span> and using the relation <span class="math notranslate nohighlight">\(\phi(\tau)\)</span> to write</p>
+<div class="math notranslate nohighlight">
+\[\dot{r} = \frac{d r}{d\tau} = \frac{d \phi}{d \tau} \frac{d}{d \phi} = \frac{L}{r^2} \frac{d r}{d \phi} = L u^2 \left( - \frac{1}{u^2} \right) u'(\phi) = - L u'(\phi) \ ,\]</div>
+<p>the equation becomes</p>
+<div class="math notranslate nohighlight">
+\[ L^2 {u'}^2 = E - c^2 ( 1 - r_s u ) \left( 1 + \frac{L^2}{c^2} u^2 \right) \ .\]</div>
+<p>Differentiating both sides by <span class="math notranslate nohighlight">\(\phi\)</span></p>
+<div class="math notranslate nohighlight">
+\[0 = L^2 2 u' u'' - c^2 r_s u' \left( 1 + \frac{L^2}{c^2} u^2 \right) + c^2 ( 1 - r_s u) 2 \frac{L^2}{c^2} u u' \]</div>
+<p>or dividing by <span class="math notranslate nohighlight">\(2 L^2 u'\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[0 = u'' - \frac{c^2 r_s}{2 L^2} - \frac{3}{2}r_s u^2 + u\]</div>
+<p>or, with <span class="math notranslate nohighlight">\(r_s = \frac{2 GM}{c^2}\)</span></p>
+<div class="math notranslate nohighlight">
+\[u'' + u = \frac{c^2 r_s}{2 L^2} + \frac{3}{2} r_s u^2 = \frac{GM}{L^2} + \frac{3 GM}{c^2} u^2 \ .\]</div>
+<p><strong>Solution via perturbation method.</strong> As <span class="math notranslate nohighlight">\(\frac{3 GM}{c^2} \to 0\)</span>, the equation becomes the equation of the Kepler orbits.</p>
+<p>Let the solution be <span class="math notranslate nohighlight">\(u(\phi) = u_0(\phi) + u_1(\phi)\)</span>, with <span class="math notranslate nohighlight">\(u_0(\phi)\)</span> the solution of the equations of classical mechanics.</p>
+<div class="math notranslate nohighlight">
+\[u_0(\phi) = \frac{GM}{L^2}(1 + e \cos \phi) \ . \]</div>
+<p>As</p>
+<div class="math notranslate nohighlight">
+\[0 = \underbrace{u_0'' + u_0 - \frac{GM}{L}}_{=0} + u_1'' + u_1 - \frac{3GM}{c^2} (u_0 + u_1)^2 \ ,\]</div>
+<p>the perturbation <span class="math notranslate nohighlight">\(u_1(\phi)\)</span> (of order <span class="math notranslate nohighlight">\(\frac{GM}{c^2}\)</span> must satisfy (approximately, truncation) the equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  u_1'' + u_1
+  &amp; \approx \frac{3 GM}{c^2} u_0^2(\phi) = \\
+  &amp; = \frac{3 (GM)^2}{c^2 L^2} \left( 1 + 2 e \cos \phi + e^2 \cos^2 \phi \right) = &amp;&amp; ( \cos 2 x = 2 \cos^2 x - 1 ) = \\
+  &amp; = 3 \left( \frac{GM}{L c} \right)^2 \left( 1 + 2 e \cos \phi + \frac{e^2}{2} \left( 1 + \cos ( 2 \phi ) \right) \right) = \\
+  &amp; = 3 \left( \frac{GM}{L c} \right)^2 \left( 1 + \frac{e}{2} + 2 e \cos \phi + \frac{e^2}{2} \cos ( 2 \phi ) \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p>whose solution undergoes resonance</p>
+<div class="math notranslate nohighlight">
+\[u(\phi) = a \cos \phi + b \sin \phi + c + d \phi \cos \phi + e \phi \sin \phi + f \cos (2 \phi) \]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -419,7 +495,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./ch/relativity-special"
+            path: "./ch/relativity-general"
         },
         predefinedOutput: true
     }
@@ -437,20 +513,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../intro.html"
+       href="schwarzschild-metric.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Modern physics</p>
+        <p class="prev-next-title"><span class="section-number">6.3.1. </span>Schwarzschild metrics</p>
       </div>
     </a>
     <a class="right-next"
-       href="notes.html"
+       href="../statistical-mechanics/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Special Relativity - Notes</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Statistical Physics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
