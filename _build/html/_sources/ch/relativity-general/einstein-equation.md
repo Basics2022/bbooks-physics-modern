@@ -44,3 +44,59 @@ Idea:
    * **pressure-less mass distribution at rest**
    * **mass** distribution "at rest" (w.r.t. the "quasi inertial observer")
 
+## Alternative expression of Einstein's equations
+
+Let's evaluate the trace of $\mathsf{R}$, i.e. $R = R^{\sigma}_{\ \ \sigma}$ as a function of the trace of $\mathsf{T}$.
+
+$$\begin{aligned}
+  R
+  & := R^{\sigma}_{\ \ \sigma} = \\
+  & = g_{\sigma \varphi} R^{\varphi \sigma} = \\
+  & = g_{\sigma \varphi} \left( \frac{1}{2} g^{\varphi \sigma} R + \kappa T^{\varphi \sigma} \right) = 2 R + \kappa T \\
+\end{aligned}$$
+
+and thus the relation $R = - \kappa T$ holds between the trace of Ricci and energy-momentum tensors (here $g_{\sigma \varphi} g^{\sigma \varphi} = \delta_{\sigma}^{\sigma} = 4$ in the 4-dimensional time-space). Thus, Einstein equation can be recast as
+
+ $$\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .$$
+
+(relativity-general:notes:einstein-equation:classical-limit)=
+## Classical limit
+
+**1. Linearization of the metric tensor.** $g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}$, and the inverse (linearized) relation gives $g^{\mu \nu} = \eta^{\mu \nu} - h^{\mu \nu}$
+
+**2. Linearization of Christoffel symbols.**
+
+$$\Gamma_{00}^{i} = - \frac{1}{2} \partial_i h_{00}$$
+
+in the static limit, $\partial_0 \equiv 0$, for the spatial components, $i = 1:3$.
+
+**3. Linearization of the geodesics equation.**
+
+$$\ddot{q}^{\mu} + \Gamma_{\nu \sigma}^{\mu} \dot{q}^{\nu} \dot{q}^{\mu} = 0$$
+
+For $\mu = i = 1:3$, as the $\tau \sim t$ in the slow-regime limit, and $q^0 \sim c t$ and $q^i = x_i$,
+
+$$\ddot{x}_i = - c^2 \Gamma_{00}^i = \frac{c^2}{2} \partial_i h_{00} \ .$$
+
+This equation must be compared with the dynamical equation of the Newtonian mechanics, $\ddot{\vec{r}} = - \nabla \Phi$. In order to get the same equation, $\partial_i h_{00} = - \frac{2}{c^2} \partial_i \Phi$, and thus - except for an arbitrary constant (irrelevant) - $h_{00} = - \frac{2}{c^2} \Phi$.
+
+**4. Linearized Einstein equation**, with energy-momentum tensor (of the pressure-less medium) $T^{\mu \nu} = \rho c^2 \delta^{\mu}_0 \delta^{\nu}_0$, so that its trace reads $T = \rho c^2$. Thus the linearized $00$ component of Einstein equation reads
+
+$$R_{00} = \kappa \left( \rho c^2 - \frac{1}{2} \rho c^2 \right) = \kappa \frac{1}{2} \rho c^2$$
+
+**5. Linearized relation between curvature tensor and the linearized metrics.**
+
+$$R_{00} = \partial_i \Gamma^{i}_{00} = - \frac{1}{2} \partial_{ii} h_{00} = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi$$
+
+**6. Comparison of the two expressions of $R_{00}$.** 
+
+$$\frac{\kappa}{2} \rho c^2 = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi \ , $$
+
+or rearranging,
+
+$$\nabla^2 \Phi = \frac{\kappa c^4}{2} \rho \ .$$
+
+By direct comparison with the Poisson equation for Newtonian gravitation, $\nabla^2 \Phi = 4 \pi G \rho$, it follows that
+
+$$\kappa = \frac{8 \pi G}{c^4} \ .$$
+

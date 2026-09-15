@@ -353,7 +353,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -369,6 +371,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-expression-of-einstein-s-equations">6.2.1. Alternative expression of Einstein’s equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">6.2.2. Classical limit</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -427,6 +438,50 @@ Covariant derivative of the metric tensor<div class="sd-summary-down docutils">
 </ul>
 </li>
 </ol>
+<div class="section" id="alternative-expression-of-einstein-s-equations">
+<h2><span class="section-number">6.2.1. </span>Alternative expression of Einstein’s equations<a class="headerlink" href="#alternative-expression-of-einstein-s-equations" title="Permalink to this heading">#</a></h2>
+<p>Let’s evaluate the trace of <span class="math notranslate nohighlight">\(\mathsf{R}\)</span>, i.e. <span class="math notranslate nohighlight">\(R = R^{\sigma}_{\ \ \sigma}\)</span> as a function of the trace of <span class="math notranslate nohighlight">\(\mathsf{T}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  R
+  &amp; := R^{\sigma}_{\ \ \sigma} = \\
+  &amp; = g_{\sigma \varphi} R^{\varphi \sigma} = \\
+  &amp; = g_{\sigma \varphi} \left( \frac{1}{2} g^{\varphi \sigma} R + \kappa T^{\varphi \sigma} \right) = 2 R + \kappa T \\
+\end{aligned}\end{split}\]</div>
+<p>and thus the relation <span class="math notranslate nohighlight">\(R = - \kappa T\)</span> holds between the trace of Ricci and energy-momentum tensors (here <span class="math notranslate nohighlight">\(g_{\sigma \varphi} g^{\sigma \varphi} = \delta_{\sigma}^{\sigma} = 4\)</span> in the 4-dimensional time-space). Thus, Einstein equation can be recast as</p>
+<div class="math notranslate nohighlight">
+\[\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .\]</div>
+</div>
+<div class="section" id="classical-limit">
+<span id="relativity-general-notes-einstein-equation-classical-limit"></span><h2><span class="section-number">6.2.2. </span>Classical limit<a class="headerlink" href="#classical-limit" title="Permalink to this heading">#</a></h2>
+<p><strong>1. Linearization of the metric tensor.</strong> <span class="math notranslate nohighlight">\(g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu}\)</span>, and the inverse (linearized) relation gives <span class="math notranslate nohighlight">\(g^{\mu \nu} = \eta^{\mu \nu} - h^{\mu \nu}\)</span></p>
+<p><strong>2. Linearization of Christoffel symbols.</strong></p>
+<div class="math notranslate nohighlight">
+\[\Gamma_{00}^{i} = - \frac{1}{2} \partial_i h_{00}\]</div>
+<p>in the static limit, <span class="math notranslate nohighlight">\(\partial_0 \equiv 0\)</span>, for the spatial components, <span class="math notranslate nohighlight">\(i = 1:3\)</span>.</p>
+<p><strong>3. Linearization of the geodesics equation.</strong></p>
+<div class="math notranslate nohighlight">
+\[\ddot{q}^{\mu} + \Gamma_{\nu \sigma}^{\mu} \dot{q}^{\nu} \dot{q}^{\mu} = 0\]</div>
+<p>For <span class="math notranslate nohighlight">\(\mu = i = 1:3\)</span>, as the <span class="math notranslate nohighlight">\(\tau \sim t\)</span> in the slow-regime limit, and <span class="math notranslate nohighlight">\(q^0 \sim c t\)</span> and <span class="math notranslate nohighlight">\(q^i = x_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\ddot{x}_i = - c^2 \Gamma_{00}^i = \frac{c^2}{2} \partial_i h_{00} \ .\]</div>
+<p>This equation must be compared with the dynamical equation of the Newtonian mechanics, <span class="math notranslate nohighlight">\(\ddot{\vec{r}} = - \nabla \Phi\)</span>. In order to get the same equation, <span class="math notranslate nohighlight">\(\partial_i h_{00} = - \frac{2}{c^2} \partial_i \Phi\)</span>, and thus - except for an arbitrary constant (irrelevant) - <span class="math notranslate nohighlight">\(h_{00} = - \frac{2}{c^2} \Phi\)</span>.</p>
+<p><strong>4. Linearized Einstein equation</strong>, with energy-momentum tensor (of the pressure-less medium) <span class="math notranslate nohighlight">\(T^{\mu \nu} = \rho c^2 \delta^{\mu}_0 \delta^{\nu}_0\)</span>, so that its trace reads <span class="math notranslate nohighlight">\(T = \rho c^2\)</span>. Thus the linearized <span class="math notranslate nohighlight">\(00\)</span> component of Einstein equation reads</p>
+<div class="math notranslate nohighlight">
+\[R_{00} = \kappa \left( \rho c^2 - \frac{1}{2} \rho c^2 \right) = \kappa \frac{1}{2} \rho c^2\]</div>
+<p><strong>5. Linearized relation between curvature tensor and the linearized metrics.</strong></p>
+<div class="math notranslate nohighlight">
+\[R_{00} = \partial_i \Gamma^{i}_{00} = - \frac{1}{2} \partial_{ii} h_{00} = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi\]</div>
+<p><strong>6. Comparison of the two expressions of <span class="math notranslate nohighlight">\(R_{00}\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\kappa}{2} \rho c^2 = \frac{1}{c^2} \nabla^2_{\vec{r}} \Phi \ , \]</div>
+<p>or rearranging,</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \Phi = \frac{\kappa c^4}{2} \rho \ .\]</div>
+<p>By direct comparison with the Poisson equation for Newtonian gravitation, <span class="math notranslate nohighlight">\(\nabla^2 \Phi = 4 \pi G \rho\)</span>, it follows that</p>
+<div class="math notranslate nohighlight">
+\[\kappa = \frac{8 \pi G}{c^4} \ .\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -483,6 +538,21 @@ Covariant derivative of the metric tensor<div class="sd-summary-down docutils">
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-expression-of-einstein-s-equations">6.2.1. Alternative expression of Einstein’s equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">6.2.2. Classical limit</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
