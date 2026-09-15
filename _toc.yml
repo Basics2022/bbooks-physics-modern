@@ -21,6 +21,9 @@ parts:
     sections:
     - file: ch/relativity-general/differential-geometry
     - file: ch/relativity-general/einstein-equation
+    - file: ch/relativity-general/examples
+      sections:
+      - file: ch/relativity-general/schwarzschild-metric
 - caption: Statistical Mechanics
   numbered: True
   chapters:

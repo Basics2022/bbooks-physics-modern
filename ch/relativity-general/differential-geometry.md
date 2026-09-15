@@ -40,13 +40,25 @@ and thus $\partial_k \mathbf{b}^m = - \Gamma_{kl}^{m} \mathbf{b}^l$.
 
 **Derivatives of the metric tensor.** Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it's easy to prove
 
-$$\dfrac{\partial q^c}{g_{ab}} = \Gamma_{d}^{ac} g_{db} + \Gamma_{bc}^{d} g_{ad}$$
+$$\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}$$
 
 Using the property $g_{ab} g^{bc} = \delta_{a^c}$, from its derivatives $\partial_d$,
 
 $$\partial_d g_{ab} g^{bc} + g_{ab} \partial_d g^{bc} = 0 \ ,$$
 
 it follows that $\partial_d g^{ec} = - g^{ea} \partial_d g_{ab} g^{bc}$.
+
+**Relations between the Christoffel symbols and the derivatives of the metric tensor.**
+
+$$\begin{aligned}
+  \partial_c g_{ab} & = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad} \\
+  \partial_a g_{bc} & = \Gamma_{ba}^{d} g_{dc} + \Gamma_{ca}^{d} g_{bd} \\
+  \partial_b g_{ca} & = \Gamma_{cb}^{d} g_{da} + \Gamma_{ab}^{d} g_{cd} \\
+\end{aligned}$$
+
+so that, summing the first 2 equations and subracting the last one,
+
+$$\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)$$ (eqn:differential-geometry:gamma:g)
 
 ```
 

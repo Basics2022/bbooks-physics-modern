@@ -44,6 +44,7 @@ Idea:
    * **pressure-less mass distribution at rest**
    * **mass** distribution "at rest" (w.r.t. the "quasi inertial observer")
 
+(relativity-general:notes:einstein-equation:alternative)=
 ## Alternative expression of Einstein's equations
 
 Let's evaluate the trace of $\mathsf{R}$, i.e. $R = R^{\sigma}_{\ \ \sigma}$ as a function of the trace of $\mathsf{T}$.
@@ -57,7 +58,7 @@ $$\begin{aligned}
 
 and thus the relation $R = - \kappa T$ holds between the trace of Ricci and energy-momentum tensors (here $g_{\sigma \varphi} g^{\sigma \varphi} = \delta_{\sigma}^{\sigma} = 4$ in the 4-dimensional time-space). Thus, Einstein equation can be recast as
 
- $$\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .$$
+ $$\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .$$ (eq:einstein:alternative)
 
 (relativity-general:notes:einstein-equation:classical-limit)=
 ## Classical limit

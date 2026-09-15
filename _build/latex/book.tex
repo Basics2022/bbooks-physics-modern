@@ -1414,7 +1414,7 @@ and thus \(\partial_k \mathbf{b}^m = - \Gamma_{kl}^{m} \mathbf{b}^l\).
 \sphinxAtStartPar
 \sphinxstylestrong{Derivatives of the metric tensor.} Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it’s easy to prove
 \begin{equation*}
-\begin{split}\dfrac{\partial q^c}{g_{ab}} = \Gamma_{d}^{ac} g_{db} + \Gamma_{bc}^{d} g_{ad}\end{split}
+\begin{split}\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Using the property \(g_{ab} g^{bc} = \delta_{a^c}\), from its derivatives \(\partial_d\),
@@ -1424,6 +1424,20 @@ Using the property \(g_{ab} g^{bc} = \delta_{a^c}\), from its derivatives \(\par
 \sphinxAtStartPar
 it follows that \(\partial_d g^{ec} = - g^{ea} \partial_d g_{ab} g^{bc}\).
 
+\sphinxAtStartPar
+\sphinxstylestrong{Relations between the Christoffel symbols and the derivatives of the metric tensor.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_c g_{ab} & = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad} \\
+  \partial_a g_{bc} & = \Gamma_{ba}^{d} g_{dc} + \Gamma_{ca}^{d} g_{bd} \\
+  \partial_b g_{ca} & = \Gamma_{cb}^{d} g_{da} + \Gamma_{ab}^{d} g_{cd} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that, summing the first 2 equations and subracting the last one,
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eqn:differential-geometry:gamma:g}
+\begin{split}\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)\end{split}
+\end{equation}
 
 \subsection{Gradient, covariant derivative and directional derivative}
 \label{\detokenize{ch/relativity-general/differential-geometry:gradient-covariant-derivative-and-directional-derivative}}\label{\detokenize{ch/relativity-general/differential-geometry:relativity-general-notes-differential-geometry-gradient}}
@@ -1680,7 +1694,7 @@ Under some assumptions:
 
 
 \subsection{Alternative expression of Einstein’s equations}
-\label{\detokenize{ch/relativity-general/einstein-equation:alternative-expression-of-einstein-s-equations}}
+\label{\detokenize{ch/relativity-general/einstein-equation:alternative-expression-of-einstein-s-equations}}\label{\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation-alternative}}
 \sphinxAtStartPar
 Let’s evaluate the trace of \(\mathsf{R}\), i.e. \(R = R^{\sigma}_{\ \ \sigma}\) as a function of the trace of \(\mathsf{T}\).
 \begin{equation*}
@@ -1693,9 +1707,9 @@ Let’s evaluate the trace of \(\mathsf{R}\), i.e. \(R = R^{\sigma}_{\ \ \sigma}
 \end{equation*}
 \sphinxAtStartPar
 and thus the relation \(R = - \kappa T\) holds between the trace of Ricci and energy\sphinxhyphen{}momentum tensors (here \(g_{\sigma \varphi} g^{\sigma \varphi} = \delta_{\sigma}^{\sigma} = 4\) in the 4\sphinxhyphen{}dimensional time\sphinxhyphen{}space). Thus, Einstein equation can be recast as
-\begin{equation*}
+\begin{equation}\label{equation:ch/relativity-general/einstein-equation:eq:einstein:alternative}
 \begin{split}\mathsf{R} = \kappa \left( \mathsf{T} - \frac{1}{2} \mathsf{g} \, T \right) \ .\end{split}
-\end{equation*}
+\end{equation}
 
 \subsection{Classical limit}
 \label{\detokenize{ch/relativity-general/einstein-equation:classical-limit}}\label{\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation-classical-limit}}
@@ -1747,6 +1761,260 @@ or rearranging,
 By direct comparison with the Poisson equation for Newtonian gravitation, \(\nabla^2 \Phi = 4 \pi G \rho\), it follows that
 \begin{equation*}
 \begin{split}\kappa = \frac{8 \pi G}{c^4} \ .\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Examples}
+\label{\detokenize{ch/relativity-general/examples:examples}}\label{\detokenize{ch/relativity-general/examples:relativity-general-notes-examples}}\label{\detokenize{ch/relativity-general/examples::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-general/schwarzschild-metric:relativity-general-notes-examples-schwarzschild}]{\sphinxcrossref{\DUrole{std,std-ref}{Schwarzschild metric}}}}
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{Schwarzschild metric}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:schwarzschild-metric}}\label{\detokenize{ch/relativity-general/schwarzschild-metric:relativity-general-notes-examples-schwarzschild}}\label{\detokenize{ch/relativity-general/schwarzschild-metric::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Spatially spherically symmetric} and \sphinxstylestrong{static vacuum} solution of the Einstein equation, representing the exterior gravitational field of a \sphinxstylestrong{non\sphinxhyphen{}rotating}, \sphinxstylestrong{uncharged} massive body.
+\subsubsection*{Vacuum equation}
+
+\sphinxAtStartPar
+Without mass density and electric charge and current, \(\mathsf{T} = \mathsf{0}\). From the expression of \eqref{equation:ch/relativity-general/einstein-equation:eq:einstein:alternative}, it immediately follows, \(\mathsf{R} = \mathsf{0}\).
+
+
+\subsubsection{Metric Ansatz \& Symmetry Assumptions}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:metric-ansatz-symmetry-assumptions}}
+\sphinxAtStartPar
+The four coordinates used to parametrize the space\sphinxhyphen{}time are \((t, r, \theta, \phi)\). The two physical symmetry constraints in Schwarzschild solution of EFE are
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Spherical Symmetry:} the spatial geometry is invariant under rotation, s.t. the angular part of the metric is given by the standard round metric on \(S^2\), \(d\Omega^2 = d \theta^2 + \sin^2 \theta \, d\phi^2\)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Staticity:} the metric coefficients are independent of the time coordinate \(t\) (\(\partial_t g_{\mu
+u} = 0\)); the further assumption that the line element is invariant under time reversal eliminates cross\sphinxhyphen{}terms such as \(dt\,dr\).
+
+\end{enumerate}
+
+\sphinxAtStartPar
+Under these assumptions, the general line element can be parameterized using two undetermined functions of radius, \(A(r)\) and \(B(r)\):
+\begin{equation*}
+\begin{split}ds^2 = -e^{2A(r)} c^2 dt^2 + e^{2B(r)} dr^2 + r^2 \left( d \theta^2 + \sin^2 \theta \, d\phi^2 \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Remark.} Using exponential parameterizations \(e^{2A(r)}\) and \(e^{2B(r)}\) ensures that \(g_{tt} < 0\) and \(g_{rr} > 0\) outside any horizon. \sphinxstylestrong{todo} \sphinxstyleemphasis{Add some remark/examples about the role of time, and its consequence on metrics}
+
+\sphinxAtStartPar
+From the choosen parametrization, the non\sphinxhyphen{}zero covariant components of the metric tensors are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  g_{tt} & = - e^{- 2 A(r)} c^2 \\
+  g_{rr} & =   e^{  2 B(r)}     \\
+  g_{\theta \theta} & = r^2    \\
+  g_{\phi \phi} & =  r^2 \sin^2 \theta     \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As the metric tensor is diagonal, it’s contravariant components are just the inverse of its covariant components.
+
+
+\subsubsection{Christoffel Symbols}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:christoffel-symbols}}
+\sphinxAtStartPar
+The Christoffel symbols of the second kind are computed via the expression \eqref{equation:ch/relativity-general/differential-geometry:eqn:differential-geometry:gamma:g},
+\begin{equation*}
+\begin{split}\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Writing the derivative w.r.t. \(r\) as \(\partial_r A(r) = A'(r)\)
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^t_{tr} = \Gamma^t_{rt} = \frac{1}{2} g^{t d} \left( \partial_r g_{t d} + \partial_t g_{dr} - \partial_d g_{tr}  \right) = - \frac{1}{2} e^{2 A} c^{-2} \cdot ( - 2 A' ) e^{-2A} c^2 = A'\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^r_{tt} = A' e^{2(A-B)} c^2\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^r_{rr} = B'\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^r_{\theta \theta} = -r e^{-2B}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^r_{\phi\phi} = -r \sin^2  \theta \, e^{-2B}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^\theta_{r \theta} = \Gamma^\theta_{\theta r} = \frac{1}{r}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^\theta_{\phi\phi} = -\sin\theta\cos \theta\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^\phi_{r\phi} = \Gamma^\phi_{\phi r} = \frac{1}{r}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot \theta\)
+
+\end{itemize}
+
+
+\subsubsection{Components of the Ricci Tensor}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:components-of-the-ricci-tensor}}
+\sphinxAtStartPar
+The Ricci tensor is defined by contracting the Riemann curvature tensor:
+\begin{equation*}
+\begin{split}R_{\mu
+u} = \partial_{\lambda}\Gamma^{\lambda}_{\mu
+u} - \partial_{
+u}\Gamma^{\lambda}_{\mu\lambda} + \Gamma^{\lambda}_{\mu
+u}\Gamma^{\sigma}_{\lambda\sigma} - \Gamma^{\sigma}_{\mu\lambda}\Gamma^{\lambda}_{
+u\sigma}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Evaluating the non\sphinxhyphen{}zero independent components yields:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Time\sphinxhyphen{}Time Component (\(R_{tt}\))}
+\begin{equation*}
+\begin{split}R_{tt} = e^{2(A-B)} c^2 \left[ A'' + (A')^2 - A'B' + \frac{2A'}{r} \right]\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Radial\sphinxhyphen{}Radial Component (\(R_{rr}\))}
+\begin{equation*}
+\begin{split}R_{rr} = -A'' - (A')^2 + A'B' + \frac{2B'}{r}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Angular Component (\(R_{\theta \theta}\))}
+\begin{equation*}
+\begin{split}R_{\theta \theta} = 1 - e^{-2B} \left[ 1 + r(A' - B') \right]\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Remarks.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The \(R_{\phi\phi}\) component yields \(R_{\phi\phi} = R_{\theta \theta} \sin^2 \theta\), providing no independent equation).
+
+\item {} 
+\sphinxAtStartPar
+The non\sphinxhyphen{}diagonal components are identically zero (\sphinxstylestrong{todo} \sphinxstyleemphasis{prove it!})
+
+\end{itemize}
+
+
+\subsubsection{Solving the Differential Equations}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:solving-the-differential-equations}}
+\sphinxAtStartPar
+\sphinxstylestrong{Combining \(R_{tt}\) and \(R_{rr}\)} (linear combination \(e^{-2(A-B)} \frac{R_{tt}}{c^2} + R_{rr} = 0\)) immediately gives
+\begin{equation*}
+\begin{split}A'(r) = -B'(r) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and integrating with respect to \(r\),
+\begin{equation*}
+\begin{split}A(r) + B(r) = C = \text{const.}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Boundary conditions at infinity.} To satisfy the boundary condition of asymptotic flatness—that spacetime approaches flat Minkowski space as \(r \rightarrow \infty\), then
+\begin{equation*}
+\begin{split}\begin{aligned}
+  g_{tt} & = - e^{2A(r)} \rightarrow - 1 && A(r) \rightarrow 0 \\
+  g_{rr} & =   e^{2B(r)} \rightarrow   1 && B(r) \rightarrow 0
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(C = 0\), and \(A(r) = - B(r)\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Solving for \(A(r)\) via \(R_{\theta \theta}\).} Substituting \(B' = -A'\) and \(e^{-2B} = e^{2A}\) into \(R_{\theta \theta} = 0\):
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = R_{\theta \theta} = \\
+  & = 1 - e^{2A} \left( 1 + 2rA' \right) = \\
+  & = 1 - \dfrac{d}{dr} \left( r e^{2 A} \right)  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, integrating in \(r\),
+\begin{equation*}
+\begin{split}r e^{2 A(r)} = r + C \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}e^{2A(r)} = 1 + \frac{C}{r}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(C\) is a constant of integration. Since \(e^{2B(r)} = e^{-2A(r)}\), it follows \(e^{2B(r)} = \left(1 + \frac{C}{r} \right)^{-1}\).
+
+
+\subsubsection{Determining the Integration Constant \protect\(C\protect\) (The Newtonian Limit)}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:determining-the-integration-constant-c-the-newtonian-limit}}
+\sphinxAtStartPar
+To determine \(C\), we examine the metric in the weak\sphinxhyphen{}field, low\sphinxhyphen{}velocity limit (\(r \to \infty\)). In this limit, general relativity recovers \sphinxstylestrong{Newtonian gravity}, as shown in {\hyperref[\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation-classical-limit}]{\sphinxcrossref{\DUrole{std,std-ref}{classical limit}}}},
+\begin{equation*}
+\begin{split}g_{tt} = \eta_{tt} + h_{tt} \approx - 1 - \frac{2}{c^2} \Phi \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\Phi(r) = - \frac{GM}{r}\) is the Newtonian gravitational potential of a central mass \(M\). Equating the two expression of the coefficient \(g_{tt}\)
+\begin{equation*}
+\begin{split}g_{tt} = -e^{2A(r)} = - 1 - \frac{C}{r} = - 1 + \frac{2}{c^2} \frac{G M}{r} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}C = - \frac{2GM}{c^2} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Defining the \sphinxstylestrong{Schwarzschild radius} \(r_s := \frac{2GM}{c^2}\), the expression of \sphinxstylestrong{Schwarzschild metric} becomes
+\begin{equation*}
+\begin{split}
+ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
+\end{split}
+\end{equation*}
+
+\subsubsection{Special Case: Complete Vacuum (\protect\(M = 0\protect\))}
+\label{\detokenize{ch/relativity-general/schwarzschild-metric:special-case-complete-vacuum-m-0}}
+\sphinxAtStartPar
+If the spacetime contains no mass (\(M = 0\)), the Minkowski flat spacetime follows
+\begin{equation*}
+\begin{split}ds^2 = -c^2 dt^2 + d r^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 = - c^2 dt^2 + |d \vec{r}|^2 \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+or, using the common transformation between spherical and Cartesian space coordinates,
+\begin{equation*}
+\begin{split}\begin{cases}
+  t = t \\
+  x = r \sin \theta \cos \phi \\
+  y = r \sin \theta \sin \phi \\
+  z = r \cos \theta \ ,
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}ds^2 = - c^2 dt^2 + dx^2 + dy^2 + dz^2 \ .\end{split}
 \end{equation*}
 \sphinxstepscope
 
@@ -2913,9 +3181,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : 44.0
-N. of spin up: 500
-Magnetization: \PYGZhy{}24
+Energy       : \PYGZhy{}64.0
+N. of spin up: 493
+Magnetization: \PYGZhy{}38
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -2973,9 +3241,9 @@ Magnetization: \PYGZhy{}24
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{79c5d155ebd7b7d95f7177f719a11e84a616a4fc2c8d40dd2847fbf301683e56}.png}
+\noindent\sphinxincludegraphics{{bd387283c639073f8ad4669fb042b381d20f711c670627eef179c479401dd27e}.png}
 
-\noindent\sphinxincludegraphics{{9f2b282db5a17013aeeb1ef98b615a6cbc67f3badc72267a46d1cf5ebe96e8e9}.png}
+\noindent\sphinxincludegraphics{{0d1ac34d972bcf8cc0713046d1f5fa3063dc8c73e6850f67e1b542734030f8f8}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3039,9 +3307,9 @@ Magnetization: \PYGZhy{}24
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{54d9ef8ae9d180258066e98bc90a44f3182bd127502b49947b24236fe5a3a8e2}.png}
+\noindent\sphinxincludegraphics{{84fa96fdee97c0e3f4cc5f3cc6fbab974a8f1570b2311f573daaac488e8e08da}.png}
 
-\noindent\sphinxincludegraphics{{9fb548459a95b8333d7e1e9c488606650631a68fe26e8a6f6b46e60c0a023a18}.png}
+\noindent\sphinxincludegraphics{{7902676c474dbe75f34bccb8e9f098f19d58b3b958c974134941842a32aab50e}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
