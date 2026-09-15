@@ -35,13 +35,13 @@
 \contentsline {subsection}{\numberline {6.2.1}Alternative expression of Einstein’s equations}{35}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Classical limit}{36}{subsection.6.2.2}%
 \contentsline {section}{\numberline {6.3}Examples}{37}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Schwarzschild metric}{37}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.1}Schwarzschild metrics}{37}{subsection.6.3.1}%
 \contentsline {subsubsection}{Metric Ansatz \& Symmetry Assumptions}{37}{subsubsection*.11}%
-\contentsline {subsubsection}{Christoffel Symbols}{37}{subsubsection*.12}%
+\contentsline {subsubsection}{Christoffel Symbols}{38}{subsubsection*.12}%
 \contentsline {subsubsection}{Components of the Ricci Tensor}{38}{subsubsection*.13}%
-\contentsline {subsubsection}{Solving the Differential Equations}{38}{subsubsection*.14}%
+\contentsline {subsubsection}{Solving the Differential Equations}{39}{subsubsection*.14}%
 \contentsline {subsubsection}{Determining the Integration Constant \(C\) (The Newtonian Limit)}{39}{subsubsection*.15}%
-\contentsline {subsubsection}{Special Case: Complete Vacuum (\(M = 0\))}{39}{subsubsection*.16}%
+\contentsline {subsubsection}{Special Case: Complete Vacuum (\(M = 0\))}{40}{subsubsection*.16}%
 \contentsline {part}{III\hspace {1em}Statistical Mechanics}{41}{part.3}%
 \contentsline {chapter}{\numberline {7}Statistical Physics}{43}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Liouville theorem and Boltzmann equation}{45}{chapter.8}%

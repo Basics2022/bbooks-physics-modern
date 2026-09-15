@@ -187,6 +187,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -196,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">9. Statistical Physics - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ising.html">11. Ising model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ising-notes.html">11.1. Ising model - Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="markov-process-notes.html">11.2. Markov processes</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">11.3. Ising model - Numerics</a></li>
@@ -208,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">14. Quantum Mechanics - Notes</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/history.html">15. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/history.html">15. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/topics.html">15.1. Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/timeline.html">15.2. Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/light-dispersion.html">15.3. Light dispersion</a></li>
@@ -219,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">16. Introduction to Solid State Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">17. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">18. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">18. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">18.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">18.2. Semiconductors in Equilibrium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">18.3. Carrier Transport Phenomena</a></li>
@@ -556,9 +560,9 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lattice dimensions: 32,32
 Initial conditions:
-Energy       : -64.0
-N. of spin up: 493
-Magnetization: -38
+Energy       : -32.0
+N. of spin up: 528
+Magnetization: 32
 </pre></div>
 </div>
 </div>
@@ -611,8 +615,8 @@ Magnetization: -38
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bd387283c639073f8ad4669fb042b381d20f711c670627eef179c479401dd27e.png" src="../../_images/bd387283c639073f8ad4669fb042b381d20f711c670627eef179c479401dd27e.png" />
-<img alt="../../_images/0d1ac34d972bcf8cc0713046d1f5fa3063dc8c73e6850f67e1b542734030f8f8.png" src="../../_images/0d1ac34d972bcf8cc0713046d1f5fa3063dc8c73e6850f67e1b542734030f8f8.png" />
+<img alt="../../_images/dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4.png" src="../../_images/dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4.png" />
+<img alt="../../_images/b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b.png" src="../../_images/b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -666,8 +670,8 @@ Magnetization: -38
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;P(M)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/84fa96fdee97c0e3f4cc5f3cc6fbab974a8f1570b2311f573daaac488e8e08da.png" src="../../_images/84fa96fdee97c0e3f4cc5f3cc6fbab974a8f1570b2311f573daaac488e8e08da.png" />
-<img alt="../../_images/7902676c474dbe75f34bccb8e9f098f19d58b3b958c974134941842a32aab50e.png" src="../../_images/7902676c474dbe75f34bccb8e9f098f19d58b3b958c974134941842a32aab50e.png" />
+<img alt="../../_images/e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe.png" src="../../_images/e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe.png" />
+<img alt="../../_images/f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7.png" src="../../_images/f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7.png" />
 </div>
 </div>
 <div class="cell docutils container">

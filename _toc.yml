@@ -24,6 +24,7 @@ parts:
     - file: ch/relativity-general/examples
       sections:
       - file: ch/relativity-general/schwarzschild-metric
+      - file: ch/relativity-general/schwarzschild-orbits
 - caption: Statistical Mechanics
   numbered: True
   chapters:

@@ -1,8 +1,15 @@
 (relativity-general:notes:examples:schwarzschild)=
-# Schwarzschild metric
+# Schwarzschild metrics
 
 **Spatially spherically symmetric** and **static vacuum** solution of the Einstein equation, representing the exterior gravitational field of a **non-rotating**, **uncharged** massive body.
 
+Schwarzschild metrics gives
+
+$$
+ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
+$$ (eq:schwarzschild-metrics)
 
 ```{dropdown} Vacuum equation
 :open:
