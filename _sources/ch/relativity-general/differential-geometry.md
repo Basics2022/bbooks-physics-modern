@@ -93,21 +93,21 @@ $$\nabla \mathbf{A} = \mathbf{b}^k \mathbf{b}_i \mathbf{b}_j \left( \partial_k A
 
 Definition through the action on an arbitrary vector field, whose components are
 
-$$\left\{ \mathbf{v} \cdot \mathbf{R} \right\}_{\sigma \eta \nu} = v_{\xi} R^{\xi}_{\ \ \sigma \eta \nu} = \left( \nabla_{\sigma} \nabla_{\eta} - \nabla_{\eta} \nabla_{\sigma} \right) v_{\nu}$$
+$$\left\{ \mathbf{v} \cdot \mathbf{R} \right\}_{\sigma \eta \nu} = v_{\xi} R^{\xi}_{\ \ \sigma \eta \nu} = \left( \nabla_{\eta} \nabla_{\nu} - \nabla_{\nu} \nabla_{\eta} \right) v_{\sigma}$$
 
 ```{dropdown} First term
 :open:
 
 $$\begin{aligned}
   \nabla \nabla \mathbf{v} 
-  & = \mathbf{b}^{\sigma} \partial_{\sigma} \left[ \mathbf{b}^{\eta} \partial_{\eta} \left( v_{\nu} \mathbf{b}^{\nu} \right) \right] = \\
-  & = \mathbf{b}^{\sigma} \partial_{\sigma} \left[ \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left( \partial_{\eta} v_{\nu} - \Gamma_{\eta \nu}^{\xi} v_{\xi}  \right) \right] = \\
-  & = \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left[ - \Gamma_{\sigma \eta}^{\mu} (\dots)_{\mu \nu} - \Gamma_{\sigma \nu}^{\mu} (\dots)_{\eta \mu} + \partial_{\sigma \eta} v_{\nu} - \partial_{\sigma} \left( \Gamma_{\eta \nu}^{\xi} v_{\xi} \right) \right] = \\
-  & = \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left[
-    - \Gamma_{\sigma \eta}^{\mu} \left( \partial_{\mu} v_{\nu} - \Gamma_{\mu \nu}^{\xi} v_{\xi} \right)
-    - \Gamma_{\sigma \nu }^{\mu} \left( \partial_{\eta} v_{\mu} - \Gamma_{\mu \eta}^{\xi} v_{\xi} \right)
-    + \partial_{\sigma \eta} v_{\nu} - \partial_{\sigma} \Gamma_{\eta \nu}^{\xi} v_{\xi} - \Gamma_{\eta \nu}^{\xi} \partial_{\sigma} v_{\xi} \right] = \\
-  & =  \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \nabla_{\sigma \eta} v_{\nu} \ .
+  & = \mathbf{b}^{\eta} \partial_{\eta} \left[ \mathbf{b}^{\nu} \partial_{\nu} \left( v_{\sigma} \mathbf{b}^{\sigma} \right) \right] = \\
+  & = \mathbf{b}^{\eta} \partial_{\eta} \left[ \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left( \partial_{\nu} v_{\sigma} - \Gamma_{\nu \sigma}^{\xi} v_{\xi}  \right) \right] = \\
+  & = \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left[ - \Gamma_{\eta \nu}^{\mu} (\dots)_{\mu \sigma} - \Gamma_{\eta \sigma}^{\mu} (\dots)_{\nu \mu} + \partial_{\eta \nu} v_{\sigma} - \partial_{\eta} \left( \Gamma_{\nu \sigma}^{\xi} v_{\xi} \right) \right] = \\
+  & = \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left[
+    - \Gamma_{\eta  \nu}^{\mu} \left( \partial_{\mu} v_{\sigma} - \Gamma_{\mu \sigma}^{\xi} v_{\xi} \right)
+    - \Gamma_{\eta \sigma}^{\mu} \left( \partial_{\nu} v_{\mu} - \Gamma_{\mu \nu}^{\xi} v_{\xi} \right)
+    + \partial_{\eta \nu} v_{\sigma} - \partial_{\eta} \Gamma_{\nu \sigma}^{\xi} v_{\xi} - \Gamma_{\nu \sigma}^{\xi} \partial_{\eta} v_{\xi} \right] = \\
+  & =  \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \nabla_{\eta \nu} v_{\sigma} \ .
 \end{aligned}$$
 
 
@@ -117,6 +117,8 @@ $$\begin{aligned}
 :open:
 
 Exploiting symmetry properties of Christoffel symbols,
+
+**todo!!!** **change indices to match the definition of the curvature tensor**
 
 $$\begin{aligned}
   \nabla_{\sigma \eta} v_{\nu} - \nabla_{\eta \sigma} v_{\nu}
@@ -136,7 +138,9 @@ $$\begin{aligned}
 
 Thus, it follows that
 
-$$R^{\xi}_{\ \ \sigma \eta \nu} = \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\eta \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi}$$
+$$R^{\xi}_{\ \ \sigma \eta \nu} = \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}$$
+
+$$R_{\phi \sigma \eta \nu} = g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)$$
 
 (relativity-general:notes:differential-geometry:curvature-tensor:ricci)=
 ### Ricci's tensor
@@ -145,7 +149,9 @@ $$R^{\xi}_{\ \ \sigma \eta \nu} = \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \p
 
 Ricci's tensor is defined as the contraction of the first and third indices of the curvature tensor with the metric tensor,
 
-$$R_{\nu \sigma} := g^{\alpha \beta} R_{\alpha \sigma \beta \nu} = \underbrace{g^{\alpha \beta} g_{\alpha \gamma}}_{\delta_{\gamma}^{\beta}} R^{\gamma}_{\ \ \sigma \beta \nu} = R^{\mu}_{\ \ \sigma \mu \nu}$$
+$$R_{\sigma \nu} := g^{\alpha \beta} R_{\alpha \sigma \beta \nu} = \underbrace{g^{\alpha \beta} g_{\alpha \gamma}}_{\delta_{\gamma}^{\beta}} R^{\gamma}_{\ \ \sigma \beta \nu} = R^{\mu}_{\ \ \sigma \mu \nu}$$
+
+$$R_{\sigma \nu} = \partial_{\xi} \Gamma^{\xi}_{\sigma \nu} - \partial_{\nu} \Gamma^{\xi}_{\xi \sigma} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma^{\xi}_{\mu \sigma}$$
 
 
 (relativity-general:notes:differential-geometry:curvature-tensor:curvature-scalar)=
@@ -153,5 +159,72 @@ $$R_{\nu \sigma} := g^{\alpha \beta} R_{\alpha \sigma \beta \nu} = \underbrace{g
 
 **todo** Meaning
 
-$$R := g^{\nu \sigma} R_{\nu \sigma} \ .$$
+$$R := g^{\sigma \nu} R_{\sigma \nu} = R^{\sigma}_{\ \ \sigma} \ .$$
+
+$$R = g^{\sigma \nu} R_{\sigma \nu} = g^{\sigma \nu} \left( \partial_{\xi} \Gamma^{\xi}_{\sigma \nu} - \partial_{\nu} \Gamma^{\xi}_{\xi \sigma} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma^{\xi}_{\mu \sigma} \right)$$
+
+
+(relativity-general:notes:differential-geometry:curvature-tensor:properties)=
+### Properties
+
+* $R_{abcd} = - R_{abdc}$
+
+```{dropdown} Proof
+:open:
+
+By direct inspection of the expression of the components of the curvature tensor,
+
+$$R_{\phi \sigma \eta \nu} = g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)$$
+
+and the symmetry of the Christoffel symbols, $\Gamma_{ab}^c = \Gamma_{ba}^c$.
+
+```
+
+* $R_{abcd} = - R_{bacd}$
+* $R_{abcd} + R_{acdb} + R_{adbc} = 0$
+* $R_{abcd} = R_{cdab}$
+* $R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0$ (Second Bianchi identity)
+
+```{dropdown} Proof
+:open:
+
+$$\begin{aligned}
+  R_{\phi \sigma \eta \nu; \chi} 
+  & = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
+  & = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
+  & = 
+\end{aligned}$$
+
+**todo**
+
+
+```
+
+(relativity-general:notes:differential-geometry:curvature-tensor:properties:ricci-divergence)=
+#### Divergence of Ricci's tensor
+
+$$
+  \nabla_{\mu} R^{\mu}_{\ \ \nu} = \frac{1}{2} \nabla_{\nu} R \ .
+$$
+
+```{dropdown} Proof
+:open:
+
+$$\begin{aligned}
+  R_{\sigma \nu}
+  = R^{\xi}_{\ \ \sigma \xi \nu} 
+  = \partial_{\xi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\xi \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi} 
+\end{aligned}$$
+
+$$R^{\mu}_{\ \ \nu} = g^{\mu \sigma} R_{\sigma \nu}$$
+
+$$\begin{aligned}
+  \nabla_{\mu} R^{\mu}_{\ \ \nu}
+  & = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
+  & = \\ 
+\end{aligned}$$
+
+```
+
+
 

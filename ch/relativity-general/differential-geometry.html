@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -380,6 +371,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-tensor">6.1.2. Curvature Tensor</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ricci-s-tensor">6.1.2.1. Ricci’s tensor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-scalar">6.1.2.2. Curvature scalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">6.1.2.3. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-of-ricci-s-tensor">6.1.2.3.1. Divergence of Ricci’s tensor</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -489,7 +484,7 @@ todo. Meaning of this definition<div class="sd-summary-down docutils">
 </div>
 </details><p>Definition through the action on an arbitrary vector field, whose components are</p>
 <div class="math notranslate nohighlight">
-\[\left\{ \mathbf{v} \cdot \mathbf{R} \right\}_{\sigma \eta \nu} = v_{\xi} R^{\xi}_{\ \ \sigma \eta \nu} = \left( \nabla_{\sigma} \nabla_{\eta} - \nabla_{\eta} \nabla_{\sigma} \right) v_{\nu}\]</div>
+\[\left\{ \mathbf{v} \cdot \mathbf{R} \right\}_{\sigma \eta \nu} = v_{\xi} R^{\xi}_{\ \ \sigma \eta \nu} = \left( \nabla_{\eta} \nabla_{\nu} - \nabla_{\nu} \nabla_{\eta} \right) v_{\sigma}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 First term<div class="sd-summary-down docutils">
@@ -500,14 +495,14 @@ First term<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \nabla \nabla \mathbf{v} 
-  &amp; = \mathbf{b}^{\sigma} \partial_{\sigma} \left[ \mathbf{b}^{\eta} \partial_{\eta} \left( v_{\nu} \mathbf{b}^{\nu} \right) \right] = \\
-  &amp; = \mathbf{b}^{\sigma} \partial_{\sigma} \left[ \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left( \partial_{\eta} v_{\nu} - \Gamma_{\eta \nu}^{\xi} v_{\xi}  \right) \right] = \\
-  &amp; = \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left[ - \Gamma_{\sigma \eta}^{\mu} (\dots)_{\mu \nu} - \Gamma_{\sigma \nu}^{\mu} (\dots)_{\eta \mu} + \partial_{\sigma \eta} v_{\nu} - \partial_{\sigma} \left( \Gamma_{\eta \nu}^{\xi} v_{\xi} \right) \right] = \\
-  &amp; = \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \left[
-    - \Gamma_{\sigma \eta}^{\mu} \left( \partial_{\mu} v_{\nu} - \Gamma_{\mu \nu}^{\xi} v_{\xi} \right)
-    - \Gamma_{\sigma \nu }^{\mu} \left( \partial_{\eta} v_{\mu} - \Gamma_{\mu \eta}^{\xi} v_{\xi} \right)
-    + \partial_{\sigma \eta} v_{\nu} - \partial_{\sigma} \Gamma_{\eta \nu}^{\xi} v_{\xi} - \Gamma_{\eta \nu}^{\xi} \partial_{\sigma} v_{\xi} \right] = \\
-  &amp; =  \mathbf{b}^{\sigma} \mathbf{b}^{\eta} \mathbf{b}^{\nu} \nabla_{\sigma \eta} v_{\nu} \ .
+  &amp; = \mathbf{b}^{\eta} \partial_{\eta} \left[ \mathbf{b}^{\nu} \partial_{\nu} \left( v_{\sigma} \mathbf{b}^{\sigma} \right) \right] = \\
+  &amp; = \mathbf{b}^{\eta} \partial_{\eta} \left[ \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left( \partial_{\nu} v_{\sigma} - \Gamma_{\nu \sigma}^{\xi} v_{\xi}  \right) \right] = \\
+  &amp; = \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left[ - \Gamma_{\eta \nu}^{\mu} (\dots)_{\mu \sigma} - \Gamma_{\eta \sigma}^{\mu} (\dots)_{\nu \mu} + \partial_{\eta \nu} v_{\sigma} - \partial_{\eta} \left( \Gamma_{\nu \sigma}^{\xi} v_{\xi} \right) \right] = \\
+  &amp; = \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \left[
+    - \Gamma_{\eta  \nu}^{\mu} \left( \partial_{\mu} v_{\sigma} - \Gamma_{\mu \sigma}^{\xi} v_{\xi} \right)
+    - \Gamma_{\eta \sigma}^{\mu} \left( \partial_{\nu} v_{\mu} - \Gamma_{\mu \nu}^{\xi} v_{\xi} \right)
+    + \partial_{\eta \nu} v_{\sigma} - \partial_{\eta} \Gamma_{\nu \sigma}^{\xi} v_{\xi} - \Gamma_{\nu \sigma}^{\xi} \partial_{\eta} v_{\xi} \right] = \\
+  &amp; =  \mathbf{b}^{\eta} \mathbf{b}^{\nu} \mathbf{b}^{\sigma} \nabla_{\eta \nu} v_{\sigma} \ .
 \end{aligned}\end{split}\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -518,6 +513,7 @@ First term<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Exploiting symmetry properties of Christoffel symbols,</p>
+<p class="sd-card-text"><strong>todo!!!</strong> <strong>change indices to match the definition of the curvature tensor</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \nabla_{\sigma \eta} v_{\nu} - \nabla_{\eta \sigma} v_{\nu}
@@ -535,19 +531,94 @@ First term<div class="sd-summary-down docutils">
 </div>
 </details><p>Thus, it follows that</p>
 <div class="math notranslate nohighlight">
-\[R^{\xi}_{\ \ \sigma \eta \nu} = \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\eta \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi}\]</div>
+\[R^{\xi}_{\ \ \sigma \eta \nu} = \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\]</div>
+<div class="math notranslate nohighlight">
+\[R_{\phi \sigma \eta \nu} = g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)\]</div>
 <div class="section" id="ricci-s-tensor">
 <span id="relativity-general-notes-differential-geometry-curvature-tensor-ricci"></span><h3><span class="section-number">6.1.2.1. </span>Ricci’s tensor<a class="headerlink" href="#ricci-s-tensor" title="Permalink to this heading">#</a></h3>
 <p><strong>todo</strong> Meaning</p>
 <p>Ricci’s tensor is defined as the contraction of the first and third indices of the curvature tensor with the metric tensor,</p>
 <div class="math notranslate nohighlight">
-\[R_{\nu \sigma} := g^{\alpha \beta} R_{\alpha \sigma \beta \nu} = \underbrace{g^{\alpha \beta} g_{\alpha \gamma}}_{\delta_{\gamma}^{\beta}} R^{\gamma}_{\ \ \sigma \beta \nu} = R^{\mu}_{\ \ \sigma \mu \nu}\]</div>
+\[R_{\sigma \nu} := g^{\alpha \beta} R_{\alpha \sigma \beta \nu} = \underbrace{g^{\alpha \beta} g_{\alpha \gamma}}_{\delta_{\gamma}^{\beta}} R^{\gamma}_{\ \ \sigma \beta \nu} = R^{\mu}_{\ \ \sigma \mu \nu}\]</div>
+<div class="math notranslate nohighlight">
+\[R_{\sigma \nu} = \partial_{\xi} \Gamma^{\xi}_{\sigma \nu} - \partial_{\nu} \Gamma^{\xi}_{\xi \sigma} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma^{\xi}_{\mu \sigma}\]</div>
 </div>
 <div class="section" id="curvature-scalar">
 <span id="relativity-general-notes-differential-geometry-curvature-tensor-curvature-scalar"></span><h3><span class="section-number">6.1.2.2. </span>Curvature scalar<a class="headerlink" href="#curvature-scalar" title="Permalink to this heading">#</a></h3>
 <p><strong>todo</strong> Meaning</p>
 <div class="math notranslate nohighlight">
-\[R := g^{\nu \sigma} R_{\nu \sigma} \ .\]</div>
+\[R := g^{\sigma \nu} R_{\sigma \nu} = R^{\sigma}_{\ \ \sigma} \ .\]</div>
+<div class="math notranslate nohighlight">
+\[R = g^{\sigma \nu} R_{\sigma \nu} = g^{\sigma \nu} \left( \partial_{\xi} \Gamma^{\xi}_{\sigma \nu} - \partial_{\nu} \Gamma^{\xi}_{\xi \sigma} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma^{\xi}_{\mu \sigma} \right)\]</div>
+</div>
+<div class="section" id="properties">
+<span id="relativity-general-notes-differential-geometry-curvature-tensor-properties"></span><h3><span class="section-number">6.1.2.3. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{abcd} = - R_{abdc}\)</span></p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">By direct inspection of the expression of the components of the curvature tensor,</p>
+<div class="math notranslate nohighlight">
+\[R_{\phi \sigma \eta \nu} = g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)\]</div>
+<p class="sd-card-text">and the symmetry of the Christoffel symbols, <span class="math notranslate nohighlight">\(\Gamma_{ab}^c = \Gamma_{ba}^c\)</span>.</p>
+</div>
+</details><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{abcd} = - R_{bacd}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{abcd} + R_{acdb} + R_{adbc} = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{abcd} = R_{cdab}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0\)</span> (Second Bianchi identity)</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  R_{\phi \sigma \eta \nu; \chi} 
+  &amp; = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
+  &amp; = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
+  &amp; = 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>todo</strong></p>
+</div>
+</details><div class="section" id="divergence-of-ricci-s-tensor">
+<span id="relativity-general-notes-differential-geometry-curvature-tensor-properties-ricci-divergence"></span><h4><span class="section-number">6.1.2.3.1. </span>Divergence of Ricci’s tensor<a class="headerlink" href="#divergence-of-ricci-s-tensor" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+  \nabla_{\mu} R^{\mu}_{\ \ \nu} = \frac{1}{2} \nabla_{\nu} R \ .
+\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  R_{\sigma \nu}
+  = R^{\xi}_{\ \ \sigma \xi \nu} 
+  = \partial_{\xi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\xi \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi} 
+\end{aligned}\]</div>
+<div class="math notranslate nohighlight">
+\[R^{\mu}_{\ \ \nu} = g^{\mu \sigma} R_{\sigma \nu}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \nabla_{\mu} R^{\mu}_{\ \ \nu}
+  &amp; = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
+  &amp; = \\ 
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
 </div>
 </div>
 </div>
@@ -619,6 +690,10 @@ First term<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-tensor">6.1.2. Curvature Tensor</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ricci-s-tensor">6.1.2.1. Ricci’s tensor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-scalar">6.1.2.2. Curvature scalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">6.1.2.3. Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-of-ricci-s-tensor">6.1.2.3.1. Divergence of Ricci’s tensor</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
