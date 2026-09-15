@@ -18,6 +18,9 @@ parts:
   chapters:
   - file: ch/relativity-general/intro
   - file: ch/relativity-general/notes
+    sections:
+    - file: ch/relativity-general/differential-geometry
+    - file: ch/relativity-general/einstein-equation
 - caption: Statistical Mechanics
   numbered: True
   chapters:
