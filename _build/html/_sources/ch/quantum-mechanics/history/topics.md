@@ -88,7 +88,7 @@
 * **Matrix mechanics.** (Heisenberg, Born, Jordan), three papers in 1925
 
 * **Ondulatory mechanics.** (Schrodinger)
-  * 1923, L.de Broglie: idea of guiding wave for matter particles
+  * 1923, L.${}$de Broglie: idea of guiding wave for matter particles
   * 1925, E.Schrodinger: wave equation. If matter behaves as a wave, a wave equation should be the governing equation of the system
   * 1923-1927, C.Davisson and L.Germer found a diffraction pattern in an experiment about electron scattering
 

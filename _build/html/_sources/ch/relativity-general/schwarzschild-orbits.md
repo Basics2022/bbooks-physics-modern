@@ -64,7 +64,7 @@ $$\begin{aligned}
 and thus
 
 $$
-  \dot{r}^2 = E^2 - c^2 \left( 1 - \frac{r_s}{r} \right) \left( 1 + \frac{L}{r^2 c^2} \right) \ .
+  \dot{r}^2 = E^2 - c^2 \left( 1 - \frac{r_s}{r} \right) \left( 1 + \frac{L^2}{r^2 c^2} \right) \ .
 $$
 
 Now, changing variable $u := \frac{1}{r}$ and using the relation $\phi(\tau)$ to write
@@ -73,7 +73,7 @@ $$\dot{r} = \frac{d r}{d\tau} = \frac{d \phi}{d \tau} \frac{d}{d \phi} = \frac{L
 
 the equation becomes
 
-$$ L^2 {u'}^2 = E - c^2 ( 1 - r_s u ) \left( 1 + \frac{L^2}{c^2} u^2 \right) \ .$$
+$$ L^2 {u'}^2 = E^2 - c^2 ( 1 - r_s u ) \left( 1 + \frac{L^2}{c^2} u^2 \right) \ .$$
 
 Differentiating both sides by $\phi$
 
@@ -95,19 +95,87 @@ $$u_0(\phi) = \frac{GM}{L^2}(1 + e \cos \phi) \ . $$
 
 As
 
-$$0 = \underbrace{u_0'' + u_0 - \frac{GM}{L}}_{=0} + u_1'' + u_1 - \frac{3GM}{c^2} (u_0 + u_1)^2 \ ,$$
+$$0 = \underbrace{u_0'' + u_0 - \frac{GM}{L^2}}_{=0} + u_1'' + u_1 - \frac{3GM}{c^2} (u_0 + u_1)^2 \ ,$$
 
 the perturbation $u_1(\phi)$ (of order $\frac{GM}{c^2}$ must satisfy (approximately, truncation) the equation
 
 $$\begin{aligned}
   u_1'' + u_1
   & \approx \frac{3 GM}{c^2} u_0^2(\phi) = \\
-  & = \frac{3 (GM)^2}{c^2 L^2} \left( 1 + 2 e \cos \phi + e^2 \cos^2 \phi \right) = && ( \cos 2 x = 2 \cos^2 x - 1 ) = \\
-  & = 3 \left( \frac{GM}{L c} \right)^2 \left( 1 + 2 e \cos \phi + \frac{e^2}{2} \left( 1 + \cos ( 2 \phi ) \right) \right) = \\
-  & = 3 \left( \frac{GM}{L c} \right)^2 \left( 1 + \frac{e}{2} + 2 e \cos \phi + \frac{e^2}{2} \cos ( 2 \phi ) \right) \ ,
+  & = \frac{3 (GM)^3}{c^2 L^4} \left( 1 + 2 e \cos \phi + e^2 \cos^2 \phi \right) = && ( \cos 2 x = 2 \cos^2 x - 1 ) = \\
+  & = 3 \left( \frac{(GM)^{3/2}}{ c L^2} \right)^2 \left( 1 + 2 e \cos \phi + \frac{e^2}{2} \left( 1 + \cos ( 2 \phi ) \right) \right) = \\
+  & = 3 \left( \frac{(GM)^{3/2}}{ c L^2} \right)^2 \left( 1 + \frac{e}{2} + 2 e \cos \phi + \frac{e^2}{2} \cos ( 2 \phi ) \right) \ ,
 \end{aligned}$$
 
-whose solution undergoes resonance
+whose solution undergoes resonance, as the forcing $2 e \cos \phi$ has the same frequency as the natural frequency of the system.The general solution reads
 
-$$u(\phi) = a \cos \phi + b \sin \phi + c + d \phi \cos \phi + e \phi \sin \phi + f \cos (2 \phi) $$
+$$u_1(\phi) = A \cos \phi + B \sin \phi + 3 \left( \frac{(GM)^{3/2}}{c L^2} \right)^2 \left[ \left( 1 + \frac{e}{2} \right) + e \phi \sin \phi + \frac{e^2}{6} \cos 2 \phi \right]$$
+
+Only the term $\propto \phi \sin \phi$ is unbounded. Combining this term with the unperturbed solution gives
+
+$$\begin{aligned}
+  u(\phi) 
+  & \approx \frac{GM}{L^2} \left\{ ( 1 + e \cos \phi ) + 3 \left( \frac{GM}{cL} \right)^2 e \phi \sin \phi \right\} \ ,
+\end{aligned}$$
+
+and using small angle approximation $\cos(\alpha + x ) = \cos \alpha \cos x - \sin \alpha \sin x \approx \cos x - \alpha \sin x $, for $\alpha \sim 0$,
+
+$$\begin{aligned}
+  u(\phi) 
+  & \approx \frac{GM}{L^2} \left\{ 1 + e \cos \phi + \underbrace{ 3 \left( \frac{ GM}{cL} \right)^2 \phi}_{"-\alpha"} e \sin \phi \right\} = \\
+  & \approx \frac{GM}{L^2} \left\{ 1 + e \cos \left( \phi - \left( \frac{GM}{cL} \right)^2 \phi \right) \right\} =  \\
+  & = \frac{GM}{L^2} \left\{ 1 + e \cos \left[ \left( \phi - 3 \left(\frac{ GM}{c L} \right)^2 \right) \phi \right] \right\} \ .
+\end{aligned}$$
+
+As $u:= \frac{1}{r}$, the perihelion occurs for $u(\phi_{perih}) = \max_{\phi} u(\phi)$, i.e. for
+
+$$\left( 1 - 3\left( \frac{GM}{c L} \right)^2 \right) \phi_{perih,n} = n 2 \pi \quad , \quad n \in \mathbb{Z} \ .$$
+
+The **precession of the perihelion** can be evaluated as the difference between the angular coordinate of two successive revolutions (adding a $2pi$ to the first angle, mimicing an orbit with no precession) i.e.
+
+$$\begin{aligned}
+  \Delta \phi 
+  & = \phi_{perih, n+1} - ( \phi_{perih, n} + 2 \pi ) = \\
+  & = \frac{2 \pi}{1 - 3 \left(\frac{GM}{cL}\right)^2} - 2 \pi = \\
+  & \approx 2 \pi \left( 1 + 3 \left( \frac{GM}{cL} \right)^2 - 1 \right) = 6 \pi \left( \frac{GM}{cL} \right)^2 \ .
+\end{aligned}$$
+
+```{dropdown} General solution
+
+The general solution has the expression
+
+$$u_1(\phi) = \underbrace{A \cos \phi + B \sin \phi}_{u_{1,homo}(\phi)} + \underbrace{C + D \phi \cos \phi + E \phi \sin \phi + F \cos (2 \phi)}_{u_{1,part}(\phi)} \ .$$
+
+The coefficients of the particular solution are evaluated by coefficient matching
+
+$$\begin{aligned}
+  ( \phi \cos \phi )'  & =     \cos \phi - \phi \sin \phi \\
+  ( \phi \cos \phi )'' & = - 2 \sin \phi - \phi \cos \phi \\
+  ( \phi \sin \phi )'  & =     \sin \phi + \phi \cos \phi \\
+  ( \phi \sin \phi )'' & =   2 \cos \phi - \phi \sin \phi \\
+  ( \cos ( 2 \phi ))'' & = - 4 \cos ( 2 \phi ) \\
+\end{aligned}$$
+
+then
+
+$$\begin{aligned}
+      \cos \phi & : \quad 0 = A - A - 2 E + 2 \alpha e  \\
+      \sin \phi & : \quad 0 = B - B + 2 D \\
+ \phi \cos \phi & : \quad 0 = D - D \\
+ \phi \sin \phi & : \quad 0 = E - E \\
+              1 & : \quad 0 = - C + \alpha \left( 1 + \frac{e}{2} \right) \\
+    \cos 2 \phi & : \quad 0 = 4 F - F + \alpha \frac{e^2}{2} \ , 
+\end{aligned}$$
+
+so that
+
+$$\begin{aligned}
+  E & = \alpha e \\
+  D & = 0 \\
+  C & = \alpha \left( 1 + \frac{e}{2} \right) \\
+  F & = - \frac{1}{6} \alpha e^2 \ .
+\end{aligned}$$
+
+
+```
 

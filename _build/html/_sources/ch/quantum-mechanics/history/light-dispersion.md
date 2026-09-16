@@ -11,7 +11,7 @@
 
 ...
 
-$$n(\omega)-1 = \frac{q^2 N}{2 \varepsilon_0 m} \frac{1}{\omega_0^2 - \omega^2 + i \gamVma \omega}$$
+$$n(\omega)-1 = \frac{q^2 N}{2 \varepsilon_0 m} \frac{1}{\omega_0^2 - \omega^2 + i \gamma \omega}$$
 
 **Remark.** The refractive index $n$ is a complex number, with 
 
