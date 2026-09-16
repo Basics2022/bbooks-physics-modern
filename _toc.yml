@@ -48,6 +48,8 @@ parts:
     - file: ch/quantum-mechanics/history/topics
     - file: ch/quantum-mechanics/history/timeline
     - file: ch/quantum-mechanics/history/light-dispersion
+    - file: ch/quantum-mechanics/history/einstein-planck
+    - file: ch/quantum-mechanics/history/atom-models
 - caption: Solid State Physics
   numbered: True
   chapters:
