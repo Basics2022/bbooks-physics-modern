@@ -203,98 +203,63 @@ $$\begin{aligned}
 
 ````
 
-<!--
-
-```{dropdown} Derivatives of the electromagnetic potentials
-:open:
-
-Derivatives of $|\mathbf{r}_s(t_{ret}) - \mathbf{r}|^{-1}$ reads
-
-$$\begin{aligned}
-  \partial_k |\mathbf{r}_s(t_{ret}) - \mathbf{r}|^{-1}
-  & = - |\mathbf{r}_s(t_{ret}) - \mathbf{r}|^{-2} \partial_k |\mathbf{r}_s(t_{ret}) - \mathbf{r}| = \\
-  & = - |\mathbf{r}_s(t_{ret}) - \mathbf{r}|^{-3} \left( x_{i,s}(t_{ret}) - x_i \right) \partial_k \left( x_{i,s}(t_{ret}) - x_i \right) \ ,
-\end{aligned}$$
-
-as $\partial | \mathbf{v} |^2 = 2 v_i \partial v_i = 2 | \mathbf{v}| \partial |\mathbf{v}|$.
-
-Time derivative of $x_{s,i}(t_{ret}) - x_i$ reads
-
-$$\begin{aligned}
-  \partial_t \left( x_{s,i}(t_{ret}) - x_i \right)
-  & = v_{s,i}(t_{ret}) \partial_t t_{ret} = \\
-  & = v_{s,i}(t_{ret}) \left( 1 - \frac{x_{s,k} - x_{k}}{|\mathbf{r}_s - \mathbf{r}|} \frac{v_{s,k}}{c} \right)
-\end{aligned}$$
-
-Space derivatives of $x_{s,i}(t_{ret}) - x_i$ reads
-
-$$\begin{aligned}
-  \partial_k \left( x_{s,i}(t_{ret}) - x_i \right)
-  & = v_{s,i}(t_{ret}) \partial_k t_{ret} - \delta_{ik} = \\
-  & = v_{s,i}(t_{ret}) \left( \frac{1}{c} \frac{x_{s,k} - x_{k}}{|\mathbf{r}_s - \mathbf{r}|}  \right) - \delta_{ik}
-\end{aligned}$$
-
-Using vector notation,
-
-$$\partial_t \left( \mathbf{r}_{s}(t_{ret}) - \mathbf{r} \right) = \mathbf{v}_{s}(t_{ret}) \left( 1 - \frac{\mathbf{R}}{|\mathbf{R}| } \cdot \frac{\mathbf{v}_s(t_{ret})}{c} \right)$$
-
-$$\nabla \left( \mathbf{r}_{s}(t_{ret}) - \mathbf{r} \right) = \frac{\mathbf{R}}{|\mathbf{R}|} \otimes \frac{\mathbf{v}}{c}  - \mathbb{I} \ .$$
-
-and
-
-$$\begin{aligned}
-  \partial_t | \mathbf{R} |^{-1} 
-  & = - \partial_t \mathbf{R} \cdot \frac{\mathbf{R}}{|\mathbf{R}|^3} = \\
-  & = - \left[ \mathbf{v}_{s}(t_{ret}) \left( 1 - \frac{\mathbf{R}}{|\mathbf{R}| } \cdot \frac{\mathbf{v}_s(t_{ret})}{c} \right) \right] \cdot \frac{\mathbf{R}}{|\mathbf{R}|^3} = \\
-  & = - c \frac{1}{|\mathbf{R}|^2} \left[ \left( 1 - \frac{\mathbf{R}}{|\mathbf{R}| } \cdot \frac{\mathbf{v}_s(t_{ret})}{c} \right) \frac{\mathbf{v}_s(t_{ret})}{c} \cdot \frac{\mathbf{R}}{|\mathbf{R}|} \right] =  \\ 
-  & = - \frac{c}{|\mathbf{R}|^2} ( 1 - \beta ) \beta \\
-  \nabla | \mathbf{R} |^{-1}
-  & = - \nabla \mathbf{R} \cdot \frac{\mathbf{R}}{|\mathbf{R}|^3} = \\
-  & = - \left[ \frac{\mathbf{R}}{|\mathbf{R}|} \otimes \frac{\mathbf{v}_s(t_{ret})}{c}  - \mathbb{I} \right] \cdot \frac{\mathbf{R}}{|\mathbf{R}|^3} = \\
-  & =  \frac{1}{|\mathbf{R}|^2} \frac{\mathbf{R}}{|\mathbf{R}|} \left( 1 - \frac{\mathbf{R}}{|\mathbf{R}|} \cdot \frac{\mathbf{v}_s(t_{ret})}{c}\right) = \\
-  & = - \frac{1}{|\mathbf{R}|^2} \frac{\mathbf{R}}{|\mathbf{R}|} ( 1 - \beta ) \ .
-\end{aligned}$$
-
-
-
-```
-
-The electromagnetic field is
-
-$$\begin{aligned}
-  \mathbf{b} & = \nabla \times \mathbf{a} \\
-  \mathbf{e} & = - \partial_t \mathbf{a} - \nabla \varphi \\
-\end{aligned}$$
-
-```{dropdown} Electromagnetic field
-:open:
-
-The electric field becomes
-
-$$\begin{aligned}
-  \mathbf{e}
-  & = - \partial_t \mathbf{a} - \nabla \varphi = \\
-  & = - \frac{\mu}{4 \pi} \partial_t \left( |\mathbf{R}|^{-1} q \mathbf{v}_s(t_{ret}) \right) - \frac{1}{4 \pi \varepsilon} \nabla |\mathbf{R}|^{-1} q = \\
-  & = - q \frac{\mu}{4 \pi} \left[ - \frac{c}{R^2} ( 1 - \beta_R ) \beta_R \mathbf{v}_{s,ret} + R^{-1} \mathbf{a}_{s,ret} (1 - \beta) \right] - q \frac{1}{4 \pi \varepsilon} \left[ - \frac{1}{R^2} \frac{\mathbf{R}}{R} ( 1 - \beta_R ) \right] = \\ 
-  & = - q \frac{\mu c^2}{4 \pi} \left[ - \frac{1}{R^2} ( 1 - \beta_R ) \beta_R \boldsymbol{\beta} + \frac{\mathbf{a}_{s,ret}}{c^2 R} (1 - \beta) \right] - q \frac{1}{4 \pi \varepsilon} \left[ - \frac{1}{R^2} \frac{\mathbf{R}}{R} ( 1 - \beta_R ) \right] = \\
-  & = - \frac{q}{4 \pi \varepsilon} \frac{1}{R^2} \left[ \frac{a_{s,ret} R}{c^2} ( 1 - \beta ) - ( 1 - \beta_R ) \beta_R \boldsymbol\beta - ( 1 - \beta_R) \frac{\mathbf{R}}{R} \right]
-\end{aligned}$$
-
-
-The magnetic field becomes
-
-$$\begin{aligned}
-  \mathbf{b}
-  & = \nabla \times \mathbf{a} = \\
-  & = \frac{\mu}{4 \pi} \nabla \times \left( |\mathbf{R}|^{-1} q \mathbf{v}_s(t_{ret}) \right) = \\ 
-\end{aligned}$$
-
-
-```
--->
-
 (moving-charge-radiation:larmor)=
 ## Larmor formula
+
+Poynting vector reads
+
+$$\mathbf{s}(\mathbf{r},t) := \frac{ \mathbf{e}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) }{\mu} \ ,$$
+
+and thus, using the electromagnetic field of a moving charge,
+
+$$\mathbf{s} = \frac{1}{\mu} \mathbf{e} \times \mathbf{b} = \frac{1}{c \mu} \mathbf{e} \times \left( \hat{\mathbf{r}} \times \mathbf{e} \right) = \frac{1}{\mu c} \left[ |\mathbf{e}|^2 \hat{\mathbf{r}} - ( \mathbf{e} \cdot \hat{\mathbf{r}} ) \mathbf{e} \right] \ .$$
+
+**Far-field approximation** (also assuming that $\boldsymbol\beta \sim \mathbf{0}$. **todo** *slow charge? Non-relativistic limit?*),
+
+$$\mathbf{e} \sim - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_{s,ret}}{|\mathbf{r}| c^2}$$
+
+and thus
+
+$$\begin{aligned}
+  \mathbf{s}
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \, \mathbf{a} \times \left( \hat{\mathbf{r}} \times \mathbf{a} \right) = \\
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \left( |\mathbf{a}|^2 \hat{\mathbf{r}} - ( \mathbf{a} \cdot \hat{\mathbf{r}} ) \mathbf{a} \right) = \\
+\end{aligned}$$
+
+The elementary power flux at $\mathbf{r} = R \hat{\mathbf{r}}$, assuming that the motion is ina region much smaller than $R$, so that $t_{ret} = t - \frac{R}{c}$, is
+
+$$\begin{aligned}
+  \hat{\mathbf{r}} \cdot \mathbf{s} 
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( |\mathbf{a}|^2 - ( \mathbf{a} \cdot \hat{\mathbf{r}} )^2 \right) = \\
+\end{aligned}$$
+
+Let's define the direction of $\mathbf{a}_{ret} = a \hat{\mathbf{t}}$, and sperical coordinates so that $\hat{\mathbf{r}} \cdot \mathbf{\mathbf{t}} = \cos \theta$. Integration over the sphere of radius $R$ gives
+
+$$\begin{aligned}
+  \Phi
+  & := \int_{S} \hat{\mathbf{r}} \cdot \mathbf{s} = \\
+  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta d \phi   d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \cdot \frac{4}{3} \cdot 2 \pi = \\
+  & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
+\end{aligned}$$
+
+
+```{dropdown}
+:open:
+
+$$\int_{0}^{\pi} ( 1 - \cos^2 x ) \sin x d x = \left.\left[ - \cos x + \frac{\cos^3}{3} \right]\right|_{0}^{\pi} = 2 - \frac{2}{3} = \frac{4}{3} \ .$$
+
+
+```
+
+
+```{dropdown}
+
+$$\varepsilon_{abc} A_b \varepsilon_{cde} B_d C_e = ( \delta_{ad} \delta_{be} - \delta_{ae} \delta_{bd} ) A_b B_d C_e = A_b B_a C_b - A_b B_b C_a = \mathbf{A} \cdot \mathbf{C} \, \mathbf{B} - \mathbf{A} \cdot \mathbf{B} \, \mathbf{C}$$
+
+
+```
 
 
 
