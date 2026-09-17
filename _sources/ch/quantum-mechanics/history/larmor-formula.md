@@ -206,6 +206,69 @@ $$\begin{aligned}
 (moving-charge-radiation:larmor)=
 ## Larmor formula
 
+Poynting vector reads
+
+$$\mathbf{s}(\mathbf{r},t) := \frac{ \mathbf{e}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) }{\mu} \ ,$$
+
+and thus, using the electromagnetic field of a moving charge,
+
+$$\mathbf{s} = \frac{1}{\mu} \mathbf{e} \times \mathbf{b} = \frac{1}{c \mu} \mathbf{e} \times \left( \hat{\mathbf{r}} \times \mathbf{e} \right) = \frac{1}{\mu c} \left[ |\mathbf{e}|^2 \hat{\mathbf{r}} - ( \mathbf{e} \cdot \hat{\mathbf{r}} ) \mathbf{e} \right] \ .$$
+
+**Far-field approximation** (also assuming that $\boldsymbol\beta \sim \mathbf{0}$. **todo** *slow charge? Non-relativistic limit?*),
+
+$$\mathbf{e} \sim - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_{s,ret}}{|\mathbf{r}| c^2}$$
+
+and thus
+
+$$\begin{aligned}
+  \mathbf{s}
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \, \mathbf{a} \times \left( \hat{\mathbf{r}} \times \mathbf{a} \right) = \\
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \left( |\mathbf{a}|^2 \hat{\mathbf{r}} - ( \mathbf{a} \cdot \hat{\mathbf{r}} ) \mathbf{a} \right) = \\
+\end{aligned}$$
+
+The elementary power flux at $\mathbf{r} = R \hat{\mathbf{r}}$, assuming that the motion is ina region much smaller than $R$, so that $t_{ret} = t - \frac{R}{c}$, is
+
+$$\begin{aligned}
+  \hat{\mathbf{r}} \cdot \mathbf{s} 
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( |\mathbf{a}|^2 - ( \mathbf{a} \cdot \hat{\mathbf{r}} )^2 \right) = \\
+\end{aligned}$$
+
+Let's define the direction of $\mathbf{a}_{ret} = a \hat{\mathbf{t}}$, and sperical coordinates so that $\hat{\mathbf{r}} \cdot \mathbf{\mathbf{t}} = \cos \theta$. Integration over the sphere of radius $R$ gives
+
+$$\begin{aligned}
+  \Phi
+  & := \int_{S} \hat{\mathbf{r}} \cdot \mathbf{s} = \\
+  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta d \phi   d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \cdot \frac{4}{3} \cdot 2 \pi = \\
+  & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
+\end{aligned}$$
+
+**Average power.** 
+
+$$\langle \Phi \rangle = \frac{q^2}{6  \pi \varepsilon c^3} \langle |\mathbf{a}|^2 \rangle$$
+
+**Examples:**
+
+* **harmonic oscillator** $\mathbf{a}(t) = - A \omega^2 \cos(\omega t) \hat{\mathbf{x}}$, $\langle |\mathbf{a}(t)|^2 \rangle = \frac{1}{2} A^2 \omega^4 $
+
+* **circular orbits**, with constant speed. Acceleration is $\mathbf{a}(t) = - R \omega^2 \hat{\mathbf{r}}(t)$, and has constan magnitude $|\mathbf{a}(t)| = \omega^2 R$
+
+```{dropdown}
+:open:
+
+$$\int_{0}^{\pi} ( 1 - \cos^2 x ) \sin x d x = \left.\left[ - \cos x + \frac{\cos^3}{3} \right]\right|_{0}^{\pi} = 2 - \frac{2}{3} = \frac{4}{3} \ .$$
+
+
+```
+
+
+```{dropdown}
+
+$$\varepsilon_{abc} A_b \varepsilon_{cde} B_d C_e = ( \delta_{ad} \delta_{be} - \delta_{ae} \delta_{bd} ) A_b B_d C_e = A_b B_a C_b - A_b B_b C_a = \mathbf{A} \cdot \mathbf{C} \, \mathbf{B} - \mathbf{A} \cdot \mathbf{B} \, \mathbf{C}$$
+
+
+```
 
 
 
