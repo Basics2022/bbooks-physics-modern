@@ -50,6 +50,7 @@ parts:
     - file: ch/quantum-mechanics/history/light-dispersion
     - file: ch/quantum-mechanics/history/einstein-planck
     - file: ch/quantum-mechanics/history/atom-models
+    - file: ch/quantum-mechanics/history/larmor-formula
 - caption: Solid State Physics
   numbered: True
   chapters:
