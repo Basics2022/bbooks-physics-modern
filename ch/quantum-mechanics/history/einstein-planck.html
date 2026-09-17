@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="16. Introduction to Solid State Physics" href="../../solid-state/intro.html" />
+    <link rel="next" title="15.5. Atomic models" href="atom-models.html" />
     <link rel="prev" title="15.3. Light dispersion" href="light-dispersion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -218,6 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="timeline.html">15.2. Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="light-dispersion.html">15.3. Light dispersion</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">15.4. Light matter interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atom-models.html">15.5. Atomic models</a></li>
 </ul>
 </li>
 </ul>
@@ -432,9 +433,38 @@ document.write(`
   &amp; = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ 1 }{ \exp((E_j-E_i)/kT) - \frac{g_j B_{ji}}{g_i B_{ij}}} = \\
   &amp; = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ 1 }{ \exp(h \nu_{ji}/kT) - \frac{g_j B_{ji}}{g_i B_{ij}}} \ .
 \end{aligned}\end{split}\]</div>
-<p>Comparing with Planck’s law <span class="math notranslate nohighlight">\(\rho(\nu, T) = \frac{2 h \nu^3}{c^2} \frac{1}{\exp(h \nu /kT) - 1}\)</span>, the relations between Einstein coefficients <span class="math notranslate nohighlight">\((E_j &gt; E_i)\)</span> follows</p>
+<p>Comparing with Planck’s law (with the <strong>radiance</strong>?) <span class="math notranslate nohighlight">\(\rho(\nu, T) = \frac{2 h \nu^3}{c^3} \frac{1}{\exp(h \nu /kT) - 1}\)</span>, the relations between Einstein coefficients <span class="math notranslate nohighlight">\((E_j &gt; E_i)\)</span> follows</p>
 <div class="math notranslate nohighlight">
-\[\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^2} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .\]</div>
+\[\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Planck’s law<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul>
+<li><p class="sd-card-text">Spectral energy density (energy per unit volume, per unit frequency):</p>
+<div class="math notranslate nohighlight">
+\[u_{\nu}(\nu, T) = \frac{8 \pi h \nu^3}{c^3} \frac{1}{\exp(h \nu/kT) - 1}\]</div>
+<p class="sd-card-text">Dimensional analysis:</p>
+<div class="math notranslate nohighlight">
+\[[u] = \frac{[h][\nu]^3}{[c]^3} = \frac{J s \cdot s^{-3}}{ m^3 c^{-3}} = \frac{J}{ m^3 \cdot \text{Hz}} = \frac{\text{energy}}{\text{length}^3 \cdot \text{freq.}} \ .\]</div>
+</li>
+<li><p class="sd-card-text">Radiance, <span class="math notranslate nohighlight">\(B_{\nu}(\nu, T) = \frac{c}{4 \pi} u_{\nu}(\nu, T)\)</span> <strong>todo</strong> <em>Justify this relation. Is this right? Or should the factor be <span class="math notranslate nohighlight">\(\frac{c}{8 \pi}\)</span></em><a class="footnote-reference brackets" href="#taltavull-ladenburg" id="id1">1</a>. Thus</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[B_{\nu}(\nu, T) = \frac{2 h \nu^3}{c^2} \frac{1}{\exp(h \nu/kT) - 1}\]</div>
+<p class="sd-card-text">Dimensional analysis</p>
+<div class="math notranslate nohighlight">
+\[[B] = \frac{\text{power}}{\text{solid angle} \cdot \text{surface} \cdot \text{Hz}}\]</div>
+</div>
+</details><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="taltavull-ladenburg"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Taltavull, Rudolf Ladenburg and the first quantum interpretation of optical dispersion, Eur. Phys. J. H.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -478,11 +508,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../../solid-state/intro.html"
+       href="atom-models.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">16. </span>Introduction to Solid State Physics</p>
+        <p class="prev-next-title"><span class="section-number">15.5. </span>Atomic models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

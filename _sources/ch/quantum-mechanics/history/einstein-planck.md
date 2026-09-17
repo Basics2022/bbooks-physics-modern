@@ -43,6 +43,29 @@ $$\begin{aligned}
   & = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ 1 }{ \exp(h \nu_{ji}/kT) - \frac{g_j B_{ji}}{g_i B_{ij}}} \ .
 \end{aligned}$$
 
-Comparing with Planck's law $\rho(\nu, T) = \frac{2 h \nu^3}{c^2} \frac{1}{\exp(h \nu /kT) - 1}$, the relations between Einstein coefficients $(E_j > E_i)$ follows
+Comparing with Planck's law (with the **radiance**?) $\rho(\nu, T) = \frac{2 h \nu^3}{c^3} \frac{1}{\exp(h \nu /kT) - 1}$, the relations between Einstein coefficients $(E_j > E_i)$ follows
 
-$$\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^2} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .$$
+$$\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .$$
+
+```{dropdown} Planck's law
+:open:
+
+* Spectral energy density (energy per unit volume, per unit frequency):
+
+   $$u_{\nu}(\nu, T) = \frac{8 \pi h \nu^3}{c^3} \frac{1}{\exp(h \nu/kT) - 1}$$
+ 
+   Dimensional analysis: 
+ 
+   $$[u] = \frac{[h][\nu]^3}{[c]^3} = \frac{J s \cdot s^{-3}}{ m^3 c^{-3}} = \frac{J}{ m^3 \cdot \text{Hz}} = \frac{\text{energy}}{\text{length}^3 \cdot \text{freq.}} \ .$$
+
+* Radiance, $B_{\nu}(\nu, T) = \frac{c}{4 \pi} u_{\nu}(\nu, T)$ **todo** *Justify this relation. Is this right? Or should the factor be $\frac{c}{8 \pi}$*[^taltavull-ladenburg]. Thus
+
+[^taltavull-ladenburg]: Taltavull, Rudolf Ladenburg and the first quantum interpretation of optical dispersion, Eur. Phys. J. H.
+
+   $$B_{\nu}(\nu, T) = \frac{2 h \nu^3}{c^2} \frac{1}{\exp(h \nu/kT) - 1}$$
+
+   Dimensional analysis 
+
+   $$[B] = \frac{\text{power}}{\text{solid angle} \cdot \text{surface} \cdot \text{Hz}}$$
+
+```
