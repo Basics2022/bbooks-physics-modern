@@ -244,6 +244,15 @@ $$\begin{aligned}
   & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
 \end{aligned}$$
 
+**Average power.** 
+
+$$\langle \Phi \rangle = \frac{q^2}{6  \pi \varepsilon c^3} \langle |\mathbf{a}|^2 \rangle$$
+
+**Examples:**
+
+* **harmonic oscillator** $\mathbf{a}(t) = - A \omega^2 \cos(\omega t) \hat{\mathbf{x}}$, $\langle |\mathbf{a}(t)|^2 \rangle = \frac{1}{2} A^2 \omega^4 $
+
+* **circular orbits**, with constant speed. Acceleration is $\mathbf{a}(t) = - R \omega^2 \hat{\mathbf{r}}(t)$, and has constan magnitude $|\mathbf{a}(t)| = \omega^2 R$
 
 ```{dropdown}
 :open:

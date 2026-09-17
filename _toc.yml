@@ -43,6 +43,8 @@ parts:
   chapters:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes
+  - file: ch/quantum-mechanics/density-operator
+  - file: ch/quantum-mechanics/decoherence
   - file: ch/quantum-mechanics/history
     sections:
     - file: ch/quantum-mechanics/history/topics
