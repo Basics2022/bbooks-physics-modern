@@ -44,6 +44,7 @@ parts:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes
   - file: ch/quantum-mechanics/wave-mechanics
+  - file: ch/quantum-mechanics/angular-momentum
   - file: ch/quantum-mechanics/density-operator
   - file: ch/quantum-mechanics/decoherence
   - file: ch/quantum-mechanics/history

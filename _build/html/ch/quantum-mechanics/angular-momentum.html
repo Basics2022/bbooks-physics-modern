@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>18. Decoherence &#8212; Modern Physics</title>
+    <title>16. Angular momentum &#8212; Modern Physics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/decoherence';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/angular-momentum';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="19. Historical Approach to Quantum Mechanics" href="history.html" />
-    <link rel="prev" title="17. Density Operator" href="density-operator.html" />
+    <link rel="next" title="17. Density Operator" href="density-operator.html" />
+    <link rel="prev" title="15. Wave quantum mechanics" href="wave-mechanics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -205,9 +205,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">14. Quantum Mechanics - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wave-mechanics.html">15. Wave quantum mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="angular-momentum.html">16. Angular momentum</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">16. Angular momentum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="density-operator.html">17. Density Operator</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">18. Decoherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoherence.html">18. Decoherence</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="history/topics.html">19.1. Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history/timeline.html">19.2. Timeline</a></li>
@@ -292,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch/quantum-mechanics/decoherence.md" target="_blank"
+      <li><a href="../../_sources/ch/quantum-mechanics/angular-momentum.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,9 +363,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -376,24 +374,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Decoherence</h1>
+    <h1>Angular momentum</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-two-dimensional-system-interacting-with-a-large-dimensional-environment">18.1. Example: two-dimensional system interacting with a large-dimensional environment</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-of-the-system">18.1.1. State of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-of-the-system">18.1.2. Evolution of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoherence-time">18.1.3. Decoherence time</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -403,77 +388,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="decoherence">
-<span id="quantum-mechanics-decoherence"></span><h1><span class="section-number">18. </span>Decoherence<a class="headerlink" href="#decoherence" title="Permalink to this heading">#</a></h1>
-<div class="section" id="example-two-dimensional-system-interacting-with-a-large-dimensional-environment">
-<span id="quantum-mechanics-decoherence-example"></span><h2><span class="section-number">18.1. </span>Example: two-dimensional system interacting with a large-dimensional environment<a class="headerlink" href="#example-two-dimensional-system-interacting-with-a-large-dimensional-environment" title="Permalink to this heading">#</a></h2>
-<div class="section" id="state-of-the-system">
-<span id="quantum-mechanics-decoherence-example-state"></span><h3><span class="section-number">18.1.1. </span>State of the system<a class="headerlink" href="#state-of-the-system" title="Permalink to this heading">#</a></h3>
-<p>A 2-dimensional system is interacting with a large-dimensional environment. The state of the 2-dimensional system is identified by the wave function</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="angular-momentum">
+<span id="quantum-mechanics-angular-momentum"></span><h1><span class="section-number">16. </span>Angular momentum<a class="headerlink" href="#angular-momentum" title="Permalink to this heading">#</a></h1>
+<p>Promoting the classical definition of angular momentum <span class="math notranslate nohighlight">\(\mathbf{L} = \mathbf{r} \times \mathbf{p}\)</span>, the angular momentum operator in quantum mechanics reads</p>
 <div class="math notranslate nohighlight">
-\[| \Psi_S \rangle = c_0 | 0 \rangle + c_1 | 1 \rangle \ ,\]</div>
-<p>the state of the environment by the wave function <span class="math notranslate nohighlight">\(| \Psi_E \rangle\)</span>, and the state of the whole system (S+E) by the tensor product of the two,</p>
+\[\hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}} = \hat{\mathbf{e}}_a \varepsilon_{abc} \hat{r} \hat{p}_c \ ,\]</div>
+<p>and using space basis</p>
 <div class="math notranslate nohighlight">
-\[| \Psi_{S+E} \rangle = | \Psi_S \rangle \otimes | \Psi_E \rangle \ .\]</div>
-</div>
-<div class="section" id="evolution-of-the-system">
-<span id="quantum-mechanics-decoherence-example-evolution"></span><h3><span class="section-number">18.1.2. </span>Evolution of the system<a class="headerlink" href="#evolution-of-the-system" title="Permalink to this heading">#</a></h3>
-<p>The evolution of the system is governed by the Schrodinger equation, with the Hamiltonian of the whole system</p>
-<div class="math notranslate nohighlight">
-\[i \hbar \dfrac{d}{dt} | \Psi_{S+E} \rangle = \hat{H}_{S+E} | \Psi_{S+E} \rangle \ ,\]</div>
-<p>whose evolution can be represented by an unitary operator <span class="math notranslate nohighlight">\(\hat{U}_{S+E; t,0}\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[| \Psi_{S+E} \rangle_t = U_{S+E; t,0} | \Psi_{S+E} \rangle_0  = \dots = \alpha | 0 \rangle \otimes | \Psi_{E;0} \rangle + \beta | 1 \rangle \otimes | \Psi_{E;1} \rangle\]</div>
-<p>Density operator reads</p>
-<div class="math notranslate nohighlight">
-\[\hat{\rho} := | \Psi_{S+E} \rangle \langle \Psi_{S+E} | \ .\]</div>
-<p>Tracing out the environment states,</p>
+\[\langle \mathbf{r} | \hat{\mathbf{L}} = \hat{\mathbf{e}}_a \underbrace{\left( - i \, \hbar \, \varepsilon_{abc}\, r_b \, \partial_c \langle \mathbf{r} | \right) }_{\hat{L}_a}\ .\]</div>
+<p><strong>Composition of 2 components of the angular momentum operator.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \hat{\rho}_E 
-  &amp; = \text{Tr}_E \left( \hat{\rho} \right) = \\
-  &amp; = \sum_{k} \left( \alpha | 0 \rangle \langle \phi_k | \Psi_{E;0} \rangle + \beta | 1 \rangle \langle \phi_k | \Psi_{E;1} \rangle \right)  \left( \alpha^* \langle 0 | \langle \Psi_{E;0} | \phi_k  \rangle + \beta^* \langle 1 | \langle \phi_k | \Psi_{E;1} \rangle  \right) = \\
-  &amp; = |\alpha|^2 | 0 \rangle \langle 0 | \langle \Psi_{E;0} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k}_{= \hat{\mathbf{1}}} | \Psi_{E;0} \rangle + 
-      \alpha \beta^* | 0 \rangle \langle 1 | \langle \Psi_{E;0} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k |}_{= \hat{\mathbf{1}} } \Psi_{E;1} \rangle + \\
-  &amp; \quad + 
-      \alpha^* \beta | 1 \rangle \langle 0 | \langle \Psi_{E;1} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k}_{= \hat{\mathbf{1}}} | \Psi_{E;0} \rangle + 
-      |\beta|^2 | 1 \rangle \langle 1 | \langle \Psi_{E;1} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k |}_{= \hat{\mathbf{1}} } \Psi_{E;1} \rangle = \\
-  &amp; = |\alpha|^2 | 0 \rangle \langle 0 | + \alpha \beta^* \langle \Psi_{E;0} | \Psi_{E;1} \rangle | 0 \rangle \langle 1 | + 
-    + \alpha^* \beta \langle \Psi_{E;1} | \Psi_{E;0} \rangle | 1 \rangle \langle 0 | + |\beta|^2 | 1 \rangle \langle 1 | \ . 
+  \hat{L}_a \hat{L}_b 
+  &amp; = - \hbar^2 \varepsilon_{acd} r_c \partial_d \left( \varepsilon_{bef} r_e \partial_f \right) = \\
+  &amp; = - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c \left( \delta_{de} \partial_f + r_e \partial_{df} \right) = \\
+  &amp; = - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c r_e \partial_{df} = \\
+  &amp; = - \hbar^2 \left( \delta_{af} \delta_{cb} - \delta_{ab} \delta_{cf} \right) r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+  &amp; = - \hbar^2 r_b \partial_a + \hbar^2 \delta_{ab} r_c \partial_c - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
 \end{aligned}\end{split}\]</div>
-<p>The components of the reduced density operator in the system basis are</p>
+<p>The last term is symmetric w.r.t. <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p><strong>Commutators.</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix} |\alpha|^2  &amp; \alpha \beta^* \langle \Psi_{E;0} | \Psi_{E;1} \rangle \\ \alpha^* \beta \langle \Psi_{E;1} | \Psi_{E;0} \rangle &amp; |\beta|^2 \end{bmatrix} \ .\end{split}\]</div>
-</div>
-<div class="section" id="decoherence-time">
-<h3><span class="section-number">18.1.3. </span>Decoherence time<a class="headerlink" href="#decoherence-time" title="Permalink to this heading">#</a></h3>
-<p><strong>todo</strong> <em>check and uncomment</em></p>
-<!--
-$$\begin{aligned}
-  | \Psi_{E;0} \rangle & = \bigotimes_k | e_{0,k} \rangle \\
-  | \Psi_{E;1} \rangle & = \bigotimes_k | e_{1,k} \rangle \\
-\end{aligned}$$
-
-$$\begin{aligned}
-  \langle \Psi_{E;1} | \Psi_{E;0} \rangle = \bigotimes_k \langle e_{1,k} | e_{0,k} \rangle = \prod_k r_k e^{i \phi_k}  \ ,
-\end{aligned}$$
-
-with $r_k \in \mathbb{R}$, and $r \le 1$. Thus, for short time approximations, $e^x \sim 1 + x$
-
-$$\begin{aligned}
-  r_k(t) & \sim r_{k,0}( 1 + \gamma_k t ) \sim r_{k,0} e^{ \gamma_k t } \\
-  \phi_k(t) & \sim \phi_{k,0} + \omega_k t \\
-\end{aligned}$$
-
-$$\begin{aligned}
-  \langle \Psi_{E;1} | \Psi_{E;0} \rangle
-  & = \prod_k r_k e^{i \phi_k} = \\
-  & \sim \prod_k r_{k,0} e^{i \phi_{k,0}} e^{\left( \gamma_k + i \omega_k \right) t} = \\
-  & = \underbrace
-\end{aligned}$$
--->
-</div>
-</div>
+\[[ \hat{L}_a, \hat{L}_b ] = \hat{L}_a \hat{L}_b -  \hat{L}_b \hat{L}_a = - \hbar^2 ( r_b\partial_a - r_a \partial_b) \]</div>
+<p>If <span class="math notranslate nohighlight">\(a = b\)</span>, the obvious result follows, as an operator commutes with itself. If <span class="math notranslate nohighlight">\(a \ne b\)</span>, …</p>
+<div class="math notranslate nohighlight">
+\[[\hat{L}_a, \hat{L}_b ] = i \varepsilon_{abc} \hbar \hat{L}_c \ ,\]</div>
+<p>or with a compact “vector notation”, <span class="math notranslate nohighlight">\(\hat{\mathbf{L}} \times \hat{\mathbf{L}} = i \hbar \hat{\mathbf{L}}\)</span>.</p>
+<p><strong>Commutations with magnitude.</strong></p>
+<div class="math notranslate nohighlight">
+\[[ \hat{L}^2, \hat{L}_a ] = 0\]</div>
+<p>Analogous relations in <strong>classical mechanics</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  [ L_a, L_b ] = i \hbar \varepsilon_{abc} \hat{L}_c \qquad , \qquad \{ L_a, L_b \} = \varepsilon_{abc} L_c \\
+\end{split}\]</div>
+<p>provides another example of the relation between Poisson brackets in classical mechanics and commutator in quantum mechanics (<strong>Dirac</strong>)</p>
+<div class="math notranslate nohighlight">
+\[\{ A, B \} \quad \leftrightarrow \quad \frac{1}{i \hbar} [ \hat{A}, \hat{B} ]\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -507,20 +458,20 @@ $$\begin{aligned}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="density-operator.html"
+       href="wave-mechanics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">17. </span>Density Operator</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Wave quantum mechanics</p>
       </div>
     </a>
     <a class="right-next"
-       href="history.html"
+       href="density-operator.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">19. </span>Historical Approach to Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">17. </span>Density Operator</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -530,25 +481,6 @@ $$\begin{aligned}
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-two-dimensional-system-interacting-with-a-large-dimensional-environment">18.1. Example: two-dimensional system interacting with a large-dimensional environment</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-of-the-system">18.1.1. State of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-of-the-system">18.1.2. Evolution of the system</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoherence-time">18.1.3. Decoherence time</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
