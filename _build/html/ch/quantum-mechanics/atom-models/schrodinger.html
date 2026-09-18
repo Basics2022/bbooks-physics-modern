@@ -398,63 +398,184 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="schrodinger-model">
 <span id="quantum-mechanics-atom-models-schrodinger"></span><h1><span class="section-number">19.5. </span>Schrodinger model<a class="headerlink" href="#schrodinger-model" title="Permalink to this heading">#</a></h1>
+<p><strong>Schrodinger equation</strong> for the hydrogen atom in space basis reads</p>
+<div class="math notranslate nohighlight">
+\[i \hbar \Psi(\mathbf{r},t) = \left[ - \frac{\hbar^2}{2 m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r} \right] \Psi(\mathbf{r},t) \ . \]</div>
+<p>The <strong>eigenproblem of the Hermitian operator</strong> (projected onto space basis, as well) reads</p>
+<div class="math notranslate nohighlight">
+\[E_n \Psi_n(\mathbf{r}) = - \frac{\hbar^2}{2 m} \nabla^2 \Psi_n(\mathbf{r}) - \frac{q^2}{4 \pi \varepsilon r} \Psi_n(\mathbf{r}) \ .\]</div>
+<p>Given the symmetries of the system, the solution of the eigenproblem is evaluated using spherical coordinates <span class="math notranslate nohighlight">\(\{ r, \theta, \varphi \}\)</span>, and the method of separation of variables. Using <strong>spherical coordinates</strong>,</p>
+<div class="math notranslate nohighlight">
+\[- \frac{\hbar^2}{2m} \left\{ \frac{1}{r^2} \partial_r \left( r^2 \partial_r \right) + \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} \right\} \Psi_n - \frac{q^2}{4\pi \varepsilon_0 r} \Psi_n = E_n \Psi_n\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Separation of variables, <span class="math notranslate nohighlight">\(\ \Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ \)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With the <strong>method of separation of variables</strong>, we look for solutions in product form:</p>
+<div class="math notranslate nohighlight">
+\[\Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ ,\]</div>
+<p class="sd-card-text">and substituting into the Schrödinger equation:</p>
+<div class="math notranslate nohighlight">
+\[\left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right) R_n Y_{lm} = - \frac{\hbar^2}{2m} \left[ \frac{1}{r^2} \left( r^2 R_n' \right)' Y_{lm} + R_n \left( \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta Y_{lm} \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right) \right]\]</div>
+<p class="sd-card-text">Dividing by <span class="math notranslate nohighlight">\(R_n Y_{lm}\)</span>, and multiplying by <span class="math notranslate nohighlight">\(r^2 \frac{2m}{\hbar^2}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[0 = \underbrace{\frac{1}{R_n} (r^2 R_n')' + \frac{2m r^2}{\hbar^2} \left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right)}_{f(r)} + \underbrace{\frac{1}{Y_{lm}} \left\{ \frac{1}{\sin\theta} \partial_\theta (\sin\theta \partial_\theta Y_{lm}) + \frac{1}{\sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right\}}_{g(\theta, \varphi)}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(f(r) + g(\theta, \varphi) = 0\)</span>, both terms must equal equal-and-opposite constant <span class="math notranslate nohighlight">\(C\)</span> for all valid domains <span class="math notranslate nohighlight">\(r \in (0, +\infty)\)</span>, <span class="math notranslate nohighlight">\(\theta \in (0, \pi)\)</span>, <span class="math notranslate nohighlight">\(\varphi \in (0, 2\pi)\)</span></p>
+<div class="math notranslate nohighlight">
+\[C = f(r) = - g(\theta, \varphi) \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Radial equation, and energy levels<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Position operator<div class="sd-summary-down docutils">
+Change of variables, and asymptotic behavior<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Defining <span class="math notranslate nohighlight">\(C = \ell(\ell+1)\)</span>, and dividing the equation <span class="math notranslate nohighlight">\(f(r) = C\)</span> by <span class="math notranslate nohighlight">\(r^2\)</span>, for the states with <span class="math notranslate nohighlight">\(E_n &lt;0\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle\]</div>
+\[\frac{1}{r^2} \frac{d}{dr} \left( r^2 R' \right) + \left[ \frac{2m}{\hbar^2} \left( E + \frac{q^2}{4\pi \varepsilon_0 r} \right) - \frac{\ell(\ell + 1)}{r^2} \right] R = 0\]</div>
+<p class="sd-card-text">Defining the <strong>dimensionless radial variable</strong> <span class="math notranslate nohighlight">\(\rho = \kappa r\)</span>, so <span class="math notranslate nohighlight">\(\frac{d}{dr} = \kappa \frac{d}{d\rho}\)</span>, and factoring out <span class="math notranslate nohighlight">\(\kappa^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[0 = \kappa^2 \left\{ \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + \left( \frac{2m E}{\hbar^2 \kappa^2} + \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0 \rho} - \frac{\ell(\ell + 1)}{\rho^2} \right) \right\} R\]</div>
+<p class="sd-card-text">By choosing <span class="math notranslate nohighlight">\(\kappa^2 = -\frac{8 m E}{\hbar^2}\)</span> (where <span class="math notranslate nohighlight">\(\kappa = \frac{\sqrt{-8 m E}}{\hbar}\)</span> for <span class="math notranslate nohighlight">\(E &lt; 0\)</span>), the first term inside the parentheses becomes <span class="math notranslate nohighlight">\(-1\)</span>. Defining the constant parameter <span class="math notranslate nohighlight">\(\rho_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho_0 = \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0} = \frac{2m q^2}{\hbar^2 \sqrt{-8 m E} \cdot 4\pi \varepsilon_0} = \frac{q^2}{8\pi \varepsilon_0 \hbar} \sqrt{\frac{2m}{-E}} \ ,\]</div>
+<p class="sd-card-text">the dimensionless radial equation simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right]\]</div>
+<p class="sd-card-text">Boundary conditions required for regular wavefunctions:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho = 0) &lt; \infty, \quad R(\rho \to +\infty) = 0\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Wave function in space basis<div class="sd-summary-down docutils">
+Asymptotic behavior<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Large Distance Limit (<span class="math notranslate nohighlight">\(\rho \to +\infty\)</span>).</strong> For large <span class="math notranslate nohighlight">\(\rho\)</span>, terms proportional to <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span> and <span class="math notranslate nohighlight">\(\frac{1}{\rho^2}\)</span> become negligible:</p>
 <div class="math notranslate nohighlight">
-\[\Psi(\mathbf{r}, t) := \langle \mathbf{r} | \Psi_t \rangle \ .\]</div>
+\[\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) = R'' + \frac{2}{\rho} R' \sim R''\]</div>
+<p class="sd-card-text">The equation reduces to:</p>
+<div class="math notranslate nohighlight">
+\[R'' - \frac{1}{4} R \sim 0\]</div>
+<p class="sd-card-text">General solution:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = A e^{-\rho/2} + B e^{\rho/2}\]</div>
+<p class="sd-card-text">To satisfy the non-divergent boundary condition at infinity, set <span class="math notranslate nohighlight">\(B = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) \sim e^{-\rho/2} \quad \text{as } \rho \to +\infty\]</div>
+<p class="sd-card-text"><strong>Small Distance Limit (<span class="math notranslate nohighlight">\(\rho \to 0\)</span>).</strong> For <span class="math notranslate nohighlight">\(\rho \to 0\)</span>, the centrifugal term <span class="math notranslate nohighlight">\(\frac{\ell(\ell+1)}{\rho^2}\)</span> dominates over the constant and <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span> terms:</p>
+<div class="math notranslate nohighlight">
+\[R'' + \frac{2}{\rho} R' - \frac{\ell(\ell + 1)}{\rho^2} R \sim 0\]</div>
+<p class="sd-card-text">Proposing a power-law ansatz <span class="math notranslate nohighlight">\(R(\rho) \sim \rho^s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s(s - 1) \rho^{s-2} + 2s \rho^{s-2} - \ell(\ell + 1) \rho^{s-2} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[s^2 + s - \ell(\ell + 1) = 0\]</div>
+<p class="sd-card-text">Solving the quadratic characteristic equation for <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s_{1,2} = \frac{-1 \mp \sqrt{1 + 4\ell(\ell + 1)}}{2} = \frac{-1 \mp (1 + 2\ell)}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[s_1 = \ell, \quad s_2 = -(\ell + 1)\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\ell \ge 0\)</span>, <span class="math notranslate nohighlight">\(s_2 = -(\ell + 1)\)</span> leads to divergence at the origin <span class="math notranslate nohighlight">\(\rho \to 0\)</span>. Retaining only the physically acceptable solution <span class="math notranslate nohighlight">\(s = \ell\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) \sim \rho^\ell \quad \text{as } \rho \to 0\]</div>
+<p class="sd-card-text"><strong>Transformation &amp; Differential Equation for <span class="math notranslate nohighlight">\(v(\rho)\)</span>.</strong> Combining both asymptotic behaviors, we represent the full radial solution as:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = \rho^\ell e^{-\rho/2} v(\rho)\]</div>
+<p class="sd-card-text">Writing out derivatives of <span class="math notranslate nohighlight">\(R(\rho)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R' = \left( \ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell \right) e^{-\rho/2} v + \rho^\ell e^{-\rho/2} v'\]</div>
+<p class="sd-card-text">After expanding <span class="math notranslate nohighlight">\(\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right] = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[= e^{-\rho/2} \Big\{ \rho^\ell v'' + v' \left[ 2\ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell + 2 \rho^{\ell-1} \right] + v \left[ \rho^\ell \ell(\ell+1) - \rho^{\ell+1} \left( \ell + 1 \right) + \frac{1}{4} \rho^{\ell+2} - \ell(\ell+1) \rho^{\ell} - \frac{1}{4} \rho^{\ell+2} + \rho_0 \rho^{\ell+1} \right] \Big\} = 0\]</div>
+<p class="sd-card-text">Dividing out non-zero factor <span class="math notranslate nohighlight">\(\rho^{\ell-1} e^{-\rho/2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Orthonality, and identity operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="rubric">Radial Equation &amp; Energy Quantization</p>
+<p class="sd-card-text">Starting from the transformed radial equation:</p>
+<div class="math notranslate nohighlight">
+\[\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\]</div>
+<p class="sd-card-text">Looking for a power series solution:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  1
-  &amp; = \int_{\mathbf{r} \in \Omega} \Psi^*(\mathbf{r},t) \Psi(\mathbf{r},t) d \mathbf{r} = \\
-  &amp; = \langle \Psi_t | \, \underbrace{\int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}}_{= \hat{\mathbf{1}} } \, | \Psi_t \rangle  = \\
-  &amp; = \langle \Psi_t | \Psi_t \rangle \ .
+    v(\rho) &amp; = \sum_{k=0}^{\infty} c_k \rho^k  \\
+   v'(\rho) &amp; = \sum_{k=0}^{\infty} k c_k \rho^{k-1} \\
+  v''(\rho) &amp; = \sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-2} \\
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">So that the identity operator in space basis reads <span class="math notranslate nohighlight">\(\hat{\mathbf{1}} = \int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}\)</span>. A wave function can be thus written as</p>
-<div class="math notranslate nohighlight" id="equation-eq-quantum-space-representation">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-eq-quantum-space-representation" title="Permalink to this equation">#</a></span>\[| \Psi \rangle = \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle \ .\]</div>
+<p class="sd-card-text">Substituting into the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-1} + \sum_{k=0}^{\infty} 2(\ell + 1) k c_k \rho^{k-1} - \sum_{k=0}^{\infty} k c_k \rho^k + (\rho_0 - \ell - 1) \sum_{k=0}^{\infty} c_k \rho^k = 0\]</div>
+<p class="sd-card-text">Shift indices to group terms by power <span class="math notranslate nohighlight">\(\rho^k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} \Big\{ (k+1)(k) c_{k+1} + 2(\ell + 1)(k+1) c_{k+1} - k c_k + (\rho_0 - \ell - 1) c_k \Big\} \rho^k = 0\]</div>
+<p class="sd-card-text"><strong>Recurrence Relation.</strong> Equating coefficients to zero yields the recurrence relation for <span class="math notranslate nohighlight">\(c_k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_{k+1} = c_k \frac{k + \ell + 1 - \rho_0}{(k + 1)(k + 2\ell + 2)}\]</div>
+<p class="sd-card-text"><strong>Asymptotic Behavior &amp; Series Termination.</strong> If the power series does not terminate, as <span class="math notranslate nohighlight">\(k \to +\infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{c_{k+1}}{c_k} \longrightarrow \frac{1}{k}\]</div>
+<p class="sd-card-text">This asymptotic behavior matches that of the exponential expansion <span class="math notranslate nohighlight">\(e^\rho \sim \sum \frac{\rho^k}{k!}\)</span> and thus <span class="math notranslate nohighlight">\(\frac{c_{k+1}}{c_k} = \frac{1}{k+1} \sim \frac{1}{k}\)</span>.
+Thus, an infinite series <span class="math notranslate nohighlight">\(v(\rho) \sim e^\rho\)</span>, would lead to <span class="math notranslate nohighlight">\(R(\rho) \sim e^{-\rho/2} e^\rho = e^{\rho/2}\)</span>, which diverges as <span class="math notranslate nohighlight">\(\rho \to +\infty\)</span>.
+Thus, in order to maintain physical normalizability, the series must terminate at a maximum power <span class="math notranslate nohighlight">\(k_{\max} = N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_{N+1} = 0 \implies N + \ell + 1 - \rho_0 = 0 \implies \rho_0 = N + \ell + 1 \equiv n\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(N \ge 0\)</span> is the radial quantum number.</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n = N + \ell + 1\)</span> is the <strong>Principal Quantum Number</strong> (<span class="math notranslate nohighlight">\(n \ge 1\)</span>).</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\forall n\)</span>, the orbital angular momentum quantum number satisfies <span class="math notranslate nohighlight">\(0 \le \ell \le n - 1\)</span>.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Energy Quantization.</strong> Recalling the definition of <span class="math notranslate nohighlight">\(\rho_0\)</span>, <span class="math notranslate nohighlight">\(n = \rho_0 = \sqrt{\frac{2m}{-E}} \frac{q^2}{4\pi \varepsilon_0 \hbar}\)</span>, and solving for the bound state energies <span class="math notranslate nohighlight">\(E_n\)</span> (<span class="math notranslate nohighlight">\(E &lt; 0\)</span>), the relation between the energy <span class="math notranslate nohighlight">\(E_n\)</span> of the <span class="math notranslate nohighlight">\(n^{th}\)</span> energy level and the principal quantum number <span class="math notranslate nohighlight">\(n\)</span> follows</p>
+<div class="math notranslate nohighlight">
+\[E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .\]</div>
+<p class="sd-card-text"><strong>Radial solution.</strong></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Expansion in space basis<div class="sd-summary-down docutils">
+Further separation of variables, <span class="math notranslate nohighlight">\(\ Y_{lm}(\theta, \varphi) = \Theta(\theta) \Phi(\varphi) \ \)</span> <div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
-  \langle \mathbf{r} | \Psi \rangle = \Psi(\mathbf{r},t)
-  &amp; = \int_{\mathbf{r}' \in \Omega} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) \, d \mathbf{r}'
-\end{aligned}\]</div>
-<p class="sd-card-text">Comparing the last expression, with the projection of the expression <a class="reference internal" href="#equation-eq-quantum-space-representation">(19.1)</a> over <span class="math notranslate nohighlight">\(\langle \mathbf{r} |\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
-  \langle \mathbf{r} | \Psi \rangle = \langle \mathbf{r} |  \ , \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \,  d \mathbf{r}' = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r'},t ) \,  d \mathbf{r}' \ ,
-\end{aligned}\]</div>
-<p class="sd-card-text">if follows the orthogonality condition <span class="math notranslate nohighlight">\(\langle \mathbf{r} | \mathbf{r}' \rangle = \delta(\mathbf{r} - \mathbf{r}')\)</span>.</p>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Azimuthal equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Polar equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
 </details></div>
 
     <script type="text/x-thebe-config">
