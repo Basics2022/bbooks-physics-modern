@@ -51,7 +51,9 @@ The angular momentum and the energy of the system are
     & = - \frac{q^2}{8 \pi \varepsilon} \frac{1}{r_n} = && \text{($r_n$ from angular momentum)} \\
     & = - \frac{m q^4}{32 \pi^2 \varepsilon^2 \hbar^2} \frac{1}{n^2} = && \text{($h = 2 \pi \hbar$)} \\
     & = - \frac{m q^4}{8 \varepsilon^2 h^2}\frac{1}{n^2} \ .
-  \end{aligned}$$
+  \end{aligned}$$ (eq:atom:bohr:energy)
+
+**Remark.** The value of energy $E_n$ of Bohr model coincides with the value {eq}`eq:atom:schrodinger:energy` of the energy produced by [Schrodinger model](quantum-mechanics:atom-models:schrodinger).
 
 From the relation $\Delta E = \nu h$, the relation between the frequency of the emitted (if $E_{n} > E_{m}$, $n$ initial state, $m$ final state) or absorbed (if $E_n < E_m$, $n$ initial state, $m$ final state) radiation, follows
 
