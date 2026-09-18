@@ -1,7 +1,10 @@
 (quantum-mechanics:atom-models:schrodinger)=
 # Schrodinger model
 
-```{dropdown} Position operator
+
+````{dropdown} Position operator
+
+```{dropdown} Definition
 :open:
 
 $$\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle$$
@@ -49,5 +52,6 @@ $$\begin{aligned}
 
 if follows the orthogonality condition $\langle \mathbf{r} | \mathbf{r}' \rangle = \delta(\mathbf{r} - \mathbf{r}')$.
 
-
 ```
+````
+
