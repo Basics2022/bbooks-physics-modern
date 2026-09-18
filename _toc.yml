@@ -43,6 +43,7 @@ parts:
   chapters:
   - file: ch/quantum-mechanics/intro
   - file: ch/quantum-mechanics/notes
+  - file: ch/quantum-mechanics/wave-mechanics
   - file: ch/quantum-mechanics/density-operator
   - file: ch/quantum-mechanics/decoherence
   - file: ch/quantum-mechanics/history
@@ -51,8 +52,14 @@ parts:
     - file: ch/quantum-mechanics/history/timeline
     - file: ch/quantum-mechanics/history/light-dispersion
     - file: ch/quantum-mechanics/history/einstein-planck
-    - file: ch/quantum-mechanics/history/atom-models
     - file: ch/quantum-mechanics/history/larmor-formula
+  - file: ch/quantum-mechanics/atom-models
+    sections:
+    - file: ch/quantum-mechanics/atom-models/thomson
+    - file: ch/quantum-mechanics/atom-models/rutherford
+    - file: ch/quantum-mechanics/atom-models/bohr
+    - file: ch/quantum-mechanics/atom-models/sommerfeld
+    - file: ch/quantum-mechanics/atom-models/schrodinger
 - caption: Solid State Physics
   numbered: True
   chapters:
@@ -66,3 +73,6 @@ parts:
     - file: ch/solid-state/semiconductors-non-equilibrium
     - file: ch/solid-state/semiconductors-pn-junctions
     - file: ch/solid-state/semiconductors-pn-diodes
+
+
+

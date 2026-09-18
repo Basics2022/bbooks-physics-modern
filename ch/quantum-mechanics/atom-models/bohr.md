@@ -1,14 +1,5 @@
-(quantum-mechanics:history:atom-models)=
-# Atomic models
-
-(quantum-mechanics:history:atom-models:thomson)=
-## Thomson
-
-(quantum-mechanics:history:atom-models:rutherford)=
-## Rutherford
-
-(quantum-mechanics:history:atom-models:bohr)=
-## Bohr
+(quantum-mechanics:atom-models:bohr)=
+# Bohr model
 
 Assumption:
 * Electron moves on circular orbits
@@ -65,8 +56,4 @@ The angular momentum and the energy of the system are
 From the relation $\Delta E = \nu h$, the relation between the frequency of the emitted (if $E_{n} > E_{m}$, $n$ initial state, $m$ final state) or absorbed (if $E_n < E_m$, $n$ initial state, $m$ final state) radiation, follows
 
 $$\nu_{nm} = \frac{E_n - E_m}{h} = - \frac{m q^4}{8 \varepsilon^2 h^3} \left( \frac{1}{n^2} - \frac{1}{m^2} \right)$$
-
-(quantum-mechanics:history:atom-models:sommerfeld)=
-## Sommerfeld
-
 
