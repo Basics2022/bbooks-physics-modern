@@ -170,7 +170,9 @@ where:
 
 $$E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .$$
 
-**Radial solution.**
+**Radial solution.** Putting everything together, the radial part of the solution reads
+
+$$R(\rho) = e^{-\rho/2} \rho^{\ell} L^{2 \ell-1}{n-\ell-1}(\rho) \ .$$
 
 ```
 
