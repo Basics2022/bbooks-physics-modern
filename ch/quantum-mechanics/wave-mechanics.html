@@ -398,7 +398,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">15.2. Schrodinger</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation">15.2.1. Derivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-eigen-states">15.2.2. Energy eigen-states</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">15.2.3. </a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#space-and-momentum-operators">15.2.3. Space and momentum operators</a></li>
 </ul>
 </li>
 </ul>
@@ -480,9 +480,116 @@ document.write(`
 \[p(E = E_k) = | \langle \Psi_k | \Psi_t \rangle |^2 = \left| \underbrace{\langle \Psi_k | \Psi_a \rangle}_{\delta_{ka}} \exp\left(-i \frac{E_a}{\hbar} t\right) \right|^2 = \delta_{ka} \ ,\]</div>
 <p>i.e. there’s probability of finding it in the same state as the initial state <span class="math notranslate nohighlight">\(a\)</span> is <span class="math notranslate nohighlight">\(p(E = E_a) = 1\)</span>, while the probability of finding in any other state is zero, <span class="math notranslate nohighlight">\(p(E = E_k) = 0\)</span>, <span class="math notranslate nohighlight">\(k \ne a\)</span>.</p>
 </div>
-<div class="section" id="id1">
-<h3><span class="section-number">15.2.3. </span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="section" id="space-and-momentum-operators">
+<h3><span class="section-number">15.2.3. </span>Space and momentum operators<a class="headerlink" href="#space-and-momentum-operators" title="Permalink to this heading">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Position operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Definition<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle\]</div>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Wave function in space basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\Psi(\mathbf{r}, t) := \langle \mathbf{r} | \Psi_t \rangle \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Orthonality, and identity operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  1
+  &amp; = \int_{\mathbf{r} \in \Omega} \Psi^*(\mathbf{r},t) \Psi(\mathbf{r},t) d \mathbf{r} = \\
+  &amp; = \langle \Psi_t | \, \underbrace{\int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}}_{= \hat{\mathbf{1}} } \, | \Psi_t \rangle  = \\
+  &amp; = \langle \Psi_t | \Psi_t \rangle \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">So that the identity operator in space basis reads <span class="math notranslate nohighlight">\(\hat{\mathbf{1}} = \int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}\)</span>. A wave function can be thus written as</p>
+<div class="math notranslate nohighlight" id="equation-eq-quantum-space-representation">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-eq-quantum-space-representation" title="Permalink to this equation">#</a></span>\[| \Psi \rangle = \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Expansion in space basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle = \Psi(\mathbf{r},t)
+  &amp; = \int_{\mathbf{r}' \in \Omega} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) \, d \mathbf{r}'
+\end{aligned}\]</div>
+<p class="sd-card-text">Comparing the last expression, with the projection of the expression <a class="reference internal" href="#equation-eq-quantum-space-representation">(15.2)</a> over <span class="math notranslate nohighlight">\(\langle \mathbf{r} |\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle = \langle \mathbf{r} |  \ , \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \,  d \mathbf{r}' = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r'},t ) \,  d \mathbf{r}' \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">if follows the orthogonality condition <span class="math notranslate nohighlight">\(\langle \mathbf{r} | \mathbf{r}' \rangle = \delta(\mathbf{r} - \mathbf{r}')\)</span>.</p>
+</div>
+</details></div>
+</details><p>The classical Hamiltonian of  the system reads</p>
+<div class="math notranslate nohighlight">
+\[H(\mathbf{r}, \mathbf{p}) = \frac{| \mathbf{p} |^2 }{2m} - \frac{q^2}{4 \pi \varepsilon | \mathbf{r} |} \ ,\]</div>
+<p>the promotion to the Hamiltonian operator is thus</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \frac{| \hat{\mathbf{p}} |^2}{2 m } - \frac{q^2}{4 \pi \varepsilon} \hat{|\mathbf{r}|}^{-1} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Power of an operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Positive integer power</p>
+<div class="math notranslate nohighlight">
+\[\hat{A}^n = \underbrace{\hat{A} \dots \hat{A}}_{\text{$n$ times}}\]</div>
+<p class="sd-card-text">Let the eigenproblem of the operator be <span class="math notranslate nohighlight">\(\hat{A} | a \rangle = a | a \rangle\)</span>, with <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>. Then, the eigenproblem for the operator <span class="math notranslate nohighlight">\(\hat{A}^n\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\hat{A}^n | a \rangle = a^n | a \rangle \ .\]</div>
+<p class="sd-card-text">The inverse of an operator has the eigenproblem</p>
+<div class="math notranslate nohighlight">
+\[\hat{A}^{-1} | a \rangle = \frac{1}{a} | a \rangle \ ,\]</div>
+<p class="sd-card-text">as <span class="math notranslate nohighlight">\(| a \rangle = \hat{A} \left( \hat{A}^{-1} | a \rangle \right) = \frac{1}{a} \hat{A} | a \rangle = \frac{1}{a} \, a | a \rangle = | a \rangle\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Vector operators<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Momentum operator, <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}\)</span>, in space base <span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{p}} = -i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} |\)</span>.
+Using Cartesian coordinates</p>
+<div class="math notranslate nohighlight">
+\[ \hat{\mathbf{e}}_a \, \langle \mathbf{r} | \hat{p}_a = - \hat{\mathbf{e}}_a \, i \hbar \partial_a \langle \mathbf{r} |\]</div>
+<p class="sd-card-text">The operator of the square magnitude reads</p>
+<div class="math notranslate nohighlight">
+\[\hat{\left( | \mathbf{p}|^2 \right)} = \hat{\left( p_x^2 + p_y^2 + p_z^2 \right)} = \hat{p_x^2} +  \hat{p_y^2} + \hat{p_z^2} \ , \]</div>
+<p class="sd-card-text">and in space coordinates</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\left( |\mathbf{p} |^2 \right)} = - \hbar^2 \partial_{aa} \langle \mathbf{r} | = - \hbar^2 \nabla^2 \langle \mathbf{r} | \]</div>
+</div>
+</details></div>
 </div>
 </div>
 
@@ -553,7 +660,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger">15.2. Schrodinger</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation">15.2.1. Derivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-eigen-states">15.2.2. Energy eigen-states</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">15.2.3. </a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#space-and-momentum-operators">15.2.3. Space and momentum operators</a></li>
 </ul>
 </li>
 </ul>
