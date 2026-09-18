@@ -168,7 +168,9 @@ where:
 
 **Energy Quantization.** Recalling the definition of $\rho_0$, $n = \rho_0 = \sqrt{\frac{2m}{-E}} \frac{q^2}{4\pi \varepsilon_0 \hbar}$, and solving for the bound state energies $E_n$ ($E < 0$), the relation between the energy $E_n$ of the $n^{th}$ energy level and the principal quantum number $n$ follows
 
-$$E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .$$
+$$E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .$$ (eq:atom:schrodinger:energy)
+
+**Remark.** The value of energy $E_n$ of Schrodinger model coincides with the value {eq}`eq:atom:bohr:energy` of the energy produced by [Bohr model](quantum-mechanics:atom-models:bohr).
 
 **Radial solution.** Putting everything together, the radial part of the solution reads
 

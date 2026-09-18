@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -438,8 +429,8 @@ document.write(`
    \end{aligned}\end{split}\]</div>
 </li>
 <li><p>Energy,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<div class="math notranslate nohighlight" id="equation-eq-atom-bohr-energy">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-eq-atom-bohr-energy" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
     E_n 
     &amp; = \frac{1}{2} m |\dot{\vec{r}}_n|^2 - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r_n} =  &amp;&amp; \text{(radial component of the eom)} \\
     &amp; = \frac{q^2}{8 \pi \varepsilon} \frac{1}{r_n} - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r_n} = \\
@@ -449,6 +440,7 @@ document.write(`
   \end{aligned}\end{split}\]</div>
 </li>
 </ul>
+<p><strong>Remark.</strong> The value of energy <span class="math notranslate nohighlight">\(E_n\)</span> of Bohr model coincides with the value <a class="reference internal" href="schrodinger.html#equation-eq-atom-schrodinger-energy">(19.2)</a> of the energy produced by <a class="reference internal" href="schrodinger.html#quantum-mechanics-atom-models-schrodinger"><span class="std std-ref">Schrodinger model</span></a>.</p>
 <p>From the relation <span class="math notranslate nohighlight">\(\Delta E = \nu h\)</span>, the relation between the frequency of the emitted (if <span class="math notranslate nohighlight">\(E_{n} &gt; E_{m}\)</span>, <span class="math notranslate nohighlight">\(n\)</span> initial state, <span class="math notranslate nohighlight">\(m\)</span> final state) or absorbed (if <span class="math notranslate nohighlight">\(E_n &lt; E_m\)</span>, <span class="math notranslate nohighlight">\(n\)</span> initial state, <span class="math notranslate nohighlight">\(m\)</span> final state) radiation, follows</p>
 <div class="math notranslate nohighlight">
 \[\nu_{nm} = \frac{E_n - E_m}{h} = - \frac{m q^4}{8 \varepsilon^2 h^3} \left( \frac{1}{n^2} - \frac{1}{m^2} \right)\]</div>
