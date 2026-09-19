@@ -6,6 +6,7 @@
   - CCR
 - angluar momentum, spin, and atom
 
+(quantum-mechanics:intro:math)=
 ## Mathematical tools for quantum mechanics
 
 ```{prf:definition} Operator
@@ -40,21 +41,25 @@ $$\hat{A}^* = \hat{A} \ .$$
 Self-adjoint operators have real eigenvalues, and orthogonal eigenvectors (at least those associated to different eigenvalues; those associated with the same eigenvalues can be used to build an orthogonal set of vectors with orthogonalization process).
 
 
+(quantum-mechanics:intro:postulates)=
 ## Postulates of Quantum Mechanics
 - ...
 - Canonical Commutation Relation (CCR) *and Canonical Anti-Commutation Relation...*
 - ...
 
+(quantum-mechanics:intro:non-relativistic)=
 ## Non-relativistic Mechanics
-### Statistical Interpretation and Measurement
-#### Wave function
+
+(quantum-mechanics:intro:non-relativistic:wave-function)=
+### Wave function
 The state of a system is described by a wave function $|\Psi\rangle$ 
 
 **todo**
 - properties: domain, image,...
 - unitary $1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2$, for statistical interpretation of $\left| \Psi \right|^2$ as a density probability function
 
-#### Operators and Observables
+(quantum-mechanics:intro:non-relativistic:observables-operators)=
+### Operators and Observables
 Physical **observable** quantities are represented by [Hermitian operators](quantum-mechanics:math:operators:self-adjoint). Possible outcomes of measurement are the eigenvalues of the operator
 
 Given $\hat{A}$ and the set of its eigenvectors $\{ |A_i \rangle \}_i$ (**todo** *continuous or discrete spectrum..., need to treat this difference quite in details*), with associated eigenvalues $\{ a_i \}_i$
@@ -113,6 +118,10 @@ $$\begin{aligned}
 -->
 
 
+(quantum-mechanics:intro:non-relativistic:basis)=
+### Space and Momentum Representation
+
+(quantum-mechanics:intro:non-relativistic:basis:space)=
 #### Space Representation
 
 **Position operator** $\hat{\mathbf{r}}$ has eigenvalues $\mathbf{r}$ identifying the possible measurements of the position
@@ -173,6 +182,7 @@ being $\mathbf{r}$ the result of the measurement (position in space, mathematica
   & = \int_{\mathbf{r}'}  \left| \Psi(\mathbf{r}',t) \right|^2 \, \mathbf{r}' \, d \mathbf{r}' \ .
   \end{aligned}$$
 
+(quantum-mechanics:intro:non-relativistic:basis:momentum)=
 #### Momentum Representation
 
 **Momentum operator** as the limit of...**todo** *prove the expression of the momentum operator as the limit of the generator of translation*
@@ -208,6 +218,7 @@ $$\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} | 
 
   - representation in basis of wave vector operator $\hat{\mathbf{k}}$, $\hat{\mathbf{p}} = \hbar \hat{\mathbf{k}}$
 
+(quantum-mechanics:intro:non-relativistic:basis:space-momentum)=
 #### From position to momentum representation
 
 Momentum and wave vector, $\mathbf{p} = \hbar \mathbf{k}$
@@ -231,12 +242,14 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation)=
 ### Schrodinger Equation
 
 $$i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle $$
 
 being $\hat{H}$ the Hamiltonian operator and $|\Psi\rangle$ the wave function, as a function of time $t$ as an independent variable.
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation:hamiltonian)=
 #### Stationary States
 Eigenspace of the Hamiltonian operator
 
@@ -269,11 +282,13 @@ $$\begin{aligned}
  & = \langle \Psi | \left( \frac{i}{\hbar} [ \hat{H}, \hat{A} ] + \frac{d \hat{A}}{dt} \right) | \Psi \rangle \ .
 \end{aligned}$$
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation:pictures)=
 #### Pictures
 - Schrodinger
 - Heisenberg
 - Interaction
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation:pictures:schrodinger)=
 ##### Schrodinger
 
 If $\hat{H}$ not function of time
@@ -282,15 +297,62 @@ $$| \Psi \rangle (t) = \exp\left[ - i \frac{\hat{H}}{\hbar} (t-t_0) \right] | \P
 
 $$\bar{A} = \langle \Psi | \hat{A} | \Psi \rangle = \langle \Psi_0 | \hat{U}^*(t,t_0) \hat{A} \hat{U}(t,t_0) | \Psi_0 \rangle$$
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation:pictures:heisenberg)=
 ##### Heisenberg
 
-...
+While Schrodinger picture works with (usually) time-independent operators and time-dependent wave functions, Heisenberg picture works with time-dependent operators and time-independent wave functions. The state of a quantum system at two different times is connected by a unitary operator $U_{t,t_0}$,
 
+$$| \Psi_t \rangle = U_{t,t_0} | \Psi_{t_0} \rangle$$
+
+**Expected value.** The expected value of the physical quantity represented by the Hermitian operator $\hat{A}$ reads
+
+$$\begin{aligned}
+ \langle \hat{A} \rangle 
+ & = \langle \Psi_t | \hat{A} | \Psi_t \rangle = \\
+ & = \langle \Psi_{t_0} | U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} | \Psi_{t_0} \rangle = \\
+ & = \langle \Psi_{t_0} | \hat{A}_H(t) | \Psi_{t_0} \rangle \ ,
+\end{aligned}$$
+
+having defined the counterpart in Heisenberg picture, $\hat{A}_H(t) = U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0}$ of the operator $\hat{A}$ in Schrodinger picture.
+
+**Hamiltonian operator in Heisenberg picture.** 
+
+$$\hat{H}_H = U^\dagger \hat{H} U  \ .$$
+
+**If** the Hamiltonian operator is **time-independent in Schrodinger picture**, the evolution operator can be written as $U_{t} = \exp\left(-i \frac{\hat{H}}{\hbar} t  \right)$. In this case, $U$ and $\hat{H}$ commute, and the Hamiltonian operator in Heisenberg picture has the same expression as the Hamiltonian operator in Schrodinger equation,
+
+$$\hat{H}_H = U^{\dagger} \hat{H} U = \quad ( \quad \text{if $\partial_t \hat{H} = 0$} \quad ) \quad = U^{\dagger} U \hat{H} = \hat{H} \ .$$
+
+**Time derivative of the operator $\hat{A}_H(t)$.**
+
+$$\begin{aligned}
+  \dfrac{d}{dt} \hat{A}_H(t)
+  & = \dfrac{d}{dt} \left( U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} \right) = \\
+  & = \partial_t U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \hat{A} \partial_t U_{t,t_0} = \\
+  & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} \hat{H} U_{t,t_0} = \\
+  & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} U_{t,t_0} U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} U^{\dagger}_{t,t_0}  \hat{H} U_{t,t_0} = \\
+  & = - \frac{1}{i\hbar} \left[ \hat{H}_H, \hat{A}_H \right] + \left( \partial_t \hat{A} \right)_H  \ ,
+\end{aligned}$$
+
+as the relation {eq}`eq:h-u-dtu` gives $\partial_t U_{t,t_0} U^{\dagger}_{t,t_0} = \frac{1}{i \hbar} \hat{H}$, 
+
+
+<!--
+**Commutation of $U$ with $\hat{H}$.**
+
+$$\hat{H} U = \left( i \hbar \partial_t U \,  U^\dagger \right) U = i \hbar \partial_t U$$
+
+$$U^\dagger \hat{H} = U^\dagger \left( i \hbar \partial_t U \,  U^\dagger \right) = - i \hbar U^{\dagger} U \partial_t U^{\dagger} = - i \hbar \partial_t U^\dagger =$$
+-->
+
+---
+
+**old** ...
 for $\hat{H}$ independent from time $t$,
 
 $$\begin{aligned}
-  \dfrac{d}{dt} \bar{\mathbf{r}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} \\
-  \dfrac{d}{dt} \bar{\mathbf{p}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} \\
+  \dfrac{d}{dt} \bar{\mathbf{r}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} = - \frac{1}{ih} \overline{[ \hat{H}, \hat{\mathbf{r}} ]} \\
+  \dfrac{d}{dt} \bar{\mathbf{p}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} = - \frac{1}{ih} \overline{[ \hat{H}, \hat{\mathbf{p}} ]} \\
 \end{aligned}$$
 
 ```{dropdown} Hamiltonian Mechanics
@@ -321,18 +383,19 @@ $$\begin{cases}
   \frac{\partial H}{\partial t} = - \frac{\partial L}{\partial t}
 \end{cases}$$
 
-Physical quantity $f(p(t), q(t), t)$. Its time derivative reads
+Physical quantity $f(q(t), p(t), t)$. Its time derivative reads
 
 $$\begin{aligned}
 \frac{d f}{dt}
-  & = \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial t} = \\
-  & = \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial t} = \\
-  & = \{ H, f \} + \partial_t f + Q_q \partial_p f
+  & = \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial t} = \\
+  & = \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial t} = \\
+  & = - \partial_q H \partial_p f + \partial_p H \partial_q f + \partial_t f + Q_q \partial_p f = \\
+  & = - \{ H, f \} + \partial_t f + Q_q \partial_p f
 \end{aligned}$$
 
 If $Q_q = 0$, the correspondence between quantum mechanics and classical mechanics
 
-$$\frac{d f}{d t} = \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = \overline{\frac{i}{\hbar} [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}$$
+$$\frac{d f}{d t} = - \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = - \frac{1}{i \hbar} \overline{ [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}$$
 
 $$\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]$$
 
@@ -342,6 +405,7 @@ $$\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]$$
 
 
 
+(quantum-mechanics:intro:non-relativistic:schrodinger-equation:pictures:interaction)=
 ##### Interaction
 
 

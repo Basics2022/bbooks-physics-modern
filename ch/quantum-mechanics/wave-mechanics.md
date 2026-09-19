@@ -42,11 +42,15 @@ showing that it's independent from the initial time, $\hat{A}(t,t_0) = \hat{A}(t
 
 $$0 = \partial_t \underbrace{\left( U_{t,t_0} U_{t,t_0}^{\dagger} \right)}_{= \hat{\mathbf{1}} } = \underbrace{ \partial_t U_{t,t_0} U_{t,t_0}^\dagger}_{ = \hat{A}(t)} + \underbrace{ U_{t,t_0} \, \partial_t U_{t,t_0}^\dagger}_{= \hat{A}^\dagger(t)} = \hat{A}(t) + \hat{A}^\dagger(t) \ ,$$
 
-and thus $\hat{A} = - \hat{A}^\dagger$. Thus the operator $\hat{A}$ can be written as $\hat{A} = i \hat{\tilde{H}}$, being $\hat{\tilde{H}}$ and Hermitian operator. For the correspondence principle (classical limit for $\hbar \rightarrow 0$) the Hermitian operator is found to be $\hat{\tilde{H}} = -\frac{1}{\hbar} \hat{H}$, being $\hat{H}$ the Hamiltonian operator. **todo** *Add a link to "correspondence principle", either Ehrenfest theoremand/ or equations in Heisenberg picture*
+and thus $\hat{A} = - \hat{A}^\dagger$. Thus the operator $\hat{A}$ can be written as $\hat{A} = i \hat{\tilde{H}}$, being $\hat{\tilde{H}}$ and Hermitian operator. For the correspondence principle (classical limit for $\hbar \rightarrow 0$) the Hermitian operator is found to be $\hat{\tilde{H}} = -\frac{1}{\hbar} \hat{H}$, being $\hat{H}$ the Hamiltonian operator. **todo** *Add a link to "correspondence principle", either Ehrenfest theorem and/ or equations in Heisenberg picture*
 
 Thus, the wave equation becomes
 
-$$| \dot{\Psi} \rangle = - \frac{1}{i \hbar} \hat{H} | \Psi \rangle \qquad \text{or} \qquad i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle \ .$$ (eq:schrodinger)
+$$| \dot{\Psi} \rangle = \frac{1}{i \hbar} \hat{H} | \Psi \rangle \qquad \text{or} \qquad i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle \ .$$ (eq:schrodinger)
+
+The Hamiltonian can be written as a function of the unitary operator $U_{t,t_0}$ and its time derivative as
+
+$$\hat{H} = i \hbar \, \partial_t U_{t,t_0} U^{\dagger}_{t,t_0} \ .$$ (eq:h-u-dtu)
 
 ### Energy eigen-states
 
