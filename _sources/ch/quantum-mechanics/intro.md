@@ -408,6 +408,14 @@ $$\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]$$
 (quantum-mechanics:intro:non-relativistic:schrodinger-equation:pictures:interaction)=
 ##### Interaction
 
+### Operators
+
+Commuting operators, $0 = [ \hat{A}, \hat{B} ] = \hat{A} \hat{B} - \hat{B} \hat{A}$. Their eigenvalue problems read
+
+$$\begin{aligned}
+  \hat{A} | a \rangle & = a | a \rangle \\
+  \hat{B} | b \rangle & = b | b \rangle \\
+\end{aligned}$$
 
 ### Matrix Mechanics
 
