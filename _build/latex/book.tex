@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Sep 15, 2026}
+\date{Sep 21, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -194,7 +194,27 @@ Quantum Mechanics
 
 \item {} 
 \sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/wave-mechanics::doc}]{\sphinxcrossref{Wave quantum mechanics}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum::doc}]{\sphinxcrossref{Angular Momentum}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/density-operator::doc}]{\sphinxcrossref{Density Operator}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/decoherence::doc}]{\sphinxcrossref{Decoherence}}}
+
+\item {} 
+\sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/history::doc}]{\sphinxcrossref{Historical Approach to Quantum Mechanics}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models::doc}]{\sphinxcrossref{Atomic models}}}
 
 \end{itemize}
 \end{itemize}
@@ -1771,6 +1791,10 @@ By direct comparison with the Poisson equation for Newtonian gravitation, \(\nab
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/relativity-general/schwarzschild-metric:relativity-general-notes-examples-schwarzschild}]{\sphinxcrossref{\DUrole{std,std-ref}{Schwarzschild metric}}}}
 
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-general/schwarzschild-orbits:relativity-general-notes-examples-schwarzschild-orbits}]{\sphinxcrossref{\DUrole{std,std-ref}{Orbits in Schwarzschild spacetime}}}}
+
 \end{itemize}
 
 \sphinxstepscope
@@ -2024,6 +2048,196 @@ or, using the common transformation between spherical and Cartesian space coordi
 \end{cases}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}ds^2 = - c^2 dt^2 + dx^2 + dy^2 + dz^2 \ .\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\subsection{Planetary orbits in Schwarzschild spacetime}
+\label{\detokenize{ch/relativity-general/schwarzschild-orbits:planetary-orbits-in-schwarzschild-spacetime}}\label{\detokenize{ch/relativity-general/schwarzschild-orbits:relativity-general-notes-examples-schwarzschild-orbits}}\label{\detokenize{ch/relativity-general/schwarzschild-orbits::doc}}
+\sphinxAtStartPar
+Schwarzschild metrics \eqref{equation:ch/relativity-general/schwarzschild-metric:eq:schwarzschild-metrics} provides the metrics induced by a massive object in the vacuum spacetime around. The motion of a light object approximately doesn’t affect the massive object generating the steady Schwarzschild metrics. The light object moves following the geodesics.
+Let the motion occurs in the equatorial plane, i.e. \(\theta = \frac{\pi}{2}\), and \(d \theta = 0\). Thus
+\begin{equation*}
+\begin{split}
+- c^2 d \tau^2 = ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 \, d\phi^2 \ .
+\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Geodesics.} With \(A(r) = \frac{1}{2} \ln \left( 1 - \frac{r_s}{r} \right)\), \(A'(r) = \frac{1}{2} \frac{1}{1 - \frac{r_s}{r}} \frac{r_s}{r^2}\)
+\begin{equation*}
+\begin{split}0 = \ddot{q}^k + \Gamma_{a b}^k \dot{q}^{a} \dot{q}^b\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  t : \qquad 
+  0 & = \ddot{t} + \Gamma_{ab}^t \dot{q}^a \dot{q}^b = \\
+    & = \ddot{t} + 2 \Gamma_{tr}^t \dot{t} \dot{r} = \\
+    & = \ddot{t} + \frac{1}{1 - \frac{r_s}{r}} \frac{r_s}{r^2} \dot{t} \dot{r} \\
+  0 & = \left(1 - \frac{r_s}{r} \right)^{-1} \left[ \left( 1-\frac{r_s}{r}\right) \ddot{t} + \frac{r_s}{r^2} \dot{t} \dot{r} \right] = \\
+  0 & = \left(1 - \frac{r_s}{r} \right)^{-1} \dfrac{d}{d \tau} \left[ \left( 1-\frac{r_s}{r} \right) \dot{t} \right] \quad \rightarrow \quad \left( 1-\frac{r_s}{r} \right) \dot{t} =: \frac{E}{c} = \text{const.} \\
+  r : \qquad 
+  0 & = \ddot{r} + \Gamma_{ab}^r \dot{q}^a \dot{q}^b = \\
+    & = \ddot{r} + \Gamma_{tt}^r \dot{t}^2 + \Gamma_{rr}^r \dot{r}^2 + \Gamma_{\theta \theta}^{r} \dot{\theta}^2 + \Gamma_{\phi \phi}^{r} \dot{\phi}^2 = && (\dot{\theta} = 0 )\\
+    & = \ddot{r} + \Gamma_{tt}^r \dot{t}^2 + \Gamma_{rr}^r \dot{r}^2 + \Gamma_{\phi \phi}^{r} \dot{\phi}^2 = \\
+    & = \ddot{r} + A' e^{4 A} c^2 \dot{t}^2 - A'(r) \dot{r}^2 - r \sin^2 \theta e^{2 A} \dot{\phi}^2 = \\
+    & = \ddot{r} + A' e^{4 A} c^2 \dot{t}^2 - A'(r) \dot{r}^2 - r \theta e^{2 A} \dot{\phi}^2 = \\
+  \phi : \qquad 
+  0 & = \ddot{\phi} + \Gamma_{ab}^{\phi} \dot{q}^a \dot{q}^b  \\
+    & = \ddot{\phi} + 2 \Gamma_{r \phi}^\phi \dot{r} \dot{\phi} + 2 \Gamma_{\theta \phi}^\phi \dot{\theta} \dot{\phi} =  && ( \dot{\theta} = 0 ) \\
+    & = \ddot{\phi} + 2 \Gamma_{r \phi}^\phi \dot{r} \dot{\phi} = \\
+    & = \ddot{\phi} + 2 \frac{1}{r} \dot{r} \dot{\phi} \ , \\
+  0 & = \frac{1}{r^2} \dfrac{d}{d \tau} \left( r^2 \dot{\phi} \right) \quad \rightarrow \quad r^2(\tau) \dot{\phi}(\tau) =: L = \text{const.} \\
+  \theta : \qquad 
+  0 & = \ddot{\theta} + \Gamma_{ab}^{\theta} \dot{q}^a \dot{q}^b  \\
+    & = \ddot{\theta} + 2 \Gamma_{r \phi}^\theta \dot{\theta} \dot{\phi} + \Gamma_{\phi \phi}^\theta \dot{\phi}^2 = && ( \dot{\theta} = 0 ) \\
+    & = \ddot{\theta} - \sin \theta \cos \theta \Gamma_{\phi \phi}^\theta \dot{\phi}^2 = \\
+    & = \ddot{\theta} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Replacing the expression for \(\dot{t}\) and \(\dot{\phi}\) into the relation \(u^\mu u_{\mu} = - c^2\) (from \(ds^2/d \tau^2\))
+\begin{equation*}
+\begin{split}\begin{aligned}
+  -c^2 
+  & = - \left( 1 - \frac{r_s}{r} \right) c^2 \dot{t}^2 + \left( 1 - \frac{r_s}{r} \right)^{-1} \dot{r}^2 + r^2 \dot{\phi}^2 = \\
+  & = - \left( \right)^{-1} E^2  + \left(  \right)^{-1} \dot{r}^2 + \frac{L}{r^2} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}
+  \dot{r}^2 = E^2 - c^2 \left( 1 - \frac{r_s}{r} \right) \left( 1 + \frac{L^2}{r^2 c^2} \right) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, changing variable \(u := \frac{1}{r}\) and using the relation \(\phi(\tau)\) to write
+\begin{equation*}
+\begin{split}\dot{r} = \frac{d r}{d\tau} = \frac{d \phi}{d \tau} \frac{d}{d \phi} = \frac{L}{r^2} \frac{d r}{d \phi} = L u^2 \left( - \frac{1}{u^2} \right) u'(\phi) = - L u'(\phi) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the equation becomes
+\begin{equation*}
+\begin{split} L^2 {u'}^2 = E^2 - c^2 ( 1 - r_s u ) \left( 1 + \frac{L^2}{c^2} u^2 \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Differentiating both sides by \(\phi\)
+\begin{equation*}
+\begin{split}0 = L^2 2 u' u'' - c^2 r_s u' \left( 1 + \frac{L^2}{c^2} u^2 \right) + c^2 ( 1 - r_s u) 2 \frac{L^2}{c^2} u u' \end{split}
+\end{equation*}
+\sphinxAtStartPar
+or dividing by \(2 L^2 u'\),
+\begin{equation*}
+\begin{split}0 = u'' - \frac{c^2 r_s}{2 L^2} - \frac{3}{2}r_s u^2 + u\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or, with \(r_s = \frac{2 GM}{c^2}\)
+\begin{equation*}
+\begin{split}u'' + u = \frac{c^2 r_s}{2 L^2} + \frac{3}{2} r_s u^2 = \frac{GM}{L^2} + \frac{3 GM}{c^2} u^2 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Solution via perturbation method.} As \(\frac{3 GM}{c^2} \to 0\), the equation becomes the equation of the Kepler orbits.
+
+\sphinxAtStartPar
+Let the solution be \(u(\phi) = u_0(\phi) + u_1(\phi)\), with \(u_0(\phi)\) the solution of the equations of classical mechanics.
+\begin{equation*}
+\begin{split}u_0(\phi) = \frac{GM}{L^2}(1 + e \cos \phi) \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+As
+\begin{equation*}
+\begin{split}0 = \underbrace{u_0'' + u_0 - \frac{GM}{L^2}}_{=0} + u_1'' + u_1 - \frac{3GM}{c^2} (u_0 + u_1)^2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the perturbation \(u_1(\phi)\) (of order \(\frac{GM}{c^2}\) must satisfy (approximately, truncation) the equation
+\begin{equation*}
+\begin{split}\begin{aligned}
+  u_1'' + u_1
+  & \approx \frac{3 GM}{c^2} u_0^2(\phi) = \\
+  & = \frac{3 (GM)^3}{c^2 L^4} \left( 1 + 2 e \cos \phi + e^2 \cos^2 \phi \right) = && ( \cos 2 x = 2 \cos^2 x - 1 ) = \\
+  & = 3 \left( \frac{(GM)^{3/2}}{ c L^2} \right)^2 \left( 1 + 2 e \cos \phi + \frac{e^2}{2} \left( 1 + \cos ( 2 \phi ) \right) \right) = \\
+  & = 3 \left( \frac{(GM)^{3/2}}{ c L^2} \right)^2 \left( 1 + \frac{e}{2} + 2 e \cos \phi + \frac{e^2}{2} \cos ( 2 \phi ) \right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution undergoes resonance, as the forcing \(2 e \cos \phi\) has the same frequency as the natural frequency of the system.The general solution reads
+\begin{equation*}
+\begin{split}u_1(\phi) = A \cos \phi + B \sin \phi + 3 \left( \frac{(GM)^{3/2}}{c L^2} \right)^2 \left[ \left( 1 + \frac{e}{2} \right) + e \phi \sin \phi + \frac{e^2}{6} \cos 2 \phi \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Only the term \(\propto \phi \sin \phi\) is unbounded. Combining this term with the unperturbed solution gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  u(\phi) 
+  & \approx \frac{GM}{L^2} \left\{ ( 1 + e \cos \phi ) + 3 \left( \frac{GM}{cL} \right)^2 e \phi \sin \phi \right\} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and using small angle approximation \(\cos(\alpha + x ) = \cos \alpha \cos x - \sin \alpha \sin x \approx \cos x - \alpha \sin x \), for \(\alpha \sim 0\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  u(\phi) 
+  & \approx \frac{GM}{L^2} \left\{ 1 + e \cos \phi + \underbrace{ 3 \left( \frac{ GM}{cL} \right)^2 \phi}_{"-\alpha"} e \sin \phi \right\} = \\
+  & \approx \frac{GM}{L^2} \left\{ 1 + e \cos \left( \phi - \left( \frac{GM}{cL} \right)^2 \phi \right) \right\} =  \\
+  & = \frac{GM}{L^2} \left\{ 1 + e \cos \left[ \left( \phi - 3 \left(\frac{ GM}{c L} \right)^2 \right) \phi \right] \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(u:= \frac{1}{r}\), the perihelion occurs for \(u(\phi_{perih}) = \max_{\phi} u(\phi)\), i.e. for
+\begin{equation*}
+\begin{split}\left( 1 - 3\left( \frac{GM}{c L} \right)^2 \right) \phi_{perih,n} = n 2 \pi \quad , \quad n \in \mathbb{Z} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The \sphinxstylestrong{precession of the perihelion} can be evaluated as the difference between the angular coordinate of two successive revolutions (adding a \(2pi\) to the first angle, mimicing an orbit with no precession) i.e.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Delta \phi 
+  & = \phi_{perih, n+1} - ( \phi_{perih, n} + 2 \pi ) = \\
+  & = \frac{2 \pi}{1 - 3 \left(\frac{GM}{cL}\right)^2} - 2 \pi = \\
+  & \approx 2 \pi \left( 1 + 3 \left( \frac{GM}{cL} \right)^2 - 1 \right) = 6 \pi \left( \frac{GM}{cL} \right)^2 \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{General solution}
+
+\sphinxAtStartPar
+The general solution has the expression
+\begin{equation*}
+\begin{split}u_1(\phi) = \underbrace{A \cos \phi + B \sin \phi}_{u_{1,homo}(\phi)} + \underbrace{C + D \phi \cos \phi + E \phi \sin \phi + F \cos (2 \phi)}_{u_{1,part}(\phi)} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The coefficients of the particular solution are evaluated by coefficient matching
+\begin{equation*}
+\begin{split}\begin{aligned}
+  ( \phi \cos \phi )'  & =     \cos \phi - \phi \sin \phi \\
+  ( \phi \cos \phi )'' & = - 2 \sin \phi - \phi \cos \phi \\
+  ( \phi \sin \phi )'  & =     \sin \phi + \phi \cos \phi \\
+  ( \phi \sin \phi )'' & =   2 \cos \phi - \phi \sin \phi \\
+  ( \cos ( 2 \phi ))'' & = - 4 \cos ( 2 \phi ) \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+then
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \cos \phi & : \quad 0 = A - A - 2 E + 2 \alpha e  \\
+      \sin \phi & : \quad 0 = B - B + 2 D \\
+ \phi \cos \phi & : \quad 0 = D - D \\
+ \phi \sin \phi & : \quad 0 = E - E \\
+              1 & : \quad 0 = - C + \alpha \left( 1 + \frac{e}{2} \right) \\
+    \cos 2 \phi & : \quad 0 = 4 F - F + \alpha \frac{e^2}{2} \ , 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  E & = \alpha e \\
+  D & = 0 \\
+  C & = \alpha \left( 1 + \frac{e}{2} \right) \\
+  F & = - \frac{1}{6} \alpha e^2 \ .
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxstepscope
 
@@ -3190,9 +3404,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : 20.0
-N. of spin up: 488
-Magnetization: \PYGZhy{}48
+Energy       : \PYGZhy{}32.0
+N. of spin up: 528
+Magnetization: 32
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3250,9 +3464,9 @@ Magnetization: \PYGZhy{}48
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{2c28e1711ffb0d630caa8c5eb77582eb2ec03d6d0b6a80ce946345249f9a930d}.png}
+\noindent\sphinxincludegraphics{{dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4}.png}
 
-\noindent\sphinxincludegraphics{{c22f5414254714fb456e1eb0e27b33f846e35f9ea7a483eafef32e5ce53db6e3}.png}
+\noindent\sphinxincludegraphics{{b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3316,9 +3530,9 @@ Magnetization: \PYGZhy{}48
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{b63e432d2704ec07c87050fd5f9b0352dd9a15711156a667e3dc93bae13d1b41}.png}
+\noindent\sphinxincludegraphics{{e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe}.png}
 
-\noindent\sphinxincludegraphics{{f3f94b93c57718380cc16f7366a34d13d5c611f9483b87d2c83bad10a95828ec}.png}
+\noindent\sphinxincludegraphics{{f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3760,7 +3974,7 @@ angluar momentum, spin, and atom
 
 
 \section{Mathematical tools for quantum mechanics}
-\label{\detokenize{ch/quantum-mechanics/intro:mathematical-tools-for-quantum-mechanics}}\label{ch/quantum-mechanics/intro:Operator}
+\label{\detokenize{ch/quantum-mechanics/intro:mathematical-tools-for-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-math}}\label{ch/quantum-mechanics/intro:Operator}
 \begin{sphinxadmonition}{note}{Definition 13.1.1 (Operator)}
 
 
@@ -3794,7 +4008,7 @@ Self\sphinxhyphen{}adjoint operators have real eigenvalues, and orthogonal eigen
 
 
 \section{Postulates of Quantum Mechanics}
-\label{\detokenize{ch/quantum-mechanics/intro:postulates-of-quantum-mechanics}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:postulates-of-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-postulates}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 …
@@ -3811,13 +4025,10 @@ Canonical Commutation Relation (CCR) \sphinxstyleemphasis{and Canonical Anti\sph
 
 
 \section{Non\sphinxhyphen{}relativistic Mechanics}
-\label{\detokenize{ch/quantum-mechanics/intro:non-relativistic-mechanics}}
+\label{\detokenize{ch/quantum-mechanics/intro:non-relativistic-mechanics}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic}}
 
-\subsection{Statistical Interpretation and Measurement}
-\label{\detokenize{ch/quantum-mechanics/intro:statistical-interpretation-and-measurement}}
-
-\subsubsection{Wave function}
-\label{\detokenize{ch/quantum-mechanics/intro:wave-function}}
+\subsection{Wave function}
+\label{\detokenize{ch/quantum-mechanics/intro:wave-function}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-wave-function}}
 \sphinxAtStartPar
 The state of a system is described by a wave function \(|\Psi\rangle\)
 
@@ -3835,8 +4046,8 @@ unitary \(1 = \langle \Psi | \Psi \rangle = \left| \Psi \right|^2\), for statist
 \end{itemize}
 
 
-\subsubsection{Operators and Observables}
-\label{\detokenize{ch/quantum-mechanics/intro:operators-and-observables}}
+\subsection{Operators and Observables}
+\label{\detokenize{ch/quantum-mechanics/intro:operators-and-observables}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-observables-operators}}
 \sphinxAtStartPar
 Physical \sphinxstylestrong{observable} quantities are represented by {\hyperref[\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-math-operators-self-adjoint}]{\sphinxcrossref{\DUrole{std,std-ref}{Hermitian operators}}}}. Possible outcomes of measurement are the eigenvalues of the operator
 
@@ -3901,8 +4112,11 @@ since an operator \(\hat{A}\) can be written as a function of its eigenvalues an
 
 
 
+\subsection{Space and Momentum Representation}
+\label{\detokenize{ch/quantum-mechanics/intro:space-and-momentum-representation}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-basis}}
+
 \subsubsection{Space Representation}
-\label{\detokenize{ch/quantum-mechanics/intro:space-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:space-representation}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-basis-space}}
 \sphinxAtStartPar
 \sphinxstylestrong{Position operator} \(\hat{\mathbf{r}}\) has eigenvalues \(\mathbf{r}\) identifying the possible measurements of the position
 \begin{equation*}
@@ -3980,7 +4194,7 @@ Average value of the operator
 
 
 \subsubsection{Momentum Representation}
-\label{\detokenize{ch/quantum-mechanics/intro:momentum-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:momentum-representation}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-basis-momentum}}
 \sphinxAtStartPar
 \sphinxstylestrong{Momentum operator} as the limit of…\sphinxstylestrong{todo} \sphinxstyleemphasis{prove the expression of the momentum operator as the limit of the generator of translation}
 \begin{equation}\label{equation:ch/quantum-mechanics/intro:eq:qm:momentum-operator}
@@ -4034,7 +4248,7 @@ representation in basis of wave vector operator \(\hat{\mathbf{k}}\), \(\hat{\ma
 
 
 \subsubsection{From position to momentum representation}
-\label{\detokenize{ch/quantum-mechanics/intro:from-position-to-momentum-representation}}
+\label{\detokenize{ch/quantum-mechanics/intro:from-position-to-momentum-representation}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-basis-space-momentum}}
 \sphinxAtStartPar
 Momentum and wave vector, \(\mathbf{p} = \hbar \mathbf{k}\)
 \begin{equation*}
@@ -4059,7 +4273,7 @@ Relation between position and wave\sphinxhyphen{}number representation can be re
 \end{equation*}
 
 \subsection{Schrodinger Equation}
-\label{\detokenize{ch/quantum-mechanics/intro:schrodinger-equation}}\begin{equation*}
+\label{\detokenize{ch/quantum-mechanics/intro:schrodinger-equation}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation}}\begin{equation*}
 \begin{split}i \hbar \dfrac{d}{dt} | \Psi \rangle = \hat{H} | \Psi \rangle \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -4067,7 +4281,7 @@ being \(\hat{H}\) the Hamiltonian operator and \(|\Psi\rangle\) the wave functio
 
 
 \subsubsection{Stationary States}
-\label{\detokenize{ch/quantum-mechanics/intro:stationary-states}}
+\label{\detokenize{ch/quantum-mechanics/intro:stationary-states}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation-hamiltonian}}
 \sphinxAtStartPar
 Eigenspace of the Hamiltonian operator
 \begin{equation*}
@@ -4107,7 +4321,7 @@ Thus the state of the system evolves like a superposition of monochromatic waves
 \end{equation*}
 
 \subsubsection{Pictures}
-\label{\detokenize{ch/quantum-mechanics/intro:pictures}}\begin{itemize}
+\label{\detokenize{ch/quantum-mechanics/intro:pictures}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation-pictures}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Schrodinger
@@ -4124,7 +4338,7 @@ Interaction
 
 
 \paragraph{Schrodinger}
-\label{\detokenize{ch/quantum-mechanics/intro:schrodinger}}
+\label{\detokenize{ch/quantum-mechanics/intro:schrodinger}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation-pictures-schrodinger}}
 \sphinxAtStartPar
 If \(\hat{H}\) not function of time
 \begin{equation*}
@@ -4134,16 +4348,63 @@ If \(\hat{H}\) not function of time
 \end{equation*}
 
 \paragraph{Heisenberg}
-\label{\detokenize{ch/quantum-mechanics/intro:heisenberg}}
+\label{\detokenize{ch/quantum-mechanics/intro:heisenberg}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation-pictures-heisenberg}}
 \sphinxAtStartPar
-…
+While Schrodinger picture works with (usually) time\sphinxhyphen{}independent operators and time\sphinxhyphen{}dependent wave functions, Heisenberg picture works with time\sphinxhyphen{}dependent operators and time\sphinxhyphen{}independent wave functions. The state of a quantum system at two different times is connected by a unitary operator \(U_{t,t_0}\),
+\begin{equation*}
+\begin{split}| \Psi_t \rangle = U_{t,t_0} | \Psi_{t_0} \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Expected value.} The expected value of the physical quantity represented by the Hermitian operator \(\hat{A}\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \langle \hat{A} \rangle 
+ & = \langle \Psi_t | \hat{A} | \Psi_t \rangle = \\
+ & = \langle \Psi_{t_0} | U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} | \Psi_{t_0} \rangle = \\
+ & = \langle \Psi_{t_0} | \hat{A}_H(t) | \Psi_{t_0} \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined the counterpart in Heisenberg picture, \(\hat{A}_H(t) = U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0}\) of the operator \(\hat{A}\) in Schrodinger picture.
 
 \sphinxAtStartPar
+\sphinxstylestrong{Hamiltonian operator in Heisenberg picture.}
+\begin{equation*}
+\begin{split}\hat{H}_H = U^\dagger \hat{H} U  \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{If} the Hamiltonian operator is \sphinxstylestrong{time\sphinxhyphen{}independent in Schrodinger picture}, the evolution operator can be written as \(U_{t} = \exp\left(-i \frac{\hat{H}}{\hbar} t  \right)\). In this case, \(U\) and \(\hat{H}\) commute, and the Hamiltonian operator in Heisenberg picture has the same expression as the Hamiltonian operator in Schrodinger equation,
+\begin{equation*}
+\begin{split}\hat{H}_H = U^{\dagger} \hat{H} U = \quad ( \quad \text{if $\partial_t \hat{H} = 0$} \quad ) \quad = U^{\dagger} U \hat{H} = \hat{H} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Time derivative of the operator \(\hat{A}_H(t)\).}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt} \hat{A}_H(t)
+  & = \dfrac{d}{dt} \left( U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} \right) = \\
+  & = \partial_t U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \hat{A} \partial_t U_{t,t_0} = \\
+  & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} \hat{H} U_{t,t_0} = \\
+  & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} U_{t,t_0} U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} U^{\dagger}_{t,t_0}  \hat{H} U_{t,t_0} = \\
+  & = - \frac{1}{i\hbar} \left[ \hat{H}_H, \hat{A}_H \right] + \left( \partial_t \hat{A} \right)_H  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as the relation \eqref{equation:ch/quantum-mechanics/wave-mechanics:eq:h-u-dtu} gives \(\partial_t U_{t,t_0} U^{\dagger}_{t,t_0} = \frac{1}{i \hbar} \hat{H}\),
+
+
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{old} …
 for \(\hat{H}\) independent from time \(t\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \dfrac{d}{dt} \bar{\mathbf{r}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} \\
-  \dfrac{d}{dt} \bar{\mathbf{p}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} \\
+  \dfrac{d}{dt} \bar{\mathbf{r}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{r}} \right]} = - \frac{1}{ih} \overline{[ \hat{H}, \hat{\mathbf{r}} ]} \\
+  \dfrac{d}{dt} \bar{\mathbf{p}} & = \overline{\frac{i}{\hbar} \left[ \hat{H}, \hat{\mathbf{p}} \right]} = - \frac{1}{ih} \overline{[ \hat{H}, \hat{\mathbf{p}} ]} \\
 \end{aligned}\end{split}
 \end{equation*}\subsubsection*{Hamiltonian Mechanics}
 
@@ -4178,25 +4439,44 @@ Increment of the Hamiltonian
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Physical quantity \(f(p(t), q(t), t)\). Its time derivative reads
+Physical quantity \(f(q(t), p(t), t)\). Its time derivative reads
 \begin{equation*}
 \begin{split}\begin{aligned}
 \frac{d f}{dt}
-  & = \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial t} = \\
-  & = \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial t} = \\
-  & = \{ H, f \} + \partial_t f + Q_q \partial_p f
+  & = \frac{\partial f}{\partial q} \dot{q} + \frac{\partial f}{\partial p} \dot{p} + \frac{\partial f}{\partial t} = \\
+  & = \frac{\partial f}{\partial q} \frac{\partial H}{\partial p} + \frac{\partial f}{\partial p} \left[ - \frac{\partial H}{\partial q} + Q_q \right] + \frac{\partial f}{\partial t} = \\
+  & = - \partial_q H \partial_p f + \partial_p H \partial_q f + \partial_t f + Q_q \partial_p f = \\
+  & = - \{ H, f \} + \partial_t f + Q_q \partial_p f
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 If \(Q_q = 0\), the correspondence between quantum mechanics and classical mechanics
 \begin{equation*}
-\begin{split}\frac{d f}{d t} = \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = \overline{\frac{i}{\hbar} [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}\end{split}
+\begin{split}\frac{d f}{d t} = - \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \dfrac{d}{dt} \overline{\hat{f}} = - \frac{1}{i \hbar} \overline{ [ \hat{H}, \hat{f} ]} + \overline{\frac{\partial \hat{f}}{\partial t}}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]\end{split}
 \end{equation*}
 
 \paragraph{Interaction}
-\label{\detokenize{ch/quantum-mechanics/intro:interaction}}
+\label{\detokenize{ch/quantum-mechanics/intro:interaction}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-non-relativistic-schrodinger-equation-pictures-interaction}}
+
+\subsection{Operators}
+\label{\detokenize{ch/quantum-mechanics/intro:operators}}
+\sphinxAtStartPar
+Commuting operators, \(0 = [ \hat{A}, \hat{B} ] = \hat{A} \hat{B} - \hat{B} \hat{A}\). Their eigenvalue problems read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{A} | a \rangle & = a | a \rangle \\
+  \hat{B} | b \rangle & = b | b \rangle \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+  a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \left( \hat{B} | a \rangle \right) \\
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the state \(\hat{B} | a \rangle\) is an eigenstate of \(\hat{A}\), with the same eigenvalue \(a\). If the eigenvalue is non\sphinxhyphen{}degenerate, this eigenstate must be proportional to the original eigenstate, and thus \(\hat{B} | a \rangle = b | a \rangle\). If the eigenvalue is degenerate, the state \(\hat{B} | a \rangle\) can be a linear combination of all the eigenstates \(| a_i \rangle\) with eigenvalue \(a_i = a\).
+
 
 \subsection{Matrix Mechanics}
 \label{\detokenize{ch/quantum-mechanics/intro:matrix-mechanics}}
@@ -4290,6 +4570,940 @@ Wave function with symmetries: Fermions and Bosons
 
 \chapter{Quantum Mechanics \sphinxhyphen{} Notes}
 \label{\detokenize{ch/quantum-mechanics/notes:quantum-mechanics-notes}}\label{\detokenize{ch/quantum-mechanics/notes:id1}}\label{\detokenize{ch/quantum-mechanics/notes::doc}}
+\sphinxstepscope
+
+
+\chapter{Wave quantum mechanics}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:wave-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/wave-mechanics:quantum-mechanics-wave-mechanics}}\label{\detokenize{ch/quantum-mechanics/wave-mechanics::doc}}\begin{quote}
+
+\sphinxAtStartPar
+If the system behaves like a wave, it must satisfy a wave function
+\end{quote}
+\begin{quote}
+
+\sphinxAtStartPar
+As the geometrical optics is the short wave\sphinxhyphen{}length approximation of the ondulatory optics, classical mechanics may be the short wave\sphinxhyphen{}length approximation of ondulatory mechanics
+\end{quote}
+
+
+\section{De Broglie}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:de-broglie}}
+
+\section{Schrodinger}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:schrodinger}}
+
+\subsection{Derivation}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:derivation}}
+\sphinxAtStartPar
+From the probability interpretation of the wave function \(| \Psi_t \rangle\), and the unitary condition \(\langle \Psi_t | \Psi_t \rangle = 1\), for every \(t\), the evolution of the system must be governed by a unitary operator \(U_{t,t_0}\),
+\begin{equation*}
+\begin{split} | \Psi_t \rangle = U_{t,t_0} | \Psi_{t_0} \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+for the unitary condition to hold at every \(t\),
+\begin{equation*}
+\begin{split}1 =  \langle \Psi_{t} | \Psi_{t} \rangle = \langle U_{t,t_0} \Psi_{t_0} |  U_{t,t_0} \Psi_{t_0} \rangle = \langle \Psi_{t_0} | \underbrace{U^{\dagger}_{t,t_0}  U_{t,t_0}}_{= \hat{\mathbf{1}}} | \Psi_{t_0} \rangle =  \langle \Psi_{t_0} | \Psi_{t_0} \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e.
+\begin{equation*}
+\begin{split}U_{t,t_0}^{-1} = U^{\dagger}_{t,t_0} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Taking the time derivative w.r.t. \(t\) of the evolution relation, it follows
+\begin{equation*}
+\begin{split}| \dot{\Psi}_t \rangle = \partial_t U_{t,t_0} | \Psi_{t_0} \rangle = \underbrace{ \partial_t U_{t,t_0} U^{\dagger}_{t,t_0}}_{ \hat{A}(t,t_0)} | \Psi_{t} \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Composition.} As \(| \Psi_{t} \rangle = U_{t,t_1} | \Psi_{t_1} \rangle =  U_{t,t_1} U_{t_1,t_0}| \Psi_{t_0} \rangle\),
+\begin{equation*}
+\begin{split}U_{t,t_0} = U_{t,t_1} U_{t_1,t_0} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Indpendence of \(\hat{A}(t,t_0) = \partial_t U_{t,t_0} U_{t,t_0}\) from \(t_0\).} The operator \(\hat{A}(t,t_0) = \partial_t U_{t,t_0} U_{t,t_0}\) can thus be written as
+\begin{equation*}
+\begin{split}\hat{A}(t,t_0) = \partial_t U_{t,t_0} U_{t,t_0}^{\dagger} = \partial_t U_{t,t_1} \underbrace{U_{t_1,t_0} U_{t_1, t_0}^{\dagger}}_{ = \hat{\mathbf{1}} } U_{t,t_1}^{\dagger} = \partial_t U_{t,t_1} U_{t,t_1}^{\dagger} = \hat{A}(t,t_1) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+showing that it’s independent from the initial time, \(\hat{A}(t,t_0) = \hat{A}(t)\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{\(\hat{A}(t)\) is anti\sphinxhyphen{}Hermitian.} As
+\begin{equation*}
+\begin{split}0 = \partial_t \underbrace{\left( U_{t,t_0} U_{t,t_0}^{\dagger} \right)}_{= \hat{\mathbf{1}} } = \underbrace{ \partial_t U_{t,t_0} U_{t,t_0}^\dagger}_{ = \hat{A}(t)} + \underbrace{ U_{t,t_0} \, \partial_t U_{t,t_0}^\dagger}_{= \hat{A}^\dagger(t)} = \hat{A}(t) + \hat{A}^\dagger(t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(\hat{A} = - \hat{A}^\dagger\). Thus the operator \(\hat{A}\) can be written as \(\hat{A} = i \hat{\tilde{H}}\), being \(\hat{\tilde{H}}\) and Hermitian operator. For the correspondence principle (classical limit for \(\hbar \rightarrow 0\)) the Hermitian operator is found to be \(\hat{\tilde{H}} = -\frac{1}{\hbar} \hat{H}\), being \(\hat{H}\) the Hamiltonian operator. \sphinxstylestrong{todo} \sphinxstyleemphasis{Add a link to “correspondence principle”, either Ehrenfest theorem and/ or equations in Heisenberg picture}
+
+\sphinxAtStartPar
+Thus, the wave equation becomes
+\begin{equation}\label{equation:ch/quantum-mechanics/wave-mechanics:eq:schrodinger}
+\begin{split}| \dot{\Psi} \rangle = \frac{1}{i \hbar} \hat{H} | \Psi \rangle \qquad \text{or} \qquad i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+The Hamiltonian can be written as a function of the unitary operator \(U_{t,t_0}\) and its time derivative as
+\begin{equation}\label{equation:ch/quantum-mechanics/wave-mechanics:eq:h-u-dtu}
+\begin{split}\hat{H} = i \hbar \, \partial_t U_{t,t_0} U^{\dagger}_{t,t_0} \ .\end{split}
+\end{equation}
+
+\subsection{Energy eigen\sphinxhyphen{}states}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:energy-eigen-states}}\begin{equation*}
+\begin{split}\hat{H} | \Psi_k \rangle = E_k | \Psi_k \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let the Hamiltonian be independent from time, thus also the eigenvalues and eigenfunctions are independent from time. Let a state be a superposition (linear combination) of eigenfunctions of the Hamiltonian operator
+\begin{equation*}
+\begin{split}| \Psi_t \rangle = c_{k}(t) | \Psi_k \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the time evolution immedately follows as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \dot{c}_k | \Psi_k \rangle = c_k \hat{H} | \Psi_k \rangle = c_k E_k | \Psi_k \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+from orthogonality condition \(\langle \Psi_j | \Psi_k \rangle = \delta_{jk}\), that gives the dynamical equation for the coefficients \(c_i\),
+\begin{equation*}
+\begin{split}\dot{c}_k = - i \frac{E_k}{\hbar} c_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution is \(c_k(t) = c_{k,0} \exp \left( - i \frac{E_k}{\hbar} t \right)\). The evolution of the state is
+\begin{equation*}
+\begin{split}| \Psi_t \rangle = | \Psi_k \rangle c_{k,0} \exp\left( - i \frac{E_k}{\hbar} t \right) = | \Psi_k \rangle \langle \Psi_k | \Psi_0 \rangle \exp\left( - i \frac{E_k}{\hbar} t \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Properties.} If an \sphinxstylestrong{isolated system} starts in an eigen\sphinxhyphen{}state of the Hamiltonian operator, i.e. \(| \Psi_0 \rangle = | \Psi_a \rangle\), \(|c_{k,0}|^2 = \delta_{ka}\), then the evolution of the system reads
+\begin{equation*}
+\begin{split}| \Psi_t \rangle = | \Psi_a \rangle \exp\left( - i \frac{E_a}{\hbar} t \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the probability of measuring the \(k^{th}\) energy is
+\begin{equation*}
+\begin{split}p(E = E_k) = | \langle \Psi_k | \Psi_t \rangle |^2 = \left| \underbrace{\langle \Psi_k | \Psi_a \rangle}_{\delta_{ka}} \exp\left(-i \frac{E_a}{\hbar} t\right) \right|^2 = \delta_{ka} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. there’s probability of finding it in the same state as the initial state \(a\) is \(p(E = E_a) = 1\), while the probability of finding in any other state is zero, \(p(E = E_k) = 0\), \(k \ne a\).
+
+
+\subsection{Space and momentum operators}
+\label{\detokenize{ch/quantum-mechanics/wave-mechanics:space-and-momentum-operators}}\subsubsection*{Position operator}
+\subsubsection*{Definition}
+\begin{equation*}
+\begin{split}\hat{\mathbf{r}} | \mathbf{r} \rangle = \mathbf{r} | \mathbf{r} \rangle\end{split}
+\end{equation*}\subsubsection*{Wave function in space basis}
+\begin{equation*}
+\begin{split}\Psi(\mathbf{r}, t) := \langle \mathbf{r} | \Psi_t \rangle \ .\end{split}
+\end{equation*}\subsubsection*{Orthonality, and identity operator}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  1
+  & = \int_{\mathbf{r} \in \Omega} \Psi^*(\mathbf{r},t) \Psi(\mathbf{r},t) d \mathbf{r} = \\
+  & = \langle \Psi_t | \, \underbrace{\int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}}_{= \hat{\mathbf{1}} } \, | \Psi_t \rangle  = \\
+  & = \langle \Psi_t | \Psi_t \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+So that the identity operator in space basis reads \(\hat{\mathbf{1}} = \int_{\mathbf{r} \in \Omega} | \mathbf{r} \rangle \langle \mathbf{r} | d \mathbf{r}\). A wave function can be thus written as
+\begin{equation}\label{equation:ch/quantum-mechanics/wave-mechanics:eq:quantum:space-representation}
+\begin{split}| \Psi \rangle = \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle \ .\end{split}
+\end{equation}\subsubsection*{Expansion in space basis}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle = \Psi(\mathbf{r},t)
+  & = \int_{\mathbf{r}' \in \Omega} \delta(\mathbf{r} - \mathbf{r}') \Psi(\mathbf{r}',t) \, d \mathbf{r}'
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparing the last expression, with the projection of the expression \eqref{equation:ch/quantum-mechanics/wave-mechanics:eq:quantum:space-representation} over \(\langle \mathbf{r} |\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \Psi \rangle = \langle \mathbf{r} |  \ , \int_{\mathbf{r}' \in \Omega} | \mathbf{r}' \rangle \langle \mathbf{r}' | \, d \mathbf{r}' \, | \Psi \rangle = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \,  d \mathbf{r}' = \int_{\mathbf{r}' \in \Omega} \langle \mathbf{r} | \mathbf{r}' \rangle \Psi(\mathbf{r'},t ) \,  d \mathbf{r}' \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+if follows the orthogonality condition \(\langle \mathbf{r} | \mathbf{r}' \rangle = \delta(\mathbf{r} - \mathbf{r}')\).
+
+\sphinxAtStartPar
+The classical Hamiltonian of  the system reads
+\begin{equation*}
+\begin{split}H(\mathbf{r}, \mathbf{p}) = \frac{| \mathbf{p} |^2 }{2m} - \frac{q^2}{4 \pi \varepsilon | \mathbf{r} |} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the promotion to the Hamiltonian operator is thus
+\begin{equation*}
+\begin{split}\hat{H} = \frac{| \hat{\mathbf{p}} |^2}{2 m } - \frac{q^2}{4 \pi \varepsilon} \hat{|\mathbf{r}|}^{-1} \ .\end{split}
+\end{equation*}\subsubsection*{Power of an operator}
+
+\sphinxAtStartPar
+Positive integer power
+\begin{equation*}
+\begin{split}\hat{A}^n = \underbrace{\hat{A} \dots \hat{A}}_{\text{$n$ times}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let the eigenproblem of the operator be \(\hat{A} | a \rangle = a | a \rangle\), with \(a \in \mathbb{R}\). Then, the eigenproblem for the operator \(\hat{A}^n\) reads
+\begin{equation*}
+\begin{split}\hat{A}^n | a \rangle = a^n | a \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The inverse of an operator has the eigenproblem
+\begin{equation*}
+\begin{split}\hat{A}^{-1} | a \rangle = \frac{1}{a} | a \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \(| a \rangle = \hat{A} \left( \hat{A}^{-1} | a \rangle \right) = \frac{1}{a} \hat{A} | a \rangle = \frac{1}{a} \, a | a \rangle = | a \rangle\).
+\subsubsection*{Vector operators}
+
+\sphinxAtStartPar
+Momentum operator, \(\hat{\mathbf{p}}\), in space base \(\langle \mathbf{r} | \hat{\mathbf{p}} = -i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} |\).
+Using Cartesian coordinates
+\begin{equation*}
+\begin{split} \hat{\mathbf{e}}_a \, \langle \mathbf{r} | \hat{p}_a = - \hat{\mathbf{e}}_a \, i \hbar \partial_a \langle \mathbf{r} |\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The operator of the square magnitude reads
+\begin{equation*}
+\begin{split}\hat{\left( | \mathbf{p}|^2 \right)} = \hat{\left( p_x^2 + p_y^2 + p_z^2 \right)} = \hat{p_x^2} +  \hat{p_y^2} + \hat{p_z^2} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and in space coordinates
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\left( |\mathbf{p} |^2 \right)} = - \hbar^2 \partial_{aa} \langle \mathbf{r} | = - \hbar^2 \nabla^2 \langle \mathbf{r} | \end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\chapter{Angular Momentum}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum:angular-momentum}}\label{\detokenize{ch/quantum-mechanics/angular-momentum:quantum-mechanics-angular-momentum}}\label{\detokenize{ch/quantum-mechanics/angular-momentum::doc}}
+\sphinxAtStartPar
+Before going into details, an introduction is likely to be required.
+
+\sphinxAtStartPar
+\sphinxstylestrong{{\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:quantum-mechanics-angular-momentum-spatial}]{\sphinxcrossref{\DUrole{std,std-ref}{Spatial (orbital) angular momentum, \(\hat{\mathbf{L}}\)}}}}.} Spatial angular motion is the quantum mechanical counterpart of the angular momentum in classical mechanics, \(\hat{L} = \mathbf{r} \times \mathbf{p}\), due to the spatial motion of the system w.r.t. a point. The angular momentum operator in quantum mechanics can be defined promoting the classical space and momentum variables to the corresponding operators,
+\begin{equation*}
+\begin{split}\mathbf{L} = \mathbf{r} \times \mathbf{p} \qquad \rightarrow \qquad \hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose representation using spatial basis reads
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{L}} = -i \hbar \mathbf{r} \times \nabla_{\mathbf{r}} \langle \mathbf{r} | \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This operator has several properties that will be investigated in details in the dedicated section. This operator applies to a wave function representing the position, momentum, and physical quantities with classical analogous, here called \(| \psi \rangle\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{{\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin}]{\sphinxcrossref{\DUrole{std,std-ref}{Spin (intrinsic) angular momentum, \(\hat{\mathbf{S}}\)}}}}.} Quantum systems may have intrinsic properties, with no classical counterpart. Spin momentum is one of these variables. Spin angular momentum \(\hat{\mathbf{S}}\) is defined in analogy with the spatial orbital momentum, with the same properties and acts on a spin state vector \(| s \rangle\).
+
+\sphinxAtStartPar
+Thus, the full state of the system belongs to a space state that is a tensor product of a space and a spin state space,
+\begin{equation*}
+\begin{split}\mathcal{H} = \mathcal{H}_{space} \otimes \mathcal{H}_{spin} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+defined as the tensor product of a spatial state vector and a spin state vector,
+\begin{equation*}
+\begin{split}| \Psi \rangle = | \psi \rangle \otimes | s \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{{\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-total:quantum-mechanics-angular-momentum-total}]{\sphinxcrossref{\DUrole{std,std-ref}{Total angular momentum \(\hat{\mathbf{J}}\)}}}}.} Total angular momentum can be defined as the sum of the spatial and the spin angular momentum,
+\begin{equation*}
+\begin{split}\hat{\mathbf{J}} = \left( \hat{\mathbf{L}} \otimes \hat{\mathbf{1}} \right) + \left( \hat{\mathbf{1}} \otimes \hat{\mathbf{S}} \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or, remembering that \(\hat{\mathbf{L}}\) only acts on \(| \psi \rangle\) and \(\hat{\mathbf{S}}\) onlt acts on \(| s \rangle\), it’s usually written as \(\hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}\).
+
+\sphinxstepscope
+
+
+\section{Spatial Angular Momentum}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:spatial-angular-momentum}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:quantum-mechanics-angular-momentum-spatial}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial::doc}}
+\sphinxAtStartPar
+Promoting the classical definition of angular momentum \(\mathbf{L} = \mathbf{r} \times \mathbf{p}\), the angular momentum operator in quantum mechanics reads
+\begin{equation*}
+\begin{split}\hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}} = \hat{\mathbf{e}}_a \varepsilon_{abc} \hat{r} \hat{p}_c \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and using space basis
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{L}} = \hat{\mathbf{e}}_a \underbrace{\left( - i \, \hbar \, \varepsilon_{abc}\, r_b \, \partial_c \langle \mathbf{r} | \right) }_{= \langle \mathbf{r} | \hat{L}_a }\ .\end{split}
+\end{equation*}\subsubsection*{Properties}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Composition of 2 components of the angular momentum operator.} Using Cartesian coordinates
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{L}_a \hat{L}_b 
+  & = - \hbar^2 r_b \partial_a + \hbar^2 \delta_{ab} r_c \partial_c - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{L}_a \hat{L}_b 
+  & = - \hbar^2 \varepsilon_{acd} r_c \partial_d \left( \varepsilon_{bef} r_e \partial_f \right) = \\
+  & = - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c \left( \delta_{de} \partial_f + r_e \partial_{df} \right) = \\
+  & = - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c r_e \partial_{df} = \\
+  & = - \hbar^2 \left( \delta_{af} \delta_{cb} - \delta_{ab} \delta_{cf} \right) r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+  & = - \hbar^2 r_b \partial_a + \hbar^2 \delta_{ab} r_c \partial_c - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The last term is symmetric w.r.t. \(a\), \(b\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Commutators.}
+\begin{equation*}
+\begin{split}[ \hat{L}_a, \hat{L}_b ] = \hat{L}_a \hat{L}_b -  \hat{L}_b \hat{L}_a = - \hbar^2 ( r_b\partial_a - r_a \partial_b) \end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(a = b\), the obvious result follows, as an operator commutes with itself. If \(a \ne b\),
+\begin{equation*}
+\begin{split}[\hat{L}_a, \hat{L}_b ] = i \varepsilon_{abc} \hbar \hat{L}_c \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or with a compact “vector notation”, \(\hat{\mathbf{L}} \times \hat{\mathbf{L}} = i \hbar \hat{\mathbf{L}}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Magnitude of the angular momentum, \(|\hat{L}|^2\).} Using Cartesian coordinates,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  |\hat{L}|^2 
+  & = 2 \hbar^2 r_a \partial_a - \hbar^2 r_b r_b \partial_{aa} + \hbar^2 r_a r_b \partial_{ab} \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  |\hat{L}|^2 
+  & = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2 = \\
+  & = \hat{L}_a \hat{L}_a = \\
+  & = -\hbar^2 r_a \partial_a + 3 \hbar^2 r_a \partial_a - \hbar^2 ( \delta_{ce} \delta_{df} - \delta_{cf} \delta_{de} ) r_c r_e \partial_{df} = \\
+  & = 2 \hbar^2 r_a \partial_a - \hbar^2 r_b r_b \partial_{aa} + \hbar^2 r_a r_b \partial_{ab} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Commutations with magnitude.}
+\begin{equation*}
+\begin{split}[ \hat{L}^2, \hat{L}_a ] = 0\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+The same hold for any integer power of \(\hat{L}_a\), like \(\hat{L}_a^2\), as it can be easily proved
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ \hat{L}^2, \hat{L}^2_a \right]
+  & = \hat{L}^2 \hat{L}_a^2 - \hat{L}_a^2 \hat{L}^2 = \\
+  & = \hat{L}^2 \hat{L}_a \hat{L}_a - \hat{L}_a^2 \hat{L}^2 = \\
+  & = \hat{L}_a \hat{L}^2 \hat{L}_a - \hat{L}_a \hat{L}_a \hat{L}^2 = \\
+  & = \hat{L}_a [ \hat{L}^2,  \hat{L}_a ] = 0  \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Analogous relations in \sphinxstylestrong{classical mechanics}
+\begin{equation*}
+\begin{split}
+  [ L_a, L_b ] = i \hbar \varepsilon_{abc} \hat{L}_c \qquad , \qquad \{ L_a, L_b \} = \varepsilon_{abc} L_c \\
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+provides another example of the relation between Poisson brackets in classical mechanics and commutator in quantum mechanics (\sphinxstylestrong{Dirac})
+\begin{equation*}
+\begin{split}\{ A, B \} \quad \leftrightarrow \quad \frac{1}{i \hbar} [ \hat{A}, \hat{B} ]\end{split}
+\end{equation*}
+
+\subsection{Eigenproblem of angular momentum operators}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:eigenproblem-of-angular-momentum-operators}}
+\sphinxAtStartPar
+In this section, the eigenproblems of \(\hat{L}^2\) and \(\hat{L}_z\) are discussed. Here, all the operators and state functions are written in components using space basis, without explicitly writing the projection \(\langle \mathbf{r} |\).
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Using spherical coordinates, the \(2\pi\)\sphinxhyphen{}periodicity of the problem in \(\phi\) implies quantization in the spectral decomposition of \(\hat{L}_z\),
+
+\item {} 
+\end{itemize}
+\subsubsection*{\sphinxstylestrong{\protect\(\langle \mathbf{r} | \hat{\mathbf{L}}\  \protect\) using Cartesian coordinates.}}
+\begin{equation*}
+\begin{split}\ell \psi = \hat{L}_a \psi = - i \hbar \varepsilon_{abc} r_b \partial_c \psi \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+or \(\ell \psi = - i \hbar \mathbf{r} \times \nabla \psi\).
+
+\sphinxAtStartPar
+…
+\subsubsection*{\sphinxstylestrong{\protect\(\langle \mathbf{r} | \hat{\mathbf{L}}\  \protect\) using spherical coordinates.}}
+
+\sphinxAtStartPar
+With the set of spherical coordinates \(\psi(r,\theta,\phi)\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{r} \times \nabla \psi 
+  & = \mathbf{r} \times \left[ \partial_r \psi \, \hat{\mathbf{r}}  + \frac{1}{r} \partial_\theta \psi \, \hat{\boldsymbol\theta} + \frac{1}{r \sin \theta} \partial_{\phi} \psi \hat{\boldsymbol\phi} \right] = \\
+  & = \partial_\theta \psi \, \hat{\boldsymbol\phi} - \frac{1}{\sin \theta} \partial_\phi \psi \, \hat{\boldsymbol\theta} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the \(z\)\sphinxhyphen{}component, with \(\hat{\mathbf{z}} \cdot \hat{\boldsymbol{\theta}} = - \sin \theta\), \(\hat{\mathbf{z}} \cdot \hat{\boldsymbol\phi} = 0\), can be written as
+\begin{equation*}
+\begin{split}\hat{\mathbf{z}} \cdot \left( \mathbf{r} \times \nabla \psi \right) = \partial_\phi \psi\end{split}
+\end{equation*}\subsubsection*{Spectral decomposition of the \protect\(z\protect\)\sphinxhyphen{}component operator, \protect\(\hat{L}_z\protect\)}
+\begin{equation*}
+\begin{split}\ell_z \psi_z(r,\theta,\phi) = -i \hbar \partial_\phi \psi_z(r,\theta,\phi)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The eigenfunctions read
+\begin{equation*}
+\begin{split}\psi_{z,\ell}(r,\theta,\phi) = A(r,\theta) \, \exp\left( i \frac{\ell_z}{\hbar} \phi \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Periodic condition \(\psi_z(0) = \psi_z(2 \pi)\) implies \(\frac{\ell_z}{\hbar} = m_l\), \(m_l \in \mathbb{Z}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Remark.} The constraint \(m_l \in \mathbb{Z}\) is just \sphinxstylestrong{one of the constraints} on \(m_l\).
+
+\sphinxAtStartPar
+In order to keep the notation as intuitive as possible, the eigenvalue \(\ell_z\) and the corresponding eigenstate are denoted as \(\{ L_{z}, | L_z \rangle\} = \{ \hbar m_l, | m_l \rangle \}\), s.t. \(\hat{L}_z | m_l \rangle = \hbar m_l | m_l \rangle\).
+\subsubsection*{Spectral decomposition of commuting operators}
+
+\sphinxAtStartPar
+Let \(\hat{A} | a \rangle = a | a \rangle\), and \(\hat{B} | b \rangle = b | b \rangle\). If \(0 = [ \hat{A}, \hat{B} ] = \hat{A} \hat{B} - \hat{B} \hat{A}\). Pre\sphinxhyphen{}multiplying the first one by \(\hat{B}\),
+\begin{equation*}
+\begin{split}a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \hat{B} | a \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+So that \(\hat{B} | a \rangle\) is an eigenstate of \(\hat{A}\) with eigenvalue \(a\).
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+If \(a\) is an eigenvalue with algebraic multiplicity equal to \(1\), then \(\hat{B} | a \rangle\) must be proportional to the only eigenstate \(| a \rangle \) of the operator \(\hat{A}\) with eigenvalue \(a\), i.e.
+\begin{equation*}
+\begin{split}\hat{B} | a \rangle = \mu | a \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(| a \rangle\) is also an eigenstate of \(\hat{B}\).
+
+\item {} 
+\sphinxAtStartPar
+If \(a\) has algebraic multiplicity larger than \(1\), then \(\hat{B} | a_i \rangle\), can be a linear combination of all the eigenvectors \(| a_k \rangle\) with eigenvalues \(a_k = a\),
+\begin{equation*}
+\begin{split}\hat{B} | a_i \rangle = c_{ik} | a_k \rangle  \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+for \(\forall i\).
+
+\sphinxAtStartPar
+…
+
+\end{itemize}
+
+
+\subsubsection*{Relation between \protect\(\ \hat{L}_z\ \protect\) and \$\textbackslash{} \textbackslash{}hat\{L\}\textasciicircum{}2 \$}
+\begin{equation*}
+\begin{split}\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(\hat{L}^2\) commutes with the Cartesian components \(\hat{L}_a\), they share the same eigenvalues.The same holds for \(\hat{L}_a^2\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{L}^2 - \hat{L}_z^2 = \hat{L}_x^2 + \hat{L}_y^2  \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let \(\psi\) an eigenstate of \(\hat{L}^2\), \(\hat{L}_z\) with eigenvalues \(\ell^2\), \(\ell_z\), it follows
+\begin{equation*}
+\begin{split}\left( \hat{L}_x^2 + \hat{L}_y^2 \right) \psi = \left( \hat{L}^2 - \hat{L}_z^2 \right) \psi = \left( \ell^2 - \ell_z^2 \right) \psi\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(( \ell^2 -  \ell_z^2 ) | \psi |^2 = \psi^* \hat{L}^2_x \psi = | \hat{L}_x \psi |^2 \ge 0\), it follows that \(\ell^2 - \ell^2_z \ge 0\), and thus \(-\ell \le \ell_z \le \ell\).
+
+\sphinxAtStartPar
+Combining
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[\hat{L}_y, \hat{L}_z \right] & = \hat{L}_y \hat{L}_z - \hat{L}_z \hat{L}_y = i \hbar \hat{L}_x \\
+  \left[\hat{L}_z, \hat{L}_x \right] & = \hat{L}_z \hat{L}_x - \hat{L}_x \hat{L}_z = i \hbar \hat{L}_y
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+summing and subtracting \(i (1)\) and \((2)\) them
+\begin{equation*}
+\begin{split}\begin{aligned}
+ 0
+ & = - \hbar \hat{L}_x \mp i \hbar \hat{L}_y - i \hat{L}_y \hat{L}_z + i \hat{L}_z \hat{L}_y \pm \hat{L}_z \hat{L}_x \mp \hat{L}_x \hat{L}_z = \\
+ & = - ( \hat{L}_x \pm i \hat{L}_y ) ( \hbar \pm \hat{L}_z ) + \hat{L}_z ( i \hat{L}_y \pm \hat{L}_x ) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\hat{L}_z ( i \hat{L}_y \pm \hat{L}_x ) = ( \hat{L}_x \pm i \hat{L}_y ) ( \hbar \pm \hat{L}_z )\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\hat{L}_z ( \hat{L}_x \pm i \hat{L}_x ) = ( \hat{L}_x \pm i \hat{L}_y ) ( \hat{L}_z \pm \hbar )\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Applying this operator to the eigenstate \(\psi\)
+\begin{equation}\label{equation:ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:eq:ang-mom:ladder:application}
+\begin{split}\hat{L}_z ( \hat{L}_x \pm i \hat{L}_y ) \psi = ( \hat{L}_x \pm i \hat{L}_y ) ( \hat{L}_z \pm \hbar ) \psi = ( \ell_z \pm \hbar ) ( \hat{L}_x \pm i \hat{L}_y ) \psi\end{split}
+\end{equation}
+\sphinxAtStartPar
+Thus, the state functions \(\psi^{\pm} = \left( \hat{L}_x \pm i \hat{L}_y \right) \psi\) are eigenstates of the operator \(\hat{L}_z\) with eigenvalues \(\ell_z \pm \hbar\). As \(\ell_z \in [ - \ell, \ell ]\), let’s call \(\ell_{z,min}\) and \(\ell_{z,max}\) the minimum and maximum values of \(\ell_z\). It follows that the operator \(\hat{L}^-\) has the smallest eigenvalue equal to \(\ell_{z,min} - \hbar\) and \(\hat{L}^+\) has the largest eigenvalue equal to \(\ell_{max,z} + \hbar\).
+
+\sphinxAtStartPar
+Thus, for \(\ell_{z,min}\), \(\ell_z - \hbar\) can’t be an eigenvalue of \(\hat{L}_z\), and thus the relation
+\begin{equation*}
+\begin{split}\hat{L}_z \left( \hat{L}_x - i \hat{L}_y \right) \psi = ( \ell_{z,min} - \hbar ) ( \hat{L}_x - i \hat{L}_y ) \psi\end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies that \(( \hat{L}_x - i \hat{L}_y ) \psi\) can’t be an eigenfunction of \(\hat{L}_z\), and thus it must be in the kernel or \(\hat{L}_z\), i.e.
+\begin{equation*}
+\begin{split}0 = \hat{L}_z ( \hat{L}_x - i \hat{L}_y ) \psi_{\ell_z,min} = ( \hat{L}_x - i \hat{L}_y ) ( \hat{L}_z + \hbar ) \psi_{\ell_z,min} = ( \ell_{z,min} + \hbar ) ( \hat{L}_x - i \hat{L}_y ) \psi_{\ell,min}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+A similar relation holds for the largest eigenvalue
+\begin{equation*}
+\begin{split}0 = \hat{L}_z ( \hat{L}_x + i \hat{L}_y ) \psi_{\ell_z,max} = ( \hat{L}_x + i \hat{L}_y ) ( \hat{L}_z - \hbar ) \psi_{\ell_z,max} = ( \ell_{z,max} - \hbar ) ( \hat{L}_x + i \hat{L}_y ) \psi_{\ell,max}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Applying \(\hat{L}_x + i \hat{L}_y\) to the first equation, the operator becomes
+\begin{equation*}
+\begin{split}( \hat{L}_x + i \hat{L}_y ) ( \hat{L}_x - i \hat{L}_y ) = \hat{L}_x^2 + \hat{L}_y^2 - i [ \hat{L}_x, \hat{L}_y ]  = \hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Applying \(\hat{L}_x - i \hat{L}_y\) to the second equation, the operator becomes
+\begin{equation*}
+\begin{split}( \hat{L}_x - i \hat{L}_y ) ( \hat{L}_x + i \hat{L}_y ) = \hat{L}_x^2 + \hat{L}_y^2 + i [ \hat{L}_x, \hat{L}_y ]  = \hat{L}^2 - \hat{L}_z^2 - \hbar \hat{L}_z \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, the 2 equations are, for a given value of \(\ell\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = ( \ell_{z,min} + \hbar ) ( \ell^2 - \ell_{z,min}^2 + \hbar \ell_{z,min} ) \\ 
+  0 & = ( \ell_{z,max} - \hbar ) ( \ell^2 - \ell_{z,max}^2 - \hbar \ell_{z,max} ) \\ 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Either \(\ell_{z;min,max} = \mp \hbar\), or
+\begin{equation*}
+\begin{split}\begin{aligned}
+ 0 & = \ell^2 - \ell_{z,min}^2 + \hbar \ell_{z,min}  \\
+ 0 & = \ell^2 - \ell_{z,max}^2 - \hbar \ell_{z,max} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and subtracting \(0 = (\ell_{z,max} + \ell_{z,min})(\ell_{z,max} - \ell_{z,min} + \hbar )\). As the content of the second bracket is always positive, then \(\ell_{z,min} = - \ell_{z,max}\).
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Following \eqref{equation:ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:eq:ang-mom:ladder:application}, if \(| \psi \rangle\) is the eigenvector of \(\hat{L}_z\) with eigenvalue \(\ell_z\), the wave functions \(\hat{L}^{\mp} | \psi \rangle\) are eigenvectors of \(\hat{L}_z\) with eigenvalues \(\ell_z \mp \hbar\). Thus, the set
+\begin{equation*}
+\begin{split}\{ \ell_{z,min}, \ell_{z,min} + \hbar, \ell_{z,min} + 2 \hbar, \dots, \ell_{z,max}-\hbar, \ell_{z,max} \} = \{ - m_{l,max} \hbar, \dots , m_{l,max} \hbar \} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+contains possible values of the eigenvalues of \(\hat{L}_z\).
+
+
+\bigskip\hrule\bigskip
+
+\begin{equation*}
+\begin{split}\lambda\left(L_z\right) = \hbar m_l \qquad m_l \in \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, for \(\ell_{z,min} = -m_{l,max} \hbar\), and \(\ell_{z,max} = m_{l,max} \hbar\), the corresponding eigenvalues \(\ell^2\) are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \ell^2 = \hbar^2 m_{l,max} \left( m_{l,max} + 1 \right) \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+
+\sphinxstepscope
+
+
+\section{Spin}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin::doc}}
+
+\subsection{Properties}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:properties}}
+\sphinxAtStartPar
+In analogy with the spatial angular momentum, and using Cartesian coordinates
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ S_a, S_b \right] & = i \hbar \, \varepsilon_{abc} S_c \\
+  \left[ S_a, S^2 \right] & = 0 \ . \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As the operators \(S_z\) and \(S^2\) commute, they share the same eigenvectors \(| s, m_s \rangle\) (all the eigvecs?) and their eigenproblems read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  S_z | s, m_s \rangle & = \hbar m_s | s, m_s \rangle \\
+  S^2 | s, m_s \rangle & = \hbar^2 s ( s + 1 ) | s, m_s \rangle \ , 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The value of \(s\) depends on the system of interest: for an electron \(s = \frac{1}{2}\). The value of the spin projection quantum number \(m_s\) belongs to \(m_s \in \{ -s, -s+1, \dots, s-1, s \}\). For an electron, \(m_s \in \left\{ - \frac{1}{2}, \frac{1}{2} \right\}\).
+
+\sphinxstepscope
+
+
+\section{Total Angular Momentum}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-total:total-angular-momentum}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-total:quantum-mechanics-angular-momentum-total}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-total::doc}}
+\sphinxAtStartPar
+State function
+\begin{equation*}
+\begin{split}| \Psi \rangle = | \psi \rangle \otimes | \sigma \rangle \quad  \in \quad \mathcal{H} = \mathcal{H}_{space} \otimes \mathcal{H}_{spin} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Total angular momentum operator
+\begin{equation*}
+\begin{split}\hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}} = \hat{\mathbf{L}} \otimes \hat{\mathbf{1}}_{spin} + \hat{\mathbf{1}}_{space} \otimes \hat{\mathbf{S}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Dot product of \(\hat{\mathbf{L}}\) and \(\hat{\mathbf{S}}\),
+\begin{equation*}
+\begin{split}\hat{\mathbf{L}} \cdot \hat{\mathbf{S}} = L_x \otimes S_x +  L_y \otimes S_y +  L_z \otimes S_z \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Magnitude square of \(\hat{\mathbf{J}}\), \(\hat{J}^2\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{J}^2 
+  & = ( \hat{\mathbf{L}} + \hat{\mathbf{S}} ) \cdot ( \hat{\mathbf{L}} + \hat{\mathbf{S}} ) = \\
+  & = \hat{L}^2 \otimes \hat{\mathbf{1}} + 2 \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} + \hat{\mathbf{1}} \otimes \hat{S}^2 \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Orbital angular momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{L}^2 | \ell, m_l \rangle & = \hbar^2 \ell (\ell+1) | \ell, m_l \rangle && , \quad \ell \in \{ 0, 1, 2, \dots \} \\
+  \hat{L}_z | \ell, m_l \rangle & = \hbar m_l             | \ell, m_l \rangle && , \quad m_l  \in \{ - \ell, - \ell+1, \dots, \ell-1, \ell \}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Spin angular momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{S}^2 |   s, m_s \rangle & = \hbar^2 s    (s   +1) | s, m_s \rangle && , \quad s   \in \left\{ 0, \frac{1}{2}, 1, \dots \right\} \\
+  \hat{S}_z |   s, m_s \rangle & = \hbar m_s             | s, m_s \rangle && , \quad m_s \in \{ - s, - s+1, \dots, s-1, s \}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For an electron \(s = \frac{1}{2}\), so that \(m_s \in \left\{ - \frac{1}{2}, \frac{1}{2} \right\}\), and thus, without explicitly writing \(s\) in the eigenvectors \sphinxhyphen{} being that a given parameter \sphinxhyphen{},
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{S}^2 | m_s \rangle & = \frac{3}{4}\hbar^2 | m_s \rangle && \\
+  \hat{S}_z | m_s \rangle & = \hbar m_s          | m_s \rangle && , \quad m_s \in \left\{ -\frac{1}{2}, \frac{1}{2} \right\}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Total angular momentum.} The \(z\)\sphinxhyphen{}component of the total angular momentum, and its magnitude squared are defined as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{J}^2 |   j, m_j \rangle & = \hbar^2 j    (j   +1) | j, m_j \rangle && , \quad   j \in \left\{ 0, \frac{1}{2}, 1, \dots \right\} \\
+  \hat{J}_z |   j, m_j \rangle & = \hbar m_j             | j, m_j \rangle && , \quad m_j \in \{ - j, - j+1, \dots, j-1, j \}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Eigenvalue problem of the total angular momentum for an electron}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-total:eigenvalue-problem-of-the-total-angular-momentum-for-an-electron}}
+\sphinxAtStartPar
+\sphinxstylestrong{Commutation of operators.} The operators \(\hat{J}^2\), \(\hat{J}_z\), \(\hat{L}^2\), \(\hat{S}^2\) commute, and thus they share common eigenvectors
+\begin{equation*}
+\begin{split}| j, m_j, \ell, s \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The operator \(\hat{J}_z\) commutes with \(\hat{L}^2\) and \(\hat{S}^2\), \(\left[ \hat{J}_z, \hat{L}^2 \right] = 0\), \(\left[ \hat{J}_z, \hat{S}^2 \right] = 0\).
+\subsubsection*{Proof}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ \hat{J}_z, \hat{L}^2 \right]
+  & = \hat{J}_z \hat{L}^2 - \hat{L}^2 \hat{J}_z = \\
+  & = \hat{L}_z \hat{L}^2 + \hat{S}_z \hat{L}^2 - \hat{L}^2 \hat{L}_z - \hat{L}^2 \hat{S}_z = \\
+  & = \underbrace{\left[ \hat{L}_z,  \hat{L}^2 \right]}_{ = 0 } + \underbrace{\left[ \hat{S}_z, \hat{L}^2 \right]}_{ = 0} = 0 \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The last term holds because \(\hat{S}_z\) and \(\hat{L}^2\) acts on two different sub\sphinxhyphen{}spaces, or explicitly for any \(| \Psi \rangle = | \psi \rangle \otimes | \sigma \rangle\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{S}_z \hat{L}^2 | \Psi \rangle
+  & = ( \hat{\mathbf{1}} \otimes \hat{S}_z ) ( \hat{L}^2 \otimes \hat{\mathbf{1}} ) | \psi \rangle \otimes | \sigma \rangle = \\ 
+  & = ( \hat{\mathbf{1}} \otimes \hat{S}_z ) ( \hat{L}^2 | \psi \rangle \otimes | \sigma \rangle ) = \\ 
+  & = \hat{L}^2 | \psi \rangle \otimes \hat{S}_z | \sigma \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and \(\hat{L}^2 \hat{S}_z | \Psi \rangle\) provides the same result for any \(| \Psi \rangle = | \psi \rangle \otimes | \sigma \rangle\).
+
+\sphinxAtStartPar
+The operator \(\hat{L}_z\) doesn’t commute with \(\hat{J}^2\), \(\left[ \hat{L}_z, \hat{J}^2 \right] = - 2 i \hbar \, \hat{\mathbf{z}} \cdot \hat{\mathbf{L}} \times \hat{\mathbf{S}}\).
+\subsubsection*{Proof}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ \hat{L}_z, \hat{J}^2 \right]
+  & = \hat{L}_z \hat{J}^2 - \hat{J}^2 \hat{L}_z = \\
+  & = \hat{L}_z \left( \hat{L}^2 + \hat{S}^2 + 2 \hat{\mathbf{L}} \cdot \hat{\mathbf{S}} \right) - \left( \hat{L}^2 + \hat{S}^2 + 2 \hat{\mathbf{L}} \cdot \hat{\mathbf{S}}\right) \hat{L}_z = \\
+  & = \underbrace{\left[ \hat{L}_z,  \hat{L}^2 \right]}_{ = 0 } + \underbrace{\left[ \hat{L}_z, \hat{S}^2 \right]}_{ = 0} + 2 [\hat{L}_z, \hat{L}_a] \hat{S}_a = \\
+  & = 2 i \hbar \hat{L}_y \hat{S}_x - 2 i \hbar \hat{L}_x \hat{S}_y = \\
+  & = - 2 i \hbar \, \hat{\mathbf{z}} \cdot \hat{\mathbf{L}} \times \hat{\mathbf{S}} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \([\hat{L}_z, \hat{L}_x] = i \hbar \hat{L}_y\), \([\hat{L}_y, \hat{L}_z] = i \hbar \hat{L}_x\), \([\hat{L}_z, \hat{L}_z] = 0\),
+
+\sphinxAtStartPar
+\sphinxstylestrong{\(z\)\sphinxhyphen{}component operators.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{J}_z | \Psi_{m_\ell, m_s} \rangle
+  & = ( \hat{L}_z + \hat{S}_z ) | m_\ell \rangle \otimes | m_s \rangle = \\
+  & = \hat{L}_z | m_\ell \rangle \otimes | m_s \rangle + \hat{S}_z | m_\ell \rangle \otimes | m_s \rangle = \\
+  & = \hbar m_\ell | m_\ell \rangle \otimes | m_s \rangle + \hbar m_s | m_\ell \rangle \otimes | m_s \rangle = \\
+  & = \hbar \left( m_\ell + m_s \right) | m_\ell \rangle \otimes | m_s \rangle = \\
+  & = \hbar \, m_j \, | m_\ell \rangle \otimes | m_s \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus the relation \(m_j = m_{\ell} + m_s\) for every pair of eigenvectors \(| m_{\ell} \rangle\) and \(| m_s \rangle\) of the operators \(\hat{L}_z\), and \(\hat{S}_z\). It also follows, that the extreme values of \(m_j\) are \(-j\) and \(j = \ell + s\).
+
+
+
+\sphinxstepscope
+
+
+\chapter{Density Operator}
+\label{\detokenize{ch/quantum-mechanics/density-operator:density-operator}}\label{\detokenize{ch/quantum-mechanics/density-operator:quantum-mechanics-density-operator}}\label{\detokenize{ch/quantum-mechanics/density-operator::doc}}
+\sphinxAtStartPar
+Let’s start from an example of the preparation of a system of subsystems in pure states \(| \psi_i \rangle\), with probability \(p_i\), \(\sum_i p_i = 1\). Let \(M\) an observable, with the corresponding Hermitian operator \(\hat{M}\) with discrete values \(m_\mu\) and corresponding states \(| m_{\mu} \rangle\).
+
+\sphinxAtStartPar
+Now, the probability of measuring the value \(m_{\mu}\) for a system in state \(| \psi_i \rangle\), i.e. the conditional probability \(p(m=m_{\mu} | | \psi \rangle = | \psi_i \rangle)\) reads
+\begin{equation*}
+\begin{split}p(m=m_{\mu} |  | \psi \rangle = | \psi_i \rangle ) = | \langle m_{\mu} | \psi_i \rangle |^2 =  \langle  \psi_i | m_{\mu} \rangle  \langle m_{\mu} | \psi_i \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The probability of measuring \(m\) from the ensemble is the marginal probability,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  p(m = m_{\mu}) 
+  & = \sum_i p(m = m_{\mu} | | \psi \rangle = | \psi_i \rangle) \, p( | \psi \rangle = | \psi_i \rangle ) = \\
+  & = \sum_i \langle \psi_i | m_{\mu} \rangle \langle m_{\mu} | \psi_i \rangle \, p_i = \\
+  & = \sum_i \langle \psi_i | \hat{\Pi}_{m_{\mu}} | \psi_i \rangle \, p_i \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having introduced the orthogonal projector over the \(\mu^{th}\) eigenfunction of the operator \(\hat{M}\), i.e. \(\hat{\Pi}_{m_{\mu}} = | m_{\mu} \rangle \langle m_{\mu} |\).
+
+\sphinxAtStartPar
+Let’s define the \sphinxstylestrong{density operator} as
+\begin{equation*}
+\begin{split}\hat{\rho} = \sum_i p_i | \psi_i \rangle \langle \psi_i | \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using an orthonormal basis \(\{ | e_k \rangle \}_k\), it’s easy to show that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \text{Tr}\left( \hat{\rho} \hat{\Pi}_{m_{\mu}} \right) 
+  & := \sum_k \langle e_k | \hat{\rho} \hat{\Pi}_{m_{\mu}} | e_k \rangle = \\
+  & = \sum_{k,i} p_i \langle e_k | \psi_i \rangle \langle \psi_i | \hat{\Pi}_{m_{\mu}} | e_k \rangle = \\
+  & = \sum_{i} p_i \langle \psi_i | \hat{\Pi}_{m_{\mu}} \underbrace{\sum_k | e_k \rangle \langle e_k |}_{ = \hat{\mathbf{1}} } \psi_i \rangle = \\
+  & = \sum_{i} p_i \langle \psi_i | \hat{\Pi}_{m_{\mu}} | \psi_i \rangle = \\
+  & = p(m = m_{\mu}) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Expected value.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \mathbb{E}[ M ]
+ & = \sum_{\mu} m_{\mu} p ( m = m_{\mu} ) = \\
+ & = \sum_i \sum_{\mu} m_{\mu} p_i \langle \psi_i | m_{\mu} \rangle \langle m_{\mu} | \psi_i \rangle = \\
+ & = \sum_i \sum_{\mu} p_i \langle \psi_i | \hat{M} | m_{\mu} \rangle \langle m_{\mu} | \psi_i \rangle = \\
+ & = \sum_{\mu} | \langle m_{\mu} \sum_i  p_i| \psi_i \rangle\langle \psi_i | \hat{M} | m_{\mu} \rangle = \\
+ & = \sum_{\mu} \langle m_{\mu} | \hat{\rho} \hat{M} | m_{\mu} \rangle = \\
+ & = \text{Tr} \left( \hat{\rho} \hat{M} \right) \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Trace of an operator}
+
+\sphinxAtStartPar
+Choosing a set of \sphinxstylestrong{orthogonal unit vectors} \(| \psi_i \rangle\), the trace of an operator \(\hat{A}\) can be defined as
+\begin{equation*}
+\begin{split}\text{Tr}\left( \hat{A} \right) = \sum_{i} \langle \psi_i | \hat{A} | \psi_i \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Properties
+\begin{itemize}
+\item {} \begin{equation*}
+\begin{split}\text{Tr}\left( \hat{A} | \psi_j \rangle \langle \psi_j | \right) = \sum_{i} \langle \psi_i | \hat{A} | \psi_j \rangle \underbrace{\langle \psi_j | \psi_i \rangle}_{\delta_{ij}} = \langle \psi_j | \hat{A}| \psi_j \rangle \ . \end{split}
+\end{equation*}
+\item {} \begin{equation*}
+\begin{split}\text{Tr}\left( \hat{A}\right) = \text{Tr}\left( \hat{A} \sum_j | \psi_j \rangle \langle \psi_j | \right) = \sum_{i,j} \langle \psi_i | \hat{A} | \psi_j \rangle \underbrace{\langle \psi_j | \psi_i \rangle}_{\delta_{ij}} = \sum_i \langle \psi_i | \hat{A}| \psi_i \rangle \ . \end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Choosing a \sphinxstylestrong{generic basis} \(\{ | \phi_k \rangle \}_k\), the \(k^{th}\) vector of this basis can be written as a linear combination of the vectors of a unit orthogonal basis,
+
+\sphinxAtStartPar
+As done in Differential Geometry, a reciprocal basis \(\{ | \phi^j \rangle \}_j\) exists s.t. \(\langle \phi^j | \phi_k \rangle = \delta^j_k\). Defining the components of the metric tensor \(g_{ij} = \langle \phi_i | \phi_j \rangle\), \(g^{ij} = \langle \phi^i | \phi^j \rangle\) the relations between the original basis and its reciprocal follows
+\begin{equation*}
+\begin{split}| \phi^i \rangle = g^{ij} | \phi_j \rangle \quad , \quad | \phi_i \rangle = g_{ij} | \phi^j \rangle .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The identity operator can be written as \(\hat{\mathbf{1}} = \sum_j | \phi_j \rangle \langle \phi^j | =  \sum_j | \phi^j \rangle \langle \phi_j |\), as
+\begin{equation*}
+\begin{split}| v \rangle = \sum_i v^i | \phi_i \rangle = \sum_{i,j} v^i | \phi_j \rangle \underbrace{\langle \phi^j | \phi_i \rangle}_{=\delta^j_i} = \sum_{j} | \phi_j\rangle \langle \phi^j | \, \sum_i v^i | \phi_i \rangle = \hat{\mathbf{1}} | v \rangle \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+The vectors of the basis can be written as a linear combination of the vectors of an orthonormal basis \(\{ | \psi_k \rangle \}_k\),
+\begin{equation*}
+\begin{split}| \phi_i \rangle = \sum_{k} T_{i}^{\ \ k} | \psi_k \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The dual vectors are written as \(| \phi^j \rangle = \sum_l R^{jl} | \psi_l \rangle\). As the dual vectors should be orthogonal to the vectors of the original basis, it follows
+\begin{equation*}
+\begin{split}\delta^{j}_{i} = \langle \phi^j | \phi_i \rangle = \sum_{k,l} \left( R^{jl} \right)^* T_{i}^{\ \ k} \underbrace{\langle \psi_l | \psi_k \rangle}_{= \delta_{lk}} = \sum_{k} \left( R^{jk} \right)^* T_{i}^{\ \ k} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the transformation matrix \(\mathsf{R}\) of the vectors of the reciprocal basis is the inverse of the adjoint of the matrix \(\mathsf{T}\), i.e.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left( \mathsf{T} \right)_{ik} & = T_i^{\ \ k} \\
+  \left( \mathsf{R} \right)_{jk} & = R^{ij} \\
+  \left( \mathsf{T}^{-1} \right)_{kj} & = \left( R^{jk} \right)^* = \left( \mathsf{R}^H \right)_{kj} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using matrix formalism, the definition of the inverse matrix gives \(\mathsf{I} = \mathsf{T} \mathsf{R}^H = \mathsf{R}^H \mathsf{T}\). (\sphinxstylestrong{todo} what happens for infinite dimensional spaces?)
+
+\sphinxAtStartPar
+Thus, the relation
+\begin{equation*}
+\begin{split}
+  \sum_i \langle \phi^i | \hat{A} | \phi_i \rangle = \sum_{l,k}  \underbrace{\sum_i  \left( R^{il} \right)^* T_{i}^{\ \ k}}_{= \left( \mathsf{R}^H \mathsf{T} \right)_{lk} =\delta^{lk}} \langle \psi_l | \hat{A} | \psi_k \rangle = \sum_k \langle \psi_k | \hat{A} | \psi_k \rangle = \text{Tr}\left( \hat{A} \right) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Uncomment or delete (more likely)}
+
+
+\label{ch/quantum-mechanics/density-operator:example-0}
+\begin{sphinxadmonition}{note}{Example 17.1 (Difference between mixed states and pure state in superposition)}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Pure state} in superposition of two orthogonal states \(| \psi_1 \rangle\), \(| \psi_2 \rangle\),
+\begin{equation*}
+\begin{split}| \psi \rangle = a_1 | \psi_1 \rangle + a_2 | \psi_2 \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(|a_1|^2 + |a_2|^2 = 1\). A system prepared in this pure state with probability \(p = 1\) has density operator
+\begin{equation*}
+\begin{split}\hat{\rho} = | \psi \rangle \langle \psi | = |a_1|^2 | \psi_1 \rangle \langle \psi_1 | + a_1 a_2^* | \psi_1 \rangle \langle \psi_2 | + a_2 a_1^* | \psi_2 \rangle \langle \psi_1 | + |a_2|^2 | \psi_2 \rangle \langle \psi_2 | \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(a = b = \frac{1}{\sqrt{2}}\), the components of the density operator in the basis \(\{ | \psi_1 \rangle, | \psi_2 \rangle \}\) are
+\begin{equation*}
+\begin{split}
+\begin{bmatrix} |a_1|^2 & a_1 a_2^* \\ a_1^* a_2 & |a_2|^2 \end{bmatrix} =
+\begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix} \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Mixed state.} An ensamble prepared in state \(| \psi_1 \rangle\) with probability \(p_1\), \(p_2 = 1 - p_1\) has density operator
+\begin{equation*}
+\begin{split}\hat{\rho} = p_1 | \psi_1 \rangle \langle \psi_1 | + p_2 | \psi_2 \rangle \langle \psi_2 | \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose components in the \(\{ | \psi_1 \rangle, | \psi_2 \rangle \}\) basis are
+\begin{equation*}
+\begin{split}
+\begin{bmatrix} p_1 & 0 \\ 0 & p_2 \end{bmatrix} =
+\begin{bmatrix} \frac{1}{2} & 0 \\ 0 & \frac{1}{2} \end{bmatrix}
+\ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+
+\sphinxstepscope
+
+
+\chapter{Decoherence}
+\label{\detokenize{ch/quantum-mechanics/decoherence:decoherence}}\label{\detokenize{ch/quantum-mechanics/decoherence:quantum-mechanics-decoherence}}\label{\detokenize{ch/quantum-mechanics/decoherence::doc}}
+
+\section{Example: two\sphinxhyphen{}dimensional system interacting with a large\sphinxhyphen{}dimensional environment}
+\label{\detokenize{ch/quantum-mechanics/decoherence:example-two-dimensional-system-interacting-with-a-large-dimensional-environment}}\label{\detokenize{ch/quantum-mechanics/decoherence:quantum-mechanics-decoherence-example}}
+
+\subsection{State of the system}
+\label{\detokenize{ch/quantum-mechanics/decoherence:state-of-the-system}}\label{\detokenize{ch/quantum-mechanics/decoherence:quantum-mechanics-decoherence-example-state}}
+\sphinxAtStartPar
+A 2\sphinxhyphen{}dimensional system is interacting with a large\sphinxhyphen{}dimensional environment. The state of the 2\sphinxhyphen{}dimensional system is identified by the wave function
+\begin{equation*}
+\begin{split}| \Psi_S \rangle = c_0 | 0 \rangle + c_1 | 1 \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the state of the environment by the wave function \(| \Psi_E \rangle\), and the state of the whole system (S+E) by the tensor product of the two,
+\begin{equation*}
+\begin{split}| \Psi_{S+E} \rangle = | \Psi_S \rangle \otimes | \Psi_E \rangle \ .\end{split}
+\end{equation*}
+
+\subsection{Evolution of the system}
+\label{\detokenize{ch/quantum-mechanics/decoherence:evolution-of-the-system}}\label{\detokenize{ch/quantum-mechanics/decoherence:quantum-mechanics-decoherence-example-evolution}}
+\sphinxAtStartPar
+The evolution of the system is governed by the Schrodinger equation, with the Hamiltonian of the whole system
+\begin{equation*}
+\begin{split}i \hbar \dfrac{d}{dt} | \Psi_{S+E} \rangle = \hat{H}_{S+E} | \Psi_{S+E} \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose evolution can be represented by an unitary operator \(\hat{U}_{S+E; t,0}\),
+\begin{equation*}
+\begin{split}| \Psi_{S+E} \rangle_t = U_{S+E; t,0} | \Psi_{S+E} \rangle_0  = \dots = \alpha | 0 \rangle \otimes | \Psi_{E;0} \rangle + \beta | 1 \rangle \otimes | \Psi_{E;1} \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Density operator reads
+\begin{equation*}
+\begin{split}\hat{\rho} := | \Psi_{S+E} \rangle \langle \Psi_{S+E} | \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Tracing out the environment states,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{\rho}_E 
+  & = \text{Tr}_E \left( \hat{\rho} \right) = \\
+  & = \sum_{k} \left( \alpha | 0 \rangle \langle \phi_k | \Psi_{E;0} \rangle + \beta | 1 \rangle \langle \phi_k | \Psi_{E;1} \rangle \right)  \left( \alpha^* \langle 0 | \langle \Psi_{E;0} | \phi_k  \rangle + \beta^* \langle 1 | \langle \phi_k | \Psi_{E;1} \rangle  \right) = \\
+  & = |\alpha|^2 | 0 \rangle \langle 0 | \langle \Psi_{E;0} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k}_{= \hat{\mathbf{1}}} | \Psi_{E;0} \rangle + 
+      \alpha \beta^* | 0 \rangle \langle 1 | \langle \Psi_{E;0} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k |}_{= \hat{\mathbf{1}} } \Psi_{E;1} \rangle + \\
+  & \quad + 
+      \alpha^* \beta | 1 \rangle \langle 0 | \langle \Psi_{E;1} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k}_{= \hat{\mathbf{1}}} | \Psi_{E;0} \rangle + 
+      |\beta|^2 | 1 \rangle \langle 1 | \langle \Psi_{E;1} | \underbrace{\sum_k | \phi_k \rangle \langle \phi_k |}_{= \hat{\mathbf{1}} } \Psi_{E;1} \rangle = \\
+  & = |\alpha|^2 | 0 \rangle \langle 0 | + \alpha \beta^* \langle \Psi_{E;0} | \Psi_{E;1} \rangle | 0 \rangle \langle 1 | + 
+    + \alpha^* \beta \langle \Psi_{E;1} | \Psi_{E;0} \rangle | 1 \rangle \langle 0 | + |\beta|^2 | 1 \rangle \langle 1 | \ . 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The components of the reduced density operator in the system basis are
+\begin{equation*}
+\begin{split}\begin{bmatrix} |\alpha|^2  & \alpha \beta^* \langle \Psi_{E;0} | \Psi_{E;1} \rangle \\ \alpha^* \beta \langle \Psi_{E;1} | \Psi_{E;0} \rangle & |\beta|^2 \end{bmatrix} \ .\end{split}
+\end{equation*}
+
+\subsection{Decoherence time}
+\label{\detokenize{ch/quantum-mechanics/decoherence:decoherence-time}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{check and uncomment}
+
+
+
 \sphinxstepscope
 
 
@@ -4431,7 +5645,7 @@ Dispersion becomes quantum:
 
 \item {} 
 \sphinxAtStartPar
-1906\sphinxhyphen{}1908, \sphinxstylestrong{Ladenburg} and Loria began experiments about spectral lines, anomalous dispersion, and the microstructure of the light\sphinxhyphen{}matter interaction. They found a way to measure the number density of the electrons responsible for spectral lines in absorption spectra in \(\text{H}\) atom (\(\text{H}_{\alpha}\) line only, while they had not enough accuracy for other weaker lines). Only few electrons resonate while the majority appear to be unaffected. They then focused on \(\text{Na}\) for better resolution. They came back to \(\text{H}\) few here laters (1911), to find \(\frac{N_{\text{H}_{\alpha}}}{N_{\text{H}}} \sim \frac{1}{50.000}\), \(\frac{N_{\text{H}_{\beta}}}{N_{\text{H}}} \sim \frac{1}{200.000}\).
+1906\sphinxhyphen{}1908, \sphinxstylestrong{Ladenburg} and Loria began experiments about spectral lines, anomalous dispersion, and the microstructure of the light\sphinxhyphen{}matter interaction. They found a way to measure the number density of the electrons responsible for spectral lines in absorption spectra in \(\text{H}\) atom (\(\text{H}_{\alpha}\) line only, while they had not enough accuracy for other weaker lines). Only few electrons resonate while the majority appear to be unaffected. They then focused on \(\text{Na}\) for better resolution. They came back to \(\text{H}\) few years later (1911), to find \(\frac{N_{\text{H}_{\alpha}}}{N_{\text{H}}} \sim \frac{1}{50.000}\), \(\frac{N_{\text{H}_{\beta}}}{N_{\text{H}}} \sim \frac{1}{200.000}\).
 
 \item {} 
 \sphinxAtStartPar
@@ -4526,7 +5740,7 @@ derived Planck’s law from Bohr’s atomic model, using a (quantum) statistical
 
 \item {} 
 \sphinxAtStartPar
-Einstein couldn’t calculate his coefficients but he was positive that they could be computed once a theory about the atom had beenngwould be established
+Einstein couldn’t calculate his coefficients but he was positive that they could be computed once a theory about the atom had been be established
 
 \item {} 
 \sphinxAtStartPar
@@ -4553,7 +5767,7 @@ in 1927, Dirac calculated Einstein coefficients (The Quantum Theory of Emission 
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-1923, \sphinxhref{http://L.de}{L.de} Broglie: idea of guiding wave for matter particles
+1923, L.\({}\)de Broglie: idea of guiding wave for matter particles
 
 \item {} 
 \sphinxAtStartPar
@@ -4597,7 +5811,7 @@ in 1927, Dirac calculated Einstein coefficients (The Quantum Theory of Emission 
 \sphinxAtStartPar
 …
 \begin{equation*}
-\begin{split}n(\omega)-1 = \frac{q^2 N}{2 \varepsilon_0 m} \frac{1}{\omega_0^2 - \omega^2 + i \gamVma \omega}\end{split}
+\begin{split}n(\omega)-1 = \frac{q^2 N}{2 \varepsilon_0 m} \frac{1}{\omega_0^2 - \omega^2 + i \gamma \omega}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Remark.} The refractive index \(n\) is a complex number, with
@@ -4628,6 +5842,1098 @@ As the imaginary part of the refractive index is negative for all the positive f
 \begin{equation*}
 \begin{split}n^2 = ( 1 + \delta )^2 \simeq 1 + 2 \delta \ .\end{split}
 \end{equation*}
+
+\subsubsection{Einstein}
+\label{\detokenize{ch/quantum-mechanics/history/light-dispersion:einstein}}
+
+\subsubsection{Ladenburg}
+\label{\detokenize{ch/quantum-mechanics/history/light-dispersion:ladenburg}}
+\sphinxAtStartPar
+Ladenburg wrote the energy balance at thermodynamical equilibrium, from transitions between each pair of states \(i\), \(k > i\).
+The total amount of energy emitted by \(N_k\) molecules in the state \(k\) transitioning to a lower state \(i\) is
+\begin{equation*}
+\begin{split}J = \underbrace{h \nu_{ik}}_{\Delta E_{ik}} N_k ( A_{ki} + B_{ki} u(\nu_{ik})\end{split}
+\end{equation*}
+\sphinxAtStartPar
+At thermal equilibrium, this energy is equal to the energy absorbed by \(N_i\) molecules in the state \(i\),
+\begin{equation*}
+\begin{split}A = h \nu_{ik} N_i B_{ik} u(\nu_{ik}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Exploiting the relations between Einstein coefficients ( ), Ladenburg wrote the emitted and absorbed energy as a function of the spontaneous emission foefficient \(A_{ki}\) (allowing to relate dispersion with other phenomena involving emission),
+\begin{equation*}
+\begin{split}J = A = h \nu_{ik} u(\nu_{ik}) N_i B_{ik} = \end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Light matter interaction}
+\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:light-matter-interaction}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:quantum-mehcanics-history-light-matter}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck::doc}}
+
+\subsection{Einstein: quantum theory of radiation interacting with matter}
+\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:einstein-quantum-theory-of-radiation-interacting-with-matter}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:quantum-mehcanics-history-light-matter-einstein}}
+\sphinxAtStartPar
+Three mechanisms, whose probabilities are
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Spontaneous emission of radiation, for a photon going from level \(j\) to level \(i\) (\(E_j > E_i\)),
+\begin{equation*}
+\begin{split}\left( \frac{d n_{ij}}{d t} \right)_{spont} = A_{ji} n_j \ ,\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Stimulated emission of radiation, for a photon going from level \(j\) to level \(i\) (\(E_j > E_i\)),
+\begin{equation*}
+\begin{split}\left( \frac{d n_{ij}}{d t} \right) = B_{ji} n_j \rho(\nu_{ji}) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\nu_{ji} = \frac{E_j - E_i}{h}\), and \(\rho(\nu)\) the density of radiation in the system at frequency \(\nu\)
+
+\item {} 
+\sphinxAtStartPar
+Absorption, for a photon going from level \(j\) to level \(i\) (\(E_j > E_i\)),
+\begin{equation*}
+\begin{split}\left( \frac{d n_{ij}}{d t} \right) = - B_{ij} n_i \rho(\nu_{ij}) \ .\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+The overall rate reads
+\begin{equation*}
+\begin{split}\dfrac{d n_i}{d t} = \sum_{j, E_j > E_i} \dfrac{d n_{ij}}{d t} = \sum_{j, E_j > E_i} \left\{ A_{ji} n_j + B_{ji} n_j \rho(\nu_{ij}) - B_{ij} n_i \rho(\nu_{ij}) \right\} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+At thermodynamic equilibriumm between all the states
+\begin{equation*}
+\begin{split}0 = \dfrac{d n_{ij}}{d t} = A_{ji} n_j + B_{ji} n_j \rho(\nu_{ij}) - B_{ij} n_i \rho(\nu_{ij})\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using Boltzmann distribution
+\begin{equation*}
+\begin{split}\frac{n_i}{n} = \frac{g_i e^{-\frac{E_i}{kT}}}{Z} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the expression of the radiation density follows
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho(\nu_{ij})
+  & = \frac{A_{ji} n_j}{n_i B_{ij} - n_j B_{ji}} = \\
+  & = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ \exp(-E_j/kT) }{ \exp(-E_i/kT) - \frac{g_j B_{ji}}{g_i B_{ij}} \exp(-E_j/kT)} = \\
+  & = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ 1 }{ \exp((E_j-E_i)/kT) - \frac{g_j B_{ji}}{g_i B_{ij}}} = \\
+  & = \frac{A_{ji} g_j}{B_{ij} g_i} \frac{ 1 }{ \exp(h \nu_{ji}/kT) - \frac{g_j B_{ji}}{g_i B_{ij}}} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparing with Planck’s law (with the \sphinxstylestrong{radiance}?) \(\rho(\nu, T) = \frac{2 h \nu^3}{c^3} \frac{1}{\exp(h \nu /kT) - 1}\), the relations between Einstein coefficients \((E_j > E_i)\) follows
+\begin{equation*}
+\begin{split}\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .\end{split}
+\end{equation*}\subsubsection*{Planck’s law}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Spectral energy density (energy per unit volume, per unit frequency):
+\begin{equation*}
+\begin{split}u_{\nu}(\nu, T) = \frac{8 \pi h \nu^3}{c^3} \frac{1}{\exp(h \nu/kT) - 1}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Dimensional analysis:
+\begin{equation*}
+\begin{split}[u] = \frac{[h][\nu]^3}{[c]^3} = \frac{J s \cdot s^{-3}}{ m^3 c^{-3}} = \frac{J}{ m^3 \cdot \text{Hz}} = \frac{\text{energy}}{\text{length}^3 \cdot \text{freq.}} \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Radiance, \(B_{\nu}(\nu, T) = \frac{c}{4 \pi} u_{\nu}(\nu, T)\) \sphinxstylestrong{todo} \sphinxstyleemphasis{Justify this relation. Is this right? Or should the factor be \(\frac{c}{8 \pi}\)}%
+\begin{footnote}[1]\sphinxAtStartFootnote
+Taltavull, Rudolf Ladenburg and the first quantum interpretation of optical dispersion, Eur. Phys. J. H.
+%
+\end{footnote}. Thus
+
+\end{itemize}
+\begin{equation*}
+\begin{split}B_{\nu}(\nu, T) = \frac{2 h \nu^3}{c^2} \frac{1}{\exp(h \nu/kT) - 1}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Dimensional analysis
+\begin{equation*}
+\begin{split}[B] = \frac{\text{power}}{\text{solid angle} \cdot \text{surface} \cdot \text{Hz}}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
+\section{Ratiation of moving charges}
+\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:ratiation-of-moving-charges}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula::doc}}
+
+\subsection{Green’s function solution of wave equations: Liénard\sphinxhyphen{}Wiechert potential}
+\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:green-s-function-solution-of-wave-equations-lienard-wiechert-potential}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation-lienard-wiechert}}
+\sphinxAtStartPar
+\sphinxstylestrong{Wave equations in electromagmetism.} See \sphinxhref{https://basics2022.github.io/bbooks-physics-electromagnetism/ch/waves-equation.html}{Classical Electromagnetism: Wave Equations in Electromagnetism}. Using \sphinxstylestrong{Lorentz gauge}, \(\nabla \cdot \mathbf{a} + \frac{1}{c^2}\partial_t \varphi = 0\), the wave equations for the mathbftor potential \(\mathbf{a}\) and the scalar potential \(\varphi\) read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{1}{c^2} \partial_{tt} \mathbf{a} - \Delta \mathbf{a} & = \mu \mathbf{j} \\
+  \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi & = \frac{\rho}{\varepsilon} \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Solution of wave equation with Green’s function}
+
+\sphinxAtStartPar
+The solution of a wave equation
+\begin{equation*}
+\begin{split}\frac{1}{c^2} \partial_{tt} u - \Delta u = f \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+can be written using \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/pde/bem-poisson-helmholtz-waves.html\#wave-equation}{Math: Green’s function method} (with assumptions of causality, and no contribution from i.c. and b.c.),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  u(\mathbf{r},t) 
+  & = \frac{1}{4 \pi} \int_{t' \in T} \int_{\mathbf{r}' \in V} \dfrac{ \delta \left( t' - t + \frac{|\mathbf{r}' - \mathbf{r}|}{c} \right) }{| \mathbf{r}' - \mathbf{r} |} f (\mathbf{r}', t') d \mathbf{r}' d t' = \\
+  & = \frac{1}{4 \pi} \int_{\mathbf{r}' \in V} \frac{1}{| \mathbf{r}' - \mathbf{r} |} f\left( \mathbf{r}', t_{ret}(\mathbf{r}, t; \mathbf{r}') \right)  d \mathbf{r}' \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the retarded time \(t_{ret}(\mathbf{r}, t; \mathbf{r}') = t - \frac{| \mathbf{r}' - \mathbf{r} |}{c} \).
+
+\sphinxAtStartPar
+The solution of the wave equations reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{a}(\mathbf{r},t) & = \frac{\mu}{4 \pi} \int_{\mathbf{r}' \in V} \frac{1}{| \mathbf{r}' - \mathbf{r} |} \mathbf{j} \left( \mathbf{r}', t_{ret}(\mathbf{r}, t; \mathbf{r}') \right)  d \mathbf{r}' \\
+  \varphi(\mathbf{r},t) & = \frac{1}{4 \pi \varepsilon} \int_{\mathbf{r}' \in V} \frac{1}{| \mathbf{r}' - \mathbf{r} |} \rho \left( \mathbf{r}', t_{ret}(\mathbf{r}, t; \mathbf{r}') \right)  d \mathbf{r}' \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the retarded time \(t_{ret}(\mathbf{r}, t; \mathbf{r}') = t - \frac{| \mathbf{r}' - \mathbf{r} |}{c} \).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Point charge.} The charge density and the current density of a point charge with electrical charge \(q\), position \(\mathbf{r}_s(t)\) and velocity \(\mathbf{v}_s = \dot{\mathbf{r}}_s\) are respectively
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho(\mathbf{r},t) & = q \, \delta ( \mathbf{r} - \mathbf{r}_s(t) ) \\
+  \mathbf{j}(\mathbf{r},t) & = q \mathbf{v}_s(t) \, \delta ( \mathbf{r} - \mathbf{r}_s(t) ) \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, the electromagnetic potentials generated by a point charge are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{a}(\mathbf{r},t) & = \frac{\mu}{4 \pi} \frac{1}{| \mathbf{r}_s(t_{ret}) - \mathbf{r} |} q \mathbf{v}_s(t_{ret}) \\
+  \varphi(\mathbf{r},t) & = \frac{1}{4 \pi \varepsilon} \frac{1}{| \mathbf{r}_s(t_{ret}) - \mathbf{r} |} q  \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Derivatives of the retarded time}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t t_{ret} & = \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \\   
+  \nabla     t_{ret} & = - \frac{1}{c} \frac{\hat{\mathbf{r}}}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta}  \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+Time derivative
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t t_{ret}(\mathbf{r}, t, \mathbf{r}_s(t)) 
+  & = \partial_t \left( t - \frac{|\mathbf{r}_s(t_{ret}(\mathbf{r},t, \mathbf{r}_s(t_{ret})) - \mathbf{r}|}{c} \right) = \\
+  & = 1 - \frac{1}{c} \frac{d |\mathbf{r}_s - \mathbf{r}|}{d t_{ret}} \partial_t t_{ret} = \\
+  & = 1 + \frac{x_{k} - x_{s,k}}{|\mathbf{r}_s - \mathbf{r}|} \frac{v_{s,k}}{c} \partial_t t_{ret} = \\
+  & = 1 + \hat{\mathbf{r}} \cdot \boldsymbol\beta \, \partial_t t_{ret} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\partial_t t_{ret} = \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Space derivatives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_k t_{ret}(\mathbf{r}, t, \mathbf{r}_s(t)) 
+  & = \partial_k \left( t - \frac{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|}{c} \right) = \\
+  & = - \frac{1}{c} \partial_k |\mathbf{r}_s(t_{ret}) - \mathbf{r}| = \\
+  & = \frac{1}{c} \frac{r_i - r_{s,i}(t_{ret})}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|} \partial_k ( r_{s,i}(t_{ret}) - r_i )= \\
+  & = \frac{1}{c} \frac{r_i - r_{s,i}(t_{ret})}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|} \left( v_{s,i}(t_{ret}) \partial_k t_{ret} - \delta_{ik} \right) = \\
+  & = \hat{\mathbf{r}} \cdot \boldsymbol\beta \ , \partial_k t_{ret} - \frac{1}{c}\frac{r_k - r_{s,k}(t_{ret})}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}\partial_k t_{ret} = - \frac{1}{c} \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \frac{r_k - r_{s,k}(t_{ret})}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+or, using vector notation,
+\begin{equation*}
+\begin{split}\nabla t_{ret} = - \frac{1}{c} \frac{\hat{\mathbf{r}}}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta}  \ .\end{split}
+\end{equation*}\subsubsection*{Derivatives of \protect\(\ |\mathbf{r} - \mathbf{r}_s(t_{ret})|^{-1}\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^n
+  & = - n | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-1} \frac{  \hat{\mathbf{r}} \cdot \boldsymbol\beta }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta}c  
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_k | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^n
+  & = n | \mathbf{r}_s(t_{ret}) - \mathbf{r} |^{n-1} \left[ \frac{  \hat{\mathbf{r}} \cdot \boldsymbol\beta }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + 1 \right] \hat{r}_k
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_k | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^n
+  & = \partial_k \left[ ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \right]^{\frac{n}{2}} = \\
+  & = n  | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-2} ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot \partial_k ( \mathbf{r} - \mathbf{r}_s(t_{ret}) )
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t ( r_{i} - r_{s,i}(t_{ret}))
+  & = - \partial_t t_{ret} v_{s,i}(t_{ret}) = \\
+  & = - \frac{v_{s,i}(t_{ret})}{1 - \hat{\mathbf{r}} \cdot \boldsymbol{\beta}} \\
+  \partial_k (r_{i} - r_{s,i}(t_{ret}))
+  & = \delta_{ik} - \partial_k t_{ret} v_{s,i} (t_{ret})  = \\
+  & = \delta_{ik} + \frac{1}{c} \frac{\hat{r}_k}{1-\hat{\mathbf{r}} \cdot \boldsymbol\beta} v_{s,i} (t_{ret})  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^n
+  & = \partial_t \left[ ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \right]^{\frac{n}{2}} = \\
+  & = n  | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-2} ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot \partial_t ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) = \\
+  & = - n | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-1}\frac{  \hat{\mathbf{r}} \cdot \mathbf{v}_s(t_{ret}) }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_k | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^n
+  & = \partial_k \left[ ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \right]^{\frac{n}{2}} = \\
+  & = n  | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-2} ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) \cdot \partial_k ( \mathbf{r} - \mathbf{r}_s(t_{ret}) ) = \\
+  & = n | \mathbf{r} - \mathbf{r}_s(t_{ret}) |^{n-1} \left[ \frac{1}{c} \frac{  \hat{\mathbf{r}} \cdot \mathbf{v}_s(t_{ret}) }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + 1 \right] \hat{r}_k
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{From potentials to the electromagnetic field}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} 
+  & = - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + \frac{q}{4 \pi \varepsilon} \frac{1}{|\mathbf{r}|^2} \left( \frac{ \hat{\mathbf{r}} - \boldsymbol\beta (\hat{\mathbf{r}} \cdot \boldsymbol\beta) }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{b} 
+  & = \frac{q}{4 \pi \varepsilon} \frac{1}{c} \left[ -\frac{\hat{\mathbf{r}} \times \mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1-\hat{\mathbf{r}} \cdot \boldsymbol\beta} - \frac{\hat{\mathbf{r}}}{|\mathbf{r}|^2} \times \boldsymbol\beta \left( \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right)  \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+It’s easy to realize that \(\mathbf{b} = \frac{1}{c} \hat{\mathbf{r}} \times \mathbf{e}\).
+\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} 
+  & = - \partial_t \mathbf{a} - \nabla \varphi = \\
+  & = - \partial_t \left( \frac{\mu}{4 \pi} \frac{q \mathbf{v}_s(t_{ret})}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|} \right) - \nabla \left( \frac{1}{4 \pi \varepsilon} \frac{q}{|\mathbf{r}_s(t_{ret}) - \mathbf{r}|}  \right) = \\
+  & = - \frac{q \mu}{4 \pi} \left[ \frac{1}{|\mathbf{r}|} \mathbf{a}_s(t_{ret}) \, \partial_t t_{ret} + \mathbf{v}_s |\mathbf{r}|^{-2} \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} c \right] - \frac{q}{4 \pi \varepsilon} |\mathbf{r}|^{-2} \left( - 1 - \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \hat{\mathbf{r}} = \\
+  & = - \frac{q \mu c^2}{4 \pi} \left[ \frac{\mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta}  + \frac{\boldsymbol\beta}{|\mathbf{r}|^2} \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right] + \frac{q}{4 \pi \varepsilon} \frac{1}{|\mathbf{r}|^{2}} \left( 1 + \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \hat{\mathbf{r}}= \\
+  & = - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + \frac{q}{4 \pi \varepsilon} \frac{1}{|\mathbf{r}|^2} \left( \frac{ -\boldsymbol\beta (\hat{\mathbf{r}} \cdot \boldsymbol\beta) + \hat{\mathbf{r}} (\hat{\mathbf{r}} \cdot \boldsymbol\beta) }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + \hat{\mathbf{r}} \right) = \\
+  & = - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} + \frac{q}{4 \pi \varepsilon} \frac{1}{|\mathbf{r}|^2} \left( \frac{ \hat{\mathbf{r}} - \boldsymbol\beta (\hat{\mathbf{r}} \cdot \boldsymbol\beta) }{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{b} 
+  & = \nabla \times \mathbf{a} = \\
+  & = \nabla \times \left( \frac{\mu}{4 \pi} \frac{q \mathbf{v}_s(t_{ret})}{|\mathbf{r} - \mathbf{r}_s(t_{ret})|} \right) = \\
+  & = \hat{\mathbf{e}}_k \varepsilon_{klm} \partial_l \left( \frac{\mu}{4 \pi} \frac{q v_{s,m}(t_{ret})}{|\mathbf{r} - \mathbf{r}_s(t_{ret})|} \right) = \\
+  & = \hat{\mathbf{e}}_k \varepsilon_{klm} \frac{\mu q}{4 \pi} \partial_l \left( \frac{v_{s,m}(t_{ret})}{|\mathbf{r} - \mathbf{r}_s(t_{ret})|} \right) = \\
+  & = \hat{\mathbf{e}}_k \varepsilon_{klm} \frac{\mu q}{4 \pi} \left[ \frac{a_{s,m}(t_{ret}) \partial_l t_{ret}}{|\mathbf{r}-\mathbf{r}_s(t_{ret})|} - v_{s,m}(t_{ret})\frac{\hat{r}_l}{|\mathbf{r}|^2} \left( 1 + \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \right] = \\
+  & = \hat{\mathbf{e}}_k \varepsilon_{klm} \frac{\mu q}{4 \pi} \left[ - \frac{a_{s,m}(t_{ret}) }{|\mathbf{r}-\mathbf{r}_s(t_{ret})|} \frac{1}{c} \frac{\hat{r}_l}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} - v_{s,m}(t_{ret})\frac{\hat{r}_l}{|\mathbf{r}|^2} \left( 1 + \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \right] = \\
+  & = \frac{q \mu c^2}{4 \pi} \frac{1}{c^2} \left[ -\frac{\hat{\mathbf{r}} \times \mathbf{a}_s(t_{ret})}{|\mathbf{r}| c} \frac{1}{1-\hat{\mathbf{r}} \cdot \boldsymbol\beta} - \frac{\hat{\mathbf{r}}}{|\mathbf{r}|^2} \times \mathbf{v}_s(t_{ret}) \left( 1 + \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right) \right] = \\
+  & = \frac{q}{4 \pi \varepsilon} \frac{1}{c} \left[ -\frac{\hat{\mathbf{r}} \times \mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1-\hat{\mathbf{r}} \cdot \boldsymbol\beta} - \frac{\hat{\mathbf{r}}}{|\mathbf{r}|^2} \times \boldsymbol\beta \left( 1 + \frac{\hat{\mathbf{r}} \cdot \boldsymbol\beta}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right)  \right] = \\
+  & = \frac{q}{4 \pi \varepsilon} \frac{1}{c} \left[ -\frac{\hat{\mathbf{r}} \times \mathbf{a}_s(t_{ret})}{|\mathbf{r}| c^2} \frac{1}{1-\hat{\mathbf{r}} \cdot \boldsymbol\beta} - \frac{\hat{\mathbf{r}}}{|\mathbf{r}|^2} \times \boldsymbol\beta \left( \frac{1}{1 - \hat{\mathbf{r}} \cdot \boldsymbol\beta} \right)  \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Larmor formula}
+\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:larmor-formula}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation-larmor}}
+\sphinxAtStartPar
+Poynting vector reads
+\begin{equation*}
+\begin{split}\mathbf{s}(\mathbf{r},t) := \frac{ \mathbf{e}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) }{\mu} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, using the electromagnetic field of a moving charge,
+\begin{equation*}
+\begin{split}\mathbf{s} = \frac{1}{\mu} \mathbf{e} \times \mathbf{b} = \frac{1}{c \mu} \mathbf{e} \times \left( \hat{\mathbf{r}} \times \mathbf{e} \right) = \frac{1}{\mu c} \left[ |\mathbf{e}|^2 \hat{\mathbf{r}} - ( \mathbf{e} \cdot \hat{\mathbf{r}} ) \mathbf{e} \right] \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Far\sphinxhyphen{}field approximation} (also assuming that \(\boldsymbol\beta \sim \mathbf{0}\). \sphinxstylestrong{todo} \sphinxstyleemphasis{slow charge? Non\sphinxhyphen{}relativistic limit?}),
+\begin{equation*}
+\begin{split}\mathbf{e} \sim - \frac{q}{4 \pi \varepsilon} \frac{\mathbf{a}_{s,ret}}{|\mathbf{r}| c^2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{s}
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \, \mathbf{a} \times \left( \hat{\mathbf{r}} \times \mathbf{a} \right) = \\
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon |\mathbf{r}| c^2} \right)^2 \left( |\mathbf{a}|^2 \hat{\mathbf{r}} - ( \mathbf{a} \cdot \hat{\mathbf{r}} ) \mathbf{a} \right) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The elementary power flux at \(\mathbf{r} = R \hat{\mathbf{r}}\), assuming that the motion is ina region much smaller than \(R\), so that \(t_{ret} = t - \frac{R}{c}\), is
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{\mathbf{r}} \cdot \mathbf{s} 
+  & = \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( |\mathbf{a}|^2 - ( \mathbf{a} \cdot \hat{\mathbf{r}} )^2 \right) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let’s define the direction of \(\mathbf{a}_{ret} = a \hat{\mathbf{t}}\), and sperical coordinates so that \(\hat{\mathbf{r}} \cdot \mathbf{\mathbf{t}} = \cos \theta\). Integration over the sphere of radius \(R\) gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Phi
+  & := \int_{S} \hat{\mathbf{r}} \cdot \mathbf{s} = \\
+  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta d \phi   d \theta d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \cdot \frac{4}{3} \cdot 2 \pi = \\
+  & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Average power.}
+\begin{equation*}
+\begin{split}\langle \Phi \rangle = \frac{q^2}{6  \pi \varepsilon c^3} \langle |\mathbf{a}|^2 \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Examples:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{harmonic oscillator} \(\mathbf{a}(t) = - A \omega^2 \cos(\omega t) \hat{\mathbf{x}}\), \(\langle |\mathbf{a}(t)|^2 \rangle = \frac{1}{2} A^2 \omega^4 \)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{circular orbits}, with constant speed. Acceleration is \(\mathbf{a}(t) = - R \omega^2 \hat{\mathbf{r}}(t)\), and has constan magnitude \(|\mathbf{a}(t)| = \omega^2 R\)
+
+\end{itemize}
+\begin{equation*}
+\begin{split}\int_{0}^{\pi} ( 1 - \cos^2 x ) \sin x d x = \left.\left[ - \cos x + \frac{\cos^3}{3} \right]\right|_{0}^{\pi} = 2 - \frac{2}{3} = \frac{4}{3} \ .\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\varepsilon_{abc} A_b \varepsilon_{cde} B_d C_e = ( \delta_{ad} \delta_{be} - \delta_{ae} \delta_{bd} ) A_b B_d C_e = A_b B_a C_b - A_b B_b C_a = \mathbf{A} \cdot \mathbf{C} \, \mathbf{B} - \mathbf{A} \cdot \mathbf{B} \, \mathbf{C}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\chapter{Atomic models}
+\label{\detokenize{ch/quantum-mechanics/atom-models:atomic-models}}\label{\detokenize{ch/quantum-mechanics/atom-models:quantum-mechanics-atom-models}}\label{\detokenize{ch/quantum-mechanics/atom-models::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/thomson:quantum-mechanics-atom-models-thomson}]{\sphinxcrossref{\DUrole{std,std-ref}{Thomson}}}}: electrons in cathode rays
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/rutherford:quantum-mechanics-atom-models-rutherford}]{\sphinxcrossref{\DUrole{std,std-ref}{Rutherford}}}}: small nucleus, from scattering
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/bohr:quantum-mechanics-atom-models-bohr}]{\sphinxcrossref{\DUrole{std,std-ref}{Bohr}}}}: atomic model, consistent with the relation \(\Delta E = h \nu\) and emission/absorption of light
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:quantum-mechanics-atom-models-sommerfeld}]{\sphinxcrossref{\DUrole{std,std-ref}{Sommerfeld}}}}: …
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger:quantum-mechanics-atom-models-schrodinger}]{\sphinxcrossref{\DUrole{std,std-ref}{Schrodinger}}}}: atomic model from Schrodinger equation \(i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle\)
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\section{Thomson model}
+\label{\detokenize{ch/quantum-mechanics/atom-models/thomson:thomson-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/thomson:quantum-mechanics-atom-models-thomson}}\label{\detokenize{ch/quantum-mechanics/atom-models/thomson::doc}}
+\sphinxstepscope
+
+
+\section{Rutherford model}
+\label{\detokenize{ch/quantum-mechanics/atom-models/rutherford:rutherford-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/rutherford:quantum-mechanics-atom-models-rutherford}}\label{\detokenize{ch/quantum-mechanics/atom-models/rutherford::doc}}
+\sphinxstepscope
+
+
+\section{Bohr model}
+\label{\detokenize{ch/quantum-mechanics/atom-models/bohr:bohr-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/bohr:quantum-mechanics-atom-models-bohr}}\label{\detokenize{ch/quantum-mechanics/atom-models/bohr::doc}}
+\sphinxAtStartPar
+Assumption:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Electron moves on circular orbits
+
+\item {} 
+\sphinxAtStartPar
+All the possible orbits are identified by discrete values of the angular momentum, \(L = n \hbar\)
+
+\item {} 
+\sphinxAtStartPar
+Light emission/absorption occurs when an electron transitions between two orbits
+
+\end{itemize}
+
+\sphinxAtStartPar
+Some mathematical details, using the equations of classical mechanics. The problem of determining the orbit of an electron around the positive nucleus is a two\sphinxhyphen{}body problem, subject to a force \(\vec{F} \propto \frac{\vec{r}}{|\vec{r}|^3}\) (here the assumption of the center of mass in the nucleus; otherwise change of coordinates, and equivalent masses…). For an electrically neutral atom with one electron only (\(H\) atom?) the dynamical equation governing the motion of the electron
+\begin{equation*}
+\begin{split}m \ddot{\vec{r}} = - \frac{q^2}{4 \pi \varepsilon} \frac{\vec{r}}{|\vec{r}|^3} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(q\) the charge of the electron.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Using polar coordinates, \(\vec{r} = r \hat{r}\)
+
+\item {} 
+\sphinxAtStartPar
+Taking time derivative of the position vector \(\vec{r}\) identifying the position of the electron w.r.t. the nucleus
+\begin{equation*}
+\begin{split}\begin{aligned}
+     \dfrac{d}{dt} \left( r \hat{r} \right ) & = \dot{r} \hat{r} + r \dot{\theta} \hat{\theta} \\
+     \dfrac{d^2}{dt^2} \left( r \hat{r} \right ) & = \left( \ddot{r} - r \dot{\theta}^2 \right) \hat{r} +  \left( 2 \dot{r} \dot{\theta} + r \ddot{\theta} \right) \hat{\theta} \\
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Assuming circular orbits, \(\dot{r} = 0\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+the radial and angular components of the dynamical equation read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  r      & : \quad - m r \dot{\theta}^2 = - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r^2} \\
+  \theta & : \quad \ddot{\theta} = 0 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The angular momentum and the energy of the system are
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Angular momentum,
+\begin{equation*}
+\begin{split}\begin{aligned}
+     n \hbar = L_n 
+     & = m r_n^2 \dot{\theta}_n =  && \text{(radial component)} \\
+     & = m r_n^2 \left( \frac{q^2}{4 \pi \varepsilon r_n^3 m} \right)^{\frac{1}{2}} = \\
+     & =  \frac{\sqrt{m} q}{\sqrt{ 4 \pi \varepsilon}} r^{\frac{1}{2}} \\
+     \rightarrow \quad r_n & = 4 \pi \varepsilon \frac{n^2 \hbar^2}{m q^2}
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Energy,
+\begin{equation}\label{equation:ch/quantum-mechanics/atom-models/bohr:eq:atom:bohr:energy}
+\begin{split}\begin{aligned}
+    E_n 
+    & = \frac{1}{2} m |\dot{\vec{r}}_n|^2 - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r_n} =  && \text{(radial component of the eom)} \\
+    & = \frac{q^2}{8 \pi \varepsilon} \frac{1}{r_n} - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r_n} = \\
+    & = - \frac{q^2}{8 \pi \varepsilon} \frac{1}{r_n} = && \text{($r_n$ from angular momentum)} \\
+    & = - \frac{m q^4}{32 \pi^2 \varepsilon^2 \hbar^2} \frac{1}{n^2} = && \text{($h = 2 \pi \hbar$)} \\
+    & = - \frac{m q^4}{8 \varepsilon^2 h^2}\frac{1}{n^2} \ .
+  \end{aligned}\end{split}
+\end{equation}
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Remark.} The value of energy \(E_n\) of Bohr model coincides with the value \eqref{equation:ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:eq:atom:schrodinger:energy} of the energy produced by {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger:quantum-mechanics-atom-models-schrodinger}]{\sphinxcrossref{\DUrole{std,std-ref}{Schrodinger model}}}}.
+
+\sphinxAtStartPar
+From the relation \(\Delta E = \nu h\), the relation between the frequency of the emitted (if \(E_{n} > E_{m}\), \(n\) initial state, \(m\) final state) or absorbed (if \(E_n < E_m\), \(n\) initial state, \(m\) final state) radiation, follows
+\begin{equation*}
+\begin{split}\nu_{nm} = \frac{E_n - E_m}{h} = - \frac{m q^4}{8 \varepsilon^2 h^3} \left( \frac{1}{n^2} - \frac{1}{m^2} \right)\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Sommerfeld model}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:sommerfeld-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:quantum-mechanics-atom-models-sommerfeld}}\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld::doc}}
+\sphinxstepscope
+
+
+\section{Schrodinger model}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger:schrodinger-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger:quantum-mechanics-atom-models-schrodinger}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger::doc}}\subsubsection*{Contents}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:quantum-mechanics-atom-models-schrodinger-analytical-sln}]{\sphinxcrossref{\DUrole{std,std-ref}{Mathematical details of the analytical solution}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery}]{\sphinxcrossref{\DUrole{std,std-ref}{Gallery of orbitals}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes}]{\sphinxcrossref{\DUrole{std,std-ref}{Auxiliary notes}}}}
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Schrodinger equation.} Schrodinger equation in space basis for the electron in a \(\text{H}\) atom reads
+\begin{equation*}
+\begin{split}i \hbar \partial_t \Psi(\mathbf{r},t) = \left[ -\frac{\hbar^2}{2m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon}\frac{1}{|\mathbf{r}|} \right] \Psi(\mathbf{r},t) \ \end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the Hamiltonian is the sum of the kinetic energy and a Coulomb potential contribution, \(\hat{V}\), so that \(\langle \mathbf{r} | \hat{V} | \Psi \rangle = - \frac{q^2}{4 \pi \varepsilon |\mathbf{r}|} \Psi(\mathbf{r},t)\)
+
+\sphinxAtStartPar
+\sphinxstylestrong{Spectral decomposition of the Hamiltonian operator.} The stationary states, and the corresponding energy levels \sphinxhyphen{} i.e. the eigenfunctions, and the eigenvalues of the Hamiltonian operator \(\hat{H}\) \sphinxhyphen{} are the result of the eigenvalue problem, \(\hat{H} | \Psi \rangle = E | \Psi \rangle\), or using space basis,
+\begin{equation*}
+\begin{split}\left[ -\frac{\hbar^2}{2m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon}\frac{1}{|\mathbf{r}|} \right] \Psi(\mathbf{r}) = E \Psi(\mathbf{r}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Quantum numbers.} The stationary states depend on \sphinxstylestrong{three} \sphinxhyphen{} in this model, no spin exists \sphinxhyphen{} \sphinxstylestrong{quantum numbers}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{principal} quantum number \(n \in \{ 1, 2, \dots \}\)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{azimuthal} quantum number \(\ell \in \{ 0, 1,\dots, n-1 \} \)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{magnetic} quantum number \(m_{\ell} \in \{ -\ell, -\ell+1, \dots, \ell \}\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+Energy levels only depend on the principal quantum number, \(E(n)\). Thus, Schrodinger model of the atom has \sphinxstylestrong{degenerate} stationary states, i.e. stationary states with the same energy value.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Commutation of \(\hat{H}\), \(\hat{L}^2\), \(\hat{L}_z\).} As angular momentum operators \(\hat{L}^2\), \(\hat{L}_z\) commute with the Hamiltonian operator \(\hat{H}\) of the \(\text{H}\) atom, these three operators share common eigenvectors. These relations are proved in the {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes}]{\sphinxcrossref{\DUrole{std,std-ref}{note section}}}}.
+
+\sphinxstepscope
+
+
+\subsection{Schrodinger model \sphinxhyphen{} Mathematical details of the analytical solution}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:schrodinger-model-mathematical-details-of-the-analytical-solution}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:quantum-mechanics-atom-models-schrodinger-analytical-sln}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-analytical-sln::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Schrodinger equation} for the hydrogen atom in space basis reads
+\begin{equation*}
+\begin{split}i \hbar \Psi(\mathbf{r},t) = \left[ - \frac{\hbar^2}{2 m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r} \right] \Psi(\mathbf{r},t) \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+The \sphinxstylestrong{eigenproblem of the Hermitian operator} (projected onto space basis, as well) reads
+\begin{equation*}
+\begin{split}E_n \Psi_n(\mathbf{r}) = - \frac{\hbar^2}{2 m} \nabla^2 \Psi_n(\mathbf{r}) - \frac{q^2}{4 \pi \varepsilon r} \Psi_n(\mathbf{r}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Given the symmetries of the system, the solution of the eigenproblem is evaluated using spherical coordinates \(\{ r, \theta, \varphi \}\), and the method of separation of variables. Using \sphinxstylestrong{spherical coordinates},
+\begin{equation*}
+\begin{split}- \frac{\hbar^2}{2m} \left\{ \frac{1}{r^2} \partial_r \left( r^2 \partial_r \right) + \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} \right\} \Psi_n - \frac{q^2}{4\pi \varepsilon_0 r} \Psi_n = E_n \Psi_n\end{split}
+\end{equation*}\subsubsection*{Separation of variables, \protect\(\ \Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ \protect\) }
+
+\sphinxAtStartPar
+With the \sphinxstylestrong{method of separation of variables}, we look for solutions in product form:
+\begin{equation*}
+\begin{split}\Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and substituting into the Schrödinger equation:
+\begin{equation*}
+\begin{split}\left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right) R_n Y_{lm} = - \frac{\hbar^2}{2m} \left[ \frac{1}{r^2} \left( r^2 R_n' \right)' Y_{lm} + R_n \left( \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta Y_{lm} \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right) \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Dividing by \(R_n Y_{lm}\), and multiplying by \(r^2 \frac{2m}{\hbar^2}\),
+\begin{equation*}
+\begin{split}0 = \underbrace{\frac{1}{R_n} (r^2 R_n')' + \frac{2m r^2}{\hbar^2} \left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right)}_{f(r)} + \underbrace{\frac{1}{Y_{lm}} \left\{ \frac{1}{\sin\theta} \partial_\theta (\sin\theta \partial_\theta Y_{lm}) + \frac{1}{\sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right\}}_{g(\theta, \varphi)}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(f(r) + g(\theta, \varphi) = 0\), both terms must equal equal\sphinxhyphen{}and\sphinxhyphen{}opposite constant \(C\) for all valid domains \(r \in (0, +\infty)\), \(\theta \in (0, \pi)\), \(\varphi \in (0, 2\pi)\)
+\begin{equation*}
+\begin{split}C = f(r) = - g(\theta, \varphi) \ .\end{split}
+\end{equation*}\subsubsection*{Radial equation, and energy levels}
+
+\sphinxAtStartPar
+The radial component determines the energy level,
+\begin{equation}\label{equation:ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:eq:atom:schrodinger:energy}
+\begin{split}E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+being \(n \in \{ 1, 2, \dots \}\).
+
+\sphinxAtStartPar
+The radial distribution of the energy state functions is
+\begin{equation*}
+\begin{split}R(\rho) = e^{-\rho/2} \rho^{\ell} L^{2 \ell+1}_{n-\ell-1}(\rho) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\rho = r \frac{\sqrt{-8 m E_n}}{\hbar}\) the non dimensional radius, \(\ell \in \{ 0, 1, \dots, n-1 \}\), and \(L_{p}^{k}(x)\) the solution of the associated Laguerre differential equation \(x y'' + ( k + 1 - x ) y' + p y = 0\).
+\subsubsection*{Change of variables, and asymptotic behavior}
+
+\sphinxAtStartPar
+Defining \(C = \ell(\ell+1)\), and dividing the equation \(f(r) = C\) by \(r^2\), for the states with \(E_n <0\),
+\begin{equation*}
+\begin{split}\frac{1}{r^2} \frac{d}{dr} \left( r^2 R' \right) + \left[ \frac{2m}{\hbar^2} \left( E + \frac{q^2}{4\pi \varepsilon_0 r} \right) - \frac{\ell(\ell + 1)}{r^2} \right] R = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Defining the \sphinxstylestrong{dimensionless radial variable} \(\rho = \kappa r\), so \(\frac{d}{dr} = \kappa \frac{d}{d\rho}\), and factoring out \(\kappa^2\)
+\begin{equation*}
+\begin{split}0 = \kappa^2 \left\{ \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + \left( \frac{2m E}{\hbar^2 \kappa^2} + \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0 \rho} - \frac{\ell(\ell + 1)}{\rho^2} \right) \right\} R\end{split}
+\end{equation*}
+\sphinxAtStartPar
+By choosing \(\kappa^2 = -\frac{8 m E}{\hbar^2}\) (where \(\kappa = \frac{\sqrt{-8 m E}}{\hbar}\) for \(E < 0\)), the first term inside the parentheses becomes \(-1\). Defining the constant parameter \(\rho_0\):
+\begin{equation*}
+\begin{split}\rho_0 = \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0} = \frac{2m q^2}{\hbar^2 \sqrt{-8 m E} \cdot 4\pi \varepsilon_0} = \frac{q^2}{8\pi \varepsilon_0 \hbar} \sqrt{\frac{2m}{-E}} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the dimensionless radial equation simplifies to:
+\begin{equation*}
+\begin{split}0 = \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Boundary conditions required for regular wavefunctions:
+\begin{equation*}
+\begin{split}R(\rho = 0) < \infty, \quad R(\rho \to +\infty) = 0\end{split}
+\end{equation*}\subsubsection*{Asymptotic behavior for \protect\(\ r \rightarrow 0\protect\), and \protect\(\ r \rightarrow +\infty\protect\)}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Large Distance Limit (\(\rho \to +\infty\)).} For large \(\rho\), terms proportional to \(\frac{1}{\rho}\) and \(\frac{1}{\rho^2}\) become negligible:
+\begin{equation*}
+\begin{split}\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) = R'' + \frac{2}{\rho} R' \sim R''\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The equation reduces to:
+\begin{equation*}
+\begin{split}R'' - \frac{1}{4} R \sim 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+General solution:
+\begin{equation*}
+\begin{split}R(\rho) = A e^{-\rho/2} + B e^{\rho/2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+To satisfy the non\sphinxhyphen{}divergent boundary condition at infinity, set \(B = 0\):
+\begin{equation*}
+\begin{split}R(\rho) \sim e^{-\rho/2} \quad \text{as } \rho \to +\infty\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Small Distance Limit (\(\rho \to 0\)).} For \(\rho \to 0\), the centrifugal term \(\frac{\ell(\ell+1)}{\rho^2}\) dominates over the constant and \(\frac{1}{\rho}\) terms:
+\begin{equation*}
+\begin{split}R'' + \frac{2}{\rho} R' - \frac{\ell(\ell + 1)}{\rho^2} R \sim 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Proposing a power\sphinxhyphen{}law ansatz \(R(\rho) \sim \rho^s\):
+\begin{equation*}
+\begin{split}s(s - 1) \rho^{s-2} + 2s \rho^{s-2} - \ell(\ell + 1) \rho^{s-2} = 0\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}s^2 + s - \ell(\ell + 1) = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Solving the quadratic characteristic equation for \(s\):
+\begin{equation*}
+\begin{split}s_{1,2} = \frac{-1 \mp \sqrt{1 + 4\ell(\ell + 1)}}{2} = \frac{-1 \mp (1 + 2\ell)}{2}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}s_1 = \ell, \quad s_2 = -(\ell + 1)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(\ell \ge 0\), \(s_2 = -(\ell + 1)\) leads to divergence at the origin \(\rho \to 0\). Retaining only the physically acceptable solution \(s = \ell\):
+\begin{equation*}
+\begin{split}R(\rho) \sim \rho^\ell \quad \text{as } \rho \to 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transformation \& Differential Equation for \(v(\rho)\).} Combining both asymptotic behaviors, we represent the full radial solution as:
+\begin{equation*}
+\begin{split}R(\rho) = \rho^\ell e^{-\rho/2} v(\rho)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Writing out derivatives of \(R(\rho)\):
+\begin{equation*}
+\begin{split}R' = \left( \ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell \right) e^{-\rho/2} v + \rho^\ell e^{-\rho/2} v'\end{split}
+\end{equation*}
+\sphinxAtStartPar
+After expanding \(\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right] = 0\):
+\begin{equation*}
+\begin{split}= e^{-\rho/2} \Big\{ \rho^\ell v'' + v' \left[ 2\ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell + 2 \rho^{\ell-1} \right] + v \left[ \rho^\ell \ell(\ell+1) - \rho^{\ell+1} \left( \ell + 1 \right) + \frac{1}{4} \rho^{\ell+2} - \ell(\ell+1) \rho^{\ell} - \frac{1}{4} \rho^{\ell+2} + \rho_0 \rho^{\ell+1} \right] \Big\} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Dividing out non\sphinxhyphen{}zero factor \(\rho^{\ell-1} e^{-\rho/2}\):
+\begin{equation*}
+\begin{split}\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\end{split}
+\end{equation*}\subsubsection*{Polynomial expansion, energy quantization \protect\(\ E_n \ \protect\) and radial distribution \protect\(\ R_n(\rho)\protect\)}
+
+\sphinxAtStartPar
+Starting from the transformed radial equation:
+\begin{equation*}
+\begin{split}\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Looking for a power series solution:
+\begin{equation*}
+\begin{split}\begin{aligned}
+    v(\rho) & = \sum_{k=0}^{\infty} c_k \rho^k  \\
+   v'(\rho) & = \sum_{k=0}^{\infty} k c_k \rho^{k-1} \\
+  v''(\rho) & = \sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-2} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Substituting into the differential equation:
+\begin{equation*}
+\begin{split}\sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-1} + \sum_{k=0}^{\infty} 2(\ell + 1) k c_k \rho^{k-1} - \sum_{k=0}^{\infty} k c_k \rho^k + (\rho_0 - \ell - 1) \sum_{k=0}^{\infty} c_k \rho^k = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Shift indices to group terms by power \(\rho^k\):
+\begin{equation*}
+\begin{split}\sum_{k=0}^{\infty} \Big\{ (k+1)(k) c_{k+1} + 2(\ell + 1)(k+1) c_{k+1} - k c_k + (\rho_0 - \ell - 1) c_k \Big\} \rho^k = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Recurrence Relation.} Equating coefficients to zero yields the recurrence relation for \(c_k\):
+\begin{equation*}
+\begin{split}c_{k+1} = c_k \frac{k + \ell + 1 - \rho_0}{(k + 1)(k + 2\ell + 2)}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Asymptotic Behavior \& Series Termination.} If the power series does not terminate, as \(k \to +\infty\):
+\begin{equation*}
+\begin{split}\frac{c_{k+1}}{c_k} \longrightarrow \frac{1}{k}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This asymptotic behavior matches that of the exponential expansion \(e^\rho \sim \sum \frac{\rho^k}{k!}\) and thus \(\frac{c_{k+1}}{c_k} = \frac{1}{k+1} \sim \frac{1}{k}\).
+Thus, an infinite series \(v(\rho) \sim e^\rho\), would lead to \(R(\rho) \sim e^{-\rho/2} e^\rho = e^{\rho/2}\), which diverges as \(\rho \to +\infty\).
+Thus, in order to maintain physical normalizability, the series must terminate at a maximum power \(k_{\max} = N\):
+\begin{equation*}
+\begin{split}c_{N+1} = 0 \implies N + \ell + 1 - \rho_0 = 0 \implies \rho_0 = N + \ell + 1 \equiv n\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(N \ge 0\) is the radial quantum number.
+
+\item {} 
+\sphinxAtStartPar
+\(n = N + \ell + 1\) is the \sphinxstylestrong{Principal Quantum Number} (\(n \ge 1\)).
+
+\item {} 
+\sphinxAtStartPar
+\(\forall n\), the orbital angular momentum quantum number satisfies \(0 \le \ell \le n - 1\).
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Energy Quantization.} Recalling the definition of \(\rho_0\), \(n = \rho_0 = \sqrt{\frac{2m}{-E}} \frac{q^2}{4\pi \varepsilon_0 \hbar}\), and solving for the bound state energies \(E_n\) (\(E < 0\)), the relation between the energy \(E_n\) of the \(n^{th}\) energy level and the principal quantum number \(n\) follows
+\begin{equation}\label{equation:ch/quantum-mechanics/atom-models/schrodinger-analytical-sln:eq:atom:schrodinger:energy:details}
+\begin{split}E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Remark.} The value of energy \(E_n\) of Schrodinger model coincides with the value \eqref{equation:ch/quantum-mechanics/atom-models/bohr:eq:atom:bohr:energy} of the energy produced by {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/bohr:quantum-mechanics-atom-models-bohr}]{\sphinxcrossref{\DUrole{std,std-ref}{Bohr model}}}}.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Radial solution.} Putting everything together, the radial part of the solution reads
+\begin{equation*}
+\begin{split}R(\rho) = e^{-\rho/2} \rho^{\ell} L^{2 \ell+1}_{n-\ell-1}(\rho) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(L_{p}^{k}(x)\) the solution of the associated Laguerre differential equation \(x y'' + ( k + 1 - x ) y' + p y = 0\).
+\subsubsection*{Azimuthal and polar equations}
+\subsubsection*{Further separation of variables, \protect\(\ Y_{\ell m}(\theta, \varphi) = \Theta(\theta) \Phi(\varphi) \ \protect\) }
+
+\sphinxAtStartPar
+With \(Y(\theta, \varphi) = \Theta(\theta) \Psi(\varphi)\), the equation
+\begin{equation*}
+\begin{split}
+\frac{1}{Y_{lm}} \left\{ \frac{1}{\sin\theta} \partial_\theta (\sin\theta \partial_\theta Y_{lm}) + \frac{1}{\sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right\} = - \ell ( \ell + 1 ) \ . 
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+becomes \sphinxhyphen{} after multipyling by \(\sin^2 \theta\),
+\begin{equation*}
+\begin{split}\underbrace{\frac{\sin \theta}{\Theta} \left( \sin \theta \, \Theta' \right)' + \ell ( \ell + 1 ) \, \sin^2 \theta}_{F(\theta)} = -\underbrace{\frac{\Phi''}{\Phi}}_{G(\varphi)} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}F(\theta) = - G(\varphi) = m_\ell^2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with a non\sphinxhyphen{}negative constant \(m_{\ell}^2\) in order to match periodic conditions for \(\Phi(\varphi = 0) = \Phi(\varphi = 2 \pi)\).
+\subsubsection*{Azimuthal equation}
+\begin{equation*}
+\begin{split}\Phi'' + m_\ell^2 \Phi = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution is \(\Phi(\varphi) \propto \exp \left( \mp i m_{\ell} \varphi \right)\). In order to satisfy periodic conditoins, \(m_{\ell} \in \mathbb{Z}\). This parameter will be furthered constrained later, in the solution of the polar equation, to be \(m_{\ell} \in \{ - \ell, -\ell+1, \dots, \ell \}\), with \(\ell \in \mathbb{N}\). Thus, selecting only the independent solutions, the azimuthal distribution of the eigenfunctions of the Hamiltonian is
+\begin{equation*}
+\begin{split}\Phi(\varphi) \propto \exp\left( i m_{\ell} \varphi \right) \ , \quad m_{\ell} \in \{ - \ell, -\ell+1, \dots \ell \} \ .\end{split}
+\end{equation*}\subsubsection*{Polar equation}
+
+\sphinxAtStartPar
+Multiplying the equation \(F(\theta) = m_{ell}^2\) by \(\Theta\), the polar equation becomes,
+\begin{equation*}
+\begin{split} \sin \theta \left( \sin \theta \, \Theta' \right)' + \left[ \ell ( \ell + 1 ) \, \sin^2 \theta - m_{\ell}^2 \right] \Theta = 0 \ .\end{split}
+\end{equation*}\subsubsection*{Polar equation as an associated Legendre equation}
+
+\sphinxAtStartPar
+Dividing by \(\sin^2 \theta= 1 - \cos^2 \theta\), the second term can be immediately recast as the second term in the associated Legendre equation, if \(x = \cos \theta\).
+
+\sphinxAtStartPar
+As \(\frac{d x}{d \theta} = - \sin \theta\), then \(\frac{d}{d\theta} = \frac{d x}{d \theta} \frac{d}{d x} = - \sin \theta \frac{d}{d x}\), the first term \sphinxhyphen{} divided by \(\sin^2 \theta\) \sphinxhyphen{} becomes
+\begin{equation*}
+\begin{split}-\frac{1}{\sin^2 \theta} \sin^2 \theta \dfrac{d}{dx} \left( - \sin^2 \theta \dfrac{d}{dx} \Theta \right) = \dfrac{d}{dx}\left[ ( 1 - x^2) \dfrac{d}{dx} \Theta \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the polar equation can be recast as
+\begin{equation*}
+\begin{split}0 = \frac{d}{dx} \left[ ( 1 - x^2 ) \dfrac{d \Theta}{dx} \right] + \left[ \ell(\ell+1) - \frac{m_\ell^2}{1 - x^2} \right] \Theta  \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. as the associated Legendre equation whose solution (see below) is \(\Theta(x) = P_\ell^{m_{\ell}}(x)\), for \(m_{\ell} \in \{ - \ell, \dots, \ell\}\), \(\ell \in \mathbb{N}\).
+\subsubsection*{Legendre differential equation and associated Legendre equation}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Legendre differential equations} read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0
+  & = (1- x^2) P_n''(x) - 2 x P_n'(x) + n(n+1) P_n(x) =  \quad , \qquad x \in [-1, 1] \\
+  & = \dfrac{d}{dx} \left[ ( 1-x^2 ) P_n'(x) \right] + n(n+1) P_n(x) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the solution \(P_n(x)\) be the Legendre polynomial. The \sphinxstylestrong{associated Legendre differential equations} are defined as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0
+  & = \dfrac{d}{dx} \left[ ( 1-x^2 ) P_n'(x) \right] + \left[ n(n+1) - \frac{m^2}{1-x^2} \right] P_n(x) \quad , \qquad x \in [-1, 1] \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the solution reads \(P_{n}^{m}(x) = (-1)^{m} \left( 1 - x^2 \right)^{\frac{m}{2}} \dfrac{d^m}{dx^m} P_{n}(x)\), for \(m \ge 0\).
+The soutions for \(m < 0\) are defined via symmetry conditions, or Rodrigues’ formula, as \(P_{\ell}^{-m} = (-1)^{m} \frac{(\ell-m)!}{(\ell+m)!} P_{\ell}^{m}(x)\), see \sphinxhref{https://en.wikipedia.org/wiki/Associated\_Legendre\_polynomials}{Wikipedia: associated Lagendre polynomials}.
+
+\sphinxstepscope
+
+
+\subsection{Schrodinger model \sphinxhyphen{} Gallery}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:schrodinger-model-gallery}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery::doc}}
+\sphinxstepscope
+
+
+\subsection{Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:auxiliary-results-on-operators-for-the-schrodinger-model-of-the-hydrogen-atom}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes::doc}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+All components of \(\hat{\mathbf{L}}\) commute with the kinetic term \(\frac{\hat{p}^2}{2m}\) and with \(\hat{L}^2\), {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes-commutation-l-p2}]{\sphinxcrossref{\DUrole{std,std-ref}{proof}}}}
+\begin{equation*}
+\begin{split}[\hat{p}^2, \hat{L}_b] = 0\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+All components of \(\hat{\mathbf{L}}\) commute with the potential \(\hat{V}_{\text{Coulomb}}\), {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes-commutation-l-v}]{\sphinxcrossref{\DUrole{std,std-ref}{proof}}}}
+\begin{equation*}
+\begin{split}[\hat{V}_{\text{Coulomb}}, \hat{L}_b] = 0\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Therefore, all components of \(\hat{\mathbf{L}}\) commute with the \(\text{H}\) atom Hamiltonian \(\hat{H}_{\text{H-atom}} = \frac{\hat{p}^2}{2m} + \hat{V}_{\text{Coulomb}}\):
+\begin{equation*}
+\begin{split}[\hat{H}_{\text{H-atom}}, \hat{L}_b] = 0\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Simultaneous Commutative Set:
+\begin{equation*}
+\begin{split}\boxed{[\hat{H}_{\text{H-atom}}, \hat{L}^2] = 0, \quad [\hat{H}_{\text{H-atom}}, \hat{L}_a] = 0, \quad [\hat{L}^2, \hat{L}_a] = 0}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the Hamiltonian \(\hat{H}_{\text{H-atom}}\), total angular momentum squared \(\hat{L}^2\), and any component \(\hat{L}_a\) all mutually commute, and thus share a set of common eigenvectors. For the commutation relation \([\hat{L}^2, \hat{L}_a] = 0\), see the section about {\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spatial:quantum-mechanics-angular-momentum-spatial}]{\sphinxcrossref{\DUrole{std,std-ref}{spatial angular momentum}}}}.
+
+\end{enumerate}
+
+
+\subsubsection{Hamiltonian \& Basic Definitions}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:hamiltonian-basic-definitions}}
+\sphinxAtStartPar
+The Hamiltonian of the electron in the Hydrogen atom with Coulomb potential is given by
+\begin{equation*}
+\begin{split}\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}_{Coulomb} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that in space basis becomes
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{H} = - \frac{\hbar^2}{2 m} \nabla^2 \langle \mathbf{r} | - \frac{q^2}{4 \pi \varepsilon |\mathbf{r}|} \langle \mathbf{r} | \ .\end{split}
+\end{equation*}\subsubsection*{Space Basis Representations}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \Psi \rangle = \Psi(\mathbf{r}, t)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{r}} = \mathbf{r} \langle \mathbf{r} | \quad \implies \quad \langle \mathbf{r} | \hat{\mathbf{r}} | \Psi \rangle = \mathbf{r} \, \Psi(\mathbf{r}, t)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{p}} = -i\hbar \nabla_{\mathbf{r}} \langle \mathbf{r} | \quad \implies \quad \langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = -i\hbar \nabla \Psi(\mathbf{r}, t)\end{split}
+\end{equation*}\subsubsection*{Angular Momentum Operator}
+\begin{equation*}
+\begin{split}\hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In Levi\sphinxhyphen{}Civita component notation, using Cartesian coordinates
+\begin{equation*}
+\begin{split}\hat{\mathbf{L}} = \hat{\mathbf{e}}_a \hat{L}_a =  \hat{\mathbf{e}}_a \varepsilon_{abc} \, \hat{r}_b \hat{p}_c\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In the space (position) basis (Cartesian coordinates):
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \hat{\mathbf{L}} | \Psi \rangle 
+  & = \langle \mathbf{r} | \hat{\mathbf{e}}_a \hat{L}_a | \Psi \rangle = \\
+  & = \hat{\mathbf{e}}_a \varepsilon_{abc} \, r_b (-i\hbar \partial_c \langle \mathbf{r} | \Psi \rangle) = \\
+  & =-i\hbar \hat{\mathbf{e}}_a \varepsilon_{abc} \, r_b \, \partial_c \Psi(\mathbf{r},t) = \\
+  & = - i \hbar \mathbf{r} \times \nabla_{\mathbf{r}} \Psi(\mathbf{r},t) \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{\protect\(\langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle\protect\)}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = \int \langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d\mathbf{r}' = \int \delta(\mathbf{r} - \mathbf{r}') \left(-i\hbar \nabla_{\mathbf{r}'} \Psi(\mathbf{r}', t)\right) d\mathbf{r}' = -i\hbar \nabla_{\mathbf{r}} \Psi(\mathbf{r}, t)\end{split}
+\end{equation*}\subsubsection*{\protect\(\langle \mathbf{r} | \hat{p}_b \hat{r}_a | \Psi \rangle\protect\)}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{p}_b \hat{r}_a | \Psi \rangle = -i\hbar \partial_b \langle \mathbf{r} | \hat{r}_a | \Psi \rangle  = -i\hbar \partial_b \left( r_a \langle \mathbf{r} | \Psi \rangle \right) = - i \hbar \partial_b \left( r_a \Psi(\mathbf{r},t) \right) = -i\hbar (\delta_{ab} \Psi + r_a \partial_b \Psi)\end{split}
+\end{equation*}
+
+\subsubsection{Canonical Commutation Relations (CCR)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:canonical-commutation-relations-ccr}}
+\sphinxAtStartPar
+Using postion basis and Cartesian coordinates, the CCR \([ \hat{\mathbf{r}}, \hat{\mathbf{P}} ] = i \hbar \mathbb{I}\) reads
+\begin{equation*}
+\begin{split}[r_a, p_b] \Psi = r_a (-i\hbar \partial_b \Psi) - (-i\hbar \partial_b (r_a \Psi)) = i\hbar \, \delta_{ab} \Psi \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e.
+\begin{equation*}
+\begin{split}[r_a, p_b] = i\hbar \, \delta_{ab}\end{split}
+\end{equation*}
+
+\subsubsection{Commutators of Angular Momentum with Position and Momentum}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:commutators-of-angular-momentum-with-position-and-momentum}}
+
+\paragraph{Commutator \protect\([r_a, L_b]\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:commutator-r-a-l-b}}\begin{equation*}
+\begin{split}r_a L_b \Psi = r_a (-i\hbar \varepsilon_{bcd} \, r_c \partial_d \Psi) = -i\hbar \varepsilon_{bcd} \, r_a r_c \partial_d \Psi\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}L_b r_a \Psi = -i\hbar \varepsilon_{bcd} \, r_c \partial_d (r_a \Psi) = -i\hbar \varepsilon_{bcd} \, r_c \delta_{ad} \Psi - i\hbar \varepsilon_{bcd} \, r_c r_a \partial_d \Psi\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Subtracting the two expressions gives:
+\begin{equation*}
+\begin{split}[r_a, L_b] \Psi = i\hbar \varepsilon_{bcd} \, r_c \delta_{ad} \Psi = i\hbar \varepsilon_{bca} \, r_c \Psi \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}[r_a, L_b] =-  i \hbar \, (\mathbf{r} \times)_{a b} \, \Psi \quad \left(\text{in general } \neq 0\right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstyleemphasis{(Recall: \((\mathbf{a} \times \mathbf{b})_i = \varepsilon_{ijk} a_j b_k = \{ \mathbf{a}_{\times} \}_{ik} \cdot \{ \mathbf{b} \}_k\), i.e. \(\{ \mathbf{a}_{\times} \}_{ik} = \varepsilon_{ijk} a_j\))}
+
+
+\paragraph{Commutator \protect\([p_a, L_b]\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:commutator-p-a-l-b}}\begin{equation*}
+\begin{split}p_a L_b \Psi = -i\hbar \partial_a \left(-i\hbar \varepsilon_{bcd} \, r_c \partial_d \Psi\right) = -\hbar^2 \varepsilon_{bcd} \, \partial_a (r_c \partial_d \Psi) = -\hbar^2 \varepsilon_{bad} \, \partial_d \Psi - \hbar^2 \varepsilon_{bcd} \, r_c \partial_a \partial_d \Psi\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}L_b p_a \Psi = -i\hbar \varepsilon_{bcd} \, r_c \partial_d (-i\hbar \partial_a \Psi) = -\hbar^2 \varepsilon_{bcd} \, r_c \partial_d \partial_a \Psi\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Subtracting the two expressions gives:
+\begin{equation*}
+\begin{split}[p_a, L_b] \Psi = -\hbar^2 \varepsilon_{bad} \, \partial_d \Psi = \hbar^2 \varepsilon_{abd} \, \partial_d \Psi = i\hbar \varepsilon_{abc} \, p_c \Psi\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Cartesian coordinates.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\([p_x, L_x] \equiv 0\)
+
+\item {} 
+\sphinxAtStartPar
+\([p_x, L_y] = \hbar^2 \varepsilon_{xyz} \, \partial_z \Psi = i\hbar p_z\)
+
+\item {} 
+\sphinxAtStartPar
+\([p_x, L_z] = \hbar^2 \varepsilon_{xzy} \, \partial_y \Psi = -\hbar^2 \partial_y \Psi = -i\hbar p_y\)
+
+\end{itemize}
+
+
+\bigskip\hrule\bigskip
+
+
+
+\paragraph{Commutator \protect\([\hat{p}^2, L_b]\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:commutator-hat-p-2-l-b}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes-commutation-l-p2}}\begin{equation*}
+\begin{split}[p^2, L_b] = \sum_a p_a p_a L_b - L_b \sum_a p_a p_a = \sum_a \Big( p_a [p_a, L_b] + [p_a, L_b] p_a \Big)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using \([p_a, L_b] = i\hbar \varepsilon_{abc} p_c\):
+\begin{equation*}
+\begin{split}\sum_a \left( p_a (i\hbar \varepsilon_{abc} p_c) + (i\hbar \varepsilon_{abc} p_c) p_a \right) = i\hbar \varepsilon_{abc} (p_a p_c + p_c p_a)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(p_a p_c = p_c p_a\) (symmetric in \(a, c\)) and \(\varepsilon_{abc}\) is antisymmetric in \(a, c\), the sum vanishes identically:
+\begin{equation*}
+\begin{split}[p^2, L_b] = 0 \quad \text{for all components } b\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Example.} For \(b = x\):
+\begin{equation*}
+\begin{split}[p^2, L_x] = -i\hbar^3 \Big[ 1 \cdot \partial_z \partial_y \Psi - 1 \cdot \partial_y \partial_z \Psi \Big] = 0\end{split}
+\end{equation*}
+
+\subsubsection{Commutator of Coulomb Potential \protect\(\hat{V}\protect\) with Angular Momentum \protect\(\hat{L}_b\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:commutator-of-coulomb-potential-hat-v-with-angular-momentum-hat-l-b}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-notes:quantum-mechanics-atom-models-schrodinger-notes-commutation-l-v}}
+\sphinxAtStartPar
+In space basis, the Coulomb potential reads:
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{V} | \Psi \rangle = -\frac{q^2}{4\pi\varepsilon_0} \frac{1}{r} \Psi(\mathbf{r}, t) = -k \frac{1}{|\mathbf{r}|} \Psi(\mathbf{r}, t)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let’s evaluate whether \(\hat{V}\) and \(\hat{L}_b\) commute:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Action of \(\hat{V} \hat{L}_b\):}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{V} \hat{L}_b | \Psi \rangle = -k \frac{1}{\sqrt{x_a x_a}} \left( -i\hbar \varepsilon_{bcd} \, r_c \, \partial_d \Psi \right)\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Action of \(\hat{L}_b \hat{V}\), with \(|\mathbf{r}| = \sqrt{ x_a x_a }\):}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{L}_b \hat{V} | \Psi \rangle = -i\hbar \varepsilon_{bcd} \, r_c \, \partial_d \left( -k \frac{\Psi}{\sqrt{x_a x_a}} \right) = i\hbar k \varepsilon_{bcd} \, r_c \left[ -\frac{\partial_d |\mathbf{r}|}{|\mathbf{r}|^2} \Psi + \frac{1}{|\mathbf{r}|} \partial_d \Psi \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(\partial_d | \mathbf{r}| = \partial_d \sqrt{x_a x_a} = \frac{x_d}{|\mathbf{r}|}\):
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{L}_b \hat{V} | \Psi \rangle = i\hbar k \varepsilon_{bcd} \, r_c \left[ -\frac{r_d}{|\mathbf{r}|^3} \Psi + \frac{1}{|\mathbf{r}|} \partial_d \Psi \right]\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Commutator \([\hat{V}, \hat{L}_b]\):}
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | [\hat{V}, \hat{L}_b] | \Psi \rangle = -i\hbar k \, \frac{\varepsilon_{bcd} \, r_c r_d}{|\mathbf{r}|^3} \Psi = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstyleemphasis{Why?} The product \(r_c r_d\) is \sphinxstylestrong{symmetric} under swapping \(c \leftrightarrow d\), while \(\varepsilon_{bcd}\) is \sphinxstylestrong{antisymmetric} under swapping \(c \leftrightarrow d\). Summing over \(c, d\) gives zero!
+
+\sphinxAtStartPar
+\sphinxstylestrong{Example for \(b = x\).} \(\varepsilon_{xcd} r_c r_d = \varepsilon_{xyz} y z + \varepsilon_{xzy} z y = yz - zy = 0\).
+
+\end{enumerate}
+
 \sphinxstepscope
 
 
@@ -5816,7 +8122,7 @@ and thus \(J_n(x) = J - J_p(x)\).
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/density\sphinxhyphen{}operator}\sphinxstyleindexpageref{ch/quantum-mechanics/density-operator:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-1}}

@@ -29,4 +29,3 @@ Energy levels only depend on the principal quantum number, $E(n)$. Thus, Schrodi
 
 **Commutation of $\hat{H}$, $\hat{L}^2$, $\hat{L}_z$.** As angular momentum operators $\hat{L}^2$, $\hat{L}_z$ commute with the Hamiltonian operator $\hat{H}$ of the $\text{H}$ atom, these three operators share common eigenvectors. These relations are proved in the [note section](quantum-mechanics:atom-models:schrodinger:notes).
 
-**todo** *add the proof - already there in hand-written notes*
