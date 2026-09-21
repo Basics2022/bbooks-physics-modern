@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/atom-models/schrodinger-notes';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="21. Introduction to Solid State Physics" href="../../solid-state/intro.html" />
+    <link rel="prev" title="20.5.2. Schrodinger model - Gallery" href="schrodinger-gallery.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history/topics.html">19.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/timeline.html">19.2. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/light-dispersion.html">19.3. Light dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/einstein-planck.html">19.4. Light matter interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/larmor-formula.html">19.5. Ratiation of moving charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../atom-models.html">20. Atomic models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="thomson.html">20.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rutherford.html">20.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bohr.html">20.3. Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sommerfeld.html">20.4. Sommerfeld model</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="schrodinger.html">20.5. Schrodinger model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-analytical-sln.html">20.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-gallery.html">20.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">20.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">21. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">22. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">23.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">23.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">23.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">23.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">23.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">23.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ch/quantum-mechanics/atom-models/schrodinger-notes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonian-basic-definitions">20.5.3.1. Hamiltonian &amp; Basic Definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr">20.5.3.2. Canonical Commutation Relations (CCR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commutators-of-angular-momentum-with-position-and-momentum">20.5.3.3. Commutators of Angular Momentum with Position and Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-r-a-l-b">20.5.3.3.1. Commutator <span class="math notranslate nohighlight">\([r_a, L_b]\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-p-a-l-b">20.5.3.3.2. Commutator <span class="math notranslate nohighlight">\([p_a, L_b]\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-hat-p-2-l-b">20.5.3.3.3. Commutator <span class="math notranslate nohighlight">\([\hat{p}^2, L_b]\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-of-coulomb-potential-hat-v-with-angular-momentum-hat-l-b">20.5.3.4. Commutator of Coulomb Potential <span class="math notranslate nohighlight">\(\hat{V}\)</span> with Angular Momentum <span class="math notranslate nohighlight">\(\hat{L}_b\)</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="auxiliary-results-on-operators-for-the-schrodinger-model-of-the-hydrogen-atom">
+<span id="quantum-mechanics-atom-models-schrodinger-notes"></span><h1><span class="section-number">20.5.3. </span>Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom<a class="headerlink" href="#auxiliary-results-on-operators-for-the-schrodinger-model-of-the-hydrogen-atom" title="Permalink to this heading">#</a></h1>
+<ol class="arabic">
+<li><p>All components of <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\)</span> commute with the kinetic term <span class="math notranslate nohighlight">\(\frac{\hat{p}^2}{2m}\)</span> and with <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <a class="reference internal" href="#quantum-mechanics-atom-models-schrodinger-notes-commutation-l-p2"><span class="std std-ref">proof</span></a></p>
+<div class="math notranslate nohighlight">
+\[[\hat{p}^2, \hat{L}_b] = 0\]</div>
+</li>
+<li><p>All components of <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\)</span> commute with the potential <span class="math notranslate nohighlight">\(\hat{V}_{\text{Coulomb}}\)</span>, <a class="reference internal" href="#quantum-mechanics-atom-models-schrodinger-notes-commutation-l-v"><span class="std std-ref">proof</span></a></p>
+<div class="math notranslate nohighlight">
+\[[\hat{V}_{\text{Coulomb}}, \hat{L}_b] = 0\]</div>
+</li>
+<li><p>Therefore, all components of <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\)</span> commute with the <span class="math notranslate nohighlight">\(\text{H}\)</span> atom Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_{\text{H-atom}} = \frac{\hat{p}^2}{2m} + \hat{V}_{\text{Coulomb}}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{H}_{\text{H-atom}}, \hat{L}_b] = 0\]</div>
+</li>
+<li><p>Simultaneous Commutative Set:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{[\hat{H}_{\text{H-atom}}, \hat{L}^2] = 0, \quad [\hat{H}_{\text{H-atom}}, \hat{L}_a] = 0, \quad [\hat{L}^2, \hat{L}_a] = 0}\]</div>
+<p>i.e. the Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_{\text{H-atom}}\)</span>, total angular momentum squared <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, and any component <span class="math notranslate nohighlight">\(\hat{L}_a\)</span> all mutually commute, and thus share a set of common eigenvectors. For the commutation relation <span class="math notranslate nohighlight">\([\hat{L}^2, \hat{L}_a] = 0\)</span>, see the section about <a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html#quantum-mechanics-angular-momentum-spatial"><span class="std std-ref">spatial angular momentum</span></a>.</p>
+</li>
+</ol>
+<div class="section" id="hamiltonian-basic-definitions">
+<h2><span class="section-number">20.5.3.1. </span>Hamiltonian &amp; Basic Definitions<a class="headerlink" href="#hamiltonian-basic-definitions" title="Permalink to this heading">#</a></h2>
+<p>The Hamiltonian of the electron in the Hydrogen atom with Coulomb potential is given by</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}_{Coulomb} \ ,\]</div>
+<p>that in space basis becomes</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{H} = - \frac{\hbar^2}{2 m} \nabla^2 \langle \mathbf{r} | - \frac{q^2}{4 \pi \varepsilon |\mathbf{r}|} \langle \mathbf{r} | \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Space Basis Representations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \Psi \rangle = \Psi(\mathbf{r}, t)\]</div>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{r}} = \mathbf{r} \langle \mathbf{r} | \quad \implies \quad \langle \mathbf{r} | \hat{\mathbf{r}} | \Psi \rangle = \mathbf{r} \, \Psi(\mathbf{r}, t)\]</div>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{p}} = -i\hbar \nabla_{\mathbf{r}} \langle \mathbf{r} | \quad \implies \quad \langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = -i\hbar \nabla \Psi(\mathbf{r}, t)\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Angular Momentum Operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}}\]</div>
+<p class="sd-card-text">In Levi-Civita component notation, using Cartesian coordinates</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{L}} = \hat{\mathbf{e}}_a \hat{L}_a =  \hat{\mathbf{e}}_a \varepsilon_{abc} \, \hat{r}_b \hat{p}_c\]</div>
+<p class="sd-card-text">In the space (position) basis (Cartesian coordinates):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \hat{\mathbf{L}} | \Psi \rangle 
+  &amp; = \langle \mathbf{r} | \hat{\mathbf{e}}_a \hat{L}_a | \Psi \rangle = \\
+  &amp; = \hat{\mathbf{e}}_a \varepsilon_{abc} \, r_b (-i\hbar \partial_c \langle \mathbf{r} | \Psi \rangle) = \\
+  &amp; =-i\hbar \hat{\mathbf{e}}_a \varepsilon_{abc} \, r_b \, \partial_c \Psi(\mathbf{r},t) = \\
+  &amp; = - i \hbar \mathbf{r} \times \nabla_{\mathbf{r}} \Psi(\mathbf{r},t) \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = \int \langle \mathbf{r} | \hat{\mathbf{p}} | \mathbf{r}' \rangle \langle \mathbf{r}' | \Psi \rangle \, d\mathbf{r}' = \int \delta(\mathbf{r} - \mathbf{r}') \left(-i\hbar \nabla_{\mathbf{r}'} \Psi(\mathbf{r}', t)\right) d\mathbf{r}' = -i\hbar \nabla_{\mathbf{r}} \Psi(\mathbf{r}, t)\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{p}_b \hat{r}_a | \Psi \rangle\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{p}_b \hat{r}_a | \Psi \rangle = -i\hbar \partial_b \langle \mathbf{r} | \hat{r}_a | \Psi \rangle  = -i\hbar \partial_b \left( r_a \langle \mathbf{r} | \Psi \rangle \right) = - i \hbar \partial_b \left( r_a \Psi(\mathbf{r},t) \right) = -i\hbar (\delta_{ab} \Psi + r_a \partial_b \Psi)\]</div>
+</div>
+</details></div>
+<div class="section" id="canonical-commutation-relations-ccr">
+<h2><span class="section-number">20.5.3.2. </span>Canonical Commutation Relations (CCR)<a class="headerlink" href="#canonical-commutation-relations-ccr" title="Permalink to this heading">#</a></h2>
+<p>Using postion basis and Cartesian coordinates, the CCR <span class="math notranslate nohighlight">\([ \hat{\mathbf{r}}, \hat{\mathbf{P}} ] = i \hbar \mathbb{I}\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[[r_a, p_b] \Psi = r_a (-i\hbar \partial_b \Psi) - (-i\hbar \partial_b (r_a \Psi)) = i\hbar \, \delta_{ab} \Psi \ ,\]</div>
+<p>i.e.</p>
+<div class="math notranslate nohighlight">
+\[[r_a, p_b] = i\hbar \, \delta_{ab}\]</div>
+</div>
+<div class="section" id="commutators-of-angular-momentum-with-position-and-momentum">
+<h2><span class="section-number">20.5.3.3. </span>Commutators of Angular Momentum with Position and Momentum<a class="headerlink" href="#commutators-of-angular-momentum-with-position-and-momentum" title="Permalink to this heading">#</a></h2>
+<div class="section" id="commutator-r-a-l-b">
+<h3><span class="section-number">20.5.3.3.1. </span>Commutator <span class="math notranslate nohighlight">\([r_a, L_b]\)</span><a class="headerlink" href="#commutator-r-a-l-b" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[r_a L_b \Psi = r_a (-i\hbar \varepsilon_{bcd} \, r_c \partial_d \Psi) = -i\hbar \varepsilon_{bcd} \, r_a r_c \partial_d \Psi\]</div>
+<div class="math notranslate nohighlight">
+\[L_b r_a \Psi = -i\hbar \varepsilon_{bcd} \, r_c \partial_d (r_a \Psi) = -i\hbar \varepsilon_{bcd} \, r_c \delta_{ad} \Psi - i\hbar \varepsilon_{bcd} \, r_c r_a \partial_d \Psi\]</div>
+<p>Subtracting the two expressions gives:</p>
+<div class="math notranslate nohighlight">
+\[[r_a, L_b] \Psi = i\hbar \varepsilon_{bcd} \, r_c \delta_{ad} \Psi = i\hbar \varepsilon_{bca} \, r_c \Psi \ ,\]</div>
+<p>and thus</p>
+<div class="math notranslate nohighlight">
+\[[r_a, L_b] =-  i \hbar \, (\mathbf{r} \times)_{a b} \, \Psi \quad \left(\text{in general } \neq 0\right)\]</div>
+<p><em>(Recall: <span class="math notranslate nohighlight">\((\mathbf{a} \times \mathbf{b})_i = \varepsilon_{ijk} a_j b_k = \{ \mathbf{a}_{\times} \}_{ik} \cdot \{ \mathbf{b} \}_k\)</span>, i.e. <span class="math notranslate nohighlight">\(\{ \mathbf{a}_{\times} \}_{ik} = \varepsilon_{ijk} a_j\)</span>)</em></p>
+</div>
+<div class="section" id="commutator-p-a-l-b">
+<h3><span class="section-number">20.5.3.3.2. </span>Commutator <span class="math notranslate nohighlight">\([p_a, L_b]\)</span><a class="headerlink" href="#commutator-p-a-l-b" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[p_a L_b \Psi = -i\hbar \partial_a \left(-i\hbar \varepsilon_{bcd} \, r_c \partial_d \Psi\right) = -\hbar^2 \varepsilon_{bcd} \, \partial_a (r_c \partial_d \Psi) = -\hbar^2 \varepsilon_{bad} \, \partial_d \Psi - \hbar^2 \varepsilon_{bcd} \, r_c \partial_a \partial_d \Psi\]</div>
+<div class="math notranslate nohighlight">
+\[L_b p_a \Psi = -i\hbar \varepsilon_{bcd} \, r_c \partial_d (-i\hbar \partial_a \Psi) = -\hbar^2 \varepsilon_{bcd} \, r_c \partial_d \partial_a \Psi\]</div>
+<p>Subtracting the two expressions gives:</p>
+<div class="math notranslate nohighlight">
+\[[p_a, L_b] \Psi = -\hbar^2 \varepsilon_{bad} \, \partial_d \Psi = \hbar^2 \varepsilon_{abd} \, \partial_d \Psi = i\hbar \varepsilon_{abc} \, p_c \Psi\]</div>
+<p><strong>Cartesian coordinates.</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\([p_x, L_x] \equiv 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([p_x, L_y] = \hbar^2 \varepsilon_{xyz} \, \partial_z \Psi = i\hbar p_z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\([p_x, L_z] = \hbar^2 \varepsilon_{xzy} \, \partial_y \Psi = -\hbar^2 \partial_y \Psi = -i\hbar p_y\)</span></p></li>
+</ul>
+<hr class="docutils" />
+</div>
+<div class="section" id="commutator-hat-p-2-l-b">
+<span id="quantum-mechanics-atom-models-schrodinger-notes-commutation-l-p2"></span><h3><span class="section-number">20.5.3.3.3. </span>Commutator <span class="math notranslate nohighlight">\([\hat{p}^2, L_b]\)</span><a class="headerlink" href="#commutator-hat-p-2-l-b" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[[p^2, L_b] = \sum_a p_a p_a L_b - L_b \sum_a p_a p_a = \sum_a \Big( p_a [p_a, L_b] + [p_a, L_b] p_a \Big)\]</div>
+<p>Using <span class="math notranslate nohighlight">\([p_a, L_b] = i\hbar \varepsilon_{abc} p_c\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_a \left( p_a (i\hbar \varepsilon_{abc} p_c) + (i\hbar \varepsilon_{abc} p_c) p_a \right) = i\hbar \varepsilon_{abc} (p_a p_c + p_c p_a)\]</div>
+<p>Since <span class="math notranslate nohighlight">\(p_a p_c = p_c p_a\)</span> (symmetric in <span class="math notranslate nohighlight">\(a, c\)</span>) and <span class="math notranslate nohighlight">\(\varepsilon_{abc}\)</span> is antisymmetric in <span class="math notranslate nohighlight">\(a, c\)</span>, the sum vanishes identically:</p>
+<div class="math notranslate nohighlight">
+\[[p^2, L_b] = 0 \quad \text{for all components } b\]</div>
+<p><strong>Example.</strong> For <span class="math notranslate nohighlight">\(b = x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[[p^2, L_x] = -i\hbar^3 \Big[ 1 \cdot \partial_z \partial_y \Psi - 1 \cdot \partial_y \partial_z \Psi \Big] = 0\]</div>
+</div>
+</div>
+<div class="section" id="commutator-of-coulomb-potential-hat-v-with-angular-momentum-hat-l-b">
+<span id="quantum-mechanics-atom-models-schrodinger-notes-commutation-l-v"></span><h2><span class="section-number">20.5.3.4. </span>Commutator of Coulomb Potential <span class="math notranslate nohighlight">\(\hat{V}\)</span> with Angular Momentum <span class="math notranslate nohighlight">\(\hat{L}_b\)</span><a class="headerlink" href="#commutator-of-coulomb-potential-hat-v-with-angular-momentum-hat-l-b" title="Permalink to this heading">#</a></h2>
+<p>In space basis, the Coulomb potential reads:</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{V} | \Psi \rangle = -\frac{q^2}{4\pi\varepsilon_0} \frac{1}{r} \Psi(\mathbf{r}, t) = -k \frac{1}{|\mathbf{r}|} \Psi(\mathbf{r}, t)\]</div>
+<p>Let’s evaluate whether <span class="math notranslate nohighlight">\(\hat{V}\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_b\)</span> commute:</p>
+<ol class="arabic">
+<li><p><strong>Action of <span class="math notranslate nohighlight">\(\hat{V} \hat{L}_b\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{V} \hat{L}_b | \Psi \rangle = -k \frac{1}{\sqrt{x_a x_a}} \left( -i\hbar \varepsilon_{bcd} \, r_c \, \partial_d \Psi \right)\]</div>
+</li>
+<li><p><strong>Action of <span class="math notranslate nohighlight">\(\hat{L}_b \hat{V}\)</span>, with <span class="math notranslate nohighlight">\(|\mathbf{r}| = \sqrt{ x_a x_a }\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{L}_b \hat{V} | \Psi \rangle = -i\hbar \varepsilon_{bcd} \, r_c \, \partial_d \left( -k \frac{\Psi}{\sqrt{x_a x_a}} \right) = i\hbar k \varepsilon_{bcd} \, r_c \left[ -\frac{\partial_d |\mathbf{r}|}{|\mathbf{r}|^2} \Psi + \frac{1}{|\mathbf{r}|} \partial_d \Psi \right]\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\partial_d | \mathbf{r}| = \partial_d \sqrt{x_a x_a} = \frac{x_d}{|\mathbf{r}|}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{L}_b \hat{V} | \Psi \rangle = i\hbar k \varepsilon_{bcd} \, r_c \left[ -\frac{r_d}{|\mathbf{r}|^3} \Psi + \frac{1}{|\mathbf{r}|} \partial_d \Psi \right]\]</div>
+</li>
+<li><p><strong>Commutator <span class="math notranslate nohighlight">\([\hat{V}, \hat{L}_b]\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | [\hat{V}, \hat{L}_b] | \Psi \rangle = -i\hbar k \, \frac{\varepsilon_{bcd} \, r_c r_d}{|\mathbf{r}|^3} \Psi = 0\]</div>
+<p><em>Why?</em> The product <span class="math notranslate nohighlight">\(r_c r_d\)</span> is <strong>symmetric</strong> under swapping <span class="math notranslate nohighlight">\(c \leftrightarrow d\)</span>, while <span class="math notranslate nohighlight">\(\varepsilon_{bcd}\)</span> is <strong>antisymmetric</strong> under swapping <span class="math notranslate nohighlight">\(c \leftrightarrow d\)</span>. Summing over <span class="math notranslate nohighlight">\(c, d\)</span> gives zero!</p>
+<p><strong>Example for <span class="math notranslate nohighlight">\(b = x\)</span>.</strong> <span class="math notranslate nohighlight">\(\varepsilon_{xcd} r_c r_d = \varepsilon_{xyz} y z + \varepsilon_{xzy} z y = yz - zy = 0\)</span>.</p>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/quantum-mechanics/atom-models"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="schrodinger-gallery.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">20.5.2. </span>Schrodinger model - Gallery</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../solid-state/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">21. </span>Introduction to Solid State Physics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonian-basic-definitions">20.5.3.1. Hamiltonian &amp; Basic Definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr">20.5.3.2. Canonical Commutation Relations (CCR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commutators-of-angular-momentum-with-position-and-momentum">20.5.3.3. Commutators of Angular Momentum with Position and Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-r-a-l-b">20.5.3.3.1. Commutator <span class="math notranslate nohighlight">\([r_a, L_b]\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-p-a-l-b">20.5.3.3.2. Commutator <span class="math notranslate nohighlight">\([p_a, L_b]\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-hat-p-2-l-b">20.5.3.3.3. Commutator <span class="math notranslate nohighlight">\([\hat{p}^2, L_b]\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-of-coulomb-potential-hat-v-with-angular-momentum-hat-l-b">20.5.3.4. Commutator of Coulomb Potential <span class="math notranslate nohighlight">\(\hat{V}\)</span> with Angular Momentum <span class="math notranslate nohighlight">\(\hat{L}_b\)</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

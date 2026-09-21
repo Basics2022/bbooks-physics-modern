@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -238,6 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">20.5. Schrodinger model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="schrodinger-analytical-sln.html">20.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="schrodinger-gallery.html">20.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-notes.html">20.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
 </ul>
 </li>
 </ul>
@@ -418,6 +410,7 @@ Contents<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="schrodinger-analytical-sln.html#quantum-mechanics-atom-models-schrodinger-analytical-sln"><span class="std std-ref">Mathematical details of the analytical solution</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="schrodinger-gallery.html#quantum-mechanics-atom-models-schrodinger-gallery"><span class="std std-ref">Gallery of orbitals</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="schrodinger-notes.html#quantum-mechanics-atom-models-schrodinger-notes"><span class="std std-ref">Auxiliary notes</span></a></p></li>
 </ul>
 </div>
 </details><p><strong>Schrodinger equation.</strong> Schrodinger equation in space basis for the electron in a <span class="math notranslate nohighlight">\(\text{H}\)</span> atom reads</p>
@@ -434,8 +427,7 @@ Contents<div class="sd-summary-down docutils">
 <li><p><strong>magnetic</strong> quantum number <span class="math notranslate nohighlight">\(m_{\ell} \in \{ -\ell, -\ell+1, \dots, \ell \}\)</span></p></li>
 </ul>
 <p>Energy levels only depend on the principal quantum number, <span class="math notranslate nohighlight">\(E(n)\)</span>. Thus, Schrodinger model of the atom has <strong>degenerate</strong> stationary states, i.e. stationary states with the same energy value.</p>
-<p><strong>Commutation of <span class="math notranslate nohighlight">\(\hat{H}\)</span>, <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>.</strong> As angular momentum operators <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> commute with the Hamiltonian operator <span class="math notranslate nohighlight">\(\hat{H}\)</span> of the <span class="math notranslate nohighlight">\(\text{H}\)</span> atom, these three operators share common eigenvectors.</p>
-<p><strong>todo</strong> <em>add the proof - already there in hand-written notes</em></p>
+<p><strong>Commutation of <span class="math notranslate nohighlight">\(\hat{H}\)</span>, <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>.</strong> As angular momentum operators <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> commute with the Hamiltonian operator <span class="math notranslate nohighlight">\(\hat{H}\)</span> of the <span class="math notranslate nohighlight">\(\text{H}\)</span> atom, these three operators share common eigenvectors. These relations are proved in the <a class="reference internal" href="schrodinger-notes.html#quantum-mechanics-atom-models-schrodinger-notes"><span class="std std-ref">note section</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
