@@ -1,0 +1,773 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20.5.1. Schrodinger model - Mathematical details of the analytical solution &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/atom-models/schrodinger-analytical-sln';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="20.5.2. Schrodinger model - Gallery" href="schrodinger-gallery.html" />
+    <link rel="prev" title="20.5. Schrodinger model" href="schrodinger.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history/topics.html">19.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/timeline.html">19.2. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/light-dispersion.html">19.3. Light dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/einstein-planck.html">19.4. Light matter interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/larmor-formula.html">19.5. Ratiation of moving charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../atom-models.html">20. Atomic models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="thomson.html">20.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rutherford.html">20.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bohr.html">20.3. Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sommerfeld.html">20.4. Sommerfeld model</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="schrodinger.html">20.5. Schrodinger model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">20.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-gallery.html">20.5.2. Schrodinger model - Gallery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">21. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">22. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">23.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">23.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">23.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">23.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">23.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">23.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ch/quantum-mechanics/atom-models/schrodinger-analytical-sln.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Schrodinger model - Mathematical details of the analytical solution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="schrodinger-model-mathematical-details-of-the-analytical-solution">
+<span id="quantum-mechanics-atom-models-schrodinger-analytical-sln"></span><h1><span class="section-number">20.5.1. </span>Schrodinger model - Mathematical details of the analytical solution<a class="headerlink" href="#schrodinger-model-mathematical-details-of-the-analytical-solution" title="Permalink to this heading">#</a></h1>
+<p><strong>Schrodinger equation</strong> for the hydrogen atom in space basis reads</p>
+<div class="math notranslate nohighlight">
+\[i \hbar \Psi(\mathbf{r},t) = \left[ - \frac{\hbar^2}{2 m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon} \frac{1}{r} \right] \Psi(\mathbf{r},t) \ . \]</div>
+<p>The <strong>eigenproblem of the Hermitian operator</strong> (projected onto space basis, as well) reads</p>
+<div class="math notranslate nohighlight">
+\[E_n \Psi_n(\mathbf{r}) = - \frac{\hbar^2}{2 m} \nabla^2 \Psi_n(\mathbf{r}) - \frac{q^2}{4 \pi \varepsilon r} \Psi_n(\mathbf{r}) \ .\]</div>
+<p>Given the symmetries of the system, the solution of the eigenproblem is evaluated using spherical coordinates <span class="math notranslate nohighlight">\(\{ r, \theta, \varphi \}\)</span>, and the method of separation of variables. Using <strong>spherical coordinates</strong>,</p>
+<div class="math notranslate nohighlight">
+\[- \frac{\hbar^2}{2m} \left\{ \frac{1}{r^2} \partial_r \left( r^2 \partial_r \right) + \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} \right\} \Psi_n - \frac{q^2}{4\pi \varepsilon_0 r} \Psi_n = E_n \Psi_n\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Separation of variables, <span class="math notranslate nohighlight">\(\ \Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ \)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With the <strong>method of separation of variables</strong>, we look for solutions in product form:</p>
+<div class="math notranslate nohighlight">
+\[\Psi_{nlm}(r, \theta, \varphi) = R_n(r) Y_{lm}(\theta, \varphi) \ ,\]</div>
+<p class="sd-card-text">and substituting into the Schrödinger equation:</p>
+<div class="math notranslate nohighlight">
+\[\left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right) R_n Y_{lm} = - \frac{\hbar^2}{2m} \left[ \frac{1}{r^2} \left( r^2 R_n' \right)' Y_{lm} + R_n \left( \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta \partial_\theta Y_{lm} \right) + \frac{1}{r^2 \sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right) \right]\]</div>
+<p class="sd-card-text">Dividing by <span class="math notranslate nohighlight">\(R_n Y_{lm}\)</span>, and multiplying by <span class="math notranslate nohighlight">\(r^2 \frac{2m}{\hbar^2}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[0 = \underbrace{\frac{1}{R_n} (r^2 R_n')' + \frac{2m r^2}{\hbar^2} \left( E_n + \frac{q^2}{4\pi \varepsilon_0 r} \right)}_{f(r)} + \underbrace{\frac{1}{Y_{lm}} \left\{ \frac{1}{\sin\theta} \partial_\theta (\sin\theta \partial_\theta Y_{lm}) + \frac{1}{\sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right\}}_{g(\theta, \varphi)}\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(f(r) + g(\theta, \varphi) = 0\)</span>, both terms must equal equal-and-opposite constant <span class="math notranslate nohighlight">\(C\)</span> for all valid domains <span class="math notranslate nohighlight">\(r \in (0, +\infty)\)</span>, <span class="math notranslate nohighlight">\(\theta \in (0, \pi)\)</span>, <span class="math notranslate nohighlight">\(\varphi \in (0, 2\pi)\)</span></p>
+<div class="math notranslate nohighlight">
+\[C = f(r) = - g(\theta, \varphi) \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Radial equation, and energy levels<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The radial component determines the energy level,</p>
+<div class="math notranslate nohighlight" id="equation-eq-atom-schrodinger-energy">
+<span class="eqno">(20.2)<a class="headerlink" href="#equation-eq-atom-schrodinger-energy" title="Permalink to this equation">#</a></span>\[E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(n \in \{ 1, 2, \dots \}\)</span>.</p>
+<p class="sd-card-text">The radial distribution of the energy state functions is</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = e^{-\rho/2} \rho^{\ell} L^{2 \ell+1}_{n-\ell-1}(\rho) \ ,\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\rho = r \frac{\sqrt{-8 m E_n}}{\hbar}\)</span> the non dimensional radius, <span class="math notranslate nohighlight">\(\ell \in \{ 0, 1, \dots, n-1 \}\)</span>, and <span class="math notranslate nohighlight">\(L_{p}^{k}(x)\)</span> the solution of the associated Laguerre differential equation <span class="math notranslate nohighlight">\(x y'' + ( k + 1 - x ) y' + p y = 0\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Change of variables, and asymptotic behavior<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Defining <span class="math notranslate nohighlight">\(C = \ell(\ell+1)\)</span>, and dividing the equation <span class="math notranslate nohighlight">\(f(r) = C\)</span> by <span class="math notranslate nohighlight">\(r^2\)</span>, for the states with <span class="math notranslate nohighlight">\(E_n &lt;0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{r^2} \frac{d}{dr} \left( r^2 R' \right) + \left[ \frac{2m}{\hbar^2} \left( E + \frac{q^2}{4\pi \varepsilon_0 r} \right) - \frac{\ell(\ell + 1)}{r^2} \right] R = 0\]</div>
+<p class="sd-card-text">Defining the <strong>dimensionless radial variable</strong> <span class="math notranslate nohighlight">\(\rho = \kappa r\)</span>, so <span class="math notranslate nohighlight">\(\frac{d}{dr} = \kappa \frac{d}{d\rho}\)</span>, and factoring out <span class="math notranslate nohighlight">\(\kappa^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[0 = \kappa^2 \left\{ \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + \left( \frac{2m E}{\hbar^2 \kappa^2} + \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0 \rho} - \frac{\ell(\ell + 1)}{\rho^2} \right) \right\} R\]</div>
+<p class="sd-card-text">By choosing <span class="math notranslate nohighlight">\(\kappa^2 = -\frac{8 m E}{\hbar^2}\)</span> (where <span class="math notranslate nohighlight">\(\kappa = \frac{\sqrt{-8 m E}}{\hbar}\)</span> for <span class="math notranslate nohighlight">\(E &lt; 0\)</span>), the first term inside the parentheses becomes <span class="math notranslate nohighlight">\(-1\)</span>. Defining the constant parameter <span class="math notranslate nohighlight">\(\rho_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho_0 = \frac{2m q^2}{\hbar^2 \kappa \cdot 4\pi \varepsilon_0} = \frac{2m q^2}{\hbar^2 \sqrt{-8 m E} \cdot 4\pi \varepsilon_0} = \frac{q^2}{8\pi \varepsilon_0 \hbar} \sqrt{\frac{2m}{-E}} \ ,\]</div>
+<p class="sd-card-text">the dimensionless radial equation simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 \frac{dR}{d\rho} \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right]\]</div>
+<p class="sd-card-text">Boundary conditions required for regular wavefunctions:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho = 0) &lt; \infty, \quad R(\rho \to +\infty) = 0\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Asymptotic behavior for <span class="math notranslate nohighlight">\(\ r \rightarrow 0\)</span>, and <span class="math notranslate nohighlight">\(\ r \rightarrow +\infty\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Large Distance Limit (<span class="math notranslate nohighlight">\(\rho \to +\infty\)</span>).</strong> For large <span class="math notranslate nohighlight">\(\rho\)</span>, terms proportional to <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span> and <span class="math notranslate nohighlight">\(\frac{1}{\rho^2}\)</span> become negligible:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) = R'' + \frac{2}{\rho} R' \sim R''\]</div>
+<p class="sd-card-text">The equation reduces to:</p>
+<div class="math notranslate nohighlight">
+\[R'' - \frac{1}{4} R \sim 0\]</div>
+<p class="sd-card-text">General solution:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = A e^{-\rho/2} + B e^{\rho/2}\]</div>
+<p class="sd-card-text">To satisfy the non-divergent boundary condition at infinity, set <span class="math notranslate nohighlight">\(B = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) \sim e^{-\rho/2} \quad \text{as } \rho \to +\infty\]</div>
+<p class="sd-card-text"><strong>Small Distance Limit (<span class="math notranslate nohighlight">\(\rho \to 0\)</span>).</strong> For <span class="math notranslate nohighlight">\(\rho \to 0\)</span>, the centrifugal term <span class="math notranslate nohighlight">\(\frac{\ell(\ell+1)}{\rho^2}\)</span> dominates over the constant and <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span> terms:</p>
+<div class="math notranslate nohighlight">
+\[R'' + \frac{2}{\rho} R' - \frac{\ell(\ell + 1)}{\rho^2} R \sim 0\]</div>
+<p class="sd-card-text">Proposing a power-law ansatz <span class="math notranslate nohighlight">\(R(\rho) \sim \rho^s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s(s - 1) \rho^{s-2} + 2s \rho^{s-2} - \ell(\ell + 1) \rho^{s-2} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[s^2 + s - \ell(\ell + 1) = 0\]</div>
+<p class="sd-card-text">Solving the quadratic characteristic equation for <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s_{1,2} = \frac{-1 \mp \sqrt{1 + 4\ell(\ell + 1)}}{2} = \frac{-1 \mp (1 + 2\ell)}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[s_1 = \ell, \quad s_2 = -(\ell + 1)\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\ell \ge 0\)</span>, <span class="math notranslate nohighlight">\(s_2 = -(\ell + 1)\)</span> leads to divergence at the origin <span class="math notranslate nohighlight">\(\rho \to 0\)</span>. Retaining only the physically acceptable solution <span class="math notranslate nohighlight">\(s = \ell\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) \sim \rho^\ell \quad \text{as } \rho \to 0\]</div>
+<p class="sd-card-text"><strong>Transformation &amp; Differential Equation for <span class="math notranslate nohighlight">\(v(\rho)\)</span>.</strong> Combining both asymptotic behaviors, we represent the full radial solution as:</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = \rho^\ell e^{-\rho/2} v(\rho)\]</div>
+<p class="sd-card-text">Writing out derivatives of <span class="math notranslate nohighlight">\(R(\rho)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R' = \left( \ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell \right) e^{-\rho/2} v + \rho^\ell e^{-\rho/2} v'\]</div>
+<p class="sd-card-text">After expanding <span class="math notranslate nohighlight">\(\frac{1}{\rho^2} \frac{d}{d\rho} \left( \rho^2 R' \right) + R \left[ - \frac{\ell(\ell + 1)}{\rho^2} - \frac{1}{4} + \frac{\rho_0}{\rho} \right] = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[= e^{-\rho/2} \Big\{ \rho^\ell v'' + v' \left[ 2\ell \rho^{\ell-1} - \frac{1}{2} \rho^\ell + 2 \rho^{\ell-1} \right] + v \left[ \rho^\ell \ell(\ell+1) - \rho^{\ell+1} \left( \ell + 1 \right) + \frac{1}{4} \rho^{\ell+2} - \ell(\ell+1) \rho^{\ell} - \frac{1}{4} \rho^{\ell+2} + \rho_0 \rho^{\ell+1} \right] \Big\} = 0\]</div>
+<p class="sd-card-text">Dividing out non-zero factor <span class="math notranslate nohighlight">\(\rho^{\ell-1} e^{-\rho/2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Polynomial expansion, energy quantization <span class="math notranslate nohighlight">\(\ E_n \ \)</span> and radial distribution <span class="math notranslate nohighlight">\(\ R_n(\rho)\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Starting from the transformed radial equation:</p>
+<div class="math notranslate nohighlight">
+\[\rho v''(\rho) + [2(\ell + 1) - \rho] v'(\rho) + (\rho_0 - \ell - 1) v(\rho) = 0\]</div>
+<p class="sd-card-text">Looking for a power series solution:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    v(\rho) &amp; = \sum_{k=0}^{\infty} c_k \rho^k  \\
+   v'(\rho) &amp; = \sum_{k=0}^{\infty} k c_k \rho^{k-1} \\
+  v''(\rho) &amp; = \sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-2} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Substituting into the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} k(k-1) c_k \rho^{k-1} + \sum_{k=0}^{\infty} 2(\ell + 1) k c_k \rho^{k-1} - \sum_{k=0}^{\infty} k c_k \rho^k + (\rho_0 - \ell - 1) \sum_{k=0}^{\infty} c_k \rho^k = 0\]</div>
+<p class="sd-card-text">Shift indices to group terms by power <span class="math notranslate nohighlight">\(\rho^k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} \Big\{ (k+1)(k) c_{k+1} + 2(\ell + 1)(k+1) c_{k+1} - k c_k + (\rho_0 - \ell - 1) c_k \Big\} \rho^k = 0\]</div>
+<p class="sd-card-text"><strong>Recurrence Relation.</strong> Equating coefficients to zero yields the recurrence relation for <span class="math notranslate nohighlight">\(c_k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_{k+1} = c_k \frac{k + \ell + 1 - \rho_0}{(k + 1)(k + 2\ell + 2)}\]</div>
+<p class="sd-card-text"><strong>Asymptotic Behavior &amp; Series Termination.</strong> If the power series does not terminate, as <span class="math notranslate nohighlight">\(k \to +\infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{c_{k+1}}{c_k} \longrightarrow \frac{1}{k}\]</div>
+<p class="sd-card-text">This asymptotic behavior matches that of the exponential expansion <span class="math notranslate nohighlight">\(e^\rho \sim \sum \frac{\rho^k}{k!}\)</span> and thus <span class="math notranslate nohighlight">\(\frac{c_{k+1}}{c_k} = \frac{1}{k+1} \sim \frac{1}{k}\)</span>.
+Thus, an infinite series <span class="math notranslate nohighlight">\(v(\rho) \sim e^\rho\)</span>, would lead to <span class="math notranslate nohighlight">\(R(\rho) \sim e^{-\rho/2} e^\rho = e^{\rho/2}\)</span>, which diverges as <span class="math notranslate nohighlight">\(\rho \to +\infty\)</span>.
+Thus, in order to maintain physical normalizability, the series must terminate at a maximum power <span class="math notranslate nohighlight">\(k_{\max} = N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_{N+1} = 0 \implies N + \ell + 1 - \rho_0 = 0 \implies \rho_0 = N + \ell + 1 \equiv n\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(N \ge 0\)</span> is the radial quantum number.</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(n = N + \ell + 1\)</span> is the <strong>Principal Quantum Number</strong> (<span class="math notranslate nohighlight">\(n \ge 1\)</span>).</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\forall n\)</span>, the orbital angular momentum quantum number satisfies <span class="math notranslate nohighlight">\(0 \le \ell \le n - 1\)</span>.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Energy Quantization.</strong> Recalling the definition of <span class="math notranslate nohighlight">\(\rho_0\)</span>, <span class="math notranslate nohighlight">\(n = \rho_0 = \sqrt{\frac{2m}{-E}} \frac{q^2}{4\pi \varepsilon_0 \hbar}\)</span>, and solving for the bound state energies <span class="math notranslate nohighlight">\(E_n\)</span> (<span class="math notranslate nohighlight">\(E &lt; 0\)</span>), the relation between the energy <span class="math notranslate nohighlight">\(E_n\)</span> of the <span class="math notranslate nohighlight">\(n^{th}\)</span> energy level and the principal quantum number <span class="math notranslate nohighlight">\(n\)</span> follows</p>
+<div class="math notranslate nohighlight" id="equation-eq-atom-schrodinger-energy-details">
+<span class="eqno">(20.3)<a class="headerlink" href="#equation-eq-atom-schrodinger-energy-details" title="Permalink to this equation">#</a></span>\[E_n = - \frac{m q^4}{32 \pi^2 \varepsilon_0^2 \hbar^2} \frac{1}{n^2} \ .\]</div>
+<p class="sd-card-text"><strong>Remark.</strong> The value of energy <span class="math notranslate nohighlight">\(E_n\)</span> of Schrodinger model coincides with the value <a class="reference internal" href="bohr.html#equation-eq-atom-bohr-energy">(20.1)</a> of the energy produced by <a class="reference internal" href="bohr.html#quantum-mechanics-atom-models-bohr"><span class="std std-ref">Bohr model</span></a>.</p>
+<p class="sd-card-text"><strong>Radial solution.</strong> Putting everything together, the radial part of the solution reads</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = e^{-\rho/2} \rho^{\ell} L^{2 \ell+1}_{n-\ell-1}(\rho) \ ,\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(L_{p}^{k}(x)\)</span> the solution of the associated Laguerre differential equation <span class="math notranslate nohighlight">\(x y'' + ( k + 1 - x ) y' + p y = 0\)</span>.</p>
+</div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Azimuthal and polar equations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Further separation of variables, <span class="math notranslate nohighlight">\(\ Y_{\ell m}(\theta, \varphi) = \Theta(\theta) \Phi(\varphi) \ \)</span> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(Y(\theta, \varphi) = \Theta(\theta) \Psi(\varphi)\)</span>, the equation</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{Y_{lm}} \left\{ \frac{1}{\sin\theta} \partial_\theta (\sin\theta \partial_\theta Y_{lm}) + \frac{1}{\sin^2\theta} \partial_{\varphi\varphi} Y_{lm} \right\} = - \ell ( \ell + 1 ) \ . 
+\]</div>
+<p class="sd-card-text">becomes - after multipyling by <span class="math notranslate nohighlight">\(\sin^2 \theta\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\frac{\sin \theta}{\Theta} \left( \sin \theta \, \Theta' \right)' + \ell ( \ell + 1 ) \, \sin^2 \theta}_{F(\theta)} = -\underbrace{\frac{\Phi''}{\Phi}}_{G(\varphi)} \ ,\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[F(\theta) = - G(\varphi) = m_\ell^2 \ ,\]</div>
+<p class="sd-card-text">with a non-negative constant <span class="math notranslate nohighlight">\(m_{\ell}^2\)</span> in order to match periodic conditions for <span class="math notranslate nohighlight">\(\Phi(\varphi = 0) = \Phi(\varphi = 2 \pi)\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Azimuthal equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\Phi'' + m_\ell^2 \Phi = 0 \ ,\]</div>
+<p class="sd-card-text">whose solution is <span class="math notranslate nohighlight">\(\Phi(\varphi) \propto \exp \left( \mp i m_{\ell} \varphi \right)\)</span>. In order to satisfy periodic conditoins, <span class="math notranslate nohighlight">\(m_{\ell} \in \mathbb{Z}\)</span>. This parameter will be furthered constrained later, in the solution of the polar equation, to be <span class="math notranslate nohighlight">\(m_{\ell} \in \{ - \ell, -\ell+1, \dots, \ell \}\)</span>, with <span class="math notranslate nohighlight">\(\ell \in \mathbb{N}\)</span>. Thus, selecting only the independent solutions, the azimuthal distribution of the eigenfunctions of the Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\Phi(\varphi) \propto \exp\left( i m_{\ell} \varphi \right) \ , \quad m_{\ell} \in \{ - \ell, -\ell+1, \dots \ell \} \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Polar equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Multiplying the equation <span class="math notranslate nohighlight">\(F(\theta) = m_{ell}^2\)</span> by <span class="math notranslate nohighlight">\(\Theta\)</span>, the polar equation becomes,</p>
+<div class="math notranslate nohighlight">
+\[ \sin \theta \left( \sin \theta \, \Theta' \right)' + \left[ \ell ( \ell + 1 ) \, \sin^2 \theta - m_{\ell}^2 \right] \Theta = 0 \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Polar equation as an associated Legendre equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Dividing by <span class="math notranslate nohighlight">\(\sin^2 \theta= 1 - \cos^2 \theta\)</span>, the second term can be immediately recast as the second term in the associated Legendre equation, if <span class="math notranslate nohighlight">\(x = \cos \theta\)</span>.</p>
+<p class="sd-card-text">As <span class="math notranslate nohighlight">\(\frac{d x}{d \theta} = - \sin \theta\)</span>, then <span class="math notranslate nohighlight">\(\frac{d}{d\theta} = \frac{d x}{d \theta} \frac{d}{d x} = - \sin \theta \frac{d}{d x}\)</span>, the first term - divided by <span class="math notranslate nohighlight">\(\sin^2 \theta\)</span> - becomes</p>
+<div class="math notranslate nohighlight">
+\[-\frac{1}{\sin^2 \theta} \sin^2 \theta \dfrac{d}{dx} \left( - \sin^2 \theta \dfrac{d}{dx} \Theta \right) = \dfrac{d}{dx}\left[ ( 1 - x^2) \dfrac{d}{dx} \Theta \right]\]</div>
+<p class="sd-card-text">Thus the polar equation can be recast as</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{d}{dx} \left[ ( 1 - x^2 ) \dfrac{d \Theta}{dx} \right] + \left[ \ell(\ell+1) - \frac{m_\ell^2}{1 - x^2} \right] \Theta  \ ,\]</div>
+<p class="sd-card-text">i.e. as the associated Legendre equation whose solution (see below) is <span class="math notranslate nohighlight">\(\Theta(x) = P_\ell^{m_{\ell}}(x)\)</span>, for <span class="math notranslate nohighlight">\(m_{\ell} \in \{ - \ell, \dots, \ell\}\)</span>, <span class="math notranslate nohighlight">\(\ell \in \mathbb{N}\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Legendre differential equation and associated Legendre equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Legendre differential equations</strong> read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = (1- x^2) P_n''(x) - 2 x P_n'(x) + n(n+1) P_n(x) =  \quad , \qquad x \in [-1, 1] \\
+  &amp; = \dfrac{d}{dx} \left[ ( 1-x^2 ) P_n'(x) \right] + n(n+1) P_n(x) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the solution <span class="math notranslate nohighlight">\(P_n(x)\)</span> be the Legendre polynomial. The <strong>associated Legendre differential equations</strong> are defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \dfrac{d}{dx} \left[ ( 1-x^2 ) P_n'(x) \right] + \left[ n(n+1) - \frac{m^2}{1-x^2} \right] P_n(x) \quad , \qquad x \in [-1, 1] \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and the solution reads <span class="math notranslate nohighlight">\(P_{n}^{m}(x) = (-1)^{m} \left( 1 - x^2 \right)^{\frac{m}{2}} \dfrac{d^m}{dx^m} P_{n}(x)\)</span>, for <span class="math notranslate nohighlight">\(m \ge 0\)</span>.
+The soutions for <span class="math notranslate nohighlight">\(m &lt; 0\)</span> are defined via symmetry conditions, or Rodrigues’ formula, as <span class="math notranslate nohighlight">\(P_{\ell}^{-m} = (-1)^{m} \frac{(\ell-m)!}{(\ell+m)!} P_{\ell}^{m}(x)\)</span>, see <a class="reference external" href="https://en.wikipedia.org/wiki/Associated_Legendre_polynomials">Wikipedia: associated Lagendre polynomials</a>.</p>
+</div>
+</details></div>
+</details></div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/quantum-mechanics/atom-models"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="schrodinger.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">20.5. </span>Schrodinger model</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="schrodinger-gallery.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">20.5.2. </span>Schrodinger model - Gallery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -75,6 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -803,6 +812,11 @@ Hamiltonian Mechanics<div class="sd-summary-down docutils">
   \hat{A} | a \rangle &amp; = a | a \rangle \\
   \hat{B} | b \rangle &amp; = b | b \rangle \\
 \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \left( \hat{B} | a \rangle \right) \\
+\end{split}\]</div>
+<p>Thus the state <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> is an eigenstate of <span class="math notranslate nohighlight">\(\hat{A}\)</span>, with the same eigenvalue <span class="math notranslate nohighlight">\(a\)</span>. If the eigenvalue is non-degenerate, this eigenstate must be proportional to the original eigenstate, and thus <span class="math notranslate nohighlight">\(\hat{B} | a \rangle = b | a \rangle\)</span>. If the eigenvalue is degenerate, the state <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> can be a linear combination of all the eigenstates <span class="math notranslate nohighlight">\(| a_i \rangle\)</span> with eigenvalue <span class="math notranslate nohighlight">\(a_i = a\)</span>.</p>
 </div>
 <div class="section" id="matrix-mechanics">
 <h3><span class="section-number">13.3.6. </span>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>

@@ -400,7 +400,6 @@ $$\frac{d f}{d t} = - \{ H, f \} + \partial_t f \qquad \leftrightarrow \qquad \d
 $$\{ H, f \} \qquad \leftrightarrow \qquad \frac{i}{\hbar}[\hat{H}, \hat{f}]$$
 
 
-
 ```
 
 
@@ -416,6 +415,13 @@ $$\begin{aligned}
   \hat{A} | a \rangle & = a | a \rangle \\
   \hat{B} | b \rangle & = b | b \rangle \\
 \end{aligned}$$
+
+
+$$
+  a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \left( \hat{B} | a \rangle \right) \\
+$$
+
+Thus the state $\hat{B} | a \rangle$ is an eigenstate of $\hat{A}$, with the same eigenvalue $a$. If the eigenvalue is non-degenerate, this eigenstate must be proportional to the original eigenstate, and thus $\hat{B} | a \rangle = b | a \rangle$. If the eigenvalue is degenerate, the state $\hat{B} | a \rangle$ can be a linear combination of all the eigenstates $| a_i \rangle$ with eigenvalue $a_i = a$.
 
 ### Matrix Mechanics
 
