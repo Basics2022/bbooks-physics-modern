@@ -68,6 +68,7 @@ parts:
       sections:
       - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln
       - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
+      - file: ch/quantum-mechanics/atom-models/schrodinger-notes
 - caption: Solid State Physics
   numbered: True
   chapters:

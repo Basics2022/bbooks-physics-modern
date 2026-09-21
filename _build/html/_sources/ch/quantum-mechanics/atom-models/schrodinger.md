@@ -6,6 +6,7 @@
 
 * [Mathematical details of the analytical solution](quantum-mechanics:atom-models:schrodinger:analytical-sln)
 * [Gallery of orbitals](quantum-mechanics:atom-models:schrodinger:gallery)
+* [Auxiliary notes](quantum-mechanics:atom-models:schrodinger:notes)
 
 ```
 
@@ -26,6 +27,6 @@ $$\left[ -\frac{\hbar^2}{2m} \nabla^2 - \frac{q^2}{4 \pi \varepsilon}\frac{1}{|\
 
 Energy levels only depend on the principal quantum number, $E(n)$. Thus, Schrodinger model of the atom has **degenerate** stationary states, i.e. stationary states with the same energy value.
 
-**Commutation of $\hat{H}$, $\hat{L}^2$, $\hat{L}_z$.** As angular momentum operators $\hat{L}^2$, $\hat{L}_z$ commute with the Hamiltonian operator $\hat{H}$ of the $\text{H}$ atom, these three operators share common eigenvectors.
+**Commutation of $\hat{H}$, $\hat{L}^2$, $\hat{L}_z$.** As angular momentum operators $\hat{L}^2$, $\hat{L}_z$ commute with the Hamiltonian operator $\hat{H}$ of the $\text{H}$ atom, these three operators share common eigenvectors. These relations are proved in the [note section](quantum-mechanics:atom-models:schrodinger:notes).
 
 **todo** *add the proof - already there in hand-written notes*
