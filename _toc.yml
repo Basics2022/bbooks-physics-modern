@@ -45,6 +45,10 @@ parts:
   - file: ch/quantum-mechanics/notes
   - file: ch/quantum-mechanics/wave-mechanics
   - file: ch/quantum-mechanics/angular-momentum
+    sections:
+    - file: ch/quantum-mechanics/angular-momentum/angular-momentum-spatial
+    - file: ch/quantum-mechanics/angular-momentum/angular-momentum-spin
+    - file: ch/quantum-mechanics/angular-momentum/angular-momentum-total
   - file: ch/quantum-mechanics/density-operator
   - file: ch/quantum-mechanics/decoherence
   - file: ch/quantum-mechanics/history
@@ -61,6 +65,9 @@ parts:
     - file: ch/quantum-mechanics/atom-models/bohr
     - file: ch/quantum-mechanics/atom-models/sommerfeld
     - file: ch/quantum-mechanics/atom-models/schrodinger
+      sections:
+      - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln
+      - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
 - caption: Solid State Physics
   numbered: True
   chapters:

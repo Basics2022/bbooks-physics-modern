@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16.1. Spatial Angular Momentum &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/angular-momentum/angular-momentum-spatial';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="16.2. Spin" href="angular-momentum-spin.html" />
+    <link rel="prev" title="16. Angular Momentum" href="../angular-momentum.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="angular-momentum-spin.html">16.2. Spin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history/topics.html">19.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/timeline.html">19.2. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/light-dispersion.html">19.3. Light dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/einstein-planck.html">19.4. Light matter interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/larmor-formula.html">19.5. Ratiation of moving charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atom-models.html">20. Atomic models</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/thomson.html">20.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/rutherford.html">20.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/bohr.html">20.3. Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/sommerfeld.html">20.4. Sommerfeld model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/schrodinger.html">20.5. Schrodinger model</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">21. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">22. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">23.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">23.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">23.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">23.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">23.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">23.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ch/quantum-mechanics/angular-momentum/angular-momentum-spatial.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Spatial Angular Momentum</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenproblem-of-angular-momentum-operators">16.1.1. Eigenproblem of angular momentum operators</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="spatial-angular-momentum">
+<span id="quantum-mechanics-angular-momentum-spatial"></span><h1><span class="section-number">16.1. </span>Spatial Angular Momentum<a class="headerlink" href="#spatial-angular-momentum" title="Permalink to this heading">#</a></h1>
+<p>Promoting the classical definition of angular momentum <span class="math notranslate nohighlight">\(\mathbf{L} = \mathbf{r} \times \mathbf{p}\)</span>, the angular momentum operator in quantum mechanics reads</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{L}} = \hat{\mathbf{r}} \times \hat{\mathbf{p}} = \hat{\mathbf{e}}_a \varepsilon_{abc} \hat{r} \hat{p}_c \ ,\]</div>
+<p>and using space basis</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{r} | \hat{\mathbf{L}} = \hat{\mathbf{e}}_a \underbrace{\left( - i \, \hbar \, \varepsilon_{abc}\, r_b \, \partial_c \langle \mathbf{r} | \right) }_{= \langle \mathbf{r} | \hat{L}_a }\ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Properties<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Composition of 2 components of the angular momentum operator.</strong> Using Cartesian coordinates</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{L}_a \hat{L}_b 
+  &amp; = - \hbar^2 r_b \partial_a + \hbar^2 \delta_{ab} r_c \partial_c - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{L}_a \hat{L}_b 
+  &amp; = - \hbar^2 \varepsilon_{acd} r_c \partial_d \left( \varepsilon_{bef} r_e \partial_f \right) = \\
+  &amp; = - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c \left( \delta_{de} \partial_f + r_e \partial_{df} \right) = \\
+  &amp; = - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bdf} r_c r_e \partial_{df} = \\
+  &amp; = - \hbar^2 \left( \delta_{af} \delta_{cb} - \delta_{ab} \delta_{cf} \right) r_c \partial_f - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+  &amp; = - \hbar^2 r_b \partial_a + \hbar^2 \delta_{ab} r_c \partial_c - \hbar^2 \varepsilon_{acd} \varepsilon_{bef} r_c r_e \partial_{df} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The last term is symmetric w.r.t. <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div>
+</details><p class="sd-card-text"><strong>Commutators.</strong></p>
+<div class="math notranslate nohighlight">
+\[[ \hat{L}_a, \hat{L}_b ] = \hat{L}_a \hat{L}_b -  \hat{L}_b \hat{L}_a = - \hbar^2 ( r_b\partial_a - r_a \partial_b) \]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(a = b\)</span>, the obvious result follows, as an operator commutes with itself. If <span class="math notranslate nohighlight">\(a \ne b\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[[\hat{L}_a, \hat{L}_b ] = i \varepsilon_{abc} \hbar \hat{L}_c \ ,\]</div>
+<p class="sd-card-text">or with a compact “vector notation”, <span class="math notranslate nohighlight">\(\hat{\mathbf{L}} \times \hat{\mathbf{L}} = i \hbar \hat{\mathbf{L}}\)</span>.</p>
+<p class="sd-card-text"><strong>Magnitude of the angular momentum, <span class="math notranslate nohighlight">\(|\hat{L}|^2\)</span>.</strong> Using Cartesian coordinates,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  |\hat{L}|^2 
+  &amp; = 2 \hbar^2 r_a \partial_a - \hbar^2 r_b r_b \partial_{aa} + \hbar^2 r_a r_b \partial_{ab} \ .
+\end{aligned}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  |\hat{L}|^2 
+  &amp; = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2 = \\
+  &amp; = \hat{L}_a \hat{L}_a = \\
+  &amp; = -\hbar^2 r_a \partial_a + 3 \hbar^2 r_a \partial_a - \hbar^2 ( \delta_{ce} \delta_{df} - \delta_{cf} \delta_{de} ) r_c r_e \partial_{df} = \\
+  &amp; = 2 \hbar^2 r_a \partial_a - \hbar^2 r_b r_b \partial_{aa} + \hbar^2 r_a r_b \partial_{ab} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p class="sd-card-text"><strong>Commutations with magnitude.</strong></p>
+<div class="math notranslate nohighlight">
+\[[ \hat{L}^2, \hat{L}_a ] = 0\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><p class="sd-card-text">The same hold for any integer power of <span class="math notranslate nohighlight">\(\hat{L}_a\)</span>, like <span class="math notranslate nohighlight">\(\hat{L}_a^2\)</span>, as it can be easily proved</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \hat{L}^2, \hat{L}^2_a \right]
+  &amp; = \hat{L}^2 \hat{L}_a^2 - \hat{L}_a^2 \hat{L}^2 = \\
+  &amp; = \hat{L}^2 \hat{L}_a \hat{L}_a - \hat{L}_a^2 \hat{L}^2 = \\
+  &amp; = \hat{L}_a \hat{L}^2 \hat{L}_a - \hat{L}_a \hat{L}_a \hat{L}^2 = \\
+  &amp; = \hat{L}_a [ \hat{L}^2,  \hat{L}_a ] = 0  \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Analogous relations in <strong>classical mechanics</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  [ L_a, L_b ] = i \hbar \varepsilon_{abc} \hat{L}_c \qquad , \qquad \{ L_a, L_b \} = \varepsilon_{abc} L_c \\
+\end{split}\]</div>
+<p class="sd-card-text">provides another example of the relation between Poisson brackets in classical mechanics and commutator in quantum mechanics (<strong>Dirac</strong>)</p>
+<div class="math notranslate nohighlight">
+\[\{ A, B \} \quad \leftrightarrow \quad \frac{1}{i \hbar} [ \hat{A}, \hat{B} ]\]</div>
+</div>
+</details><div class="section" id="eigenproblem-of-angular-momentum-operators">
+<h2><span class="section-number">16.1.1. </span>Eigenproblem of angular momentum operators<a class="headerlink" href="#eigenproblem-of-angular-momentum-operators" title="Permalink to this heading">#</a></h2>
+<p>In this section, the eigenproblems of <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> are discussed. Here, all the operators and state functions are written in components using space basis, without explicitly writing the projection <span class="math notranslate nohighlight">\(\langle \mathbf{r} |\)</span>.</p>
+<ul class="simple">
+<li><p>Using spherical coordinates, the <span class="math notranslate nohighlight">\(2\pi\)</span>-periodicity of the problem in <span class="math notranslate nohighlight">\(\phi\)</span> implies quantization in the spectral decomposition of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>,</p></li>
+<li></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong><span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{L}}\  \)</span> using Cartesian coordinates.</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\ell \psi = \hat{L}_a \psi = - i \hbar \varepsilon_{abc} r_b \partial_c \psi \ , \]</div>
+<p class="sd-card-text">or <span class="math notranslate nohighlight">\(\ell \psi = - i \hbar \mathbf{r} \times \nabla \psi\)</span>.</p>
+<p class="sd-card-text">…</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong><span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{L}}\  \)</span> using spherical coordinates.</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With the set of spherical coordinates <span class="math notranslate nohighlight">\(\psi(r,\theta,\phi)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{r} \times \nabla \psi 
+  &amp; = \mathbf{r} \times \left[ \partial_r \psi \, \hat{\mathbf{r}}  + \frac{1}{r} \partial_\theta \psi \, \hat{\boldsymbol\theta} + \frac{1}{r \sin \theta} \partial_{\phi} \psi \hat{\boldsymbol\phi} \right] = \\
+  &amp; = \partial_\theta \psi \, \hat{\boldsymbol\phi} - \frac{1}{\sin \theta} \partial_\phi \psi \, \hat{\boldsymbol\theta} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Thus the <span class="math notranslate nohighlight">\(z\)</span>-component, with <span class="math notranslate nohighlight">\(\hat{\mathbf{z}} \cdot \hat{\boldsymbol{\theta}} = - \sin \theta\)</span>, <span class="math notranslate nohighlight">\(\hat{\mathbf{z}} \cdot \hat{\boldsymbol\phi} = 0\)</span>, can be written as</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{z}} \cdot \left( \mathbf{r} \times \nabla \psi \right) = \partial_\phi \psi\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Spectral decomposition of the <span class="math notranslate nohighlight">\(z\)</span>-component operator, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\ell_z \psi_z(r,\theta,\phi) = -i \hbar \partial_\phi \psi_z(r,\theta,\phi)\]</div>
+<p class="sd-card-text">The eigenfunctions read</p>
+<div class="math notranslate nohighlight">
+\[\psi_{z,\ell}(r,\theta,\phi) = A(r,\theta) \, \exp\left( i \frac{\ell_z}{\hbar} \phi \right) \ .\]</div>
+<p class="sd-card-text">Periodic condition <span class="math notranslate nohighlight">\(\psi_z(0) = \psi_z(2 \pi)\)</span> implies <span class="math notranslate nohighlight">\(\frac{\ell_z}{\hbar} = m_l\)</span>, <span class="math notranslate nohighlight">\(m_l \in \mathbb{Z}\)</span>.</p>
+<p class="sd-card-text"><strong>Remark.</strong> The constraint <span class="math notranslate nohighlight">\(m_l \in \mathbb{Z}\)</span> is just <strong>one of the constraints</strong> on <span class="math notranslate nohighlight">\(m_l\)</span>.</p>
+<p class="sd-card-text">In order to keep the notation as intuitive as possible, the eigenvalue <span class="math notranslate nohighlight">\(\ell_z\)</span> and the corresponding eigenstate are denoted as <span class="math notranslate nohighlight">\(\{ L_{z}, | L_z \rangle\} = \{ \hbar m_l, | m_l \rangle \}\)</span>, s.t. <span class="math notranslate nohighlight">\(\hat{L}_z | m_l \rangle = \hbar m_l | m_l \rangle\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Spectral decomposition of commuting operators<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\hat{A} | a \rangle = a | a \rangle\)</span>, and <span class="math notranslate nohighlight">\(\hat{B} | b \rangle = b | b \rangle\)</span>. If <span class="math notranslate nohighlight">\(0 = [ \hat{A}, \hat{B} ] = \hat{A} \hat{B} - \hat{B} \hat{A}\)</span>. Pre-multiplying the first one by <span class="math notranslate nohighlight">\(\hat{B}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \hat{B} | a \rangle \ .\]</div>
+<p class="sd-card-text">So that <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> is an eigenstate of <span class="math notranslate nohighlight">\(\hat{A}\)</span> with eigenvalue <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<ul>
+<li><p class="sd-card-text">If <span class="math notranslate nohighlight">\(a\)</span> is an eigenvalue with algebraic multiplicity equal to <span class="math notranslate nohighlight">\(1\)</span>, then <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> must be proportional to the only eigenstate <span class="math notranslate nohighlight">\(| a \rangle \)</span> of the operator <span class="math notranslate nohighlight">\(\hat{A}\)</span> with eigenvalue <span class="math notranslate nohighlight">\(a\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\hat{B} | a \rangle = \mu | a \rangle \ ,\]</div>
+<p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(| a \rangle\)</span> is also an eigenstate of <span class="math notranslate nohighlight">\(\hat{B}\)</span>.</p>
+</li>
+<li><p class="sd-card-text">If <span class="math notranslate nohighlight">\(a\)</span> has algebraic multiplicity larger than <span class="math notranslate nohighlight">\(1\)</span>, then <span class="math notranslate nohighlight">\(\hat{B} | a_i \rangle\)</span>, can be a linear combination of all the eigenvectors <span class="math notranslate nohighlight">\(| a_k \rangle\)</span> with eigenvalues <span class="math notranslate nohighlight">\(a_k = a\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\hat{B} | a_i \rangle = c_{ik} | a_k \rangle  \ ,\]</div>
+<p class="sd-card-text">for <span class="math notranslate nohighlight">\(\forall i\)</span>.</p>
+<p class="sd-card-text">…</p>
+</li>
+</ul>
+<!--
+   If $\langle a_i | a_k \rangle = \delta_{ik}$,
+
+   $$c_{il} = \langle a_l | c_{ik} | a_k \rangle = \langle a_l | \hat{B} | a_i \rangle = \frac{1}{a} \langle a_l | \hat{B} | \hat{A} | a_i \rangle$$
+-->
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Relation between <span class="math notranslate nohighlight">\(\ \hat{L}_z\ \)</span> and $\ \hat{L}^2 $<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2\]</div>
+<p class="sd-card-text">As <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> commutes with the Cartesian components <span class="math notranslate nohighlight">\(\hat{L}_a\)</span>, they share the same eigenvalues.The same holds for <span class="math notranslate nohighlight">\(\hat{L}_a^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2  \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">implies</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \hat{L}^2 - \hat{L}_z^2 = \hat{L}_x^2 + \hat{L}_y^2  \ .
+\end{aligned}\]</div>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\psi\)</span> an eigenstate of <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>, <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> with eigenvalues <span class="math notranslate nohighlight">\(\ell^2\)</span>, <span class="math notranslate nohighlight">\(\ell_z\)</span>, it follows</p>
+<div class="math notranslate nohighlight">
+\[\left( \hat{L}_x^2 + \hat{L}_y^2 \right) \psi = \left( \hat{L}^2 - \hat{L}_z^2 \right) \psi = \left( \ell^2 - \ell_z^2 \right) \psi\]</div>
+<p class="sd-card-text">As <span class="math notranslate nohighlight">\(( \ell^2 -  \ell_z^2 ) | \psi |^2 = \psi^* \hat{L}^2_x \psi = | \hat{L}_x \psi |^2 \ge 0\)</span>, it follows that <span class="math notranslate nohighlight">\(\ell^2 - \ell^2_z \ge 0\)</span>, and thus <span class="math notranslate nohighlight">\(-\ell \le \ell_z \le \ell\)</span>.</p>
+<p class="sd-card-text">Combining</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[\hat{L}_y, \hat{L}_z \right] &amp; = \hat{L}_y \hat{L}_z - \hat{L}_z \hat{L}_y = i \hbar \hat{L}_x \\
+  \left[\hat{L}_z, \hat{L}_x \right] &amp; = \hat{L}_z \hat{L}_x - \hat{L}_x \hat{L}_z = i \hbar \hat{L}_y
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">summing and subtracting <span class="math notranslate nohighlight">\(i (1)\)</span> and <span class="math notranslate nohighlight">\((2)\)</span> them</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0
+ &amp; = - \hbar \hat{L}_x \mp i \hbar \hat{L}_y - i \hat{L}_y \hat{L}_z + i \hat{L}_z \hat{L}_y \pm \hat{L}_z \hat{L}_x \mp \hat{L}_x \hat{L}_z = \\
+ &amp; = - ( \hat{L}_x \pm i \hat{L}_y ) ( \hbar \pm \hat{L}_z ) + \hat{L}_z ( i \hat{L}_y \pm \hat{L}_x ) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\hat{L}_z ( i \hat{L}_y \pm \hat{L}_x ) = ( \hat{L}_x \pm i \hat{L}_y ) ( \hbar \pm \hat{L}_z )\]</div>
+<p class="sd-card-text">or</p>
+<div class="math notranslate nohighlight">
+\[\hat{L}_z ( \hat{L}_x \pm i \hat{L}_x ) = ( \hat{L}_x \pm i \hat{L}_y ) ( \hat{L}_z \pm \hbar )\]</div>
+<p class="sd-card-text">Applying this operator to the eigenstate <span class="math notranslate nohighlight">\(\psi\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-ang-mom-ladder-application">
+<span class="eqno">(16.1)<a class="headerlink" href="#equation-eq-ang-mom-ladder-application" title="Permalink to this equation">#</a></span>\[\hat{L}_z ( \hat{L}_x \pm i \hat{L}_y ) \psi = ( \hat{L}_x \pm i \hat{L}_y ) ( \hat{L}_z \pm \hbar ) \psi = ( \ell_z \pm \hbar ) ( \hat{L}_x \pm i \hat{L}_y ) \psi\]</div>
+<p class="sd-card-text">Thus, the state functions <span class="math notranslate nohighlight">\(\psi^{\pm} = \left( \hat{L}_x \pm i \hat{L}_y \right) \psi\)</span> are eigenstates of the operator <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> with eigenvalues <span class="math notranslate nohighlight">\(\ell_z \pm \hbar\)</span>. As <span class="math notranslate nohighlight">\(\ell_z \in [ - \ell, \ell ]\)</span>, let’s call <span class="math notranslate nohighlight">\(\ell_{z,min}\)</span> and <span class="math notranslate nohighlight">\(\ell_{z,max}\)</span> the minimum and maximum values of <span class="math notranslate nohighlight">\(\ell_z\)</span>. It follows that the operator <span class="math notranslate nohighlight">\(\hat{L}^-\)</span> has the smallest eigenvalue equal to <span class="math notranslate nohighlight">\(\ell_{z,min} - \hbar\)</span> and <span class="math notranslate nohighlight">\(\hat{L}^+\)</span> has the largest eigenvalue equal to <span class="math notranslate nohighlight">\(\ell_{max,z} + \hbar\)</span>.</p>
+<p class="sd-card-text">Thus, for <span class="math notranslate nohighlight">\(\ell_{z,min}\)</span>, <span class="math notranslate nohighlight">\(\ell_z - \hbar\)</span> can’t be an eigenvalue of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, and thus the relation</p>
+<div class="math notranslate nohighlight">
+\[\hat{L}_z \left( \hat{L}_x - i \hat{L}_y \right) \psi = ( \ell_{z,min} - \hbar ) ( \hat{L}_x - i \hat{L}_y ) \psi\]</div>
+<p class="sd-card-text">implies that <span class="math notranslate nohighlight">\(( \hat{L}_x - i \hat{L}_y ) \psi\)</span> can’t be an eigenfunction of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, and thus it must be in the kernel or <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[0 = \hat{L}_z ( \hat{L}_x - i \hat{L}_y ) \psi_{\ell_z,min} = ( \hat{L}_x - i \hat{L}_y ) ( \hat{L}_z + \hbar ) \psi_{\ell_z,min} = ( \ell_{z,min} + \hbar ) ( \hat{L}_x - i \hat{L}_y ) \psi_{\ell,min}\]</div>
+<p class="sd-card-text">A similar relation holds for the largest eigenvalue</p>
+<div class="math notranslate nohighlight">
+\[0 = \hat{L}_z ( \hat{L}_x + i \hat{L}_y ) \psi_{\ell_z,max} = ( \hat{L}_x + i \hat{L}_y ) ( \hat{L}_z - \hbar ) \psi_{\ell_z,max} = ( \ell_{z,max} - \hbar ) ( \hat{L}_x + i \hat{L}_y ) \psi_{\ell,max}\]</div>
+<p class="sd-card-text">Applying <span class="math notranslate nohighlight">\(\hat{L}_x + i \hat{L}_y\)</span> to the first equation, the operator becomes</p>
+<div class="math notranslate nohighlight">
+\[( \hat{L}_x + i \hat{L}_y ) ( \hat{L}_x - i \hat{L}_y ) = \hat{L}_x^2 + \hat{L}_y^2 - i [ \hat{L}_x, \hat{L}_y ]  = \hat{L}^2 - \hat{L}_z^2 + \hbar \hat{L}_z \ .\]</div>
+<p class="sd-card-text">Applying <span class="math notranslate nohighlight">\(\hat{L}_x - i \hat{L}_y\)</span> to the second equation, the operator becomes</p>
+<div class="math notranslate nohighlight">
+\[( \hat{L}_x - i \hat{L}_y ) ( \hat{L}_x + i \hat{L}_y ) = \hat{L}_x^2 + \hat{L}_y^2 + i [ \hat{L}_x, \hat{L}_y ]  = \hat{L}^2 - \hat{L}_z^2 - \hbar \hat{L}_z \ .\]</div>
+<p class="sd-card-text">Thus, the 2 equations are, for a given value of <span class="math notranslate nohighlight">\(\ell\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = ( \ell_{z,min} + \hbar ) ( \ell^2 - \ell_{z,min}^2 + \hbar \ell_{z,min} ) \\ 
+  0 &amp; = ( \ell_{z,max} - \hbar ) ( \ell^2 - \ell_{z,max}^2 - \hbar \ell_{z,max} ) \\ 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Either <span class="math notranslate nohighlight">\(\ell_{z;min,max} = \mp \hbar\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0 &amp; = \ell^2 - \ell_{z,min}^2 + \hbar \ell_{z,min}  \\
+ 0 &amp; = \ell^2 - \ell_{z,max}^2 - \hbar \ell_{z,max} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and subtracting <span class="math notranslate nohighlight">\(0 = (\ell_{z,max} + \ell_{z,min})(\ell_{z,max} - \ell_{z,min} + \hbar )\)</span>. As the content of the second bracket is always positive, then <span class="math notranslate nohighlight">\(\ell_{z,min} = - \ell_{z,max}\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text">Following <a class="reference internal" href="#equation-eq-ang-mom-ladder-application">(16.1)</a>, if <span class="math notranslate nohighlight">\(| \psi \rangle\)</span> is the eigenvector of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> with eigenvalue <span class="math notranslate nohighlight">\(\ell_z\)</span>, the wave functions <span class="math notranslate nohighlight">\(\hat{L}^{\mp} | \psi \rangle\)</span> are eigenvectors of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> with eigenvalues <span class="math notranslate nohighlight">\(\ell_z \mp \hbar\)</span>. Thus, the set</p>
+<div class="math notranslate nohighlight">
+\[\{ \ell_{z,min}, \ell_{z,min} + \hbar, \ell_{z,min} + 2 \hbar, \dots, \ell_{z,max}-\hbar, \ell_{z,max} \} = \{ - m_{l,max} \hbar, \dots , m_{l,max} \hbar \} \]</div>
+<p class="sd-card-text">contains possible values of the eigenvalues of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>.</p>
+<hr class="docutils" />
+<div class="math notranslate nohighlight">
+\[\lambda\left(L_z\right) = \hbar m_l \qquad m_l \in \]</div>
+<p class="sd-card-text">Now, for <span class="math notranslate nohighlight">\(\ell_{z,min} = -m_{l,max} \hbar\)</span>, and <span class="math notranslate nohighlight">\(\ell_{z,max} = m_{l,max} \hbar\)</span>, the corresponding eigenvalues <span class="math notranslate nohighlight">\(\ell^2\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \ell^2 = \hbar^2 m_{l,max} \left( m_{l,max} + 1 \right) \ .
+\end{aligned}\]</div>
+<!--
+
+From the composition,
+
+$$( \hat{L}_x + i \hat{L}_y ) ( \hat{L}_x - i \hat{L}_y ) =$$
+
+it follows that this tha operator $\hat{L}^+ \hat{L}^-$ has eigenvalues $\ell^2 - \ell_z^2 + \hbar \ell_z = \ell^2 - \ell_z ( \ell_z - \hbar )$.
+
+Putting together the relations about the eigenvalues of the operators 
+
+$$\ell_z^2 - \hbar^2 = \ell^2 - \ell_z^2 + \ell_z \hbar \ .$$
+
+-->
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/quantum-mechanics/angular-momentum"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../angular-momentum.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>Angular Momentum</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="angular-momentum-spin.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">16.2. </span>Spin</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenproblem-of-angular-momentum-operators">16.1.1. Eigenproblem of angular momentum operators</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

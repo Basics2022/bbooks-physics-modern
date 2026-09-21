@@ -416,11 +416,12 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">13.3.5. Matrix Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">13.3.5.1. Attualization of 1925 papers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">13.3.5. Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">13.3.6. Matrix Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">13.3.6.1. Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">13.3.6. Heisenberg Uncertainty relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">13.3.7. Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">13.4. Many-body problem</a></li>
@@ -803,10 +804,24 @@ Hamiltonian Mechanics<div class="sd-summary-down docutils">
 </div>
 </div>
 </div>
+<div class="section" id="operators">
+<h3><span class="section-number">13.3.5. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this heading">#</a></h3>
+<p>Commuting operators, <span class="math notranslate nohighlight">\(0 = [ \hat{A}, \hat{B} ] = \hat{A} \hat{B} - \hat{B} \hat{A}\)</span>. Their eigenvalue problems read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{A} | a \rangle &amp; = a | a \rangle \\
+  \hat{B} | b \rangle &amp; = b | b \rangle \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  a \hat{B} | a \rangle = \hat{B} \hat{A} | a \rangle = \hat{A} \left( \hat{B} | a \rangle \right) \\
+\end{split}\]</div>
+<p>Thus the state <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> is an eigenstate of <span class="math notranslate nohighlight">\(\hat{A}\)</span>, with the same eigenvalue <span class="math notranslate nohighlight">\(a\)</span>. If the eigenvalue is non-degenerate, this eigenstate must be proportional to the original eigenstate, and thus <span class="math notranslate nohighlight">\(\hat{B} | a \rangle = b | a \rangle\)</span>. If the eigenvalue is degenerate, the state <span class="math notranslate nohighlight">\(\hat{B} | a \rangle\)</span> can be a linear combination of all the eigenstates <span class="math notranslate nohighlight">\(| a_i \rangle\)</span> with eigenvalue <span class="math notranslate nohighlight">\(a_i = a\)</span>.</p>
+</div>
 <div class="section" id="matrix-mechanics">
-<h3><span class="section-number">13.3.5. </span>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">13.3.6. </span>Matrix Mechanics<a class="headerlink" href="#matrix-mechanics" title="Permalink to this heading">#</a></h3>
 <div class="section" id="attualization-of-1925-papers">
-<h4><span class="section-number">13.3.5.1. </span>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">13.3.6.1. </span>Attualization of 1925 papers<a class="headerlink" href="#attualization-of-1925-papers" title="Permalink to this heading">#</a></h4>
 <!--
 $$|\Psi\rangle = \sum_k | \Psi_k \rangle c_{k,0}\exp\left[-i \frac{E_k}{\hbar} t \right]$$
 
@@ -847,7 +862,7 @@ $$\langle \Psi | \hat{\mathbf{P}} | \Psi \rangle$$
 </div>
 </div>
 <div class="section" id="heisenberg-uncertainty-relation">
-<span id="quantum-mechanics-heisenber-uncertainty-relation"></span><h3><span class="section-number">13.3.6. </span>Heisenberg Uncertainty relation<a class="headerlink" href="#heisenberg-uncertainty-relation" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-heisenber-uncertainty-relation"></span><h3><span class="section-number">13.3.7. </span>Heisenberg Uncertainty relation<a class="headerlink" href="#heisenberg-uncertainty-relation" title="Permalink to this heading">#</a></h3>
 <p>Uncertainty principle is a relation that holds for “wave descriptions” as it can be proved in the generic framework of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html">Fourier transform</a>, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/complex/fourier-transform.html#uncertainty-relation">Fourier transform:Uncertainty relation</a>.</p>
 <ul class="simple">
 <li><p>Heisenberg uncertainty relation is a relation between product of the variance of two physical quantities and their commutator,</p></li>
@@ -977,11 +992,12 @@ $$|z| = \frac{\text{re}\{z\} + \text{re}\{z^*\}}{2} = \frac{\text{im}\{z\} - \te
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">13.3.5. Matrix Mechanics</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">13.3.5.1. Attualization of 1925 papers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">13.3.5. Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-mechanics">13.3.6. Matrix Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#attualization-of-1925-papers">13.3.6.1. Attualization of 1925 papers</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">13.3.6. Heisenberg Uncertainty relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-uncertainty-relation">13.3.7. Heisenberg Uncertainty relation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-problem">13.4. Many-body problem</a></li>
