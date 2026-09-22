@@ -53,7 +53,7 @@ sphinx:
       use_issues_button: True
       launch_buttons:
         colab_url: "https://colab.research.google.com"    # colab
-    html_favicon: favicon-color.svg
+    html_favicon: favicon.svg
     # bibtex_bibfiles: [ "bibliography.bib" ]
     html_js_files:
       - https://cdn.plot.ly/plotly-latest.min.js
