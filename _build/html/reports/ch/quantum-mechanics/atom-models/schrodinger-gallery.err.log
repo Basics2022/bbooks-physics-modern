@@ -15,21 +15,66 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-#> Libraries
-import numpy as np
-import plotly.graph_objects as go
-from scipy.special import eval_genlaguerre, sph_harm, factorial
+nmin, nmax = 1, 4
+
+for n in range(1, nmax + 1):
+    for ell in range(0, n):
+        ml_vals = np.arange(0, ell + 1)
+        num_m = len(ml_vals) * 2 - 1
+
+        idx = 1
+
+        # Create 1 row with (2*ell + 1) 3D subplots
+        fig = go.Figure()
+        subplot_titles = num_m * [""]
+        subplot_titles[0] = f"m = 0"
+        if ( ell > 0 ):
+            subplot_titles[1::2] = [f"m = {ml}" for ml in ml_vals[1:]]
+        
+        fig = make_subplots(
+            rows=1,
+            cols=num_m,
+            subplot_titles=subplot_titles,
+            specs=[[{"type": "scene"} for _ in range(num_m)]]
+        )
+
+        for ml in ml_vals:
+            # Compute/get traces for this specific orbital
+            # Assuming your helper function can return traces or a figure
+            sub_figs = plot_real_orbitals(
+                n=n, l=ell, m=ml, iso_val=0.0001 if m
+            )
+
+            # Add all 3D traces from sub_fig into the corresponding grid cell
+            # print(sub_figs)
+            for sub_fig in sub_figs:
+                for trace in sub_fig.data:
+                    fig.add_trace(trace, row=1, col=idx)
+                    idx += 1
+
+        # Update layout title and dimensions
+        fig.update_layout(
+            title_text=f"Real Orbitals for n = {n}, ℓ = {ell}",
+            height=450,
+            width=450 * num_m,
+            showlegend=False
+        )
+
+        # 1. Force a unique filename for every (n, l) pair so they don't overwrite each other
+        unique_id = f"real_orbital_n{n}_l{ell}"
+        
+        # 2. Render explicitly using display() in each iteration
+        # Passing a unique div_id prevents Plotly JS from overriding previous DOM containers
+        html_str = pio.to_html(fig, include_plotlyjs='cdn', full_html=False, div_id=unique_id)
+        display(HTML(html_str))
+
 
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mImportError[39m                               Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 4[39m
-[32m      1[39m [38;5;66;03m#> Libraries[39;00m
-[32m      2[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      3[39m [38;5;28;01mimport[39;00m plotly.graph_objects [38;5;28;01mas[39;00m go
-[32m----> [39m[32m4[39m [38;5;28;01mfrom[39;00m scipy.special [38;5;28;01mimport[39;00m eval_genlaguerre, sph_harm, factorial
+  [36mCell[39m[36m [39m[32mIn[14][39m[32m, line 28[39m
+[31m    [39m[31mn=n, l=ell, m=ml, iso_val=0.0001 if m[39m
+                              ^
+[31mSyntaxError[39m[31m:[39m expected 'else' after 'if' expression
 
-[31mImportError[39m: cannot import name 'sph_harm' from 'scipy.special' (/home/davide/.local/lib/python3.11/site-packages/scipy/special/__init__.py)
 
