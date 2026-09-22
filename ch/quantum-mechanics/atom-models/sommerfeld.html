@@ -56,6 +56,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -65,7 +66,6 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/atom-models/sommerfeld';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="20.5. Schrodinger model" href="schrodinger.html" />
@@ -212,10 +212,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../angular-momentum.html">16. Angular momentum</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../history/topics.html">19.1. Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../history/timeline.html">19.2. Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../history/light-dispersion.html">19.3. Light dispersion</a></li>
@@ -223,12 +228,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../history/larmor-formula.html">19.5. Ratiation of moving charges</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../atom-models.html">20. Atomic models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../atom-models.html">20. Atomic models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="thomson.html">20.1. Thomson model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rutherford.html">20.2. Rutherford model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bohr.html">20.3. Bohr model</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">20.4. Sommerfeld model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schrodinger.html">20.5. Schrodinger model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="schrodinger.html">20.5. Schrodinger model</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-analytical-sln.html">20.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-gallery.html">20.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger-notes.html">20.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -236,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">21. Introduction to Solid State Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">22. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">23.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">23.2. Semiconductors in Equilibrium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">23.3. Carrier Transport Phenomena</a></li>
@@ -286,6 +296,70 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/edit/master/ch/quantum-mechanics/atom-models/sommerfeld.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/issues/new?title=Issue%20on%20page%20%2Fch/quantum-mechanics/atom-models/sommerfeld.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 

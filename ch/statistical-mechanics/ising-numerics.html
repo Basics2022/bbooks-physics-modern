@@ -56,6 +56,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -67,7 +68,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/statistical-mechanics/ising-numerics';</script>
-    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="12. Entropy and arrow of time" href="entropy.html" />
@@ -189,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
 </ul>
 </li>
 </ul>
@@ -212,24 +213,48 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">13. Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">14. Quantum Mechanics - Notes</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/history.html">15. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/topics.html">15.1. Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/timeline.html">15.2. Timeline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/light-dispersion.html">15.3. Light dispersion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/history.html">19. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/topics.html">19.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/timeline.html">19.2. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/light-dispersion.html">19.3. Light dispersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/einstein-planck.html">19.4. Light matter interaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/larmor-formula.html">19.5. Ratiation of moving charges</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/atom-models.html">20. Atomic models</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/thomson.html">20.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/rutherford.html">20.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/bohr.html">20.3. Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/sommerfeld.html">20.4. Sommerfeld model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger.html">20.5. Schrodinger model</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-analytical-sln.html">20.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-gallery.html">20.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-notes.html">20.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">16. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">17. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">18. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">18.1. Introduction to the QM of Solids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">18.2. Semiconductors in Equilibrium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">18.3. Carrier Transport Phenomena</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">18.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">18.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">18.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">21. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">22. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">23. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">23.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">23.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">23.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">23.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">23.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">23.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
 </ul>
 </li>
 </ul>
@@ -273,6 +298,101 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Basics2022/bbooks-physics-modern/blob/master/ch/statistical-mechanics/ising-numerics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/edit/master/ch/statistical-mechanics/ising-numerics.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/issues/new?title=Issue%20on%20page%20%2Fch/statistical-mechanics/ising-numerics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -560,9 +680,44 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lattice dimensions: 32,32
 Initial conditions:
-Energy       : -32.0
-N. of spin up: 528
-Magnetization: 32
+Energy       : -28.0
+N. of spin up: 496
+Magnetization: -32
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Magnetization: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">isi</span><span class="o">.</span><span class="n">state</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1">#&gt; Run Metropolis-Hastings algorithm</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">Es</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">states</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">metropolis_hastings_run</span><span class="p">(</span><span class="n">n_steps</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">),</span> <span class="n">output_states</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">Cell In[2], line 79,</span> in <span class="ni">IsingLattice.metropolis_hastings_run</span><span class="nt">(self, n_steps, output_states)</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="c1">#&gt; Update output arrays</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span> <span class="n">Es</span> <span class="o">+=</span> <span class="p">[</span> <span class="n">E</span> <span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">79</span> <span class="n">Ms</span> <span class="o">+=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_total_magnetization</span><span class="p">()</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="k">if</span> <span class="n">output_states</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="n">states</span> <span class="o">+=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="p">]</span>   <span class="c1"># &lt;-- ! Memory. Add some sampling period, </span>
+
+<span class="nn">Cell In[2], line 56,</span> in <span class="ni">IsingLattice.compute_total_magnetization</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="k">def</span> <span class="nf">compute_total_magnetization</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;  &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">56</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">isi</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>
+
+<span class="nn">File &lt;__array_function__ internals&gt;:200,</span> in <span class="ni">sum</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">File ~/.local/lib/python3.8/site-packages/numpy/core/fromnumeric.py:2324,</span> in <span class="ni">sum</span><span class="nt">(a, axis, dtype, out, keepdims, initial, where)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2321</span>         <span class="k">return</span> <span class="n">out</span>
+<span class="g g-Whitespace">   </span><span class="mi">2322</span>     <span class="k">return</span> <span class="n">res</span>
+<span class="ne">-&gt; </span><span class="mi">2324</span> <span class="k">return</span> <span class="n">_wrapreduction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2325</span>                       <span class="n">initial</span><span class="o">=</span><span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">where</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.8/site-packages/numpy/core/fromnumeric.py:86,</span> in <span class="ni">_wrapreduction</span><span class="nt">(obj, ufunc, method, axis, dtype, out, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>             <span class="k">return</span> <span class="n">reduction</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span> <span class="o">**</span><span class="n">passkwargs</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">86</span> <span class="k">return</span> <span class="n">ufunc</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="o">**</span><span class="n">passkwargs</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -615,8 +770,8 @@ Magnetization: 32
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4.png" src="../../_images/dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4.png" />
-<img alt="../../_images/b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b.png" src="../../_images/b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b.png" />
+<img alt="../../_images/9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b.png" src="../../_images/9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b.png" />
+<img alt="../../_images/62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002.png" src="../../_images/62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -670,8 +825,8 @@ Magnetization: 32
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;P(M)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe.png" src="../../_images/e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe.png" />
-<img alt="../../_images/f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7.png" src="../../_images/f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7.png" />
+<img alt="../../_images/7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a.png" src="../../_images/7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a.png" />
+<img alt="../../_images/4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83.png" src="../../_images/4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83.png" />
 </div>
 </div>
 <div class="cell docutils container">
