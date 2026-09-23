@@ -47,30 +47,30 @@ To derive closed-form analytical expressions for the electrostatics and current-
 ### Zero Bias (Thermal Equilibrium)
 By applying the depletion approximation, the net space-charge density $\rho(x)$ is treated as piecewise constant:
 
-$$\rho(x) = \begin{cases} 
+$$\rho(x) = \left\{ \begin{aligned} 
   0 & x \lt x_p \\
  -q N_A & x_p \le x < 0 \\
   q N_D & 0 \le x \le x_n \\
   0 & x \gt x_n \ .
-\end{cases}$$
+\end{aligned} \right.$$
 
 Integrating Gauss' law, $\partial_x e(x) = \frac{\rho(x)}{\varepsilon}$, with the assumption of electrical neutrality, $0 = q (N_A x_p + N_D x_n)$, and zero field outside the interface,
 
-$$e(x) = \begin{cases}
+$$e(x) = \left\{ \begin{aligned}
   0 & x \lt x_p \\
   -\frac{q N_A}{\varepsilon} \left( x - x_p \right) & x_p \le x < 0 \\
    \frac{q N_D}{\varepsilon} \left( x - x_n \right) & 0 \le x \le x_n \\
   0 & x \gt x_n \ .
-\end{cases}$$
+\end{aligned} \right.$$
 
 Integrating the relation between the electric field and the electric potential, $e(x) = - \partial_x \phi(x)$, with the reference $\phi(x) = 0$ in the $p$-bulk, $x < x_p$,
 
-$$\phi(x) = \begin{cases}
+$$\phi(x) = \left\{ \begin{aligned}
   0 & x \lt x_p \\
   \frac{q N_A}{2 \varepsilon} \left( x - x_p \right)^2 & x_p \le x < 0 \\
   \frac{q N_D}{2 \varepsilon} \left( x - x_n  \right)^2 + \frac{q N_A}{2 \varepsilon} x_p^2 - \frac{q N_D}{2 \varepsilon} x_n^2 & 0 \le x \le x_n \\
   \frac{q}{2 \varepsilon} \left( N_A x_p^2 - N_D x_n^2 \right) =: V_{bi} & x \gt x_n \ .
-\end{cases}$$
+\end{aligned} \right.$$
 
 Global charge neutrality requires $-N_A x_p = N_D x_n$, yielding the equilibrium depletion width $W_0$:
 

@@ -64,6 +64,8 @@ parts:
     - file: ch/quantum-mechanics/atom-models/rutherford
     - file: ch/quantum-mechanics/atom-models/bohr
     - file: ch/quantum-mechanics/atom-models/sommerfeld
+      sections:
+      - file: ch/quantum-mechanics/atom-models/analytical-mechanics-short
     - file: ch/quantum-mechanics/atom-models/schrodinger
       sections:
       - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln

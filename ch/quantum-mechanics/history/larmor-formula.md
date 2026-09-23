@@ -1,5 +1,5 @@
 (moving-charge-radiation)=
-# Ratiation of moving charges
+# Radiation of moving charges - Larmor's formula
 
 (moving-charge-radiation:lienard-wiechert)=
 ## Green's function solution of wave equations: Liénard-Wiechert potential

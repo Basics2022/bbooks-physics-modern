@@ -45,7 +45,7 @@ $$\begin{aligned}
 
 Comparing with Planck's law (with the **radiance**?) $\rho(\nu, T) = \frac{2 h \nu^3}{c^3} \frac{1}{\exp(h \nu /kT) - 1}$, the relations between Einstein coefficients $(E_j > E_i)$ follows
 
-$$\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .$$
+$$\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .$$ (eq:einstein-coeffs:relations)
 
 ```{dropdown} Planck's law
 :open:

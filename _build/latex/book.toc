@@ -138,43 +138,49 @@
 \contentsline {section}{\numberline {20.5}Schrodinger model}{130}{section.20.5}%
 \contentsline {subsection}{\numberline {20.5.1}Schrodinger model \sphinxhyphen {} Mathematical details of the analytical solution}{131}{subsection.20.5.1}%
 \contentsline {subsection}{\numberline {20.5.2}Schrodinger model \sphinxhyphen {} Gallery}{136}{subsection.20.5.2}%
-\contentsline {subsection}{\numberline {20.5.3}Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom}{136}{subsection.20.5.3}%
-\contentsline {subsubsection}{Hamiltonian \& Basic Definitions}{136}{subsubsection*.36}%
-\contentsline {subsubsection}{Canonical Commutation Relations (CCR)}{137}{subsubsection*.37}%
-\contentsline {subsubsection}{Commutators of Angular Momentum with Position and Momentum}{137}{subsubsection*.38}%
-\contentsline {paragraph}{Commutator \([r_a, L_b]\)}{137}{paragraph*.39}%
-\contentsline {paragraph}{Commutator \([p_a, L_b]\)}{138}{paragraph*.40}%
-\contentsline {paragraph}{Commutator \([\hat {p}^2, L_b]\)}{138}{paragraph*.41}%
-\contentsline {subsubsection}{Commutator of Coulomb Potential \(\hat {V}\) with Angular Momentum \(\hat {L}_b\)}{139}{subsubsection*.42}%
-\contentsline {part}{V\hspace {1em}Solid State Physics}{141}{part.5}%
-\contentsline {chapter}{\numberline {21}Introduction to Solid State Physics}{143}{chapter.21}%
-\contentsline {chapter}{\numberline {22}Notes about Solid State Physics}{145}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Crystals}{145}{section.22.1}%
-\contentsline {subsection}{\numberline {22.1.1}Bloch’s theorem}{145}{subsection.22.1.1}%
-\contentsline {chapter}{\numberline {23}Introduction to Semiconductors}{147}{chapter.23}%
-\contentsline {section}{\numberline {23.1}Introduction to the QM of Solids}{147}{section.23.1}%
-\contentsline {subsection}{\numberline {23.1.1}Energy bands}{147}{subsection.23.1.1}%
-\contentsline {subsubsection}{Energy level splitting}{147}{subsubsection*.43}%
-\contentsline {subsubsection}{Kronig\sphinxhyphen {}Penny model}{149}{subsubsection*.44}%
-\contentsline {subsubsection}{Nearly free electron model}{149}{subsubsection*.46}%
-\contentsline {section}{\numberline {23.2}Semiconductors in Equilibrium}{150}{section.23.2}%
-\contentsline {subsection}{\numberline {23.2.1}Structure of a semi\sphinxhyphen {}semiconductor}{150}{subsection.23.2.1}%
-\contentsline {subsubsection}{Intrinsic semiconductor}{150}{subsubsection*.47}%
-\contentsline {subsubsection}{Doped semiconductors}{150}{subsubsection*.48}%
-\contentsline {paragraph}{\(p\)\sphinxhyphen {}type}{150}{paragraph*.49}%
-\contentsline {paragraph}{\(n\)\sphinxhyphen {}type}{150}{paragraph*.50}%
-\contentsline {paragraph}{Full ionization}{151}{paragraph*.51}%
-\contentsline {subsection}{\numberline {23.2.2}Electric charge density}{151}{subsection.23.2.2}%
-\contentsline {section}{\numberline {23.3}Carrier Transport Phenomena}{151}{section.23.3}%
-\contentsline {subsection}{\numberline {23.3.1}Currents in semiconductors}{151}{subsection.23.3.1}%
-\contentsline {subsection}{\numberline {23.3.2}Einstein relation}{152}{subsection.23.3.2}%
-\contentsline {subsection}{\numberline {23.3.3}Balance equations}{153}{subsection.23.3.3}%
-\contentsline {section}{\numberline {23.4}Non\sphinxhyphen {}equilibrium Excess Carriers in Semiconductors}{153}{section.23.4}%
-\contentsline {section}{\numberline {23.5}\(p\)\sphinxhyphen {}\(n\) Junctions}{153}{section.23.5}%
-\contentsline {subsection}{\numberline {23.5.1}Introduction to the pn Junction and its Operational Regimes}{153}{subsection.23.5.1}%
-\contentsline {subsection}{\numberline {23.5.2}The Depletion Approximation and Shockley Transport}{154}{subsection.23.5.2}%
-\contentsline {subsubsection}{Zero Bias (Thermal Equilibrium)}{154}{subsubsection*.52}%
-\contentsline {subsubsection}{Forward Bias Under Shockley Assumptions}{156}{subsubsection*.53}%
-\contentsline {subsection}{\numberline {23.5.3}Advanced Description: Quasi\sphinxhyphen {}Fermi Levels and Non\sphinxhyphen {}Equilibrium Transport}{158}{subsection.23.5.3}%
-\contentsline {section}{\numberline {23.6}\(p\)\sphinxhyphen {}\(n\) Diodes}{158}{section.23.6}%
-\contentsline {chapter}{Proof Index}{159}{section*.56}%
+\contentsline {subsubsection}{Stationary states}{136}{subsubsection*.36}%
+\contentsline {subsubsection}{Real orbitals}{137}{subsubsection*.37}%
+\contentsline {subsubsection}{Some details}{138}{subsubsection*.38}%
+\contentsline {paragraph}{Radial and spherical factors}{138}{paragraph*.39}%
+\contentsline {subparagraph}{Radial wavefunctions, \(R_{n, \ell }(r)\)}{138}{subparagraph*.40}%
+\contentsline {subparagraph}{Polar and azimuthal wavefunctions, \(Y^{m_\ell }_{\ell }(\mittheta ,\mitphi ) = \mitTheta _{\ell , m_\ell }(\mittheta ) \mitPhi _{m_\ell }(\mitphi )\)}{138}{subparagraph*.41}%
+\contentsline {subsection}{\numberline {20.5.3}Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom}{139}{subsection.20.5.3}%
+\contentsline {subsubsection}{Hamiltonian \& Basic Definitions}{139}{subsubsection*.42}%
+\contentsline {subsubsection}{Canonical Commutation Relations (CCR)}{140}{subsubsection*.43}%
+\contentsline {subsubsection}{Commutators of Angular Momentum with Position and Momentum}{140}{subsubsection*.44}%
+\contentsline {paragraph}{Commutator \([r_a, L_b]\)}{140}{paragraph*.45}%
+\contentsline {paragraph}{Commutator \([p_a, L_b]\)}{141}{paragraph*.46}%
+\contentsline {paragraph}{Commutator \([\hat {p}^2, L_b]\)}{141}{paragraph*.47}%
+\contentsline {subsubsection}{Commutator of Coulomb Potential \(\hat {V}\) with Angular Momentum \(\hat {L}_b\)}{142}{subsubsection*.48}%
+\contentsline {part}{V\hspace {1em}Solid State Physics}{143}{part.5}%
+\contentsline {chapter}{\numberline {21}Introduction to Solid State Physics}{145}{chapter.21}%
+\contentsline {chapter}{\numberline {22}Notes about Solid State Physics}{147}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Crystals}{147}{section.22.1}%
+\contentsline {subsection}{\numberline {22.1.1}Bloch’s theorem}{147}{subsection.22.1.1}%
+\contentsline {chapter}{\numberline {23}Introduction to Semiconductors}{149}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Introduction to the QM of Solids}{149}{section.23.1}%
+\contentsline {subsection}{\numberline {23.1.1}Energy bands}{149}{subsection.23.1.1}%
+\contentsline {subsubsection}{Energy level splitting}{149}{subsubsection*.49}%
+\contentsline {subsubsection}{Kronig\sphinxhyphen {}Penny model}{151}{subsubsection*.50}%
+\contentsline {subsubsection}{Nearly free electron model}{151}{subsubsection*.52}%
+\contentsline {section}{\numberline {23.2}Semiconductors in Equilibrium}{152}{section.23.2}%
+\contentsline {subsection}{\numberline {23.2.1}Structure of a semi\sphinxhyphen {}semiconductor}{152}{subsection.23.2.1}%
+\contentsline {subsubsection}{Intrinsic semiconductor}{152}{subsubsection*.53}%
+\contentsline {subsubsection}{Doped semiconductors}{152}{subsubsection*.54}%
+\contentsline {paragraph}{\(p\)\sphinxhyphen {}type}{152}{paragraph*.55}%
+\contentsline {paragraph}{\(n\)\sphinxhyphen {}type}{152}{paragraph*.56}%
+\contentsline {paragraph}{Full ionization}{153}{paragraph*.57}%
+\contentsline {subsection}{\numberline {23.2.2}Electric charge density}{153}{subsection.23.2.2}%
+\contentsline {section}{\numberline {23.3}Carrier Transport Phenomena}{153}{section.23.3}%
+\contentsline {subsection}{\numberline {23.3.1}Currents in semiconductors}{153}{subsection.23.3.1}%
+\contentsline {subsection}{\numberline {23.3.2}Einstein relation}{154}{subsection.23.3.2}%
+\contentsline {subsection}{\numberline {23.3.3}Balance equations}{155}{subsection.23.3.3}%
+\contentsline {section}{\numberline {23.4}Non\sphinxhyphen {}equilibrium Excess Carriers in Semiconductors}{155}{section.23.4}%
+\contentsline {section}{\numberline {23.5}\(p\)\sphinxhyphen {}\(n\) Junctions}{155}{section.23.5}%
+\contentsline {subsection}{\numberline {23.5.1}Introduction to the pn Junction and its Operational Regimes}{155}{subsection.23.5.1}%
+\contentsline {subsection}{\numberline {23.5.2}The Depletion Approximation and Shockley Transport}{156}{subsection.23.5.2}%
+\contentsline {subsubsection}{Zero Bias (Thermal Equilibrium)}{156}{subsubsection*.58}%
+\contentsline {subsubsection}{Forward Bias Under Shockley Assumptions}{158}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {23.5.3}Advanced Description: Quasi\sphinxhyphen {}Fermi Levels and Non\sphinxhyphen {}Equilibrium Transport}{160}{subsection.23.5.3}%
+\contentsline {section}{\numberline {23.6}\(p\)\sphinxhyphen {}\(n\) Diodes}{160}{section.23.6}%
+\contentsline {chapter}{Proof Index}{161}{section*.62}%

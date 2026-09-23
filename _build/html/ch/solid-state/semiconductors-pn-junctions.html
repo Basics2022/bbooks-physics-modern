@@ -564,28 +564,28 @@ document.write(`
 <span id="semiconductors-pn-junctions-depletion-approximation-zero-bias"></span><h3><span class="section-number">23.5.2.1. </span>Zero Bias (Thermal Equilibrium)<a class="headerlink" href="#zero-bias-thermal-equilibrium" title="Permalink to this heading">#</a></h3>
 <p>By applying the depletion approximation, the net space-charge density <span class="math notranslate nohighlight">\(\rho(x)\)</span> is treated as piecewise constant:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\rho(x) = \begin{cases} 
+\[\begin{split}\rho(x) = \left\{ \begin{aligned} 
   0 &amp; x \lt x_p \\
  -q N_A &amp; x_p \le x &lt; 0 \\
   q N_D &amp; 0 \le x \le x_n \\
   0 &amp; x \gt x_n \ .
-\end{cases}\end{split}\]</div>
+\end{aligned} \right.\end{split}\]</div>
 <p>Integrating Gauss’ law, <span class="math notranslate nohighlight">\(\partial_x e(x) = \frac{\rho(x)}{\varepsilon}\)</span>, with the assumption of electrical neutrality, <span class="math notranslate nohighlight">\(0 = q (N_A x_p + N_D x_n)\)</span>, and zero field outside the interface,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}e(x) = \begin{cases}
+\[\begin{split}e(x) = \left\{ \begin{aligned}
   0 &amp; x \lt x_p \\
   -\frac{q N_A}{\varepsilon} \left( x - x_p \right) &amp; x_p \le x &lt; 0 \\
    \frac{q N_D}{\varepsilon} \left( x - x_n \right) &amp; 0 \le x \le x_n \\
   0 &amp; x \gt x_n \ .
-\end{cases}\end{split}\]</div>
+\end{aligned} \right.\end{split}\]</div>
 <p>Integrating the relation between the electric field and the electric potential, <span class="math notranslate nohighlight">\(e(x) = - \partial_x \phi(x)\)</span>, with the reference <span class="math notranslate nohighlight">\(\phi(x) = 0\)</span> in the <span class="math notranslate nohighlight">\(p\)</span>-bulk, <span class="math notranslate nohighlight">\(x &lt; x_p\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\phi(x) = \begin{cases}
+\[\begin{split}\phi(x) = \left\{ \begin{aligned}
   0 &amp; x \lt x_p \\
   \frac{q N_A}{2 \varepsilon} \left( x - x_p \right)^2 &amp; x_p \le x &lt; 0 \\
   \frac{q N_D}{2 \varepsilon} \left( x - x_n  \right)^2 + \frac{q N_A}{2 \varepsilon} x_p^2 - \frac{q N_D}{2 \varepsilon} x_n^2 &amp; 0 \le x \le x_n \\
   \frac{q}{2 \varepsilon} \left( N_A x_p^2 - N_D x_n^2 \right) =: V_{bi} &amp; x \gt x_n \ .
-\end{cases}\end{split}\]</div>
+\end{aligned} \right.\end{split}\]</div>
 <p>Global charge neutrality requires <span class="math notranslate nohighlight">\(-N_A x_p = N_D x_n\)</span>, yielding the equilibrium depletion width <span class="math notranslate nohighlight">\(W_0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[W_0 = x_p + x_n = \sqrt{\frac{2\varepsilon_s V_{bi}}{q} \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}\]</div>

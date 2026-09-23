@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Sep 21, 2026}
+\date{Sep 22, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -3000,7 +3000,7 @@ while \sphinxstylestrong{not} terminal condition:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-flip the spin of a randomly chosen site, to get the possible state \(s_\widetilde{n}\)
+flip the spin of a randomly chosen site, to get the possible state \(s_{\widetilde{n}}\)
 
 \item {} 
 \sphinxAtStartPar
@@ -3404,9 +3404,29 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : \PYGZhy{}32.0
-N. of spin up: 528
-Magnetization: 32
+Energy       : \PYGZhy{}16.0
+N. of spin up: 493
+Magnetization: \PYGZhy{}38
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{KeyboardInterrupt}\PYG{g+gWhitespace}{                         }Traceback (most recent call last)
+\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{18}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{15} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Magnetization: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{17} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Run Metropolis\PYGZhy{}Hastings algorithm}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{18} \PYG{n}{Es}\PYG{p}{,} \PYG{n}{Ms}\PYG{p}{,} \PYG{n}{states} \PYG{o}{=} \PYG{n}{isi}\PYG{o}{.}\PYG{n}{metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{p}{(}\PYG{n}{n\PYGZus{}steps}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}\PYG{p}{,} \PYG{n}{output\PYGZus{}states}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{n+nn}{Cell In[2], line 81,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{80} \PYG{k}{if} \PYG{n}{output\PYGZus{}states}\PYG{p}{:}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{82}                                       \PYG{c+c1}{\PYGZsh{} or dumping method. Don\PYGZsq{}t store the state}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{83}                                       \PYG{c+c1}{\PYGZsh{} at all the timesteps.}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{84} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update step index}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{85} \PYG{n}{i\PYGZus{}step} \PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+
+\PYG{n+ne}{KeyboardInterrupt}: 
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3464,9 +3484,9 @@ Magnetization: 32
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{dd29a5abab018d984a9c60d459fa41ec98594266045ed9b68c28fbd2f60373d4}.png}
+\noindent\sphinxincludegraphics{{9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b}.png}
 
-\noindent\sphinxincludegraphics{{b2bc615dbdf873f07eb2fc5f2be00844ba4706f257ed9eaba5f19ff153cb5e8b}.png}
+\noindent\sphinxincludegraphics{{62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3530,9 +3550,9 @@ Magnetization: 32
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{e43dae34c704d768c963dbc17cb5f3e643974c0943c76163b1fb33c16ca332fe}.png}
+\noindent\sphinxincludegraphics{{7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a}.png}
 
-\noindent\sphinxincludegraphics{{f02980afc05ebbcf19d968bea8e9def5d72b82608c9e470f2f09dc34b81a62d7}.png}
+\noindent\sphinxincludegraphics{{4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6722,6 +6742,372 @@ The soutions for \(m < 0\) are defined via symmetry conditions, or Rodrigues’ 
 
 \subsection{Schrodinger model \sphinxhyphen{} Gallery}
 \label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:schrodinger-model-gallery}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery::doc}}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+
+\subsubsection{Stationary states}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:stationary-states}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-stationary-states}}\begin{equation*}
+\begin{split}\psi_{n,\ell,m_\ell}(r, \theta, \phi) = R_{n\ell}(r) \, Y_\ell^{m_\ell}(\theta, \phi)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Radial Wavefunctions, \(R_{n\ell}(r)\).} Using the dimensionless variable \(\rho = \frac{2r}{n a_0}\),
+\begin{equation*}
+\begin{split}R_{n\ell}(r) = -\sqrt{\left(\frac{2}{n a_0}\right)^3 \frac{(n-\ell-1)!}{2n [(n+\ell)!]^3}} e^{-\rho/2} \rho^\ell L_{n-\ell-1}^{2\ell+1}(\rho) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(a_0 = \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}\) is the \sphinxstylestrong{Bohr radius}, and \(L^k_p(\rho)\) the solution of the associated Laguerre equation.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Spherical Harmonics, \(Y_\ell^{m_\ell}(\theta, \phi) = \Theta_{\ell, m_{\ell}}(\theta) \Phi_{m_{\ell}}(\phi)\).}
+\begin{equation*}
+\begin{split}Y_\ell^{m_\ell}(\theta, \phi) = (-1)^{m_\ell} \sqrt{\frac{(2\ell+1)}{4\pi} \frac{(\ell-m_\ell)!}{(\ell+m_\ell)!}} P_\ell^{m_\ell}(\cos\theta) \, e^{i m_\ell \phi}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(P^{m_{\ell}}_{\ell}\) the associated Legendre polynomials. The polar functions are real\sphinxhyphen{}valued and by definition \(\Theta_{\ell,-m_\ell}(\theta) = (-1)^{m_\ell} \Theta_{\ell,m_\ell}(\theta)\).
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Spatial resolution and default parameters}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Functions}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Evaluate stationary states}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Plot functions}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Isosurface of probability density of stationary states, colored with phase}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Plot a set of stationary states}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\begin{sphinxuseclass}{tag_full-width}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+
+\subsubsection{Real orbitals}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:real-orbitals}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-real-orbitals}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZgt{} Plot a set of real orbitals}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}
+\begin{sphinxuseclass}{tag_hide-input}
+\begin{sphinxuseclass}{tag_full-width}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+\end{sphinxuseclass}
+
+\subsubsection{Some details}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:some-details}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-details}}
+\sphinxAtStartPar
+As \(\Theta_{\ell, -m_\ell} = (-1)^{m_{\ell}} \Theta_{\ell, m_\ell}\), it follows that
+\begin{equation*}
+\begin{split}\begin{cases}
+  Y_{\ell}^{m_\ell} + (-1)^{m_{ell}} Y_{\ell}^{-m_\ell}
+  = \Theta_{\ell, m_{\ell}}(\theta) \left[ e^{i m_{\ell} \phi} + e^{-i m_{\ell} \phi} \right] \propto \cos( m_{\ell} \theta ) \\
+  Y_{\ell}^{m_\ell} - (-1)^{m_{ell}} Y_{\ell}^{-m_\ell}
+  = \Theta_{\ell, m_{\ell}}(\theta) \left[ e^{i m_{\ell} \phi} - e^{-i m_{\ell} \phi} \right] \propto i \sin( m_{\ell} \theta ) \ ,
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus the real orbitals as the linear combinations
+\begin{equation*}
+\begin{split}\psi_{n,\ell,m_\ell, \text{real}} = \begin{cases}  \psi_{n,\ell,0} & \text{for } m_\ell = 0 \\ \frac{1}{\sqrt{2}} \left( \psi_{n,\ell,-\vert{}m_\ell\vert{}} + (-1)^{m_\ell} \psi_{n,\ell,\vert{}m_\ell\vert{}} \right) \propto \cos(\vert{}m_\ell\vert{}\phi) & \text{for } \text{real orbital } (x, xy, x^2-y^2, \dots) \\ \frac{i}{\sqrt{2}} \left( \psi_{n,\ell,-\vert{}m_\ell\vert{}} - (-1)^{m_\ell} \psi_{n,\ell,\vert{}m_\ell\vert{}} \right) \propto \sin(\vert{}m_\ell\vert{}\phi) & \text{for } \text{real orbital } (y, yz, \dots) \end{cases}\end{split}
+\end{equation*}
+
+\paragraph{Radial and spherical factors}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:radial-and-spherical-factors}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-r-spherical}}\begin{equation*}
+\begin{split}\psi_{n,\ell,m_\ell}(r, \theta, \phi) = R_{n\ell}(r) \, Y_\ell^{m_\ell}(\theta, \phi)\end{split}
+\end{equation*}
+
+\subparagraph{Radial wavefunctions, \protect\(R_{n, \ell}(r)\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:radial-wavefunctions-r-n-ell-r}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-r-spherical-r}}
+\sphinxAtStartPar
+\sphinxstylestrong{Radial Wavefunctions, \(R_{n\ell}(r)\).} Using the dimensionless variable \(\rho = \frac{2r}{n a_0}\),
+\begin{equation*}
+\begin{split}R_{n\ell}(r) = -\sqrt{\left(\frac{2}{n a_0}\right)^3 \frac{(n-\ell-1)!}{2n [(n+\ell)!]^3}} e^{-\rho/2} \rho^\ell L_{n-\ell-1}^{2\ell+1}(\rho) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(a_0 = \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}\) is the \sphinxstylestrong{Bohr radius}, and \(L^k_p(\rho)\) the solution of the associated Laguerre equation.
+
+
+\subparagraph{Polar and azimuthal wavefunctions, \protect\(Y^{m_\ell}_{\ell}(\theta,\phi) = \Theta_{\ell, m_\ell}(\theta) \Phi_{m_\ell}(\phi)\protect\)}
+\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:polar-and-azimuthal-wavefunctions-y-m-ell-ell-theta-phi-theta-ell-m-ell-theta-phi-m-ell-phi}}\label{\detokenize{ch/quantum-mechanics/atom-models/schrodinger-gallery:quantum-mechanics-atom-models-schrodinger-gallery-r-spherical-spherical}}\begin{equation*}
+\begin{split}Y_\ell^{m_\ell}(\theta, \phi) = (-1)^{m_\ell} \sqrt{\frac{(2\ell+1)}{4\pi} \frac{(\ell-m_\ell)!}{(\ell+m_\ell)!}} P_\ell^{m_\ell}(\cos\theta) \, e^{i m_\ell \phi}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(P^{m_{\ell}}_{\ell}\) the associated Legendre polynomials. The first associated Legendre polynomials are
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+\(\ell\)
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+\(m_\ell\)
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+\(P^{m_{\ell}}_{\ell}(x)\)
+\\
+\hline
+\sphinxAtStartPar
+\(0\)
+&
+\sphinxAtStartPar
+\(0\)
+&
+\sphinxAtStartPar
+\(1\)
+\\
+\hline
+\sphinxAtStartPar
+\(1\)
+&
+\sphinxAtStartPar
+\(1\)
+&
+\sphinxAtStartPar
+\(-(1-x^2)^{\frac{1}{2}}\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(0\)
+&
+\sphinxAtStartPar
+\(x\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(-1\)
+&
+\sphinxAtStartPar
+\(-\frac{1}{2}P_1^1(x)\)
+\\
+\hline
+\sphinxAtStartPar
+\(2\)
+&
+\sphinxAtStartPar
+\(2\)
+&
+\sphinxAtStartPar
+\(  3 ( 1 -x^2 )\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(1\)
+&
+\sphinxAtStartPar
+\(- 3 x ( 1 - x^2 )^{\frac{1}{2}}\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(0\)
+&
+\sphinxAtStartPar
+\(\frac{1}{2}( 3 x^2 - 1)\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(-1\)
+&
+\sphinxAtStartPar
+\(- \frac{1}{6} P_{2}^{1}(x)\)
+\\
+\hline
+\sphinxAtStartPar
+
+&
+\sphinxAtStartPar
+\(-2\)
+&
+\sphinxAtStartPar
+\(\frac{1}{24} P_2^2(x)\)
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
 \sphinxstepscope
 
 
@@ -8122,7 +8508,7 @@ and thus \(J_n(x) = J - J_p(x)\).
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/density\sphinxhyphen{}operator}\sphinxstyleindexpageref{ch/quantum-mechanics/density-operator:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-1}}
