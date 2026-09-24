@@ -51,9 +51,11 @@ parts:
     - file: ch/quantum-mechanics/angular-momentum/angular-momentum-total
   - file: ch/quantum-mechanics/density-operator
   - file: ch/quantum-mechanics/decoherence
+  - file: ch/quantum-mechanics/einstein-coeffs-interaction-picture
   - file: ch/quantum-mechanics/history
     sections:
     - file: ch/quantum-mechanics/history/topics
+    - file: ch/quantum-mechanics/history/origins
     - file: ch/quantum-mechanics/history/timeline
     - file: ch/quantum-mechanics/history/light-dispersion
     - file: ch/quantum-mechanics/history/einstein-planck

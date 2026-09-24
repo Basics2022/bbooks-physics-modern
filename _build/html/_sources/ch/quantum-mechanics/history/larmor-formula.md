@@ -238,8 +238,8 @@ Let's define the direction of $\mathbf{a}_{ret} = a \hat{\mathbf{t}}$, and speri
 $$\begin{aligned}
   \Phi
   & := \int_{S} \hat{\mathbf{r}} \cdot \mathbf{s} = \\
-  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta d \theta d \phi = \\
-  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta d \phi   d \theta d \phi = \\
+  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta \, d \theta \, d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta \, d \theta \, d \phi = \\
   & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \cdot \frac{4}{3} \cdot 2 \pi = \\
   & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
 \end{aligned}$$
@@ -254,16 +254,22 @@ $$\langle \Phi \rangle = \frac{q^2}{6  \pi \varepsilon c^3} \langle |\mathbf{a}|
 
 * **circular orbits**, with constant speed. Acceleration is $\mathbf{a}(t) = - R \omega^2 \hat{\mathbf{r}}(t)$, and has constan magnitude $|\mathbf{a}(t)| = \omega^2 R$
 
-```{dropdown}
+```{dropdown} Systems with $\ V(\mathbf{r}) = \dfrac{1}{2} m \omega^2 |\mathbf{r}|^2$
 :open:
 
-$$\int_{0}^{\pi} ( 1 - \cos^2 x ) \sin x d x = \left.\left[ - \cos x + \frac{\cos^3}{3} \right]\right|_{0}^{\pi} = 2 - \frac{2}{3} = \frac{4}{3} \ .$$
+$$\langle | \mathbf{a} |^2 \rangle = \dfrac{\omega^2}{m} E \ ,$$
+
+and thus
+
+$$\langle \Phi \rangle = \dfrac{q^2 \omega^2}{6 \pi \varepsilon m c^3} E =: \gamma E \ .$$ (eq:larmor:quadratic:power-energy)
+
+...**todo** Proof using virial theorem...
 
 
 ```
 
 
-```{dropdown}
+```{dropdown} Vector identities
 
 $$\varepsilon_{abc} A_b \varepsilon_{cde} B_d C_e = ( \delta_{ad} \delta_{be} - \delta_{ae} \delta_{bd} ) A_b B_d C_e = A_b B_a C_b - A_b B_b C_a = \mathbf{A} \cdot \mathbf{C} \, \mathbf{B} - \mathbf{A} \cdot \mathbf{B} \, \mathbf{C}$$
 
