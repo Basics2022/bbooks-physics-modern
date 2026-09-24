@@ -40,16 +40,16 @@ $$n^2 = ( 1 + \delta )^2 \simeq 1 + 2 \delta \ .$$
 
 ### Ladenburg
 
-Ladenburg wrote the energy balance at thermodynamical equilibrium, from transitions between each pair of states $i$, $k > i$.
+Ladenburg wrote the energy balance at thermodynamical equilibrium, from transitions between each pair of states $i$, $k > i$, using **Einstein's coefficients** from his [quantum theory of radiation interacting with matter](quantum-mehcanics:history:light-matter:einstein).
 The total amount of energy emitted by $N_k$ molecules in the state $k$ transitioning to a lower state $i$ is
 
-$$J = \underbrace{h \nu_{ik}}_{\Delta E_{ik}} N_k ( A_{ki} + B_{ki} u(\nu_{ik})$$
+$$J = \underbrace{h \nu_{ik}}_{\Delta E_{ik}} N_k \left[ A_{ki} + B_{ki} u(\nu_{ik}) \right] \ .$$
 
 At thermal equilibrium, this energy is equal to the energy absorbed by $N_i$ molecules in the state $i$,
 
 $$A = h \nu_{ik} N_i B_{ik} u(\nu_{ik}) \ .$$
 
-Exploiting the relations between Einstein coefficients ( ), Ladenburg wrote the emitted and absorbed energy as a function of the spontaneous emission foefficient $A_{ki}$ (allowing to relate dispersion with other phenomena involving emission),
+Exploiting the relations between Einstein coefficients {eq}`eq:einstein-coeffs:relations`, Ladenburg wrote the emitted and absorbed energy as a function of the spontaneous emission foefficient $A_{ki}$ (allowing to relate dispersion with other phenomena involving emission),
 
-$$J = A = h \nu_{ik} u(\nu_{ik}) N_i B_{ik} = $$
+$$J = A = h \nu_{ik} u(\nu_{ik}) N_i B_{ik} \ . $$
 

@@ -20,7 +20,7 @@ Metropolis-Hastings algorithm is designed to generate a collection of states acc
 
 - Initialize state $s_0$ with energy $E_0$
 - while **not** terminal condition:
-  - flip the spin of a randomly chosen site, to get the possible state $s_\widetilde{n}$
+  - flip the spin of a randomly chosen site, to get the possible state $s_{\widetilde{n}}$
   - calculate the change in energy of the state $\Delta \widetilde{E}_n := \widetilde{E}_n - E_{n-1}$
   - update state:
     - if $\Delta \widetilde{E}_n < 0$ accept the change, $s_n = s_{\widetilde{n}}$
