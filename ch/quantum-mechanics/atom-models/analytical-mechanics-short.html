@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -249,18 +240,19 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../analytical-mechanics.html">22. Analtycal Mechanics - Notes fo Quantum Mechanics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">22. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">23. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">24. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">24.1. Introduction to the QM of Solids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">24.2. Semiconductors in Equilibrium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">24.3. Carrier Transport Phenomena</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">24.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">24.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">24.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">23. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">24. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">25. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">25.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">25.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">25.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">25.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">25.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">25.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
 </ul>
 </li>
 </ul>
@@ -691,17 +683,25 @@ Properties of canonical transformations<div class="sd-summary-down docutils">
 <span id="analytical-mechanics-short-hamilton-jacobi-equation"></span><h2><span class="section-number">21.4.4.3. </span>The Hamilton-Jacobi Equation<a class="headerlink" href="#the-hamilton-jacobi-equation" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Hamilton-Jacobi equation and angle-action variables<div class="sd-summary-down docutils">
+Hamilton-Jacobi equation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let the canonical transformation so that the Hamiltonian function in <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> is identically zero, i.e.</p>
+<div class="math notranslate nohighlight">
+\[K(\mathbf{Q}, \mathbf{P}, t) := 0 \ .\]</div>
+<p class="sd-card-text"><strong>Remark.</strong> This is not a 1-dimensional constraint between <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{P}\)</span>. This is the expression of the function, like the function <span class="math notranslate nohighlight">\(f(x) := 0 \)</span> is a real function whose value is <span class="math notranslate nohighlight">\(0\)</span> for all the <span class="math notranslate nohighlight">\(x\)</span> of the domain. Thus, all the derivatives of the function w.r.t. the independent variables are identically zero as well,</p>
+<div class="math notranslate nohighlight">
+\[\partial_{\mathbf{Q}} K = \mathbf{0} \qquad , \qquad \partial_{\mathbf{P}} K = \mathbf{0} \qquad , \qquad \partial_t K = 0 \ .\]</div>
+<p class="sd-card-text">If these relations hold, from the Hamiltonian equations, it follows that <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> are constant in time.
+Thus,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   0
-  &amp; = K = \\
+  &amp; = K(\mathbf{Q}, \mathbf{P}, t) = \\
   &amp; = H(\mathbf{q},\mathbf{p},t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
-  &amp; = H(\mathbf{q},\partial_{\mathbf{q}} F_2,t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
+  &amp; = H(\mathbf{q}, \partial_\mathbf{q} F_2(\mathbf{q}, \mathbf{P}, t) ,t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">If <span class="math notranslate nohighlight">\(H\)</span> is not explicitly dependent on <span class="math notranslate nohighlight">\(t\)</span>, and thus the system is conservative as <span class="math notranslate nohighlight">\(d_t H = \partial_t H = 0\)</span>, it follows <span class="math notranslate nohighlight">\(H(\mathbf{q}, \mathbf{p}) = E\)</span>, constant. Hamilton-Jacobi equation thus becomes</p>
 <div class="math notranslate nohighlight">
@@ -767,7 +767,25 @@ S(\mathbf{q}, \mathbf{J}) = \sum_{i=1}^f S_i(q^i, \mathbf{J})
 </div>
 <div class="section" id="action-angle-variables">
 <h2><span class="section-number">21.4.4.4. </span>Action-Angle Variables<a class="headerlink" href="#action-angle-variables" title="Permalink to this heading">#</a></h2>
-<p>For bound, periodic systems whose Hamilton-Jacobi equations are separable, the most suitable coordinate system consists of <strong>Action-Angle Variables</strong> <span class="math notranslate nohighlight">\((\mathbf{w}, \mathbf{J})\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Anction-angle variables<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let the canonical transformation <span class="math notranslate nohighlight">\(\mathbf{w}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{J}\)</span>, so that <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is constant. From Hamilton equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} &amp; = \partial_{\mathbf{J}} K \\
+  \dot{\mathbf{J}} &amp; =-\partial_{\mathbf{w}} K = \mathbf{0} \\
+\end{aligned}
+\right.\end{split}\]</div>
+<p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(K\)</span> is a function of <span class="math notranslate nohighlight">\(\mathbf{J}, t\)</span> only, <span class="math notranslate nohighlight">\(K(\mathbf{J},t)\)</span>.</p>
+<p class="sd-card-text">…</p>
+</div>
+</details><p>For bound, periodic systems whose Hamilton-Jacobi equations are separable, the most suitable coordinate system consists of <strong>Action-Angle Variables</strong> <span class="math notranslate nohighlight">\((\mathbf{w}, \mathbf{J})\)</span>.</p>
 <div class="section" id="definition-of-action-variables">
 <h3><span class="section-number">21.4.4.4.1. </span>Definition of Action Variables<a class="headerlink" href="#definition-of-action-variables" title="Permalink to this heading">#</a></h3>
 <p>The <strong>Action Variable</strong> <span class="math notranslate nohighlight">\(J_i\)</span> associated with the <span class="math notranslate nohighlight">\(i\)</span>-th degree of freedom is defined as the line integral of momentum over one complete cycle of motion in phase space:</p>

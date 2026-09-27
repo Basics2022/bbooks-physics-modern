@@ -207,14 +207,25 @@ $$\begin{aligned}
 (analytical-mechanics-short:hamilton-jacobi-equation)=
 ## The Hamilton-Jacobi Equation
 
-```{dropdown} Hamilton-Jacobi equation and angle-action variables
+```{dropdown} Hamilton-Jacobi equation
 :open:
+
+Let the canonical transformation so that the Hamiltonian function in $\mathbf{Q}$, $\mathbf{P}$ is identically zero, i.e.
+
+$$K(\mathbf{Q}, \mathbf{P}, t) := 0 \ .$$
+
+**Remark.** This is not a 1-dimensional constraint between $\mathbf{Q}$, $\mathbf{P}$. This is the expression of the function, like the function $f(x) := 0 $ is a real function whose value is $0$ for all the $x$ of the domain. Thus, all the derivatives of the function w.r.t. the independent variables are identically zero as well,
+
+$$\partial_{\mathbf{Q}} K = \mathbf{0} \qquad , \qquad \partial_{\mathbf{P}} K = \mathbf{0} \qquad , \qquad \partial_t K = 0 \ .$$
+
+If these relations hold, from the Hamiltonian equations, it follows that $\mathbf{Q}$ and $\mathbf{P}$ are constant in time.
+Thus,
 
 $$\begin{aligned}
   0
-  & = K = \\
+  & = K(\mathbf{Q}, \mathbf{P}, t) = \\
   & = H(\mathbf{q},\mathbf{p},t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
-  & = H(\mathbf{q},\partial_{\mathbf{q}} F_2,t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
+  & = H(\mathbf{q}, \partial_\mathbf{q} F_2(\mathbf{q}, \mathbf{P}, t) ,t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
 \end{aligned}$$
 
 If $H$ is not explicitly dependent on $t$, and thus the system is conservative as $d_t H = \partial_t H = 0$, it follows $H(\mathbf{q}, \mathbf{p}) = E$, constant. Hamilton-Jacobi equation thus becomes
@@ -291,6 +302,25 @@ $$\dot{S} = \dot{q}^i \, S'_i(q_i, \mathbf{J}) = \dot{q}^i \, p_i(q^i, \mathbf{J
 
 
 ## Action-Angle Variables
+
+```{dropdown} Anction-angle variables
+:open:
+
+Let the canonical transformation $\mathbf{w}$, $\mathbf{J}$, so that $\mathbf{J}$ is constant. From Hamilton equations
+
+$$\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} & = \partial_{\mathbf{J}} K \\
+  \dot{\mathbf{J}} & =-\partial_{\mathbf{w}} K = \mathbf{0} \\
+\end{aligned}
+\right.$$
+
+and thus $K$ is a function of $\mathbf{J}, t$ only, $K(\mathbf{J},t)$.
+
+
+...
+
+```
 
 For bound, periodic systems whose Hamilton-Jacobi equations are separable, the most suitable coordinate system consists of **Action-Angle Variables** $(\mathbf{w}, \mathbf{J})$.
 
