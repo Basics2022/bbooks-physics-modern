@@ -1,5 +1,10 @@
 (quantum-mechanics:analytical-mechanics)=
-# Analtycal Mechanics - Notes fo Quantum Mechanics
+# Analtycal Mechanics - Notes for Quantum Mechanics
+
+* [Lagrange and Hamiltonian mechanics]()
+* [Canonical transformations]()
+* [Hamilton-Jacobi formulation of mechanics]()
+* [Angle-Action variables]()
 
 (quantum-mechanics:analytical-mechanics:lagrange-hamilton)=
 ## Lagrange and Hamiltonian Mechanics
@@ -9,11 +14,11 @@
 
 Equations of motion follow the principle of stationary action functional
 
-$$0 = \delta S[\mathbf{q}(t)] = \int_{t_0}^{t_1} \mathcal{L}( \mathbf{q}(t), \dot{\mathbf{q}}(t),t ) \, dt \ ,$$
+$$0 = \delta S[\mathbf{q}(t)] = \int_{t_0}^{t_1} \mathcal{L}( \mathbf{q}(t), \dot{\mathbf{q}}(t),t ) \, dt \ ,$$ (eq:analytical:stationary-action)
 
 with prescribed extreme values, so that $\delta \mathbf{q}(t_0) = \delta \mathbf{q}(t_1) = \mathbf{0}$. Here $\mathcal{L}$ is the Lagrangian function, with $\mathbf{q}(t)$ the vector of generalized coordinates, and $t$ the time. Equations of motion are the Lagrange equations
 
-$$\dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \right) - \dfrac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{0} \ .$$
+$$\dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \right) - \dfrac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{0} \ .$$ (eq:analytical:lagrange-eqns)
 
 The generalized momentum is defined as $\mathbf{p} := \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}$. If the Lagrangian function doesn't explicitly depend on the generalized coordinate $q^k(t)$, the generalized momentum $p_k(t) = \frac{\partial \mathcal{L}}{\partial q^k}$ is constant.
 
@@ -24,7 +29,11 @@ The generalized momentum is defined as $\mathbf{p} := \frac{\partial \mathcal{L}
 
 Hamiltonian function is defined as $\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t)$, with $\dot{\mathbf{q}}(\mathbf{q}, \mathbf{p}, t)$. It's differential reads
 
-$$d \mathcal{H} = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,$$
+$$\begin{aligned}
+  d \mathcal{H}
+  & = \dot{\mathbf{q}} \cdot d \mathbf{p} + \mathbf{p} \cdot d \dot{\mathbf{q}} - \partial_{\dot{\mathbf{q}}} \mathcal{L} \cdot d \dot{\mathbf{q}} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \\
+  & = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,
+\end{aligned}$$ (eq:analytical:hamiltonian-differential)
 
 so that Hamilton equations immediately follows
 

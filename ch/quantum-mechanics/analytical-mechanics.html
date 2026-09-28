@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>22. Analtycal Mechanics - Notes fo Quantum Mechanics &#8212; Modern Physics</title>
+    <title>22. Analtycal Mechanics - Notes for Quantum Mechanics &#8212; Modern Physics</title>
   
   
   
@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Analtycal Mechanics - Notes fo Quantum Mechanics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Analtycal Mechanics - Notes fo Quantum Mechanics</h1>
+    <h1>Analtycal Mechanics - Notes for Quantum Mechanics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -479,8 +479,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="analtycal-mechanics-notes-fo-quantum-mechanics">
-<span id="quantum-mechanics-analytical-mechanics"></span><h1><span class="section-number">22. </span>Analtycal Mechanics - Notes fo Quantum Mechanics<a class="headerlink" href="#analtycal-mechanics-notes-fo-quantum-mechanics" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="analtycal-mechanics-notes-for-quantum-mechanics">
+<span id="quantum-mechanics-analytical-mechanics"></span><h1><span class="section-number">22. </span>Analtycal Mechanics - Notes for Quantum Mechanics<a class="headerlink" href="#analtycal-mechanics-notes-for-quantum-mechanics" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><span class="xref myst">Lagrange and Hamiltonian mechanics</span></p></li>
+<li><p><span class="xref myst">Canonical transformations</span></p></li>
+<li><p><span class="xref myst">Hamilton-Jacobi formulation of mechanics</span></p></li>
+<li><p><span class="xref myst">Angle-Action variables</span></p></li>
+</ul>
 <div class="section" id="lagrange-and-hamiltonian-mechanics">
 <span id="quantum-mechanics-analytical-mechanics-lagrange-hamilton"></span><h2><span class="section-number">22.1. </span>Lagrange and Hamiltonian Mechanics<a class="headerlink" href="#lagrange-and-hamiltonian-mechanics" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -491,11 +497,11 @@ Lagrangian mechanics<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Equations of motion follow the principle of stationary action functional</p>
-<div class="math notranslate nohighlight">
-\[0 = \delta S[\mathbf{q}(t)] = \int_{t_0}^{t_1} \mathcal{L}( \mathbf{q}(t), \dot{\mathbf{q}}(t),t ) \, dt \ ,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-analytical-stationary-action">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-eq-analytical-stationary-action" title="Permalink to this equation">#</a></span>\[0 = \delta S[\mathbf{q}(t)] = \int_{t_0}^{t_1} \mathcal{L}( \mathbf{q}(t), \dot{\mathbf{q}}(t),t ) \, dt \ ,\]</div>
 <p class="sd-card-text">with prescribed extreme values, so that <span class="math notranslate nohighlight">\(\delta \mathbf{q}(t_0) = \delta \mathbf{q}(t_1) = \mathbf{0}\)</span>. Here <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> is the Lagrangian function, with <span class="math notranslate nohighlight">\(\mathbf{q}(t)\)</span> the vector of generalized coordinates, and <span class="math notranslate nohighlight">\(t\)</span> the time. Equations of motion are the Lagrange equations</p>
-<div class="math notranslate nohighlight">
-\[\dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \right) - \dfrac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{0} \ .\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-analytical-lagrange-eqns">
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-eq-analytical-lagrange-eqns" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \right) - \dfrac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{0} \ .\]</div>
 <p class="sd-card-text">The generalized momentum is defined as <span class="math notranslate nohighlight">\(\mathbf{p} := \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}\)</span>. If the Lagrangian function doesn’t explicitly depend on the generalized coordinate <span class="math notranslate nohighlight">\(q^k(t)\)</span>, the generalized momentum <span class="math notranslate nohighlight">\(p_k(t) = \frac{\partial \mathcal{L}}{\partial q^k}\)</span> is constant.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -506,8 +512,12 @@ Hamiltonian mechanics. <div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Hamiltonian function is defined as <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t)\)</span>, with <span class="math notranslate nohighlight">\(\dot{\mathbf{q}}(\mathbf{q}, \mathbf{p}, t)\)</span>. It’s differential reads</p>
-<div class="math notranslate nohighlight">
-\[d \mathcal{H} = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-analytical-hamiltonian-differential">
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-eq-analytical-hamiltonian-differential" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  d \mathcal{H}
+  &amp; = \dot{\mathbf{q}} \cdot d \mathbf{p} + \mathbf{p} \cdot d \dot{\mathbf{q}} - \partial_{\dot{\mathbf{q}}} \mathcal{L} \cdot d \dot{\mathbf{q}} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \\
+  &amp; = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that Hamilton equations immediately follows</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left\{
