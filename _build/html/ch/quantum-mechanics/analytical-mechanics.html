@@ -479,6 +479,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-and-hamiltonian-mechanics">22.1. Lagrange and Hamiltonian Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-transformations">22.2. Canonical transformations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">22.3. Generating functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-jacobi-formulation-of-mechanics">22.4. Hamilton-Jacobi formulation of mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-functional-and-type-2-generating-function">22.4.1. Action functional and type-2 generating function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angle-action-variables">22.5. Angle-action variables</a></li>
 </ul>
             </nav>
         </div>
@@ -502,8 +507,8 @@ Contents<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-lagrange-hamilton"><span class="std std-ref">Lagrange and Hamiltonian mechanics</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-canonical-transformations"><span class="std std-ref">Canonical transformations</span></a> Canonical transformations are pure kinematics (kinematics+inertia, as they involve generalized momentum), independent from the physics of the system of interest, i.e. independent from the specific form of the Lagrangian function or of the Hamiltonian function.</p></li>
-<li><p class="sd-card-text"><span class="xref myst">Hamilton-Jacobi formulation of mechanics</span></p></li>
-<li><p class="sd-card-text"><span class="xref myst">Angle-Action variables</span></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-hamilton-jacobi"><span class="std std-ref">Hamilton-Jacobi formulation of mechanics</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-angle-action"><span class="std std-ref">Angle-Action variables</span></a></p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -696,13 +701,16 @@ Comparison between different forms of Hamilton equations - canonical transformat
 \[\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)\]</div>
 </li>
 </ul>
+<p class="sd-card-text">A comparison with the partial derivatives <a class="reference internal" href="#equation-eq-analytics-gen-fun-2-derivatives">(22.9)</a> of of <strong>type-2</strong> generating function <span class="math notranslate nohighlight">\(F_2(\mathbf{q}, \mathbf{P}, t)\)</span>, it follows that<a class="footnote-reference brackets" href="#simpl-gen-derivatives" id="id1">1</a></p>
+<div class="math notranslate nohighlight">
+\[\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .\]</div>
 </div>
 </details></div>
 <div class="section" id="generating-functions">
 <h2><span class="section-number">22.3. </span>Generating functions<a class="headerlink" href="#generating-functions" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Generation functions<div class="sd-summary-down docutils">
+Generating functions<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -730,8 +738,8 @@ Generation functions<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[d F_1 = \mathbf{p} \cdot d \mathbf{q} - \mathbf{P} \cdot d \mathbf{Q} + ( \mathscr{H} - \mathcal{H} ) dt \ .\]</div>
 <p class="sd-card-text">and its partial derivatives</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-analytics-gen-fun-1-derivatives">
+<span class="eqno">(22.8)<a class="headerlink" href="#equation-eq-analytics-gen-fun-1-derivatives" title="Permalink to this equation">#</a></span>\[
 \left.\partial_{\mathbf{q}} F_1\right|_{\mathbf{q}, t         } = \mathbf{p}
 \qquad , \qquad
 \left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
@@ -745,8 +753,8 @@ Generation functions<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[d F_2 = \mathbf{p} \cdot d \mathbf{q} + \mathbf{Q} \cdot d \mathbf{P} + ( \mathscr{H} - \mathcal{H} ) dt \ , \]</div>
 <p class="sd-card-text">and its partial derivatives</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-analytics-gen-fun-2-derivatives">
+<span class="eqno">(22.9)<a class="headerlink" href="#equation-eq-analytics-gen-fun-2-derivatives" title="Permalink to this equation">#</a></span>\[
 \left.\partial_{\mathbf{q}} F_2\right|_{\mathbf{P}, t} = \mathbf{p}
 \qquad , \qquad
 \left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
@@ -757,6 +765,93 @@ Generation functions<div class="sd-summary-down docutils">
 <p class="sd-card-text"><strong>Type-4.</strong></p>
 </div>
 </details></div>
+<div class="section" id="hamilton-jacobi-formulation-of-mechanics">
+<span id="quantum-mechanics-analytical-mechanics-hamilton-jacobi"></span><h2><span class="section-number">22.4. </span>Hamilton-Jacobi formulation of mechanics<a class="headerlink" href="#hamilton-jacobi-formulation-of-mechanics" title="Permalink to this heading">#</a></h2>
+<p>Let a set of canonical variables <span class="math notranslate nohighlight">\((\mathbf{Q}, \mathbf{P})\)</span> exist so that <span class="math notranslate nohighlight">\(\mathscr{H}(\mathbf{Q}, \mathbf{P}, t) = 0\)</span>.<a class="footnote-reference brackets" href="#canonical-hj" id="id2">2</a> <strong>Remark</strong> This is the definition of the function, not a 1-dimensional constraint. For this set of canonical variables, Hamilton’s equations implies that <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> are integrals of motion</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{Q}} &amp; = \nabla_{\mathbf{P}} \mathscr{H} &amp;&amp; \qquad \rightarrow \qquad \mathbf{Q}(t) = \overline{\mathbf{Q}} \\
+  \dot{\mathbf{P}} &amp; =-\nabla_{\mathbf{Q}} \mathscr{H} &amp;&amp; \qquad \rightarrow \qquad \mathbf{P}(t) = \overline{\mathbf{P}} \\
+\end{aligned}
+\right.\end{split}\]</div>
+<p>Using type-2 generating function, and its partial derivatives <a class="reference internal" href="#equation-eq-analytics-gen-fun-2-derivatives">(22.9)</a>, <span class="math notranslate nohighlight">\(\mathbf{p} = \partial_{\mathbf{q}} F_2(\mathbf{q}, \mathbf{P}, t)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  0
+  &amp; = \partial_t F_2\left( \mathbf{q}, \mathbf{P}, t \right) - \underbrace{\mathscr{H}(\mathbf{Q}, \mathbf{P}, t)}_{=0} + \mathcal{H}(\mathbf{q}, \mathbf{p}, t) \ ,
+\end{aligned}\]</div>
+<p>or, calling <span class="math notranslate nohighlight">\(F_2(\mathbf{q}(t), \overline{\mathbf{P}}, t) := S(\mathbf{q}(t), t; \overline{\mathbf{P}})\)</span> - as it can be seen as the action functional as a function of the ending time <span class="math notranslate nohighlight">\(t\)</span> and generalized coordinates <span class="math notranslate nohighlight">\(\mathbf{q}(t)\)</span>, see <a class="reference internal" href="#quantum-mechanics-analytical-mechanics-action-functional-type-2-gen-fun"><span class="std std-ref">below</span></a> - the common form of the Hamilton-Jacobi equation follows</p>
+<div class="math notranslate nohighlight" id="equation-eq-analytics-hamilton-jacobi">
+<span class="eqno">(22.10)<a class="headerlink" href="#equation-eq-analytics-hamilton-jacobi" title="Permalink to this equation">#</a></span>\[\begin{aligned}
+  0 = \partial_t S\left( \mathbf{q}(t), t; \overline{\mathbf{P}} \right) + \mathcal{H}\left(\mathbf{q}(t), \partial_{\mathbf{q}} S(\mathbf{q}(t), t; \overline{\mathbf{P}}) , t \right) \ .
+\end{aligned}\]</div>
+<p><strong>Stationary problems.</strong> For problems whose Hamiltonian is not explicitly function of time, <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p})\)</span>, the Hamiltonian is constant and equal to the energy of the system, <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p}) = E\)</span>. Integration in <span class="math notranslate nohighlight">\(t\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[S\left(\mathbf{q}(t), t; \overline{\mathbf{P}} \right) = - E t + W\left(\mathbf{q}(t); \overline{\mathbf{P}} \right) \ .\]</div>
+<p>The constant energy <span class="math notranslate nohighlight">\(E\)</span> is a function of the integrals of motion <span class="math notranslate nohighlight">\(\overline{\mathbf{P}}\)</span> only.</p>
+<p>Introducing this expression in the Hamilton-Jacobi equation <a class="reference internal" href="#equation-eq-analytics-hamilton-jacobi">(22.10)</a> gives an equation for <span class="math notranslate nohighlight">\(W\left( \mathbf{q}, \overline{\mathbf{P}} \right)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E = \mathcal{H}\left( \mathbf{q}, \partial_{\mathbf{q}} W\left(\mathbf{q}, \overline{\mathbf{P}} \right) \right) \ .\]</div>
+<div class="section" id="action-functional-and-type-2-generating-function">
+<span id="quantum-mechanics-analytical-mechanics-action-functional-type-2-gen-fun"></span><h3><span class="section-number">22.4.1. </span>Action functional and type-2 generating function<a class="headerlink" href="#action-functional-and-type-2-generating-function" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="angle-action-variables">
+<span id="quantum-mechanics-analytical-mechanics-angle-action"></span><h2><span class="section-number">22.5. </span>Angle-action variables<a class="headerlink" href="#angle-action-variables" title="Permalink to this heading">#</a></h2>
+<p>Let the system of interest be a <strong>conservative system</strong> using the original set of variables <span class="math notranslate nohighlight">\((\mathbf{q}, \mathbf{p})\)</span>, so that the Hamiltonian doesn’t explicitly depend on time <span class="math notranslate nohighlight">\(t\)</span>, and it’s constant <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p}) = E\)</span>.
+Let a set of canonical variables <span class="math notranslate nohighlight">\((\mathbf{Q}, \mathbf{P}) =: (\mathbf{w}, \mathbf{J})\)</span> exist so that <span class="math notranslate nohighlight">\(\mathbf{J}(t) = \overline{\mathbf{J}}\)</span> are integrals of motion, and <span class="math notranslate nohighlight">\(\mathscr{H}(\mathbf{w}, \overline{\mathbf{J}}, t) = \mathcal{H}(\mathbf{q}, \mathbf{p}) = E\)</span>, <em>trajectory-wise</em>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} &amp; = \nabla_{\mathbf{J}} \mathscr{H} \\
+  \dot{\mathbf{J}} &amp; =-\nabla_{\mathbf{w}} \mathscr{H} = \mathbf{0} &amp;&amp; \qquad \rightarrow \qquad \mathscr{H}(\mathbf{\overline{J}}, t) \\
+\end{aligned}
+\right.\end{split}\]</div>
+<p>Partial derivative of <span class="math notranslate nohighlight">\(F_1(\mathbf{q}, \mathbf{Q}, t)\)</span> w.r.t. time <span class="math notranslate nohighlight">\(t\)</span> is therefore zero</p>
+<div class="math notranslate nohighlight">
+\[\partial_t F_1|_{\mathbf{q}, \mathbf{w}} = \mathscr{H} - \mathcal{H} = 0 \qquad \rightarrow \qquad F_1(\mathbf{q}, \mathbf{w}) \ .\]</div>
+<p>and alos the hamiltonian <span class="math notranslate nohighlight">\(\mathscr{H}\)</span> can’t be a function of time, <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p}) = \mathscr{H}(\overline{\mathbf{J}}) = E(\overline{\mathbf{J}})\)</span>, <em>trajectory-wise</em>. Thus the gradient of the Hamiltonian <span class="math notranslate nohighlight">\(\mathscr{H}\)</span> w.r.t. <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is constant as well <span class="math notranslate nohighlight">\(\nabla_{\mathbf{J}} \mathscr{H} =: \overline{\boldsymbol\omega}\)</span>, and the evolution of the generalized coordinate is linear (including periodic orbits, if the coordinates are cycical),</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{w}(t) = \mathbf{w}_0 + \overline{ \boldsymbol{\omega} } \, t \ .\]</div>
+<p><strong>Differentials of the generating functions.</strong> With this choice of conjugated variables, the differential of the type-1 generating function becomes</p>
+<div class="math notranslate nohighlight">
+\[d F_1(\mathbf{q}, \mathbf{w}, t) = \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot d \mathbf{w} \ ,\]</div>
+<p>and the integration along a closed trajectory <span class="math notranslate nohighlight">\(\gamma\)</span> in the space <span class="math notranslate nohighlight">\((\mathbf{q}, \mathbf{w})\)</span> gives, if the function <span class="math notranslate nohighlight">\(F_1\)</span> is regular in the region where integration occurs, so that <span class="math notranslate nohighlight">\(\oint d F_1 = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \oint_{\gamma_k} d F_1 = \\
+  &amp; = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \oint_{\gamma_k} \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} dt = \\
+  &amp; = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} \, T_{k} = \\
+  &amp; = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \dfrac{1}{2\pi} \sum_{i} \overline{J}_i \, \frac{T_{k}}{T_i} \ ,
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(T_{\gamma}\)</span> the period of the trajectory <span class="math notranslate nohighlight">\(\gamma\)</span>. The differential of the type-2 generating function reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d F_2 
+  &amp; = \mathbf{J} \cdot d \mathbf{w} + \mathbf{w} \cdot d \mathbf{J} + d F_1 = \\
+  &amp; = \mathbf{p} \cdot d \mathbf{q} + \mathbf{w} \cdot d \mathbf{J}
+\end{aligned}\end{split}\]</div>
+<p>and its integration over a closed trajectory in the <span class="math notranslate nohighlight">\((\mathbf{q}, \mathbf{J})\)</span> space, with <span class="math notranslate nohighlight">\(\mathbf{J} = \overline{\mathbf{J}}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{w} = \mathbf{w}_0 + \overline{\boldsymbol\omega} \, t\)</span>, gives</p>
+<div class="math notranslate nohighlight">
+\[\oint d F_2 = \oint d F_1 + \oint \overline{\mathbf{J}} \cdot \overline{\boldsymbol\omega} \, dt = \oint \mathbf{p} \cdot d \mathbf{q} \ . \]</div>
+<p><strong>Remark. todo</strong> Discussion about the regularity of <span class="math notranslate nohighlight">\(F_2\)</span> and the domain of integration. Integration of an exact differential over a closed path different from zero implies that something “strange” is happening.</p>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>Separable systems</p></li>
+<li><p>definition of action variables in separable systems</p></li>
+</ul>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="simpl-gen-derivatives"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The link between simplectic structure and generating functions can be derived with a proper use of derivatives of composit functions.</p>
+</dd>
+<dt class="label" id="canonical-hj"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Does this set of variables exist? For short-time? For long-time?</p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -825,6 +920,11 @@ Generation functions<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-and-hamiltonian-mechanics">22.1. Lagrange and Hamiltonian Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-transformations">22.2. Canonical transformations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">22.3. Generating functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-jacobi-formulation-of-mechanics">22.4. Hamilton-Jacobi formulation of mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-functional-and-type-2-generating-function">22.4.1. Action functional and type-2 generating function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angle-action-variables">22.5. Angle-action variables</a></li>
 </ul>
   </nav></div>
 

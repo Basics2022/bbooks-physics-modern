@@ -6,8 +6,8 @@
 
 * [Lagrange and Hamiltonian mechanics](quantum-mechanics:analytical-mechanics:lagrange-hamilton)
 * [Canonical transformations](quantum-mechanics:analytical-mechanics:canonical-transformations) Canonical transformations are pure kinematics (kinematics+inertia, as they involve generalized momentum), independent from the physics of the system of interest, i.e. independent from the specific form of the Lagrangian function or of the Hamiltonian function.
-* [Hamilton-Jacobi formulation of mechanics]()
-* [Angle-Action variables]()
+* [Hamilton-Jacobi formulation of mechanics](quantum-mechanics:analytical-mechanics:hamilton-jacobi)
+* [Angle-Action variables](quantum-mechanics:analytical-mechanics:angle-action)
 
 ```
 
@@ -202,14 +202,18 @@ As this relation must hold for any system, two relations follow:
 
    $$\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)$$
 
+A comparison with the partial derivatives {eq}`eq:analytics:gen-fun-2:derivatives` of of **type-2** generating function $F_2(\mathbf{q}, \mathbf{P}, t)$, it follows that[^simpl-gen-derivatives] 
 
+$$\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .$$
+
+[^simpl-gen-derivatives]: The link between simplectic structure and generating functions can be derived with a proper use of derivatives of composit functions.
 
 ```
 
 ## Generating functions
 
 
-```{dropdown} Generation functions
+```{dropdown} Generating functions
 :open:
 
 The pair of Hamilton equations {eq}`eq:analytics:canonical:hamilton-eqns` can be derived from the same variational principle of Lagrangian mechanics for two different choices of the generalized variables,
@@ -247,7 +251,7 @@ $$
 \left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
 \qquad , \qquad
 \left.\partial_{t         } F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
-$$
+$$ (eq:analytics:gen-fun-1:derivatives)
 
 This is **Type-1** generating function. **Type-2** generating function is defined as 
 
@@ -265,17 +269,106 @@ $$
 \left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
 \qquad , \qquad
 \left.\partial_{t         } F_2\right|_{\mathbf{q}, \mathbf{P}} = \left.\partial_t F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
-$$
+$$ (eq:analytics:gen-fun-2:derivatives)
 
 **Type-3.**
 
 **Type-4.**
 
 
-
-
 ```
 
+(quantum-mechanics:analytical-mechanics:hamilton-jacobi)=
+## Hamilton-Jacobi formulation of mechanics
+
+Let a set of canonical variables $(\mathbf{Q}, \mathbf{P})$ exist so that $\mathscr{H}(\mathbf{Q}, \mathbf{P}, t) = 0$.[^canonical-hj] **Remark** This is the definition of the function, not a 1-dimensional constraint. For this set of canonical variables, Hamilton's equations implies that $\mathbf{Q}$, and $\mathbf{P}$ are integrals of motion
+
+[^canonical-hj]: Does this set of variables exist? For short-time? For long-time?
+
+$$\left\{
+\begin{aligned}
+  \dot{\mathbf{Q}} & = \nabla_{\mathbf{P}} \mathscr{H} && \qquad \rightarrow \qquad \mathbf{Q}(t) = \overline{\mathbf{Q}} \\
+  \dot{\mathbf{P}} & =-\nabla_{\mathbf{Q}} \mathscr{H} && \qquad \rightarrow \qquad \mathbf{P}(t) = \overline{\mathbf{P}} \\
+\end{aligned}
+\right.$$
+
+Using type-2 generating function, and its partial derivatives {eq}`eq:analytics:gen-fun-2:derivatives`, $\mathbf{p} = \partial_{\mathbf{q}} F_2(\mathbf{q}, \mathbf{P}, t)$,
+
+$$\begin{aligned}
+  0
+  & = \partial_t F_2\left( \mathbf{q}, \mathbf{P}, t \right) - \underbrace{\mathscr{H}(\mathbf{Q}, \mathbf{P}, t)}_{=0} + \mathcal{H}(\mathbf{q}, \mathbf{p}, t) \ ,
+\end{aligned}$$
+
+or, calling $F_2(\mathbf{q}(t), \overline{\mathbf{P}}, t) := S(\mathbf{q}(t), t; \overline{\mathbf{P}})$ - as it can be seen as the action functional as a function of the ending time $t$ and generalized coordinates $\mathbf{q}(t)$, see [below](quantum-mechanics:analytical-mechanics:action-functional-type-2-gen-fun) - the common form of the Hamilton-Jacobi equation follows
+
+$$\begin{aligned}
+  0 = \partial_t S\left( \mathbf{q}(t), t; \overline{\mathbf{P}} \right) + \mathcal{H}\left(\mathbf{q}(t), \partial_{\mathbf{q}} S(\mathbf{q}(t), t; \overline{\mathbf{P}}) , t \right) \ .
+\end{aligned}$$ (eq:analytics:hamilton-jacobi)
+
+**Stationary problems.** For problems whose Hamiltonian is not explicitly function of time, $\mathcal{H}(\mathbf{q}, \mathbf{p})$, the Hamiltonian is constant and equal to the energy of the system, $\mathcal{H}(\mathbf{q}, \mathbf{p}) = E$. Integration in $t$ gives
+
+$$S\left(\mathbf{q}(t), t; \overline{\mathbf{P}} \right) = - E t + W\left(\mathbf{q}(t); \overline{\mathbf{P}} \right) \ .$$
+
+The constant energy $E$ is a function of the integrals of motion $\overline{\mathbf{P}}$ only.
+
+Introducing this expression in the Hamilton-Jacobi equation {eq}`eq:analytics:hamilton-jacobi` gives an equation for $W\left( \mathbf{q}, \overline{\mathbf{P}} \right)$,
+
+$$E = \mathcal{H}\left( \mathbf{q}, \partial_{\mathbf{q}} W\left(\mathbf{q}, \overline{\mathbf{P}} \right) \right) \ .$$
+
+(quantum-mechanics:analytical-mechanics:action-functional-type-2-gen-fun)=
+### Action functional and type-2 generating function
 
 
+(quantum-mechanics:analytical-mechanics:angle-action)=
+## Angle-action variables
+
+Let the system of interest be a **conservative system** using the original set of variables $(\mathbf{q}, \mathbf{p})$, so that the Hamiltonian doesn't explicitly depend on time $t$, and it's constant $\mathcal{H}(\mathbf{q}, \mathbf{p}) = E$.
+Let a set of canonical variables $(\mathbf{Q}, \mathbf{P}) =: (\mathbf{w}, \mathbf{J})$ exist so that $\mathbf{J}(t) = \overline{\mathbf{J}}$ are integrals of motion, and $\mathscr{H}(\mathbf{w}, \overline{\mathbf{J}}, t) = \mathcal{H}(\mathbf{q}, \mathbf{p}) = E$, *trajectory-wise*.
+
+$$\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} & = \nabla_{\mathbf{J}} \mathscr{H} \\
+  \dot{\mathbf{J}} & =-\nabla_{\mathbf{w}} \mathscr{H} = \mathbf{0} && \qquad \rightarrow \qquad \mathscr{H}(\mathbf{\overline{J}}, t) \\
+\end{aligned}
+\right.$$
+
+Partial derivative of $F_1(\mathbf{q}, \mathbf{Q}, t)$ w.r.t. time $t$ is therefore zero
+
+$$\partial_t F_1|_{\mathbf{q}, \mathbf{w}} = \mathscr{H} - \mathcal{H} = 0 \qquad \rightarrow \qquad F_1(\mathbf{q}, \mathbf{w}) \ .$$
+
+and alos the hamiltonian $\mathscr{H}$ can't be a function of time, $\mathcal{H}(\mathbf{q}, \mathbf{p}) = \mathscr{H}(\overline{\mathbf{J}}) = E(\overline{\mathbf{J}})$, *trajectory-wise*. Thus the gradient of the Hamiltonian $\mathscr{H}$ w.r.t. $\mathbf{J}$ is constant as well $\nabla_{\mathbf{J}} \mathscr{H} =: \overline{\boldsymbol\omega}$, and the evolution of the generalized coordinate is linear (including periodic orbits, if the coordinates are cycical),
+
+$$\mathbf{w}(t) = \mathbf{w}_0 + \overline{ \boldsymbol{\omega} } \, t \ .$$
+
+**Differentials of the generating functions.** With this choice of conjugated variables, the differential of the type-1 generating function becomes
+
+$$d F_1(\mathbf{q}, \mathbf{w}, t) = \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot d \mathbf{w} \ ,$$
+
+and the integration along a closed trajectory $\gamma$ in the space $(\mathbf{q}, \mathbf{w})$ gives, if the function $F_1$ is regular in the region where integration occurs, so that $\oint d F_1 = 0$.
+
+$$\begin{aligned}
+  0 
+  & = \oint_{\gamma_k} d F_1 = \\
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \oint_{\gamma_k} \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} dt = \\
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} \, T_{k} = \\
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \dfrac{1}{2\pi} \sum_{i} \overline{J}_i \, \frac{T_{k}}{T_i} \ ,
+\end{aligned}$$
+
+with $T_{\gamma}$ the period of the trajectory $\gamma$. The differential of the type-2 generating function reads
+
+$$\begin{aligned}
+  d F_2 
+  & = \mathbf{J} \cdot d \mathbf{w} + \mathbf{w} \cdot d \mathbf{J} + d F_1 = \\
+  & = \mathbf{p} \cdot d \mathbf{q} + \mathbf{w} \cdot d \mathbf{J}
+\end{aligned}$$
+
+and its integration over a closed trajectory in the $(\mathbf{q}, \mathbf{J})$ space, with $\mathbf{J} = \overline{\mathbf{J}}$, $\mathbf{w} = \mathbf{w}_0 + \overline{\boldsymbol\omega} \, t$, gives
+
+$$\oint d F_2 = \oint d F_1 + \oint \overline{\mathbf{J}} \cdot \overline{\boldsymbol\omega} \, dt = \oint \mathbf{p} \cdot d \mathbf{q} \ . $$
+
+**Remark. todo** Discussion about the regularity of $F_2$ and the domain of integration. Integration of an exact differential over a closed path different from zero implies that something "strange" is happening.
+
+**todo**
+* Separable systems
+* definition of action variables in separable systems
 
