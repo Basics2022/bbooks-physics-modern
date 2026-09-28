@@ -202,6 +202,9 @@ As this relation must hold for any system, two relations follow:
 
    $$\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)$$
 
+A comparison with the partial derivatives {eq}`eq:analytics:gen-fun-2:derivatives` of of **type-2** generating function $F_2(\mathbf{q}, \mathbf{P}, t)$, it follows that 
+
+$$\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .$$
 
 
 ```
@@ -247,7 +250,7 @@ $$
 \left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
 \qquad , \qquad
 \left.\partial_{t         } F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
-$$
+$$ (eq:analytics:gen-fun-1:derivatives)
 
 This is **Type-1** generating function. **Type-2** generating function is defined as 
 
@@ -265,7 +268,7 @@ $$
 \left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
 \qquad , \qquad
 \left.\partial_{t         } F_2\right|_{\mathbf{q}, \mathbf{P}} = \left.\partial_t F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
-$$
+$$ (eq:analytics:gen-fun-2:derivatives)
 
 **Type-3.**
 

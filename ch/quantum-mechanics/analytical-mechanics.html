@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -696,6 +687,9 @@ Comparison between different forms of Hamilton equations - canonical transformat
 \[\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)\]</div>
 </li>
 </ul>
+<p class="sd-card-text">A comparison with the partial derivatives <a class="reference internal" href="#equation-eq-analytics-gen-fun-2-derivatives">(22.9)</a> of of <strong>type-2</strong> generating function <span class="math notranslate nohighlight">\(F_2(\mathbf{q}, \mathbf{P}, t)\)</span>, it follows that</p>
+<div class="math notranslate nohighlight">
+\[\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .\]</div>
 </div>
 </details></div>
 <div class="section" id="generating-functions">
@@ -730,8 +724,8 @@ Generation functions<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[d F_1 = \mathbf{p} \cdot d \mathbf{q} - \mathbf{P} \cdot d \mathbf{Q} + ( \mathscr{H} - \mathcal{H} ) dt \ .\]</div>
 <p class="sd-card-text">and its partial derivatives</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-analytics-gen-fun-1-derivatives">
+<span class="eqno">(22.8)<a class="headerlink" href="#equation-eq-analytics-gen-fun-1-derivatives" title="Permalink to this equation">#</a></span>\[
 \left.\partial_{\mathbf{q}} F_1\right|_{\mathbf{q}, t         } = \mathbf{p}
 \qquad , \qquad
 \left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
@@ -745,8 +739,8 @@ Generation functions<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[d F_2 = \mathbf{p} \cdot d \mathbf{q} + \mathbf{Q} \cdot d \mathbf{P} + ( \mathscr{H} - \mathcal{H} ) dt \ , \]</div>
 <p class="sd-card-text">and its partial derivatives</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-analytics-gen-fun-2-derivatives">
+<span class="eqno">(22.9)<a class="headerlink" href="#equation-eq-analytics-gen-fun-2-derivatives" title="Permalink to this equation">#</a></span>\[
 \left.\partial_{\mathbf{q}} F_2\right|_{\mathbf{P}, t} = \mathbf{p}
 \qquad , \qquad
 \left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
