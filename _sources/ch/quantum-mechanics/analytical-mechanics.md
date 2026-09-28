@@ -1,10 +1,36 @@
 (quantum-mechanics:analytical-mechanics)=
 # Analtycal Mechanics - Notes for Quantum Mechanics
 
-* [Lagrange and Hamiltonian mechanics]()
+```{dropdown} Contents
+:open:
+
+* [Lagrange and Hamiltonian mechanics](quantum-mechanics:analytical-mechanics:lagrange-hamilton)
 * [Canonical transformations]()
 * [Hamilton-Jacobi formulation of mechanics]()
 * [Angle-Action variables]()
+
+```
+
+````{dropdown} Topics and tools
+:open:
+
+* Calculus of variations
+* Legendre transformation, in the definition of functions with different independent variables.
+
+   ```{dropdown} Examples
+   :open:
+
+   * From Lagrangian function to Hamiltonian function $\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}},t)$
+   * From one generating function to another, e.g. $F_2(\mathbf{q}, \mathbf{P}, t) = \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{Q}, t)$
+   * ...
+
+   
+
+   ```
+
+
+````
+
 
 (quantum-mechanics:analytical-mechanics:lagrange-hamilton)=
 ## Lagrange and Hamiltonian Mechanics
@@ -35,7 +61,7 @@ $$\begin{aligned}
   & = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,
 \end{aligned}$$ (eq:analytical:hamiltonian-differential)
 
-so that Hamilton equations immediately follows
+by the definition of the generalized momentum, $\mathbf{p} = \partial_{\dot{\mathbf{q}}} \mathcal{L}$. Hamilton equations immediately follows
 
 $$\left\{
 \begin{aligned}
