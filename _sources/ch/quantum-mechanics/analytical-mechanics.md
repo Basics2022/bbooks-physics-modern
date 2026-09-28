@@ -202,17 +202,18 @@ As this relation must hold for any system, two relations follow:
 
    $$\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)$$
 
-A comparison with the partial derivatives {eq}`eq:analytics:gen-fun-2:derivatives` of of **type-2** generating function $F_2(\mathbf{q}, \mathbf{P}, t)$, it follows that 
+A comparison with the partial derivatives {eq}`eq:analytics:gen-fun-2:derivatives` of of **type-2** generating function $F_2(\mathbf{q}, \mathbf{P}, t)$, it follows that[^simpl-gen-derivatives] 
 
 $$\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .$$
 
+[^simpl-gen-derivatives]: The link between simplectic structure and generating functions can be derived with a proper use of derivatives of composit functions.
 
 ```
 
 ## Generating functions
 
 
-```{dropdown} Generation functions
+```{dropdown} Generating functions
 :open:
 
 The pair of Hamilton equations {eq}`eq:analytics:canonical:hamilton-eqns` can be derived from the same variational principle of Lagrangian mechanics for two different choices of the generalized variables,
