@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -468,6 +477,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-and-hamiltonian-mechanics">22.1. Lagrange and Hamiltonian Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-transformations">22.2. Canonical transformations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">22.3. Generating functions</a></li>
 </ul>
             </nav>
         </div>
@@ -490,7 +501,7 @@ Contents<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-lagrange-hamilton"><span class="std std-ref">Lagrange and Hamiltonian mechanics</span></a></p></li>
-<li><p class="sd-card-text"><span class="xref myst">Canonical transformations</span></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-analytical-mechanics-canonical-transformations"><span class="std std-ref">Canonical transformations</span></a> Canonical transformations are pure kinematics (kinematics+inertia, as they involve generalized momentum), independent from the physics of the system of interest, i.e. independent from the specific form of the Lagrangian function or of the Hamiltonian function.</p></li>
 <li><p class="sd-card-text"><span class="xref myst">Hamilton-Jacobi formulation of mechanics</span></p></li>
 <li><p class="sd-card-text"><span class="xref myst">Angle-Action variables</span></p></li>
 </ul>
@@ -514,11 +525,12 @@ Examples<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">From Lagrangian function to Hamiltonian function <span class="math notranslate nohighlight">\(\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}},t)\)</span></p></li>
-<li><p class="sd-card-text">From one generating function to another, e.g. <span class="math notranslate nohighlight">\(F_2(\mathbf{q}, \mathbf{P}, t) = \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{Q}, t)\)</span></p></li>
+<li><p class="sd-card-text">From one generating function to another, e.g. <span class="math notranslate nohighlight">\(F_2(\mathbf{q}, \mathbf{P}, t) := \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{Q}, t)\)</span></p></li>
 <li><p class="sd-card-text">…</p></li>
 </ul>
 </div>
 </details></li>
+<li><p class="sd-card-text">Properties of canonical transformations can be derived with a proper application of rules of derivation of <strong>composite functions</strong>, <strong>paying attention to the set of independent variables</strong> of these functions.</p></li>
 </ul>
 </div>
 </details><div class="section" id="lagrange-and-hamiltonian-mechanics">
@@ -556,22 +568,28 @@ Hamiltonian mechanics. <div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}\left\{
 \begin{aligned}
-  \dot{\mathbf{q}} &amp; = \partial_{\mathbf{p}} \mathcal{H} \\
-  \dot{\mathbf{p}} &amp; =-\partial_{\mathbf{q}} \mathcal{H} \\
+  \dot{\mathbf{q}}(t) &amp; = \partial_{\mathbf{p}} \mathcal{H}(\mathbf{q}(t), \mathbf{p}(t), t) \\
+  \dot{\mathbf{p}}(t) &amp; =-\partial_{\mathbf{q}} \mathcal{H}(\mathbf{q}(t), \mathbf{p}(t), t) \\
 \end{aligned}
 \right.\end{split}\]</div>
-<p class="sd-card-text">with the relation <span class="math notranslate nohighlight">\(\partial_t \mathcal{H} = - \partial_t \mathcal{L}\)</span>. Using Hamilton’s equations, it’s immediately proved that <span class="math notranslate nohighlight">\(d_t \mathcal{H} = \partial_t \mathcal{H}\)</span>. The Hamiltonian function is thus conserved - an integral of motion - if the Lagrangian function doesn’t explicitly depend on <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p class="sd-card-text">with the relation</p>
+<div class="math notranslate nohighlight">
+\[\left.\partial_t \mathcal{H}\right|_{\mathbf{q}, \mathbf{p}}(\mathbf{q}(t), \mathbf{p}(t),t) = - \left.\partial_t \mathcal{L}\right|_{\mathbf{q}, \dot{\mathbf{q}}}(\mathbf{q}(t), \dot{\mathbf{q}}(t),t) \ . \]</div>
+<p class="sd-card-text">Using Hamilton’s equations, it’s immediately proved that <span class="math notranslate nohighlight">\(d_t \mathcal{H} = \partial_t \mathcal{H}\)</span>. The Hamiltonian function is thus conserved - an integral of motion - if the Lagrangian function doesn’t explicitly depend on <span class="math notranslate nohighlight">\(t\)</span>.</p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+</details></div>
+<div class="section" id="canonical-transformations">
+<span id="quantum-mechanics-analytical-mechanics-canonical-transformations"></span><h2><span class="section-number">22.2. </span>Canonical transformations<a class="headerlink" href="#canonical-transformations" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Canonical transformation<div class="sd-summary-down docutils">
+Definition<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">A canonical transformation is defined as a change of coordinates from <span class="math notranslate nohighlight">\((\mathbf{q}, \mathbf{p})\)</span> to <span class="math notranslate nohighlight">\((\mathbf{Q}, \mathbf{P})\)</span> so that the equations of motion have the same expression</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq-analytics-canonical-hamilton-eqns">
+<span class="eqno">(22.4)<a class="headerlink" href="#equation-eq-analytics-canonical-hamilton-eqns" title="Permalink to this equation">#</a></span>\[\begin{split}
 \left\{
 \begin{aligned}
   \dot{\mathbf{q}} &amp; = \partial_{\mathbf{p}} \mathcal{H} \\
@@ -586,15 +604,118 @@ Canonical transformation<div class="sd-summary-down docutils">
 \end{aligned}
 \right.
 \end{split}\]</div>
-<p class="sd-card-text">These pair of Hamilton equations can be derived from the same variational principle of Lagrangian mechanics for two different choices of the generalized variables,</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Simplectic structure<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol\eta = \begin{pmatrix} \mathbf{q} \\ \mathbf{p} \end{pmatrix} 
+\qquad , \qquad
+\boldsymbol\zeta = \begin{pmatrix} \mathbf{Q} \\ \mathbf{P} \end{pmatrix} 
+\end{split}\]</div>
+<p class="sd-card-text">whose relation is assumed to be invertible for each time <span class="math notranslate nohighlight">\(t\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-analytics-canonical-coord-transf">
+<span class="eqno">(22.5)<a class="headerlink" href="#equation-eq-analytics-canonical-coord-transf" title="Permalink to this equation">#</a></span>\[\boldsymbol\zeta( \boldsymbol\eta, t) \qquad , \qquad \boldsymbol\eta ( \boldsymbol\zeta, t) \ . \]</div>
+<p class="sd-card-text"><strong>Hamilton equations.</strong> Hamilton equations <a class="reference internal" href="#equation-eq-analytics-canonical-hamilton-eqns">(22.4)</a> can be recast as</p>
+<div class="math notranslate nohighlight" id="equation-eq-analytics-canonical-hamilton-eqns-simplectic">
+<span class="eqno">(22.6)<a class="headerlink" href="#equation-eq-analytics-canonical-hamilton-eqns-simplectic" title="Permalink to this equation">#</a></span>\[
+\dot{\boldsymbol{ \eta}} = \mathbf{J} \nabla_{\boldsymbol{ \eta}} \mathcal{H} \qquad , \qquad
+\dot{\boldsymbol{\zeta}} = \mathbf{J} \nabla_{\boldsymbol{\zeta}} \mathscr{H} \ ,
+\]</div>
+<p class="sd-card-text">with the matrix <span class="math notranslate nohighlight">\(\mathbf{J} = \begin{pmatrix} \mathbf{0} &amp; \mathbf{I} \\ -\mathbf{I} &amp; \mathbf{0} \end{pmatrix}\)</span>.</p>
+<p class="sd-card-text"><strong>Recasting Hamilton equations in new coordinates, using derivatives of composite functions.</strong> As the the vector of the new coordinates <span class="math notranslate nohighlight">\(\boldsymbol\zeta(t)\)</span> can be written as a function of the old coordinates <span class="math notranslate nohighlight">\(\boldsymbol\eta(t)\)</span> through the function <a class="reference internal" href="#equation-eq-analytics-canonical-coord-transf">(22.5)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = \delta \int_{t_0}^{t_1} \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t) \, dt \\
-  0 &amp; = \delta \int_{t_0}^{t_1} \mathscr{L}(\mathbf{Q}, \dot{\mathbf{Q}}, t) \, dt
+ \dfrac{d}{dt} \boldsymbol{\zeta} \left(\boldsymbol\eta(t), t\right)
+ &amp; = \dot{\boldsymbol\eta} \cdot \nabla_{\boldsymbol\eta} \boldsymbol\zeta|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \\
+ &amp; = \mathbf{M}^T(\boldsymbol\eta(t), t) \dot{\boldsymbol\eta} + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \\
+ &amp; = \mathbf{M}^T \, \mathbf{J} \, \nabla_{\boldsymbol\eta} \mathcal{H} + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and changing from <span class="math notranslate nohighlight">\((\boldsymbol\zeta, t)\)</span> to <span class="math notranslate nohighlight">\((\boldsymbol\eta, t)\)</span> variables</p>
+<div class="math notranslate nohighlight" id="equation-eq-analytics-canonical-coord-transf-zeta">
+<span class="eqno">(22.7)<a class="headerlink" href="#equation-eq-analytics-canonical-coord-transf-zeta" title="Permalink to this equation">#</a></span>\[\begin{aligned}
+ \dot{\boldsymbol{\zeta}}
+ &amp; = \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\left\{ \mathbf{M} \right\}_{ij} = \frac{\partial \zeta_j}{\partial \eta_i}(\boldsymbol\eta, t)\)</span>, and the rule of transformation of the gradient of a scalar function,</p>
+<div class="math notranslate nohighlight">
+\[f = f( \boldsymbol\eta, t) = f( \boldsymbol\eta(\boldsymbol\zeta, t), t) = \mathscr{f}( \boldsymbol\zeta, t) = \mathscr{f}( \boldsymbol\zeta( \boldsymbol\eta, t), t) \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \nabla_{\boldsymbol\eta} f(\boldsymbol\eta(\boldsymbol\zeta(t), t), t) = \left.\nabla_{\boldsymbol\eta} \boldsymbol\zeta\right|_t \cdot \left.\nabla_{\boldsymbol\zeta} \mathscr{f} \right|_t = \mathbf{M} \nabla_{\boldsymbol\zeta} f \ .
+\end{aligned}\]</div>
+<p class="sd-card-text">The equation <a class="reference internal" href="#equation-eq-analytics-canonical-coord-transf-zeta">(22.7)</a> must be compared with the Hamilton equations <span class="math notranslate nohighlight">\(\dot{\boldsymbol{\zeta}} = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}\)</span> from <a class="reference internal" href="#equation-eq-analytics-canonical-hamilton-eqns-simplectic">(22.6)</a>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Comparison between different forms of Hamilton equations - canonical transformations are pure kinematics, independent from the physics of the system of interest<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">From the comparison</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{aligned}
+ \dot{\boldsymbol{\zeta}}
+ &amp; = \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \\
+ \dot{\boldsymbol{\zeta}} &amp; = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}
+\end{aligned}
+\right.\end{split}\]</div>
+<p class="sd-card-text">it follows</p>
+<div class="math notranslate nohighlight">
+\[
+ \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta}
+ = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}
+\]</div>
+<p class="sd-card-text"><strong>System 0.</strong> Let the system zero be a physical system whose Hamiltonian <span class="math notranslate nohighlight">\(\mathcal{H}_0(\mathbf{q}, \mathbf{p}, t) := 0\)</span>. <strong>Remark</strong> This is the functional definition of the Hamiltonian, not 1-dimensional constraint between variables. It follows that</p>
+<div class="math notranslate nohighlight">
+\[
+ \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}_0 \ .
+\]</div>
+<p class="sd-card-text"><strong>Generic system.</strong> Exploiting the latter relation, for a generic system</p>
+<div class="math notranslate nohighlight">
+\[
+ \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t
+ = \mathbf{J} \nabla_{\boldsymbol\zeta} \left( \mathscr{H} - \mathscr{H}_0 \right) \ .
+\]</div>
+<p class="sd-card-text">As this relation must hold for any system, two relations follow:</p>
+<ul>
+<li><p class="sd-card-text">the simplectic condition</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{M}^T \mathbf{J} \mathbf{M} = \mathbf{J} \ .\]</div>
+</li>
+<li><p class="sd-card-text">a relation between the Hamiltonian functions</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)\]</div>
+</li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="generating-functions">
+<h2><span class="section-number">22.3. </span>Generating functions<a class="headerlink" href="#generating-functions" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Generation functions<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The pair of Hamilton equations <a class="reference internal" href="#equation-eq-analytics-canonical-hamilton-eqns">(22.4)</a> can be derived from the same variational principle of Lagrangian mechanics for two different choices of the generalized variables,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \delta \int_{t_0}^{t_1} \mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t), t) \, dt \\
+  0 &amp; = \delta \int_{t_0}^{t_1} \mathscr{L}(\mathbf{Q}(t), \dot{\mathbf{Q}}(t), t) \, dt
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">In order to get the same equations of motion, the two Lagrangian functions may differ by a time derivative <span class="math notranslate nohighlight">\(\frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)\)</span>, whose integral reads <span class="math notranslate nohighlight">\(F_1(\dots,)\)</span> evaluated in the extremes of integration, and whose variation is thus zero. Thus</p>
 <div class="math notranslate nohighlight">
-\[\mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t) = \mathscr{L}(\mathbf{Q}, \dot{\mathbf{Q}}, t) + \frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)\]</div>
+\[\mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t), t) = \mathscr{L}(\mathbf{Q}(t), \dot{\mathbf{Q}}(t), t) + \frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)\]</div>
 <p class="sd-card-text">or as a function of the Hamiltonian functions,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{p} \cdot \dot{\mathbf{q}} -\mathcal{H}(\mathbf{q}, \mathbf{p}, t) = \mathbf{P} \cdot \dot{\mathbf{Q}} - \mathscr{H}(\mathbf{Q}, \mathbf{P}, t) + \frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t) \ ,\]</div>
@@ -605,6 +726,35 @@ Canonical transformation<div class="sd-summary-down docutils">
   &amp; = \mathbf{p} \cdot \dot{\mathbf{q}} - \mathbf{P} \cdot \dot{\mathbf{Q}} - \mathcal{H}(\mathbf{q}, \mathbf{p}, t) + \mathscr{H}(\mathbf{Q}(t), \mathbf{P}(t),t) = \\
   &amp; = \partial_\mathbf{q} F_1 \cdot \dot{\mathbf{q}} + \partial_\mathbf{Q} F_1 \cdot \dot{\mathbf{Q}} + \partial_t F_1
 \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that - using the arbitariness of the result on the choice of coordinates and the physics of the system - its differential reads</p>
+<div class="math notranslate nohighlight">
+\[d F_1 = \mathbf{p} \cdot d \mathbf{q} - \mathbf{P} \cdot d \mathbf{Q} + ( \mathscr{H} - \mathcal{H} ) dt \ .\]</div>
+<p class="sd-card-text">and its partial derivatives</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\partial_{\mathbf{q}} F_1\right|_{\mathbf{q}, t         } = \mathbf{p}
+\qquad , \qquad
+\left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
+\qquad , \qquad
+\left.\partial_{t         } F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
+\]</div>
+<p class="sd-card-text">This is <strong>Type-1</strong> generating function. <strong>Type-2</strong> generating function is defined as</p>
+<div class="math notranslate nohighlight">
+\[F_2(\mathbf{q}, \mathbf{P}, t) = \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{P}, t) \ ,\]</div>
+<p class="sd-card-text">and its differential gives</p>
+<div class="math notranslate nohighlight">
+\[d F_2 = \mathbf{p} \cdot d \mathbf{q} + \mathbf{Q} \cdot d \mathbf{P} + ( \mathscr{H} - \mathcal{H} ) dt \ , \]</div>
+<p class="sd-card-text">and its partial derivatives</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\partial_{\mathbf{q}} F_2\right|_{\mathbf{P}, t} = \mathbf{p}
+\qquad , \qquad
+\left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
+\qquad , \qquad
+\left.\partial_{t         } F_2\right|_{\mathbf{q}, \mathbf{P}} = \left.\partial_t F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
+\]</div>
+<p class="sd-card-text"><strong>Type-3.</strong></p>
+<p class="sd-card-text"><strong>Type-4.</strong></p>
 </div>
 </details></div>
 </div>
@@ -673,6 +823,8 @@ Canonical transformation<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-and-hamiltonian-mechanics">22.1. Lagrange and Hamiltonian Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-transformations">22.2. Canonical transformations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-functions">22.3. Generating functions</a></li>
 </ul>
   </nav></div>
 
