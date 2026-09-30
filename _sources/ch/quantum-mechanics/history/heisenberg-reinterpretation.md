@@ -14,7 +14,7 @@ Applying this relation to the position and momentum operators, $\hat{\mathbf{x}}
 $$\left\{
 \begin{aligned}
   \dot{\hat{\mathbf{x}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{x}}_H , \hat{H}_H \right] = \frac{\hat{\mathbf{p}}_H}{m} \\
-  \dot{\hat{\mathbf{p}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \\
+  \dot{\hat{\mathbf{p}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H \\
 \end{aligned}
 \right.$$ (eq:qm:heisenberg:eoms-1)
 
@@ -45,7 +45,7 @@ since
     \end{aligned}$$
 ```
 
-```{dropdown} $\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right)$
+```{dropdown} $\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H$
 
 $$\begin{aligned}
   \left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] 
