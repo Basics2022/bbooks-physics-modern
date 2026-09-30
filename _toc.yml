@@ -63,6 +63,7 @@ parts:
       - file: ch/quantum-mechanics/history/einstein-planck
       - file: ch/quantum-mechanics/history/larmor-formula
       - file: ch/quantum-mechanics/history/heisenberg-reinterpretation
+      - file: ch/quantum-mechanics/history/matrix-mechanics/electron-perturbation-numerical
     - file: ch/quantum-mechanics/history/origin-wave-mechanics
       sections:
       - file: ch/quantum-mechanics/history/de-broglie
