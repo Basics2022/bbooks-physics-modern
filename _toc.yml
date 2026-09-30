@@ -57,9 +57,16 @@ parts:
     - file: ch/quantum-mechanics/history/topics
     - file: ch/quantum-mechanics/history/origins
     - file: ch/quantum-mechanics/history/timeline
-    - file: ch/quantum-mechanics/history/light-dispersion
-    - file: ch/quantum-mechanics/history/einstein-planck
-    - file: ch/quantum-mechanics/history/larmor-formula
+    - file: ch/quantum-mechanics/history/origin-matrix-mechanics
+      sections:
+      - file: ch/quantum-mechanics/history/light-dispersion
+      - file: ch/quantum-mechanics/history/einstein-planck
+      - file: ch/quantum-mechanics/history/larmor-formula
+      - file: ch/quantum-mechanics/history/heisenberg-reinterpretation
+    - file: ch/quantum-mechanics/history/origin-wave-mechanics
+      sections:
+      - file: ch/quantum-mechanics/history/de-broglie
+      - file: ch/quantum-mechanics/history/schrodinger
   - file: ch/quantum-mechanics/atom-models
     sections:
     - file: ch/quantum-mechanics/atom-models/thomson

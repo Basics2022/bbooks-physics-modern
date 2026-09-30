@@ -332,7 +332,7 @@ $$\begin{aligned}
   & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} \hat{H} U_{t,t_0} = \\
   & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} U_{t,t_0} U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} U^{\dagger}_{t,t_0}  \hat{H} U_{t,t_0} = \\
   & = - \frac{1}{i\hbar} \left[ \hat{H}_H, \hat{A}_H \right] + \left( \partial_t \hat{A} \right)_H  \ ,
-\end{aligned}$$
+\end{aligned}$$ (eq:qm:heisenberg:dAdt)
 
 as the relation {eq}`eq:h-u-dtu` gives $\partial_t U_{t,t_0} U^{\dagger}_{t,t_0} = \frac{1}{i \hbar} \hat{H}$, 
 

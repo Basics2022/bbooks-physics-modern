@@ -347,8 +347,7 @@ $$d F_1(\mathbf{q}, \mathbf{w}, t) = \mathbf{p} \cdot d \mathbf{q} - \overline{\
 and the integration along a closed trajectory $\gamma$ in the space $(\mathbf{q}, \mathbf{w})$ gives, if the function $F_1$ is regular in the region where integration occurs, so that $\oint d F_1 = 0$.
 
 $$\begin{aligned}
-  0 
-  & = \oint_{\gamma_k} d F_1 = \\
+  \oint_{\gamma_k} d F_1
   & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \oint_{\gamma_k} \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} dt = \\
   & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} \, T_{k} = \\
   & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \dfrac{1}{2\pi} \sum_{i} \overline{J}_i \, \frac{T_{k}}{T_i} \ ,
