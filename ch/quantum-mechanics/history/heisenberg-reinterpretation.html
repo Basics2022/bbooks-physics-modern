@@ -1,0 +1,951 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20.4.4. Modern reinterpretation of Heisenberg mechanics &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/history/heisenberg-reinterpretation';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="20.5. Origin of wave theory of quantum mechanics" href="origin-wave-mechanics.html" />
+    <link rel="prev" title="20.4.3. Radiation of moving charges - Larmor’s formula" href="larmor-formula.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../einstein-coeffs-interaction-picture.html">19. Interaction picture, perturbation theory and Einstein coefficients</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../history.html">20. Historical Approach to Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="topics.html">20.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="origins.html">20.2. Origins of Matrix and Wave Quantum Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">20.3. Timeline</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="origin-matrix-mechanics.html">20.4. Origin of matrix mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="light-dispersion.html">20.4.1. Light dispersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="einstein-planck.html">20.4.2. Light matter interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="larmor-formula.html">20.4.3. Radiation of moving charges - Larmor’s formula</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">20.4.4. Modern reinterpretation of Heisenberg mechanics</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="origin-wave-mechanics.html">20.5. Origin of wave theory of quantum mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="de-broglie.html">20.5.1. L. de Broglie, Researches of the Quantum Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schrodinger.html">20.5.2. E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atom-models.html">21. Atomic models</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/thomson.html">21.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/rutherford.html">21.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/bohr.html">21.3. Bohr model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../atom-models/sommerfeld.html">21.4. Sommerfeld model</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/analytical-mechanics-short.html">21.4.4. Analytical mechanics - short notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../atom-models/schrodinger.html">21.5. Schrodinger model</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-analytical-sln.html">21.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-gallery.html">21.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-notes.html">21.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analytical-mechanics.html">22. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">23. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">24. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">25. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">25.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">25.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">25.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">25.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">25.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">25.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/edit/master/ch/quantum-mechanics/history/heisenberg-reinterpretation.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/issues/new?title=Issue%20on%20page%20%2Fch/quantum-mechanics/history/heisenberg-reinterpretation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ch/quantum-mechanics/history/heisenberg-reinterpretation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modern reinterpretation of Heisenberg mechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-evaluation-using-position-representation">20.4.4.1.1. Commutator Evaluation using Position Representation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis">20.4.4.2. 2. Matrix Components in Energy Basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-in-the-form-of-hamilton-s-equations">20.4.4.3. 3. Equations of Motion in the Form of Hamilton’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-matrix-product-property">20.4.4.3.1. General Matrix Product Property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.4. 4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ladenburg-dispersion-formula">20.4.4.4.1. Connection to Ladenburg Dispersion Formula</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">20.4.4.5. 5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bohr-sommerfeld-quantization-rule">20.4.4.5.1. 1. Bohr-Sommerfeld Quantization Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#born-kramers-reinterpretation-rule">20.4.4.5.2. 2. Born-Kramers Reinterpretation Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. 6. Application: The Linear Harmonic Oscillator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">20.4.4.6.1. Equations of Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elements-energy-spectrum">20.4.4.6.2. Matrix Elements &amp; Energy Spectrum</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. 7. Transition Probabilities as Dipole Matrix Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. 8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-amplitude">20.4.4.8.1. First-Order Amplitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-approximation-rotating-wave-approximation">20.4.4.8.2. Resonant Approximation (Rotating Wave Approximation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-expansion-for-c-n-t-2">20.4.4.8.3. Second-Order Expansion for <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="modern-reinterpretation-of-heisenberg-mechanics">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation"></span><h1><span class="section-number">20.4.4. </span>Modern reinterpretation of Heisenberg mechanics<a class="headerlink" href="#modern-reinterpretation-of-heisenberg-mechanics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="heisenberg-equations-of-motion-in-the-heisenberg-picture">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation-eoms"></span><h2><span class="section-number">20.4.4.1. </span>Heisenberg Equations of Motion in the Heisenberg Picture<a class="headerlink" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture" title="Permalink to this heading">#</a></h2>
+<p>Time derivative of an operator <span class="math notranslate nohighlight">\(\hat{A}_H\)</span> in Heisenberg picture satisfies the relation <a class="reference internal" href="../intro.html#equation-eq-qm-heisenberg-dadt">(13.2)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d \hat{A}_H}{dt} = \frac{1}{i \hbar} \left[ \hat{A}_H , \hat{H}_H \right] + \left( \partial_t \hat{A} \right)_H \ .\]</div>
+<p>Applying this relation to the position and momentum operators, <span class="math notranslate nohighlight">\(\hat{\mathbf{x}}_H\)</span> and <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}_H\)</span>, Heisenberg found the quantum mechanics counterpart of the equations of motion in classical mechanics,</p>
+<div class="math notranslate nohighlight" id="equation-eq-qm-heisenberg-eoms-1">
+<span class="eqno">(20.5)<a class="headerlink" href="#equation-eq-qm-heisenberg-eoms-1" title="Permalink to this equation">#</a></span>\[\begin{split}\left\{
+\begin{aligned}
+  \dot{\hat{\mathbf{x}}}_H &amp; = \frac{1}{i \hbar} \left[ \hat{\mathbf{x}}_H , \hat{H}_H \right] = \frac{\hat{\mathbf{p}}_H}{m} \\
+  \dot{\hat{\mathbf{p}}}_H &amp; = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \\
+\end{aligned}
+\right.\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(\hat{H} = \frac{|\hat{\mathbf{p}|}^2}{2 m} + V\left(\hat{\mathbf{r}}\right)\)</span>,</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="math notranslate nohighlight">\(\left[ \hat{\mathbf{x}}_H, \hat{H}_H \right] = i \hbar \frac{\hat{\mathbf{p}}_H}{m}\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \hat{\mathbf{x}}_H, \hat{H}_H \right] 
+  &amp; = \mathscr{U}_{t,t_0}^{\dagger} \left( \left[ \hat{\mathbf{x}}, \frac{\left|\hat{\mathbf{p}}\right|^2}{2m} \right] + \left[ \hat{\mathbf{x}}, V\left(\hat{\mathbf{r}}\right) \right] \right) \mathscr{U}_{t,t_0} = \\
+  &amp; = \mathscr{U}_{t,t_0}^{\dagger} \left( i \hbar \frac{\hat{\mathbf{p}}}{m} \right) \mathscr{U}_{t,t_0} = \\
+  &amp; = i \hbar \frac{\hat{\mathbf{p}}_H}{m} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since</p>
+<ol class="arabic">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{\mathbf{x}}\)</span> and <span class="math notranslate nohighlight">\(V(\hat{\mathbf{r}})\)</span> commute, as it can be proved using power expansion - if required - of <span class="math notranslate nohighlight">\(V(\hat{\mathbf{r}})\)</span>;</p></li>
+<li><p class="sd-card-text">the commutator of <span class="math notranslate nohighlight">\(\hat{\mathbf{x}}\)</span> and the kinetic contribution of the Hamiltonian operator reads (sum over <span class="math notranslate nohighlight">\(b\)</span> repeated index),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \left[ \hat{x}_a, \hat{p}_b \hat{p}_b \right] 
+      &amp; = \hat{x}_a \hat{p}_b \hat{p}_b - \hat{p}_b \hat{x}_a \hat{p}_b + \hat{p}_b \hat{x}_a \hat{p}_b - \hat{p}_b \hat{x}_b \hat{p}_a = \\
+      &amp; = \left[ \hat{x}_a , \hat{p}_b \right] \hat{p}_b + \hat{p}_b \left[ \hat{x}_a , \hat{p}_b \right] = \\
+      &amp; = 2 i \hbar \delta_{ab} \hat{p}_b = \\
+      &amp; = 2 i \hbar \hat{p}_a \ .
+    \end{aligned}\end{split}\]</div>
+</li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="math notranslate nohighlight">\(\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right)\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] 
+  &amp; = \mathscr{U}_{t,t_0}^{\dagger} \left( \left[ \hat{\mathbf{p}}, \frac{\left|\hat{\mathbf{p}}\right|^2}{2m} \right] + \left[ \hat{\mathbf{p}}, V\left(\hat{\mathbf{r}}\right) \right] \right) \mathscr{U}_{t,t_0} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since, the commutator of the momentum and potential energy operator reads <span class="math notranslate nohighlight">\(\left[ \hat{\mathbf{p}}, V(\hat{\mathbf{r}}) \right] = \)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \left[ \hat{\mathbf{p}}, V\left(\hat{\mathbf{r}}\right) \right] | \Psi \rangle
+  &amp; = \langle \mathbf{r} | \hat{\mathbf{p}} V\left(\hat{\mathbf{r}}\right) | \Psi \rangle - \langle \mathbf{r} | V\left(\hat{\mathbf{r}}\right) \hat{\mathbf{p}} | \Psi \rangle = \\
+  &amp; = - i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} | V\left(\hat{\mathbf{r}}\right) | \Psi \rangle - V\left(\mathbf{r}\right) \langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = \\
+  &amp; = - i \hbar \nabla_{\mathbf{r}} \left( V(\mathbf{r}) \Psi(\mathbf{r}, t) \right) + i \hbar V(\mathbf{r}) \nabla_{\mathbf{r}} \Psi(\mathbf{r}, t) = \\
+  &amp; = - i \hbar \nabla_{\mathbf{r}} V(\mathbf{r}) \, \Psi(\mathbf{r},t) = \\
+  &amp; = \langle \mathbf{r} | - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}} \right) | \Psi \rangle \ . 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as <span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{p}} \rangle = - i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} |\)</span>, and <span class="math notranslate nohighlight">\(V\left( \hat{\mathbf{r}} \right) | \mathbf{r} \rangle = V( \mathbf{r} ) | \mathbf{r} \rangle\)</span>, and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  f(x) \Psi(x,t)
+  &amp; = \int_{x'} f(x) \Psi(x', t) \delta(x-x') \, dx' = \\
+  &amp; = \int_{x'} f(x) \langle x' | \Psi \rangle \langle x | x' \rangle \, dx' = \\
+  &amp; = \int_{x'} \langle x | f(x) | x' \rangle \langle x' | \Psi \rangle \, dx' = \\
+  &amp; = \langle x | f \left(\hat{x}\right) \underbrace{\int_{x'} | x' \rangle \langle x' | dx'}_{=\hat{\mathbf{1}}} | \Psi \rangle = \\
+  &amp; = \langle x | f\left(\hat{x}\right) | \Psi \rangle \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details><p>In the Heisenberg picture of quantum mechanics, operators evolve in time while state vectors remain stationary. For an operator <span class="math notranslate nohighlight">\(\hat{A}_H(t)\)</span>, its time evolution is governed by the Heisenberg equation of motion:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\hat{A}_H}{dt} = \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] + \left(\frac{\partial \hat{A}}{\partial t}\right)_H\]</div>
+<p>For fundamental operators like position <span class="math notranslate nohighlight">\(\hat{\mathbf{x}}_H\)</span> and momentum <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}_H\)</span> (assuming no explicit time dependence):</p>
+<div class="math notranslate nohighlight">
+\[\dot{\hat{\mathbf{x}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{x}}_H, \hat{H}_H] = \frac{\hat{\mathbf{p}}_H}{m}\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{\hat{\mathbf{p}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{p}}_H, \hat{H}_H] = -[\nabla V(\hat{\mathbf{x}})]_H\]</div>
+<div class="section" id="commutator-evaluation-using-position-representation">
+<h3><span class="section-number">20.4.4.1.1. </span>Commutator Evaluation using Position Representation<a class="headerlink" href="#commutator-evaluation-using-position-representation" title="Permalink to this heading">#</a></h3>
+<p>Using <span class="math notranslate nohighlight">\(U_{t,t_0} = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)\)</span> to transform operators from Schrödinger to Heisenberg picture:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{p}_a, V(\hat{\mathbf{x}})]\psi = -i\hbar \partial_a (V \psi) + V (i\hbar \partial_a \psi) = -i\hbar (\partial_a V)\psi\]</div>
+<p>Transforming back yields:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{p}_{a,H}, \hat{H}_H] = -i\hbar \left(\frac{\partial V}{\partial x_a}\right)_H\]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="matrix-components-in-energy-basis">
+<h2><span class="section-number">20.4.4.2. </span>2. Matrix Components in Energy Basis<a class="headerlink" href="#matrix-components-in-energy-basis" title="Permalink to this heading">#</a></h2>
+<p>Evaluating the time derivative of matrix elements of an operator <span class="math notranslate nohighlight">\(\hat{A}_H(t)\)</span> between stationary energy eigenstates <span class="math notranslate nohighlight">\(|j\rangle\)</span> and <span class="math notranslate nohighlight">\(|k\rangle\)</span> with energies <span class="math notranslate nohighlight">\(E_j, E_k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\langle j | \hat{A}_H(t) | k \rangle = \langle j | e^{\frac{i}{\hbar}\hat{H}t} \hat{A}_S e^{-\frac{i}{\hbar}\hat{H}t} | k \rangle = \exp\left( \frac{i}{\hbar} (E_j - E_k)t \right) A_{jk}(0)\]</div>
+<p>Defining the transition frequency <span class="math notranslate nohighlight">\(\nu_{jk} = \frac{E_j - E_k}{\hbar} = \omega_{jk}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(A_H)_{jk}(t) = A_{jk}(0) e^{i \omega_{jk} t}\]</div>
+<p>The time derivative of the matrix element gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt} \langle j | \hat{A}_H | k \rangle = i \omega_{jk} A_{jk}(t) = \frac{i}{\hbar} (E_j - E_k) A_{jk}(t)\]</div>
+<p>Directly using the commutator definition:</p>
+<div class="math notranslate nohighlight">
+\[\langle j | \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] | k \rangle = \frac{1}{i\hbar} \sum_m \left( A_{jm} H_{mk} - H_{jm} A_{mk} \right) = \frac{1}{i\hbar} (E_k - E_j) A_{jk} = i \omega_{jk} A_{jk}\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="equations-of-motion-in-the-form-of-hamilton-s-equations">
+<h2><span class="section-number">20.4.4.3. </span>3. Equations of Motion in the Form of Hamilton’s Equations<a class="headerlink" href="#equations-of-motion-in-the-form-of-hamilton-s-equations" title="Permalink to this heading">#</a></h2>
+<p>To express matrix equations analogous to classical canonical equations <span class="math notranslate nohighlight">\(\dot{q} = \frac{\partial H}{\partial p}\)</span> and <span class="math notranslate nohighlight">\(\dot{p} = -\frac{\partial H}{\partial q}\)</span>, we write polynomial function traces or general operator derivatives.</p>
+<p>Given <span class="math notranslate nohighlight">\(\hat{H} = \frac{\hat{\mathbf{p}}^2}{2m} + V(\hat{\mathbf{x}})\)</span>, we examine components:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x}_{a,jk} = \frac{p_{a,jk}}{m} = \left( \frac{\partial H}{\partial p_a} \right)_{jk}\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{p}_{a,jk} = -\left( \frac{\partial V}{\partial x_a} \right)_{jk} = -\left( \frac{\partial H}{\partial x_a} \right)_{jk}\]</div>
+<div class="section" id="general-matrix-product-property">
+<h3><span class="section-number">20.4.4.3.1. </span>General Matrix Product Property<a class="headerlink" href="#general-matrix-product-property" title="Permalink to this heading">#</a></h3>
+<p>For any polynomial in operators, Born and Jordan showed that using trace properties and partial derivatives of matrix components:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial A_{kl}} \mathrm{Tr}(\hat{A}\hat{B}\hat{C}...) = (\hat{B}\hat{C}...)_{lk}\]</div>
+<p>This ensures that the quantum matrix equations preserves the structural symmetry of classical Hamiltonian dynamics.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">
+<h2><span class="section-number">20.4.4.4. </span>4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula<a class="headerlink" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula" title="Permalink to this heading">#</a></h2>
+<p>The fundamental canonical commutation relation is:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{x}, \hat{p}] = i\hbar \hat{I}\]</div>
+<p>Evaluating matrix elements in the energy eigenbasis:</p>
+<div class="math notranslate nohighlight">
+\[\langle j | [\hat{x}, \hat{p}] | k \rangle = \sum_m \left( x_{jm} p_{mk} - p_{jm} x_{mk} \right) = i\hbar \delta_{jk}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(p_{mk} = m \dot{x}_{mk} = i m \omega_{mk} x_{mk}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_m \left( x_{jm} (i m \omega_{mk} x_{mk}) - (i m \omega_{jm} x_{jm}) x_{mk} \right) = i\hbar \delta_{jk}\]</div>
+<p>For the diagonal elements (<span class="math notranslate nohighlight">\(j = k\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[m \sum_m \left( \omega_{mk} |x_{km}|^2 + \omega_{km} |x_{km}|^2 \right) = \hbar \quad \implies \quad \frac{2m}{\hbar} \sum_m \omega_{mk} |x_{km}|^2 = 1\]</div>
+<div class="section" id="connection-to-ladenburg-dispersion-formula">
+<h3><span class="section-number">20.4.4.4.1. </span>Connection to Ladenburg Dispersion Formula<a class="headerlink" href="#connection-to-ladenburg-dispersion-formula" title="Permalink to this heading">#</a></h3>
+<p>In classical optics/early quantum theory, Ladenburg’s quantum dispersion formula for the oscillator strength <span class="math notranslate nohighlight">\(f_{km}\)</span> associated with a transition <span class="math notranslate nohighlight">\(k \to m\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[f_{km} = \frac{2m \omega_{km}}{\hbar} |x_{km}|^2\]</div>
+<p>The diagonal CCR condition directly yields the <strong>Thomas-Reiche-Kuhn (TRK) sum rule</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_m f_{km} = 1\]</div>
+<p>This showed that Heisenberg’s matrix mechanics naturally incorporated the empirically validated dispersion theory of Ladenburg, Kramers, and Kronig.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">
+<h2><span class="section-number">20.4.4.5. </span>5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation<a class="headerlink" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation" title="Permalink to this heading">#</a></h2>
+<p>Historically, Heisenberg and Born arrived at the canonical commutation rule without initially postulating <span class="math notranslate nohighlight">\([\hat{x}, \hat{p}] = i\hbar\)</span>. They reinterpreted classical periodic motion.</p>
+<div class="section" id="bohr-sommerfeld-quantization-rule">
+<h3><span class="section-number">20.4.4.5.1. </span>1. Bohr-Sommerfeld Quantization Rule<a class="headerlink" href="#bohr-sommerfeld-quantization-rule" title="Permalink to this heading">#</a></h3>
+<p>The classical action variable <span class="math notranslate nohighlight">\(J\)</span> is quantized according to:</p>
+<div class="math notranslate nohighlight">
+\[J = \oint p \, dq = \int_0^T p \, \dot{q} \, dt = n h\]</div>
+<p>Using Fourier expansion for classical periodic motion with fundamental frequency <span class="math notranslate nohighlight">\(\omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[q(t) = \sum_\alpha q_\alpha(n) e^{i \alpha \omega t}, \quad p(t) = \sum_\alpha p_\alpha(n) e^{i \alpha \omega t}\]</div>
+<p>The integral yields:</p>
+<div class="math notranslate nohighlight">
+\[J = 2\pi \sum_\alpha \alpha \, q_{-\alpha}(n) p_\alpha(n) m = n h\]</div>
+</div>
+<div class="section" id="born-kramers-reinterpretation-rule">
+<h3><span class="section-number">20.4.4.5.2. </span>2. Born-Kramers Reinterpretation Rule<a class="headerlink" href="#born-kramers-reinterpretation-rule" title="Permalink to this heading">#</a></h3>
+<p>Born recognized that derivatives with respect to the action quantum number <span class="math notranslate nohighlight">\(n\)</span> should be replaced by quantum differences between discrete states <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(n - \alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \Phi(n)}{\partial n} \longrightarrow \frac{\Phi(n, n-\alpha) - \Phi(n-\alpha, n)}{\Delta n} = \Phi_{n, n-\alpha} - \Phi_{n-\alpha, n}\]</div>
+<p>Applying this transition rule to <span class="math notranslate nohighlight">\(1 = \frac{d(nh)}{dn} = \frac{dJ}{dn}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1 = \frac{d}{dn} \left( 2\pi \sum_\alpha \alpha \, p_\alpha(n) q_{-\alpha}(n) \right)\]</div>
+<p>Replacing differential increments with matrix transitions between discrete levels <span class="math notranslate nohighlight">\(n, m, k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1 = \frac{2\pi}{h} \sum_m \left( p_{nm} q_{mn} - q_{nm} p_{mn} \right) \cdot i\]</div>
+<p>Multiplying through by <span class="math notranslate nohighlight">\(\frac{h}{2\pi} = \hbar\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_m (q_{nm} p_{mn} - p_{nm} q_{mn}) = i\hbar\]</div>
+<p>which is precisely the diagonal component of <span class="math notranslate nohighlight">\([\hat{q}, \hat{p}] = i\hbar\)</span>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="application-the-linear-harmonic-oscillator">
+<h2><span class="section-number">20.4.4.6. </span>6. Application: The Linear Harmonic Oscillator<a class="headerlink" href="#application-the-linear-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
+<p>For the harmonic oscillator Hamiltonian <span class="math notranslate nohighlight">\(\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2\)</span>:</p>
+<div class="section" id="equations-of-motion">
+<h3><span class="section-number">20.4.4.6.1. </span>Equations of Motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}\]</div>
+<p>Taking the second time derivative:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{\hat{x}} + \omega_0^2 \hat{x} = 0\]</div>
+<p>In matrix components:</p>
+<div class="math notranslate nohighlight">
+\[(-\omega_{mn}^2 + \omega_0^2) x_{mn} = 0\]</div>
+<p>Thus, non-zero matrix elements <span class="math notranslate nohighlight">\(x_{mn}\)</span> can only exist if <span class="math notranslate nohighlight">\(\omega_{mn} = \pm \omega_0\)</span>, meaning transitions only occur between adjacent levels: <span class="math notranslate nohighlight">\(m = n \pm 1\)</span>.</p>
+</div>
+<div class="section" id="matrix-elements-energy-spectrum">
+<h3><span class="section-number">20.4.4.6.2. </span>Matrix Elements &amp; Energy Spectrum<a class="headerlink" href="#matrix-elements-energy-spectrum" title="Permalink to this heading">#</a></h3>
+<p>Using the diagonal CCR <span class="math notranslate nohighlight">\(\frac{2m}{\hbar} \sum_m \omega_{mn} |x_{nm}|^2 = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{2m\omega_0}{\hbar} \left( |x_{n, n+1}|^2 - |x_{n, n-1}|^2 \right) = 1\]</div>
+<p>With the boundary condition <span class="math notranslate nohighlight">\(x_{0,-1} = 0\)</span> for the ground state:</p>
+<div class="math notranslate nohighlight">
+\[|x_{n, n+1}|^2 = \frac{\hbar}{2m\omega_0} (n+1)\]</div>
+<p>The energy matrix elements give the discrete eigenvalues:</p>
+<div class="math notranslate nohighlight">
+\[E_n = \hbar \omega_0 \left( n + \frac{1}{2} \right)\]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="transition-probabilities-as-dipole-matrix-elements">
+<h2><span class="section-number">20.4.4.7. </span>7. Transition Probabilities as Dipole Matrix Elements<a class="headerlink" href="#transition-probabilities-as-dipole-matrix-elements" title="Permalink to this heading">#</a></h2>
+<p>When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:</p>
+<div class="math notranslate nohighlight">
+\[\hat{V}(t) = - \hat{\mathbf{d}} \cdot \mathbf{E}(t) = - q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\]</div>
+<p>The probability amplitude for a transition from state <span class="math notranslate nohighlight">\(|n\rangle\)</span> to state <span class="math notranslate nohighlight">\(|m\rangle\)</span> is dictated by the matrix element of the position/dipole operator:</p>
+<div class="math notranslate nohighlight">
+\[x_{mn} = \langle m | \hat{x} | n \rangle\]</div>
+<p>The transition rate <span class="math notranslate nohighlight">\(W_{n \to m}\)</span> (spontaneous emission / absorption probability) is proportional to the square of the dipole matrix element:</p>
+<div class="math notranslate nohighlight">
+\[W_{n \to m} \propto |\mathbf{d}_{mn}|^2 = q^2 |\langle m | \hat{\mathbf{x}} | n \rangle|^2\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="perturbation-theory-for-transition-probabilities-in-weak-electric-fields">
+<h2><span class="section-number">20.4.4.8. </span>8. Perturbation Theory for Transition Probabilities in Weak Electric Fields<a class="headerlink" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields" title="Permalink to this heading">#</a></h2>
+<p>Consider a time-dependent perturbation <span class="math notranslate nohighlight">\(\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\)</span>.</p>
+<div class="section" id="first-order-amplitude">
+<h3><span class="section-number">20.4.4.8.1. </span>First-Order Amplitude<a class="headerlink" href="#first-order-amplitude" title="Permalink to this heading">#</a></h3>
+<p>Writing state expansion <span class="math notranslate nohighlight">\(|\psi(t)\rangle = \sum_n c_n(t) e^{-\frac{i}{\hbar}E_n t} |n\rangle\)</span>, the equations for <span class="math notranslate nohighlight">\(c_m(t)\)</span> are:</p>
+<div class="math notranslate nohighlight">
+\[i\hbar \dot{c}_m(t) = \sum_n \langle m | \hat{V}(t) | n \rangle c_n(t) e^{i \omega_{mn} t}\]</div>
+<p>Assuming the system starts in initial state <span class="math notranslate nohighlight">\(c_k(0) = 1\)</span> and <span class="math notranslate nohighlight">\(c_m(0) = 0\)</span> for <span class="math notranslate nohighlight">\(m \neq k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_m^{(1)}(t) = -\frac{i}{\hbar} \int_0^t V_{mk}(t') e^{i \omega_{mk} t'} dt'\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(V_{mk}(t') = -q E_0 x_{mk} \frac{e^{i\omega t'} + e^{-i\omega t'}}{2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_m^{(1)}(t) = \frac{q E_0 x_{mk}}{2\hbar} \left[ \frac{1 - e^{i(\omega_{mk} + \omega)t}}{\omega_{mk} + \omega} + \frac{1 - e^{i(\omega_{mk} - \omega)t}}{\omega_{mk} - \omega} \right]\]</div>
+</div>
+<div class="section" id="resonant-approximation-rotating-wave-approximation">
+<h3><span class="section-number">20.4.4.8.2. </span>Resonant Approximation (Rotating Wave Approximation)<a class="headerlink" href="#resonant-approximation-rotating-wave-approximation" title="Permalink to this heading">#</a></h3>
+<p>Near resonance (<span class="math notranslate nohighlight">\(\omega \approx \omega_{mk}\)</span> with <span class="math notranslate nohighlight">\(E_m &gt; E_k\)</span>):</p>
+<p>The term with denominator <span class="math notranslate nohighlight">\((\omega_{mk} - \omega)\)</span> dominates:</p>
+<div class="math notranslate nohighlight">
+\[|c_m^{(1)}(t)|^2 \approx \frac{q^2 E_0^2 |x_{mk}|^2}{4\hbar^2} \frac{\sin^2\left(\frac{(\omega_{mk} - \omega)t}{2}\right)}{\left(\frac{\omega_{mk} - \omega}{2}\right)^2}\]</div>
+</div>
+<div class="section" id="second-order-expansion-for-c-n-t-2">
+<h3><span class="section-number">20.4.4.8.3. </span>Second-Order Expansion for <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span><a class="headerlink" href="#second-order-expansion-for-c-n-t-2" title="Permalink to this heading">#</a></h3>
+<p>To compute probability to second order without assuming immediate resonance, we expand <span class="math notranslate nohighlight">\(c_k(t)\)</span> and <span class="math notranslate nohighlight">\(c_m(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[|c_k(t)|^2 = 1 + c_k^{(1)}(t) + c_k^{(1)*}(t) + |c_k^{(1)}(t)|^2 + \dots\]</div>
+<p>Since <span class="math notranslate nohighlight">\(V_{kk} = 0\)</span> for parity-symmetric unperturbed states (<span class="math notranslate nohighlight">\(x_{kk} = 0\)</span>), the first-order correction to the initial state <span class="math notranslate nohighlight">\(c_k^{(1)}(t) = 0\)</span>.</p>
+<p>The conservation of total probability yields:</p>
+<div class="math notranslate nohighlight">
+\[|c_k(t)|^2 = 1 - \sum_{m \neq k} |c_m^{(1)}(t)|^2\]</div>
+<p>This confirms that weak external monochromatic fields cause probability transitions whose rates are directly dictated by matrix elements <span class="math notranslate nohighlight">\(x_{mk}\)</span> of Heisenberg’s matrix mechanics.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/quantum-mechanics/history"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="larmor-formula.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">20.4.3. </span>Radiation of moving charges - Larmor’s formula</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="origin-wave-mechanics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">20.5. </span>Origin of wave theory of quantum mechanics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-evaluation-using-position-representation">20.4.4.1.1. Commutator Evaluation using Position Representation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis">20.4.4.2. 2. Matrix Components in Energy Basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-in-the-form-of-hamilton-s-equations">20.4.4.3. 3. Equations of Motion in the Form of Hamilton’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-matrix-product-property">20.4.4.3.1. General Matrix Product Property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.4. 4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ladenburg-dispersion-formula">20.4.4.4.1. Connection to Ladenburg Dispersion Formula</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">20.4.4.5. 5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bohr-sommerfeld-quantization-rule">20.4.4.5.1. 1. Bohr-Sommerfeld Quantization Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#born-kramers-reinterpretation-rule">20.4.4.5.2. 2. Born-Kramers Reinterpretation Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. 6. Application: The Linear Harmonic Oscillator</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">20.4.4.6.1. Equations of Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elements-energy-spectrum">20.4.4.6.2. Matrix Elements &amp; Energy Spectrum</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. 7. Transition Probabilities as Dipole Matrix Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. 8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-amplitude">20.4.4.8.1. First-Order Amplitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-approximation-rotating-wave-approximation">20.4.4.8.2. Resonant Approximation (Rotating Wave Approximation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-expansion-for-c-n-t-2">20.4.4.8.3. Second-Order Expansion for <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
