@@ -485,31 +485,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-evaluation-using-position-representation">20.4.4.1.1. Commutator Evaluation using Position Representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis-of-the-equations-of-motion">20.4.4.2. Matrix components in energy basis of the equations of motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-as-hamilton-s-equations">20.4.4.3. Equations of motion as Hamilton’s equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccr-and-quantization-rule">20.4.4.4. CCR and quantization rule</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-approach-matrix-form-of-the-ccr">20.4.4.4.1. Modern approach. Matrix form of the CCR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-bohr-sommerfeld-quantization-to-ccr">20.4.4.4.2. From Bohr-Sommerfeld quantization to CCR</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis">20.4.4.2. 2. Matrix Components in Energy Basis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-in-the-form-of-hamilton-s-equations">20.4.4.3. 3. Equations of Motion in the Form of Hamilton’s Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-matrix-product-property">20.4.4.3.1. General Matrix Product Property</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.4. 4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ladenburg-dispersion-formula">20.4.4.4.1. Connection to Ladenburg Dispersion Formula</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">20.4.4.5. 5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bohr-sommerfeld-quantization-rule">20.4.4.5.1. 1. Bohr-Sommerfeld Quantization Rule</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#born-kramers-reinterpretation-rule">20.4.4.5.2. 2. Born-Kramers Reinterpretation Rule</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. 6. Application: The Linear Harmonic Oscillator</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">20.4.4.6.1. Equations of Motion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elements-energy-spectrum">20.4.4.6.2. Matrix Elements &amp; Energy Spectrum</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. 7. Transition Probabilities as Dipole Matrix Elements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. 8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.5. CCR in Energy Basis and Ladenburg Dispersion Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. Application: The Linear Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. Transition Probabilities as Dipole Matrix Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-amplitude">20.4.4.8.1. First-Order Amplitude</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-approximation-rotating-wave-approximation">20.4.4.8.2. Resonant Approximation (Rotating Wave Approximation)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-expansion-for-c-n-t-2">20.4.4.8.3. Second-Order Expansion for <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span></a></li>
@@ -538,7 +525,7 @@ document.write(`
 <span class="eqno">(20.5)<a class="headerlink" href="#equation-eq-qm-heisenberg-eoms-1" title="Permalink to this equation">#</a></span>\[\begin{split}\left\{
 \begin{aligned}
   \dot{\hat{\mathbf{x}}}_H &amp; = \frac{1}{i \hbar} \left[ \hat{\mathbf{x}}_H , \hat{H}_H \right] = \frac{\hat{\mathbf{p}}_H}{m} \\
-  \dot{\hat{\mathbf{p}}}_H &amp; = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \\
+  \dot{\hat{\mathbf{p}}}_H &amp; = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H \\
 \end{aligned}
 \right.\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -580,7 +567,7 @@ Details<div class="sd-summary-down docutils">
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="math notranslate nohighlight">\(\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right)\)</span><div class="sd-summary-down docutils">
+<span class="math notranslate nohighlight">\(\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H\)</span><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -612,75 +599,194 @@ Details<div class="sd-summary-down docutils">
 \end{aligned}\end{split}\]</div>
 </div>
 </details></div>
-</details><p>In the Heisenberg picture of quantum mechanics, operators evolve in time while state vectors remain stationary. For an operator <span class="math notranslate nohighlight">\(\hat{A}_H(t)\)</span>, its time evolution is governed by the Heisenberg equation of motion:</p>
+</details></div>
+<div class="section" id="matrix-components-in-energy-basis-of-the-equations-of-motion">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation-eoms-matrix-components"></span><h2><span class="section-number">20.4.4.2. </span>Matrix components in energy basis of the equations of motion<a class="headerlink" href="#matrix-components-in-energy-basis-of-the-equations-of-motion" title="Permalink to this heading">#</a></h2>
+<p>The matrix components in energy basis of the equations of motion <a class="reference internal" href="#equation-eq-qm-heisenberg-eoms-1">(20.5)</a> read</p>
+<div class="math notranslate nohighlight" id="equation-eq-qm-heisenberg-eoms-2">
+<span class="eqno">(20.6)<a class="headerlink" href="#equation-eq-qm-heisenberg-eoms-2" title="Permalink to this equation">#</a></span>\[\begin{split}\left\{
+\begin{aligned}
+ i \omega_{jk} X_{jk}^H &amp; = \frac{P_{jk}^H}{m} \\
+ i \omega_{jk} P_{jk}^H &amp; = - \left( \nabla V \right)^{H}_{jk} \\
+\end{aligned}
+\right.\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\omega_{jk} := \frac{E_j - E_k}{\hbar}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If the Hamiltonian is not an explicit function of time, <span class="math notranslate nohighlight">\(\mathscr{U}_{t,0} = \exp\left[ -i \frac{\hat{H}}{\hbar} t \right]\)</span>, and thus</p>
 <div class="math notranslate nohighlight">
-\[\frac{d\hat{A}_H}{dt} = \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] + \left(\frac{\partial \hat{A}}{\partial t}\right)_H\]</div>
-<p>For fundamental operators like position <span class="math notranslate nohighlight">\(\hat{\mathbf{x}}_H\)</span> and momentum <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}_H\)</span> (assuming no explicit time dependence):</p>
+\[\begin{split}\begin{aligned}
+  \left( \hat{\mathbf{x}}_H  \right)
+  &amp; = \left( | j \rangle \langle j | \hat{\mathbf{x}}_H | k \rangle \langle k | \right) = \\
+  &amp; = \left( | j \rangle \langle j | \mathscr{U}_{t,0}^{\dagger} \hat{\mathbf{x}} \mathscr{U}_{t,0} | k \rangle \langle k | \right) = \\
+  &amp; = | j \rangle \langle k | \left[ \exp\left(- i \frac{E_k-E_j}{\hbar} t  \right) \langle j | \hat{\mathbf{x}} | k \rangle  \right] 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">i.e.</p>
 <div class="math notranslate nohighlight">
-\[\dot{\hat{\mathbf{x}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{x}}_H, \hat{H}_H] = \frac{\hat{\mathbf{p}}_H}{m}\]</div>
+\[X^{H}_{jk}(t) = X^{S}_{jk} \exp\left( i \frac{E_j - E_k}{\hbar} t \right) \ .\]</div>
+<p class="sd-card-text">The time-derivative of the matrix elements of the position operator in Heisenber picture reads</p>
 <div class="math notranslate nohighlight">
-\[\dot{\hat{\mathbf{p}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{p}}_H, \hat{H}_H] = -[\nabla V(\hat{\mathbf{x}})]_H\]</div>
-<div class="section" id="commutator-evaluation-using-position-representation">
-<h3><span class="section-number">20.4.4.1.1. </span>Commutator Evaluation using Position Representation<a class="headerlink" href="#commutator-evaluation-using-position-representation" title="Permalink to this heading">#</a></h3>
-<p>Using <span class="math notranslate nohighlight">\(U_{t,t_0} = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)\)</span> to transform operators from Schrödinger to Heisenberg picture:</p>
-<div class="math notranslate nohighlight">
-\[[\hat{p}_a, V(\hat{\mathbf{x}})]\psi = -i\hbar \partial_a (V \psi) + V (i\hbar \partial_a \psi) = -i\hbar (\partial_a V)\psi\]</div>
-<p>Transforming back yields:</p>
-<div class="math notranslate nohighlight">
-\[[\hat{p}_{a,H}, \hat{H}_H] = -i\hbar \left(\frac{\partial V}{\partial x_a}\right)_H\]</div>
+\[\dot{X}^{H}_{jk} = i \omega_{jk} X^{S}_{jk} \exp\left( i \omega_{jk} t \right) = i \omega_{jk} X^H_{jk} \ ,\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\omega_{jk} := \frac{E_j - E_k}{\hbar}\)</span>.</p>
 </div>
+</details></div>
+<div class="section" id="equations-of-motion-as-hamilton-s-equations">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation-hamilton-eqns"></span><h2><span class="section-number">20.4.4.3. </span>Equations of motion as Hamilton’s equations<a class="headerlink" href="#equations-of-motion-as-hamilton-s-equations" title="Permalink to this heading">#</a></h2>
+<p>The equations of motion <a class="reference internal" href="#equation-eq-qm-heisenberg-eoms-1">(20.5)</a>, or <a class="reference internal" href="#equation-eq-qm-heisenberg-eoms-2">(20.6)</a>, can be recast in the form of Hamilton’s equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{
+\begin{aligned}
+  \dot{\hat{\mathbf{q}}}_H &amp; = \dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{p}}_H} \\
+  \dot{\hat{\mathbf{p}}}_H &amp; =-\dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{q}}_H} \\
+\end{aligned}
+\right.
+\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{
+\begin{aligned}
+  \dot{X}^{H}_{jk} &amp; = \dfrac{\partial \mathsf{H}}{\partial P^{H}_{jk}} \\
+  \dot{P}^{H}_{jk} &amp; =-\dfrac{\partial \mathsf{H}}{\partial Q^{H}_{jk}} \\
+\end{aligned}
+\right.
+\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathsf{H} = \text{tr} \left( \hat{H} \right) = \sum_a \langle a | \hat{H} | a \rangle \)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 </div>
-<hr class="docutils" />
-<div class="section" id="matrix-components-in-energy-basis">
-<h2><span class="section-number">20.4.4.2. </span>2. Matrix Components in Energy Basis<a class="headerlink" href="#matrix-components-in-energy-basis" title="Permalink to this heading">#</a></h2>
-<p>Evaluating the time derivative of matrix elements of an operator <span class="math notranslate nohighlight">\(\hat{A}_H(t)\)</span> between stationary energy eigenstates <span class="math notranslate nohighlight">\(|j\rangle\)</span> and <span class="math notranslate nohighlight">\(|k\rangle\)</span> with energies <span class="math notranslate nohighlight">\(E_j, E_k\)</span>:</p>
+</details></div>
+<div class="section" id="ccr-and-quantization-rule">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation-ccr-quantization-rule"></span><h2><span class="section-number">20.4.4.4. </span>CCR and quantization rule<a class="headerlink" href="#ccr-and-quantization-rule" title="Permalink to this heading">#</a></h2>
+<div class="section" id="modern-approach-matrix-form-of-the-ccr">
+<h3><span class="section-number">20.4.4.4.1. </span>Modern approach. Matrix form of the CCR<a class="headerlink" href="#modern-approach-matrix-form-of-the-ccr" title="Permalink to this heading">#</a></h3>
+<p>Given the CCR</p>
 <div class="math notranslate nohighlight">
-\[\langle j | \hat{A}_H(t) | k \rangle = \langle j | e^{\frac{i}{\hbar}\hat{H}t} \hat{A}_S e^{-\frac{i}{\hbar}\hat{H}t} | k \rangle = \exp\left( \frac{i}{\hbar} (E_j - E_k)t \right) A_{jk}(0)\]</div>
-<p>Defining the transition frequency <span class="math notranslate nohighlight">\(\nu_{jk} = \frac{E_j - E_k}{\hbar} = \omega_{jk}\)</span>:</p>
+\[\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = \mathbb{I} i \hbar \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,\]</div>
+<p>its matrix components are</p>
+<div class="math notranslate nohighlight" id="equation-eq-qm-heisenberg-ccr-matrix">
+<span class="eqno">(20.7)<a class="headerlink" href="#equation-eq-qm-heisenberg-ccr-matrix" title="Permalink to this equation">#</a></span>\[\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  &amp; = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[(A_H)_{jk}(t) = A_{jk}(0) e^{i \omega_{jk} t}\]</div>
-<p>The time derivative of the matrix element gives:</p>
-<div class="math notranslate nohighlight">
-\[\frac{d}{dt} \langle j | \hat{A}_H | k \rangle = i \omega_{jk} A_{jk}(t) = \frac{i}{\hbar} (E_j - E_k) A_{jk}(t)\]</div>
-<p>Directly using the commutator definition:</p>
-<div class="math notranslate nohighlight">
-\[\langle j | \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] | k \rangle = \frac{1}{i\hbar} \sum_m \left( A_{jm} H_{mk} - H_{jm} A_{mk} \right) = \frac{1}{i\hbar} (E_k - E_j) A_{jk} = i \omega_{jk} A_{jk}\]</div>
+\[\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  &amp; = \langle j | i \hbar \delta_{ab} | k \rangle = \\
+  &amp; = \langle j | \left[ \hat{x}_a , \hat{p}_b \right] k \rangle = \\
+  &amp; = \langle j | \hat{x}_a \hat{p}_b - \hat{p}_b \hat{x}_a | k \rangle = \\
+  &amp; = \sum_{\ell} \left\{ \langle j | \hat{x}_a | \ell \rangle \langle \ell | \hat{p}_b | k \rangle - \langle j | \hat{p}_b | \ell \rangle \langle \ell | \hat{x}_a | k \rangle \right\} = \\
+  &amp; = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\end{split}\]</div>
 </div>
-<hr class="docutils" />
-<div class="section" id="equations-of-motion-in-the-form-of-hamilton-s-equations">
-<h2><span class="section-number">20.4.4.3. </span>3. Equations of Motion in the Form of Hamilton’s Equations<a class="headerlink" href="#equations-of-motion-in-the-form-of-hamilton-s-equations" title="Permalink to this heading">#</a></h2>
-<p>To express matrix equations analogous to classical canonical equations <span class="math notranslate nohighlight">\(\dot{q} = \frac{\partial H}{\partial p}\)</span> and <span class="math notranslate nohighlight">\(\dot{p} = -\frac{\partial H}{\partial q}\)</span>, we write polynomial function traces or general operator derivatives.</p>
-<p>Given <span class="math notranslate nohighlight">\(\hat{H} = \frac{\hat{\mathbf{p}}^2}{2m} + V(\hat{\mathbf{x}})\)</span>, we examine components:</p>
-<div class="math notranslate nohighlight">
-\[\dot{x}_{a,jk} = \frac{p_{a,jk}}{m} = \left( \frac{\partial H}{\partial p_a} \right)_{jk}\]</div>
-<div class="math notranslate nohighlight">
-\[\dot{p}_{a,jk} = -\left( \frac{\partial V}{\partial x_a} \right)_{jk} = -\left( \frac{\partial H}{\partial x_a} \right)_{jk}\]</div>
-<div class="section" id="general-matrix-product-property">
-<h3><span class="section-number">20.4.4.3.1. </span>General Matrix Product Property<a class="headerlink" href="#general-matrix-product-property" title="Permalink to this heading">#</a></h3>
-<p>For any polynomial in operators, Born and Jordan showed that using trace properties and partial derivatives of matrix components:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial}{\partial A_{kl}} \mathrm{Tr}(\hat{A}\hat{B}\hat{C}...) = (\hat{B}\hat{C}...)_{lk}\]</div>
-<p>This ensures that the quantum matrix equations preserves the structural symmetry of classical Hamiltonian dynamics.</p>
+</details><p>…</p>
 </div>
+<div class="section" id="from-bohr-sommerfeld-quantization-to-ccr">
+<h3><span class="section-number">20.4.4.4.2. </span>From Bohr-Sommerfeld quantization to CCR<a class="headerlink" href="#from-bohr-sommerfeld-quantization-to-ccr" title="Permalink to this heading">#</a></h3>
+<p>In old quantum mechanics - i.e. quantum mechanics before a quantum mechanics theory - Bohr-Sommerfeld quantization rule was</p>
+<div class="math notranslate nohighlight">
+\[J = n h = \oint p_n d q_n = \oint p_n \dot{q}_n \, dt \]</div>
+<p><strong>Classical trajectory.</strong> Using Fourier series of a periodic trajectory,</p>
+<div class="math notranslate nohighlight">
+\[q_n(t) = \sum_{\alpha} q_\alpha(n) e^{i \alpha \omega_n t} \ ,\]</div>
+<p>the time derivative of <span class="math notranslate nohighlight">\(q_n(t)\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \dot{q}_n(t) &amp; = \sum_{\alpha} i \alpha \omega_n q_{\alpha}(n) e^{i \alpha \omega_n t} \ ,
+\end{aligned}\]</div>
+<p>while momentum can be written as</p>
+<div class="math notranslate nohighlight">
+\[p_n(t) = \sum_{\beta} p_\beta(n) e^{i \beta \omega_n t} \ ,\]</div>
+<p>Using these expression in the Bohr-Sommerfeld quantization rule,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  J
+  &amp; = \dots = \\
+  &amp; = i \, 2 \pi \sum_{\alpha} \alpha p^*_{\alpha}(n) q_{\alpha}(n) \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that the derivative w.r.t. <span class="math notranslate nohighlight">\(J\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[1 = i \, 2 \pi \sum_{\alpha} \alpha \dfrac{\partial}{\partial J} \left( p^*_{\alpha}(n) q_{\alpha}(n) \right) \ . \]</div>
+<p><strong>Quantum reinterpretation.</strong> Let a function <span class="math notranslate nohighlight">\(\Phi(n,\alpha)\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \Phi(n, \alpha) - \Phi(n - \alpha, \alpha) 
+  &amp; \sim \alpha \partial_n \Phi(n, \alpha) + o(\alpha) = \\
+  &amp; = \alpha h \partial_J \Phi(n, \alpha) + o(\alpha) \ ,
+\end{aligned}\end{split}\]</div>
+<p>and the <strong>Born-Kramers correspondence principle follows</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Phi(n, \alpha) - \Phi(n - \alpha, \alpha) }{ h } \sim \alpha \dfrac{\partial \Phi}{\partial J} (n, \alpha) \ .\]</div>
+<p>Let <span class="math notranslate nohighlight">\(p_\alpha(n) = p(n,\alpha) = p_{n+\alpha,n}\)</span>, then the reinterpretation of the classical quantization rule gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  1
+  &amp; = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  &amp; = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - \sum_\alpha p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  &amp; = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p_{n,n+\alpha} q_{n+\alpha,n}   - \sum_\alpha q_{n,n-\alpha} p_{n-\alpha,n}  \right\} = \\
+  &amp; = \frac{1}{i \hbar} \sum_{\alpha} \left\{  q_{n,\alpha} p_{\alpha,n} - p_{n,\alpha} q_{\alpha,n} \right\}
+\end{aligned}\end{split}\]</div>
+<p>These relations are nothing but the diagonal components of the matrix form <a class="reference internal" href="#equation-eq-qm-heisenberg-ccr-matrix">(20.7)</a> of the CCR. The out-of-diagonal components are identically zero, as P.Jordan proved with the following trick</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+How P.Jordan proved that out-of-diagonal components of the CCR are identically zero<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">…</p>
 </div>
-<hr class="docutils" />
-<div class="section" id="canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">
-<h2><span class="section-number">20.4.4.4. </span>4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula<a class="headerlink" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula" title="Permalink to this heading">#</a></h2>
-<p>The fundamental canonical commutation relation is:</p>
+</details></div>
+</div>
+<div class="section" id="ccr-in-energy-basis-and-ladenburg-dispersion-formula">
+<span id="quantum-mechanics-history-heisenberg-reinterpretation-ccr-ladenburg"></span><h2><span class="section-number">20.4.4.5. </span>CCR in Energy Basis and Ladenburg Dispersion Formula<a class="headerlink" href="#ccr-in-energy-basis-and-ladenburg-dispersion-formula" title="Permalink to this heading">#</a></h2>
+<p>Introducing the expression of matrix components of the momentum <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}_H = m \dot{\hat{\mathbf{x}}}_H\)</span>, <span class="math notranslate nohighlight">\(P^a_{jk} = i m \omega_{jk} X^{a}_{jk}\)</span> into the matrix form <a class="reference internal" href="#equation-eq-qm-heisenberg-ccr-matrix">(20.7)</a> of the CCR relation</p>
 <div class="math notranslate nohighlight">
-\[[\hat{x}, \hat{p}] = i\hbar \hat{I}\]</div>
-<p>Evaluating matrix elements in the energy eigenbasis:</p>
+\[\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  &amp; = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} = \\
+  &amp; = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{j \ell} X^{b}_{\ell k} - i m \omega_{j \ell} X^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\end{split}\]</div>
+<p>The diagonal components <span class="math notranslate nohighlight">\(j = k\)</span> are</p>
 <div class="math notranslate nohighlight">
-\[\langle j | [\hat{x}, \hat{p}] | k \rangle = \sum_m \left( x_{jm} p_{mk} - p_{jm} x_{mk} \right) = i\hbar \delta_{jk}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(p_{mk} = m \dot{x}_{mk} = i m \omega_{mk} x_{mk}\)</span>:</p>
+\[\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} 
+  &amp; = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{b}_{\ell k} - i m \omega_{k \ell} X^{b}_{k \ell} X^{a}_{\ell k} \right\} = \\
+\end{aligned}\end{split}\]</div>
+<p>If <span class="math notranslate nohighlight">\(a = b\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\sum_m \left( x_{jm} (i m \omega_{mk} x_{mk}) - (i m \omega_{jm} x_{jm}) x_{mk} \right) = i\hbar \delta_{jk}\]</div>
-<p>For the diagonal elements (<span class="math notranslate nohighlight">\(j = k\)</span>):</p>
+\[\begin{split}\begin{aligned}
+  i \hbar 
+  &amp; = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a}_{\ell k} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a}_{\ell k} \right\} = \\
+  &amp; = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a \, *}_{k \ell} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a \, *}_{k \ell} \right\} = \\
+  &amp; = i 2 m \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that</p>
 <div class="math notranslate nohighlight">
-\[m \sum_m \left( \omega_{mk} |x_{km}|^2 + \omega_{km} |x_{km}|^2 \right) = \hbar \quad \implies \quad \frac{2m}{\hbar} \sum_m \omega_{mk} |x_{km}|^2 = 1\]</div>
-<div class="section" id="connection-to-ladenburg-dispersion-formula">
-<h3><span class="section-number">20.4.4.4.1. </span>Connection to Ladenburg Dispersion Formula<a class="headerlink" href="#connection-to-ladenburg-dispersion-formula" title="Permalink to this heading">#</a></h3>
-<p>In classical optics/early quantum theory, Ladenburg’s quantum dispersion formula for the oscillator strength <span class="math notranslate nohighlight">\(f_{km}\)</span> associated with a transition <span class="math notranslate nohighlight">\(k \to m\)</span> is defined as:</p>
+\[
+ \frac{2 m}{\hbar} \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  = 1 \ .
+\]</div>
+<p><strong>todo</strong> <em>CHECK if there’s a factor <span class="math notranslate nohighlight">\(3\)</span>, summing over all the components indexed by <span class="math notranslate nohighlight">\(a\)</span></em></p>
+<p><strong>Connection to Ladenburg Dispersion Formula.</strong>
+In classical optics/early quantum theory, Ladenburg’s quantum dispersion formula for the oscillator strength <span class="math notranslate nohighlight">\(f_{km}\)</span> associated with a transition <span class="math notranslate nohighlight">\(k \to m\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[f_{km} = \frac{2m \omega_{km}}{\hbar} |x_{km}|^2\]</div>
 <p>The diagonal CCR condition directly yields the <strong>Thomas-Reiche-Kuhn (TRK) sum rule</strong>:</p>
@@ -688,72 +794,39 @@ Details<div class="sd-summary-down docutils">
 \[\sum_m f_{km} = 1\]</div>
 <p>This showed that Heisenberg’s matrix mechanics naturally incorporated the empirically validated dispersion theory of Ladenburg, Kramers, and Kronig.</p>
 </div>
-</div>
-<hr class="docutils" />
-<div class="section" id="historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">
-<h2><span class="section-number">20.4.4.5. </span>5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation<a class="headerlink" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation" title="Permalink to this heading">#</a></h2>
-<p>Historically, Heisenberg and Born arrived at the canonical commutation rule without initially postulating <span class="math notranslate nohighlight">\([\hat{x}, \hat{p}] = i\hbar\)</span>. They reinterpreted classical periodic motion.</p>
-<div class="section" id="bohr-sommerfeld-quantization-rule">
-<h3><span class="section-number">20.4.4.5.1. </span>1. Bohr-Sommerfeld Quantization Rule<a class="headerlink" href="#bohr-sommerfeld-quantization-rule" title="Permalink to this heading">#</a></h3>
-<p>The classical action variable <span class="math notranslate nohighlight">\(J\)</span> is quantized according to:</p>
-<div class="math notranslate nohighlight">
-\[J = \oint p \, dq = \int_0^T p \, \dot{q} \, dt = n h\]</div>
-<p>Using Fourier expansion for classical periodic motion with fundamental frequency <span class="math notranslate nohighlight">\(\omega\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[q(t) = \sum_\alpha q_\alpha(n) e^{i \alpha \omega t}, \quad p(t) = \sum_\alpha p_\alpha(n) e^{i \alpha \omega t}\]</div>
-<p>The integral yields:</p>
-<div class="math notranslate nohighlight">
-\[J = 2\pi \sum_\alpha \alpha \, q_{-\alpha}(n) p_\alpha(n) m = n h\]</div>
-</div>
-<div class="section" id="born-kramers-reinterpretation-rule">
-<h3><span class="section-number">20.4.4.5.2. </span>2. Born-Kramers Reinterpretation Rule<a class="headerlink" href="#born-kramers-reinterpretation-rule" title="Permalink to this heading">#</a></h3>
-<p>Born recognized that derivatives with respect to the action quantum number <span class="math notranslate nohighlight">\(n\)</span> should be replaced by quantum differences between discrete states <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(n - \alpha\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial \Phi(n)}{\partial n} \longrightarrow \frac{\Phi(n, n-\alpha) - \Phi(n-\alpha, n)}{\Delta n} = \Phi_{n, n-\alpha} - \Phi_{n-\alpha, n}\]</div>
-<p>Applying this transition rule to <span class="math notranslate nohighlight">\(1 = \frac{d(nh)}{dn} = \frac{dJ}{dn}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[1 = \frac{d}{dn} \left( 2\pi \sum_\alpha \alpha \, p_\alpha(n) q_{-\alpha}(n) \right)\]</div>
-<p>Replacing differential increments with matrix transitions between discrete levels <span class="math notranslate nohighlight">\(n, m, k\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[1 = \frac{2\pi}{h} \sum_m \left( p_{nm} q_{mn} - q_{nm} p_{mn} \right) \cdot i\]</div>
-<p>Multiplying through by <span class="math notranslate nohighlight">\(\frac{h}{2\pi} = \hbar\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\sum_m (q_{nm} p_{mn} - p_{nm} q_{mn}) = i\hbar\]</div>
-<p>which is precisely the diagonal component of <span class="math notranslate nohighlight">\([\hat{q}, \hat{p}] = i\hbar\)</span>.</p>
-</div>
-</div>
-<hr class="docutils" />
 <div class="section" id="application-the-linear-harmonic-oscillator">
-<h2><span class="section-number">20.4.4.6. </span>6. Application: The Linear Harmonic Oscillator<a class="headerlink" href="#application-the-linear-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
-<p>For the harmonic oscillator Hamiltonian <span class="math notranslate nohighlight">\(\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2\)</span>:</p>
-<div class="section" id="equations-of-motion">
-<h3><span class="section-number">20.4.4.6.1. </span>Equations of Motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}\]</div>
-<p>Taking the second time derivative:</p>
+<h2><span class="section-number">20.4.4.6. </span>Application: The Linear Harmonic Oscillator<a class="headerlink" href="#application-the-linear-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Linear harmonic oscillator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For the harmonic oscillator Hamiltonian <span class="math notranslate nohighlight">\(\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2\)</span>:</p>
+<p class="sd-card-text"><strong>Equations of Motion.</strong>
+$<span class="math notranslate nohighlight">\(\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}\)</span>$</p>
+<p class="sd-card-text">Taking the second time derivative:</p>
 <div class="math notranslate nohighlight">
 \[\ddot{\hat{x}} + \omega_0^2 \hat{x} = 0\]</div>
-<p>In matrix components:</p>
+<p class="sd-card-text">In matrix components:</p>
 <div class="math notranslate nohighlight">
 \[(-\omega_{mn}^2 + \omega_0^2) x_{mn} = 0\]</div>
-<p>Thus, non-zero matrix elements <span class="math notranslate nohighlight">\(x_{mn}\)</span> can only exist if <span class="math notranslate nohighlight">\(\omega_{mn} = \pm \omega_0\)</span>, meaning transitions only occur between adjacent levels: <span class="math notranslate nohighlight">\(m = n \pm 1\)</span>.</p>
-</div>
-<div class="section" id="matrix-elements-energy-spectrum">
-<h3><span class="section-number">20.4.4.6.2. </span>Matrix Elements &amp; Energy Spectrum<a class="headerlink" href="#matrix-elements-energy-spectrum" title="Permalink to this heading">#</a></h3>
-<p>Using the diagonal CCR <span class="math notranslate nohighlight">\(\frac{2m}{\hbar} \sum_m \omega_{mn} |x_{nm}|^2 = 1\)</span>:</p>
+<p class="sd-card-text">Thus, non-zero matrix elements <span class="math notranslate nohighlight">\(x_{mn}\)</span> can only exist if <span class="math notranslate nohighlight">\(\omega_{mn} = \pm \omega_0\)</span>, meaning transitions only occur between adjacent levels: <span class="math notranslate nohighlight">\(m = n \pm 1\)</span>.</p>
+<p class="sd-card-text"><strong>Matrix Elements &amp; Energy Spectrum.</strong>
+Using the diagonal CCR <span class="math notranslate nohighlight">\(\frac{2m}{\hbar} \sum_m \omega_{mn} |x_{nm}|^2 = 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{2m\omega_0}{\hbar} \left( |x_{n, n+1}|^2 - |x_{n, n-1}|^2 \right) = 1\]</div>
-<p>With the boundary condition <span class="math notranslate nohighlight">\(x_{0,-1} = 0\)</span> for the ground state:</p>
+<p class="sd-card-text">With the boundary condition <span class="math notranslate nohighlight">\(x_{0,-1} = 0\)</span> for the ground state:</p>
 <div class="math notranslate nohighlight">
 \[|x_{n, n+1}|^2 = \frac{\hbar}{2m\omega_0} (n+1)\]</div>
-<p>The energy matrix elements give the discrete eigenvalues:</p>
+<p class="sd-card-text">The energy matrix elements give the discrete eigenvalues:</p>
 <div class="math notranslate nohighlight">
 \[E_n = \hbar \omega_0 \left( n + \frac{1}{2} \right)\]</div>
 </div>
-</div>
-<hr class="docutils" />
+</details></div>
 <div class="section" id="transition-probabilities-as-dipole-matrix-elements">
-<h2><span class="section-number">20.4.4.7. </span>7. Transition Probabilities as Dipole Matrix Elements<a class="headerlink" href="#transition-probabilities-as-dipole-matrix-elements" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">20.4.4.7. </span>Transition Probabilities as Dipole Matrix Elements<a class="headerlink" href="#transition-probabilities-as-dipole-matrix-elements" title="Permalink to this heading">#</a></h2>
 <p>When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:</p>
 <div class="math notranslate nohighlight">
 \[\hat{V}(t) = - \hat{\mathbf{d}} \cdot \mathbf{E}(t) = - q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\]</div>
@@ -764,9 +837,8 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[W_{n \to m} \propto |\mathbf{d}_{mn}|^2 = q^2 |\langle m | \hat{\mathbf{x}} | n \rangle|^2\]</div>
 </div>
-<hr class="docutils" />
 <div class="section" id="perturbation-theory-for-transition-probabilities-in-weak-electric-fields">
-<h2><span class="section-number">20.4.4.8. </span>8. Perturbation Theory for Transition Probabilities in Weak Electric Fields<a class="headerlink" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">20.4.4.8. </span>Perturbation Theory for Transition Probabilities in Weak Electric Fields<a class="headerlink" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields" title="Permalink to this heading">#</a></h2>
 <p>Consider a time-dependent perturbation <span class="math notranslate nohighlight">\(\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\)</span>.</p>
 <div class="section" id="first-order-amplitude">
 <h3><span class="section-number">20.4.4.8.1. </span>First-Order Amplitude<a class="headerlink" href="#first-order-amplitude" title="Permalink to this heading">#</a></h3>
@@ -864,31 +936,18 @@ Details<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutator-evaluation-using-position-representation">20.4.4.1.1. Commutator Evaluation using Position Representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heisenberg-equations-of-motion-in-the-heisenberg-picture">20.4.4.1. Heisenberg Equations of Motion in the Heisenberg Picture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis-of-the-equations-of-motion">20.4.4.2. Matrix components in energy basis of the equations of motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-as-hamilton-s-equations">20.4.4.3. Equations of motion as Hamilton’s equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccr-and-quantization-rule">20.4.4.4. CCR and quantization rule</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modern-approach-matrix-form-of-the-ccr">20.4.4.4.1. Modern approach. Matrix form of the CCR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-bohr-sommerfeld-quantization-to-ccr">20.4.4.4.2. From Bohr-Sommerfeld quantization to CCR</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-components-in-energy-basis">20.4.4.2. 2. Matrix Components in Energy Basis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion-in-the-form-of-hamilton-s-equations">20.4.4.3. 3. Equations of Motion in the Form of Hamilton’s Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-matrix-product-property">20.4.4.3.1. General Matrix Product Property</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations-ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.4. 4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ladenburg-dispersion-formula">20.4.4.4.1. Connection to Ladenburg Dispersion Formula</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-derivation-of-ccr-bohr-sommerfeld-quantization-and-born-kramers-reinterpretation">20.4.4.5. 5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bohr-sommerfeld-quantization-rule">20.4.4.5.1. 1. Bohr-Sommerfeld Quantization Rule</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#born-kramers-reinterpretation-rule">20.4.4.5.2. 2. Born-Kramers Reinterpretation Rule</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. 6. Application: The Linear Harmonic Oscillator</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">20.4.4.6.1. Equations of Motion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elements-energy-spectrum">20.4.4.6.2. Matrix Elements &amp; Energy Spectrum</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. 7. Transition Probabilities as Dipole Matrix Elements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. 8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccr-in-energy-basis-and-ladenburg-dispersion-formula">20.4.4.5. CCR in Energy Basis and Ladenburg Dispersion Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-linear-harmonic-oscillator">20.4.4.6. Application: The Linear Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-probabilities-as-dipole-matrix-elements">20.4.4.7. Transition Probabilities as Dipole Matrix Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-for-transition-probabilities-in-weak-electric-fields">20.4.4.8. Perturbation Theory for Transition Probabilities in Weak Electric Fields</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-amplitude">20.4.4.8.1. First-Order Amplitude</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-approximation-rotating-wave-approximation">20.4.4.8.2. Resonant Approximation (Rotating Wave Approximation)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-expansion-for-c-n-t-2">20.4.4.8.3. Second-Order Expansion for <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span></a></li>

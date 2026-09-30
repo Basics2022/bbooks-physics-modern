@@ -14,7 +14,7 @@ Applying this relation to the position and momentum operators, $\hat{\mathbf{x}}
 $$\left\{
 \begin{aligned}
   \dot{\hat{\mathbf{x}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{x}}_H , \hat{H}_H \right] = \frac{\hat{\mathbf{p}}_H}{m} \\
-  \dot{\hat{\mathbf{p}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \\
+  \dot{\hat{\mathbf{p}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H \\
 \end{aligned}
 \right.$$ (eq:qm:heisenberg:eoms-1)
 
@@ -45,7 +45,7 @@ since
     \end{aligned}$$
 ```
 
-```{dropdown} $\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right)$
+```{dropdown} $\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H$
 
 $$\begin{aligned}
   \left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] 
@@ -78,86 +78,212 @@ $$\begin{aligned}
 
 ````
 
+(quantum-mechanics:history:heisenberg-reinterpretation:eoms-matrix-components)=
+## Matrix components in energy basis of the equations of motion
 
-In the Heisenberg picture of quantum mechanics, operators evolve in time while state vectors remain stationary. For an operator $\hat{A}_H(t)$, its time evolution is governed by the Heisenberg equation of motion:
+The matrix components in energy basis of the equations of motion {eq}`eq:qm:heisenberg:eoms-1` read
 
-$$\frac{d\hat{A}_H}{dt} = \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] + \left(\frac{\partial \hat{A}}{\partial t}\right)_H$$
+$$\left\{
+\begin{aligned}
+ i \omega_{jk} X_{jk}^H & = \frac{P_{jk}^H}{m} \\
+ i \omega_{jk} P_{jk}^H & = - \left( \nabla V \right)^{H}_{jk} \\
+\end{aligned}
+\right.$$ (eq:qm:heisenberg:eoms-2)
 
-For fundamental operators like position $\hat{\mathbf{x}}_H$ and momentum $\hat{\mathbf{p}}_H$ (assuming no explicit time dependence):
+with $\omega_{jk} := \frac{E_j - E_k}{\hbar}$.
 
-$$\dot{\hat{\mathbf{x}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{x}}_H, \hat{H}_H] = \frac{\hat{\mathbf{p}}_H}{m}$$
 
-$$\dot{\hat{\mathbf{p}}}_H = \frac{1}{i\hbar} [\hat{\mathbf{p}}_H, \hat{H}_H] = -[\nabla V(\hat{\mathbf{x}})]_H$$
+````{dropdown} Details
 
-### Commutator Evaluation using Position Representation
-Using $U_{t,t_0} = \exp\left(-\frac{i}{\hbar}\hat{H}(t - t_0)\right)$ to transform operators from Schrödinger to Heisenberg picture:
+If the Hamiltonian is not an explicit function of time, $\mathscr{U}_{t,0} = \exp\left[ -i \frac{\hat{H}}{\hbar} t \right]$, and thus
 
-$$[\hat{p}_a, V(\hat{\mathbf{x}})]\psi = -i\hbar \partial_a (V \psi) + V (i\hbar \partial_a \psi) = -i\hbar (\partial_a V)\psi$$
+$$\begin{aligned}
+  \left( \hat{\mathbf{x}}_H  \right)
+  & = \left( | j \rangle \langle j | \hat{\mathbf{x}}_H | k \rangle \langle k | \right) = \\
+  & = \left( | j \rangle \langle j | \mathscr{U}_{t,0}^{\dagger} \hat{\mathbf{x}} \mathscr{U}_{t,0} | k \rangle \langle k | \right) = \\
+  & = | j \rangle \langle k | \left[ \exp\left(- i \frac{E_k-E_j}{\hbar} t  \right) \langle j | \hat{\mathbf{x}} | k \rangle  \right] 
+\end{aligned}$$
 
-Transforming back yields:
+i.e. 
 
-$$[\hat{p}_{a,H}, \hat{H}_H] = -i\hbar \left(\frac{\partial V}{\partial x_a}\right)_H$$
+$$X^{H}_{jk}(t) = X^{S}_{jk} \exp\left( i \frac{E_j - E_k}{\hbar} t \right) \ .$$
 
----
+The time-derivative of the matrix elements of the position operator in Heisenber picture reads
 
-## 2. Matrix Components in Energy Basis
+$$\dot{X}^{H}_{jk} = i \omega_{jk} X^{S}_{jk} \exp\left( i \omega_{jk} t \right) = i \omega_{jk} X^H_{jk} \ ,$$
 
-Evaluating the time derivative of matrix elements of an operator $\hat{A}_H(t)$ between stationary energy eigenstates $|j\rangle$ and $|k\rangle$ with energies $E_j, E_k$:
+with $\omega_{jk} := \frac{E_j - E_k}{\hbar}$.
 
-$$\langle j | \hat{A}_H(t) | k \rangle = \langle j | e^{\frac{i}{\hbar}\hat{H}t} \hat{A}_S e^{-\frac{i}{\hbar}\hat{H}t} | k \rangle = \exp\left( \frac{i}{\hbar} (E_j - E_k)t \right) A_{jk}(0)$$
 
-Defining the transition frequency $\nu_{jk} = \frac{E_j - E_k}{\hbar} = \omega_{jk}$:
+````
 
-$$(A_H)_{jk}(t) = A_{jk}(0) e^{i \omega_{jk} t}$$
+(quantum-mechanics:history:heisenberg-reinterpretation:hamilton-eqns)=
+## Equations of motion as Hamilton's equations
 
-The time derivative of the matrix element gives:
+The equations of motion {eq}`eq:qm:heisenberg:eoms-1`, or {eq}`eq:qm:heisenberg:eoms-2`, can be recast in the form of Hamilton's equations
 
-$$\frac{d}{dt} \langle j | \hat{A}_H | k \rangle = i \omega_{jk} A_{jk}(t) = \frac{i}{\hbar} (E_j - E_k) A_{jk}(t)$$
+$$
+\left\{
+\begin{aligned}
+  \dot{\hat{\mathbf{q}}}_H & = \dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{p}}_H} \\
+  \dot{\hat{\mathbf{p}}}_H & =-\dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{q}}_H} \\
+\end{aligned}
+\right.
+$$
 
-Directly using the commutator definition:
+and
 
-$$\langle j | \frac{1}{i\hbar} [\hat{A}_H, \hat{H}_H] | k \rangle = \frac{1}{i\hbar} \sum_m \left( A_{jm} H_{mk} - H_{jm} A_{mk} \right) = \frac{1}{i\hbar} (E_k - E_j) A_{jk} = i \omega_{jk} A_{jk}$$
+$$
+\left\{
+\begin{aligned}
+  \dot{X}^{H}_{jk} & = \dfrac{\partial \mathsf{H}}{\partial P^{H}_{jk}} \\
+  \dot{P}^{H}_{jk} & =-\dfrac{\partial \mathsf{H}}{\partial Q^{H}_{jk}} \\
+\end{aligned}
+\right.
+$$
 
----
+with $\mathsf{H} = \text{tr} \left( \hat{H} \right) = \sum_a \langle a | \hat{H} | a \rangle $.
 
-## 3. Equations of Motion in the Form of Hamilton's Equations
+````{dropdown} Details
+:open:
 
-To express matrix equations analogous to classical canonical equations $\dot{q} = \frac{\partial H}{\partial p}$ and $\dot{p} = -\frac{\partial H}{\partial q}$, we write polynomial function traces or general operator derivatives.
 
-Given $\hat{H} = \frac{\hat{\mathbf{p}}^2}{2m} + V(\hat{\mathbf{x}})$, we examine components:
 
-$$\dot{x}_{a,jk} = \frac{p_{a,jk}}{m} = \left( \frac{\partial H}{\partial p_a} \right)_{jk}$$
 
-$$\dot{p}_{a,jk} = -\left( \frac{\partial V}{\partial x_a} \right)_{jk} = -\left( \frac{\partial H}{\partial x_a} \right)_{jk}$$
+````
 
-### General Matrix Product Property
-For any polynomial in operators, Born and Jordan showed that using trace properties and partial derivatives of matrix components:
+(quantum-mechanics:history:heisenberg-reinterpretation:ccr-quantization-rule)=
+## CCR and quantization rule
 
-$$\frac{\partial}{\partial A_{kl}} \mathrm{Tr}(\hat{A}\hat{B}\hat{C}...) = (\hat{B}\hat{C}...)_{lk}$$
+### Modern approach. Matrix form of the CCR
 
-This ensures that the quantum matrix equations preserves the structural symmetry of classical Hamiltonian dynamics.
+Given the CCR 
 
----
+$$\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = \mathbb{I} i \hbar \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,$$
 
-## 4. Canonical Commutation Relations (CCR) in Energy Basis and Ladenburg Dispersion Formula
+its matrix components are
 
-The fundamental canonical commutation relation is:
+$$\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}$$ (eq:qm:heisenberg:ccr-matrix)
 
-$$[\hat{x}, \hat{p}] = i\hbar \hat{I}$$
 
-Evaluating matrix elements in the energy eigenbasis:
+```{dropdown} Details
 
-$$\langle j | [\hat{x}, \hat{p}] | k \rangle = \sum_m \left( x_{jm} p_{mk} - p_{jm} x_{mk} \right) = i\hbar \delta_{jk}$$
+$$\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \langle j | i \hbar \delta_{ab} | k \rangle = \\
+  & = \langle j | \left[ \hat{x}_a , \hat{p}_b \right] k \rangle = \\
+  & = \langle j | \hat{x}_a \hat{p}_b - \hat{p}_b \hat{x}_a | k \rangle = \\
+  & = \sum_{\ell} \left\{ \langle j | \hat{x}_a | \ell \rangle \langle \ell | \hat{p}_b | k \rangle - \langle j | \hat{p}_b | \ell \rangle \langle \ell | \hat{x}_a | k \rangle \right\} = \\
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}$$
 
-Since $p_{mk} = m \dot{x}_{mk} = i m \omega_{mk} x_{mk}$:
+```
+...
 
-$$\sum_m \left( x_{jm} (i m \omega_{mk} x_{mk}) - (i m \omega_{jm} x_{jm}) x_{mk} \right) = i\hbar \delta_{jk}$$
+### From Bohr-Sommerfeld quantization to CCR
 
-For the diagonal elements ($j = k$):
+In old quantum mechanics - i.e. quantum mechanics before a quantum mechanics theory - Bohr-Sommerfeld quantization rule was
 
-$$m \sum_m \left( \omega_{mk} |x_{km}|^2 + \omega_{km} |x_{km}|^2 \right) = \hbar \quad \implies \quad \frac{2m}{\hbar} \sum_m \omega_{mk} |x_{km}|^2 = 1$$
+$$J = n h = \oint p_n d q_n = \oint p_n \dot{q}_n \, dt $$
 
-### Connection to Ladenburg Dispersion Formula
+**Classical trajectory.** Using Fourier series of a periodic trajectory,
+
+$$q_n(t) = \sum_{\alpha} q_\alpha(n) e^{i \alpha \omega_n t} \ ,$$
+
+the time derivative of $q_n(t)$ reads
+
+$$\begin{aligned}
+  \dot{q}_n(t) & = \sum_{\alpha} i \alpha \omega_n q_{\alpha}(n) e^{i \alpha \omega_n t} \ ,
+\end{aligned}$$
+
+while momentum can be written as
+
+$$p_n(t) = \sum_{\beta} p_\beta(n) e^{i \beta \omega_n t} \ ,$$
+
+Using these expression in the Bohr-Sommerfeld quantization rule,
+
+$$\begin{aligned}
+  J
+  & = \dots = \\
+  & = i \, 2 \pi \sum_{\alpha} \alpha p^*_{\alpha}(n) q_{\alpha}(n) \ ,
+\end{aligned}$$
+
+so that the derivative w.r.t. $J$ reads
+
+$$1 = i \, 2 \pi \sum_{\alpha} \alpha \dfrac{\partial}{\partial J} \left( p^*_{\alpha}(n) q_{\alpha}(n) \right) \ . $$
+
+
+**Quantum reinterpretation.** Let a function $\Phi(n,\alpha)$, then
+
+$$\begin{aligned}
+  \Phi(n, \alpha) - \Phi(n - \alpha, \alpha) 
+  & \sim \alpha \partial_n \Phi(n, \alpha) + o(\alpha) = \\
+  & = \alpha h \partial_J \Phi(n, \alpha) + o(\alpha) \ ,
+\end{aligned}$$
+
+and the **Born-Kramers correspondence principle follows**,
+
+$$\frac{\Phi(n, \alpha) - \Phi(n - \alpha, \alpha) }{ h } \sim \alpha \dfrac{\partial \Phi}{\partial J} (n, \alpha) \ .$$
+
+Let $p_\alpha(n) = p(n,\alpha) = p_{n+\alpha,n}$, then the reinterpretation of the classical quantization rule gives
+
+$$\begin{aligned}
+  1
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - \sum_\alpha p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p_{n,n+\alpha} q_{n+\alpha,n}   - \sum_\alpha q_{n,n-\alpha} p_{n-\alpha,n}  \right\} = \\
+  & = \frac{1}{i \hbar} \sum_{\alpha} \left\{  q_{n,\alpha} p_{\alpha,n} - p_{n,\alpha} q_{\alpha,n} \right\}
+\end{aligned}$$
+
+These relations are nothing but the diagonal components of the matrix form {eq}`eq:qm:heisenberg:ccr-matrix` of the CCR. The out-of-diagonal components are identically zero, as P.Jordan proved with the following trick
+
+```{dropdown} How P.Jordan proved that out-of-diagonal components of the CCR are identically zero
+:open:
+
+...
+
+```
+
+
+(quantum-mechanics:history:heisenberg-reinterpretation:ccr-ladenburg)=
+## CCR in Energy Basis and Ladenburg Dispersion Formula
+
+Introducing the expression of matrix components of the momentum $\hat{\mathbf{p}}_H = m \dot{\hat{\mathbf{x}}}_H$, $P^a_{jk} = i m \omega_{jk} X^{a}_{jk}$ into the matrix form {eq}`eq:qm:heisenberg:ccr-matrix` of the CCR relation
+
+$$\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} = \\
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{j \ell} X^{b}_{\ell k} - i m \omega_{j \ell} X^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}$$
+
+The diagonal components $j = k$ are
+
+$$\begin{aligned}
+  i \hbar \delta_{ab} 
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{b}_{\ell k} - i m \omega_{k \ell} X^{b}_{k \ell} X^{a}_{\ell k} \right\} = \\
+\end{aligned}$$
+
+If $a = b$,
+
+$$\begin{aligned}
+  i \hbar 
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a}_{\ell k} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a}_{\ell k} \right\} = \\
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a \, *}_{k \ell} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a \, *}_{k \ell} \right\} = \\
+  & = i 2 m \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  \ ,
+\end{aligned}$$
+
+so that 
+
+$$
+ \frac{2 m}{\hbar} \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  = 1 \ .
+$$
+
+**todo** *CHECK if there's a factor $3$, summing over all the components indexed by $a$*
+
+**Connection to Ladenburg Dispersion Formula.**
 In classical optics/early quantum theory, Ladenburg’s quantum dispersion formula for the oscillator strength $f_{km}$ associated with a transition $k \to m$ is defined as:
 
 $$f_{km} = \frac{2m \omega_{km}}{\hbar} |x_{km}|^2$$
@@ -168,51 +294,15 @@ $$\sum_m f_{km} = 1$$
 
 This showed that Heisenberg's matrix mechanics naturally incorporated the empirically validated dispersion theory of Ladenburg, Kramers, and Kronig.
 
----
 
-## 5. Historical Derivation of CCR: Bohr-Sommerfeld Quantization and Born-Kramers Reinterpretation
+## Application: The Linear Harmonic Oscillator
 
-Historically, Heisenberg and Born arrived at the canonical commutation rule without initially postulating $[\hat{x}, \hat{p}] = i\hbar$. They reinterpreted classical periodic motion.
 
-### 1. Bohr-Sommerfeld Quantization Rule
-The classical action variable $J$ is quantized according to:
-
-$$J = \oint p \, dq = \int_0^T p \, \dot{q} \, dt = n h$$
-
-Using Fourier expansion for classical periodic motion with fundamental frequency $\omega$:
-
-$$q(t) = \sum_\alpha q_\alpha(n) e^{i \alpha \omega t}, \quad p(t) = \sum_\alpha p_\alpha(n) e^{i \alpha \omega t}$$
-
-The integral yields:
-
-$$J = 2\pi \sum_\alpha \alpha \, q_{-\alpha}(n) p_\alpha(n) m = n h$$
-
-### 2. Born-Kramers Reinterpretation Rule
-Born recognized that derivatives with respect to the action quantum number $n$ should be replaced by quantum differences between discrete states $n$ and $n - \alpha$:
-
-$$\frac{\partial \Phi(n)}{\partial n} \longrightarrow \frac{\Phi(n, n-\alpha) - \Phi(n-\alpha, n)}{\Delta n} = \Phi_{n, n-\alpha} - \Phi_{n-\alpha, n}$$
-
-Applying this transition rule to $1 = \frac{d(nh)}{dn} = \frac{dJ}{dn}$:
-
-$$1 = \frac{d}{dn} \left( 2\pi \sum_\alpha \alpha \, p_\alpha(n) q_{-\alpha}(n) \right)$$
-
-Replacing differential increments with matrix transitions between discrete levels $n, m, k$:
-
-$$1 = \frac{2\pi}{h} \sum_m \left( p_{nm} q_{mn} - q_{nm} p_{mn} \right) \cdot i$$
-
-Multiplying through by $\frac{h}{2\pi} = \hbar$:
-
-$$\sum_m (q_{nm} p_{mn} - p_{nm} q_{mn}) = i\hbar$$
-
-which is precisely the diagonal component of $[\hat{q}, \hat{p}] = i\hbar$.
-
----
-
-## 6. Application: The Linear Harmonic Oscillator
+```{dropdown} Linear harmonic oscillator
 
 For the harmonic oscillator Hamiltonian $\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2$:
 
-### Equations of Motion
+**Equations of Motion.**
 $$\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}$$
 
 Taking the second time derivative:
@@ -225,7 +315,7 @@ $$(-\omega_{mn}^2 + \omega_0^2) x_{mn} = 0$$
 
 Thus, non-zero matrix elements $x_{mn}$ can only exist if $\omega_{mn} = \pm \omega_0$, meaning transitions only occur between adjacent levels: $m = n \pm 1$.
 
-### Matrix Elements & Energy Spectrum
+**Matrix Elements & Energy Spectrum.**
 Using the diagonal CCR $\frac{2m}{\hbar} \sum_m \omega_{mn} |x_{nm}|^2 = 1$:
 
 $$\frac{2m\omega_0}{\hbar} \left( |x_{n, n+1}|^2 - |x_{n, n-1}|^2 \right) = 1$$
@@ -238,9 +328,9 @@ The energy matrix elements give the discrete eigenvalues:
 
 $$E_n = \hbar \omega_0 \left( n + \frac{1}{2} \right)$$
 
----
+```
 
-## 7. Transition Probabilities as Dipole Matrix Elements
+## Transition Probabilities as Dipole Matrix Elements
 
 When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:
 
@@ -254,9 +344,8 @@ The transition rate $W_{n \to m}$ (spontaneous emission / absorption probability
 
 $$W_{n \to m} \propto |\mathbf{d}_{mn}|^2 = q^2 |\langle m | \hat{\mathbf{x}} | n \rangle|^2$$
 
----
 
-## 8. Perturbation Theory for Transition Probabilities in Weak Electric Fields
+## Perturbation Theory for Transition Probabilities in Weak Electric Fields
 
 Consider a time-dependent perturbation $\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)$.
 

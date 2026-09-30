@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Sep 22, 2026}
+\date{Sep 30, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -210,11 +210,19 @@ Quantum Mechanics
 
 \item {} 
 \sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture::doc}]{\sphinxcrossref{Interaction picture, perturbation theory and Einstein coefficients}}}
+
+\item {} 
+\sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/history::doc}]{\sphinxcrossref{Historical Approach to Quantum Mechanics}}}
 
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/atom-models::doc}]{\sphinxcrossref{Atomic models}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics::doc}]{\sphinxcrossref{Analtycal Mechanics \sphinxhyphen{} Notes for Quantum Mechanics}}}
 
 \end{itemize}
 \end{itemize}
@@ -3404,9 +3412,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : \PYGZhy{}16.0
-N. of spin up: 493
-Magnetization: \PYGZhy{}38
+Energy       : 12.0
+N. of spin up: 496
+Magnetization: \PYGZhy{}32
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -3417,14 +3425,39 @@ Magnetization: \PYGZhy{}38
 \PYG{g+gWhitespace}{     }\PYG{l+m+mi}{17} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Run Metropolis\PYGZhy{}Hastings algorithm}
 \PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{18} \PYG{n}{Es}\PYG{p}{,} \PYG{n}{Ms}\PYG{p}{,} \PYG{n}{states} \PYG{o}{=} \PYG{n}{isi}\PYG{o}{.}\PYG{n}{metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{p}{(}\PYG{n}{n\PYGZus{}steps}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}\PYG{p}{,} \PYG{n}{output\PYGZus{}states}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
 
-\PYG{n+nn}{Cell In[2], line 81,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
+\PYG{n+nn}{Cell In[2], line 79,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{77} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update output arrays}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{78} \PYG{n}{Es} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n}{E} \PYG{p}{]}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
 \PYG{g+gWhitespace}{     }\PYG{l+m+mi}{80} \PYG{k}{if} \PYG{n}{output\PYGZus{}states}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{82}                                       \PYG{c+c1}{\PYGZsh{} or dumping method. Don\PYGZsq{}t store the state}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{83}                                       \PYG{c+c1}{\PYGZsh{} at all the timesteps.}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{84} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update step index}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{85} \PYG{n}{i\PYGZus{}step} \PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
+
+\PYG{n+nn}{Cell In[2], line 56,} in \PYG{n+ni}{IsingLattice.compute\PYGZus{}total\PYGZus{}magnetization}\PYG{n+nt}{(self)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{54} \PYG{k}{def} \PYG{n+nf}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{p}{)}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{55}\PYG{+w}{     }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}  \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{56}     \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZlt{}\PYGZus{}\PYGZus{}array\PYGZus{}function\PYGZus{}\PYGZus{} internals\PYGZgt{}:200,} in \PYG{n+ni}{sum}\PYG{n+nt}{(*args, **kwargs)}
+
+\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:2324,} in \PYG{n+ni}{sum}\PYG{n+nt}{(a, axis, dtype, out, keepdims, initial, where)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2321}         \PYG{k}{return} \PYG{n}{out}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2322}     \PYG{k}{return} \PYG{n}{res}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2324} \PYG{k}{return} \PYG{n}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{add}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sum}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{n}{keepdims}\PYG{o}{=}\PYG{n}{keepdims}\PYG{p}{,}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2325}                       \PYG{n}{initial}\PYG{o}{=}\PYG{n}{initial}\PYG{p}{,} \PYG{n}{where}\PYG{o}{=}\PYG{n}{where}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:70,} in \PYG{n+ni}{\PYGZus{}wrapreduction}\PYG{n+nt}{(obj, ufunc, method, axis, dtype, out, **kwargs)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{69} \PYG{k}{def} \PYG{n+nf}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{ufunc}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
+\PYG{n+nn}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} 70     passkwargs = \PYGZob{}k: v for k, v} in \PYG{n+ni}{kwargs.items}\PYG{n+nt}{()}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{71}                   \PYG{k}{if} \PYG{n}{v} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{np}\PYG{o}{.}\PYG{n}{\PYGZus{}NoValue}\PYG{p}{\PYGZcb{}}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{73}     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{mu}\PYG{o}{.}\PYG{n}{ndarray}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{74}         \PYG{k}{try}\PYG{p}{:}
+
+\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:71,} in \PYG{n+ni}{\PYGZlt{}dictcomp\PYGZgt{}}\PYG{n+nt}{(.0)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{69} \PYG{k}{def} \PYG{n+nf}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{ufunc}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
+\PYG{n+nn}{     70     passkwargs = \PYGZob{}k: v for k, v} in \PYG{n+ni}{kwargs.items}\PYG{n+nt}{()}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{71}                   \PYG{k}{if} \PYG{n}{v} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{np}\PYG{o}{.}\PYG{n}{\PYGZus{}NoValue}\PYG{p}{\PYGZcb{}}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{73}     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{mu}\PYG{o}{.}\PYG{n}{ndarray}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{74}         \PYG{k}{try}\PYG{p}{:}
 
 \PYG{n+ne}{KeyboardInterrupt}: 
 \end{sphinxVerbatim}
@@ -4399,7 +4432,7 @@ having defined the counterpart in Heisenberg picture, \(\hat{A}_H(t) = U^{\dagge
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Time derivative of the operator \(\hat{A}_H(t)\).}
-\begin{equation*}
+\begin{equation}\label{equation:ch/quantum-mechanics/intro:eq:qm:heisenberg:dAdt}
 \begin{split}\begin{aligned}
   \dfrac{d}{dt} \hat{A}_H(t)
   & = \dfrac{d}{dt} \left( U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} \right) = \\
@@ -4408,7 +4441,7 @@ having defined the counterpart in Heisenberg picture, \(\hat{A}_H(t) = U^{\dagge
   & = - \frac{1}{i \hbar} U^{\dagger}_{t,t_0} \hat{H} U_{t,t_0} U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} + U^{\dagger}_{t,t_0} \partial_t \hat{A} U_{t,t_0} +\frac{1}{i \hbar}  U^{\dagger}_{t,t_0} \hat{A} U_{t,t_0} U^{\dagger}_{t,t_0}  \hat{H} U_{t,t_0} = \\
   & = - \frac{1}{i\hbar} \left[ \hat{H}_H, \hat{A}_H \right] + \left( \partial_t \hat{A} \right)_H  \ ,
 \end{aligned}\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 as the relation \eqref{equation:ch/quantum-mechanics/wave-mechanics:eq:h-u-dtu} gives \(\partial_t U_{t,t_0} U^{\dagger}_{t,t_0} = \frac{1}{i \hbar} \hat{H}\),
 
@@ -5527,8 +5560,152 @@ The components of the reduced density operator in the system basis are
 \sphinxstepscope
 
 
+\chapter{Interaction picture, perturbation theory and Einstein coefficients}
+\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:interaction-picture-perturbation-theory-and-einstein-coefficients}}\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:quantum-mechanics-einstein-coeffs-interaction-picture}}\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture::doc}}
+
+\section{Interaction picture}
+\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:interaction-picture}}\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:quantum-mechanics-einstein-coeffs-interaction-picture-interaction}}
+\sphinxAtStartPar
+Interaction picture is a common and useful description of a system whose Hamiltonian cna be written as the sum of a term \(\hat{H}_0\) that’s well known and solvable, and \(\hat{H}_1\) that’s a perturbation to the system \(0\), and it’s usually either time\sphinxhyphen{}dependent and/or hard to solve analytically,
+\begin{equation*}
+\begin{split}\hat{H} = \hat{H}_0 + \hat{H}_1 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(\hat{H}_0\) is time\sphinxhyphen{}independent, the corresponding unitary evolution operator is \(U^{(0)} = \exp\left[ i \dfrac{\hat{H}_0}\hbar t \right]\).
+
+\sphinxAtStartPar
+A state vector in interaction picture, \(| \Psi_I(t) \rangle\) is defined as
+\begin{equation*}
+\begin{split}| \Psi_{I} (t) \rangle = U^{(0) \, \dagger} | \Psi_S(t) \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(| \Psi_S(t) \rangle\) the state vector in Schrodinger picture.
+
+\sphinxAtStartPar
+If one requires that the expectation value of operators is the same using different pictures,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \hat{A}_I \rangle
+  & = \langle \Psi_I | \hat{A}_I | \Psi_I \rangle = \\
+  & = \langle \Psi_S | \underbrace{U^{(0)} \hat{A}_I U^{(0) \, \dagger}}_{=\hat{A}_S} | \Psi_S \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+it follows that \(\hat{A}_I(t) = U^{(0) \, \dagger}(t,t_0) \hat{A}_S U^{(0)}(t,t_0)\). From the commutation of \(\hat{H}_0\) with \(U^{(0)}\), it follows that it has the same expression in Schrodinger and interaction picture, \(H^{(0)}_I = H^{(0)}_S\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Time evolutions.}
+\subsubsection*{Time evolution of a state \protect\(\ | \Psi_I(t) \rangle\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \dfrac{d}{dt} | \Psi_I \rangle 
+  & = \hat{H}^{(1)}_I | \Psi_I \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \dfrac{d}{dt} | \Psi_I \rangle 
+  & = i \hbar \dfrac{d}{dt} \left[ U^{(0) \, \dagger}(t,t_0) | \Psi_S \rangle  \right] = \\
+  & = i \hbar \left[ \partial_t U^{(0) \, \dagger}(t,t_0) | \Psi_S \rangle + U^{(0) \, \dagger} \dfrac{d}{dt} | \Psi_S \rangle  \right] = \\
+  & = - U^{(0) \, \dagger} \hat{H}_0 | \Psi_S \rangle + U^{(0) \, \dagger} \left( \hat{H}^{(0)} + \hat{H}^{(1)} \right) | \Psi_S \rangle = \\
+  & = \underbrace{U^{(0) \, \dagger} \hat{H}^{(1)} U^{(0)}}_{\hat{H}^{(1)}_I} \, \underbrace{U^{(0) \, \dagger} | \Psi_S \rangle}_{| \Psi_I \rangle} = \\
+  & = \hat{H}^{(1)}_I | \Psi_I \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+recalling that \(\hat{H}^{(0)} = i \hbar \, \partial_t U^{(0)} U^{(0) \, \dagger} = - i \hbar U^{(0)} \partial_t U^{(0) \, \dagger}\), and that the Hamiltonian operator is Hermitian, \(\hat{H} = \hat{H}^{\dagger}\).
+\subsubsection*{Time evolution of an operator \protect\(\hat{A}_I(t)\protect\)}
+\subsubsection*{Details}
+
+
+\section{Perturbation theory}
+\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:perturbation-theory}}\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:quantum-mechanics-einstein-coeffs-interaction-picture-perturbation}}
+\sphinxAtStartPar
+For an isolated system with time\sphinxhyphen{}independent Hamiltonian operator \(\hat{H}_0\), the state of the system can be written as a linear combination of the eigenstates of the Hamiltonian operator
+\begin{equation*}
+\begin{split}| \Psi(t) \rangle = | n \rangle a_n(t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(a_n(t) = a_n(0) \exp\left( - i \frac{E_n}{\hbar} t \right) = \langle n | \Psi(0) \rangle \exp\left( - i \frac{E_n}{\hbar} t \right) \).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Time varying perturbation theory.} The state of the perturbed system is can be written as a linear combination of the eigenstates of the unperturbed Hamiltonian as well \sphinxhyphen{} here explicitly writing a factor \(e^{-i E_n t / \hbar}\) in the coefficient,
+\begin{equation*}
+\begin{split}| \Psi(t) \rangle = | n \rangle c_n(t) e^{-i E_n t / \hbar} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that for unperturbed systems \(c_n(t) = a_{n,0}\) constant. Inserting this expression in the Schrodinger equation of the system provides dynamical equations for the coefficients \(c_n(t)\), i.e.
+\begin{equation*}
+\begin{split}\begin{aligned}
+ 0
+ & = - i \hbar \dfrac{d}{dt} | \Psi \rangle + \left( \hat{H}_0 + \hat{H}_1(t) \right) | \Psi \rangle = \\
+ & = \sum_n \left[ \left( - i \hbar \dot{c}_n - c_n \, E_n + c_n \, E_n \right) | n \rangle + \hat{H}_1 | n \rangle c_n \right] e^{-i E_n t/\hbar} \\
+ & = \sum_n \left[ - i \hbar \dot{c}_n |  n \rangle + \hat{H}_1 | n \rangle c_n \right] e^{-i E_n t/\hbar} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Projecting on \(\langle m |\), a system of an infinite number of equations follows
+\begin{equation*}
+\begin{split}\dot{c}_m = - \frac{i}{\hbar} \sum_{n} \langle m | \hat{H}_1 | n \rangle c_n \, e^{i \frac{E_m - E_n}{\hbar} t} \ .\end{split}
+\end{equation*}
+
+\section{Einstein coefficients}
+\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:einstein-coefficients}}\label{\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:quantum-mechanics-einstein-coeffs-interaction-picture-einstein-coeffs}}
+\sphinxAtStartPar
+Perturbation theory is applied to an electron around a steady positive nucleus, subject to time\sphinxhyphen{}varying electric field. The classical counterpart of the governing equation of a point charge subject to Coulomb potential and a travelling wave in the electric field
+\begin{equation*}
+\begin{split}\mathbf{e}(\mathbf{r},t) = 2 \mathbf{E}_0 \cos( \omega t - \mathbf{k} \cdot \mathbf{r} ) = q \mathbf{E}_0 ( e^{i(\omega t - \mathbf{k}\cdot \mathbf{r})} + c.c. ) \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+reads
+\begin{equation*}
+\begin{split}m \ddot{\mathbf{r}} + \dfrac{q^2}{4 \pi \varepsilon} \dfrac{\mathbf{r}}{|\mathbf{r}|^3} = 2 q \mathbf{E}_0 \cos(\omega t - \mathbf{k} \cdot \mathbf{r}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Dipole approximation} assumes that the displacement of the charged particle is small compared to the wave\sphinxhyphen{}length of the radiation, \(\mathbf{k} \cdot \mathbf{r} = \frac{ \hat{\mathbf{k}} \cdot \mathbf{r} }{2 \pi \lambda} \ll 1\), and thus the dynamic equation becomes
+\begin{equation*}
+\begin{split}m \ddot{\mathbf{r}} + \dfrac{q^2}{4 \pi \varepsilon} \dfrac{\mathbf{r}}{|\mathbf{r}|^3} = 2 q \mathbf{E}_0 \cos(\omega t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The total force is the sum of the Coulomb force and the force due to the incoming electric field. This sum can be written as a gradient of a scalar function, a potential \(V\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{F} 
+  & = - \dfrac{q^2}{4 \pi \varepsilon} \dfrac{\mathbf{r}}{|\mathbf{r}|^3} + 2 q \mathbf{E}_0 \cos(2 \pi \, \nu \, t) = \\
+  & = \nabla_{\mathbf{r}} \left[ \dfrac{q^2}{4 \pi \varepsilon}\dfrac{1}{|\mathbf{r}|} + 2 q \mathbf{r} \cdot \mathbf{E}_0 \cos(2 \pi \, \nu \, t) \right] = \\
+  & = - \nabla_{\mathbf{r}} \left( V_0(\mathbf{r}) + V_1(\mathbf{r},t) \right) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that can be written as the stationary potential \(V_0\) from Coulomb force and the time\sphinxhyphen{}varying perturbation \(V_1(\mathbf{r},t)\). The vector \(q \mathbf{r}\) is usually defined as the \sphinxstylestrong{electric dipole}.
+
+\sphinxAtStartPar
+Schrodinger equation follows from the promotion of the Hamiltonian function \(H = K + V\) to the Hamiltonian operator
+\begin{equation*}
+\begin{split}\hat{H} = \hat{H}_0 + \hat{H}_1(t) = \hat{H}_0 + 2 \mathbf{E}_0 \cdot q \hat{\mathbf{r}} \, \cos(2 \pi \nu t ) \ .\end{split}
+\end{equation*}
+
+
+\sphinxstepscope
+
+
 \chapter{Historical Approach to Quantum Mechanics}
-\label{\detokenize{ch/quantum-mechanics/history:historical-approach-to-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/history:quantum-mechanics-history}}\label{\detokenize{ch/quantum-mechanics/history::doc}}\subsubsection*{References}
+\label{\detokenize{ch/quantum-mechanics/history:historical-approach-to-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/history:quantum-mechanics-history}}\label{\detokenize{ch/quantum-mechanics/history::doc}}\subsubsection*{Contents}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/timeline:quantum-mechanics-history-timeline}]{\sphinxcrossref{\DUrole{std,std-ref}{Timelime}}}} and {\hyperref[\detokenize{ch/quantum-mechanics/history/topics:quantum-mechanics-history-topics}]{\sphinxcrossref{\DUrole{std,std-ref}{topics}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/origin-matrix-mechanics:quantum-mehcanics-history-origin-matrix-mechanics}]{\sphinxcrossref{\DUrole{std,std-ref}{Origin of matrix mechanics}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/origin-wave-mechanics:quantum-mehcanics-history-origin-wave-mechanics}]{\sphinxcrossref{\DUrole{std,std-ref}{Origin of wave mechanics}}}}
+
+\end{itemize}
+\subsubsection*{References}
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -5812,21 +5989,191 @@ in 1927, Dirac calculated Einstein coefficients (The Quantum Theory of Emission 
 \sphinxstepscope
 
 
+\section{Origins of Matrix and Wave Quantum Mechanics}
+\label{\detokenize{ch/quantum-mechanics/history/origins:origins-of-matrix-and-wave-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origins:quantum-mechanics-history-origins}}\label{\detokenize{ch/quantum-mechanics/history/origins::doc}}
+
+\subsection{Origins of Matrix Mechanics}
+\label{\detokenize{ch/quantum-mechanics/history/origins:origins-of-matrix-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origins:quantum-mechanics-history-origins-matrix-mechanics}}\subsubsection*{Quantization of radiation energy.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Planck (1900), Einstein photoelectric effect (1905) and heat capacity of the solids: introduction and evidences of \(h\), \(E = h \nu\)
+\begin{equation}\label{equation:ch/quantum-mechanics/history/origins:eq:history:planck-radiation-formula}
+\begin{split}u(\nu, T) = \dots\end{split}
+\end{equation}
+\end{itemize}
+\subsubsection*{Light\sphinxhyphen{}matter interaction and light dispersion.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+First experimental evidences: Cauchy; Sellmeier (1872) proposed an empirical law for the refraction index \(n\) taking into account resonances of matter; {\hyperref[\detokenize{ch/quantum-mechanics/history/light-dispersion:quantum-mechanics-history-dispersion-classical-drude-lorentz}]{\sphinxcrossref{\DUrole{std,std-ref}{Lorentz\sphinxhyphen{}Drude}}}} (1900\sphinxhyphen{}1905) provided a theoretical model of Sellmeier formula, using Maxwell equations for electromagentism,
+\begin{equation}\label{equation:ch/quantum-mechanics/history/origins:eq:history:lorenz-drude}
+\begin{split}n - 1 = \dfrac{q^2 N}{2 \varepsilon m} \dfrac{1}{\omega_0^2 - \omega^2 + i \gamma \omega} \approx \dfrac{q^2 N}{2 \varepsilon m} \dfrac{1}{\omega_0^2 - \omega^2}  \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+being \(m\) and \(q\) the mass and the charge of a particle, \(N\) the number density of the charged particles, \(\omega_0\) the natural frequency and \(\gamma\) a damping coefficient of the dynamical equation governing the dynamics of the particle, \(m \ddot{x} + m \gamma \omega \dot{x} + m \omega_0^2 x = q E(t)\).
+
+\item {} 
+\sphinxAtStartPar
+Einstein (1916): quantum theory of the radiation interacting with matter.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Statistics of the equilibrium of radiation and matter, with the processes of absorption, spontaneous emission and stimulated emissions. He introduced Einstein coefficiens as proportionality constants
+
+\item {} 
+\sphinxAtStartPar
+E. theory connected Bohr’s atomic with Planck’s radiation formula \eqref{equation:ch/quantum-mechanics/history/origins:eq:history:planck-radiation-formula}: matching Planck’s formula induces relationss between Einstein coefficients,
+\begin{equation*}
+\begin{split}
+    \dfrac{A_{jk}}{B_{kj}} \dfrac{g_j}{g_k} = \dfrac{8 \pi \nu^3}{c^3}
+    \qquad , \qquad                        
+    \dfrac{B_{jk}}{B_{kj}} \dfrac{g_j}{g_k} = 1 \ .
+    \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Einstein didn’t know how to compute \(A_{ik}\), \(B_{jk}\), \(B_{kj}\), but he was confident that it would have been possible to do so, once a theory of quanta was established.
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+Ladenburg (1914\sphinxhyphen{}24)
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+a material may have more than one resonance. The generalization of the formula \eqref{equation:ch/quantum-mechanics/history/origins:eq:history:lorenz-drude} for the refractive index \(n\) from Lorentz\sphinxhyphen{}Drude model reads
+\begin{equation*}
+\begin{split}n - 1 = \dfrac{q^2}{2 \varepsilon m} \sum_{k} \dfrac{N_k}{\omega_k^2 - \omega^2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(N_k\) the “number density of particles”%
+\begin{footnote}[1]\sphinxAtStartFootnote
+This should be interpreted as a weight representing the contribution of mode \(k\).
+%
+\end{footnote} with natural frequency \(f_k = \dfrac{\omega_k}{2 \pi}\).
+
+\item {} 
+\sphinxAtStartPar
+But what’s the meaning of \(N_k\)? Ladenburg compared the averaged emitted power from {\hyperref[\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Larmor’s formula}}}}} \eqref{equation:ch/quantum-mechanics/history/larmor-formula:eq:larmor:quadratic:power-energy} \sphinxhyphen{} the classical model \sphinxhyphen{} and the emitted power by {\hyperref[\detokenize{ch/quantum-mechanics/history::doc}]{\sphinxcrossref{\DUrole{doc,std,std-doc}{\sphinxstylestrong{Planck’s formula}}}}}, or by {\hyperref[\detokenize{ch/quantum-mechanics/history::doc}]{\sphinxcrossref{\DUrole{doc,std,std-doc}{\sphinxstylestrong{Einstein quantum theory of interaction of radiation and matter}}}}} \sphinxhyphen{} the quantum model, for a frequency \(\nu_{ij}\). The power emitted by \(R\) resonators per unit volume is
+
+\sphinxAtStartPar
+…
+
+
+\subsubsection*{Dimensional analysis}
+\begin{equation*}
+\begin{split}\begin{aligned}
+[ \langle \Phi_1 \rangle ] & = \dfrac{\text{power}}{\text{n.parts}} \\
+[ R ] & = \dfrac{\text{n.parts}}{\text{length}^3} \\
+[ \langle P \rangle ] & = \dfrac{\text{power}}{\text{length}^3} \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\rho(\nu) = \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+–>
+
+\end{itemize}
+
+\end{itemize}
+\subsubsection*{Particle\sphinxhyphen{}wave duality.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Einstein (1909): radiation has wave and particle behavior
+
+\end{itemize}
+\subsubsection*{Atomic models.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Bohr atomic model (1913).
+
+\end{itemize}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
 \section{Timeline}
 \label{\detokenize{ch/quantum-mechanics/history/timeline:timeline}}\label{\detokenize{ch/quantum-mechanics/history/timeline:quantum-mechanics-history-timeline}}\label{\detokenize{ch/quantum-mechanics/history/timeline::doc}}
 \sphinxstepscope
 
 
-\section{Light dispersion}
+\section{Origin of matrix mechanics}
+\label{\detokenize{ch/quantum-mechanics/history/origin-matrix-mechanics:origin-of-matrix-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origin-matrix-mechanics:quantum-mehcanics-history-origin-matrix-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origin-matrix-mechanics::doc}}
+\sphinxAtStartPar
+Experiences:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Quantization in light\sphinxhyphen{}matter interaction:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+1900, Planck radiation law: \(h\) as a mathematical trick to fit experimental data of black\sphinxhyphen{}body radiation; thermodynamics model followed
+
+\item {} 
+\sphinxAtStartPar
+1905, Einstein work on photoelectric effect: \(h\) is not a mathematical trick
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+Light dispersion, as a light\sphinxhyphen{}matter interaction process:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+1900, Lorentz\sphinxhyphen{}Drude model for classical dispersion
+
+\item {} 
+\sphinxAtStartPar
+1913, Bohr atomic model
+
+\item {} 
+\sphinxAtStartPar
+1917, Einstein derived Planck law from thermodynamic equilibrium between atoms and radiation
+
+\item {} 
+\sphinxAtStartPar
+1914\sphinxhyphen{}24, Ladenburg work on quantization of dispersion law, matching Lorentz\sphinxhyphen{}Drude (classical model) and Bohr\sphinxhyphen{}Einstein (quantum model) in the classical limit
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+Heisenberg matrix mechanics
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+…
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation}]{\sphinxcrossref{\DUrole{std,std-ref}{Modern reinterpretation of Heisenberg mechanics}}}}
+
+\end{itemize}
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{Light dispersion}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:light-dispersion}}\label{\detokenize{ch/quantum-mechanics/history/light-dispersion:quantum-mechanics-history-dispersion}}\label{\detokenize{ch/quantum-mechanics/history/light-dispersion::doc}}
 
-\subsection{First experiences}
+\subsubsection{First experiences}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:first-experiences}}
 
-\subsection{Classical dispersion}
+\subsubsection{Classical dispersion}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:classical-dispersion}}\label{\detokenize{ch/quantum-mechanics/history/light-dispersion:quantum-mechanics-history-dispersion-classical}}
 
-\subsubsection{Drude\sphinxhyphen{}Lorentz model}
+\paragraph{Drude\sphinxhyphen{}Lorentz model}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:drude-lorentz-model}}\label{\detokenize{ch/quantum-mechanics/history/light-dispersion:quantum-mechanics-history-dispersion-classical-drude-lorentz}}
 \sphinxAtStartPar
 …
@@ -5863,16 +6210,16 @@ As the imaginary part of the refractive index is negative for all the positive f
 \begin{split}n^2 = ( 1 + \delta )^2 \simeq 1 + 2 \delta \ .\end{split}
 \end{equation*}
 
-\subsubsection{Einstein}
+\paragraph{Einstein}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:einstein}}
 
-\subsubsection{Ladenburg}
+\paragraph{Ladenburg}
 \label{\detokenize{ch/quantum-mechanics/history/light-dispersion:ladenburg}}
 \sphinxAtStartPar
-Ladenburg wrote the energy balance at thermodynamical equilibrium, from transitions between each pair of states \(i\), \(k > i\).
+Ladenburg wrote the energy balance at thermodynamical equilibrium, from transitions between each pair of states \(i\), \(k > i\), using \sphinxstylestrong{Einstein’s coefficients} from his {\hyperref[\detokenize{ch/quantum-mechanics/history/einstein-planck:quantum-mehcanics-history-light-matter-einstein}]{\sphinxcrossref{\DUrole{std,std-ref}{quantum theory of radiation interacting with matter}}}}.
 The total amount of energy emitted by \(N_k\) molecules in the state \(k\) transitioning to a lower state \(i\) is
 \begin{equation*}
-\begin{split}J = \underbrace{h \nu_{ik}}_{\Delta E_{ik}} N_k ( A_{ki} + B_{ki} u(\nu_{ik})\end{split}
+\begin{split}J = \underbrace{h \nu_{ik}}_{\Delta E_{ik}} N_k \left[ A_{ki} + B_{ki} u(\nu_{ik}) \right] \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
 At thermal equilibrium, this energy is equal to the energy absorbed by \(N_i\) molecules in the state \(i\),
@@ -5880,17 +6227,17 @@ At thermal equilibrium, this energy is equal to the energy absorbed by \(N_i\) m
 \begin{split}A = h \nu_{ik} N_i B_{ik} u(\nu_{ik}) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Exploiting the relations between Einstein coefficients ( ), Ladenburg wrote the emitted and absorbed energy as a function of the spontaneous emission foefficient \(A_{ki}\) (allowing to relate dispersion with other phenomena involving emission),
+Exploiting the relations between Einstein coefficients \eqref{equation:ch/quantum-mechanics/history/einstein-planck:eq:einstein-coeffs:relations}, Ladenburg wrote the emitted and absorbed energy as a function of the spontaneous emission foefficient \(A_{ki}\) (allowing to relate dispersion with other phenomena involving emission),
 \begin{equation*}
-\begin{split}J = A = h \nu_{ik} u(\nu_{ik}) N_i B_{ik} = \end{split}
+\begin{split}J = A = h \nu_{ik} u(\nu_{ik}) N_i B_{ik} \ . \end{split}
 \end{equation*}
 \sphinxstepscope
 
 
-\section{Light matter interaction}
+\subsection{Light matter interaction}
 \label{\detokenize{ch/quantum-mechanics/history/einstein-planck:light-matter-interaction}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:quantum-mehcanics-history-light-matter}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck::doc}}
 
-\subsection{Einstein: quantum theory of radiation interacting with matter}
+\subsubsection{Einstein: quantum theory of radiation interacting with matter}
 \label{\detokenize{ch/quantum-mechanics/history/einstein-planck:einstein-quantum-theory-of-radiation-interacting-with-matter}}\label{\detokenize{ch/quantum-mechanics/history/einstein-planck:quantum-mehcanics-history-light-matter-einstein}}
 \sphinxAtStartPar
 Three mechanisms, whose probabilities are
@@ -5946,9 +6293,9 @@ the expression of the radiation density follows
 \end{equation*}
 \sphinxAtStartPar
 Comparing with Planck’s law (with the \sphinxstylestrong{radiance}?) \(\rho(\nu, T) = \frac{2 h \nu^3}{c^3} \frac{1}{\exp(h \nu /kT) - 1}\), the relations between Einstein coefficients \((E_j > E_i)\) follows
-\begin{equation*}
+\begin{equation}\label{equation:ch/quantum-mechanics/history/einstein-planck:eq:einstein-coeffs:relations}
 \begin{split}\frac{g_j A_{ji}}{g_i B_{ij}} = \frac{2 h \nu_{ji}^3}{c^3} \quad , \quad \frac{g_j B_{ji}}{g_i B_{ij}} = 1 \ .\end{split}
-\end{equation*}\subsubsection*{Planck’s law}
+\end{equation}\subsubsection*{Planck’s law}
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -5985,10 +6332,10 @@ Dimensional analysis
 \sphinxstepscope
 
 
-\section{Ratiation of moving charges}
-\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:ratiation-of-moving-charges}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula::doc}}
+\subsection{Radiation of moving charges \sphinxhyphen{} Larmor’s formula}
+\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:radiation-of-moving-charges-larmor-s-formula}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula::doc}}
 
-\subsection{Green’s function solution of wave equations: Liénard\sphinxhyphen{}Wiechert potential}
+\subsubsection{Green’s function solution of wave equations: Liénard\sphinxhyphen{}Wiechert potential}
 \label{\detokenize{ch/quantum-mechanics/history/larmor-formula:green-s-function-solution-of-wave-equations-lienard-wiechert-potential}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation-lienard-wiechert}}
 \sphinxAtStartPar
 \sphinxstylestrong{Wave equations in electromagmetism.} See \sphinxhref{https://basics2022.github.io/bbooks-physics-electromagnetism/ch/waves-equation.html}{Classical Electromagnetism: Wave Equations in Electromagnetism}. Using \sphinxstylestrong{Lorentz gauge}, \(\nabla \cdot \mathbf{a} + \frac{1}{c^2}\partial_t \varphi = 0\), the wave equations for the mathbftor potential \(\mathbf{a}\) and the scalar potential \(\varphi\) read
@@ -6177,7 +6524,7 @@ It’s easy to realize that \(\mathbf{b} = \frac{1}{c} \hat{\mathbf{r}} \times \
 \end{aligned}\end{split}
 \end{equation*}
 
-\subsection{Larmor formula}
+\subsubsection{Larmor formula}
 \label{\detokenize{ch/quantum-mechanics/history/larmor-formula:larmor-formula}}\label{\detokenize{ch/quantum-mechanics/history/larmor-formula:moving-charge-radiation-larmor}}
 \sphinxAtStartPar
 Poynting vector reads
@@ -6217,8 +6564,8 @@ Let’s define the direction of \(\mathbf{a}_{ret} = a \hat{\mathbf{t}}\), and s
 \begin{split}\begin{aligned}
   \Phi
   & := \int_{S} \hat{\mathbf{r}} \cdot \mathbf{s} = \\
-  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta d \theta d \phi = \\
-  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta d \phi   d \theta d \phi = \\
+  & = \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi}  \frac{1}{\mu c} \left( \frac{q}{4 \pi \varepsilon R c^2} \right)^2 \left( 1 - \cos^2 \theta \right)^2 |\mathbf{a}|^2 R^2 \sin \theta \, d \theta \, d \phi = \\
+  & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \int_{\theta=0}^{\pi} \int_{\phi = 0}^{2 \pi} ( 1 - \cos^2 \theta) \sin \theta \, d \theta \, d \phi = \\
   & = \frac{1}{\mu c} \left( \frac{q |\mathbf{a}|}{4 \pi \varepsilon c^2} \right)^2 \cdot \frac{4}{3} \cdot 2 \pi = \\
   & = \frac{q^2 |\mathbf{a}_{s,ret}|^2}{6 \pi \varepsilon c^3} \ .
 \end{aligned}\end{split}
@@ -6240,11 +6587,505 @@ Let’s define the direction of \(\mathbf{a}_{ret} = a \hat{\mathbf{t}}\), and s
 \sphinxstylestrong{circular orbits}, with constant speed. Acceleration is \(\mathbf{a}(t) = - R \omega^2 \hat{\mathbf{r}}(t)\), and has constan magnitude \(|\mathbf{a}(t)| = \omega^2 R\)
 
 \end{itemize}
+\subsubsection*{Systems with \protect\(\ V(\mathbf{r}) = \dfrac{1}{2} m \omega^2 |\mathbf{r}|^2\protect\)}
 \begin{equation*}
-\begin{split}\int_{0}^{\pi} ( 1 - \cos^2 x ) \sin x d x = \left.\left[ - \cos x + \frac{\cos^3}{3} \right]\right|_{0}^{\pi} = 2 - \frac{2}{3} = \frac{4}{3} \ .\end{split}
-\end{equation*}\begin{equation*}
+\begin{split}\langle | \mathbf{a} |^2 \rangle = \dfrac{\omega^2}{m} E \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation}\label{equation:ch/quantum-mechanics/history/larmor-formula:eq:larmor:quadratic:power-energy}
+\begin{split}\langle \Phi \rangle = \dfrac{q^2 \omega^2}{6 \pi \varepsilon m c^3} E =: \gamma E \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+…\sphinxstylestrong{todo} Proof using virial theorem…
+\subsubsection*{Vector identities}
+\begin{equation*}
 \begin{split}\varepsilon_{abc} A_b \varepsilon_{cde} B_d C_e = ( \delta_{ad} \delta_{be} - \delta_{ae} \delta_{bd} ) A_b B_d C_e = A_b B_a C_b - A_b B_b C_a = \mathbf{A} \cdot \mathbf{C} \, \mathbf{B} - \mathbf{A} \cdot \mathbf{B} \, \mathbf{C}\end{split}
 \end{equation*}
+\sphinxstepscope
+
+
+\subsection{Modern reinterpretation of Heisenberg mechanics}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:modern-reinterpretation-of-heisenberg-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation::doc}}
+
+\subsubsection{Heisenberg Equations of Motion in the Heisenberg Picture}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:heisenberg-equations-of-motion-in-the-heisenberg-picture}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-eoms}}
+\sphinxAtStartPar
+Time derivative of an operator \(\hat{A}_H\) in Heisenberg picture satisfies the relation \eqref{equation:ch/quantum-mechanics/intro:eq:qm:heisenberg:dAdt},
+\begin{equation*}
+\begin{split}\dfrac{d \hat{A}_H}{dt} = \frac{1}{i \hbar} \left[ \hat{A}_H , \hat{H}_H \right] + \left( \partial_t \hat{A} \right)_H \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Applying this relation to the position and momentum operators, \(\hat{\mathbf{x}}_H\) and \(\hat{\mathbf{p}}_H\), Heisenberg found the quantum mechanics counterpart of the equations of motion in classical mechanics,
+\begin{equation}\label{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:eoms-1}
+\begin{split}\left\{
+\begin{aligned}
+  \dot{\hat{\mathbf{x}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{x}}_H , \hat{H}_H \right] = \frac{\hat{\mathbf{p}}_H}{m} \\
+  \dot{\hat{\mathbf{p}}}_H & = \frac{1}{i \hbar} \left[ \hat{\mathbf{p}}_H , \hat{H}_H \right] = - \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H \\
+\end{aligned}
+\right.\end{split}
+\end{equation}\subsubsection*{Details}
+
+\sphinxAtStartPar
+If \(\hat{H} = \frac{|\hat{\mathbf{p}|}^2}{2 m} + V\left(\hat{\mathbf{r}}\right)\),
+\subsubsection*{\protect\(\left[ \hat{\mathbf{x}}_H, \hat{H}_H \right] = i \hbar \frac{\hat{\mathbf{p}}_H}{m}\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ \hat{\mathbf{x}}_H, \hat{H}_H \right] 
+  & = \mathscr{U}_{t,t_0}^{\dagger} \left( \left[ \hat{\mathbf{x}}, \frac{\left|\hat{\mathbf{p}}\right|^2}{2m} \right] + \left[ \hat{\mathbf{x}}, V\left(\hat{\mathbf{r}}\right) \right] \right) \mathscr{U}_{t,t_0} = \\
+  & = \mathscr{U}_{t,t_0}^{\dagger} \left( i \hbar \frac{\hat{\mathbf{p}}}{m} \right) \mathscr{U}_{t,t_0} = \\
+  & = i \hbar \frac{\hat{\mathbf{p}}_H}{m} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\(\hat{\mathbf{x}}\) and \(V(\hat{\mathbf{r}})\) commute, as it can be proved using power expansion \sphinxhyphen{} if required \sphinxhyphen{} of \(V(\hat{\mathbf{r}})\);
+
+\item {} 
+\sphinxAtStartPar
+the commutator of \(\hat{\mathbf{x}}\) and the kinetic contribution of the Hamiltonian operator reads (sum over \(b\) repeated index),
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \left[ \hat{x}_a, \hat{p}_b \hat{p}_b \right] 
+      & = \hat{x}_a \hat{p}_b \hat{p}_b - \hat{p}_b \hat{x}_a \hat{p}_b + \hat{p}_b \hat{x}_a \hat{p}_b - \hat{p}_b \hat{x}_b \hat{p}_a = \\
+      & = \left[ \hat{x}_a , \hat{p}_b \right] \hat{p}_b + \hat{p}_b \left[ \hat{x}_a , \hat{p}_b \right] = \\
+      & = 2 i \hbar \delta_{ab} \hat{p}_b = \\
+      & = 2 i \hbar \hat{p}_a \ .
+    \end{aligned}\end{split}
+\end{equation*}
+\end{enumerate}
+\subsubsection*{\protect\(\left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] = - i \hbar \left( \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}}\right) \right)_H\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left[ \hat{\mathbf{p}}_H, \hat{H}_H \right] 
+  & = \mathscr{U}_{t,t_0}^{\dagger} \left( \left[ \hat{\mathbf{p}}, \frac{\left|\hat{\mathbf{p}}\right|^2}{2m} \right] + \left[ \hat{\mathbf{p}}, V\left(\hat{\mathbf{r}}\right) \right] \right) \mathscr{U}_{t,t_0} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since, the commutator of the momentum and potential energy operator reads \(\left[ \hat{\mathbf{p}}, V(\hat{\mathbf{r}}) \right] = \)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \mathbf{r} | \left[ \hat{\mathbf{p}}, V\left(\hat{\mathbf{r}}\right) \right] | \Psi \rangle
+  & = \langle \mathbf{r} | \hat{\mathbf{p}} V\left(\hat{\mathbf{r}}\right) | \Psi \rangle - \langle \mathbf{r} | V\left(\hat{\mathbf{r}}\right) \hat{\mathbf{p}} | \Psi \rangle = \\
+  & = - i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} | V\left(\hat{\mathbf{r}}\right) | \Psi \rangle - V\left(\mathbf{r}\right) \langle \mathbf{r} | \hat{\mathbf{p}} | \Psi \rangle = \\
+  & = - i \hbar \nabla_{\mathbf{r}} \left( V(\mathbf{r}) \Psi(\mathbf{r}, t) \right) + i \hbar V(\mathbf{r}) \nabla_{\mathbf{r}} \Psi(\mathbf{r}, t) = \\
+  & = - i \hbar \nabla_{\mathbf{r}} V(\mathbf{r}) \, \Psi(\mathbf{r},t) = \\
+  & = \langle \mathbf{r} | - i \hbar \nabla_{\mathbf{r}} V\left( \hat{\mathbf{r}} \right) | \Psi \rangle \ . 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \(\langle \mathbf{r} | \hat{\mathbf{p}} \rangle = - i \hbar \nabla_{\mathbf{r}} \langle \mathbf{r} |\), and \(V\left( \hat{\mathbf{r}} \right) | \mathbf{r} \rangle = V( \mathbf{r} ) | \mathbf{r} \rangle\), and
+\begin{equation*}
+\begin{split}\begin{aligned}
+  f(x) \Psi(x,t)
+  & = \int_{x'} f(x) \Psi(x', t) \delta(x-x') \, dx' = \\
+  & = \int_{x'} f(x) \langle x' | \Psi \rangle \langle x | x' \rangle \, dx' = \\
+  & = \int_{x'} \langle x | f(x) | x' \rangle \langle x' | \Psi \rangle \, dx' = \\
+  & = \langle x | f \left(\hat{x}\right) \underbrace{\int_{x'} | x' \rangle \langle x' | dx'}_{=\hat{\mathbf{1}}} | \Psi \rangle = \\
+  & = \langle x | f\left(\hat{x}\right) | \Psi \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Matrix components in energy basis of the equations of motion}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:matrix-components-in-energy-basis-of-the-equations-of-motion}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-eoms-matrix-components}}
+\sphinxAtStartPar
+The matrix components in energy basis of the equations of motion \eqref{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:eoms-1} read
+\begin{equation}\label{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:eoms-2}
+\begin{split}\left\{
+\begin{aligned}
+ i \omega_{jk} X_{jk}^H & = \frac{P_{jk}^H}{m} \\
+ i \omega_{jk} P_{jk}^H & = - \left( \nabla V \right)^{H}_{jk} \\
+\end{aligned}
+\right.\end{split}
+\end{equation}
+\sphinxAtStartPar
+with \(\omega_{jk} := \frac{E_j - E_k}{\hbar}\).
+\subsubsection*{Details}
+
+\sphinxAtStartPar
+If the Hamiltonian is not an explicit function of time, \(\mathscr{U}_{t,0} = \exp\left[ -i \frac{\hat{H}}{\hbar} t \right]\), and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left( \hat{\mathbf{x}}_H  \right)
+  & = \left( | j \rangle \langle j | \hat{\mathbf{x}}_H | k \rangle \langle k | \right) = \\
+  & = \left( | j \rangle \langle j | \mathscr{U}_{t,0}^{\dagger} \hat{\mathbf{x}} \mathscr{U}_{t,0} | k \rangle \langle k | \right) = \\
+  & = | j \rangle \langle k | \left[ \exp\left(- i \frac{E_k-E_j}{\hbar} t  \right) \langle j | \hat{\mathbf{x}} | k \rangle  \right] 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e.
+\begin{equation*}
+\begin{split}X^{H}_{jk}(t) = X^{S}_{jk} \exp\left( i \frac{E_j - E_k}{\hbar} t \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The time\sphinxhyphen{}derivative of the matrix elements of the position operator in Heisenber picture reads
+\begin{equation*}
+\begin{split}\dot{X}^{H}_{jk} = i \omega_{jk} X^{S}_{jk} \exp\left( i \omega_{jk} t \right) = i \omega_{jk} X^H_{jk} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\omega_{jk} := \frac{E_j - E_k}{\hbar}\).
+
+
+\subsubsection{Equations of motion as Hamilton’s equations}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:equations-of-motion-as-hamilton-s-equations}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-hamilton-eqns}}
+\sphinxAtStartPar
+The equations of motion \eqref{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:eoms-1}, or \eqref{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:eoms-2}, can be recast in the form of Hamilton’s equations
+\begin{equation*}
+\begin{split}
+\left\{
+\begin{aligned}
+  \dot{\hat{\mathbf{q}}}_H & = \dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{p}}_H} \\
+  \dot{\hat{\mathbf{p}}}_H & =-\dfrac{\partial \mathsf{H}}{\partial \hat{\mathbf{q}}_H} \\
+\end{aligned}
+\right.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}
+\left\{
+\begin{aligned}
+  \dot{X}^{H}_{jk} & = \dfrac{\partial \mathsf{H}}{\partial P^{H}_{jk}} \\
+  \dot{P}^{H}_{jk} & =-\dfrac{\partial \mathsf{H}}{\partial Q^{H}_{jk}} \\
+\end{aligned}
+\right.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\mathsf{H} = \text{tr} \left( \hat{H} \right) = \sum_a \langle a | \hat{H} | a \rangle \).
+\subsubsection*{Details}
+
+
+\subsubsection{CCR and quantization rule}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:ccr-and-quantization-rule}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-ccr-quantization-rule}}
+
+\paragraph{Modern approach. Matrix form of the CCR}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:modern-approach-matrix-form-of-the-ccr}}
+\sphinxAtStartPar
+Given the CCR
+\begin{equation*}
+\begin{split}\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = \mathbb{I} i \hbar \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+its matrix components are
+\begin{equation}\label{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:ccr-matrix}
+\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\end{split}
+\end{equation}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \langle j | i \hbar \delta_{ab} | k \rangle = \\
+  & = \langle j | \left[ \hat{x}_a , \hat{p}_b \right] k \rangle = \\
+  & = \langle j | \hat{x}_a \hat{p}_b - \hat{p}_b \hat{x}_a | k \rangle = \\
+  & = \sum_{\ell} \left\{ \langle j | \hat{x}_a | \ell \rangle \langle \ell | \hat{p}_b | k \rangle - \langle j | \hat{p}_b | \ell \rangle \langle \ell | \hat{x}_a | k \rangle \right\} = \\
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+
+\paragraph{From Bohr\sphinxhyphen{}Sommerfeld quantization to CCR}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:from-bohr-sommerfeld-quantization-to-ccr}}
+\sphinxAtStartPar
+In old quantum mechanics \sphinxhyphen{} i.e. quantum mechanics before a quantum mechanics theory \sphinxhyphen{} Bohr\sphinxhyphen{}Sommerfeld quantization rule was
+\begin{equation*}
+\begin{split}J = n h = \oint p_n d q_n = \oint p_n \dot{q}_n \, dt \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Classical trajectory.} Using Fourier series of a periodic trajectory,
+\begin{equation*}
+\begin{split}q_n(t) = \sum_{\alpha} q_\alpha(n) e^{i \alpha \omega_n t} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the time derivative of \(q_n(t)\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dot{q}_n(t) & = \sum_{\alpha} i \alpha \omega_n q_{\alpha}(n) e^{i \alpha \omega_n t} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+while momentum can be written as
+\begin{equation*}
+\begin{split}p_n(t) = \sum_{\beta} p_\beta(n) e^{i \beta \omega_n t} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using these expression in the Bohr\sphinxhyphen{}Sommerfeld quantization rule,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  J
+  & = \dots = \\
+  & = i \, 2 \pi \sum_{\alpha} \alpha p^*_{\alpha}(n) q_{\alpha}(n) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the derivative w.r.t. \(J\) reads
+\begin{equation*}
+\begin{split}1 = i \, 2 \pi \sum_{\alpha} \alpha \dfrac{\partial}{\partial J} \left( p^*_{\alpha}(n) q_{\alpha}(n) \right) \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Quantum reinterpretation.} Let a function \(\Phi(n,\alpha)\), then
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Phi(n, \alpha) - \Phi(n - \alpha, \alpha) 
+  & \sim \alpha \partial_n \Phi(n, \alpha) + o(\alpha) = \\
+  & = \alpha h \partial_J \Phi(n, \alpha) + o(\alpha) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the \sphinxstylestrong{Born\sphinxhyphen{}Kramers correspondence principle follows},
+\begin{equation*}
+\begin{split}\frac{\Phi(n, \alpha) - \Phi(n - \alpha, \alpha) }{ h } \sim \alpha \dfrac{\partial \Phi}{\partial J} (n, \alpha) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let \(p_\alpha(n) = p(n,\alpha) = p_{n+\alpha,n}\), then the reinterpretation of the classical quantization rule gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  1
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p^*_{n+\alpha,n} q_{n+\alpha,n} - \sum_\alpha p^*_{n,n-\alpha} q_{n,n-\alpha} \right\} = \\
+  & = i \, \frac{2 \pi}{h} \sum_{\alpha} \left\{ p_{n,n+\alpha} q_{n+\alpha,n}   - \sum_\alpha q_{n,n-\alpha} p_{n-\alpha,n}  \right\} = \\
+  & = \frac{1}{i \hbar} \sum_{\alpha} \left\{  q_{n,\alpha} p_{\alpha,n} - p_{n,\alpha} q_{\alpha,n} \right\}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+These relations are nothing but the diagonal components of the matrix form \eqref{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:ccr-matrix} of the CCR. The out\sphinxhyphen{}of\sphinxhyphen{}diagonal components are identically zero, as P.Jordan proved with the following trick
+\subsubsection*{How P.Jordan proved that out\sphinxhyphen{}of\sphinxhyphen{}diagonal components of the CCR are identically zero}
+
+\sphinxAtStartPar
+…
+
+
+\subsubsection{CCR in Energy Basis and Ladenburg Dispersion Formula}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:ccr-in-energy-basis-and-ladenburg-dispersion-formula}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-ccr-ladenburg}}
+\sphinxAtStartPar
+Introducing the expression of matrix components of the momentum \(\hat{\mathbf{p}}_H = m \dot{\hat{\mathbf{x}}}_H\), \(P^a_{jk} = i m \omega_{jk} X^{a}_{jk}\) into the matrix form \eqref{equation:ch/quantum-mechanics/history/heisenberg-reinterpretation:eq:qm:heisenberg:ccr-matrix} of the CCR relation
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} \delta_{jk} 
+  & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} = \\
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{j \ell} X^{b}_{\ell k} - i m \omega_{j \ell} X^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The diagonal components \(j = k\) are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \delta_{ab} 
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{b}_{\ell k} - i m \omega_{k \ell} X^{b}_{k \ell} X^{a}_{\ell k} \right\} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(a = b\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar 
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a}_{\ell k} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a}_{\ell k} \right\} = \\
+  & = \sum_{\ell} \left\{ i m \omega_{\ell k} X^{a}_{k \ell} X^{a \, *}_{k \ell} - i m \omega_{k \ell} X^{a}_{k \ell} X^{a \, *}_{k \ell} \right\} = \\
+  & = i 2 m \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}
+ \frac{2 m}{\hbar} \, \sum_{\ell} \omega_{\ell k} \left| X^{a}_{k \ell} \right|^2  = 1 \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{CHECK if there’s a factor \(3\), summing over all the components indexed by \(a\)}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Connection to Ladenburg Dispersion Formula.}
+In classical optics/early quantum theory, Ladenburg’s quantum dispersion formula for the oscillator strength \(f_{km}\) associated with a transition \(k \to m\) is defined as:
+\begin{equation*}
+\begin{split}f_{km} = \frac{2m \omega_{km}}{\hbar} |x_{km}|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The diagonal CCR condition directly yields the \sphinxstylestrong{Thomas\sphinxhyphen{}Reiche\sphinxhyphen{}Kuhn (TRK) sum rule}:
+\begin{equation*}
+\begin{split}\sum_m f_{km} = 1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This showed that Heisenberg’s matrix mechanics naturally incorporated the empirically validated dispersion theory of Ladenburg, Kramers, and Kronig.
+
+
+\subsubsection{Application: The Linear Harmonic Oscillator}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:application-the-linear-harmonic-oscillator}}\subsubsection*{Linear harmonic oscillator}
+
+\sphinxAtStartPar
+For the harmonic oscillator Hamiltonian \(\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2\):
+
+\sphinxAtStartPar
+\sphinxstylestrong{Equations of Motion.}
+\$\(\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}\)\$
+
+\sphinxAtStartPar
+Taking the second time derivative:
+\begin{equation*}
+\begin{split}\ddot{\hat{x}} + \omega_0^2 \hat{x} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In matrix components:
+\begin{equation*}
+\begin{split}(-\omega_{mn}^2 + \omega_0^2) x_{mn} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, non\sphinxhyphen{}zero matrix elements \(x_{mn}\) can only exist if \(\omega_{mn} = \pm \omega_0\), meaning transitions only occur between adjacent levels: \(m = n \pm 1\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Matrix Elements \& Energy Spectrum.}
+Using the diagonal CCR \(\frac{2m}{\hbar} \sum_m \omega_{mn} |x_{nm}|^2 = 1\):
+\begin{equation*}
+\begin{split}\frac{2m\omega_0}{\hbar} \left( |x_{n, n+1}|^2 - |x_{n, n-1}|^2 \right) = 1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+With the boundary condition \(x_{0,-1} = 0\) for the ground state:
+\begin{equation*}
+\begin{split}|x_{n, n+1}|^2 = \frac{\hbar}{2m\omega_0} (n+1)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The energy matrix elements give the discrete eigenvalues:
+\begin{equation*}
+\begin{split}E_n = \hbar \omega_0 \left( n + \frac{1}{2} \right)\end{split}
+\end{equation*}
+
+\subsubsection{Transition Probabilities as Dipole Matrix Elements}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:transition-probabilities-as-dipole-matrix-elements}}
+\sphinxAtStartPar
+When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:
+\begin{equation*}
+\begin{split}\hat{V}(t) = - \hat{\mathbf{d}} \cdot \mathbf{E}(t) = - q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The probability amplitude for a transition from state \(|n\rangle\) to state \(|m\rangle\) is dictated by the matrix element of the position/dipole operator:
+\begin{equation*}
+\begin{split}x_{mn} = \langle m | \hat{x} | n \rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The transition rate \(W_{n \to m}\) (spontaneous emission / absorption probability) is proportional to the square of the dipole matrix element:
+\begin{equation*}
+\begin{split}W_{n \to m} \propto |\mathbf{d}_{mn}|^2 = q^2 |\langle m | \hat{\mathbf{x}} | n \rangle|^2\end{split}
+\end{equation*}
+
+\subsubsection{Perturbation Theory for Transition Probabilities in Weak Electric Fields}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:perturbation-theory-for-transition-probabilities-in-weak-electric-fields}}
+\sphinxAtStartPar
+Consider a time\sphinxhyphen{}dependent perturbation \(\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\).
+
+
+\paragraph{First\sphinxhyphen{}Order Amplitude}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:first-order-amplitude}}
+\sphinxAtStartPar
+Writing state expansion \(|\psi(t)\rangle = \sum_n c_n(t) e^{-\frac{i}{\hbar}E_n t} |n\rangle\), the equations for \(c_m(t)\) are:
+\begin{equation*}
+\begin{split}i\hbar \dot{c}_m(t) = \sum_n \langle m | \hat{V}(t) | n \rangle c_n(t) e^{i \omega_{mn} t}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Assuming the system starts in initial state \(c_k(0) = 1\) and \(c_m(0) = 0\) for \(m \neq k\):
+\begin{equation*}
+\begin{split}c_m^{(1)}(t) = -\frac{i}{\hbar} \int_0^t V_{mk}(t') e^{i \omega_{mk} t'} dt'\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Substituting \(V_{mk}(t') = -q E_0 x_{mk} \frac{e^{i\omega t'} + e^{-i\omega t'}}{2}\):
+\begin{equation*}
+\begin{split}c_m^{(1)}(t) = \frac{q E_0 x_{mk}}{2\hbar} \left[ \frac{1 - e^{i(\omega_{mk} + \omega)t}}{\omega_{mk} + \omega} + \frac{1 - e^{i(\omega_{mk} - \omega)t}}{\omega_{mk} - \omega} \right]\end{split}
+\end{equation*}
+
+\paragraph{Resonant Approximation (Rotating Wave Approximation)}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:resonant-approximation-rotating-wave-approximation}}
+\sphinxAtStartPar
+Near resonance (\(\omega \approx \omega_{mk}\) with \(E_m > E_k\)):
+
+\sphinxAtStartPar
+The term with denominator \((\omega_{mk} - \omega)\) dominates:
+\begin{equation*}
+\begin{split}|c_m^{(1)}(t)|^2 \approx \frac{q^2 E_0^2 |x_{mk}|^2}{4\hbar^2} \frac{\sin^2\left(\frac{(\omega_{mk} - \omega)t}{2}\right)}{\left(\frac{\omega_{mk} - \omega}{2}\right)^2}\end{split}
+\end{equation*}
+
+\paragraph{Second\sphinxhyphen{}Order Expansion for \protect\(|c_n(t)|^2\protect\)}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:second-order-expansion-for-c-n-t-2}}
+\sphinxAtStartPar
+To compute probability to second order without assuming immediate resonance, we expand \(c_k(t)\) and \(c_m(t)\):
+\begin{equation*}
+\begin{split}|c_k(t)|^2 = 1 + c_k^{(1)}(t) + c_k^{(1)*}(t) + |c_k^{(1)}(t)|^2 + \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(V_{kk} = 0\) for parity\sphinxhyphen{}symmetric unperturbed states (\(x_{kk} = 0\)), the first\sphinxhyphen{}order correction to the initial state \(c_k^{(1)}(t) = 0\).
+
+\sphinxAtStartPar
+The conservation of total probability yields:
+\begin{equation*}
+\begin{split}|c_k(t)|^2 = 1 - \sum_{m \neq k} |c_m^{(1)}(t)|^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This confirms that weak external monochromatic fields cause probability transitions whose rates are directly dictated by matrix elements \(x_{mk}\) of Heisenberg’s matrix mechanics.
+
+\sphinxstepscope
+
+
+\section{Origin of wave theory of quantum mechanics}
+\label{\detokenize{ch/quantum-mechanics/history/origin-wave-mechanics:origin-of-wave-theory-of-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origin-wave-mechanics:quantum-mehcanics-history-origin-wave-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/origin-wave-mechanics::doc}}
+\sphinxAtStartPar
+Main contributions from:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/de-broglie:quantum-mehcanics-history-wave-mechanics-de-broglie}]{\sphinxcrossref{\DUrole{std,std-ref}{L. de Broglie}}}}, (1922\sphinxhyphen{}24): matter waves
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/schrodinger:quantum-mehcanics-history-wave-mechanics-schrodinger}]{\sphinxcrossref{\DUrole{std,std-ref}{E. Schrodinger}}}}, (1926) “An Undulatory Theory of the Mechanics of Atoms and Molecules”:  wave equation. “if a phenomenon behaves like a wave, it must be governed by a wave equation”
+
+\end{itemize}
+
+\sphinxAtStartPar
+Experimental verifications:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Davisson\sphinxhyphen{}Germer experiment (1923\sphinxhyphen{}27) confirmed the hypothesis of L. de Broglie: \(e^-\) scattered by a surface of a metal crystal showed a diffraction pattern, a characteristic phenomenon of wave processes, consistent with the relation postulated by de Broglie linking the wave vector and the momentum \(\mathbf{k} = \frac{\mathbf{p}}{\hbar}\).
+
+\end{itemize}
+
+\sphinxAtStartPar
+Reinterpretation and classical limit:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+…
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{L. de Broglie, Researches of the Quantum Theory}
+\label{\detokenize{ch/quantum-mechanics/history/de-broglie:l-de-broglie-researches-of-the-quantum-theory}}\label{\detokenize{ch/quantum-mechanics/history/de-broglie:quantum-mehcanics-history-wave-mechanics-de-broglie}}\label{\detokenize{ch/quantum-mechanics/history/de-broglie::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Matter waves, with
+
+\end{itemize}
+\begin{equation*}
+\begin{split}E = h f \qquad , \qquad \mathbf{p} = \hbar \mathbf{k}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\subsection{E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”}
+\label{\detokenize{ch/quantum-mechanics/history/schrodinger:e-schrodinger-an-undulatory-theory-of-the-mechanics-of-atoms-and-molecules}}\label{\detokenize{ch/quantum-mechanics/history/schrodinger:quantum-mehcanics-history-wave-mechanics-schrodinger}}\label{\detokenize{ch/quantum-mechanics/history/schrodinger::doc}}
+\sphinxAtStartPar
+See {\hyperref[\detokenize{ch/quantum-mechanics/wave-mechanics:quantum-mechanics-wave-mechanics}]{\sphinxcrossref{\DUrole{std,std-ref}{wave mechanics}}}}
+
 \sphinxstepscope
 
 
@@ -6277,11 +7118,23 @@ Let’s define the direction of \(\mathbf{a}_{ret} = a \hat{\mathbf{t}}\), and s
 
 \section{Thomson model}
 \label{\detokenize{ch/quantum-mechanics/atom-models/thomson:thomson-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/thomson:quantum-mechanics-atom-models-thomson}}\label{\detokenize{ch/quantum-mechanics/atom-models/thomson::doc}}
+\sphinxAtStartPar
+See \sphinxhref{https://basics2022.github.io/bbooks-physics-hs/ch/modern/experiments-matter.html\#scoperta-dell-elettrone-j-j-thomson}{J.J. Thomson discovers the electron}. Experiments about conduction of electric current in gases, in the High\sphinxhyphen{}School book. Italian only, so far: please rely on the automatic translation of your browser.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Topics:} motion of a charged particle in an electromagnetic field, and thus subject to Lorentz force.
+
 \sphinxstepscope
 
 
 \section{Rutherford model}
 \label{\detokenize{ch/quantum-mechanics/atom-models/rutherford:rutherford-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/rutherford:quantum-mechanics-atom-models-rutherford}}\label{\detokenize{ch/quantum-mechanics/atom-models/rutherford::doc}}
+\sphinxAtStartPar
+See \sphinxhref{https://basics2022.github.io/bbooks-physics-hs/ch/modern/experiments-matter.html\#modello-atomico-di-rutherford-geiger-mardsen}{Geiger\sphinxhyphen{}Mardsen scattering experiment, and Rutherford atomic model}. Scattering experiment of \(\alpha\)\sphinxhyphen{}particles, in the High\sphinxhyphen{}School book. Italian only, so far: please rely on the automatic translation of your browser.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Topics:} motion of a positively charged \(\alpha\)\sphinxhyphen{}particle in a 2\sphinxhyphen{}body problem with positively charged nucleus, and thus subject to repulsive Coulomb force.
+
 \sphinxstepscope
 
 
@@ -6382,6 +7235,614 @@ From the relation \(\Delta E = \nu h\), the relation between the frequency of th
 
 \section{Sommerfeld model}
 \label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:sommerfeld-model}}\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:quantum-mechanics-atom-models-sommerfeld}}\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld::doc}}
+\sphinxAtStartPar
+In 1913, Niels Bohr proposed a revolutionary model of the atom that successfully explained the spectral lines of hydrogen. Bohr’s model combined classical mechanics with quantum concepts, asserting that electrons revolve around the nucleus in fixed, circular orbits with quantized angular momentum:
+\begin{equation*}
+\begin{split}L = n \hbar = n \frac{h}{2\pi}, \quad n \in \{1, 2, 3, \dots\}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+While the Bohr model was a monumental step forward, high\sphinxhyphen{}resolution spectroscopy soon revealed several limitations:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Fine Structure:} Spectral lines that initially appeared singular actually split into closely spaced multiplet lines under high resolution.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Complex Atoms:} The model failed to accurately predict the spectra of multi\sphinxhyphen{}electron atoms (like helium).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Zeeman Effect:} It could not explain the splitting of spectral lines in the presence of a magnetic field.
+
+\end{itemize}
+
+\sphinxAtStartPar
+To resolve these shortcomings, German physicist \sphinxstylestrong{Arnold Sommerfeld} extended Bohr’s theory in 1916 by:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+relaxing the restriction of purely circular orbits.
+
+\item {} 
+\sphinxAtStartPar
+introducing relativistic corrections
+
+\end{itemize}
+
+
+\subsection{Key Postulates and Mathematical Framework}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:key-postulates-and-mathematical-framework}}
+\sphinxAtStartPar
+Sommerfeld generalized Bohr’s circular orbit condition using the \sphinxstylestrong{Wilson\sphinxhyphen{}Sommerfeld Quantization Rule} for periodic systems:
+\begin{equation*}
+\begin{split}\oint p_i \, dq^i = n_i h\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(p_i\) is the generalized momentum corresponding to coordinate \(q^i\), \(n_i\) is an integer quantum number, and \(h\) is Planck’s constant.
+
+
+\subsubsection{Elliptical Orbits}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:elliptical-orbits}}
+\sphinxAtStartPar
+Sommerfeld proposed that electron orbits are generally \sphinxstylestrong{elliptical}, with the nucleus residing at one of the foci of the ellipse. To describe an ellipse in polar coordinates \((r, \theta)\), two generalized coordinates are required, leading to two quantization conditions:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Azimuthal Quantization},
+\begin{equation*}
+\begin{split}\oint p_\theta \, d\theta = n_\theta h \implies L = n_\theta \hbar\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Radial Quantization},
+\begin{equation*}
+\begin{split}\oint p_r \, dr = n_r h \ .\end{split}
+\end{equation*}
+\end{enumerate}
+
+\sphinxAtStartPar
+Here, \(n_\theta\) is the azimuthal quantum number (also denoted as \(k\)) and \(n_r\) is the radial quantum number. The total principal quantum number \(n\) is defined as:
+\begin{equation*}
+\begin{split}n = n_r + n_\theta\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The geometry of the ellipse—specifically the ratio of the semi\sphinxhyphen{}minor axis \(b\) to the semi\sphinxhyphen{}major axis \(a\)—is governed by these quantum numbers:
+\begin{equation*}
+\begin{split}\frac{b}{a} = \frac{n_\theta}{n} = \frac{n_\theta}{n_r + n_\theta}\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+When \(n_\theta = n\), \(b = a\), yielding a circular orbit (Bohr’s original case).
+
+\item {} 
+\sphinxAtStartPar
+When \(n_\theta < n\), \(b < a\), producing an elliptical orbit.
+
+\end{itemize}
+
+
+\subsubsection{Relativistic Correction and Energy Splitting}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:relativistic-correction-and-energy-splitting}}
+\sphinxAtStartPar
+In non\sphinxhyphen{}relativistic mechanics, the energy of an electron in an elliptical orbit depends \sphinxstylestrong{only} on the principal quantum number \(n\):
+\begin{equation*}
+\begin{split}E_n = -\frac{m_e e^4}{8 \epsilon_0^2 h^2 n^2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This means all orbits with the same \(n\) would have identical energy (degeneracy).
+
+\sphinxAtStartPar
+However, Sommerfeld recognized that an electron moves faster when it passes closer to the nucleus in a highly elliptical orbit. Applying Einstein’s special relativity, the electron’s mass \(m\) varies with velocity \(v\):
+\begin{equation*}
+\begin{split}m = \frac{m_0}{\sqrt{1 - v^2/c^2}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+When relativistic effects are accounted for, the ellipse undergoes \sphinxstylestrong{precession} (perihelion precession), breaking the energy degeneracy. The modified energy expression becomes dependent on both \(n\) and \(n_\theta\):
+\begin{equation*}
+\begin{split}E_{n, n_\theta} = -\frac{R_y h c Z^2}{n^2} \left[ 1 + \frac{\alpha^2 Z^2}{n} \left( \frac{1}{n_\theta} - \frac{3}{4n} \right) \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(R_y\) is the Rydberg constant,
+
+\item {} 
+\sphinxAtStartPar
+\(Z\) is the atomic number,
+
+\item {} 
+\sphinxAtStartPar
+\(\alpha = \dfrac{e^2}{4\pi \epsilon_0 \hbar c} \approx \dfrac{1}{137}\) is the \sphinxstylestrong{Fine\sphinxhyphen{}Structure Constant}.
+
+\end{itemize}
+
+
+\subsection{Major Achievements}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:major-achievements}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Explanation of Fine Structure:} The dependence of energy levels on \(n_\theta\) alongside \(n\) successfully explained the small energy differences responsible for the fine splitting of hydrogen spectral lines.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction of Spatial Quantization:} Sommerfeld added a third quantum number \(m\) (magnetic quantum number) to describe the orientation of orbits in 3D space, providing a framework for the Zeeman effect.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Introduction of \(\alpha\):} It introduced the fine\sphinxhyphen{}structure constant \(\alpha\), a fundamental constant in modern physics representing the coupling strength of electromagnetic interactions.
+
+\end{enumerate}
+
+
+\subsection{Limitations and Transition to Quantum Mechanics}
+\label{\detokenize{ch/quantum-mechanics/atom-models/sommerfeld:limitations-and-transition-to-quantum-mechanics}}
+\sphinxAtStartPar
+Despite its empirical success, the Bohr\sphinxhyphen{}Sommerfeld model was a \sphinxstylestrong{semi\sphinxhyphen{}classical (or “Old Quantum Theory”)} construction. Its limitations ultimately spurred the transition to modern quantum mechanics:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Ad\sphinxhyphen{}hoc Assumptions:} It blended classical electrodynamics (planetary orbits) with arbitrary quantization rules without an underlying wave mechanism.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Intensity and Selection Rules:} It could not predict the transition probabilities (intensities of spectral lines) accurately.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Failure for Multi\sphinxhyphen{}Electron Systems:} Like Bohr’s model, it could not be extended reliably to helium or larger atoms.
+
+\end{itemize}
+
+\sphinxAtStartPar
+The model was eventually superseded by {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger:quantum-mechanics-atom-models-schrodinger}]{\sphinxcrossref{\DUrole{std,std-ref}{the non\sphinxhyphen{}relativistic atomic model using \sphinxstylestrong{Schrödinger’s Wave Mechanics}}}}} (1926) and \sphinxstylestrong{Dirac’s Relativistic Quantum Mechanics} (1928), where \(n_\theta\) was replaced by the orbital angular momentum quantum number \(l = n_\theta - 1\).
+
+\sphinxstepscope
+
+
+\subsection{Analytical mechanics \sphinxhyphen{} short notes}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:analytical-mechanics-short-notes}}\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:analytical-mechanics-short}}\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short::doc}}
+\sphinxAtStartPar
+To understand the theoretical justification behind the \sphinxstylestrong{Wilson\sphinxhyphen{}Sommerfeld Quantization Rule}, we must examine the formal framework of classical analytical mechanics. Old Quantum Theory did not apply quantization conditions to arbitrary coordinates; rather, it relied on the natural canonical coordinates provided by \sphinxstylestrong{action\sphinxhyphen{}angle variables}.
+
+
+\subsubsection{Lagrangian and Hamiltonian mechanics}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:lagrangian-and-hamiltonian-mechanics}}\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:analytical-mechanics-short-lagrange-hamilton}}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrangian mechanics.} Consider a classical physical system with \(f\) degrees of freedom described by generalized coordinates \(\mathbf{q} = (q_1, q_2, \dots, q_f)\) and generalized velocities \(\mathbf{\dot{q}} = (\dot{q}^1, \dot{q}^2, \dots, \dot{q}^f)\). The equations of motion can be derived from the principle of stationariety of the action, \(S\),
+\begin{equation*}
+\begin{split}0 = \delta S = \delta \int_{t_0}^{t_1} L \left( \dot{\mathbf{q}}(t), \mathbf{q}(t), t \right) \, dt \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with prescribed ends \(\delta \mathbf{q}(t_0) = \delta \mathbf{q}(t_1) = \mathbf{0}\), and \(L(\dot{\mathbf{q}}(t), \mathbf{q}(t), t)\) the Lagrangian function
+\begin{equation*}
+\begin{split}
+  L(\mathbf{q}, \mathbf{\dot{q}}, t) = T(\mathbf{q}, \mathbf{\dot{q}}) - V(\mathbf{q}) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The canonical (or conjugate) momentum associated with coordinate \(q_i\) is defined as:
+\begin{equation*}
+\begin{split}
+p_i = \frac{\partial L}{\partial \dot{q}_i}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Hamiltonian mechanics.} Via a \sphinxstyleemphasis{Legendre transformation}, we transition from the \((\mathbf{q}, \mathbf{\dot{q}})\) state space to the canonical phase space \((\mathbf{q}, \mathbf{p})\), introducing the \sphinxstylestrong{Hamiltonian}, nothing but the mechanical energy of the system as a function of generalized coordinates and momenta,
+\begin{equation*}
+\begin{split}
+H(\mathbf{q}, \mathbf{p}, t) = \sum_{i=1}^f p_i \dot{q}_i - L(\mathbf{q}, \mathbf{\dot{q}}, t)
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Taking the differential of \(H\), the equations of motion follows
+\begin{equation*}
+\begin{split}\left\{ 
+\begin{aligned}
+  \dot{q}_i & =  \frac{\partial H}{\partial p_i} \\
+  \dot{p}_i & = -\frac{\partial H}{\partial q_i}
+\end{aligned} \right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+while \(\partial_t H = - \partial_t L\).
+
+
+\subsubsection{Canonical Transformations and Hamilton\sphinxhyphen{}Jacobi Theory}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:canonical-transformations-and-hamilton-jacobi-theory}}\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:analytical-mechanics-short-canonical-transformations}}\subsubsection*{Canonical transformations and invariance}
+
+\sphinxAtStartPar
+Transformation \(\mathbf{z} = (\mathbf{q}, \mathbf{p}) \leftrightarrow  \mathbf{Z} = (\mathbf{Q}, \mathbf{P})\)
+\begin{equation*}
+\begin{split}
+\left\{ \begin{aligned}
+  \dot{\mathbf{q}} & = \partial_{\mathbf{p}} H \\
+  \dot{\mathbf{p}} & =-\partial_{\mathbf{q}} H \\
+\end{aligned} \right.
+\qquad , \qquad
+\left\{ \begin{aligned}
+  \dot{\mathbf{Q}} & = \partial_{\mathbf{P}} K \\
+  \dot{\mathbf{P}} & =-\partial_{\mathbf{Q}} K \\
+\end{aligned} \right.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}
+ \dot{\mathbf{z}} = \mathbf{J} \nabla_{\mathbf{z}} H
+ \qquad , \qquad
+ \dot{\mathbf{Z}} = \mathbf{J} \nabla_{\mathbf{Z}} K \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{equation*}
+\begin{split}\mathbf{J} = \begin{bmatrix} \mathbf{0} & \mathbf{I} \\ -\mathbf{I} & \mathbf{0} \end{bmatrix} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(\mathbf{z}(\mathbf{Z},t)\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dot{z}_i        & = \dot{Z}_k \, \partial_{Z_K} z_i + \partial_t z_i \\
+  \partial_{z_i} f & = \partial_{z_i} Z_k \, \partial_{Z_k} f
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+for a regular transformation, with non\sphinxhyphen{}singular gradient \(\partial_{Z_k} z_i \, \partial_{z_i} Z_j = \delta_{kj}\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dot{Z}_j
+  & = \partial_{z_i} Z_j \left( \dot{z}_i - \partial_t z_i \right) = \\
+  & = \partial_{z_i} Z_j \left( J_{il} \partial_{z_l} H - \partial_t z_i \right) = \\
+  & = \partial_{z_i} Z_j \, J_{il} \, \partial_{z_l} Z_{m} \, \partial_{Z_m} H -  \partial_{z_i} Z_j \, \partial_t z_i \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or with matrix formalism
+\begin{equation*}
+\begin{split}\dot{\mathbf{Z}} = \mathbf{G}^T \mathbf{J} \mathbf{G} \nabla_{\mathbf{Z}} H - \mathbf{G}^T \, \partial_t \mathbf{z} \ .\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Stationary change of variables \(\mathbf{z}(\mathbf{Z})\), \(\partial_t \mathbf{z} = 0\), and thus
+\begin{equation*}
+\begin{split}\nabla_{\mathbf{Z}} K = \mathbf{G}^T \mathbf{J} \mathbf{G} \nabla_{\mathbf{Z}} H\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+\item {} 
+\sphinxAtStartPar
+Non\sphinxhyphen{}stationary transformation
+
+\sphinxAtStartPar
+…
+
+\end{itemize}
+
+\sphinxAtStartPar
+…
+\subsubsection*{Properties of canonical transformations}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Inverse of \(\mathbf{J}\), \(\mathbf{J}^{-1} = - \mathbf{J}\).
+
+\item {} 
+\sphinxAtStartPar
+Value of \(\mathbf{G}^T \mathbf{J} \mathbf{G}\)
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Fix and uncomment}
+
+\end{itemize}
+
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Invariance of Poisson brackets
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{todo}
+
+\item {} 
+\sphinxAtStartPar
+Determinant of \(\mathbf{G}^T \mathbf{J} \mathbf{G} = \mathbf{J}\)
+\begin{equation*}
+\begin{split}| \mathbf{G} |^2 |\mathbf{J}| = |\mathbf{J}| \quad \rightarrow \quad | \mathbf{G} | = \mp 1 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The orientation\sphinxhyphen{}preserving transformation is the one with \(| \mathbf{G} | = 1\).
+
+\item {} 
+\sphinxAtStartPar
+Elementary volume in the phase space
+\begin{equation*}
+\begin{split}|d \mathbf{q} d \mathbf{p}| = | \mathbf{G}| \, | d \mathbf{Q} \, d \mathbf{P} | = | d \mathbf{Q} \, d \mathbf{P} |\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+A transformation from coordinates \((\mathbf{q}, \mathbf{p})\) to new variables \((\mathbf{Q}, \mathbf{P})\) is \sphinxstylestrong{canonical} if it preserves the form of Hamilton’s equations under a new Hamiltonian \(K(\mathbf{Q}, \mathbf{P}, t)\).
+
+\sphinxAtStartPar
+Using two sets of coordinates, the principle of stationary action reads
+\begin{equation*}
+\begin{split}0 = \delta \int_{t_0}^{t_1} L(\dot{\mathbf{q}}, \mathbf{q},t) \, dt = \delta \int_{t_0}^{t_1} \mathcal{L}(\dot{\mathbf{Q}}, \mathbf{Q},t) \, dt \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The two Lagrangian functions can differ by a time\sphinxhyphen{}derivative \(\dfrac{d}{dt} F_{1}(\mathbf{q}(t), \mathbf{Q}(t),t)\) at most. Thus, using the relation between the Lagrangian and the Hamiltonian function, it follows
+\begin{equation*}
+\begin{split}\mathbf{p} \cdot \dot{\mathbf{q}} - H(\mathbf{q},\mathbf{p},t) = \mathbf{P} \cdot \dot{\mathbf{Q}} - K(\mathbf{Q}, \mathbf{P}, t) + \frac{d}{dt} F_1(\mathbf{q}, \mathbf{Q},t)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Moving \( \frac{d F_1}{dt}\) on one side, and expanding the time derivative,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d F_1}{dt}
+  & = \dot{\mathbf{q}} \cdot \partial_{\mathbf{q}} F_1 + \dot{\mathbf{Q}} \cdot \partial_{\mathbf{Q}} F_1 + \partial_t F_1 = \\
+  & = \mathbf{p} \cdot \dot{\mathbf{q}} - \mathbf{P} \cdot \dot{\mathbf{Q}} - H(\mathbf{q},\mathbf{p},t) + K(\mathbf{Q}, \mathbf{P}, t)
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Exploiting the arbitrariness of the functions involved, the following relations hold
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{p} = \partial_{\mathbf{q}} F_1 \qquad , \qquad
+  \mathbf{P} =-\partial_{\mathbf{Q}} F_1 \qquad , \qquad
+  K - H      = \partial_{t} F_1 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Another \sphinxstyleemphasis{Legendre transformation} introduces a type\sphinxhyphen{}2 generating function \(F_2(\mathbf{q}, \mathbf{P}, t)\),
+\begin{equation*}
+\begin{split}F_2(\mathbf{q}, \mathbf{P}, t) := F_1(\mathbf{q}, \mathbf{Q}, t) + \mathbf{Q} \cdot \mathbf{P} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that allows to go from the independent pair of variables \((\mathbf{q}, \mathbf{Q})\) to \((\mathbf{q}, \mathbf{P})\), as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d_t F_2 
+  & = \partial_t F_1 + \dot{\mathbf{q}} \cdot \partial_{\mathbf{q}} F_1 + \dot{\mathbf{Q}} \cdot \underbrace{\left( \partial_{\mathbf{Q}} F_1 + \mathbf{P} \right)}_{= \mathbf{0}} + \dot{\mathbf{P}} \cdot \mathbf{Q} = \\
+  & =\partial_t F_1 + \dot{\mathbf{q}} \cdot \partial_{\mathbf{q}} F_1 + \dot{\mathbf{P}} \cdot \mathbf{Q} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{\mathbf{q}} F_2 = \partial_{\mathbf{q}} F_1 = \mathbf{p} \qquad , \qquad
+  \partial_{\mathbf{P}} F_2 = \mathbf{Q} \qquad , \qquad
+  \partial_t F_2 = \partial_{t} F_1 = K - H \\
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{The Hamilton\sphinxhyphen{}Jacobi Equation}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:the-hamilton-jacobi-equation}}\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:analytical-mechanics-short-hamilton-jacobi-equation}}\subsubsection*{Hamilton\sphinxhyphen{}Jacobi equation}
+
+\sphinxAtStartPar
+Let the canonical transformation so that the Hamiltonian function in \(\mathbf{Q}\), \(\mathbf{P}\) is identically zero, i.e.
+\begin{equation*}
+\begin{split}K(\mathbf{Q}, \mathbf{P}, t) := 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Remark.} This is not a 1\sphinxhyphen{}dimensional constraint between \(\mathbf{Q}\), \(\mathbf{P}\). This is the expression of the function, like the function \(f(x) := 0 \) is a real function whose value is \(0\) for all the \(x\) of the domain. Thus, all the derivatives of the function w.r.t. the independent variables are identically zero as well,
+\begin{equation*}
+\begin{split}\partial_{\mathbf{Q}} K = \mathbf{0} \qquad , \qquad \partial_{\mathbf{P}} K = \mathbf{0} \qquad , \qquad \partial_t K = 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If these relations hold, from the Hamiltonian equations, it follows that \(\mathbf{Q}\) and \(\mathbf{P}\) are constant in time.
+Thus,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0
+  & = K(\mathbf{Q}, \mathbf{P}, t) = \\
+  & = H(\mathbf{q},\mathbf{p},t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
+  & = H(\mathbf{q}, \partial_\mathbf{q} F_2(\mathbf{q}, \mathbf{P}, t) ,t) + \partial_t F_2(\mathbf{q}, \mathbf{P}, t) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(H\) is not explicitly dependent on \(t\), and thus the system is conservative as \(d_t H = \partial_t H = 0\), it follows \(H(\mathbf{q}, \mathbf{p}) = E\), constant. Hamilton\sphinxhyphen{}Jacobi equation thus becomes
+\begin{equation*}
+\begin{split}0 = H\left( \mathbf{q}, \partial_{\mathbf{q}} F_2 \right) + \partial_t F_2 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(H\) doesn’t explicitly depends on time, it’s possible to look for a solution of the equation \(F_2(\mathbf{q}, \mathbf{P}, t) = S(\mathbf{q}, \mathbf{P}) - T(t)\),
+\begin{equation*}
+\begin{split}0 = H \left( \mathbf{q}, \partial_{\mathbf{q}} S \right) + \dot{T} = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}H \left( \mathbf{q}, \partial_{\mathbf{q}} S \right) = - \dot{T} = E \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  T(t) & = - E t + T_0 \\
+  H \left( \mathbf{q}, \partial_{\mathbf{q}} S \right) & = E \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The ultimate goal of Hamilton\sphinxhyphen{}Jacobi theory is to find a canonical transformation to a set canonical variables \((\mathbf{w}, \mathbf{J})\) with \sphinxstylestrong{constant} momentum variables \(\mathbf{J}\) and making the new Hamiltonian identically zero (\(K = 0\)). Hamilton equations read
+\begin{equation*}
+\begin{split}\left\{\begin{aligned}
+  \dot{\mathbf{w}} & = \partial_{\mathbf{J}} K \\
+  \dot{\mathbf{J}} & =-\partial_{\mathbf{w}} K \\
+\end{aligned}\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(\mathbf{J}\) is constant, thus \(\dot{\mathbf{J}} = \mathbf{0}\) and \(\partial_{\mathbf{Q}} K = 0\). Thus \(K(\mathbf{J}, t)\). As \(K(\mathbf{J}, t) = 0\), and \(\mathbf{J}\) constant, thus \(0 = d_t K = \partial_t K\). Then it follows that \(K(\mathbf{J}) = 0\). As \(\mathbf{J}\) are constant, then \(\partial_{\mathbf{J}} K\) is constant as well. The first Hamilton equation implies \(\mathbf{w}(t) = \partial_{\mathbf{J}} K \cdot t + \mathbf{w}_0\).
+\subsubsection*{old}
+
+\sphinxAtStartPar
+Time derivative of Type\sphinxhyphen{}1 generating function, \(F_1(\mathbf{q},\mathbf{Q},t)\), becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d_t F_1 
+  & = \dot{\mathbf{q}} \cdot \mathbf{p} - \underbrace{ \dot{\mathbf{w}} }_{=\partial_{\mathbf{J}} K} \cdot \mathbf{J} + \underbrace{ K }_{=0} - H(\mathbf{q}, \mathbf{p}, t) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Time derivative of Type\sphinxhyphen{}2 generating function, \(F_2(\mathbf{q},\mathbf{P},t)\), becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d_t F_2 
+  & = \partial_t F_1 + \dot{\mathbf{q}} \cdot \partial_{\mathbf{q}} F_1 + \underbrace{\dot{\mathbf{J}} \cdot \mathbf{w}}_{=\mathbf{0}} = \\
+  & = - H(\mathbf{q}, \mathbf{p}, t) + \dot{\mathbf{q}} \cdot \mathbf{p} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Choosing \(F_2(\mathbf{q}, \boldsymbol{\alpha}, t) = S(\mathbf{q}, \boldsymbol{\alpha}) - E t\), where \(S(\mathbf{q}, \boldsymbol{\alpha})\) is \sphinxstylestrong{Hamilton’s characteristic function}, Hamilton’s principal equation reduces to the time\sphinxhyphen{}independent \sphinxstylestrong{Hamilton\sphinxhyphen{}Jacobi Equation}:
+
+\sphinxAtStartPar
+If \(H(\mathbf{q}, \mathbf{p}\), then the system is conservative. Exploiting separation of variables, \(F_{2}(\mathbf{q}, \mathbf{J}, t) = S(\mathbf{q}, \mathbf{J}) - E t\)
+\begin{equation*}
+\begin{split}
+H\left(\mathbf{q}, \partial_{\mathbf{q}} S(\mathbf{q}, \mathbf{J}) \right) = E \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(\dot{\mathbf{J}} = 0\), the time derivative of \(S\) reads
+\begin{equation*}
+\begin{split}\dot{S} = \dot{\mathbf{q}} \cdot \partial_{\mathbf{q}} S + \underbrace{\dot{\mathbf{J}} \cdot \partial_{\mathbf{J}} S}_{= \mathbf{0}} = \dot{\mathbf{q}} \cdot \mathbf{p}(\mathbf{q}, \mathbf{J}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If the system is \sphinxstylestrong{separable}, \(S(\mathbf{q}, \boldsymbol{\alpha})\) splits into independent single\sphinxhyphen{}variable functions:
+\begin{equation*}
+\begin{split}
+S(\mathbf{q}, \mathbf{J}) = \sum_{i=1}^f S_i(q^i, \mathbf{J})
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that its time derivative reads
+\begin{equation*}
+\begin{split}\dot{S} = \dot{q}^i \, S'_i(q_i, \mathbf{J}) = \dot{q}^i \, p_i(q^i, \mathbf{J}) \ .\end{split}
+\end{equation*}
+
+\subsubsection{Action\sphinxhyphen{}Angle Variables}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:action-angle-variables}}\subsubsection*{Anction\sphinxhyphen{}angle variables}
+
+\sphinxAtStartPar
+Let the canonical transformation \(\mathbf{w}\), \(\mathbf{J}\), so that \(\mathbf{J}\) is constant. From Hamilton equations
+\begin{equation*}
+\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} & = \partial_{\mathbf{J}} K \\
+  \dot{\mathbf{J}} & =-\partial_{\mathbf{w}} K = \mathbf{0} \\
+\end{aligned}
+\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(K\) is a function of \(\mathbf{J}, t\) only, \(K(\mathbf{J},t)\).
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+For bound, periodic systems whose Hamilton\sphinxhyphen{}Jacobi equations are separable, the most suitable coordinate system consists of \sphinxstylestrong{Action\sphinxhyphen{}Angle Variables} \((\mathbf{w}, \mathbf{J})\).
+
+
+\paragraph{Definition of Action Variables}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:definition-of-action-variables}}
+\sphinxAtStartPar
+The \sphinxstylestrong{Action Variable} \(J_i\) associated with the \(i\)\sphinxhyphen{}th degree of freedom is defined as the line integral of momentum over one complete cycle of motion in phase space:
+\begin{equation*}
+\begin{split}
+J_i \equiv \oint p_i \, dq_i = \oint \frac{\partial S_i(q_i, \boldsymbol{\alpha})}{\partial q_i} \, dq_i
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Here, the loop \(\oint\) denotes:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+A complete libration (back\sphinxhyphen{}and\sphinxhyphen{}forth oscillation between turning points), or
+
+\item {} 
+\sphinxAtStartPar
+A \(2\pi\) rotation for angular coordinates.
+
+\end{itemize}
+
+
+\paragraph{Angle Variables and Frequencies}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:angle-variables-and-frequencies}}
+\sphinxAtStartPar
+Because the action variables \(J_i\) are constants of motion, we can express the total Hamiltonian purely as a function of the action variables: \(H = H(J_1, J_2, \dots, J_f)\).
+
+\sphinxAtStartPar
+The canonical conjugates to \(J_i\) are the \sphinxstylestrong{Angle Variables} \(w_i\), defined via the generating function \(S(\mathbf{q}, \mathbf{J})\):
+\begin{equation*}
+\begin{split}
+w_i = \frac{\partial S(\mathbf{q}, \mathbf{J})}{\partial J_i}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Hamilton’s equations of motion in action\sphinxhyphen{}angle variables simplify to:
+\begin{equation*}
+\begin{split}
+\dot{J}_i = -\frac{\partial H}{\partial w_i} = 0 \implies J_i = \text{constant}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\dot{w}_i = \frac{\partial H(J_1, \dots, J_f)}{\partial J_i} \equiv \nu_i (\mathbf{J}) \implies w_i(t) = \nu_i t + w_i(0)
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Where \(\nu_i\) is the exact \sphinxstylestrong{fundamental frequency} of the classical motion along coordinate \(q_i\).
+
+
+\bigskip\hrule\bigskip
+
+
+
+\subsubsection{4. The Wilson\sphinxhyphen{}Sommerfeld Quantization Postulate}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:the-wilson-sommerfeld-quantization-postulate}}
+\sphinxAtStartPar
+The central insight of William Wilson (1915) and Arnold Sommerfeld (1916) was that quantization should \sphinxstylestrong{not} be applied arbitrarily to any set of phase space coordinates. Instead, quantization conditions must be invariant under canonical transformations.
+
+\sphinxAtStartPar
+The integral invariants of Poincaré show that the total phase space volume element \(\sum_i \oint p_i dq_i\) is a canonical invariant. Therefore, quantization must be imposed directly onto the adiabatic invariants of the classical motion: \sphinxstylestrong{the Action Variables \(J_i\)}.
+
+
+\paragraph{The Quantization Rule}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:the-quantization-rule}}
+\sphinxAtStartPar
+The Wilson\sphinxhyphen{}Sommerfeld quantization rule dictates that each action variable \(J_i\) is restricted to integer multiples of Planck’s constant \(h\):
+\begin{equation*}
+\begin{split}
+J_i = \oint p_i \, dq_i = n_i h, \quad n_i \in \mathbb{N}
+\end{split}
+\end{equation*}
+
+\paragraph{Summary of Connection to Quantum Mechanics}
+\label{\detokenize{ch/quantum-mechanics/atom-models/analytical-mechanics-short:summary-of-connection-to-quantum-mechanics}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Separability:} The classical system must be separable in coordinates \((q_1, \dots, q_f)\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Phase Space Loops:} The integral \(\oint p_i dq_i\) measures the area enclosed by the periodic trajectory in the \((q_i, p_i)\) 2D projection of phase space.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Discretization:} Quantizing \(J_i = n_i h\) slices phase space into discrete cells of volume \(h^f\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Energy Spectrum:} Inverting \(H(J_1, \dots, J_f)\) with \(J_i \to n_i h\) yields the quantized energy levels \(E(n_1, n_2, \dots, n_f)\).
+
+\end{enumerate}
+
 \sphinxstepscope
 
 
@@ -7323,6 +8784,440 @@ Since \(\partial_d | \mathbf{r}| = \partial_d \sqrt{x_a x_a} = \frac{x_d}{|\math
 \sphinxstepscope
 
 
+\chapter{Analtycal Mechanics \sphinxhyphen{} Notes for Quantum Mechanics}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:analtycal-mechanics-notes-for-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics::doc}}\subsubsection*{Contents}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-lagrange-hamilton}]{\sphinxcrossref{\DUrole{std,std-ref}{Lagrange and Hamiltonian mechanics}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-canonical-transformations}]{\sphinxcrossref{\DUrole{std,std-ref}{Canonical transformations}}}} Canonical transformations are pure kinematics (kinematics+inertia, as they involve generalized momentum), independent from the physics of the system of interest, i.e. independent from the specific form of the Lagrangian function or of the Hamiltonian function.
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-hamilton-jacobi}]{\sphinxcrossref{\DUrole{std,std-ref}{Hamilton\sphinxhyphen{}Jacobi formulation of mechanics}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-angle-action}]{\sphinxcrossref{\DUrole{std,std-ref}{Angle\sphinxhyphen{}Action variables}}}}
+
+\end{itemize}
+\subsubsection*{Topics and tools}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Calculus of variations
+
+\item {} 
+\sphinxAtStartPar
+Legendre transformation, in the definition of functions with different independent variables.
+\subsubsection*{Examples}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+From Lagrangian function to Hamiltonian function \(\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}},t)\)
+
+\item {} 
+\sphinxAtStartPar
+From one generating function to another, e.g. \(F_2(\mathbf{q}, \mathbf{P}, t) := \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{Q}, t)\)
+
+\item {} 
+\sphinxAtStartPar
+…
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+Properties of canonical transformations can be derived with a proper application of rules of derivation of \sphinxstylestrong{composite functions}, \sphinxstylestrong{paying attention to the set of independent variables} of these functions.
+
+\end{itemize}
+
+
+\section{Lagrange and Hamiltonian Mechanics}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:lagrange-and-hamiltonian-mechanics}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-lagrange-hamilton}}\subsubsection*{Lagrangian mechanics}
+
+\sphinxAtStartPar
+Equations of motion follow the principle of stationary action functional
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytical:stationary-action}
+\begin{split}0 = \delta S[\mathbf{q}(t)] = \int_{t_0}^{t_1} \mathcal{L}( \mathbf{q}(t), \dot{\mathbf{q}}(t),t ) \, dt \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+with prescribed extreme values, so that \(\delta \mathbf{q}(t_0) = \delta \mathbf{q}(t_1) = \mathbf{0}\). Here \(\mathcal{L}\) is the Lagrangian function, with \(\mathbf{q}(t)\) the vector of generalized coordinates, and \(t\) the time. Equations of motion are the Lagrange equations
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytical:lagrange-eqns}
+\begin{split}\dfrac{d}{dt}\left( \dfrac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}} \right) - \dfrac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{0} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+The generalized momentum is defined as \(\mathbf{p} := \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}\). If the Lagrangian function doesn’t explicitly depend on the generalized coordinate \(q^k(t)\), the generalized momentum \(p_k(t) = \frac{\partial \mathcal{L}}{\partial q^k}\) is constant.
+\subsubsection*{Hamiltonian mechanics. }
+
+\sphinxAtStartPar
+Hamiltonian function is defined as \(\mathcal{H}(\mathbf{q}, \mathbf{p}, t) := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t)\), with \(\dot{\mathbf{q}}(\mathbf{q}, \mathbf{p}, t)\). It’s differential reads
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytical:hamiltonian-differential}
+\begin{split}\begin{aligned}
+  d \mathcal{H}
+  & = \dot{\mathbf{q}} \cdot d \mathbf{p} + \mathbf{p} \cdot d \dot{\mathbf{q}} - \partial_{\dot{\mathbf{q}}} \mathcal{L} \cdot d \dot{\mathbf{q}} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt = \\
+  & = \dot{\mathbf{q}} \cdot d \mathbf{p} - \partial_{\mathbf{q}} \mathcal{L} \cdot d \mathbf{q} - \partial_t \mathcal{L} dt \ ,
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+by the definition of the generalized momentum, \(\mathbf{p} = \partial_{\dot{\mathbf{q}}} \mathcal{L}\). Hamilton equations immediately follows
+\begin{equation*}
+\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{q}}(t) & = \partial_{\mathbf{p}} \mathcal{H}(\mathbf{q}(t), \mathbf{p}(t), t) \\
+  \dot{\mathbf{p}}(t) & =-\partial_{\mathbf{q}} \mathcal{H}(\mathbf{q}(t), \mathbf{p}(t), t) \\
+\end{aligned}
+\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the relation
+\begin{equation*}
+\begin{split}\left.\partial_t \mathcal{H}\right|_{\mathbf{q}, \mathbf{p}}(\mathbf{q}(t), \mathbf{p}(t),t) = - \left.\partial_t \mathcal{L}\right|_{\mathbf{q}, \dot{\mathbf{q}}}(\mathbf{q}(t), \dot{\mathbf{q}}(t),t) \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using Hamilton’s equations, it’s immediately proved that \(d_t \mathcal{H} = \partial_t \mathcal{H}\). The Hamiltonian function is thus conserved \sphinxhyphen{} an integral of motion \sphinxhyphen{} if the Lagrangian function doesn’t explicitly depend on \(t\).
+
+
+\section{Canonical transformations}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:canonical-transformations}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-canonical-transformations}}\subsubsection*{Definition}
+
+\sphinxAtStartPar
+A canonical transformation is defined as a change of coordinates from \((\mathbf{q}, \mathbf{p})\) to \((\mathbf{Q}, \mathbf{P})\) so that the equations of motion have the same expression
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:hamilton-eqns}
+\begin{split}
+\left\{
+\begin{aligned}
+  \dot{\mathbf{q}} & = \partial_{\mathbf{p}} \mathcal{H} \\
+  \dot{\mathbf{p}} & =-\partial_{\mathbf{q}} \mathcal{H} \\
+\end{aligned}
+\right.
+\qquad , \qquad
+\left\{
+\begin{aligned}
+  \dot{\mathbf{Q}} & = \partial_{\mathbf{P}} \mathscr{H} \\
+  \dot{\mathbf{P}} & =-\partial_{\mathbf{Q}} \mathscr{H} \\
+\end{aligned}
+\right.
+\end{split}
+\end{equation}\subsubsection*{Simplectic structure}
+
+\sphinxAtStartPar
+Let’s define
+\begin{equation*}
+\begin{split}
+\boldsymbol\eta = \begin{pmatrix} \mathbf{q} \\ \mathbf{p} \end{pmatrix} 
+\qquad , \qquad
+\boldsymbol\zeta = \begin{pmatrix} \mathbf{Q} \\ \mathbf{P} \end{pmatrix} 
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose relation is assumed to be invertible for each time \(t\),
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:coord-transf}
+\begin{split}\boldsymbol\zeta( \boldsymbol\eta, t) \qquad , \qquad \boldsymbol\eta ( \boldsymbol\zeta, t) \ . \end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Hamilton equations.} Hamilton equations \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:hamilton-eqns} can be recast as
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:hamilton-eqns:simplectic}
+\begin{split}
+\dot{\boldsymbol{ \eta}} = \mathbf{J} \nabla_{\boldsymbol{ \eta}} \mathcal{H} \qquad , \qquad
+\dot{\boldsymbol{\zeta}} = \mathbf{J} \nabla_{\boldsymbol{\zeta}} \mathscr{H} \ ,
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+with the matrix \(\mathbf{J} = \begin{pmatrix} \mathbf{0} & \mathbf{I} \\ -\mathbf{I} & \mathbf{0} \end{pmatrix}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Recasting Hamilton equations in new coordinates, using derivatives of composite functions.} As the the vector of the new coordinates \(\boldsymbol\zeta(t)\) can be written as a function of the old coordinates \(\boldsymbol\eta(t)\) through the function \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:coord-transf}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \boldsymbol{\zeta} \left(\boldsymbol\eta(t), t\right)
+ & = \dot{\boldsymbol\eta} \cdot \nabla_{\boldsymbol\eta} \boldsymbol\zeta|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \\
+ & = \mathbf{M}^T(\boldsymbol\eta(t), t) \dot{\boldsymbol\eta} + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \\
+ & = \mathbf{M}^T \, \mathbf{J} \, \nabla_{\boldsymbol\eta} \mathcal{H} + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and changing from \((\boldsymbol\zeta, t)\) to \((\boldsymbol\eta, t)\) variables
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:coord-transf-zeta}
+\begin{split}\begin{aligned}
+ \dot{\boldsymbol{\zeta}}
+ & = \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \ ,
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+with \(\left\{ \mathbf{M} \right\}_{ij} = \frac{\partial \zeta_j}{\partial \eta_i}(\boldsymbol\eta, t)\), and the rule of transformation of the gradient of a scalar function,
+\begin{equation*}
+\begin{split}f = f( \boldsymbol\eta, t) = f( \boldsymbol\eta(\boldsymbol\zeta, t), t) = \mathscr{f}( \boldsymbol\zeta, t) = \mathscr{f}( \boldsymbol\zeta( \boldsymbol\eta, t), t) \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \nabla_{\boldsymbol\eta} f(\boldsymbol\eta(\boldsymbol\zeta(t), t), t) = \left.\nabla_{\boldsymbol\eta} \boldsymbol\zeta\right|_t \cdot \left.\nabla_{\boldsymbol\zeta} \mathscr{f} \right|_t = \mathbf{M} \nabla_{\boldsymbol\zeta} f \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The equation \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:coord-transf-zeta} must be compared with the Hamilton equations \(\dot{\boldsymbol{\zeta}} = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}\) from \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:hamilton-eqns:simplectic}.
+\subsubsection*{Comparison between different forms of Hamilton equations \sphinxhyphen{} canonical transformations are pure kinematics, independent from the physics of the system of interest}
+
+\sphinxAtStartPar
+From the comparison
+\begin{equation*}
+\begin{split}\left\{
+\begin{aligned}
+ \dot{\boldsymbol{\zeta}}
+ & = \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} \\
+ \dot{\boldsymbol{\zeta}} & = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}
+\end{aligned}
+\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+it follows
+\begin{equation*}
+\begin{split}
+ \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t + \partial_t \boldsymbol\zeta|_{\boldsymbol\eta}
+ = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{System 0.} Let the system zero be a physical system whose Hamiltonian \(\mathcal{H}_0(\mathbf{q}, \mathbf{p}, t) := 0\). \sphinxstylestrong{Remark} This is the functional definition of the Hamiltonian, not 1\sphinxhyphen{}dimensional constraint between variables. It follows that
+\begin{equation*}
+\begin{split}
+ \partial_t \boldsymbol\zeta|_{\boldsymbol\eta} = \mathbf{J} \nabla_{\boldsymbol\zeta} \mathscr{H}_0 \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Generic system.} Exploiting the latter relation, for a generic system
+\begin{equation*}
+\begin{split}
+ \mathbf{M}^T \mathbf{J} \mathbf{M} \, \nabla_{\boldsymbol\zeta} \left.\mathcal{H}\right|_t
+ = \mathbf{J} \nabla_{\boldsymbol\zeta} \left( \mathscr{H} - \mathscr{H}_0 \right) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As this relation must hold for any system, two relations follow:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the simplectic condition
+\begin{equation*}
+\begin{split}\mathbf{M}^T \mathbf{J} \mathbf{M} = \mathbf{J} \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+a relation between the Hamiltonian functions
+\begin{equation*}
+\begin{split}\mathcal{H} - \mathscr{H} + \mathscr{H}_0 = f(t)\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+A comparison with the partial derivatives \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:gen-fun-2:derivatives} of of \sphinxstylestrong{type\sphinxhyphen{}2} generating function \(F_2(\mathbf{q}, \mathbf{P}, t)\), it follows that%
+\begin{footnote}[1]\sphinxAtStartFootnote
+The link between simplectic structure and generating functions can be derived with a proper use of derivatives of composit functions.
+%
+\end{footnote}
+\begin{equation*}
+\begin{split}\left.\partial_t F_2\right|_{\mathbf{q}, \mathbf{P}} = \mathscr{H} - \mathcal{H} =\mathscr{H}_0 - f(t) \ .\end{split}
+\end{equation*}
+
+\section{Generating functions}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:generating-functions}}\subsubsection*{Generating functions}
+
+\sphinxAtStartPar
+The pair of Hamilton equations \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:canonical:hamilton-eqns} can be derived from the same variational principle of Lagrangian mechanics for two different choices of the generalized variables,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \delta \int_{t_0}^{t_1} \mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t), t) \, dt \\
+  0 & = \delta \int_{t_0}^{t_1} \mathscr{L}(\mathbf{Q}(t), \dot{\mathbf{Q}}(t), t) \, dt
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In order to get the same equations of motion, the two Lagrangian functions may differ by a time derivative \(\frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)\), whose integral reads \(F_1(\dots,)\) evaluated in the extremes of integration, and whose variation is thus zero. Thus
+\begin{equation*}
+\begin{split}\mathcal{L}(\mathbf{q}(t), \dot{\mathbf{q}}(t), t) = \mathscr{L}(\mathbf{Q}(t), \dot{\mathbf{Q}}(t), t) + \frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or as a function of the Hamiltonian functions,
+\begin{equation*}
+\begin{split}\mathbf{p} \cdot \dot{\mathbf{q}} -\mathcal{H}(\mathbf{q}, \mathbf{p}, t) = \mathbf{P} \cdot \dot{\mathbf{Q}} - \mathscr{H}(\mathbf{Q}, \mathbf{P}, t) + \frac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d F_1}{dt}(\mathbf{q}(t), \mathbf{Q}(t), t)
+  & = \mathbf{p} \cdot \dot{\mathbf{q}} - \mathbf{P} \cdot \dot{\mathbf{Q}} - \mathcal{H}(\mathbf{q}, \mathbf{p}, t) + \mathscr{H}(\mathbf{Q}(t), \mathbf{P}(t),t) = \\
+  & = \partial_\mathbf{q} F_1 \cdot \dot{\mathbf{q}} + \partial_\mathbf{Q} F_1 \cdot \dot{\mathbf{Q}} + \partial_t F_1
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that \sphinxhyphen{} using the arbitariness of the result on the choice of coordinates and the physics of the system \sphinxhyphen{} its differential reads
+\begin{equation*}
+\begin{split}d F_1 = \mathbf{p} \cdot d \mathbf{q} - \mathbf{P} \cdot d \mathbf{Q} + ( \mathscr{H} - \mathcal{H} ) dt \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its partial derivatives
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:gen-fun-1:derivatives}
+\begin{split}
+\left.\partial_{\mathbf{q}} F_1\right|_{\mathbf{q}, t         } = \mathbf{p}
+\qquad , \qquad
+\left.\partial_{\mathbf{Q}} F_1\right|_{\mathbf{Q}, t         } = -\mathbf{P}
+\qquad , \qquad
+\left.\partial_{t         } F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+This is \sphinxstylestrong{Type\sphinxhyphen{}1} generating function. \sphinxstylestrong{Type\sphinxhyphen{}2} generating function is defined as
+\begin{equation*}
+\begin{split}F_2(\mathbf{q}, \mathbf{P}, t) = \mathbf{P} \cdot \mathbf{Q} + F_1(\mathbf{q}, \mathbf{P}, t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its differential gives
+\begin{equation*}
+\begin{split}d F_2 = \mathbf{p} \cdot d \mathbf{q} + \mathbf{Q} \cdot d \mathbf{P} + ( \mathscr{H} - \mathcal{H} ) dt \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its partial derivatives
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:gen-fun-2:derivatives}
+\begin{split}
+\left.\partial_{\mathbf{q}} F_2\right|_{\mathbf{P}, t} = \mathbf{p}
+\qquad , \qquad
+\left.\partial_{\mathbf{P}} F_2\right|_{\mathbf{q}, t} = \mathbf{Q}
+\qquad , \qquad
+\left.\partial_{t         } F_2\right|_{\mathbf{q}, \mathbf{P}} = \left.\partial_t F_1\right|_{\mathbf{q}, \mathbf{Q}} = \mathscr{H} - \mathcal{H} \ .
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Type\sphinxhyphen{}3.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Type\sphinxhyphen{}4.}
+
+
+\section{Hamilton\sphinxhyphen{}Jacobi formulation of mechanics}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:hamilton-jacobi-formulation-of-mechanics}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-hamilton-jacobi}}
+\sphinxAtStartPar
+Let a set of canonical variables \((\mathbf{Q}, \mathbf{P})\) exist so that \(\mathscr{H}(\mathbf{Q}, \mathbf{P}, t) = 0\).%
+\begin{footnote}[2]\sphinxAtStartFootnote
+Does this set of variables exist? For short\sphinxhyphen{}time? For long\sphinxhyphen{}time?
+%
+\end{footnote} \sphinxstylestrong{Remark} This is the definition of the function, not a 1\sphinxhyphen{}dimensional constraint. For this set of canonical variables, Hamilton’s equations implies that \(\mathbf{Q}\), and \(\mathbf{P}\) are integrals of motion
+\begin{equation*}
+\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{Q}} & = \nabla_{\mathbf{P}} \mathscr{H} && \qquad \rightarrow \qquad \mathbf{Q}(t) = \overline{\mathbf{Q}} \\
+  \dot{\mathbf{P}} & =-\nabla_{\mathbf{Q}} \mathscr{H} && \qquad \rightarrow \qquad \mathbf{P}(t) = \overline{\mathbf{P}} \\
+\end{aligned}
+\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using type\sphinxhyphen{}2 generating function, and its partial derivatives \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:gen-fun-2:derivatives}, \(\mathbf{p} = \partial_{\mathbf{q}} F_2(\mathbf{q}, \mathbf{P}, t)\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0
+  & = \partial_t F_2\left( \mathbf{q}, \mathbf{P}, t \right) - \underbrace{\mathscr{H}(\mathbf{Q}, \mathbf{P}, t)}_{=0} + \mathcal{H}(\mathbf{q}, \mathbf{p}, t) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or, calling \(F_2(\mathbf{q}(t), \overline{\mathbf{P}}, t) := S(\mathbf{q}(t), t; \overline{\mathbf{P}})\) \sphinxhyphen{} as it can be seen as the action functional as a function of the ending time \(t\) and generalized coordinates \(\mathbf{q}(t)\), see {\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-action-functional-type-2-gen-fun}]{\sphinxcrossref{\DUrole{std,std-ref}{below}}}} \sphinxhyphen{} the common form of the Hamilton\sphinxhyphen{}Jacobi equation follows
+\begin{equation}\label{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:hamilton-jacobi}
+\begin{split}\begin{aligned}
+  0 = \partial_t S\left( \mathbf{q}(t), t; \overline{\mathbf{P}} \right) + \mathcal{H}\left(\mathbf{q}(t), \partial_{\mathbf{q}} S(\mathbf{q}(t), t; \overline{\mathbf{P}}) , t \right) \ .
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Stationary problems.} For problems whose Hamiltonian is not explicitly function of time, \(\mathcal{H}(\mathbf{q}, \mathbf{p})\), the Hamiltonian is constant and equal to the energy of the system, \(\mathcal{H}(\mathbf{q}, \mathbf{p}) = E\). Integration in \(t\) gives
+\begin{equation*}
+\begin{split}S\left(\mathbf{q}(t), t; \overline{\mathbf{P}} \right) = - E t + W\left(\mathbf{q}(t); \overline{\mathbf{P}} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The constant energy \(E\) is a function of the integrals of motion \(\overline{\mathbf{P}}\) only.
+
+\sphinxAtStartPar
+Introducing this expression in the Hamilton\sphinxhyphen{}Jacobi equation \eqref{equation:ch/quantum-mechanics/analytical-mechanics:eq:analytics:hamilton-jacobi} gives an equation for \(W\left( \mathbf{q}, \overline{\mathbf{P}} \right)\),
+\begin{equation*}
+\begin{split}E = \mathcal{H}\left( \mathbf{q}, \partial_{\mathbf{q}} W\left(\mathbf{q}, \overline{\mathbf{P}} \right) \right) \ .\end{split}
+\end{equation*}
+
+\subsection{Action functional and type\sphinxhyphen{}2 generating function}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:action-functional-and-type-2-generating-function}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-action-functional-type-2-gen-fun}}
+
+\section{Angle\sphinxhyphen{}action variables}
+\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:angle-action-variables}}\label{\detokenize{ch/quantum-mechanics/analytical-mechanics:quantum-mechanics-analytical-mechanics-angle-action}}
+\sphinxAtStartPar
+Let the system of interest be a \sphinxstylestrong{conservative system} using the original set of variables \((\mathbf{q}, \mathbf{p})\), so that the Hamiltonian doesn’t explicitly depend on time \(t\), and it’s constant \(\mathcal{H}(\mathbf{q}, \mathbf{p}) = E\).
+Let a set of canonical variables \((\mathbf{Q}, \mathbf{P}) =: (\mathbf{w}, \mathbf{J})\) exist so that \(\mathbf{J}(t) = \overline{\mathbf{J}}\) are integrals of motion, and \(\mathscr{H}(\mathbf{w}, \overline{\mathbf{J}}, t) = \mathcal{H}(\mathbf{q}, \mathbf{p}) = E\), \sphinxstyleemphasis{trajectory\sphinxhyphen{}wise}.
+\begin{equation*}
+\begin{split}\left\{
+\begin{aligned}
+  \dot{\mathbf{w}} & = \nabla_{\mathbf{J}} \mathscr{H} \\
+  \dot{\mathbf{J}} & =-\nabla_{\mathbf{w}} \mathscr{H} = \mathbf{0} && \qquad \rightarrow \qquad \mathscr{H}(\mathbf{\overline{J}}, t) \\
+\end{aligned}
+\right.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Partial derivative of \(F_1(\mathbf{q}, \mathbf{Q}, t)\) w.r.t. time \(t\) is therefore zero
+\begin{equation*}
+\begin{split}\partial_t F_1|_{\mathbf{q}, \mathbf{w}} = \mathscr{H} - \mathcal{H} = 0 \qquad \rightarrow \qquad F_1(\mathbf{q}, \mathbf{w}) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and alos the hamiltonian \(\mathscr{H}\) can’t be a function of time, \(\mathcal{H}(\mathbf{q}, \mathbf{p}) = \mathscr{H}(\overline{\mathbf{J}}) = E(\overline{\mathbf{J}})\), \sphinxstyleemphasis{trajectory\sphinxhyphen{}wise}. Thus the gradient of the Hamiltonian \(\mathscr{H}\) w.r.t. \(\mathbf{J}\) is constant as well \(\nabla_{\mathbf{J}} \mathscr{H} =: \overline{\boldsymbol\omega}\), and the evolution of the generalized coordinate is linear (including periodic orbits, if the coordinates are cycical),
+\begin{equation*}
+\begin{split}\mathbf{w}(t) = \mathbf{w}_0 + \overline{ \boldsymbol{\omega} } \, t \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Differentials of the generating functions.} With this choice of conjugated variables, the differential of the type\sphinxhyphen{}1 generating function becomes
+\begin{equation*}
+\begin{split}d F_1(\mathbf{q}, \mathbf{w}, t) = \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot d \mathbf{w} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the integration along a closed trajectory \(\gamma\) in the space \((\mathbf{q}, \mathbf{w})\) gives, if the function \(F_1\) is regular in the region where integration occurs, so that \(\oint d F_1 = 0\).
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \oint_{\gamma_k} d F_1
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \oint_{\gamma_k} \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} dt = \\
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \overline{\mathbf{J}} \cdot  \overline{\boldsymbol{\omega}} \, T_{k} = \\
+  & = \oint_{\gamma_k} \mathbf{p} \cdot d \mathbf{q} - \dfrac{1}{2\pi} \sum_{i} \overline{J}_i \, \frac{T_{k}}{T_i} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(T_{\gamma}\) the period of the trajectory \(\gamma\). The differential of the type\sphinxhyphen{}2 generating function reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d F_2 
+  & = \mathbf{J} \cdot d \mathbf{w} + \mathbf{w} \cdot d \mathbf{J} + d F_1 = \\
+  & = \mathbf{p} \cdot d \mathbf{q} + \mathbf{w} \cdot d \mathbf{J}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its integration over a closed trajectory in the \((\mathbf{q}, \mathbf{J})\) space, with \(\mathbf{J} = \overline{\mathbf{J}}\), \(\mathbf{w} = \mathbf{w}_0 + \overline{\boldsymbol\omega} \, t\), gives
+\begin{equation*}
+\begin{split}\oint d F_2 = \oint d F_1 + \oint \overline{\mathbf{J}} \cdot \overline{\boldsymbol\omega} \, dt = \oint \mathbf{p} \cdot d \mathbf{q} \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Remark. todo} Discussion about the regularity of \(F_2\) and the domain of integration. Integration of an exact differential over a closed path different from zero implies that something “strange” is happening.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Separable systems
+
+\item {} 
+\sphinxAtStartPar
+definition of action variables in separable systems
+
+\end{itemize}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
 \part{Solid State Physics}
 
 \sphinxstepscope
@@ -8172,32 +10067,32 @@ Concentration
 \sphinxAtStartPar
 By applying the depletion approximation, the net space\sphinxhyphen{}charge density \(\rho(x)\) is treated as piecewise constant:
 \begin{equation*}
-\begin{split}\rho(x) = \begin{cases} 
+\begin{split}\rho(x) = \left\{ \begin{aligned} 
   0 & x \lt x_p \\
  -q N_A & x_p \le x < 0 \\
   q N_D & 0 \le x \le x_n \\
   0 & x \gt x_n \ .
-\end{cases}\end{split}
+\end{aligned} \right.\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Integrating Gauss’ law, \(\partial_x e(x) = \frac{\rho(x)}{\varepsilon}\), with the assumption of electrical neutrality, \(0 = q (N_A x_p + N_D x_n)\), and zero field outside the interface,
 \begin{equation*}
-\begin{split}e(x) = \begin{cases}
+\begin{split}e(x) = \left\{ \begin{aligned}
   0 & x \lt x_p \\
   -\frac{q N_A}{\varepsilon} \left( x - x_p \right) & x_p \le x < 0 \\
    \frac{q N_D}{\varepsilon} \left( x - x_n \right) & 0 \le x \le x_n \\
   0 & x \gt x_n \ .
-\end{cases}\end{split}
+\end{aligned} \right.\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Integrating the relation between the electric field and the electric potential, \(e(x) = - \partial_x \phi(x)\), with the reference \(\phi(x) = 0\) in the \(p\)\sphinxhyphen{}bulk, \(x < x_p\),
 \begin{equation*}
-\begin{split}\phi(x) = \begin{cases}
+\begin{split}\phi(x) = \left\{ \begin{aligned}
   0 & x \lt x_p \\
   \frac{q N_A}{2 \varepsilon} \left( x - x_p \right)^2 & x_p \le x < 0 \\
   \frac{q N_D}{2 \varepsilon} \left( x - x_n  \right)^2 + \frac{q N_A}{2 \varepsilon} x_p^2 - \frac{q N_D}{2 \varepsilon} x_n^2 & 0 \le x \le x_n \\
   \frac{q}{2 \varepsilon} \left( N_A x_p^2 - N_D x_n^2 \right) =: V_{bi} & x \gt x_n \ .
-\end{cases}\end{split}
+\end{aligned} \right.\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Global charge neutrality requires \(-N_A x_p = N_D x_n\), yielding the equilibrium depletion width \(W_0\):
