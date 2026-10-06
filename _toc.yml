@@ -81,6 +81,7 @@ parts:
       - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln
       - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
       - file: ch/quantum-mechanics/atom-models/schrodinger-notes
+  - file: ch/quantum-mechanics/many-body/second-quantization
   - file: ch/quantum-mechanics/analytical-mechanics
 - caption: Solid State Physics
   numbered: True
