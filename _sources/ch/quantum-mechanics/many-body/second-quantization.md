@@ -57,26 +57,12 @@ $$| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .$$
 
 $$\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .$$
 
-```{dropdown} Details - Normalization
-:open:
-
-...
-
-```
-
 **Annihilation operator, $\hat{b}_i$.** 
 
 $$\begin{aligned}
   \hat{b}_i | \dots, n_i, \dots \rangle & = \sqrt{n} | \dots, (n-1)_i, \dots \rangle \ , \qquad \text{if $n_i > 0$} \\
   \hat{b}_i | \dots, n_i, \dots \rangle & = | \mathbf{0} \rangle
 \end{aligned}$$
-
-```{dropdown} Details - Normalization
-:open:
-
-...
-
-```
 
 **Number operator. $\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i$** 
 
@@ -86,6 +72,18 @@ $$\begin{aligned}
   & = \hat{b}_i^\dagger \, \left( \sqrt{n} | \dots, (n-1)_i, \dots \rangle \right) = \\
   & = n | \dots, n_i, \dots \rangle \ .
 \end{aligned}$$
+
+```{dropdown} Creation and annihilation operators are not Hermitian
+:open:
+
+```
+
+```{dropdown} Details - Normalization
+:open:
+
+$$\langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = $$
+
+```
 
 **Total number operator.** $\hat{n} = \sum_{i} \hat{n}_i$
 

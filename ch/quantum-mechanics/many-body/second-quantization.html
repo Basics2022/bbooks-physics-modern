@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -571,31 +562,13 @@ Contents<div class="sd-summary-down docutils">
 <p><strong>Creation operator, <span class="math notranslate nohighlight">\(\hat{b}_i^{\dagger}\)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Details - Normalization<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">…</p>
-</div>
-</details><p><strong>Annihilation operator, <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</strong></p>
+<p><strong>Annihilation operator, <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \hat{b}_i | \dots, n_i, \dots \rangle &amp; = \sqrt{n} | \dots, (n-1)_i, \dots \rangle \ , \qquad \text{if $n_i &gt; 0$} \\
   \hat{b}_i | \dots, n_i, \dots \rangle &amp; = | \mathbf{0} \rangle
 \end{aligned}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Details - Normalization<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">…</p>
-</div>
-</details><p><strong>Number operator. <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span></strong></p>
+<p><strong>Number operator. <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \hat{n}_i | \dots, n_i, \dots \rangle
@@ -603,7 +576,25 @@ Details - Normalization<div class="sd-summary-down docutils">
   &amp; = \hat{b}_i^\dagger \, \left( \sqrt{n} | \dots, (n-1)_i, \dots \rangle \right) = \\
   &amp; = n | \dots, n_i, \dots \rangle \ .
 \end{aligned}\end{split}\]</div>
-<p><strong>Total number operator.</strong> <span class="math notranslate nohighlight">\(\hat{n} = \sum_{i} \hat{n}_i\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Creation and annihilation operators are not Hermitian<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details - Normalization<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \]</div>
+</div>
+</details><p><strong>Total number operator.</strong> <span class="math notranslate nohighlight">\(\hat{n} = \sum_{i} \hat{n}_i\)</span></p>
 <p><strong>CCRs.</strong></p>
 <div class="math notranslate nohighlight">
 \[[ \hat{b}_i, \hat{b}_j^\dagger ] = \delta_{ij} \ . \]</div>
