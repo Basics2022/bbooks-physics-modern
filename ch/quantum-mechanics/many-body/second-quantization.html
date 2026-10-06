@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -479,21 +488,32 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identical-systems">22.1. Identical systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrization-and-anti-symmetrization">22.1.1. Symmetrization and anti-symmetrization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrization-and-anti-symmetrization">22.1.1. Symmetrization and anti-symmetrization</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-basis-for-bosons">22.1.1.1. Symmetric basis for bosons</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-symmetric-basis-for-fermions">22.1.1.2. Anti-symmetric basis for fermions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">22.2. Second quantization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons">22.2.1. Bosons</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">22.2.1.1. Creation and annihilation operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fock-states">22.2.1. Fock states</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermions">22.2.2. Fermions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.2.2.1. Creation and annihilation operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons-and-fermions">22.3. Bosons and Fermions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons">22.3.1. Bosons</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">22.3.1.1. Creation and annihilation operators</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermions">22.3.2. Fermions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.3.2.1. Creation and annihilation operators</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.3. Quantum fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -546,7 +566,28 @@ Contents<div class="sd-summary-down docutils">
 </ul>
 <div class="section" id="symmetrization-and-anti-symmetrization">
 <h3><span class="section-number">22.1.1. </span>Symmetrization and anti-symmetrization<a class="headerlink" href="#symmetrization-and-anti-symmetrization" title="Permalink to this heading">#</a></h3>
-<p>…</p>
+<div class="section" id="symmetric-basis-for-bosons">
+<h4><span class="section-number">22.1.1.1. </span>Symmetric basis for bosons<a class="headerlink" href="#symmetric-basis-for-bosons" title="Permalink to this heading">#</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(| \alpha_1, \dots, \alpha_N \rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[| \alpha_1, \dots, \alpha_N \rangle_S := \sqrt{ \dfrac{\prod_k n_k!}{N!} } \sum_{\hat{P} \in S_N} \hat{P} | \alpha_1, \dots, \alpha_N \rangle \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(n_k\)</span> the occupation number of the single-body state <span class="math notranslate nohighlight">\(k\)</span>. The factor before the summation is required for normalization of the symmetric state, as it’s the square root of the inverse of the number of permutations with repetitions, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html#permutazioni-con-ripetizioni">Combinatorics: Permutations with Repetitions</a>.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 22.1 </span> (Low-dimensional example)</p>
+<div class="example-content section" id="proof-content">
+</div>
+</div></div>
+<div class="section" id="anti-symmetric-basis-for-fermions">
+<h4><span class="section-number">22.1.1.2. </span>Anti-symmetric basis for fermions<a class="headerlink" href="#anti-symmetric-basis-for-fermions" title="Permalink to this heading">#</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(| \alpha_1, \dots, \alpha_N \rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}| \alpha_1, \dots, \alpha_N \rangle_A := \dfrac{1}{\sqrt{N!}} \left| \begin{matrix} | \alpha_1\rangle_1 &amp; \dots &amp; | \alpha_N \rangle_1 \\ \dots &amp; \dots &amp; \dots \\ | \alpha_1\rangle_N &amp; \dots &amp; | \alpha_N \rangle_N \end{matrix} \right| \ .\end{split}\]</div>
+<p>If two bodies were in the same state, two rows of the matrix would be equal and thus the determinant be zero. The factor before the determinant is required for normalization, as it’s the square root of the inverse of the number of simple pertumations of <span class="math notranslate nohighlight">\(N\)</span> objects without repetitions, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html#permutazioni-semplici">Combinatorics: Permutations with Repetitions</a>.</p>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 22.2 </span> (Low-dimensional example)</p>
+<div class="example-content section" id="proof-content">
+</div>
+</div></div>
 </div>
 </div>
 <div class="section" id="id1">
@@ -555,11 +596,18 @@ Contents<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .\]</div>
 <p><strong>Ground state.</strong> <span class="math notranslate nohighlight">\(| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle\)</span>.</p>
+<div class="section" id="fock-states">
+<h3><span class="section-number">22.2.1. </span>Fock states<a class="headerlink" href="#fock-states" title="Permalink to this heading">#</a></h3>
+<p><strong>todo</strong> <em>Properties of Fock states</em></p>
+</div>
+</div>
+<div class="section" id="bosons-and-fermions">
+<h2><span class="section-number">22.3. </span>Bosons and Fermions<a class="headerlink" href="#bosons-and-fermions" title="Permalink to this heading">#</a></h2>
 <div class="section" id="bosons">
-<h3><span class="section-number">22.2.1. </span>Bosons<a class="headerlink" href="#bosons" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">22.3.1. </span>Bosons<a class="headerlink" href="#bosons" title="Permalink to this heading">#</a></h3>
 <div class="section" id="creation-and-annihilation-operators">
-<h4><span class="section-number">22.2.1.1. </span>Creation and annihilation operators<a class="headerlink" href="#creation-and-annihilation-operators" title="Permalink to this heading">#</a></h4>
-<p><strong>Creation operator, <span class="math notranslate nohighlight">\(\hat{b}_i^{\dagger}\)</span></strong></p>
+<h4><span class="section-number">22.3.1.1. </span>Creation and annihilation operators<a class="headerlink" href="#creation-and-annihilation-operators" title="Permalink to this heading">#</a></h4>
+<p><strong>Creation operator, <span class="math notranslate nohighlight">\(\hat{b}_i^{\dagger}\)</span>.</strong> The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .\]</div>
 <p><strong>Annihilation operator, <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</strong></p>
@@ -568,7 +616,42 @@ Contents<div class="sd-summary-down docutils">
   \hat{b}_i | \dots, n_i, \dots \rangle &amp; = \sqrt{n} | \dots, (n-1)_i, \dots \rangle \ , \qquad \text{if $n_i &gt; 0$} \\
   \hat{b}_i | \dots, n_i, \dots \rangle &amp; = | \mathbf{0} \rangle
 \end{aligned}\end{split}\]</div>
-<p><strong>Number operator. <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span></strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Annihilation and creation operators are not Hermitian.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Creation operator is the adjoint of the annihilation operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The adjoint operator of an operator <span class="math notranslate nohighlight">\(\hat{a}: A \rightarrow B\)</span> is defined as the operator <span class="math notranslate nohighlight">\(\hat{a}^\dagger: B \rightarrow A\)</span> so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \phi | \hat{a} | \psi \rangle_B 
+  &amp; = \langle \psi | \hat{a}^\dagger | \phi \rangle_A^* = \\
+  &amp; = \langle \hat{a}^\dagger \phi | \psi \rangle_A \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">for any <span class="math notranslate nohighlight">\(| \phi \rangle \in B\)</span>, <span class="math notranslate nohighlight">\(| \psi \rangle \in  A\)</span>. Thus, for the annihilation operator <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathbf{m} | \hat{b}_i | \mathbf{n} \rangle = \langle \mathbf{n} | \left( \hat{b}_i \right)^{\dagger} | \mathbf{m} \rangle^* \ .\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \mathbf{n} | \left( \hat{b}_i \right)^{\dagger} | \mathbf{m} \rangle^*
+  &amp; = \langle \mathbf{m} | \hat{b}_i  | \mathbf{n} \rangle = &amp;&amp; {\text{(1)}} \\
+  &amp; = \sqrt{n_i} \langle \mathbf{m} | \mathbf{n} - \mathbf{1}_i \rangle = &amp;&amp; {\text{(2)}} \\
+  &amp; = \sqrt{n_i} \, \delta_{\mathbf{m}, \mathbf{n}-\mathbf{1}_i} = &amp;&amp; {\text{(3)}} \\
+  &amp; = \sqrt{m_i + 1} \, \delta_{\mathbf{m}, \mathbf{n}-\mathbf{1}_i} = &amp;&amp; {\text{(4)}} \\
+  &amp; = \sqrt{m_i + 1} \, \delta_{\mathbf{m}+\mathbf{1}_i, \mathbf{n}} = &amp;&amp; {\text{(5)}} \\
+  &amp; = \sqrt{m_i + 1} \langle \mathbf{n} | \mathbf{m} + \mathbf{1}_i \rangle = \\
+  &amp; = \langle \mathbf{n} | \left( \sqrt{m_i + 1}  | \mathbf{m} + \mathbf{1}_i \rangle \right) = &amp;&amp; {\text{(6)}} \\
+  &amp; = \langle \mathbf{n} | \hat{b}_i^\dagger | \mathbf{m} \rangle \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the Kronecker’s delta acting on all the indices - just as an example, with <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b} = (b_1, b_2)\)</span>, it follows that <span class="math notranslate nohighlight">\(\delta_{\mathbf{a}, \mathbf{b}} = \delta_{a_1, b_1} \delta_{a_2, b_2}\)</span> -, and (1) action of the annihilation operator, (2) orthogonality of Fock states, (3-4) properties of Kronecker’s delta, (5) orthogonality of Fock states, (6) recognizing the action of the creation operator <span class="math notranslate nohighlight">\(\hat{b}_i^\dagger\)</span> on <span class="math notranslate nohighlight">\(| \mathbf{m} \rangle\)</span>. As the result of the inner product is real, its complex conjugate is the value itself.</p>
+</div>
+</details><p><strong>Number operator. <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \hat{n}_i | \dots, n_i, \dots \rangle
@@ -577,14 +660,6 @@ Contents<div class="sd-summary-down docutils">
   &amp; = n | \dots, n_i, \dots \rangle \ .
 \end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Creation and annihilation operators are not Hermitian<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Details - Normalization<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -621,14 +696,35 @@ Proof<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="section" id="fermions">
-<h3><span class="section-number">22.2.2. </span>Fermions<a class="headerlink" href="#fermions" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">22.3.2. </span>Fermions<a class="headerlink" href="#fermions" title="Permalink to this heading">#</a></h3>
 <div class="section" id="id2">
-<h4><span class="section-number">22.2.2.1. </span>Creation and annihilation operators<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">22.3.2.1. </span>Creation and annihilation operators<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 </div>
 </div>
 </div>
 <div class="section" id="quantum-fields">
-<h2><span class="section-number">22.3. </span>Quantum fields<a class="headerlink" href="#quantum-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">22.4. </span>Quantum fields<a class="headerlink" href="#quantum-fields" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\{ | \nu_k \rangle \}_k\)</span> a basis of quantum states of the 1-body system. The 1-body wave function can be represented as a linear combination of the vectors of this basis,</p>
+<div class="math notranslate nohighlight">
+\[| \psi \rangle = \sum_k | \nu_k \rangle c_k = \sum_k | \nu_k \rangle \langle \nu_k | \psi \rangle \ ,\]</div>
+<p>and in position representation</p>
+<div class="math notranslate nohighlight">
+\[\psi(\mathbf{r},t) = \langle \mathbf{r} | \psi \rangle = \sum_k \nu_k(\mathbf{r}) c_k(t) \ .\]</div>
+<div class="section" id="field-creation-operator">
+<h3><span class="section-number">22.4.1. </span>Field creation operator<a class="headerlink" href="#field-creation-operator" title="Permalink to this heading">#</a></h3>
+<p><strong>Action of <span class="math notranslate nohighlight">\(\hat{\Psi}^\dagger(\mathbf{r})\)</span> on the vacuum state.</strong> The action of the operator <span class="math notranslate nohighlight">\(\hat{\Psi}^\dagger(\mathbf{r})\)</span> on the vacuum places a particle in the state <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span>, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-second-quantization-field-r-1">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-eq-second-quantization-field-r-1" title="Permalink to this equation">#</a></span>\[| \mathbf{r} \rangle = \hat{\Psi}^\dagger(\mathbf{r}) | 0 \rangle \ .\]</div>
+<p>The state <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> can be written as a linear combination of the elements of a basis. For a <strong>discrete basis</strong> <span class="math notranslate nohighlight">\(\{ | \nu_k \rangle \}_k\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[| \mathbf{r} \rangle = \sum_k | \nu_k \rangle \langle \nu_k | \mathbf{r} \rangle \ .\]</div>
+<p>A vector of the basis of the 1-body system <span class="math notranslate nohighlight">\(| \nu_k \rangle\)</span> can be built with the creation operator acting on the ground state, <span class="math notranslate nohighlight">\(| \nu_k \rangle = a^\dagger_{\nu_k} | 0 \rangle\)</span>, and thus</p>
+<div class="math notranslate nohighlight" id="equation-eq-second-quantization-field-r-2">
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-eq-second-quantization-field-r-2" title="Permalink to this equation">#</a></span>\[| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, a_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, a_{\nu_k}^\dagger | 0 \rangle \ .\]</div>
+<p>Comparision of <a class="reference internal" href="#equation-eq-second-quantization-field-r-1">(22.1)</a> and <a class="reference internal" href="#equation-eq-second-quantization-field-r-2">(22.2)</a> gives the expression of the field creation operator</p>
+<div class="math notranslate nohighlight">
+\[\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) a_{\nu_k}^\dagger \ .\]</div>
+</div>
 </div>
 </div>
 
@@ -696,21 +792,32 @@ Proof<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identical-systems">22.1. Identical systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrization-and-anti-symmetrization">22.1.1. Symmetrization and anti-symmetrization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrization-and-anti-symmetrization">22.1.1. Symmetrization and anti-symmetrization</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-basis-for-bosons">22.1.1.1. Symmetric basis for bosons</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anti-symmetric-basis-for-fermions">22.1.1.2. Anti-symmetric basis for fermions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">22.2. Second quantization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons">22.2.1. Bosons</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">22.2.1.1. Creation and annihilation operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fock-states">22.2.1. Fock states</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermions">22.2.2. Fermions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.2.2.1. Creation and annihilation operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons-and-fermions">22.3. Bosons and Fermions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bosons">22.3.1. Bosons</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">22.3.1.1. Creation and annihilation operators</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermions">22.3.2. Fermions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.3.2.1. Creation and annihilation operators</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.3. Quantum fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
