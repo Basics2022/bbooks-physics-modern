@@ -81,7 +81,7 @@ $$\begin{aligned}
 ```{dropdown} Details - Normalization
 :open:
 
-$$\langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = $$
+$$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n} | \hat{b}_i^\dagger \hat{b}_i | \mathbf{n} \rangle $$
 
 ```
 
