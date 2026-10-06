@@ -39,7 +39,32 @@ it follows that $P_{ij} P_{ij} = 1$. Thus, two solutions are possible, correspon
 
 ### Symmetrization and anti-symmetrization
 
-...
+#### Symmetric basis for bosons
+
+Let $| \alpha_1, \dots, \alpha_N \rangle$
+
+$$| \alpha_1, \dots, \alpha_N \rangle_S := \sqrt{ \dfrac{\prod_k n_k!}{N!} } \sum_{\hat{P} \in S_N} \hat{P} | \alpha_1, \dots, \alpha_N \rangle \ ,$$
+
+with $n_k$ the occupation number of the single-body state $k$. The factor before the summation is required for normalization of the symmetric state, as it's the square root of the inverse of the number of permutations with repetitions, see [Combinatorics: Permutations with Repetitions](https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html#permutazioni-con-ripetizioni).
+
+```{prf:example} Low-dimensional example
+
+
+```
+
+#### Anti-symmetric basis for fermions
+
+Let $| \alpha_1, \dots, \alpha_N \rangle$
+
+$$| \alpha_1, \dots, \alpha_N \rangle_A := \dfrac{1}{\sqrt{N!}} \left| \begin{matrix} | \alpha_1\rangle_1 & \dots & | \alpha_N \rangle_1 \\ \dots & \dots & \dots \\ | \alpha_1\rangle_N & \dots & | \alpha_N \rangle_N \end{matrix} \right| \ .$$
+
+If two bodies were in the same state, two rows of the matrix would be equal and thus the determinant be zero. The factor before the determinant is required for normalization, as it's the square root of the inverse of the number of simple pertumations of $N$ objects without repetitions, see [Combinatorics: Permutations with Repetitions](https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html#permutazioni-semplici).
+
+```{prf:example} Low-dimensional example
+
+
+```
+
 
 ## Second quantization
 
@@ -62,6 +87,7 @@ $$| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .$$
 **Creation operator, $\hat{b}_i^{\dagger}$.** The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator $\hat{b}_i$.
 
 $$\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .$$
+
 
 **Annihilation operator, $\hat{b}_i$.** 
 
@@ -155,5 +181,31 @@ $$[ \hat{b}_i^\dagger, \hat{b}_j^\dagger ] = 0$$
 #### Creation and annihilation operators
 
 ## Quantum fields
+
+Let $\{ | \nu_k \rangle \}_k$ a basis of quantum states of the 1-body system. The 1-body wave function can be represented as a linear combination of the vectors of this basis,
+
+$$| \psi \rangle = \sum_k | \nu_k \rangle c_k = \sum_k | \nu_k \rangle \langle \nu_k | \psi \rangle \ ,$$
+
+and in position representation
+
+$$\psi(\mathbf{r},t) = \langle \mathbf{r} | \psi \rangle = \sum_k \nu_k(\mathbf{r}) c_k(t) \ .$$
+
+### Field creation operator
+
+**Action of $\hat{\Psi}^\dagger(\mathbf{r})$ on the vacuum state.** The action of the operator $\hat{\Psi}^\dagger(\mathbf{r})$ on the vacuum places a particle in the state $| \mathbf{r} \rangle$, i.e.
+
+$$| \mathbf{r} \rangle = \hat{\Psi}^\dagger(\mathbf{r}) | 0 \rangle \ .$$ (eq:second-quantization:field:r-1)
+
+The state $| \mathbf{r} \rangle$ can be written as a linear combination of the elements of a basis. For a **discrete basis** $\{ | \nu_k \rangle \}_k$,
+
+$$| \mathbf{r} \rangle = \sum_k | \nu_k \rangle \langle \nu_k | \mathbf{r} \rangle \ .$$
+
+A vector of the basis of the 1-body system $| \nu_k \rangle$ can be built with the creation operator acting on the ground state, $| \nu_k \rangle = a^\dagger_{\nu_k} | 0 \rangle$, and thus
+
+$$| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, a_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, a_{\nu_k}^\dagger | 0 \rangle \ .$$ (eq:second-quantization:field:r-2)
+
+Comparision of {eq}`eq:second-quantization:field:r-1` and {eq}`eq:second-quantization:field:r-2` gives the expression of the field creation operator
+
+$$\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) a_{\nu_k}^\dagger \ .$$
 
 
