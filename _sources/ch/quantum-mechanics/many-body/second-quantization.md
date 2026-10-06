@@ -276,6 +276,8 @@ $$\begin{aligned}
 
 $$| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ .$$
 
+$$\Psi(\mathbf{r}_1, \mathbf{r}_2) = \langle \mathbf{r}_1 , \mathbf{r}_2 | \Psi \rangle$$
+
 **Bosons.**
 
 **Fermions.**
