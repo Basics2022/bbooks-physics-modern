@@ -49,6 +49,17 @@ with $n_k$ the occupation number of the single-body state $k$. The factor before
 
 ```{prf:example} Low-dimensional example
 
+Let a 2-particle system be represented in a Hilbert space thats the product $\mathcal{H}^{\otimes 2} = \mathcal{H}_1 \otimes \mathcal{H}_1$. If the two particles are in the same 1-body state $| a \rangle$, the state of the system is $| a , a \rangle$, equal to the symmetric state. If the two particles are in different and orthogonal states $| a \rangle$, $| b \rangle$, the symmetric representation of the state reads
+
+$$| a, b \rangle_S = \dfrac{1}{\sqrt{2}} \left( | a , b \rangle + | b , a \rangle \right) \ .$$
+
+This state is unit-norm, as
+
+$$\begin{aligned}
+  {}_S \langle a , b | a, b \rangle_S 
+  & = \frac{1}{\sqrt{2}} \left( \langle a , b | + \langle b , a | \right) \frac{1}{\sqrt{2}} \left( | a , b \rangle + | b , a \rangle  \right) = \\
+  & = \frac{1}{2} \left( \underbrace{\langle a , b | a, b \rangle}_{=\langle a | a \rangle \langle b |b \rangle = 1} + \underbrace{\langle b , a | a, b \rangle}_{\langle b | a \rangle \langle a | b \rangle = 0} + \underbrace{\langle a , b | b, a \rangle}_{=0} + \underbrace{\langle b , a | b, a \rangle}_{=1} \right) = 1 \ .
+\end{aligned}$$
 
 ```
 
@@ -62,6 +73,22 @@ If two bodies were in the same state, two rows of the matrix would be equal and 
 
 ```{prf:example} Low-dimensional example
 
+Let a 2-particle system be represented in a Hilbert space thats the product $\mathcal{H}^{\otimes 2} = \mathcal{H}_1 \otimes \mathcal{H}_1$. If the two particles are in the same 1-body state $| a \rangle$, the state of the system is $| a , a \rangle$,
+
+$$| a , a \rangle_A = \dfrac{1}{\sqrt{2}} \left| \begin{matrix} | a \rangle_1 & | a \rangle_2 \\ | a \rangle_1 & | a \rangle_2 \end{matrix} \right| = 0 \ .$$
+
+If the two particles are in different and orthogonal states $| a \rangle$, $| b \rangle$, the symmetric representation of the state reads
+
+$$| a , b \rangle_A = \dfrac{1}{\sqrt{2}} \left| \begin{matrix} | a \rangle_1 & | b \rangle_1 \\ | a \rangle_2 & | b \rangle_2 \end{matrix} \right| = \frac{1}{\sqrt{2}} \left( | a, b \rangle - | b, a \rangle \right) \ .$$
+
+This state is unit-norm, as
+
+$$\begin{aligned}
+  {}_A \langle a , b | a, b \rangle_A 
+  & = \frac{1}{\sqrt{2}} \left( \langle a , b | - \langle b , a | \right) \frac{1}{\sqrt{2}} \left( | a , b \rangle - | b , a \rangle  \right) = \\
+  & = \frac{1}{2} \left( \underbrace{\langle a , b | a, b \rangle}_{=\langle a | a \rangle \langle b |b \rangle = 1} - \underbrace{\langle b , a | a, b \rangle}_{\langle b | a \rangle \langle a | b \rangle = 0} - \underbrace{\langle a , b | b, a \rangle}_{=0} + \underbrace{\langle b , a | b, a \rangle}_{=1} \right) = 1 \ .
+\end{aligned}$$
+
 
 ```
 
@@ -72,7 +99,7 @@ Let $\{ | \alpha \rangle \}$ a basis of the 1-body system. Let $n_\alpha$ the nu
 
 $$| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .$$
  
-**Ground state.** $| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle$.
+**Ground state.** $| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle$. By definition $\langle 0 | 0 \rangle = 1$.
 
 ### Fock states
 
@@ -87,6 +114,10 @@ $$| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .$$
 **Creation operator, $\hat{b}_i^{\dagger}$.** The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator $\hat{b}_i$.
 
 $$\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .$$
+
+A state $| n_1, n_2, \dots, n_i, \dots \rangle$ can be obtained from the vacuum equation as
+
+$$| n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | 0 \rangle \ .$$
 
 
 **Annihilation operator, $\hat{b}_i$.** 
@@ -135,7 +166,7 @@ with the Kronecker's delta acting on all the indices - just as an example, with 
 ```
 
 
-**Number operator. $\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i$** 
+**Number operator, $\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i$.** Number operator is self-adjoint. This is consistent with postulates of quantum mechanics: physical observables are represented by self-adjoint operators.
 
 $$\begin{aligned}
   \hat{n}_i | \dots, n_i, \dots \rangle
@@ -144,12 +175,16 @@ $$\begin{aligned}
   & = n | \dots, n_i, \dots \rangle \ .
 \end{aligned}$$
 
-```{dropdown} Details - Normalization
+<!--
+```{dropdown} Details - Multiplicative factor of creation and annihilation operators
 :open:
+
+As the
 
 $$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n} | \hat{b}_i^\dagger \hat{b}_i | \mathbf{n} \rangle $$
 
 ```
+-->
 
 **Total number operator.** $\hat{n} = \sum_{i} \hat{n}_i$
 
@@ -158,7 +193,6 @@ $$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n}
 $$[ \hat{b}_i, \hat{b}_j^\dagger ] = \delta_{ij} \ . $$
 
 ```{dropdown} Proof
-:open:
 
 $$[ \hat{b}_i, \hat{b}_j^\dagger ] | \mathbf{n} \rangle = \left( \sqrt{n_j+1} \sqrt{n_i^{(1)}} - \sqrt{n_i} \sqrt{n_j^{(1)}+1} \right) | \dots, (n-1)_i, \dots, (n+1)_j, \dots \rangle $$
 
@@ -192,20 +226,59 @@ $$\psi(\mathbf{r},t) = \langle \mathbf{r} | \psi \rangle = \sum_k \nu_k(\mathbf{
 
 ### Field creation operator
 
+#### One-particle system
+
 **Action of $\hat{\Psi}^\dagger(\mathbf{r})$ on the vacuum state.** The action of the operator $\hat{\Psi}^\dagger(\mathbf{r})$ on the vacuum places a particle in the state $| \mathbf{r} \rangle$, i.e.
 
 $$| \mathbf{r} \rangle = \hat{\Psi}^\dagger(\mathbf{r}) | 0 \rangle \ .$$ (eq:second-quantization:field:r-1)
+
+````{dropdown} Discrete basis
+:open:
 
 The state $| \mathbf{r} \rangle$ can be written as a linear combination of the elements of a basis. For a **discrete basis** $\{ | \nu_k \rangle \}_k$,
 
 $$| \mathbf{r} \rangle = \sum_k | \nu_k \rangle \langle \nu_k | \mathbf{r} \rangle \ .$$
 
-A vector of the basis of the 1-body system $| \nu_k \rangle$ can be built with the creation operator acting on the ground state, $| \nu_k \rangle = a^\dagger_{\nu_k} | 0 \rangle$, and thus
+A vector of the basis of the 1-body system $| \nu_k \rangle$ can be built with the creation operator acting on the ground state, $| \nu_k \rangle = \hat{a}^\dagger_{\nu_k} | 0 \rangle$, and thus
 
-$$| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, a_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, a_{\nu_k}^\dagger | 0 \rangle \ .$$ (eq:second-quantization:field:r-2)
+$$| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, \hat{a}_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, \hat{a}_{\nu_k}^\dagger | 0 \rangle \ .$$ (eq:second-quantization:field:r-2)
 
 Comparision of {eq}`eq:second-quantization:field:r-1` and {eq}`eq:second-quantization:field:r-2` gives the expression of the field creation operator
 
-$$\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) a_{\nu_k}^\dagger \ .$$
+$$\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) \hat{a}_{\nu_k}^\dagger \ .$$
+
+```{dropdown} Equivalent expression of the single-body wave function
+:open:
+
+The single-body wave function in position representation reads
+
+$$\begin{aligned}
+  \psi(\mathbf{r}) 
+  & = \langle \mathbf{r} | \psi \rangle = \\
+  & = \langle 0 | \hat{\Psi}(\mathbf{r}) | \psi \rangle = \\
+  & = \sum_k \sum_j \nu_j(\mathbf{r}) \underbrace{\langle 0 | \hat{a}_{\nu_j} | \nu_k \rangle}_{=\delta_{jk} \langle 0 | 0 \rangle = \delta_{jk}} \langle \nu_k | \psi \rangle = \\
+  & = \sum_k \nu_k(\mathbf{r}) \langle \nu_k | \psi \rangle = \\ 
+  & = \sum_k \langle \mathbf{r} | \nu_k \rangle \langle \nu_k | \psi \rangle \ .
+\end{aligned}$$
+
+```
+
+````
+
+````{dropdown} Continuous basis
+:open:
+
+
+
+````
+
+#### Two-particle system
+
+$$| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ .$$
+
+**Bosons.**
+
+**Fermions.**
+
 
 
