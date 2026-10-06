@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -504,7 +513,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.2.1. Bosons</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-systems">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">22.4.1.3.1. Bosons</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">22.4.1.3.2. Fermions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -784,12 +801,94 @@ Continuous basis<div class="sd-summary-down docutils">
 </details></div>
 <div class="section" id="two-particle-system">
 <h4><span class="section-number">22.4.1.2. </span>Two-particle system<a class="headerlink" href="#two-particle-system" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id3">
+<h5><span class="section-number">22.4.1.2.1. </span>Bosons<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<p>Position state can be expressed either with creation operators</p>
 <div class="math notranslate nohighlight">
-\[| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ .\]</div>
+\[| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ ,\]</div>
+<p>and with as a linear combination of states built with the 1-body basis <span class="math notranslate nohighlight">\(\{ \nu_k \}\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\Psi(\mathbf{r}_1, \mathbf{r}_2) = \langle \mathbf{r}_1 , \mathbf{r}_2 | \Psi \rangle\]</div>
-<p><strong>Bosons.</strong></p>
+\[| \mathbf{r}_1, \mathbf{r}_2 \rangle = \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle \langle \nu_{i_1}, \nu_{i_2} | \mathbf{r}_1, \mathbf{r}_2 \rangle \ .\]</div>
+<p><strong>Identity operator.</strong></p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{1}}^{(2)} = \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle \langle \nu_{i_1}, \nu_{i_2} | \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{\mathbf{1}}^{(2)} | \Psi \rangle 
+  &amp; = \hat{\mathbf{1}}^{(2)} \sum_{k_1 \le k_2} c_{k_1, k_2} | \nu_{k_1} \nu_{k_2} \rangle = \\
+  &amp; = \left( \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle \langle \nu_{i_1}, \nu_{i_2} | \right) \sum_{k_1 \le k_2} c_{k_1, k_2} | \nu_{k_1} , \nu_{k_2} \rangle = \\
+  &amp; = \sum_{i_1 \le i_2} \sum_{k_1 \le k_2} | \nu_{i_1}, \nu_{i_2} \rangle \delta_{i_1 k_1} \delta_{i_2 k_2} c_{k_1,k_2} = \\
+  &amp; = \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle c_{i_1,i_2} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p><strong>Bosons.</strong> The state <span class="math notranslate nohighlight">\(| \nu_{i_1}, \nu_{i_2} \rangle\)</span> can be built with creation operators from the vacuum state. If <span class="math notranslate nohighlight">\(i_1 \ne i_2\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[| \nu_{i_1}, \nu_{i_2} \rangle = \hat{a}^\dagger_{\nu_{i_1}} \hat{a}^\dagger_{\nu_{i_2}} | 0 \rangle \qquad '=' \qquad | \dots \underbrace{1}_{i_1} \dots \underbrace{1}_{i_2} \dots \rangle \ . \]</div>
+<p>If <span class="math notranslate nohighlight">\(i_2 = i_1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[| \nu_{i_1}, \nu_{i_1} \rangle = \dfrac{1}{\sqrt{2}} \hat{a}^\dagger_{\nu_{i_1}} \hat{a}^\dagger_{\nu_{i_1}} | 0 \rangle \qquad '=' \qquad | \dots \underbrace{2}_{i_1} \dots \rangle \ , \]</div>
+<p>i.e. in general <span class="math notranslate nohighlight">\(| \nu_{i_1}, \nu_{i_2} \rangle = f_{i_1 i_2} \hat{a}^\dagger_{i_1} \hat{a}^\dagger_{i_2} | 0 \rangle\)</span>, with <span class="math notranslate nohighlight">\(f_{i_1 i_2} = \frac{1}{\sqrt{1 + \delta_{i_1 i_2}}}\)</span>. Inserting this expression into the formula for <span class="math notranslate nohighlight">\(| \mathbf{r}_1, \mathbf{r}_2 \rangle\)</span>, the expression for the creator operators follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  | \mathbf{r}_1, \mathbf{r}_2 \rangle
+  &amp; = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^{\dagger}(\mathbf{r}_1) | 0 \rangle = \\
+  &amp; = \sum_{i_1 \le i_2} f_{i_1 i_2} \nu_{i_1}^*(\mathbf{r}_1) \nu_{i_2}^*(\mathbf{r}_2) \hat{a}_{\nu_{i_1}}^\dagger \hat{a}_{\nu_{i_2}}^\dagger | 0 \rangle \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^{\dagger}(\mathbf{r}_1) 
+  &amp; = \sum_{i_1 \le i_2} f_{i_1 i_2} \nu_{i_1}^*(\mathbf{r}_1) \nu_{i_2}^*(\mathbf{r}_2) \hat{a}_{\nu_{i_1}}^\dagger \hat{a}_{\nu_{i_2}}^\dagger
+\end{aligned}\]</div>
+<p>The state function of the system in position representation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \Psi(\mathbf{r}_1, \mathbf{r}_2) 
+  &amp; = \langle \mathbf{r}_1 , \mathbf{r}_2 | \Psi \rangle = \\
+  &amp; = \langle \mathbf{r}_1 , \mathbf{r}_2 | \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle \langle \nu_{i_1}, \nu_{i_2} | \Psi \rangle = \\
+  &amp; = \sum_{i_1 \le i_2} \nu_{i_1}(\mathbf{r}_1) \, \nu_{i_2}(\mathbf{r}_2) \langle \nu_{i_1}, \nu_{i_2} | \Psi \rangle = \\
+  &amp; = \langle 0 | \hat{\Psi}(\mathbf{r}_2) \hat{\Psi}(\mathbf{r}_1) | \sum_{i_1 \le i_2} | \nu_{i_1}, \nu_{i_2} \rangle \langle \nu_{i_1}, \nu_{i_2} | \Psi \rangle = \\
+\end{aligned}\end{split}\]</div>
 <p><strong>Fermions.</strong></p>
+</div>
+</div>
+<div class="section" id="many-body-systems">
+<h4><span class="section-number">22.4.1.3. </span>Many-body systems<a class="headerlink" href="#many-body-systems" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id4">
+<h5><span class="section-number">22.4.1.3.1. </span>Bosons<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h5>
+<p><strong>Identity operator.</strong></p>
+<ul>
+<li><p>Summing over ordered/independent configurations (“occupation representation”)</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{1}}^{(N)} = \sum_{i_1 \le i_2 \le \dots \le i_N} | \nu_{i_1}, \nu_{i_2}, \dots, \nu_{i_N} \rangle \langle \nu_{i_1}, \nu_{i_2}, \dots, \nu_{i_N} |\]</div>
+</li>
+<li><p>Summing over all the indices (“creation operator represetnation”)</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{1}}^{(N)} = \frac{1}{N!} \sum_{i_1, i_2, \dots, i_N} \left( c_{\nu_{i_1}}^{\dagger} \dots c_{\nu_{i_N}}^{\dagger} | 0 \rangle \right) \left( \langle 0 | c_{\nu_{i_1}} \dots c_{\nu_{i_N}} \right)\]</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h5><span class="section-number">22.4.1.3.2. </span>Fermions<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h5>
+<p><strong>Identity operator.</strong></p>
+<ul>
+<li><p>Summing over ordered/independent configurations (“occupation representation”)</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{1}}^{(N)} = \sum_{i_1 &lt; i_2 &lt; \dots &lt; i_N} | \nu_{i_1}, \nu_{i_2}, \dots, \nu_{i_N} \rangle \langle \nu_{i_1}, \nu_{i_2}, \dots, \nu_{i_N} |\]</div>
+</li>
+<li><p>Summing over all the indices (“creation operator represetnation”)</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{1}}^{(N)} = \frac{1}{N!} \sum_{i_1, i_2, \dots, i_N} \left( c_{\nu_{i_1}}^{\dagger} \dots c_{\nu_{i_N}}^{\dagger} | 0 \rangle \right) \left( \langle 0 | c_{\nu_{i_1}} \dots c_{\nu_{i_N}} \right)\]</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -884,7 +983,15 @@ Continuous basis<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.2.1. Bosons</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-systems">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">22.4.1.3.1. Bosons</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">22.4.1.3.2. Fermions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
