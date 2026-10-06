@@ -511,7 +511,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -575,6 +579,16 @@ Contents<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="example-0">
 <p class="admonition-title"><span class="caption-number">Example 22.1 </span> (Low-dimensional example)</p>
 <div class="example-content section" id="proof-content">
+<p>Let a 2-particle system be represented in a Hilbert space thats the product <span class="math notranslate nohighlight">\(\mathcal{H}^{\otimes 2} = \mathcal{H}_1 \otimes \mathcal{H}_1\)</span>. If the two particles are in the same 1-body state <span class="math notranslate nohighlight">\(| a \rangle\)</span>, the state of the system is <span class="math notranslate nohighlight">\(| a , a \rangle\)</span>, equal to the symmetric state. If the two particles are in different and orthogonal states <span class="math notranslate nohighlight">\(| a \rangle\)</span>, <span class="math notranslate nohighlight">\(| b \rangle\)</span>, the symmetric representation of the state reads</p>
+<div class="math notranslate nohighlight">
+\[| a, b \rangle_S = \dfrac{1}{\sqrt{2}} \left( | a , b \rangle + | b , a \rangle \right) \ .\]</div>
+<p>This state is unit-norm, as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  {}_S \langle a , b | a, b \rangle_S 
+  &amp; = \frac{1}{\sqrt{2}} \left( \langle a , b | + \langle b , a | \right) \frac{1}{\sqrt{2}} \left( | a , b \rangle + | b , a \rangle  \right) = \\
+  &amp; = \frac{1}{2} \left( \underbrace{\langle a , b | a, b \rangle}_{=\langle a | a \rangle \langle b |b \rangle = 1} + \underbrace{\langle b , a | a, b \rangle}_{\langle b | a \rangle \langle a | b \rangle = 0} + \underbrace{\langle a , b | b, a \rangle}_{=0} + \underbrace{\langle b , a | b, a \rangle}_{=1} \right) = 1 \ .
+\end{aligned}\end{split}\]</div>
 </div>
 </div></div>
 <div class="section" id="anti-symmetric-basis-for-fermions">
@@ -586,6 +600,19 @@ Contents<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="example-1">
 <p class="admonition-title"><span class="caption-number">Example 22.2 </span> (Low-dimensional example)</p>
 <div class="example-content section" id="proof-content">
+<p>Let a 2-particle system be represented in a Hilbert space thats the product <span class="math notranslate nohighlight">\(\mathcal{H}^{\otimes 2} = \mathcal{H}_1 \otimes \mathcal{H}_1\)</span>. If the two particles are in the same 1-body state <span class="math notranslate nohighlight">\(| a \rangle\)</span>, the state of the system is <span class="math notranslate nohighlight">\(| a , a \rangle\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}| a , a \rangle_A = \dfrac{1}{\sqrt{2}} \left| \begin{matrix} | a \rangle_1 &amp; | a \rangle_2 \\ | a \rangle_1 &amp; | a \rangle_2 \end{matrix} \right| = 0 \ .\end{split}\]</div>
+<p>If the two particles are in different and orthogonal states <span class="math notranslate nohighlight">\(| a \rangle\)</span>, <span class="math notranslate nohighlight">\(| b \rangle\)</span>, the symmetric representation of the state reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}| a , b \rangle_A = \dfrac{1}{\sqrt{2}} \left| \begin{matrix} | a \rangle_1 &amp; | b \rangle_1 \\ | a \rangle_2 &amp; | b \rangle_2 \end{matrix} \right| = \frac{1}{\sqrt{2}} \left( | a, b \rangle - | b, a \rangle \right) \ .\end{split}\]</div>
+<p>This state is unit-norm, as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  {}_A \langle a , b | a, b \rangle_A 
+  &amp; = \frac{1}{\sqrt{2}} \left( \langle a , b | - \langle b , a | \right) \frac{1}{\sqrt{2}} \left( | a , b \rangle - | b , a \rangle  \right) = \\
+  &amp; = \frac{1}{2} \left( \underbrace{\langle a , b | a, b \rangle}_{=\langle a | a \rangle \langle b |b \rangle = 1} - \underbrace{\langle b , a | a, b \rangle}_{\langle b | a \rangle \langle a | b \rangle = 0} - \underbrace{\langle a , b | b, a \rangle}_{=0} + \underbrace{\langle b , a | b, a \rangle}_{=1} \right) = 1 \ .
+\end{aligned}\end{split}\]</div>
 </div>
 </div></div>
 </div>
@@ -595,7 +622,7 @@ Contents<div class="sd-summary-down docutils">
 <p>Let <span class="math notranslate nohighlight">\(\{ | \alpha \rangle \}\)</span> a basis of the 1-body system. Let <span class="math notranslate nohighlight">\(n_\alpha\)</span> the number of subsystems in the single-body state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>, i.e. the <strong>occupation number</strong> of the state. The sum of the occupation numbers is equal to the number of particles <span class="math notranslate nohighlight">\(N\)</span>, i.e. <span class="math notranslate nohighlight">\(\sum_\alpha n_\alpha = N\)</span>. In the second quantization, the state of the system is represented in the occupation number state</p>
 <div class="math notranslate nohighlight">
 \[| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .\]</div>
-<p><strong>Ground state.</strong> <span class="math notranslate nohighlight">\(| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle\)</span>.</p>
+<p><strong>Ground state.</strong> <span class="math notranslate nohighlight">\(| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle\)</span>. By definition <span class="math notranslate nohighlight">\(\langle 0 | 0 \rangle = 1\)</span>.</p>
 <div class="section" id="fock-states">
 <h3><span class="section-number">22.2.1. </span>Fock states<a class="headerlink" href="#fock-states" title="Permalink to this heading">#</a></h3>
 <p><strong>todo</strong> <em>Properties of Fock states</em></p>
@@ -610,6 +637,9 @@ Contents<div class="sd-summary-down docutils">
 <p><strong>Creation operator, <span class="math notranslate nohighlight">\(\hat{b}_i^{\dagger}\)</span>.</strong> The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .\]</div>
+<p>A state <span class="math notranslate nohighlight">\(| n_1, n_2, \dots, n_i, \dots \rangle\)</span> can be obtained from the vacuum equation as</p>
+<div class="math notranslate nohighlight">
+\[| n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | 0 \rangle \ .\]</div>
 <p><strong>Annihilation operator, <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -651,7 +681,7 @@ Creation operator is the adjoint of the annihilation operator<div class="sd-summ
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">with the Kronecker’s delta acting on all the indices - just as an example, with <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b} = (b_1, b_2)\)</span>, it follows that <span class="math notranslate nohighlight">\(\delta_{\mathbf{a}, \mathbf{b}} = \delta_{a_1, b_1} \delta_{a_2, b_2}\)</span> -, and (1) action of the annihilation operator, (2) orthogonality of Fock states, (3-4) properties of Kronecker’s delta, (5) orthogonality of Fock states, (6) recognizing the action of the creation operator <span class="math notranslate nohighlight">\(\hat{b}_i^\dagger\)</span> on <span class="math notranslate nohighlight">\(| \mathbf{m} \rangle\)</span>. As the result of the inner product is real, its complex conjugate is the value itself.</p>
 </div>
-</details><p><strong>Number operator. <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span></strong></p>
+</details><p><strong>Number operator, <span class="math notranslate nohighlight">\(\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i\)</span>.</strong> Number operator is self-adjoint. This is consistent with postulates of quantum mechanics: physical observables are represented by self-adjoint operators.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \hat{n}_i | \dots, n_i, \dots \rangle
@@ -659,21 +689,21 @@ Creation operator is the adjoint of the annihilation operator<div class="sd-summ
   &amp; = \hat{b}_i^\dagger \, \left( \sqrt{n} | \dots, (n-1)_i, \dots \rangle \right) = \\
   &amp; = n | \dots, n_i, \dots \rangle \ .
 \end{aligned}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Details - Normalization<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n} | \hat{b}_i^\dagger \hat{b}_i | \mathbf{n} \rangle \]</div>
-</div>
-</details><p><strong>Total number operator.</strong> <span class="math notranslate nohighlight">\(\hat{n} = \sum_{i} \hat{n}_i\)</span></p>
+<!--
+```{dropdown} Details - Multiplicative factor of creation and annihilation operators
+:open:
+
+As the
+
+$$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n} | \hat{b}_i^\dagger \hat{b}_i | \mathbf{n} \rangle $$
+
+```
+-->
+<p><strong>Total number operator.</strong> <span class="math notranslate nohighlight">\(\hat{n} = \sum_{i} \hat{n}_i\)</span></p>
 <p><strong>CCRs.</strong></p>
 <div class="math notranslate nohighlight">
 \[[ \hat{b}_i, \hat{b}_j^\dagger ] = \delta_{ij} \ . \]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Proof<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -712,18 +742,62 @@ Proof<div class="sd-summary-down docutils">
 \[\psi(\mathbf{r},t) = \langle \mathbf{r} | \psi \rangle = \sum_k \nu_k(\mathbf{r}) c_k(t) \ .\]</div>
 <div class="section" id="field-creation-operator">
 <h3><span class="section-number">22.4.1. </span>Field creation operator<a class="headerlink" href="#field-creation-operator" title="Permalink to this heading">#</a></h3>
+<div class="section" id="one-particle-system">
+<h4><span class="section-number">22.4.1.1. </span>One-particle system<a class="headerlink" href="#one-particle-system" title="Permalink to this heading">#</a></h4>
 <p><strong>Action of <span class="math notranslate nohighlight">\(\hat{\Psi}^\dagger(\mathbf{r})\)</span> on the vacuum state.</strong> The action of the operator <span class="math notranslate nohighlight">\(\hat{\Psi}^\dagger(\mathbf{r})\)</span> on the vacuum places a particle in the state <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span>, i.e.</p>
 <div class="math notranslate nohighlight" id="equation-eq-second-quantization-field-r-1">
 <span class="eqno">(22.1)<a class="headerlink" href="#equation-eq-second-quantization-field-r-1" title="Permalink to this equation">#</a></span>\[| \mathbf{r} \rangle = \hat{\Psi}^\dagger(\mathbf{r}) | 0 \rangle \ .\]</div>
-<p>The state <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> can be written as a linear combination of the elements of a basis. For a <strong>discrete basis</strong> <span class="math notranslate nohighlight">\(\{ | \nu_k \rangle \}_k\)</span>,</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Discrete basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The state <span class="math notranslate nohighlight">\(| \mathbf{r} \rangle\)</span> can be written as a linear combination of the elements of a basis. For a <strong>discrete basis</strong> <span class="math notranslate nohighlight">\(\{ | \nu_k \rangle \}_k\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[| \mathbf{r} \rangle = \sum_k | \nu_k \rangle \langle \nu_k | \mathbf{r} \rangle \ .\]</div>
-<p>A vector of the basis of the 1-body system <span class="math notranslate nohighlight">\(| \nu_k \rangle\)</span> can be built with the creation operator acting on the ground state, <span class="math notranslate nohighlight">\(| \nu_k \rangle = a^\dagger_{\nu_k} | 0 \rangle\)</span>, and thus</p>
+<p class="sd-card-text">A vector of the basis of the 1-body system <span class="math notranslate nohighlight">\(| \nu_k \rangle\)</span> can be built with the creation operator acting on the ground state, <span class="math notranslate nohighlight">\(| \nu_k \rangle = \hat{a}^\dagger_{\nu_k} | 0 \rangle\)</span>, and thus</p>
 <div class="math notranslate nohighlight" id="equation-eq-second-quantization-field-r-2">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-eq-second-quantization-field-r-2" title="Permalink to this equation">#</a></span>\[| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, a_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, a_{\nu_k}^\dagger | 0 \rangle \ .\]</div>
-<p>Comparision of <a class="reference internal" href="#equation-eq-second-quantization-field-r-1">(22.1)</a> and <a class="reference internal" href="#equation-eq-second-quantization-field-r-2">(22.2)</a> gives the expression of the field creation operator</p>
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-eq-second-quantization-field-r-2" title="Permalink to this equation">#</a></span>\[| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, \hat{a}_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, \hat{a}_{\nu_k}^\dagger | 0 \rangle \ .\]</div>
+<p class="sd-card-text">Comparision of <a class="reference internal" href="#equation-eq-second-quantization-field-r-1">(22.1)</a> and <a class="reference internal" href="#equation-eq-second-quantization-field-r-2">(22.2)</a> gives the expression of the field creation operator</p>
 <div class="math notranslate nohighlight">
-\[\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) a_{\nu_k}^\dagger \ .\]</div>
+\[\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) \hat{a}_{\nu_k}^\dagger \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Equivalent expression of the single-body wave function<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The single-body wave function in position representation reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \psi(\mathbf{r}) 
+  &amp; = \langle \mathbf{r} | \psi \rangle = \\
+  &amp; = \langle 0 | \hat{\Psi}(\mathbf{r}) | \psi \rangle = \\
+  &amp; = \sum_k \sum_j \nu_j(\mathbf{r}) \underbrace{\langle 0 | \hat{a}_{\nu_j} | \nu_k \rangle}_{=\delta_{jk} \langle 0 | 0 \rangle = \delta_{jk}} \langle \nu_k | \psi \rangle = \\
+  &amp; = \sum_k \nu_k(\mathbf{r}) \langle \nu_k | \psi \rangle = \\ 
+  &amp; = \sum_k \langle \mathbf{r} | \nu_k \rangle \langle \nu_k | \psi \rangle \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Continuous basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
+<div class="section" id="two-particle-system">
+<h4><span class="section-number">22.4.1.2. </span>Two-particle system<a class="headerlink" href="#two-particle-system" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ .\]</div>
+<p><strong>Bosons.</strong></p>
+<p><strong>Fermions.</strong></p>
+</div>
 </div>
 </div>
 </div>
@@ -815,7 +889,11 @@ Proof<div class="sd-summary-down docutils">
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-fields">22.4. Quantum fields</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
