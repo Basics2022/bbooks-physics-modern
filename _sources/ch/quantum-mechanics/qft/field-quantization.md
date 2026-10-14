@@ -1,34 +1,51 @@
 (quantum-mechanics:qft:field-quantization)=
 # Field quantization
 
-First, a [classical system](quantum-mechanics:qft:field-quantization:classical) governed by a wave equation is discussed, along with its mode decomposition: a general solution can be written as the superposition of modes $u(x,t) = \sum_k q_k(t) n_k(x)$ whose contribution is modulated by coefficients $q_k(t)$ satisfying the ODE of a [harmonic oscillator](quantum-mechanics:qft:harmonic-oscillator).
+First, a [classical system](quantum-mechanics:qft:field-quantization:classical) governed by a wave equation is discussed, along with its mode decomposition: a general solution can be written as the superposition of modes $u(x,t) = \sum_k q_k(t) n_k(x)$ whose contribution is modulated by coefficients $q_k(t)$ satisfying the ODE of a ["single-frequency" harmonic oscillator](quantum-mechanics:qft:harmonic-oscillator). Thus, quantization of the system is performed in the modal basis using the same procedure used for the "single-frequency" harmonic oscillator.
 
 (quantum-mechanics:qft:field-quantization:classical)=
 ## Classical system
 
-
-### Discretization
-
-$$
-\partial_t^2u-c^2\partial_{xx}u=f
-\quad\longrightarrow\quad
-\ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i
-$$
-
-### Modes
+Let a classical field $u(x,t)$ be governed by the wave equation
 
 $$
-\partial_t^2u-c^2\partial_{xx}u=0,\qquad
-u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right)\quad\text{(exploiting b.c.)}
+\partial_t^2u-c^2\partial_{xx}u=f \ ,
 $$
 
-In the wave equation, using the orthogonality of the modes:
+supplied with proper initial and boundary conditions. This equation is usually the continuous model (exploiting **continuum hypotesis**, or some equivalent principle) of a macroscopic system, made of a huge number - but **finite** number - of sub-systems at the microscopic level. This is quite a relevant remark, as continuous models have an infinite number of modes, while discrete models with a finite number of sub-systems have a finite number of modes.
+
+The wave function is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.
 
 $$
-\ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0
+\ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i \ ,
 $$
 
+having used centered finite difference for the second-order space derivative.
+As done in [mechanics of elastic structures](https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/intro.html), the solution of the continuous equation can be written in the modal basis, that is computed as all the possible standing waves of the homogeneous problem
+
+$$
+\partial_t^2u-c^2\partial_{xx}u=0
+$$
+
+supplied with homogeneous boundary conditions $u(0) = u(L) = 0$, using the methods of separation of variables. Modes are the set of functions
+$n_k(x) = \sin \left( \frac{k \pi}{L} x \right)$, with $k \in \mathbb{N}$. The general solution can be written as a linear combination of the modes
+
+$$
+u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
+$$
+
+with time-dependent coefficients $q_k(t)$ satisfying the harmonic oscillator uncoupled ODEs
+
+$$
+\ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0 \ .
+$$ (eq:field-quantization:classical:mode-ode)
+
+(quantum-mechanics:qft:field-quantization:quantization)=
 ## From classical to quantum
+
+The amplitude $q_k(t)$ of mode $k$ is governed by the dynamical equation {eq}`eq:field-quantization:classical:mode-ode`, compatible with the Hamiltonian
+
+$$H_k(q^k,p_k) = \frac{p_k^2}{2} + \frac{\omega_k^2 (q^k)^2}{2} \ .$$
 
 Wavefunction of the mode $k$:
 
