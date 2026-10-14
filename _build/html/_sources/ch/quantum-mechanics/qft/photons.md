@@ -1,21 +1,27 @@
 (quantum-mechanics:qft:photons)=
 # Photons - EM field quantization
 
-Photons are the quanta of EM fields.
+Photons are the quanta of EM fields. After reviewing classical electromagnetism, two different introductions to EM field quantization are presented
+* [Quantization of the EM field in an ideal cavity (Fermi, 1931)](quantum-mechanics:qft:photons:em-field-quantization:fermi)
+* [Quantization of the EM field in free space](quantum-mechanics:qft:photons:em-field-quantization:free-space)
 
-- 3.a Classical EM
-- 3.b Towards quantization of the EM field
-- 3.c EM cavity (Fermi '31) …
+Then, the [classical limit](quantum-mechanics:qft:photons:em-field-quantization:classical-limit) is discussed, comparing [a field with incoherent states](quantum-mechanics:qft:photons:em-field-quantization:classical-limit:incoherent-states) and [a field with coherent states](quantum-mechanics:qft:photons:em-field-quantization:classical-limit:coherent-states)
 
+(quantum-mechanics:qft:photons:classical-em)=
 ## Classcal Electromagnetism
 
-**todo** *Add link to the bbook about Electromagnetism*
+Link to [Classical Electromagnetism](https://basics2022.github.io/bbooks-physics-electromagnetism/intro.html).
 
+(quantum-mechanics:qft:photons:em-field-quantization)=
 ## EM field quantization
 
+(quantum-mechanics:qft:photons:em-field-quantization:fermi)=
 ### Fermi 1931, Introduction to QFT lessons
 
-### Field in 1D free space
+(quantum-mechanics:qft:photons:em-field-quantization:free-space)=
+### EM Field in free space
+
+#### Field in 1D free space
 
 Travelling wave along $z$:
 
@@ -92,6 +98,7 @@ $$
 |\psi\rangle=|\dots n_{\vec k,\mu}\dots\rangle
 $$
 
+(quantum-mechanics:qft:photons:em-field-quantization:classical-limit)=
 ## Quantum description of the EM field — classical limit
 
 Example: 1D domain, 1 propagating wave.
@@ -103,6 +110,7 @@ $$
 
 How to recover the classical limit?
 
+(quantum-mechanics:qft:photons:em-field-quantization:classical-limit:incoherent-states)=
 ### Try 1 — Incoherent states
 
 Let $|\psi\rangle(t)$ be the state with $n$ photons, $|n\rangle$. Time-dependent Schrödinger: $i\hbar|\dot\psi\rangle=\hat H|\psi\rangle$.
@@ -128,6 +136,7 @@ $$
 - At a given time and place, the expected value of $\hat A$ is zero (this is the case of **incoherent light**, random phase).
 - The expected value is zero, but the field can be $\neq0$!!
 
+(quantum-mechanics:qft:photons:em-field-quantization:classical-limit:coherent-states)=
 ### Try 2 — Coherent states
 
 Particular superposition of energy states [Glauber '63, "Photon Correlations"].
