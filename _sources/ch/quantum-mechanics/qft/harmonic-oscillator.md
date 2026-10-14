@@ -1,6 +1,8 @@
 (quantum-mechanics:qft:harmonic-oscillator)=
 # Harmonic Oscillator
 
+Harmonic oscillator is used as the fundamental element in field quantization.
+
 ##  Creation and destruction
 
 ### Motivation

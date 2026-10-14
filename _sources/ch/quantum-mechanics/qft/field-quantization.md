@@ -1,7 +1,11 @@
 (quantum-mechanics:qft:field-quantization)=
 # Field quantization
 
+First, a [classical system](quantum-mechanics:qft:field-quantization:classical) governed by a wave equation is discussed, along with its mode decomposition: a general solution can be written as the superposition of modes $u(x,t) = \sum_k q_k(t) n_k(x)$ whose contribution is modulated by coefficients $q_k(t)$ satisfying the ODE of a [harmonic oscillator](quantum-mechanics:qft:harmonic-oscillator).
+
+(quantum-mechanics:qft:field-quantization:classical)=
 ## Classical system
+
 
 ### Discretization
 
