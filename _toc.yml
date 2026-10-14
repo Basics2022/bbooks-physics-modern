@@ -82,6 +82,14 @@ parts:
       - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
       - file: ch/quantum-mechanics/atom-models/schrodinger-notes
   - file: ch/quantum-mechanics/many-body/second-quantization
+  - file: ch/quantum-mechanics/many-body/electromagnetic-field-quantization
+  - file: ch/quantum-mechanics/qft
+    sections:
+    - file: ch/quantum-mechanics/qft/harmonic-oscillator
+    - file: ch/quantum-mechanics/qft/field-quantization
+    - file: ch/quantum-mechanics/qft/photons
+    - file: ch/quantum-mechanics/qft/multi-body
+    - file: ch/quantum-mechanics/qft/interactions
   - file: ch/quantum-mechanics/analytical-mechanics
 - caption: Solid State Physics
   numbered: True

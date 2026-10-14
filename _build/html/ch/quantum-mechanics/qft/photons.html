@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24.3. Photons - EM field quantization &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/qft/photons';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="24.4. Multi-body quantum mechanics and QFT" href="multi-body.html" />
+    <link rel="prev" title="24.2. Field quantization" href="field-quantization.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-special/em.html">4. Electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../relativity-general/intro.html">5. General Relativity</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../relativity-general/notes.html">6. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/differential-geometry.html">6.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../relativity-general/einstein-equation.html">6.2. Einstein’s equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../relativity-general/examples.html">6.3. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-metric.html">6.3.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../relativity-general/schwarzschild-orbits.html">6.3.2. Planetary orbits in Schwarzschild spacetime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/intro.html">7. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/liouville-boltzmann.html">8. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/notes.html">9. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/statistics.html">10. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../statistical-mechanics/ising.html">11. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-notes.html">11.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/markov-process-notes.html">11.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-mechanics/ising-numerics.html">11.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-mechanics/entropy.html">12. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">13. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">14. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wave-mechanics.html">15. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular-momentum.html">16. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spatial.html">16.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-spin.html">16.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular-momentum/angular-momentum-total.html">16.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../density-operator.html">17. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decoherence.html">18. Decoherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../einstein-coeffs-interaction-picture.html">19. Interaction picture, perturbation theory and Einstein coefficients</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../history.html">20. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history/topics.html">20.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/origins.html">20.2. Origins of Matrix and Wave Quantum Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/timeline.html">20.3. Timeline</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../history/origin-matrix-mechanics.html">20.4. Origin of matrix mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../history/light-dispersion.html">20.4.1. Light dispersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../history/einstein-planck.html">20.4.2. Light matter interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../history/larmor-formula.html">20.4.3. Radiation of moving charges - Larmor’s formula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../history/heisenberg-reinterpretation.html">20.4.4. Modern reinterpretation of Heisenberg mechanics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../history/matrix-mechanics/electron-perturbation-numerical.html">20.4.5. Numerical simulation of the electron pertubation</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../history/origin-wave-mechanics.html">20.5. Origin of wave theory of quantum mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../history/de-broglie.html">20.5.1. L. de Broglie, Researches of the Quantum Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../history/schrodinger.html">20.5.2. E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../atom-models.html">21. Atomic models</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/thomson.html">21.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/rutherford.html">21.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../atom-models/bohr.html">21.3. Bohr model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../atom-models/sommerfeld.html">21.4. Sommerfeld model</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/analytical-mechanics-short.html">21.4.4. Analytical mechanics - short notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../atom-models/schrodinger.html">21.5. Schrodinger model</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-analytical-sln.html">21.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-gallery.html">21.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../atom-models/schrodinger-notes.html">21.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../many-body/second-quantization.html">22. Second Quantization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../many-body/electromagnetic-field-quantization.html">23. Quantization of the electromagnetic field</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../qft.html">24. Introduction to Quantum Field Theory</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="harmonic-oscillator.html">24.1. Harmonic Oscillator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field-quantization.html">24.2. Field quantization</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">24.3. Photons - EM field quantization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi-body.html">24.4. Multi-body quantum mechanics and QFT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">24.5. Interacting Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analytical-mechanics.html">25. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">26. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">27. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">28. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">28.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">28.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">28.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-non-equilibrium.html">28.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-junctions.html">28.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-pn-diodes.html">28.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/edit/master/ch/quantum-mechanics/qft/photons.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/issues/new?title=Issue%20on%20page%20%2Fch/quantum-mechanics/qft/photons.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/ch/quantum-mechanics/qft/photons.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Photons - EM field quantization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classcal-electromagnetism">24.3.1. Classcal Electromagnetism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-quantization">24.3.2. EM field quantization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-1931-introduction-to-qft-lessons">24.3.2.1. Fermi 1931, Introduction to QFT lessons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2. Field in 1D free space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.1. In a 3D domain</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-description-of-the-em-field-classical-limit">24.3.3. Quantum description of the EM field — classical limit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-1-incoherent-states">24.3.3.1. Try 1 — Incoherent states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-2-coherent-states">24.3.3.2. Try 2 — Coherent states</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="photons-em-field-quantization">
+<span id="quantum-mechanics-qft-photons"></span><h1><span class="section-number">24.3. </span>Photons - EM field quantization<a class="headerlink" href="#photons-em-field-quantization" title="Permalink to this heading">#</a></h1>
+<p>Photons are the quanta of EM fields.</p>
+<ul class="simple">
+<li><p>3.a Classical EM</p></li>
+<li><p>3.b Towards quantization of the EM field</p></li>
+<li><p>3.c EM cavity (Fermi ‘31) …</p></li>
+</ul>
+<div class="section" id="classcal-electromagnetism">
+<h2><span class="section-number">24.3.1. </span>Classcal Electromagnetism<a class="headerlink" href="#classcal-electromagnetism" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong> <em>Add link to the bbook about Electromagnetism</em></p>
+</div>
+<div class="section" id="em-field-quantization">
+<h2><span class="section-number">24.3.2. </span>EM field quantization<a class="headerlink" href="#em-field-quantization" title="Permalink to this heading">#</a></h2>
+<div class="section" id="fermi-1931-introduction-to-qft-lessons">
+<h3><span class="section-number">24.3.2.1. </span>Fermi 1931, Introduction to QFT lessons<a class="headerlink" href="#fermi-1931-introduction-to-qft-lessons" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="field-in-1d-free-space">
+<h3><span class="section-number">24.3.2.2. </span>Field in 1D free space<a class="headerlink" href="#field-in-1d-free-space" title="Permalink to this heading">#</a></h3>
+<p>Travelling wave along <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec A(\vec r,t)=\hat u_x\,b\cos(kz-\omega t+\theta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+b\cos(kz-\omega t+\theta)=b\cos(kz)\cos(\omega t-\theta)+b\sin(kz)\sin(\omega t-\theta)
+\]</div>
+<p>i.e. a linear combination of 2 standing waves.</p>
+<p><strong>Definitions</strong></p>
+<div class="math notranslate nohighlight">
+\[
+q(t)=b\cos(\omega t-\theta)\ \ (\text{gen. coord.}),\qquad
+\dot q(t)=-b\omega\sin(\omega t-\theta)=:p\ \ (\text{gen. mom.}),\qquad
+\ddot q=-\omega^2q
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\vec A=\hat u_x\left[q\cos(kz)-\frac{p}{\omega}\sin(kz)\right]
+\]</div>
+<p>In Coulomb gauge:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec E=-\partial_t\vec A=-\hat u_x\left[p\cos kz+\omega q\sin kz\right],\qquad
+\vec B=\nabla\times\vec A=-\hat u_y\left[kq\sin(kz)+\frac{k}{\omega}p\cos(kz)\right]
+\]</div>
+<p><strong>[check]</strong> the <span class="math notranslate nohighlight">\(\vec E\)</span> expression above is re-derived from <span class="math notranslate nohighlight">\(\dot q=p,\ \dot p=-\omega^2q\)</span>; the handwriting is hard to read.</p>
+<p>with <span class="math notranslate nohighlight">\(\dot q=p\)</span>, <span class="math notranslate nohighlight">\(\dot p=-\omega^2q\)</span>.</p>
+<p><strong>Energy</strong></p>
+<div class="math notranslate nohighlight">
+\[
+H=\tfrac12\left(|\vec E|^2+|\vec B|^2\right)
+=\tfrac12\left\{2p^2\cos^2(kz)+2\omega^2q^2\sin^2(kz)+4\omega pq\sin(kz)\cos(kz)\right\}
+\]</div>
+<p>(using <span class="math notranslate nohighlight">\(k^2/\omega^2=1\)</span> as normalization). Averaging over a domain with <span class="math notranslate nohighlight">\(L=n\lambda=n\frac{2\pi}{k}\)</span>, <span class="math notranslate nohighlight">\(n\in\mathbb N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle H\rangle_L=\tfrac12\left(p^2+\omega^2q^2\right)
+\]</div>
+<p><strong>Quantization</strong>: from <span class="math notranslate nohighlight">\(q,p\)</span> to <span class="math notranslate nohighlight">\(\hat q,\hat p\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat H=\tfrac12\left(\hat p^2+\omega^2\hat q^2\right),\qquad
+\hat q=\sqrt{\tfrac{1}{2\omega}}\left(\hat a+\hat a^\dagger\right),\qquad
+\hat p=-i\sqrt{\tfrac{\omega}{2}}\left(\hat a-\hat a^\dagger\right)
+\]</div>
+<p>(<strong>[check]</strong> sign of <span class="math notranslate nohighlight">\(\hat p\)</span>, chosen to be consistent with the final result below.)</p>
+<div class="math notranslate nohighlight">
+\[
+\hat A=\hat u_x\left[\hat q\cos(kz)-\frac{\hat p}{\omega}\sin(kz)\right]
+=\hat u_x\sqrt{\tfrac1{2\omega}}\Big\{\cos(kz)(\hat a+\hat a^\dagger)+i\sin(kz)(\hat a-\hat a^\dagger)\Big\}
+=\hat u_x\sqrt{\tfrac1{2\omega}}\Big\{\hat a^\dagger e^{-ikz}+\hat a\,e^{ikz}\Big\}
+\]</div>
+<div class="section" id="in-a-3d-domain">
+<h4><span class="section-number">24.3.2.2.1. </span>In a 3D domain<a class="headerlink" href="#in-a-3d-domain" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+\hat A=\sum_{\vec k,\mu}\vec e_{\vec k\mu}\frac{1}{\sqrt{2\omega_k}}\left\{\hat a^\dagger_{\vec k,\mu}e^{-i\vec k\cdot\vec r}+\hat a_{\vec k,\mu}e^{i\vec k\cdot\vec r}\right\}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\hat H=\sum_{\vec k,\mu}\left(\hat N_{\vec k,\mu}+\tfrac12\right)\hbar\omega_k,\qquad
+|\psi\rangle=|\dots n_{\vec k,\mu}\dots\rangle
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="quantum-description-of-the-em-field-classical-limit">
+<h2><span class="section-number">24.3.3. </span>Quantum description of the EM field — classical limit<a class="headerlink" href="#quantum-description-of-the-em-field-classical-limit" title="Permalink to this heading">#</a></h2>
+<p>Example: 1D domain, 1 propagating wave.</p>
+<div class="math notranslate nohighlight">
+\[
+A(z,t)=u_x\,b\cos(kz-\omega t+\theta)\ \xrightarrow{\text{quant}}\
+\hat A=u_x\sqrt{\tfrac1{2\omega}}\left(\hat a e^{ikz}+\hat a^\dagger e^{-ikz}\right)
+\]</div>
+<p>How to recover the classical limit?</p>
+<div class="section" id="try-1-incoherent-states">
+<h3><span class="section-number">24.3.3.1. </span>Try 1 — Incoherent states<a class="headerlink" href="#try-1-incoherent-states" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(|\psi\rangle(t)\)</span> be the state with <span class="math notranslate nohighlight">\(n\)</span> photons, <span class="math notranslate nohighlight">\(|n\rangle\)</span>. Time-dependent Schrödinger: <span class="math notranslate nohighlight">\(i\hbar|\dot\psi\rangle=\hat H|\psi\rangle\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+|\psi\rangle(t)=c_n(t)|n\rangle,\qquad i\hbar\dot c_n=E_nc_n\ \to\ c_n(t)=c_{n0}\exp\!\left(-\frac{iE_n}{\hbar}t\right)
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(E_n=(n+\tfrac12)\hbar\omega\)</span>. For the system in state <span class="math notranslate nohighlight">\(|n\rangle\)</span>, with <span class="math notranslate nohighlight">\(|\psi\rangle_0\equiv|n\rangle\to c_{n0}=1\)</span>: <span class="math notranslate nohighlight">\(|\psi\rangle_t=\exp(-iE_nt/\hbar)|n\rangle\)</span>.</p>
+<p>The expected value of the operator <span class="math notranslate nohighlight">\(\hat A\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[
+\langle\hat A\rangle=\langle\psi|\hat A|\psi\rangle
+=\langle n|\sqrt{\tfrac1{2\omega}}\left(\hat ae^{ikz}+\hat a^\dagger e^{-ikz}\right)|n\rangle
+=\frac{e^{ikz}}{\sqrt{2\omega}}\sqrt n\underbrace{\langle n|n-1\rangle}_{=0}+\frac{e^{-ikz}}{\sqrt{2\omega}}\sqrt{n+1}\underbrace{\langle n|n+1\rangle}_{=0}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Rightarrow\quad\langle\hat A\rangle\equiv0
+\]</div>
+<ul class="simple">
+<li><p>At a given time and place, the expected value of <span class="math notranslate nohighlight">\(\hat A\)</span> is zero (this is the case of <strong>incoherent light</strong>, random phase).</p></li>
+<li><p>The expected value is zero, but the field can be <span class="math notranslate nohighlight">\(\neq0\)</span>!!</p></li>
+</ul>
+</div>
+<div class="section" id="try-2-coherent-states">
+<h3><span class="section-number">24.3.3.2. </span>Try 2 — Coherent states<a class="headerlink" href="#try-2-coherent-states" title="Permalink to this heading">#</a></h3>
+<p>Particular superposition of energy states [Glauber ‘63, “Photon Correlations”].</p>
+<p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(\hat a|\psi\rangle=c|\psi\rangle\)</span>, with <span class="math notranslate nohighlight">\(|\psi\rangle=\sum_{n=0}^{\infty}b_n|n\rangle\)</span>. It follows</p>
+<div class="math notranslate nohighlight">
+\[
+\hat a|\psi\rangle=\sum_{n=1}^{\infty}b_n\sqrt n\,|n-1\rangle=\sum_{n=0}^{\infty}b_{n+1}\sqrt{n+1}\,|n\rangle=c|\psi\rangle
+\]</div>
+<p>Exploiting orthogonality of <span class="math notranslate nohighlight">\(\{|n\rangle\}\)</span>: <span class="math notranslate nohighlight">\(c\,b_n=b_{n+1}\sqrt{n+1}\)</span>.</p>
+<p><strong>Recursive relation for the coefficients <span class="math notranslate nohighlight">\(b_n\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{b_{n+1}=c\,\frac{b_n}{\sqrt{n+1}}}\qquad(\circledast)
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(b_0\neq0\)</span>: <span class="math notranslate nohighlight">\(b_1=c\,b_0/\sqrt1\)</span>, <span class="math notranslate nohighlight">\(\ b_2=c\,b_1/\sqrt2=c^2b_0/\sqrt{1\cdot2}\)</span>, <span class="math notranslate nohighlight">\(\ \dots\ b_n=c^n b_0/\sqrt{n!}\)</span>.</p>
+<p>Normalization <span class="math notranslate nohighlight">\(1=\langle\psi|\psi\rangle=\sum_n|b_n|^2\)</span> gives, using <span class="math notranslate nohighlight">\(e^x=\sum_n x^n/n!\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+1=|b_0|^2\sum_{n=0}^{\infty}\frac{|c|^{2n}}{n!}=|b_0|^2e^{|c|^2}\ \Rightarrow\ b_0=e^{-|c|^2/2}\ \ (\text{if } b_0\ \text{is real})
+\]</div>
+<p>Thus, for a given value of <span class="math notranslate nohighlight">\(c\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+|\psi\rangle=\sum_{n=0}^{+\infty}e^{-\frac{|c|^2}{2}}\frac{c^n}{\sqrt{n!}}\,|n\rangle
+\]</div>
+<p><strong>Number of photons.</strong> Using the probability <span class="math notranslate nohighlight">\(|b_n|^2\)</span> of the system being in state <span class="math notranslate nohighlight">\(|n\rangle\)</span>:</p>
+<ul class="simple">
+<li><p>expected value of <span class="math notranslate nohighlight">\(\hat n\)</span> (~ <em>signal</em>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\langle n\rangle=\sum_{n=0}^{\infty}n|b_n|^2=\sum_{n=0}^{\infty}n\,e^{-|c|^2}\frac{|c|^{2n}}{n!}
+=|c|^2\sum_{n=1}^{\infty}e^{-|c|^2}\frac{|c|^{2(n-1)}}{(n-1)!}=|c|^2
+\]</div>
+<ul class="simple">
+<li><p>standard deviation / variance <span class="math notranslate nohighlight">\(\sigma_n^2\)</span> (~ <em>quantum noise</em>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\sigma_n=\sqrt{\langle(n-\langle n\rangle)^2\rangle}=\dots=\sqrt{\langle n\rangle}=|c|
+\]</div>
+<p>(The distribution <span class="math notranslate nohighlight">\(|b_n|^2\)</span> is a bell-shaped curve centred at <span class="math notranslate nohighlight">\(|c|^2\)</span>.)</p>
+<p><strong>Expected values of the fields</strong></p>
+<p><em>Expected value of <span class="math notranslate nohighlight">\(\hat a\)</span>:</em></p>
+<div class="math notranslate nohighlight">
+\[
+\langle\psi|\hat a|\psi\rangle=\sum_{m,n}b^*_{m0}b_{n0}\langle m|\hat a|n\rangle e^{-i(n-m)\omega t}
+=\sum_{m,n}b^*_{m0}b_{n0}\sqrt n\,\underbrace{\langle m|n-1\rangle}_{\delta_{m,n-1}}e^{-i\omega t}
+=\sum_m b^*_{m0}b_{m+1,0}\sqrt{m+1}\,e^{-i\omega t}
+\]</div>
+<p>and using the recursion <span class="math notranslate nohighlight">\((\circledast)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+=\sum_n c\,|b_{n0}|^2e^{-i\omega t}=c\,e^{-i\omega t}
+\]</div>
+<p><em>Expected value of <span class="math notranslate nohighlight">\(\hat a^\dagger\)</span>:</em> <span class="math notranslate nohighlight">\(\langle\psi|\hat a^\dagger|\psi\rangle=\dots=\sum_nc^*|b_{n0}|^2e^{+i\omega t}=c^*e^{i\omega t}\)</span>.</p>
+<p>Thus the <strong>expected value of <span class="math notranslate nohighlight">\(\hat A\)</span></strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle\psi|\hat A|\psi\rangle=u_x\sqrt{\tfrac1{2\omega}}\left\langle\hat a e^{ikz}+\hat a^\dagger e^{-ikz}\right\rangle
+=u_x\sqrt{\tfrac1{2\omega}}\left(c\,e^{-i\omega t}e^{ikz}+c^*e^{i\omega t}e^{-ikz}\right)
+=u_x\sqrt{\tfrac1{2\omega}}\;2|c|\cos(kz-\omega t+\theta)
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(c=|c|e^{i\theta}\)</span> ≈ <strong>classical electromagnetic wave</strong>.</p>
+<p><em>Obs.</em> Time evolution of the state: <span class="math notranslate nohighlight">\(|\psi\rangle=\sum_nb_n(t)|n\rangle\)</span>. Substituting in <span class="math notranslate nohighlight">\(i\hbar|\dot\psi\rangle=\hat H|\psi\rangle\)</span> and using orthogonality: <span class="math notranslate nohighlight">\(i\hbar\dot b_n=E_nb_n\to b_n(t)=b_{n0}\exp(-iE_nt/\hbar)\)</span>, i.e. <span class="math notranslate nohighlight">\(|\psi\rangle=\sum_n\exp(-i\omega_nt)\,b_{n0}|n\rangle\)</span>.</p>
+<p><em>Obs.</em> With <span class="math notranslate nohighlight">\(E_n=\hbar\omega(n+\tfrac12)\)</span>: <span class="math notranslate nohighlight">\(\omega_m-\omega_n=\omega(m-n)\)</span> — <strong>without the ½ factor!!</strong></p>
+<p><strong>Summary</strong></p>
+<ul class="simple">
+<li><p>The expected value of <span class="math notranslate nohighlight">\(\hat A\)</span> ~ classical wave.</p></li>
+<li><p>The field is a random field whose variance reads:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\sigma_A=\sqrt{\langle\psi|\hat A^2|\psi\rangle-\langle\psi|\hat A|\psi\rangle^2}=\sqrt{\tfrac1{2\omega}}
+\]</div>
+<ul class="simple">
+<li><p><em>Obs.</em> The variance is independent of <span class="math notranslate nohighlight">\(\vec r,t\)</span> and independent of the number of photons (<span class="math notranslate nohighlight">\(|c|^2\)</span>). Thus the quantum noise is constant while the signal grows with the field amplitude: <strong>classical limit</strong> — quantum noise → 0 (relative to the signal) as the signal power increases.</p></li>
+<li><p>But as the field amplitude goes to zero (<span class="math notranslate nohighlight">\(|c|\to0\)</span>, # photons → 0), only <strong>quantum fluctuations</strong> remain.</p></li>
+</ul>
+<p><strong>Heisenberg vs Schrödinger pictures</strong></p>
+<ul class="simple">
+<li><p><em>Heisenberg</em>: time dependence appears in the operator <span class="math notranslate nohighlight">\(\hat A(\vec r,t)\)</span> — <strong>quite convenient!!</strong></p></li>
+<li><p><em>Schrödinger</em>: only space dependence appears in <span class="math notranslate nohighlight">\(\hat A\)</span>, while <span class="math notranslate nohighlight">\(t\)</span> appears in <span class="math notranslate nohighlight">\(|\psi\rangle\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/quantum-mechanics/qft"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="field-quantization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">24.2. </span>Field quantization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="multi-body.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">24.4. </span>Multi-body quantum mechanics and QFT</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classcal-electromagnetism">24.3.1. Classcal Electromagnetism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-quantization">24.3.2. EM field quantization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-1931-introduction-to-qft-lessons">24.3.2.1. Fermi 1931, Introduction to QFT lessons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2. Field in 1D free space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.1. In a 3D domain</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-description-of-the-em-field-classical-limit">24.3.3. Quantum description of the EM field — classical limit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-1-incoherent-states">24.3.3.1. Try 1 — Incoherent states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-2-coherent-states">24.3.3.2. Try 2 — Coherent states</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
