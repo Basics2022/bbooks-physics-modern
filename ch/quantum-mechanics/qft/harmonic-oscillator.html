@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -673,9 +682,10 @@ Commutation of annihilation and creation operator<div class="sd-summary-down doc
 \[\begin{split}\begin{aligned}
   \left[ \hat{a}, \hat{a}^\dagger \right]
   &amp; = \frac{m\omega}{2\hbar} \left[ \hat{x} + i \frac{\hat{p}}{m\omega}, \hat{x} - i \frac{\hat{p}}{m\omega}\right] = \\
-  &amp; = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{\omega} [ \hat{x}, \hat{p} ] + \frac{i}{\omega} [ \hat{p}, \hat{x} ] \right\} = \\
-  &amp; = -\frac{m\omega}{2\hbar} \, 2 \frac{i}{\omega} [ \hat{x}, \hat{p} ] = \\
-  &amp; = - i \cdot i \hbar = \hbar \ .
+  &amp; = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{m\omega} [ \hat{x}, \hat{p} ] + \frac{i}{m\omega} [ \hat{p}, \hat{x} ] \right\} = \\
+  &amp; = - i \frac{1}{2\hbar} \left\{ [ \hat{x}, \hat{p} ] + [ \hat{x}, \hat{p} ] \right\} = \\
+  &amp; = - i \frac{1}{2\hbar} \cdot 2 i \hbar = \\
+  &amp; = 1 \ .
 \end{aligned}\end{split}\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">

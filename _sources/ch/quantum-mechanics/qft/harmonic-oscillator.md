@@ -163,9 +163,10 @@ $$\begin{aligned}
 $$\begin{aligned}
   \left[ \hat{a}, \hat{a}^\dagger \right]
   & = \frac{m\omega}{2\hbar} \left[ \hat{x} + i \frac{\hat{p}}{m\omega}, \hat{x} - i \frac{\hat{p}}{m\omega}\right] = \\
-  & = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{\omega} [ \hat{x}, \hat{p} ] + \frac{i}{\omega} [ \hat{p}, \hat{x} ] \right\} = \\
-  & = -\frac{m\omega}{2\hbar} \, 2 \frac{i}{\omega} [ \hat{x}, \hat{p} ] = \\
-  & = - i \cdot i \hbar = \hbar \ .
+  & = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{m\omega} [ \hat{x}, \hat{p} ] + \frac{i}{m\omega} [ \hat{p}, \hat{x} ] \right\} = \\
+  & = - i \frac{1}{2\hbar} \left\{ [ \hat{x}, \hat{p} ] + [ \hat{x}, \hat{p} ] \right\} = \\
+  & = - i \frac{1}{2\hbar} \cdot 2 i \hbar = \\
+  & = 1 \ .
 \end{aligned}$$
 
 ```
