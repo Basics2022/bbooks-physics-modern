@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -585,6 +576,15 @@ Details of the spectral decomposition of the Hamiltonian operator<div class="sd-
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Asymptotic behavior.</strong> For <span class="math notranslate nohighlight">\(|x| \rightarrow +\infty\)</span>, the elastic term dominates the eigenvalue term, and thus</p>
+<div class="math notranslate nohighlight">
+\[0 \simeq - \frac{\hbar^2}{2m} \psi'' + \frac{m \omega^2 x^2}{2} \psi \ ,\]</div>
+<p class="sd-card-text">and thus the asymptotic behavior is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \psi(x) &amp; \sim c_- e^{  \frac{m \omega x}{\hbar}} \quad , \qquad &amp;&amp; \text{for } x \rightarrow - \infty \\
+  \psi(x) &amp; \sim c_+ e^{- \frac{m \omega x}{\hbar}} \quad , \qquad &amp;&amp; \text{for } x \rightarrow + \infty 
+\end{aligned}\end{split}\]</div>
 </div>
 </details></div>
 <div class="section" id="creator-and-annihilation-operators">

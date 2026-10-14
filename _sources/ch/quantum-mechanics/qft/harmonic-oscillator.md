@@ -55,6 +55,18 @@ The lowest energy is $\neq0$ because of Heisenberg uncertainty, i.e. a particle 
 ```{dropdown} Details of the spectral decomposition of the Hamiltonian operator
 :open:
 
+**Asymptotic behavior.** For $|x| \rightarrow +\infty$, the elastic term dominates the eigenvalue term, and thus
+
+$$0 \simeq - \frac{\hbar^2}{2m} \psi'' + \frac{m \omega^2 x^2}{2} \psi \ ,$$
+
+and thus the asymptotic behavior is
+
+$$\begin{aligned}
+  \psi(x) & \sim c_- e^{  \frac{m \omega x}{\hbar}} \quad , \qquad && \text{for } x \rightarrow - \infty \\
+  \psi(x) & \sim c_+ e^{- \frac{m \omega x}{\hbar}} \quad , \qquad && \text{for } x \rightarrow + \infty 
+\end{aligned}$$
+
+
 ```
 
 (quantum-mechanics:qft:harmonic-oscillator:quantization:creation-annihilation-operators)=
