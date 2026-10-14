@@ -53,7 +53,66 @@ The lowest energy is $\neq0$ because of Heisenberg uncertainty, i.e. a particle 
 :::
 
 ```{dropdown} Details of the spectral decomposition of the Hamiltonian operator
-:open:
+
+Let $\xi = a x$. Then, as $\frac{d}{dx} = \frac{d \xi}{d x} \frac{d}{d \xi} = a \frac{d}{d \xi}$ the equation can be recast as
+
+$$E_n \psi_n(\xi) = - a^2 \frac{\hbar^2}{2 m} \psi''_n(\xi) + \frac{m \omega^2 \xi^2}{2 a^2} \psi_n(\xi) \ .$$
+
+Defining
+
+$$a = \sqrt{\frac{m \omega}{\hbar}} \quad , \quad \lambda_n = \frac{E_n}{\hbar \omega} \ ,$$
+
+the equation becomes
+
+$$\psi''_n(\xi) + (\lambda_n - \xi^2) \psi_n(\xi) = 0 \ .$$
+
+**Asymptotic behavior.** For $|\xi| \rightarrow +\infty$, the elastic term dominates the eigenvalue term, and thus
+
+$$\begin{aligned}
+ 0 
+ & \simeq - \psi'' + \xi^2 \psi \ .
+\end{aligned}$$
+
+The asymptotic behavior reads $\psi_{n,\infty}(\xi) = e^{-\xi^2/2}$. This can be checked evaluating the first two derivatives
+
+$$\begin{aligned}
+  \frac{d}{d\xi} e^{-\xi^2/2} & = - \xi e^{-\xi^2/2} \\
+  \frac{d^2}{d\xi^2} e^{-\xi^2/2} & = \left( -1 + \xi^2 \right) e^{-\xi^2/2} \ .
+\end{aligned}$$
+
+and comparing the leading order contributions $O(\xi^2 e^{-\xi^2/2})$.
+
+**Full solution.** Let the solution be $\psi(\xi) = h(\xi) e^{-\xi^2/2}$, with unknown $h(\xi)$. Its derivatives read
+
+$$\begin{aligned}
+  \dfrac{d}{d \xi} \psi & = \left( h' - \xi h \right) e^{-\xi^2/2} \\
+  \dfrac{d^2}{d \xi^2} \psi & = \left( h'' - h - 2 \xi h' + \xi^2 h \right) e^{-\xi^2/2} \\
+\end{aligned}$$
+
+
+
+Introducing this expression in the differential equation
+
+$$\begin{aligned}
+  0 & = ( \lambda - \xi^2 ) h(\xi) + ( h''(\xi) - h(\xi) - 2 \xi h'(\xi) + \xi^2 h(\xi) )  \ .
+\end{aligned}$$
+
+Let the power expansion of $h(\xi)$ be
+
+$$h(\xi) = \sum_{k=0}^{+\infty} c_k \xi^k \ ,$$
+
+thus the equation becomes
+
+$$\begin{aligned}
+ 0 
+ & = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} k \, c_k \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ & = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=2}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=1}^{+\infty} k \, c_k \xi^{k-1} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ & = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} (k+2) (k+1) c_{k+2} \xi^{k} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} (k+1) \, c_{k+1} \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ & = \dots \\
+\end{aligned}$$
+
+
+
 
 ```
 
@@ -81,11 +140,36 @@ $$
 With $c=\hbar=1$, creation/destruction in terms of $\hat x,\hat p$:
 
 $$
-\hat a^\dagger=\sqrt{\tfrac{\omega}{2}}\left(\hat x+\tfrac{i\hat p}{\omega}\right),\qquad
-\hat a=\sqrt{\tfrac{\omega}{2}}\left(\hat x-\tfrac{i\hat p}{\omega}\right)
+\hat a^\dagger=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x-\tfrac{i\hat p}{m\omega}\right),\qquad
+\hat a=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x+\tfrac{i\hat p}{m\omega}\right)
 $$
 
-**[check]** the usual convention has the signs the other way round ($\hat a\propto \hat x+i\hat p/\omega$).
+
+```{dropdown} Creation and annihilation operators, and the Hamiltonian
+:open:
+
+$$\begin{aligned}
+  \hat{H}
+  & = \frac{\hat{p}^2}{2 m} + \frac{m \omega^2 \hat{x}^2}{2} = \\
+  & = \hbar \omega \underbrace{ \sqrt{\frac{m \omega}{2 \hbar}} \left( \hat{x} - i \frac{\hat{p}}{m \omega} \right)}_{= \hat{a}^\dagger} \underbrace{\sqrt{\frac{m\omega}{2 \hbar}} \left( \hat{x} + i \frac{\hat{p}}{m \omega} \right)}_{=\hat{a}} - i \hbar \omega \frac{m \omega}{2 \hbar} \underbrace{\left( \hat{x} \frac{\hat{p}}{m \omega} - \frac{\hat{p}}{m \omega} \hat{x} \right)}_{\frac{1}{m \omega}[\hat{x}, \hat{p}] = \frac{i \hbar}{m \omega}} = \\
+  & = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \ . 
+\end{aligned}$$
+
+```
+
+```{dropdown} Commutation of annihilation and creation operator
+:open:
+
+$$\begin{aligned}
+  \left[ \hat{a}, \hat{a}^\dagger \right]
+  & = \frac{m\omega}{2\hbar} \left[ \hat{x} + i \frac{\hat{p}}{m\omega}, \hat{x} - i \frac{\hat{p}}{m\omega}\right] = \\
+  & = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{m\omega} [ \hat{x}, \hat{p} ] + \frac{i}{m\omega} [ \hat{p}, \hat{x} ] \right\} = \\
+  & = - i \frac{1}{2\hbar} \left\{ [ \hat{x}, \hat{p} ] + [ \hat{x}, \hat{p} ] \right\} = \\
+  & = - i \frac{1}{2\hbar} \cdot 2 i \hbar = \\
+  & = 1 \ .
+\end{aligned}$$
+
+```
 
 ```{dropdown} Details about the action of creation and annihilation operators on eigenstates in position basis
 :open:
