@@ -499,8 +499,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classcal-electromagnetism">24.3.1. Classcal Electromagnetism</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-quantization">24.3.2. EM field quantization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-1931-introduction-to-qft-lessons">24.3.2.1. Fermi 1931, Introduction to QFT lessons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2. Field in 1D free space</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.1. In a 3D domain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-in-free-space">24.3.2.2. EM Field in free space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2.1. Field in 1D free space</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.2. In a 3D domain</a></li>
 </ul>
 </li>
 </ul>
@@ -523,23 +524,25 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="photons-em-field-quantization">
 <span id="quantum-mechanics-qft-photons"></span><h1><span class="section-number">24.3. </span>Photons - EM field quantization<a class="headerlink" href="#photons-em-field-quantization" title="Permalink to this heading">#</a></h1>
-<p>Photons are the quanta of EM fields.</p>
+<p>Photons are the quanta of EM fields. After reviewing classical electromagnetism, two different introductions to EM field quantization are presented</p>
 <ul class="simple">
-<li><p>3.a Classical EM</p></li>
-<li><p>3.b Towards quantization of the EM field</p></li>
-<li><p>3.c EM cavity (Fermi ‘31) …</p></li>
+<li><p><a class="reference internal" href="#quantum-mechanics-qft-photons-em-field-quantization-fermi"><span class="std std-ref">Quantization of the EM field in an ideal cavity (Fermi, 1931)</span></a></p></li>
+<li><p><a class="reference internal" href="#quantum-mechanics-qft-photons-em-field-quantization-free-space"><span class="std std-ref">Quantization of the EM field in free space</span></a></p></li>
 </ul>
+<p>Then, the <a class="reference internal" href="#quantum-mechanics-qft-photons-em-field-quantization-classical-limit"><span class="std std-ref">classical limit</span></a> is discussed, comparing <a class="reference internal" href="#quantum-mechanics-qft-photons-em-field-quantization-classical-limit-incoherent-states"><span class="std std-ref">a field with incoherent states</span></a> and <a class="reference internal" href="#quantum-mechanics-qft-photons-em-field-quantization-classical-limit-coherent-states"><span class="std std-ref">a field with coherent states</span></a></p>
 <div class="section" id="classcal-electromagnetism">
-<h2><span class="section-number">24.3.1. </span>Classcal Electromagnetism<a class="headerlink" href="#classcal-electromagnetism" title="Permalink to this heading">#</a></h2>
-<p><strong>todo</strong> <em>Add link to the bbook about Electromagnetism</em></p>
+<span id="quantum-mechanics-qft-photons-classical-em"></span><h2><span class="section-number">24.3.1. </span>Classcal Electromagnetism<a class="headerlink" href="#classcal-electromagnetism" title="Permalink to this heading">#</a></h2>
+<p>Link to <a class="reference external" href="https://basics2022.github.io/bbooks-physics-electromagnetism/intro.html">Classical Electromagnetism</a>.</p>
 </div>
 <div class="section" id="em-field-quantization">
-<h2><span class="section-number">24.3.2. </span>EM field quantization<a class="headerlink" href="#em-field-quantization" title="Permalink to this heading">#</a></h2>
+<span id="quantum-mechanics-qft-photons-em-field-quantization"></span><h2><span class="section-number">24.3.2. </span>EM field quantization<a class="headerlink" href="#em-field-quantization" title="Permalink to this heading">#</a></h2>
 <div class="section" id="fermi-1931-introduction-to-qft-lessons">
-<h3><span class="section-number">24.3.2.1. </span>Fermi 1931, Introduction to QFT lessons<a class="headerlink" href="#fermi-1931-introduction-to-qft-lessons" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-qft-photons-em-field-quantization-fermi"></span><h3><span class="section-number">24.3.2.1. </span>Fermi 1931, Introduction to QFT lessons<a class="headerlink" href="#fermi-1931-introduction-to-qft-lessons" title="Permalink to this heading">#</a></h3>
 </div>
+<div class="section" id="em-field-in-free-space">
+<span id="quantum-mechanics-qft-photons-em-field-quantization-free-space"></span><h3><span class="section-number">24.3.2.2. </span>EM Field in free space<a class="headerlink" href="#em-field-in-free-space" title="Permalink to this heading">#</a></h3>
 <div class="section" id="field-in-1d-free-space">
-<h3><span class="section-number">24.3.2.2. </span>Field in 1D free space<a class="headerlink" href="#field-in-1d-free-space" title="Permalink to this heading">#</a></h3>
+<h4><span class="section-number">24.3.2.2.1. </span>Field in 1D free space<a class="headerlink" href="#field-in-1d-free-space" title="Permalink to this heading">#</a></h4>
 <p>Travelling wave along <span class="math notranslate nohighlight">\(z\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -594,8 +597,9 @@ H=\tfrac12\left(|\vec E|^2+|\vec B|^2\right)
 =\hat u_x\sqrt{\tfrac1{2\omega}}\Big\{\cos(kz)(\hat a+\hat a^\dagger)+i\sin(kz)(\hat a-\hat a^\dagger)\Big\}
 =\hat u_x\sqrt{\tfrac1{2\omega}}\Big\{\hat a^\dagger e^{-ikz}+\hat a\,e^{ikz}\Big\}
 \]</div>
+</div>
 <div class="section" id="in-a-3d-domain">
-<h4><span class="section-number">24.3.2.2.1. </span>In a 3D domain<a class="headerlink" href="#in-a-3d-domain" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">24.3.2.2.2. </span>In a 3D domain<a class="headerlink" href="#in-a-3d-domain" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[
 \hat A=\sum_{\vec k,\mu}\vec e_{\vec k\mu}\frac{1}{\sqrt{2\omega_k}}\left\{\hat a^\dagger_{\vec k,\mu}e^{-i\vec k\cdot\vec r}+\hat a_{\vec k,\mu}e^{i\vec k\cdot\vec r}\right\}
@@ -609,7 +613,7 @@ H=\tfrac12\left(|\vec E|^2+|\vec B|^2\right)
 </div>
 </div>
 <div class="section" id="quantum-description-of-the-em-field-classical-limit">
-<h2><span class="section-number">24.3.3. </span>Quantum description of the EM field — classical limit<a class="headerlink" href="#quantum-description-of-the-em-field-classical-limit" title="Permalink to this heading">#</a></h2>
+<span id="quantum-mechanics-qft-photons-em-field-quantization-classical-limit"></span><h2><span class="section-number">24.3.3. </span>Quantum description of the EM field — classical limit<a class="headerlink" href="#quantum-description-of-the-em-field-classical-limit" title="Permalink to this heading">#</a></h2>
 <p>Example: 1D domain, 1 propagating wave.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -618,7 +622,7 @@ A(z,t)=u_x\,b\cos(kz-\omega t+\theta)\ \xrightarrow{\text{quant}}\
 \]</div>
 <p>How to recover the classical limit?</p>
 <div class="section" id="try-1-incoherent-states">
-<h3><span class="section-number">24.3.3.1. </span>Try 1 — Incoherent states<a class="headerlink" href="#try-1-incoherent-states" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-qft-photons-em-field-quantization-classical-limit-incoherent-states"></span><h3><span class="section-number">24.3.3.1. </span>Try 1 — Incoherent states<a class="headerlink" href="#try-1-incoherent-states" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(|\psi\rangle(t)\)</span> be the state with <span class="math notranslate nohighlight">\(n\)</span> photons, <span class="math notranslate nohighlight">\(|n\rangle\)</span>. Time-dependent Schrödinger: <span class="math notranslate nohighlight">\(i\hbar|\dot\psi\rangle=\hat H|\psi\rangle\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -642,7 +646,7 @@ A(z,t)=u_x\,b\cos(kz-\omega t+\theta)\ \xrightarrow{\text{quant}}\
 </ul>
 </div>
 <div class="section" id="try-2-coherent-states">
-<h3><span class="section-number">24.3.3.2. </span>Try 2 — Coherent states<a class="headerlink" href="#try-2-coherent-states" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-qft-photons-em-field-quantization-classical-limit-coherent-states"></span><h3><span class="section-number">24.3.3.2. </span>Try 2 — Coherent states<a class="headerlink" href="#try-2-coherent-states" title="Permalink to this heading">#</a></h3>
 <p>Particular superposition of energy states [Glauber ‘63, “Photon Correlations”].</p>
 <p><strong>Definition</strong>: <span class="math notranslate nohighlight">\(\hat a|\psi\rangle=c|\psi\rangle\)</span>, with <span class="math notranslate nohighlight">\(|\psi\rangle=\sum_{n=0}^{\infty}b_n|n\rangle\)</span>. It follows</p>
 <div class="math notranslate nohighlight">
@@ -795,8 +799,9 @@ A(z,t)=u_x\,b\cos(kz-\omega t+\theta)\ \xrightarrow{\text{quant}}\
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classcal-electromagnetism">24.3.1. Classcal Electromagnetism</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-quantization">24.3.2. EM field quantization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-1931-introduction-to-qft-lessons">24.3.2.1. Fermi 1931, Introduction to QFT lessons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2. Field in 1D free space</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.1. In a 3D domain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#em-field-in-free-space">24.3.2.2. EM Field in free space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#field-in-1d-free-space">24.3.2.2.1. Field in 1D free space</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-3d-domain">24.3.2.2.2. In a 3D domain</a></li>
 </ul>
 </li>
 </ul>
