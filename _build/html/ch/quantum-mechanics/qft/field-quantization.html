@@ -496,11 +496,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">24.2.1.1. Discretization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modes">24.2.1.2. Modes</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a></li>
 </ul>
             </nav>
@@ -515,33 +511,43 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="field-quantization">
 <span id="quantum-mechanics-qft-field-quantization"></span><h1><span class="section-number">24.2. </span>Field quantization<a class="headerlink" href="#field-quantization" title="Permalink to this heading">#</a></h1>
+<p>First, a <a class="reference internal" href="#quantum-mechanics-qft-field-quantization-classical"><span class="std std-ref">classical system</span></a> governed by a wave equation is discussed, along with its mode decomposition: a general solution can be written as the superposition of modes <span class="math notranslate nohighlight">\(u(x,t) = \sum_k q_k(t) n_k(x)\)</span> whose contribution is modulated by coefficients <span class="math notranslate nohighlight">\(q_k(t)\)</span> satisfying the ODE of a <a class="reference internal" href="harmonic-oscillator.html#quantum-mechanics-qft-harmonic-oscillator"><span class="std std-ref">“single-frequency” harmonic oscillator</span></a>. Thus, quantization of the system is performed in the modal basis using the same procedure used for the “single-frequency” harmonic oscillator.</p>
 <div class="section" id="classical-system">
-<h2><span class="section-number">24.2.1. </span>Classical system<a class="headerlink" href="#classical-system" title="Permalink to this heading">#</a></h2>
-<div class="section" id="discretization">
-<h3><span class="section-number">24.2.1.1. </span>Discretization<a class="headerlink" href="#discretization" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-qft-field-quantization-classical"></span><h2><span class="section-number">24.2.1. </span>Classical system<a class="headerlink" href="#classical-system" title="Permalink to this heading">#</a></h2>
+<p>Let a classical field <span class="math notranslate nohighlight">\(u(x,t)\)</span> be governed by the wave equation</p>
 <div class="math notranslate nohighlight">
 \[
-\partial_t^2u-c^2\partial_{xx}u=f
-\quad\longrightarrow\quad
-\ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i
+\partial_t^2u-c^2\partial_{xx}u=f \ ,
 \]</div>
-</div>
-<div class="section" id="modes">
-<h3><span class="section-number">24.2.1.2. </span>Modes<a class="headerlink" href="#modes" title="Permalink to this heading">#</a></h3>
+<p>supplied with proper initial and boundary conditions. This equation is usually the continuous model (exploiting <strong>continuum hypotesis</strong>, or some equivalent principle) of a macroscopic system, made of a huge number - but <strong>finite</strong> number - of sub-systems at the microscopic level. This is quite a relevant remark, as continuous models have an infinite number of modes, while discrete models with a finite number of sub-systems have a finite number of modes.</p>
+<p>The wave function is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.</p>
 <div class="math notranslate nohighlight">
 \[
-\partial_t^2u-c^2\partial_{xx}u=0,\qquad
-u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right)\quad\text{(exploiting b.c.)}
+\ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i \ ,
 \]</div>
-<p>In the wave equation, using the orthogonality of the modes:</p>
+<p>having used centered finite difference for the second-order space derivative.
+As done in <a class="reference external" href="https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/solids/intro.html">mechanics of elastic structures</a>, the solution of the continuous equation can be written in the modal basis, that is computed as all the possible standing waves of the homogeneous problem</p>
 <div class="math notranslate nohighlight">
 \[
-\ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0
+\partial_t^2u-c^2\partial_{xx}u=0
 \]</div>
-</div>
+<p>supplied with homogeneous boundary conditions <span class="math notranslate nohighlight">\(u(0) = u(L) = 0\)</span>, using the methods of separation of variables. Modes are the set of functions
+<span class="math notranslate nohighlight">\(n_k(x) = \sin \left( \frac{k \pi}{L} x \right)\)</span>, with <span class="math notranslate nohighlight">\(k \in \mathbb{N}\)</span>. The general solution can be written as a linear combination of the modes</p>
+<div class="math notranslate nohighlight">
+\[
+u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
+\]</div>
+<p>with time-dependent coefficients <span class="math notranslate nohighlight">\(q_k(t)\)</span> satisfying the harmonic oscillator uncoupled ODEs</p>
+<div class="math notranslate nohighlight" id="equation-eq-field-quantization-classical-mode-ode">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-eq-field-quantization-classical-mode-ode" title="Permalink to this equation">#</a></span>\[
+\ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0 \ .
+\]</div>
 </div>
 <div class="section" id="from-classical-to-quantum">
-<h2><span class="section-number">24.2.2. </span>From classical to quantum<a class="headerlink" href="#from-classical-to-quantum" title="Permalink to this heading">#</a></h2>
+<span id="quantum-mechanics-qft-field-quantization-quantization"></span><h2><span class="section-number">24.2.2. </span>From classical to quantum<a class="headerlink" href="#from-classical-to-quantum" title="Permalink to this heading">#</a></h2>
+<p>The amplitude <span class="math notranslate nohighlight">\(q_k(t)\)</span> of mode <span class="math notranslate nohighlight">\(k\)</span> is governed by the dynamical equation <a class="reference internal" href="#equation-eq-field-quantization-classical-mode-ode">(24.1)</a>, compatible with the Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[H_k(q^k,p_k) = \frac{p_k^2}{2} + \frac{\omega_k^2 (q^k)^2}{2} \ .\]</div>
 <p>Wavefunction of the mode <span class="math notranslate nohighlight">\(k\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -630,11 +636,7 @@ u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right)\quad\text{(exploiting b.c
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">24.2.1.1. Discretization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modes">24.2.1.2. Modes</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a></li>
 </ul>
   </nav></div>

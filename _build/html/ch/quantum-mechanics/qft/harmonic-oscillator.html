@@ -496,9 +496,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-destruction">24.1.1. Creation and destruction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">24.1.1.1. Motivation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#models-for-creation-and-destruction">24.1.1.2. Models for creation and destruction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-model">24.1.1. Classical model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.1.2. From classical to quantum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">24.1.2.1. Stationary states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creator-and-annihilation-operators">24.1.2.2. Creator and annihilation operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-operator">24.1.2.3. Number operator</a></li>
 </ul>
 </li>
 </ul>
@@ -514,42 +516,34 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="harmonic-oscillator">
 <span id="quantum-mechanics-qft-harmonic-oscillator"></span><h1><span class="section-number">24.1. </span>Harmonic Oscillator<a class="headerlink" href="#harmonic-oscillator" title="Permalink to this heading">#</a></h1>
-<div class="section" id="creation-and-destruction">
-<h2><span class="section-number">24.1.1. </span>Creation and destruction<a class="headerlink" href="#creation-and-destruction" title="Permalink to this heading">#</a></h2>
-<div class="section" id="motivation">
-<h3><span class="section-number">24.1.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>EM energy is quantized. These quanta (photons) have <span class="math notranslate nohighlight">\(E=\hbar\omega\)</span>, <span class="math notranslate nohighlight">\(\vec p=\hbar\vec k\)</span>.</p></li>
-<li><p>Photons can be created/destroyed. Example, <span class="math notranslate nohighlight">\(\gamma\)</span> emission:</p>
-<ol class="arabic simple">
-<li><p>destruction of a high-energy <span class="math notranslate nohighlight">\(e^-\)</span>,</p></li>
-<li><p>creation of a lower-energy <span class="math notranslate nohighlight">\(e^-\)</span> + <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-</ol>
-</li>
-<li><p><span class="math notranslate nohighlight">\(e^-\)</span> can be represented by wavefunctions.</p></li>
-<li><p>1917, A. Einstein: re-derived Planck’s law; spontaneous and stimulated emission.</p></li>
-</ul>
+<p>Harmonic oscillator is used as the fundamental element in <a class="reference internal" href="field-quantization.html#quantum-mechanics-qft-field-quantization"><span class="std std-ref">field quantization</span></a>.</p>
+<div class="section" id="classical-model">
+<span id="quantum-mechanics-qft-harmonic-oscillator-classical"></span><h2><span class="section-number">24.1.1. </span>Classical model<a class="headerlink" href="#classical-model" title="Permalink to this heading">#</a></h2>
+<p>The Hamiltonian function of a harmonic oscillator is</p>
+<div class="math notranslate nohighlight">
+\[
+H=\frac{p^2}{2m}+\frac{m\omega^2x^2}{2} \ .
+\]</div>
 </div>
-<div class="section" id="models-for-creation-and-destruction">
-<h3><span class="section-number">24.1.1.2. </span>Models for creation and destruction<a class="headerlink" href="#models-for-creation-and-destruction" title="Permalink to this heading">#</a></h3>
-<p><strong>Single-frequency oscillators at frequency <span class="math notranslate nohighlight">\(\nu\)</span></strong></p>
-<ul class="simple">
-<li><p>creation → 1 more photon → <span class="math notranslate nohighlight">\(\Delta E = h\nu\)</span></p></li>
-<li><p>destruction → 1 photon less → <span class="math notranslate nohighlight">\(\Delta E = -h\nu\)</span></p></li>
-</ul>
-<p><strong>Classical oscillator</strong></p>
+<div class="section" id="from-classical-to-quantum">
+<span id="quantum-mechanics-qft-harmonic-oscillator-quantization"></span><h2><span class="section-number">24.1.2. </span>From classical to quantum<a class="headerlink" href="#from-classical-to-quantum" title="Permalink to this heading">#</a></h2>
+<p>Promoting generalized coordinate and momentum to operators, the Hamiltonian operator of the quantum harmonic oscillator reads</p>
 <div class="math notranslate nohighlight">
 \[
-H=\frac{p^2}{2m}+\frac{m\omega^2x^2}{2}\quad\longrightarrow\quad
-\text{Quantum: }\hat H=\frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2}
+\hat{H} = \frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2} \ .
 \]</div>
-<p>Eigenproblem <span class="math notranslate nohighlight">\(E_n|\psi_n\rangle=\left(\frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2}\right)|\psi_n\rangle\)</span>. In position representation:</p>
+<div class="section" id="stationary-states">
+<span id="quantum-mechanics-qft-harmonic-oscillator-quantization-stationary-states"></span><h3><span class="section-number">24.1.2.1. </span>Stationary states<a class="headerlink" href="#stationary-states" title="Permalink to this heading">#</a></h3>
+<p>The <strong>stationary states</strong> are defined as the eigenstates of the Hamiltonian operators, whose energy level is the corresponding eigenvalue</p>
 <div class="math notranslate nohighlight">
-\[
-E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
-\quad\text{+ b.c. s.t. } \psi\big|_{\pm\infty}\to0
-\]</div>
-<p>A solution exists only for a set of discrete values of <span class="math notranslate nohighlight">\(E_n\)</span>; for all the other values the b.c. are not satisfied.</p>
+\[E_n|\psi_n\rangle=\left(\frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2}\right)|\psi_n\rangle \ ,\]</div>
+<p>or in position representation, with decaying wave function at infinity,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin{aligned}
+&amp; E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n \\
+&amp; \psi\big|_{\pm\infty} \to 0 \ .
+\end{aligned}\right.\end{split}\]</div>
+<p>A solution exists only for a set of <strong>discrete values</strong> of <span class="math notranslate nohighlight">\(E_n\)</span>, while for all the other values the b.c. are not satisfied. The feasible solutions of the eigenproblem are</p>
 <div class="math notranslate nohighlight">
 \[
 \psi_n(x)=c_nH_n(x)e^{-\frac12x^2},\qquad E_n=\left(\tfrac12+n\right)\hbar\omega
@@ -574,24 +568,42 @@ E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
 <td><p><span class="math notranslate nohighlight">\(\psi_2=c_2(2x^2-1)e^{-x^2/2}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\tfrac52\hbar\omega\)</span></p></td>
 </tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dots\)</span></p></td>
+</tr>
 </tbody>
 </table>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The lowest energy is <span class="math notranslate nohighlight">\(\neq0\)</span> because of Heisenberg uncertainty, i.e. a particle can’t be exactly in <span class="math notranslate nohighlight">\(x=0\)</span> with <span class="math notranslate nohighlight">\(p=0\)</span>!</p>
 </div>
-<p><strong>Creation / destruction operators</strong></p>
-<p>Let’s call <span class="math notranslate nohighlight">\(\psi_n(x)=|n\rangle\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details of the spectral decomposition of the Hamiltonian operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
+<div class="section" id="creator-and-annihilation-operators">
+<span id="quantum-mechanics-qft-harmonic-oscillator-quantization-creation-annihilation-operators"></span><h3><span class="section-number">24.1.2.2. </span>Creator and annihilation operators<a class="headerlink" href="#creator-and-annihilation-operators" title="Permalink to this heading">#</a></h3>
+<p>Let’s call <span class="math notranslate nohighlight">\(\psi_n(x)=|n\rangle\)</span>. It’s possible to prove (<strong>todo</strong> <em>prove it!</em>) that there are two operators</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\hat a^\dagger|n\rangle\to|n+1\rangle\)</span>: moves from the state <span class="math notranslate nohighlight">\(|n\rangle\)</span> to the state <span class="math notranslate nohighlight">\(|n+1\rangle\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\hat a|n\rangle\to|n-1\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat a^\dagger|n\rangle\to|n+1\rangle\)</span>, <strong>creation operator</strong>, that moves the state <span class="math notranslate nohighlight">\(|n\rangle\)</span> to the state <span class="math notranslate nohighlight">\(|n+1\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat a|n\rangle\to|n-1\rangle\)</span>, <strong>annihilation operator</strong>, that moves the state <span class="math notranslate nohighlight">\(|n\rangle\)</span> to the state <span class="math notranslate nohighlight">\(|n-1\rangle\)</span></p></li>
 </ul>
-<p>The right proportionality constants give:</p>
+<p>These operators are defined with the following proportionality constants - whose reason appears in the definition of the <a class="reference internal" href="#quantum-mechanics-qft-harmonic-oscillator-quantization-number-operator"><span class="std std-ref">number operator</span></a> -</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat a^\dagger|n\rangle &amp; =\sqrt{n+1}\,|n+1\rangle \\
+\hat a|n\rangle &amp; =\sqrt{n}\,|n-1\rangle \ ,
+\end{aligned}\end{split}\]</div>
+<p>with the condition</p>
 <div class="math notranslate nohighlight">
 \[
-\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle,\qquad
-\hat a|n\rangle=\sqrt{n}\,|n-1\rangle,\qquad
-\hat a|0\rangle=0
+\hat a|0\rangle=0 \ .
 \]</div>
 <p>With <span class="math notranslate nohighlight">\(c=\hbar=1\)</span>, creation/destruction in terms of <span class="math notranslate nohighlight">\(\hat x,\hat p\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -600,14 +612,123 @@ E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
 \hat a=\sqrt{\tfrac{\omega}{2}}\left(\hat x-\tfrac{i\hat p}{\omega}\right)
 \]</div>
 <p><strong>[check]</strong> the usual convention has the signs the other way round (<span class="math notranslate nohighlight">\(\hat a\propto \hat x+i\hat p/\omega\)</span>).</p>
-<p><strong>Number operator</strong>: <span class="math notranslate nohighlight">\(\hat a^\dagger\hat a=:\hat n\)</span>, with <span class="math notranslate nohighlight">\(\hat n|n\rangle=n|n\rangle\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details about the action of creation and annihilation operators on eigenstates in position basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></div>
+<div class="section" id="number-operator">
+<span id="quantum-mechanics-qft-harmonic-oscillator-quantization-number-operator"></span><h3><span class="section-number">24.1.2.3. </span>Number operator<a class="headerlink" href="#number-operator" title="Permalink to this heading">#</a></h3>
+<p>The number operator is defined as <span class="math notranslate nohighlight">\(\hat a^\dagger\hat a=:\hat n\)</span>, with <span class="math notranslate nohighlight">\(\hat n|n\rangle=n|n\rangle\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 \hat H=\hbar\omega\left(\tfrac12+\hat a^\dagger\hat a\right),\qquad [\hat a,\hat a^\dagger]=1
 \]</div>
 <p>All these results apply to a single particle, in a 1-dim domain, with a single oscillation frequency.</p>
 <p><strong>TODO</strong>: generalization to more complex systems — is it possible?</p>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+old version<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="rubric">Creation and destruction</p>
+<p class="rubric">Motivation</p>
+<ul class="simple">
+<li><p class="sd-card-text">EM energy is quantized. These quanta (photons) have <span class="math notranslate nohighlight">\(E=\hbar\omega\)</span>, <span class="math notranslate nohighlight">\(\vec p=\hbar\vec k\)</span>.</p></li>
+<li><p class="sd-card-text">Photons can be created/destroyed. Example, <span class="math notranslate nohighlight">\(\gamma\)</span> emission:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">destruction of a high-energy <span class="math notranslate nohighlight">\(e^-\)</span>,</p></li>
+<li><p class="sd-card-text">creation of a lower-energy <span class="math notranslate nohighlight">\(e^-\)</span> + <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
+</ol>
+</li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(e^-\)</span> can be represented by wavefunctions.</p></li>
+<li><p class="sd-card-text">1917, A. Einstein: re-derived Planck’s law; spontaneous and stimulated emission.</p></li>
+</ul>
+<p class="rubric">Models for creation and destruction</p>
+<p class="sd-card-text"><strong>Single-frequency oscillators at frequency <span class="math notranslate nohighlight">\(\nu\)</span></strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">creation → 1 more photon → <span class="math notranslate nohighlight">\(\Delta E = h\nu\)</span></p></li>
+<li><p class="sd-card-text">destruction → 1 photon less → <span class="math notranslate nohighlight">\(\Delta E = -h\nu\)</span></p></li>
+</ul>
+<p class="sd-card-text"><strong>Classical oscillator</strong></p>
+<div class="math notranslate nohighlight">
+\[
+H=\frac{p^2}{2m}+\frac{m\omega^2x^2}{2}\quad\longrightarrow\quad
+\text{Quantum: }\hat H=\frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2}
+\]</div>
+<p class="sd-card-text">Eigenproblem <span class="math notranslate nohighlight">\(E_n|\psi_n\rangle=\left(\frac{\hat p^2}{2m}+\frac{m\omega^2\hat x^2}{2}\right)|\psi_n\rangle\)</span>. In position representation:</p>
+<div class="math notranslate nohighlight">
+\[
+E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
+\quad\text{+ b.c. s.t. } \psi\big|_{\pm\infty}\to0
+\]</div>
+<p class="sd-card-text">A solution exists only for a set of discrete values of <span class="math notranslate nohighlight">\(E_n\)</span>; for all the other values the b.c. are not satisfied.</p>
+<div class="math notranslate nohighlight">
+\[
+\psi_n(x)=c_nH_n(x)e^{-\frac12x^2},\qquad E_n=\left(\tfrac12+n\right)\hbar\omega
+\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\psi_n(x)\)</span></p></th>
+<th class="head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(E_n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">0</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\psi_0=c_0e^{-x^2/2}\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac12\hbar\omega\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">1</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\psi_1=c_1x\,e^{-x^2/2}\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac32\hbar\omega\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\psi_2=c_2(2x^2-1)e^{-x^2/2}\)</span></p></td>
+<td><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac52\hbar\omega\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="sd-card-text">The lowest energy is <span class="math notranslate nohighlight">\(\neq0\)</span> because of Heisenberg uncertainty, i.e. a particle can’t be exactly in <span class="math notranslate nohighlight">\(x=0\)</span> with <span class="math notranslate nohighlight">\(p=0\)</span>!</p>
 </div>
+<p class="sd-card-text"><strong>Creation / destruction operators</strong></p>
+<p class="sd-card-text">Let’s call <span class="math notranslate nohighlight">\(\psi_n(x)=|n\rangle\)</span>.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat a^\dagger|n\rangle\to|n+1\rangle\)</span>: moves from the state <span class="math notranslate nohighlight">\(|n\rangle\)</span> to the state <span class="math notranslate nohighlight">\(|n+1\rangle\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat a|n\rangle\to|n-1\rangle\)</span></p></li>
+</ul>
+<p class="sd-card-text">The right proportionality constants give:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle,\qquad
+\hat a|n\rangle=\sqrt{n}\,|n-1\rangle,\qquad
+\hat a|0\rangle=0
+\]</div>
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(c=\hbar=1\)</span>, creation/destruction in terms of <span class="math notranslate nohighlight">\(\hat x,\hat p\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat a^\dagger=\sqrt{\tfrac{\omega}{2}}\left(\hat x+\tfrac{i\hat p}{\omega}\right),\qquad
+\hat a=\sqrt{\tfrac{\omega}{2}}\left(\hat x-\tfrac{i\hat p}{\omega}\right)
+\]</div>
+<p class="sd-card-text"><strong>[check]</strong> the usual convention has the signs the other way round (<span class="math notranslate nohighlight">\(\hat a\propto \hat x+i\hat p/\omega\)</span>).</p>
+<p class="sd-card-text"><strong>Number operator</strong>: <span class="math notranslate nohighlight">\(\hat a^\dagger\hat a=:\hat n\)</span>, with <span class="math notranslate nohighlight">\(\hat n|n\rangle=n|n\rangle\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\hat H=\hbar\omega\left(\tfrac12+\hat a^\dagger\hat a\right),\qquad [\hat a,\hat a^\dagger]=1
+\]</div>
+<p class="sd-card-text">All these results apply to a single particle, in a 1-dim domain, with a single oscillation frequency.</p>
+<p class="sd-card-text"><strong>TODO</strong>: generalization to more complex systems — is it possible?</p>
+</div>
+</details></div>
 </div>
 </div>
 
@@ -674,9 +795,11 @@ E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-destruction">24.1.1. Creation and destruction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">24.1.1.1. Motivation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#models-for-creation-and-destruction">24.1.1.2. Models for creation and destruction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-model">24.1.1. Classical model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.1.2. From classical to quantum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-states">24.1.2.1. Stationary states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creator-and-annihilation-operators">24.1.2.2. Creator and annihilation operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-operator">24.1.2.3. Number operator</a></li>
 </ul>
 </li>
 </ul>
