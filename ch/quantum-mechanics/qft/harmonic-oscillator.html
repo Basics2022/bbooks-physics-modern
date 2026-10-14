@@ -569,21 +569,57 @@ H=\frac{p^2}{2m}+\frac{m\omega^2x^2}{2} \ .
 <p class="admonition-title">Important</p>
 <p>The lowest energy is <span class="math notranslate nohighlight">\(\neq0\)</span> because of Heisenberg uncertainty, i.e. a particle can’t be exactly in <span class="math notranslate nohighlight">\(x=0\)</span> with <span class="math notranslate nohighlight">\(p=0\)</span>!</p>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Details of the spectral decomposition of the Hamiltonian operator<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Asymptotic behavior.</strong> For <span class="math notranslate nohighlight">\(|x| \rightarrow +\infty\)</span>, the elastic term dominates the eigenvalue term, and thus</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\xi = a x\)</span>. Then, as <span class="math notranslate nohighlight">\(\frac{d}{dx} = \frac{d \xi}{d x} \frac{d}{d \xi} = a \frac{d}{d \xi}\)</span> the equation can be recast as</p>
 <div class="math notranslate nohighlight">
-\[0 \simeq - \frac{\hbar^2}{2m} \psi'' + \frac{m \omega^2 x^2}{2} \psi \ ,\]</div>
-<p class="sd-card-text">and thus the asymptotic behavior is</p>
+\[E_n \psi_n(\xi) = - a^2 \frac{\hbar^2}{2 m} \psi''_n(\xi) + \frac{m \omega^2 \xi^2}{2 a^2} \psi_n(\xi) \ .\]</div>
+<p class="sd-card-text">Defining</p>
+<div class="math notranslate nohighlight">
+\[a = \sqrt{\frac{m \omega}{\hbar}} \quad , \quad \lambda_n = \frac{E_n}{\hbar \omega} \ ,\]</div>
+<p class="sd-card-text">the equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\psi''_n(\xi) + (\lambda_n - \xi^2) \psi_n(\xi) = 0 \ .\]</div>
+<p class="sd-card-text"><strong>Asymptotic behavior.</strong> For <span class="math notranslate nohighlight">\(|\xi| \rightarrow +\infty\)</span>, the elastic term dominates the eigenvalue term, and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ 0 
+ &amp; \simeq - \psi'' + \xi^2 \psi \ .
+\end{aligned}\]</div>
+<p class="sd-card-text">The asymptotic behavior reads <span class="math notranslate nohighlight">\(\psi_{n,\infty}(\xi) = e^{-\xi^2/2}\)</span>. This can be checked evaluating the first two derivatives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \psi(x) &amp; \sim c_- e^{  \frac{m \omega x}{\hbar}} \quad , \qquad &amp;&amp; \text{for } x \rightarrow - \infty \\
-  \psi(x) &amp; \sim c_+ e^{- \frac{m \omega x}{\hbar}} \quad , \qquad &amp;&amp; \text{for } x \rightarrow + \infty 
+  \frac{d}{d\xi} e^{-\xi^2/2} &amp; = - \xi e^{-\xi^2/2} \\
+  \frac{d^2}{d\xi^2} e^{-\xi^2/2} &amp; = \left( -1 + \xi^2 \right) e^{-\xi^2/2} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and comparing the leading order contributions <span class="math notranslate nohighlight">\(O(\xi^2 e^{-\xi^2/2})\)</span>.</p>
+<p class="sd-card-text"><strong>Full solution.</strong> Let the solution be <span class="math notranslate nohighlight">\(\psi(\xi) = h(\xi) e^{-\xi^2/2}\)</span>, with unknown <span class="math notranslate nohighlight">\(h(\xi)\)</span>. Its derivatives read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{d \xi} \psi &amp; = \left( h' - \xi h \right) e^{-\xi^2/2} \\
+  \dfrac{d^2}{d \xi^2} \psi &amp; = \left( h'' - h - 2 \xi h' + \xi^2 h \right) e^{-\xi^2/2} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Introducing this expression in the differential equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  0 &amp; = ( \lambda - \xi^2 ) h(\xi) + ( h''(\xi) - h(\xi) - 2 \xi h'(\xi) + \xi^2 h(\xi) )  \ .
+\end{aligned}\]</div>
+<p class="sd-card-text">Let the power expansion of <span class="math notranslate nohighlight">\(h(\xi)\)</span> be</p>
+<div class="math notranslate nohighlight">
+\[h(\xi) = \sum_{k=0}^{+\infty} c_k \xi^k \ ,\]</div>
+<p class="sd-card-text">thus the equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0 
+ &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} k \, c_k \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=2}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=1}^{+\infty} k \, c_k \xi^{k-1} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} (k+2) (k+1) c_{k+2} \xi^{k} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} (k+1) \, c_{k+1} \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
+ &amp; = \dots \\
 \end{aligned}\end{split}\]</div>
 </div>
 </details></div>
@@ -608,11 +644,41 @@ Details of the spectral decomposition of the Hamiltonian operator<div class="sd-
 <p>With <span class="math notranslate nohighlight">\(c=\hbar=1\)</span>, creation/destruction in terms of <span class="math notranslate nohighlight">\(\hat x,\hat p\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\hat a^\dagger=\sqrt{\tfrac{\omega}{2}}\left(\hat x+\tfrac{i\hat p}{\omega}\right),\qquad
-\hat a=\sqrt{\tfrac{\omega}{2}}\left(\hat x-\tfrac{i\hat p}{\omega}\right)
+\hat a^\dagger=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x-\tfrac{i\hat p}{m\omega}\right),\qquad
+\hat a=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x+\tfrac{i\hat p}{m\omega}\right)
 \]</div>
-<p><strong>[check]</strong> the usual convention has the signs the other way round (<span class="math notranslate nohighlight">\(\hat a\propto \hat x+i\hat p/\omega\)</span>).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Creation and annihilation operators, and the Hamiltonian<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{H}
+  &amp; = \frac{\hat{p}^2}{2 m} + \frac{m \omega^2 \hat{x}^2}{2} = \\
+  &amp; = \hbar \omega \underbrace{ \sqrt{\frac{m \omega}{2 \hbar}} \left( \hat{x} - i \frac{\hat{p}}{m \omega} \right)}_{= \hat{a}^\dagger} \underbrace{\sqrt{\frac{m\omega}{2 \hbar}} \left( \hat{x} + i \frac{\hat{p}}{m \omega} \right)}_{=\hat{a}} - i \hbar \omega \frac{m \omega}{2 \hbar} \underbrace{\left( \hat{x} \frac{\hat{p}}{m \omega} - \frac{\hat{p}}{m \omega} \hat{x} \right)}_{\frac{1}{m \omega}[\hat{x}, \hat{p}] = \frac{i \hbar}{m \omega}} = \\
+  &amp; = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \ . 
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Commutation of annihilation and creation operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left[ \hat{a}, \hat{a}^\dagger \right]
+  &amp; = \frac{m\omega}{2\hbar} \left[ \hat{x} + i \frac{\hat{p}}{m\omega}, \hat{x} - i \frac{\hat{p}}{m\omega}\right] = \\
+  &amp; = \frac{m\omega}{2\hbar} \left\{ -\frac{i}{\omega} [ \hat{x}, \hat{p} ] + \frac{i}{\omega} [ \hat{p}, \hat{x} ] \right\} = \\
+  &amp; = -\frac{m\omega}{2\hbar} \, 2 \frac{i}{\omega} [ \hat{x}, \hat{p} ] = \\
+  &amp; = - i \cdot i \hbar = \hbar \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Details about the action of creation and annihilation operators on eigenstates in position basis<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
