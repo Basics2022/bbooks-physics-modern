@@ -578,7 +578,7 @@ H=\frac{p^2}{2m}+\frac{m\omega^2x^2}{2} \ .
 <p class="admonition-title">Important</p>
 <p>The lowest energy is <span class="math notranslate nohighlight">\(\neq0\)</span> because of Heisenberg uncertainty, i.e. a particle can’t be exactly in <span class="math notranslate nohighlight">\(x=0\)</span> with <span class="math notranslate nohighlight">\(p=0\)</span>!</p>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Details of the spectral decomposition of the Hamiltonian operator<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -588,13 +588,17 @@ Details of the spectral decomposition of the Hamiltonian operator<div class="sd-
 <p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\xi = a x\)</span>. Then, as <span class="math notranslate nohighlight">\(\frac{d}{dx} = \frac{d \xi}{d x} \frac{d}{d \xi} = a \frac{d}{d \xi}\)</span> the equation can be recast as</p>
 <div class="math notranslate nohighlight">
 \[E_n \psi_n(\xi) = - a^2 \frac{\hbar^2}{2 m} \psi''_n(\xi) + \frac{m \omega^2 \xi^2}{2 a^2} \psi_n(\xi) \ .\]</div>
-<p class="sd-card-text">Defining</p>
-<div class="math notranslate nohighlight">
-\[a = \sqrt{\frac{m \omega}{\hbar}} \quad , \quad \lambda_n = \frac{E_n}{\hbar \omega} \ ,\]</div>
-<p class="sd-card-text">the equation becomes</p>
+<p class="sd-card-text">Defining <span class="math notranslate nohighlight">\(a = \sqrt{\frac{m \omega}{\hbar}}\)</span>, <span class="math notranslate nohighlight">\(\lambda_n = \frac{2 E_n}{\hbar \omega}\)</span>, the equation becomes</p>
 <div class="math notranslate nohighlight">
 \[\psi''_n(\xi) + (\lambda_n - \xi^2) \psi_n(\xi) = 0 \ .\]</div>
-<p class="sd-card-text"><strong>Asymptotic behavior.</strong> For <span class="math notranslate nohighlight">\(|\xi| \rightarrow +\infty\)</span>, the elastic term dominates the eigenvalue term, and thus</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Asymptotic behavior<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(|\xi| \rightarrow +\infty\)</span>, the elastic term dominates the eigenvalue term, and thus</p>
 <div class="math notranslate nohighlight">
 \[\begin{aligned}
  0 
@@ -607,17 +611,27 @@ Details of the spectral decomposition of the Hamiltonian operator<div class="sd-
   \frac{d^2}{d\xi^2} e^{-\xi^2/2} &amp; = \left( -1 + \xi^2 \right) e^{-\xi^2/2} \ .
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">and comparing the leading order contributions <span class="math notranslate nohighlight">\(O(\xi^2 e^{-\xi^2/2})\)</span>.</p>
-<p class="sd-card-text"><strong>Full solution.</strong> Let the solution be <span class="math notranslate nohighlight">\(\psi(\xi) = h(\xi) e^{-\xi^2/2}\)</span>, with unknown <span class="math notranslate nohighlight">\(h(\xi)\)</span>. Its derivatives read</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Full solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let the solution be <span class="math notranslate nohighlight">\(\psi(\xi) = h(\xi) e^{-\xi^2/2}\)</span>, with unknown <span class="math notranslate nohighlight">\(h(\xi)\)</span>. Its derivatives read</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \dfrac{d}{d \xi} \psi &amp; = \left( h' - \xi h \right) e^{-\xi^2/2} \\
-  \dfrac{d^2}{d \xi^2} \psi &amp; = \left( h'' - h - 2 \xi h' + \xi^2 h \right) e^{-\xi^2/2} \\
+  \psi'  &amp; = \left( h' - \xi h \right) e^{-\xi^2/2} \\
+  \psi'' &amp; = \left( h'' - h - 2 \xi h' + \xi^2 h \right) e^{-\xi^2/2} \\
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Introducing this expression in the differential equation</p>
+<p class="sd-card-text">Introducing this expression in the differential equation, and removing the term <span class="math notranslate nohighlight">\(e^{-\xi^2/2} \ne 0\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\begin{aligned}
-  0 &amp; = ( \lambda - \xi^2 ) h(\xi) + ( h''(\xi) - h(\xi) - 2 \xi h'(\xi) + \xi^2 h(\xi) )  \ .
-\end{aligned}\]</div>
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = ( \lambda - \xi^2 ) h(\xi) + ( h''(\xi) - h(\xi) - 2 \xi h'(\xi) + \xi^2 h(\xi) ) = \\
+  &amp; = \lambda h(\xi) + h''(\xi) - h(\xi) - 2 \xi h'(\xi)  \ .
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Let the power expansion of <span class="math notranslate nohighlight">\(h(\xi)\)</span> be</p>
 <div class="math notranslate nohighlight">
 \[h(\xi) = \sum_{k=0}^{+\infty} c_k \xi^k \ ,\]</div>
@@ -625,12 +639,82 @@ Details of the spectral decomposition of the Hamiltonian operator<div class="sd-
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  0 
- &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} k \, c_k \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
- &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=2}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=1}^{+\infty} k \, c_k \xi^{k-1} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
- &amp; = (\lambda - \xi^2) \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} (k+2) (k+1) c_{k+2} \xi^{k} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} (k+1) \, c_{k+1} \xi^{k} + \xi^2 \sum_{k=0}^{+\infty} c_k \xi^k = \\
- &amp; = \dots \\
+ &amp; = \lambda \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} k (k-1) c_k \xi^{k-2} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \xi \sum_{k=0}^{+\infty} k \, c_k \xi^{k-1} = \\
+ &amp; = \lambda \sum_{k=0}^{+\infty} c_k \xi^k + \sum_{k=0}^{+\infty} (k+2) (k+1) c_{k+2} \xi^{k} - \sum_{k=0}^{+\infty} c_k \xi^k - 2 \sum_{k=0}^{+\infty} k \, c_k \xi^{k} = \\
+ &amp; = \sum_{k=0}^{+\infty} \left\{ - \left( - \lambda + 1 + 2k \right) c_k + \left( k + 2 \right) \left( k + 1 \right) c_{k+2} \right\} \xi^k \ .
 \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">This equation implies the a recursion relation between the coefficients of the power expansion</p>
+<div class="math notranslate nohighlight" id="equation-eq-hermite-recurrence">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-eq-hermite-recurrence" title="Permalink to this equation">#</a></span>\[c_{k+2} = \frac{2k + 1 - \lambda}{(k+2)(k+1)} c_k \ .\]</div>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Symmetry of the solutions<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The recurrence relation <a class="reference internal" href="#equation-eq-hermite-recurrence">(24.1)</a> involves coefficients with the same parity, <span class="math notranslate nohighlight">\(c_k\)</span> and <span class="math notranslate nohighlight">\(c_{k+2}\)</span>. Thus it’s possible to select:</p>
+<ul class="simple">
+<li><p class="sd-card-text">even solutions, by setting <span class="math notranslate nohighlight">\(c_1 = 0\)</span>, that implies <span class="math notranslate nohighlight">\(c_3 = c_5 = \dots = 0\)</span></p></li>
+<li><p class="sd-card-text">odd  solutions, by setting <span class="math notranslate nohighlight">\(c_0 = 0\)</span>, that implies <span class="math notranslate nohighlight">\(c_2 = c_4 = \dots = 0\)</span></p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Asymptotic behavior of the power series<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s discuss even solution here. The discussion for odd solutions is identical.</p>
+<p class="sd-card-text"><strong>Even solutions.</strong> Let <span class="math notranslate nohighlight">\(c_1 = 0\)</span>. Then the power series of <span class="math notranslate nohighlight">\(h(\xi)\)</span> only contains even powers</p>
+<div class="math notranslate nohighlight">
+\[h(\xi) = \sum_{m=0}^{+\infty} c_{2m} \xi^{2m} \ .\]</div>
+<p class="sd-card-text">For “large” <span class="math notranslate nohighlight">\(m\)</span>, the recurrence relation becomes</p>
+<div class="math notranslate nohighlight">
+\[c_{2m+2} \sim \frac{2}{2m} c_{2m} = \frac{c_{2m}}{m} \sim \frac{c_{2m}}{m+1} \ ,\]</div>
+<p class="sd-card-text">so that the asymptotic behavior of the <strong>infinite power series</strong> becomes</p>
+<div class="math notranslate nohighlight">
+\[h(\xi) = \dots + \sum_{m=1}^{+\infty} c_{2m} \xi^{2m} = \dots + c_0 \sum_{m=0}^{+\infty} \frac{\xi^{2m}}{m!} = \dots + e^{\xi^2} \ .\]</div>
+<p class="sd-card-text">Thus, the asymptotic behavior of the full solution, <span class="math notranslate nohighlight">\(\psi(\xi) = e^{-\xi^2/2} h(\xi)\)</span>, is <span class="math notranslate nohighlight">\(\psi(\xi) \sim e^{-\xi^2/2} e^{\xi^2} = e^{\xi^2/2}\)</span>, for <span class="math notranslate nohighlight">\(\xi \rightarrow \mp +\infty\)</span>. As the boundary conditions of the original problem implies <span class="math notranslate nohighlight">\(\psi(\xi \rightarrow \mp \infty) \rightarrow 0\)</span>, this asymptotic behavior is not allowed, and thus the power series can’t have an infinite number of terms. Thus the recurrence relation provides a <strong>stopping criterion</strong>.</p>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(c_{n+2} = 0\)</span> is the first zero coefficient with that parity (i.e. <span class="math notranslate nohighlight">\(c_{n+1} = 0\)</span>), then the last non-zero term is <span class="math notranslate nohighlight">\(c_n\)</span>. The recurrence relation provides the condition</p>
+<div class="math notranslate nohighlight">
+\[\lambda_n = 2 n + 1 \ .\]</div>
+<p class="sd-card-text">The following table contains the first solutions (not normalized, not orthogonal <strong>!</strong> )</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(k\)</span></p></th>
+<th class="text-center head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\lambda_k\)</span></p></th>
+<th class="text-center head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(E_k =  \frac{\hbar \omega}{2} \lambda_k = \hbar \omega \left( k + \frac{1}{2} \right)\)</span></p></th>
+<th class="text-left head"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\psi_k(\xi)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac{1}{2} \hbar \omega\)</span></p></td>
+<td class="text-left"><p class="sd-card-text"><span class="math notranslate nohighlight">\(c_0 e^{-\xi^2/2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac{3}{2} \hbar \omega\)</span></p></td>
+<td class="text-left"><p class="sd-card-text"><span class="math notranslate nohighlight">\(c_1 x e^{-\xi^2/2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(5\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac{5}{2} \hbar \omega\)</span></p></td>
+<td class="text-left"><p class="sd-card-text"><span class="math notranslate nohighlight">\(c_0 \left( 1 - x^2 \right) e^{-\xi^2/2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(7\)</span></p></td>
+<td class="text-center"><p class="sd-card-text"><span class="math notranslate nohighlight">\(\tfrac{7}{2} \hbar \omega\)</span></p></td>
+<td class="text-left"><p class="sd-card-text"><span class="math notranslate nohighlight">\(c_1 \left( x - \tfrac{2}{3} x^3 \right) e^{-\xi^2/2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
 </details></div>
 <div class="section" id="creator-and-annihilation-operators">
 <span id="quantum-mechanics-qft-harmonic-oscillator-quantization-creation-annihilation-operators"></span><h3><span class="section-number">24.1.2.2. </span>Creator and annihilation operators<a class="headerlink" href="#creator-and-annihilation-operators" title="Permalink to this heading">#</a></h3>
@@ -695,6 +779,53 @@ Details about the action of creation and annihilation operators on eigenstates i
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The <span class="math notranslate nohighlight">\(n\)</span> mode in space basis reads</p>
+<div class="math notranslate nohighlight">
+\[\psi_n(x) = e^{-x^2/2} h_n(x) = e^{-x^2/2} \sum_{k=0}^{n} c_k x^k \ ,\]</div>
+<p class="sd-card-text">with the coefficients of the power series linked by the recurrence relation <a class="reference internal" href="#equation-eq-hermite-recurrence">(24.1)</a>. The application of the position operator gives</p>
+<div class="math notranslate nohighlight">
+\[x \psi_n(\xi) = \sqrt{\frac{\hbar}{m \omega}} \, \xi \psi_n(\xi) \ ,\]</div>
+<p class="sd-card-text">while the application of the momentum operator (on an even function, with <span class="math notranslate nohighlight">\(c_1 = 0\)</span>) gives, recalling that <span class="math notranslate nohighlight">\(\xi = x \sqrt{\tfrac{m \omega}{\hbar}}\)</span>, and thus <span class="math notranslate nohighlight">\(\partial_x = \xi'(x) \partial_\xi = \sqrt{\tfrac{m\omega}{\hbar}} \partial_{\xi}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle x | \hat{p} | \psi_n \rangle 
+  &amp; = - i \hbar \partial_x \psi_n(x) = \\
+  &amp; = - i \hbar \sqrt{\frac{m \omega}{\hbar}} \left\{ -\xi \sum_{k=0}^{n} c_k \xi^k + \sum_{k=0}^{n} k c_k \xi^{k-1} \right\} e^{-\xi^2/2} = \\
+  &amp; = - i \hbar \sqrt{\frac{m \omega}{\hbar}} \left\{ - \sum_{k=0}^{n} c_k \xi^{k+1} + \underbrace{c_1}_{=0} + \sum_{k=0}^{n} ( k + 2) c_{k+2} \xi^{k+1} \right\} e^{-\xi^2/2} = \\
+  &amp; = - i \hbar \sqrt{\frac{m \omega}{\hbar}} \left\{ - \sum_{k=0}^{n} \left( c_k - (k+2) c_{k+2} \right) \xi^{k+1} \right\} e^{-\xi^2/2} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Creation operator</strong> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \sqrt{\frac{m \omega}{2 \hbar}} \left\langle x \left| \hat{x} - i \frac{\hat{p}}{m \omega} \right| \psi_n \right\rangle = \\
+  &amp; \quad = \sqrt{\frac{m \omega}{2 \hbar}} \left\{ \sqrt{\frac{\hbar}{m \omega}} e^{-\xi^2/2} \sum_{k=0}^{n} c_k \xi^{k+1} - \frac{i}{m \omega} \cdot \left( i \hbar \right) \cdot\sqrt{\frac{m\omega}{\hbar}} \sum_{k=0}^{n} \left( c_k - (k+2) c_{k+2} \right) \xi^{k+1} \right\} = \\
+  &amp; \quad = \frac{1}{\sqrt{2}} e^{-\xi^2/2} \left\{ \sum_{k=0}^{n} c_k \xi^{k+1} + \sum_{k=0}^{n} \left( c_k - (k+2) c_{k+2} \right) \xi^{k+1} \right\} = \\
+  &amp; \quad = \frac{1}{\sqrt{2}} e^{-\xi^2/2} \sum_{k=0}^{n} \left( 2 c_k - (k+2) c_{k+2} \right) \xi^{k+1} = \\
+  &amp; \quad = \frac{1}{\sqrt{2}} e^{-\xi^2/2} \sum_{k=0}^{n} c_k \left( 2 - \frac{2k+1-\lambda_n}{k+1} \right) \xi^{k+1} = \\
+  &amp; \quad = \frac{1}{\sqrt{2}} e^{-\xi^2/2} \sum_{k=0}^{n} \underbrace{c_k \left( \frac{2 n + 2}{k+1} \right)}_{=:d_{k+1}} \xi^{k+1} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\lambda_n = 2 n + 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[d_{k+1} = c_k \frac{2n+2}{k+1} \ ,\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d_{k+3}
+  &amp; = c_{k+2} \frac{2n+2}{k+3} = \\
+  &amp; = -2 c_{k} \frac{n-k}{(k+1)(k+2)} \frac{2n+2}{k+3} = \\
+  &amp; = -2 \frac{n-k}{(k+2)(k+3)} \left( c_k \frac{2n+2}{k+1} \right) = \\
+  &amp; = -2 \frac{(n+1)-(k+1)}{(k+2)(k+3)} d_{k+1} = \\
+  &amp; = -2 \frac{(n+1)-(k+1)}{(k+2)(k+3)} d_{k+1} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and, recognizing the degree of the expansion <span class="math notranslate nohighlight">\(n+1\)</span>, it follows</p>
+<div class="math notranslate nohighlight">
+\[d^{(n+1)}_{k+3} = - 2 \frac{(n+1) - (k+1)}{(k+2)(k+3)} d_{k+1}^{(n+1)} \ ,\]</div>
+<p class="sd-card-text">compatible with the recurrence relation</p>
+<div class="math notranslate nohighlight">
+\[
+ c_{k+2}^{(n)} = \frac{2k+1 - \lambda_n}{(k+1)(k+2)} c_k^{(n)} = - 2 \frac{n-k}{(k+1)(k+2)} c_k^{(n)} \ .
+\]</div>
+<p class="sd-card-text"><strong>Annihilation operator.</strong> Algebra is left as an exercise for readers or contributors…</p>
 </div>
 </details></div>
 <div class="section" id="number-operator">
