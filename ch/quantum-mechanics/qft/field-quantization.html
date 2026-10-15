@@ -497,7 +497,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#infinite-energy">24.2.2.1. Infinite energy</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -520,7 +523,7 @@ document.write(`
 \partial_t^2u-c^2\partial_{xx}u=f \ ,
 \]</div>
 <p>supplied with proper initial and boundary conditions. This equation is usually the continuous model (exploiting <strong>continuum hypotesis</strong>, or some equivalent principle) of a macroscopic system, made of a huge number - but <strong>finite</strong> number - of sub-systems at the microscopic level. This is quite a relevant remark, as continuous models have an infinite number of modes, while discrete models with a finite number of sub-systems have a finite number of modes.</p>
-<p>The wave function is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.</p>
+<p>The wave equation is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.</p>
 <div class="math notranslate nohighlight">
 \[
 \ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i \ ,
@@ -532,7 +535,7 @@ As done in <a class="reference external" href="https://basics2022.github.io/bboo
 \partial_t^2u-c^2\partial_{xx}u=0
 \]</div>
 <p>supplied with homogeneous boundary conditions <span class="math notranslate nohighlight">\(u(0) = u(L) = 0\)</span>, using the methods of separation of variables. Modes are the set of functions
-<span class="math notranslate nohighlight">\(n_k(x) = \sin \left( \frac{k \pi}{L} x \right)\)</span>, with <span class="math notranslate nohighlight">\(k \in \mathbb{N}\)</span>. The general solution can be written as a linear combination of the modes</p>
+<span class="math notranslate nohighlight">\(n_k(x) = \sin \left( \frac{k \pi}{L} x \right)\)</span>, with <span class="math notranslate nohighlight">\(k \in \mathbb{N}^+\)</span>. The general solution can be written as a linear combination of the modes</p>
 <div class="math notranslate nohighlight">
 \[
 u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
@@ -590,13 +593,12 @@ u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
 <li><p>creation/destruction and number operators for each individual mode;</p></li>
 <li><p>for independent modes: energy <span class="math notranslate nohighlight">\(E=\sum_kE_k\)</span>, with <span class="math notranslate nohighlight">\(E_k=\hbar\omega_k\left(n_k+\tfrac12\right)\)</span>.</p></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>But hey! Even if <span class="math notranslate nohighlight">\(n_k=0\ \forall k\)</span>, then <span class="math notranslate nohighlight">\(E=\sum_{k=1}^{\infty}\tfrac12\hbar\omega_k=\infty\)</span> !!!</p>
+<div class="section" id="infinite-energy">
+<h3><span class="section-number">24.2.2.1. </span>Infinite energy<a class="headerlink" href="#infinite-energy" title="Permalink to this heading">#</a></h3>
+<p>Even if <span class="math notranslate nohighlight">\(n_k=0\ \forall k\)</span>, then <span class="math notranslate nohighlight">\(E=\sum_{k=1}^{\infty}\tfrac12\hbar\omega_k=\infty\)</span>.</p>
+<p><strong>But</strong> physical systems are made of a <strong>finite number</strong> (even if huge) of particles <span class="math notranslate nohighlight">\(N\)</span>, and thus the system has only <span class="math notranslate nohighlight">\(N\)</span> modes: so the zero-point energy for mechanical systems is non-<span class="math notranslate nohighlight">\(\infty\)</span>.</p>
+<p><em>But</em> for continuous fields, say <span class="math notranslate nohighlight">\(\vec e(\vec r,t)\)</span>, we don’t have this argument: as it’s usually possible to measure only energy differences, zero-point energy “can be declared by fiat”, i.e. “the vacuum state has zero energy”.</p>
 </div>
-<p><em>But</em>: physical systems are made of a finite (even if huge) number of particles <span class="math notranslate nohighlight">\(N\)</span>, and thus the system has only <span class="math notranslate nohighlight">\(N\)</span> modes → so the zero-point energy for mechanical systems is non-<span class="math notranslate nohighlight">\(\infty\)</span>.</p>
-<p><em>But</em> for continuous fields, say <span class="math notranslate nohighlight">\(\vec e(\vec r,t)\)</span>, we don’t have this argument!!</p>
-<p><span class="math notranslate nohighlight">\(\rightarrow\)</span> Zero-point energy “can be declared by fiat that this state has zero energy” (as one usually can only measure energy differences!).</p>
 </div>
 </div>
 
@@ -664,7 +666,10 @@ u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-system">24.2.1. Classical system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-classical-to-quantum">24.2.2. From classical to quantum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#infinite-energy">24.2.2.1. Infinite energy</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -9,6 +9,7 @@
 
 ```
 
+(quantum-mechanics:second-quantizazion:identical)=
 ## Identical systems
 
 Let a system be composed of $N$ identical indistinguishable sub-systems. The state of the subsystem $k$ is described by a single-system wave function $| \psi_k \rangle$ belonging to the single-system Hilbert space $\mathcal{H}_1$. Thus, the state of the many-body subsystem is described by a wave function $| \Psi \rangle$ belonging to the $N$ tensor product space 
@@ -37,8 +38,10 @@ it follows that $P_{ij} P_{ij} = 1$. Thus, two solutions are possible, correspon
 
    $$\Psi(\dots, \ \mathbf{r}_j, \dots, \ \mathbf{r}_i, \dots) = - \Psi(\dots, \ \mathbf{r}_i, \dots, \ \mathbf{r}_j, \dots)$$
 
+(quantum-mechanics:second-quantizazion:identical:symmetrization)=
 ### Symmetrization and anti-symmetrization
 
+(quantum-mechanics:second-quantizazion:identical:symmetrization:bosons)=
 #### Symmetric basis for bosons
 
 Let $| \alpha_1, \dots, \alpha_N \rangle$
@@ -63,6 +66,7 @@ $$\begin{aligned}
 
 ```
 
+(quantum-mechanics:second-quantizazion:identical:symmetrization:fermions)=
 #### Anti-symmetric basis for fermions
 
 Let $| \alpha_1, \dots, \alpha_N \rangle$
@@ -93,6 +97,7 @@ $$\begin{aligned}
 ```
 
 
+(quantum-mechanics:second-quantizazion:second-quantization)=
 ## Second quantization
 
 Let $\{ | \alpha \rangle \}$ a basis of the 1-body system. Let $n_\alpha$ the number of subsystems in the single-body state $| \alpha \rangle$, i.e. the **occupation number** of the state. The sum of the occupation numbers is equal to the number of particles $N$, i.e. $\sum_\alpha n_\alpha = N$. In the second quantization, the state of the system is represented in the occupation number state
@@ -101,30 +106,34 @@ $$| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .$$
  
 **Ground state.** $| \mathbf{0} \rangle = | 0_1, 0_2, \dots \rangle$. By definition $\langle 0 | 0 \rangle = 1$.
 
+(quantum-mechanics:second-quantizazion:second-quantization:fock-space)=
 ### Fock states
 
 **todo** *Properties of Fock states*
 
+(quantum-mechanics:second-quantizazion:bosons-fermions)=
 ## Bosons and Fermions
 
+(quantum-mechanics:second-quantizazion:bosons-fermions:bosons)=
 ### Bosons
 
+(quantum-mechanics:second-quantizazion:bosons-fermions:bosons:creation-annihilation)=
 #### Creation and annihilation operators
 
 **Creation operator, $\hat{b}_i^{\dagger}$.** The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator $\hat{b}_i$.
 
 $$\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .$$
 
-A state $| n_1, n_2, \dots, n_i, \dots \rangle$ can be obtained from the vacuum equation as
+A state $| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle$ can be obtained from the vacuum equation as
 
-$$| n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | 0 \rangle \ .$$
+$$| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | \mathbf{0} \rangle \ .$$
 
 
 **Annihilation operator, $\hat{b}_i$.** 
 
 $$\begin{aligned}
   \hat{b}_i | \dots, n_i, \dots \rangle & = \sqrt{n} | \dots, (n-1)_i, \dots \rangle \ , \qquad \text{if $n_i > 0$} \\
-  \hat{b}_i | \dots, n_i, \dots \rangle & = | \mathbf{0} \rangle
+  \hat{b}_i | \dots, 0_i, \dots \rangle & = 0 \ .
 \end{aligned}$$
 
 ```{tip} 
@@ -169,10 +178,12 @@ with the Kronecker's delta acting on all the indices - just as an example, with 
 **Number operator, $\hat{n}_i = \hat{b}_i^\dagger \, \hat{b}_i$.** Number operator is self-adjoint. This is consistent with postulates of quantum mechanics: physical observables are represented by self-adjoint operators.
 
 $$\begin{aligned}
-  \hat{n}_i | \dots, n_i, \dots \rangle
+  \hat{n}_i | \mathbf{n} \rangle
+  & = \hat{n}_i | \dots, n_i, \dots \rangle = \\
   & = \hat{b}_i^\dagger \, \hat{b}_i | \dots, n_i, \dots \rangle = \\
   & = \hat{b}_i^\dagger \, \left( \sqrt{n} | \dots, (n-1)_i, \dots \rangle \right) = \\
-  & = n | \dots, n_i, \dots \rangle \ .
+  & = n_i | \dots, n_i, \dots \rangle = \\
+  & = n_i | \mathbf{n} \rangle \ .
 \end{aligned}$$
 
 <!--
@@ -210,10 +221,29 @@ $$[ \hat{b}_i, \hat{b}_j ] = 0$$
 
 $$[ \hat{b}_i^\dagger, \hat{b}_j^\dagger ] = 0$$
 
+(quantum-mechanics:second-quantizazion:bosons-fermions:fermions)=
 ### Fermions
 
+(quantum-mechanics:second-quantizazion:bosons-fermions:fermions:creation-annihilation)=
 #### Creation and annihilation operators
 
+(quantum-mechanics:second-quantizazion:bosons-fermions:fermions:jordan-wigner)=
+##### Jordan–Wigner (1928), "On the Pauli exclusion principle"
+
+The state of an atom is described by the occupation numbers of the orbitals: $|n_1\,n_2\dots\rangle$.
+
+* Inconsistency of results if $b_1^\dagger b_2^\dagger|0,0\rangle=-b_2^\dagger b_1^\dagger|0,0\rangle$ ⟹ $|1,1\rangle=-1\times|1,1\rangle$ **(!)** — anticommutation relation.
+
+* Solution of Jordan and Wigner:
+
+$$\begin{aligned}
+\hat b^\dagger_k|\dots n_k\dots\rangle & = \theta_k\sqrt{1-n_k}\,|\dots(1-n)_k\dots\rangle \\
+\hat b_k|\dots n_k\dots\rangle & = \theta_k\sqrt{n_k}\,|\dots(1-n)_k\dots\rangle
+\end{aligned}$$
+
+with $\theta_k=(-1)^{n_1+\dots+n_{k-1}}$.
+
+(quantum-mechanics:second-quantizazion:quantum-fields)=
 ## Quantum fields
 
 Let $\{ | \nu_k \rangle \}_k$ a basis of quantum states of the 1-body system. The 1-body wave function can be represented as a linear combination of the vectors of this basis,
