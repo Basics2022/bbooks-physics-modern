@@ -1,70 +1,70 @@
 (quantum-mechanics:qft:multi-body)=
 # Multi-body quantum mechanics and QFT
 
+In multi-body quantum systems the number of identical particles may change in time, and the interactions may occur as non-smooth dynamics involving creation and destruction of particles. First, the limits of the quantum systems represented with so called first quantization process are discussed: these systems can't represent systems with a variable number of particles and non smooth interactions. Then, the second quantization of the electron field is introduced, along with the Pauli exclusion principle. Eventually, the properties and the formalism for the second quantization of boson and fermion fields are recalled.
+
+(quantum-mechanics:qft:multi-body:first-quantization)=
 ## First quantization
 
-particles → waves; $x,p\to\hat x,\hat p$.
+First quantization moves the description of a particle to a wave process, promoting generalized coordinates and momenta $x$, $p$ to operators $\hat{q}$, $\hat{p}$. The state of a system is described by a wave function $| \Psi \rangle$ belonging to a Hilbert space $\mathcal{H}$, satisfying the Schrodinger equation of the system
 
-$$
-i\hbar|\dot\psi\rangle=\hat H|\psi\rangle,\qquad
-|\psi\rangle=\sum c_n|\psi_n\rangle\ \ (\text{stationary states}),\qquad
-\hat H|\psi_n\rangle=E_n|\psi_n\rangle
-$$
+$$i \hbar \dot{ | \Psi \rangle } = \hat{H} | \Psi \rangle \ .$$
 
-$$
-1=\langle\psi|\psi\rangle=\sum_n|c_n|^2,\qquad |c_n|^2=\text{probability of being in }|\psi_n\rangle
-$$
+The wavefunction $| \Psi \rangle$ satisfies the normalization condition $\langle \Psi | \Psi \rangle = 1$.
+If the Hamiltonian operator $\hat{H}$ is independent from time, its spectral decomposition provides an orthogonal basis for $\mathcal{H}$ of stationary states $\{ | \psi_n \rangle \}$ and their energy levels $\{ E_n \}$. The wavefunction of the system $| \Psi \rangle$ can be represented in the orthonormal basis as
 
-The Schrödinger equation makes $c_n$ vary continuously. **But** EM radiation occurs in **quantum jumps** ≈
+$$| \Psi(t) \rangle = \sum_n | \psi_n \rangle c_n(t) \ ,$$
 
-1. destruction of a high-energy $e^-$,
-2. creation of a lower-energy $e^-$ + a $\gamma$.
+with the coefficients $c_n$ that can be linked to the probability $|c_n|^2$ of finding the system whose state is represented by $| \Psi \rangle$ in the state $| \psi_n \rangle$, as from normalization condition it follows
+
+$$1 = \langle \Psi | \Psi \rangle = \sum_{n,m} c_n^* c_m \underbrace{\langle \psi_n | \psi_m \rangle}_{\delta_{nm}} = \sum_n |c_n|^2 \ .$$
+
+The Schrödinger equation makes $c_n(t)$ vary continuously. In energy basis, the coefficients of teh expansion are governed by the ODEs
+
+$$i \hbar \dot{c}_n = E_n c_n \ ,$$
+
+and thus they evolve as $c_n(t) = c_{n,0} \exp\left( - i \frac{E_n}{\hbar} t \right)$.
+
+
+**But** Interactions between systems may occur as non-smooth dynamics. As an example, EM radiation absorption or emission by an atom occurs in **quantum jumps**. As an example, spontaneous emission of EM radiation from an atom involves:
+1. the destruction of a high-energy $e^-$,
+2. the creation of a lower-energy $e^-$ + a $\gamma$.
 
 ## Second quantization of the electron field
 
-$$
-\psi(x,t)=\sum_kb_k(t)\psi_k(x)=\sum_kb_{k0}\psi_k(x)e^{-i\omega_kt}
-$$
-
-($\psi_k$ are the energy eigenfunctions.)
+**First quantization.** The wave function describing an electron can be written as a linear combination of the energy eigenstates. In space representation
 
 $$
-\sum_ki\hbar\dot b_k|k\rangle=\hat H\sum_kb_k|k\rangle\ \to\ b_k=b_{k0}\exp\!\left(-i\frac{E_k}{\hbar}t\right)
+\psi(\mathbf{r},t)=\sum_k b_k(t)\psi_k(\mathbf{r}) = \sum_k b_{k0} \psi_k(\mathbf{r}) e^{-i\omega_kt} \ .
 $$
 
+with $\omega_k = \tfrac{E_k}{\hbar}$. The expected value of the energy is 
+
 $$
-\langle\psi|\hat H|\psi\rangle=\sum_{mn}\langle m|\hat H|n\rangle\,b^*_{m0}b_{n0}\,e^{+i\omega_mt}e^{-i\omega_nt}
-=\sum_nE_n|b_{n0}|^2,\qquad(E_n\langle m|n\rangle=E_n\delta_{mn})
+\langle\psi|\hat H|\psi\rangle=\sum_{m,n}\langle m|\hat H|n\rangle\,b^*_{m0}b_{n0}\,e^{+i\omega_mt}e^{-i\omega_nt}
+=\sum_nE_n|b_{n0}|^2 \ .
 $$
 
-This is the projection of the wavefunction of the $e^-$ onto the energy eigenfunction.
-
-**2nd quantization:** $b_{k0}\to\hat b_k$ (destruction operator). In analogy with multi-body QM:
+**Second quantization:** $b_{k0}\to\hat b_k$ (destruction operator). In analogy with multi-body QM:
 
 $$
 \hat H=\sum_kE_k\hat n_k=\sum_kE_k\hat b_k^\dagger\hat b_k
 $$
 
-### Jordan–Wigner (1928), "On the Pauli exclusion principle"
 
-The state of an atom is described by the occupation numbers of the orbitals: $|n_1\,n_2\dots\rangle$.
+## Hamiltonian and state of the non-interacting $e^-$ and radiation fields
 
-* Inconsistency of results if $b_1^\dagger b_2^\dagger|0,0\rangle=-b_2^\dagger b_1^\dagger|0,0\rangle$ ⟹ $|1,1\rangle=-1\times|1,1\rangle$ **(!)** — anticommutation relation.
+**Electron field.** The state can be represented in the occupation number basis as a linear combination of the basis of the Fock space, namely
 
-* Solution of Jordan and Wigner:
-
-$$
-\hat b^\dagger_k|\dots n_k\dots\rangle=\theta_k\sqrt{1-n_k}\,|\dots(1-n)_k\dots\rangle,\qquad
-\hat b_k|\dots n_k\dots\rangle=\theta_k\sqrt{n_k}\,|\dots(1-n)_k\dots\rangle
-$$
-
-with $\theta_k=(-1)^{n_1+\dots+n_{k-1}}$.
-
-## Hamiltonian and state of $e^-$ and radiation fields
+$$\left\{ | \mathbf{n} \rangle \right\} = \left\{ |\mathbf{0} \rangle, |1,0,0,\dots \rangle, |0,1,0,\dots \rangle, \dots, |2,0,0,\dots \rangle, |1,1,0,\dots \rangle, \dots \right\} \ .$$
 
 $$
 e^-:\ |\phi_e\rangle=|n_{e1},n_{e2},\dots\rangle,\quad \hat H_e=\sum_kE_k\hat b_k^\dagger\hat b_k
-\qquad\qquad
+$$
+
+Radiation field
+
+$$
 \text{rad}:\ |\psi_r\rangle=|n_{k\alpha}\dots\rangle,\quad \hat H_{rad}=\sum_{k,\alpha}\hbar\omega_k\hat a^\dagger_{k\alpha}\hat a_{k\alpha}
 $$
 

@@ -14,7 +14,7 @@ $$
 
 supplied with proper initial and boundary conditions. This equation is usually the continuous model (exploiting **continuum hypotesis**, or some equivalent principle) of a macroscopic system, made of a huge number - but **finite** number - of sub-systems at the microscopic level. This is quite a relevant remark, as continuous models have an infinite number of modes, while discrete models with a finite number of sub-systems have a finite number of modes.
 
-The wave function is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.
+The wave equation is a PDE that can be interpreted as the continuous counter-part of a set of ODE for the sub-systems of a discrete model, e.g.
 
 $$
 \ddot u_i-c^2\frac{u_{i-1}-2u_i+u_{i+1}}{\Delta x^2}=f_i \ ,
@@ -28,7 +28,7 @@ $$
 $$
 
 supplied with homogeneous boundary conditions $u(0) = u(L) = 0$, using the methods of separation of variables. Modes are the set of functions
-$n_k(x) = \sin \left( \frac{k \pi}{L} x \right)$, with $k \in \mathbb{N}$. The general solution can be written as a linear combination of the modes
+$n_k(x) = \sin \left( \frac{k \pi}{L} x \right)$, with $k \in \mathbb{N}^+$. The general solution can be written as a linear combination of the modes
 
 $$
 u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
@@ -97,13 +97,11 @@ or, using the occupation-number representation: $|n_1,n_2,\dots\rangle=|n_1\rang
 - creation/destruction and number operators for each individual mode;
 - for independent modes: energy $E=\sum_kE_k$, with $E_k=\hbar\omega_k\left(n_k+\tfrac12\right)$.
 
-:::{warning}
-But hey! Even if $n_k=0\ \forall k$, then $E=\sum_{k=1}^{\infty}\tfrac12\hbar\omega_k=\infty$ !!!
-:::
+### Infinite energy
 
-*But*: physical systems are made of a finite (even if huge) number of particles $N$, and thus the system has only $N$ modes → so the zero-point energy for mechanical systems is non-$\infty$.
+Even if $n_k=0\ \forall k$, then $E=\sum_{k=1}^{\infty}\tfrac12\hbar\omega_k=\infty$.
 
-*But* for continuous fields, say $\vec e(\vec r,t)$, we don't have this argument!!
+**But** physical systems are made of a **finite number** (even if huge) of particles $N$, and thus the system has only $N$ modes: so the zero-point energy for mechanical systems is non-$\infty$.
 
-$\rightarrow$ Zero-point energy "can be declared by fiat that this state has zero energy" (as one usually can only measure energy differences!).
+*But* for continuous fields, say $\vec e(\vec r,t)$, we don't have this argument: as it's usually possible to measure only energy differences, zero-point energy "can be declared by fiat", i.e. "the vacuum state has zero energy".
 
