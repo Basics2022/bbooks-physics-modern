@@ -40,6 +40,39 @@ $$
 \ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0 \ .
 $$ (eq:field-quantization:classical:mode-ode)
 
+An **energy density** of the system can be defined as
+
+$$e(x,t) :=  \frac{|\partial_t u|^2}{2} + c^2 \frac{|\partial_x u|^2}{2} \ .$$
+
+and the energy in the whole domain is
+
+$$\begin{aligned}
+ E 
+ & = \int_{x=0}^{L} e(x,t) \, dx = \\
+ & = \int_{x=0}^{L} \left\{ \frac{1}{2} \sum_{k, k'} \dot{q}_k \dot{q}_{k'} \sin\left( \frac{k \pi x}{L}\right) \sin\left( \frac{k' \pi x}{L} \right) + \frac{1}{2} \sum_{k,k'} c^2 q_k q_{k'} \frac{k k' \pi^2}{L^2} \cos \left( \frac{k \pi x}{L} \right) \cos \left( \frac{k' \pi x}{L} \right) \right\} \, dx = \\
+ & = \frac{L}{2} \left\{ \frac{1}{2} \sum_{k} \dot{q}_k^2 + \frac{1}{2} \sum_{k} c^2 \frac{k^2 \pi^2}{L^2} q_k^2 \right\}  = \\
+ & = \frac{L}{2} \sum_{k} \left\{ \frac{1}{2} \dot{q}_k^2 + \frac{1}{2} \omega_k^2 q_k^2 \right\}  = \\
+ & = \sum_{k} E_k(q^k, \dot{q}^k) \ ,
+\end{aligned}$$
+
+having exploited orthogonality of the modes. The latter expression shows that the total energy can be written as the sum of energy contributions from the different modes. As the amplitudes of the modes satisfy the harmonic oscillator ODE, then they can be written as
+
+$$\begin{aligned}
+  q_k(t)       & = Q_k e^{i ( \omega_k t + \varphi_k)} + c.c. = 2 Q_k \cos( \omega_k t + \varphi_k ) \\
+  \dot{q}_k(t) & = i \omega_k Q_k e^{i (\omega_k t + \varphi_k)} + c.c. = - 2 \omega_k Q_k \sin( \omega_k t + \varphi_k ) \\
+\end{aligned}$$
+
+and the energy in the domain becomes
+
+$$\begin{aligned}
+  E
+  & = \frac{L}{4} \sum_k \left\{ 4 \omega_k^2 Q_k^2 \sin^2( \omega_k t + \varphi_k ) + \omega_k^2 4 Q_k^2 \cos^2( \omega_k t + \varphi_k ) \right\} = \\
+  & = L \sum_k \omega_k^2 Q_k^2 \ ,
+\end{aligned}$$
+
+so that the elementary contribution of the $k^{th}$ mode to the energy of the system is $E_k = L \omega^2_k Q_k^2$.
+
+
 (quantum-mechanics:qft:field-quantization:quantization)=
 ## From classical to quantum
 

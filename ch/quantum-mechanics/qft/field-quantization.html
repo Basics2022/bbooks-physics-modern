@@ -539,13 +539,40 @@ u(x,t)=\sum_k q_k(t)\sin\!\left(\frac{k\pi}{L}x\right) \ ,
 \]</div>
 <p>with time-dependent coefficients <span class="math notranslate nohighlight">\(q_k(t)\)</span> satisfying the harmonic oscillator uncoupled ODEs</p>
 <div class="math notranslate nohighlight" id="equation-eq-field-quantization-classical-mode-ode">
-<span class="eqno">(24.1)<a class="headerlink" href="#equation-eq-field-quantization-classical-mode-ode" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(24.2)<a class="headerlink" href="#equation-eq-field-quantization-classical-mode-ode" title="Permalink to this equation">#</a></span>\[
 \ddot q_k+\underbrace{\frac{c^2k^2\pi^2}{L^2}}_{\omega_k^2}q_k=0 \ .
 \]</div>
+<p>An <strong>energy density</strong> of the system can be defined as</p>
+<div class="math notranslate nohighlight">
+\[e(x,t) :=  \frac{|\partial_t u|^2}{2} + c^2 \frac{|\partial_x u|^2}{2} \ .\]</div>
+<p>and the energy in the whole domain is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ E 
+ &amp; = \int_{x=0}^{L} e(x,t) \, dx = \\
+ &amp; = \int_{x=0}^{L} \left\{ \frac{1}{2} \sum_{k, k'} \dot{q}_k \dot{q}_{k'} \sin\left( \frac{k \pi x}{L}\right) \sin\left( \frac{k' \pi x}{L} \right) + \frac{1}{2} \sum_{k,k'} c^2 q_k q_{k'} \frac{k k' \pi^2}{L^2} \cos \left( \frac{k \pi x}{L} \right) \cos \left( \frac{k' \pi x}{L} \right) \right\} \, dx = \\
+ &amp; = \frac{L}{2} \left\{ \frac{1}{2} \sum_{k} \dot{q}_k^2 + \frac{1}{2} \sum_{k} c^2 \frac{k^2 \pi^2}{L^2} q_k^2 \right\}  = \\
+ &amp; = \frac{L}{2} \sum_{k} \left\{ \frac{1}{2} \dot{q}_k^2 + \frac{1}{2} \omega_k^2 q_k^2 \right\}  = \\
+ &amp; = \sum_{k} E_k(q^k, \dot{q}^k) \ ,
+\end{aligned}\end{split}\]</div>
+<p>having exploited orthogonality of the modes. The latter expression shows that the total energy can be written as the sum of energy contributions from the different modes. As the amplitudes of the modes satisfy the harmonic oscillator ODE, then they can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  q_k(t)       &amp; = Q_k e^{i ( \omega_k t + \varphi_k)} + c.c. = 2 Q_k \cos( \omega_k t + \varphi_k ) \\
+  \dot{q}_k(t) &amp; = i \omega_k Q_k e^{i (\omega_k t + \varphi_k)} + c.c. = - 2 \omega_k Q_k \sin( \omega_k t + \varphi_k ) \\
+\end{aligned}\end{split}\]</div>
+<p>and the energy in the domain becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E
+  &amp; = \frac{L}{4} \sum_k \left\{ 4 \omega_k^2 Q_k^2 \sin^2( \omega_k t + \varphi_k ) + \omega_k^2 4 Q_k^2 \cos^2( \omega_k t + \varphi_k ) \right\} = \\
+  &amp; = L \sum_k \omega_k^2 Q_k^2 \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that the elementary contribution of the <span class="math notranslate nohighlight">\(k^{th}\)</span> mode to the energy of the system is <span class="math notranslate nohighlight">\(E_k = L \omega^2_k Q_k^2\)</span>.</p>
 </div>
 <div class="section" id="from-classical-to-quantum">
 <span id="quantum-mechanics-qft-field-quantization-quantization"></span><h2><span class="section-number">24.2.2. </span>From classical to quantum<a class="headerlink" href="#from-classical-to-quantum" title="Permalink to this heading">#</a></h2>
-<p>The amplitude <span class="math notranslate nohighlight">\(q_k(t)\)</span> of mode <span class="math notranslate nohighlight">\(k\)</span> is governed by the dynamical equation <a class="reference internal" href="#equation-eq-field-quantization-classical-mode-ode">(24.1)</a>, compatible with the Hamiltonian</p>
+<p>The amplitude <span class="math notranslate nohighlight">\(q_k(t)\)</span> of mode <span class="math notranslate nohighlight">\(k\)</span> is governed by the dynamical equation <a class="reference internal" href="#equation-eq-field-quantization-classical-mode-ode">(24.2)</a>, compatible with the Hamiltonian</p>
 <div class="math notranslate nohighlight">
 \[H_k(q^k,p_k) = \frac{p_k^2}{2} + \frac{\omega_k^2 (q^k)^2}{2} \ .\]</div>
 <p>Wavefunction of the mode <span class="math notranslate nohighlight">\(k\)</span>:</p>
