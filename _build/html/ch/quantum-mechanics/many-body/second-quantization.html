@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>22. Second Quantization &#8212; Modern Physics</title>
+    <title>22. Many-body systems &#8212; Modern Physics</title>
   
   
   
@@ -259,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Second Quantization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Many-body systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electromagnetic-field-quantization.html">23. Quantization of the electromagnetic field</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../qft.html">24. Introduction to Quantum Field Theory</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../qft/harmonic-oscillator.html">24.1. Harmonic Oscillator</a></li>
@@ -486,7 +486,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Second Quantization</h1>
+    <h1>Many-body systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -504,7 +504,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics-second-quantizazion-second-quantization">22.2. Second quantization</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-quantization">22.2. Second quantization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fock-states">22.2.1. Fock states</a></li>
 </ul>
 </li>
@@ -526,10 +526,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.2.1. Bosons</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.4.1.2.1. Bosons</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-systems">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">22.4.1.3.1. Bosons</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">22.4.1.3.2. Fermions</a></li>
 </ul>
@@ -549,8 +549,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="second-quantization">
-<span id="quantum-mechanics-second-quantizazion"></span><h1><span class="section-number">22. </span>Second Quantization<a class="headerlink" href="#second-quantization" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="many-body-systems">
+<span id="quantum-mechanics-second-quantizazion"></span><h1><span class="section-number">22. </span>Many-body systems<a class="headerlink" href="#many-body-systems" title="Permalink to this heading">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Contents<div class="sd-summary-down docutils">
@@ -558,10 +558,8 @@ Contents<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<ul class="simple">
-<li><p class="sd-card-text">Indistinguishability of identical systems: bosons and fermions</p></li>
-<li><p class="sd-card-text">Second quantization: asking which particle is which state? is meaningless, as particles are indistinguishable. How many particles are in each state? could be a reasonable question</p></li>
-</ul>
+<p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-second-quantizazion-identical"><span class="std std-ref">Indistinguishability of identical systems</span></a>. Bosons and fermions. Symmetric basis for bosons, anti-symmetric basis for fermions.</p>
+<p class="sd-card-text"><a class="reference internal" href="#quantum-mechanics-second-quantizazion-second-quantization"><span class="std std-ref">Second quantization</span></a>. Asking which particle is which state? is meaningless, as particles are indistinguishable. How many particles are in each state? could be a reasonable question</p>
 </div>
 </details><div class="section" id="quantum-mechanics-second-quantizazion-identical">
 <span id="identical-systems"></span><h2><span class="section-number">22.1. </span>Identical systems<a class="headerlink" href="#quantum-mechanics-second-quantizazion-identical" title="Permalink to this heading">#</a></h2>
@@ -637,8 +635,8 @@ Contents<div class="sd-summary-down docutils">
 </div></div>
 </div>
 </div>
-<div class="section" id="quantum-mechanics-second-quantizazion-second-quantization">
-<span id="id1"></span><h2><span class="section-number">22.2. </span>Second quantization<a class="headerlink" href="#quantum-mechanics-second-quantizazion-second-quantization" title="Permalink to this heading">#</a></h2>
+<div class="section" id="second-quantization">
+<span id="quantum-mechanics-second-quantizazion-second-quantization"></span><h2><span class="section-number">22.2. </span>Second quantization<a class="headerlink" href="#second-quantization" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(\{ | \alpha \rangle \}\)</span> a basis of the 1-body system. Let <span class="math notranslate nohighlight">\(n_\alpha\)</span> the number of subsystems in the single-body state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>, i.e. the <strong>occupation number</strong> of the state. The sum of the occupation numbers is equal to the number of particles <span class="math notranslate nohighlight">\(N\)</span>, i.e. <span class="math notranslate nohighlight">\(\sum_\alpha n_\alpha = N\)</span>. In the second quantization, the state of the system is represented in the occupation number state</p>
 <div class="math notranslate nohighlight">
 \[| \mathbf{n} \rangle := | n_1, n_2, \dots, n_{\alpha}, \dots \rangle \ .\]</div>
@@ -750,7 +748,7 @@ Proof<div class="sd-summary-down docutils">
 <div class="section" id="fermions">
 <span id="quantum-mechanics-second-quantizazion-bosons-fermions-fermions"></span><h3><span class="section-number">22.3.2. </span>Fermions<a class="headerlink" href="#fermions" title="Permalink to this heading">#</a></h3>
 <div class="section" id="quantum-mechanics-second-quantizazion-bosons-fermions-fermions-creation-annihilation">
-<span id="id2"></span><h4><span class="section-number">22.3.2.1. </span>Creation and annihilation operators<a class="headerlink" href="#quantum-mechanics-second-quantizazion-bosons-fermions-fermions-creation-annihilation" title="Permalink to this heading">#</a></h4>
+<span id="id1"></span><h4><span class="section-number">22.3.2.1. </span>Creation and annihilation operators<a class="headerlink" href="#quantum-mechanics-second-quantizazion-bosons-fermions-fermions-creation-annihilation" title="Permalink to this heading">#</a></h4>
 <div class="section" id="jordanwigner-1928-on-the-pauli-exclusion-principle">
 <span id="quantum-mechanics-second-quantizazion-bosons-fermions-fermions-jordan-wigner"></span><h5><span class="section-number">22.3.2.1.1. </span>Jordan–Wigner (1928), “On the Pauli exclusion principle”<a class="headerlink" href="#jordanwigner-1928-on-the-pauli-exclusion-principle" title="Permalink to this heading">#</a></h5>
 <p>The state of an atom is described by the occupation numbers of the orbitals: <span class="math notranslate nohighlight">\(|n_1\,n_2\dots\rangle\)</span>.</p>
@@ -829,8 +827,8 @@ Continuous basis<div class="sd-summary-down docutils">
 </details></div>
 <div class="section" id="two-particle-system">
 <h4><span class="section-number">22.4.1.2. </span>Two-particle system<a class="headerlink" href="#two-particle-system" title="Permalink to this heading">#</a></h4>
-<div class="section" id="id3">
-<h5><span class="section-number">22.4.1.2.1. </span>Bosons<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<div class="section" id="id2">
+<h5><span class="section-number">22.4.1.2.1. </span>Bosons<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
 <p>Position state can be expressed either with creation operators</p>
 <div class="math notranslate nohighlight">
 \[| \mathbf{r}_1, \mathbf{r}_2 \rangle = \hat{\Psi}^\dagger(\mathbf{r}_2) \hat{\Psi}^\dagger(\mathbf{r}_1) | 0 \rangle \ ,\]</div>
@@ -887,8 +885,8 @@ Proof<div class="sd-summary-down docutils">
 <p><strong>Fermions.</strong></p>
 </div>
 </div>
-<div class="section" id="many-body-systems">
-<h4><span class="section-number">22.4.1.3. </span>Many-body systems<a class="headerlink" href="#many-body-systems" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id3">
+<h4><span class="section-number">22.4.1.3. </span>Many-body systems<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="section" id="id4">
 <h5><span class="section-number">22.4.1.3.1. </span>Bosons<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h5>
 <p><strong>Identity operator.</strong></p>
@@ -993,7 +991,7 @@ Proof<div class="sd-summary-down docutils">
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics-second-quantizazion-second-quantization">22.2. Second quantization</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-quantization">22.2. Second quantization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fock-states">22.2.1. Fock states</a></li>
 </ul>
 </li>
@@ -1015,10 +1013,10 @@ Proof<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-creation-operator">22.4.1. Field creation operator</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-particle-system">22.4.1.1. One-particle system</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#two-particle-system">22.4.1.2. Two-particle system</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.2.1. Bosons</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.4.1.2.1. Bosons</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#many-body-systems">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">22.4.1.3. Many-body systems</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">22.4.1.3.1. Bosons</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">22.4.1.3.2. Fermions</a></li>
 </ul>

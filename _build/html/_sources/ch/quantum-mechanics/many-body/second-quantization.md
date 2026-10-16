@@ -1,11 +1,12 @@
 (quantum-mechanics:second-quantizazion)=
-# Second Quantization
+# Many-body systems
 
 ```{dropdown} Contents
 :open:
 
-* Indistinguishability of identical systems: bosons and fermions
-* Second quantization: asking which particle is which state? is meaningless, as particles are indistinguishable. How many particles are in each state? could be a reasonable question
+[Indistinguishability of identical systems](quantum-mechanics:second-quantizazion:identical). Bosons and fermions. Symmetric basis for bosons, anti-symmetric basis for fermions.
+
+[Second quantization](quantum-mechanics:second-quantizazion:second-quantization). Asking which particle is which state? is meaningless, as particles are indistinguishable. How many particles are in each state? could be a reasonable question
 
 ```
 

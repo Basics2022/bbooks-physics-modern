@@ -81,7 +81,14 @@ parts:
       - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln
       - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
       - file: ch/quantum-mechanics/atom-models/schrodinger-notes
-  - file: ch/quantum-mechanics/many-body/second-quantization
+  - file: ch/quantum-mechanics/many-body/many-body-quantum-mechanics
+    sections:
+    - file: ch/quantum-mechanics/many-body/identical-systems
+    - file: ch/quantum-mechanics/many-body/fock-space
+    - file: ch/quantum-mechanics/many-body/bosons
+    - file: ch/quantum-mechanics/many-body/fermions
+    - file: ch/quantum-mechanics/many-body/quantum-fields
+    - file: ch/quantum-mechanics/many-body/operators
   - file: ch/quantum-mechanics/many-body/electromagnetic-field-quantization
   - file: ch/quantum-mechanics/qft
     sections:
