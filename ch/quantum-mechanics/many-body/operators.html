@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -495,7 +504,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-body-operators">22.6.1. One-body operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-body-operators">22.6.1. One-body operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">22.6.1.1. Space representation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-body-operators">22.6.2. Two-body operators</a></li>
 </ul>
             </nav>
@@ -525,8 +537,8 @@ o_{ab} = \langle \psi_a | \hat{o} | \psi_b \rangle = \langle \psi_a |\int_{\math
 <div class="math notranslate nohighlight" id="equation-eq-qft-operator-one-body-first-quantization">
 <span class="eqno">(22.7)<a class="headerlink" href="#equation-eq-qft-operator-one-body-first-quantization" title="Permalink to this equation">#</a></span>\[\hat{O}_1 = \sum_{i=1}^{N} \hat{o}(q^i, p_i) \ .\]</div>
 <p>Let the state of the system <span class="math notranslate nohighlight">\(| \Psi \rangle\)</span> be represented in the basis <span class="math notranslate nohighlight">\(\{ | \psi_{i_1}, \psi_{i_2}, \dots \rangle \}\)</span>, with the vectors <span class="math notranslate nohighlight">\(|\psi_i \rangle\)</span> being the eigenvectors of the operator <span class="math notranslate nohighlight">\(\hat{o}\)</span>, with eigenvalues <span class="math notranslate nohighlight">\(o_k\)</span>. Let the system be in state <span class="math notranslate nohighlight">\(| \Psi \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle\)</span>. Then the action of the one-body operator on the state of the system reads</p>
-<div class="math notranslate nohighlight">
-\[\hat{O}_1 | \Psi \rangle = \sum_{k=1}^{N} \hat{o}^{(k)} | \Psi \rangle = \sum_{k=1}^N o_{i_k} | \Psi \rangle \ ,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-qft-operator-one-body-first-quantization-eig">
+<span class="eqno">(22.8)<a class="headerlink" href="#equation-eq-qft-operator-one-body-first-quantization-eig" title="Permalink to this equation">#</a></span>\[\hat{O}_1 | \Psi \rangle = \sum_{k=1}^{N} \hat{o}^{(k)} | \Psi \rangle = \sum_{k=1}^N o_{i_k} | \Psi \rangle \ ,\]</div>
 <p>i.e. the state <span class="math notranslate nohighlight">\(| \psi_{i_1}, \psi_{i_2}, \dots \rangle\)</span> is an eigenstate of the one-body operator <span class="math notranslate nohighlight">\(\hat{O}_1\)</span>, with eigenvalue <span class="math notranslate nohighlight">\(\sum_{k=1}^{N} o_{i_k}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -576,7 +588,7 @@ If the state of the system <span class="math notranslate nohighlight">\(| \psi_1
 </div>
 </details><p><strong>Second quantization.</strong></p>
 <div class="math notranslate nohighlight" id="equation-eq-qft-operator-one-body-second-quantization">
-<span class="eqno">(22.8)<a class="headerlink" href="#equation-eq-qft-operator-one-body-second-quantization" title="Permalink to this equation">#</a></span>\[\begin{aligned}
+<span class="eqno">(22.9)<a class="headerlink" href="#equation-eq-qft-operator-one-body-second-quantization" title="Permalink to this equation">#</a></span>\[\begin{aligned}
   \hat{O}_1
   &amp; = \sum_{\alpha, \beta} o_{\alpha \beta} \hat{a}_{\alpha}^\dagger \hat{a}_\beta \ , 
 \end{aligned}\]</div>
@@ -593,7 +605,7 @@ If the state of the system <span class="math notranslate nohighlight">\(| \psi_1
 \end{aligned}\]</div>
 <p>If the system is in an eigenstate of the operator <span class="math notranslate nohighlight">\(\hat{O}\)</span>, represented by only one vector <span class="math notranslate nohighlight">\(| \Psi \rangle = | \mathbf{n} \rangle = | n_{1}, n_{2}, \dots \rangle\)</span>, then</p>
 <div class="math notranslate nohighlight" id="equation-eq-qft-operator-one-body-second-quantization-eig">
-<span class="eqno">(22.9)<a class="headerlink" href="#equation-eq-qft-operator-one-body-second-quantization-eig" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(22.10)<a class="headerlink" href="#equation-eq-qft-operator-one-body-second-quantization-eig" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   \hat{O}_1 | \mathbf{n} \rangle 
   &amp; = \left( \sum_{\alpha} o_{\alpha} \hat{n}_{\alpha} \right) | \mathbf{n} \rangle = \\
   &amp; = \left( \sum_{\alpha} o_{\alpha} \hat{n}_{\alpha} \right) | \dots n_\alpha \dots \rangle = \\
@@ -601,6 +613,54 @@ If the state of the system <span class="math notranslate nohighlight">\(| \psi_1
   &amp; = \underbrace{\left( \sum_{\alpha} {n}_{\alpha} o_{\alpha} \right)}_{=:o_{\mathbf{n}}} | \mathbf{n} \rangle \ ,
 \end{aligned}\end{split}\]</div>
 <p>i.e. the state <span class="math notranslate nohighlight">\(| \mathbf{n} \rangle\)</span> of the occupation numbers of the eigenstates of <span class="math notranslate nohighlight">\(\hat{o}\)</span> is an eigenvector of the operator <span class="math notranslate nohighlight">\(\hat{O}\)</span> with eigenvalue <span class="math notranslate nohighlight">\(o_{\mathbf{n}} := \sum_{\alpha} o_{\alpha} n_{\alpha}\)</span>.</p>
+<div class="admonition-operators-in-first-and-second-quantization admonition">
+<p class="admonition-title">Operators in first and second quantization</p>
+<p>The action of the operator <span class="math notranslate nohighlight">\(\hat{O}_1\)</span> can be expressed using second quantization formalism with <a class="reference internal" href="#equation-eq-qft-operator-one-body-second-quantization-eig">(22.10)</a> or using the analogous first quantization formalism with <a class="reference internal" href="#equation-eq-qft-operator-one-body-first-quantization-eig">(22.8)</a>: while summation in second quantization runs over the eigenstates, the summation runs over “particles” in first quantization. These two different points of view provide the same result, with the eigenvalue of the eigenstate <span class="math notranslate nohighlight">\(| \mathbf{n} \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle\)</span> (with <span class="math notranslate nohighlight">\(n_1\)</span> of the <span class="math notranslate nohighlight">\(\psi_{i_k}\)</span> in eigenstate <span class="math notranslate nohighlight">\(\psi_{1}\)</span>,…) equal to</p>
+<div class="math notranslate nohighlight">
+\[o_{\mathbf{n}} = \sum_{\alpha} n_a o_a = \sum_{k} o_{i_k} \ .\]</div>
+<p>This analogy also provides a justification for the expressions <a class="reference internal" href="#equation-eq-qft-operator-one-body-first-quantization">(22.7)</a> and <a class="reference internal" href="#equation-eq-qft-operator-one-body-second-quantization">(22.9)</a> of the one-body operator <span class="math notranslate nohighlight">\(\hat{O}_1\)</span>.</p>
+</div>
+<div class="section" id="space-representation">
+<h3><span class="section-number">22.6.1.1. </span>Space representation<a class="headerlink" href="#space-representation" title="Permalink to this heading">#</a></h3>
+<p>Using the relations <a class="reference internal" href="quantum-fields.html#equation-eq-qft-fields-creation-inverse">(22.3)</a> and <a class="reference internal" href="quantum-fields.html#equation-eq-qft-fields-annihilation-inverse">(22.4)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \hat{a}^\dagger_{a} 
+  &amp; = \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \hat{a}_{a} 
+  &amp; = \int_{\mathbf{r}} \psi_a^*(\mathbf{r}) \Psi(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\]</div>
+<p>it’s possible to find another equivalent expression of the expression <a class="reference internal" href="#equation-eq-qft-operator-one-body-second-quantization">(22.9)</a> of the <span class="math notranslate nohighlight">\(\hat{O}_1\)</span> operator,</p>
+<p><strong>todo</strong> <em>Review these steps. There’s too much free-style in swapping operators…</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat{O}_1
+&amp; = \sum_{\alpha, \beta} o_{\alpha \beta} \hat{a}_{\alpha}^{\dagger} \hat{a}_{\beta} = \\
+&amp; = \sum_{\alpha, \beta} o_{\alpha \beta} \left( \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \right) \left( \int_{\mathbf{r}'} \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r}' \right) = \\
+&amp; = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'} o_{\alpha \beta}  \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r})  \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+&amp; = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'}  \psi_a(\mathbf{r}) o_{\alpha \beta} \psi_\beta^*(\mathbf{r}')  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = &amp;&amp; (1) \\
+&amp; = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \psi_a \rangle \langle \psi_a | \hat{o} | \psi_\beta \rangle \langle \psi_\beta | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+&amp; = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \hat{o} | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = &amp;&amp; (2) \\
+&amp; = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  o_{\mathbf{r}; \partial_{\mathbf{r}}}  \underbrace{\langle \mathbf{r} | \mathbf{r}' \rangle}_{\delta(\mathbf{r}-\mathbf{r}')}  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+&amp; = \int_{\mathbf{r}} \sum_{\alpha, \beta}  \Psi^\dagger(\mathbf{r}) o_{\mathbf{r}; \partial_{\mathbf{r}}}  \Psi(\mathbf{r}') \, d \mathbf{r} \ ,
+\end{aligned}\end{split}\]</div>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 22.3 </span> (Kinetic energy)</p>
+<div class="example-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \hat{T}
+ &amp; = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \langle \mathbf{r} | \hat{t} \hat{\Psi}(\mathbf{r}) = \\
+ &amp; = \dots = \\
+ &amp; = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \left( - \frac{\hbar^2}{2m} \nabla^2 \right) \hat{\Psi}(\mathbf{r}) = \\
+ &amp; = \int_{\mathbf{r}} \frac{\hbar^2}{2m} \nabla \hat{\Psi}^\dagger(\mathbf{r}) \cdot \nabla \hat{\Psi}(\mathbf{r}) \ ,
+\end{aligned}\end{split}\]</div>
+<p>with integration by parts and vanishing operators for <span class="math notranslate nohighlight">\(|\mathbf{r}| \rightarrow + \infty\)</span>.</p>
+</div>
+</div></div>
 </div>
 <div class="section" id="two-body-operators">
 <span id="quantum-mechanics-second-quantizazion-operators-two-body"></span><h2><span class="section-number">22.6.2. </span>Two-body operators<a class="headerlink" href="#two-body-operators" title="Permalink to this heading">#</a></h2>
@@ -670,7 +730,10 @@ If the state of the system <span class="math notranslate nohighlight">\(| \psi_1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-body-operators">22.6.1. One-body operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-body-operators">22.6.1. One-body operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#space-representation">22.6.1.1. Space representation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-body-operators">22.6.2. Two-body operators</a></li>
 </ul>
   </nav></div>

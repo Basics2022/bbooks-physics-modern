@@ -23,7 +23,7 @@ $$\hat{O}_1 = \sum_{i=1}^{N} \hat{o}(q^i, p_i) \ .$$ (eq:qft:operator:one-body:f
 
 Let the state of the system $| \Psi \rangle$ be represented in the basis $\{ | \psi_{i_1}, \psi_{i_2}, \dots \rangle \}$, with the vectors $|\psi_i \rangle$ being the eigenvectors of the operator $\hat{o}$, with eigenvalues $o_k$. Let the system be in state $| \Psi \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle$. Then the action of the one-body operator on the state of the system reads
 
-$$\hat{O}_1 | \Psi \rangle = \sum_{k=1}^{N} \hat{o}^{(k)} | \Psi \rangle = \sum_{k=1}^N o_{i_k} | \Psi \rangle \ ,$$
+$$\hat{O}_1 | \Psi \rangle = \sum_{k=1}^{N} \hat{o}^{(k)} | \Psi \rangle = \sum_{k=1}^N o_{i_k} | \Psi \rangle \ ,$$ (eq:qft:operator:one-body:first-quantization:eig)
 
 i.e. the state $| \psi_{i_1}, \psi_{i_2}, \dots \rangle$ is an eigenstate of the one-body operator $\hat{O}_1$, with eigenvalue $\sum_{k=1}^{N} o_{i_k}$.
 
@@ -104,6 +104,60 @@ $$\begin{aligned}
 
 i.e. the state $| \mathbf{n} \rangle$ of the occupation numbers of the eigenstates of $\hat{o}$ is an eigenvector of the operator $\hat{O}$ with eigenvalue $o_{\mathbf{n}} := \sum_{\alpha} o_{\alpha} n_{\alpha}$.
 
+```{admonition} Operators in first and second quantization
+
+The action of the operator $\hat{O}_1$ can be expressed using second quantization formalism with {eq}`eq:qft:operator:one-body:second-quantization:eig` or using the analogous first quantization formalism with {eq}`eq:qft:operator:one-body:first-quantization:eig`: while summation in second quantization runs over the eigenstates, the summation runs over "particles" in first quantization. These two different points of view provide the same result, with the eigenvalue of the eigenstate $| \mathbf{n} \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle$ (with $n_1$ of the $\psi_{i_k}$ in eigenstate $\psi_{1}$,...) equal to 
+
+$$o_{\mathbf{n}} = \sum_{\alpha} n_a o_a = \sum_{k} o_{i_k} \ .$$
+
+This analogy also provides a justification for the expressions {eq}`eq:qft:operator:one-body:first-quantization` and {eq}`eq:qft:operator:one-body:second-quantization` of the one-body operator $\hat{O}_1$.
+
+```
+
+### Space representation
+
+Using the relations {eq}`eq:qft:fields:creation:inverse` and {eq}`eq:qft:fields:annihilation:inverse`,
+
+$$\begin{aligned}
+  \hat{a}^\dagger_{a} 
+  & = \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+  \hat{a}_{a} 
+  & = \int_{\mathbf{r}} \psi_a^*(\mathbf{r}) \Psi(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}$$
+
+it's possible to find another equivalent expression of the expression {eq}`eq:qft:operator:one-body:second-quantization` of the $\hat{O}_1$ operator,
+
+**todo** *Review these steps. There's too much free-style in swapping operators...*
+
+$$\begin{aligned}
+\hat{O}_1
+& = \sum_{\alpha, \beta} o_{\alpha \beta} \hat{a}_{\alpha}^{\dagger} \hat{a}_{\beta} = \\
+& = \sum_{\alpha, \beta} o_{\alpha \beta} \left( \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \right) \left( \int_{\mathbf{r}'} \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r}' \right) = \\
+& = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'} o_{\alpha \beta}  \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r})  \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'}  \psi_a(\mathbf{r}) o_{\alpha \beta} \psi_\beta^*(\mathbf{r}')  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = && (1) \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \psi_a \rangle \langle \psi_a | \hat{o} | \psi_\beta \rangle \langle \psi_\beta | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \hat{o} | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = && (2) \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  o_{\mathbf{r}; \partial_{\mathbf{r}}}  \underbrace{\langle \mathbf{r} | \mathbf{r}' \rangle}_{\delta(\mathbf{r}-\mathbf{r}')}  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \int_{\mathbf{r}} \sum_{\alpha, \beta}  \Psi^\dagger(\mathbf{r}) o_{\mathbf{r}; \partial_{\mathbf{r}}}  \Psi(\mathbf{r}') \, d \mathbf{r} \ ,
+\end{aligned}$$
+
+```{prf:example} Kinetic energy
+
+$$\begin{aligned}
+ \hat{T}
+ & = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \langle \mathbf{r} | \hat{t} \hat{\Psi}(\mathbf{r}) = \\
+ & = \dots = \\
+ & = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \left( - \frac{\hbar^2}{2m} \nabla^2 \right) \hat{\Psi}(\mathbf{r}) = \\
+ & = \int_{\mathbf{r}} \frac{\hbar^2}{2m} \nabla \hat{\Psi}^\dagger(\mathbf{r}) \cdot \nabla \hat{\Psi}(\mathbf{r}) \ ,
+\end{aligned}$$
+
+with integration by parts and vanishing operators for $|\mathbf{r}| \rightarrow + \infty$.
+
+
+```
 
 
 
