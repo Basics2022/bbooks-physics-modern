@@ -68,6 +68,60 @@ $$\begin{aligned}
 
 ### Elementary solutions of Dirac equation for a free particle
 
+#### Dimensional Reduction to 1D and Component Decoupling
+
+To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$).
+
+Expanding the matrix equation for a four-component spinor $\Psi = \begin{pmatrix} \psi_1 & \psi_2 & \psi_3 & \psi_4 \end{pmatrix}^T$, the system splits naturally into **two independent pairs of coupled equations**:
+1. A coupling between **$\psi_1$ and $\psi_4$**
+2. A coupling between **$\psi_2$ and $\psi_3$**
+
+For the first pair ($\psi_1$ and $\psi_4$), the system reads:
+
+$$\begin{cases}
+\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 - i\hbar \partial_x \psi_4 = 0 \\[6pt]
+-i\hbar \partial_x \psi_1 + \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
+\end{cases}$$
+
+**Reduction to Klein-Gordon Equation for individual components.**
+By isolating $\partial_x \psi_4$ from the first equation and substituting it into the second, the mixed temporal-spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation:
+
+$$\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ ,$$
+
+where $\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2$ is the d'Alembertian operator.
+
+#### Plane Wave Solutions and Component Relations
+
+Assuming a plane wave ansatz for the components of the form $\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}$, we can convert the differential coupling into an algebraic relation between the "large" and "small" components.
+
+From the first equation:
+
+$$i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1$$
+
+Evaluating the temporal derivative on the plane wave yields:
+
+$$\left( \frac{i\hbar}{c} \left( -\frac{i E}{\hbar} \right) - mc \right) \psi_1 = \left( \frac{E}{c} - mc \right) \psi_1 = \frac{E - mc^2}{c} \psi_1$$
+
+Accounting for the spatial derivative operator $\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4$, we obtain the direct algebraic ratio between $\psi_4$ and $\psi_1$:
+
+$$\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1$$
+
+An identical decoupling procedure applies symmetrically to the second pair ($\psi_2$ and $\psi_3$).
+
+```{dropdown} Physical Insights and Interpretation
+:open:
+
+1. **Large vs. Small Components:**
+   * The upper pair $(\psi_1, \psi_2)$ represents the **large components**, which in the non-relativistic limit ($v \ll c$) reduce to the standard two-component Pauli spinor describing spin.
+   * The lower pair $(\psi_3, \psi_4)$ represents the **small components**, suppressed by a factor of $v/c$, which carry the relativistic corrections responsible for spin-orbit coupling and magnetic moments.
+
+2. **Emergence of Spin:**
+   Unlike non-relativistic quantum mechanics where spin is added ad-hoc via Pauli matrices, spin emerges naturally in the Dirac equation as a direct consequence of the linearization required for Lorentz covariance, combining with orbital angular momentum into a conserved total angular momentum $\mathbf{J} = \mathbf{L} + \mathbf{S}$.
+
+3. **Antimatter and Negative Energies:**
+   The dispersion relation permits both positive ($E = +\sqrt{c^2p^2 + m^2c^4}$) and negative ($E = -\sqrt{...}$) energy solutions. In modern quantum field theory, these negative energy states are reinterpreted through second quantization as antiparticles (such as the positron), resolving historical vacuum stability issues.
+
+```
 
 ## Dirac equation for a particle in the EM field
 
