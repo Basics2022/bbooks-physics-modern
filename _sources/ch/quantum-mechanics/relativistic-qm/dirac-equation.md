@@ -68,71 +68,48 @@ $$\begin{aligned}
 
 ### Elementary solutions of Dirac equation for a free particle
 
-# The Dirac Equation: Formulation, 1D Reduction, and Physical Insights
+#### Dimensional Reduction to 1D and Component Decoupling
 
-## 1. Introduction and Covariant Formulation
+To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$).
 
-The Dirac equation was formulated to reconcile quantum mechanics with special relativity while maintaining a linear dependence on the time derivative (unlike the Klein-Gordon equation, which is second-order in time and leads to indefinite probability densities).
+Expanding the matrix equation for a four-component spinor $\Psi = \begin{pmatrix} \psi_1 & \psi_2 & \psi_3 & \psi_4 \end{pmatrix}^T$, the system splits naturally into **two independent pairs of coupled equations**:
+1. A coupling between **$\psi_1$ and $\psi_4$**
+2. A coupling between **$\psi_2$ and $\psi_3$**
 
-The equation starts from the Hamiltonian operator as a linear combination of the momentum components and the rest mass term[cite: 1]:
-
-$$\hat{H} = \alpha_0 m c + \sum_{k=1}^{3} \alpha_k \hat{p}_k$$
-
-In its covariant form, the Dirac equation for a free particle is expressed as[cite: 1]:
-
-$$(i\hbar \gamma^\mu \partial_\mu - mc) \Psi = 0$$
-
-where $\Psi$ is a four-component column vector known as a **Dirac spinor**, and $\gamma^\mu$ are the gamma matrices defined via $\gamma^0 = \beta$ and $\gamma^k = \beta \alpha_k$[cite: 1]. In the standard Dirac representation, these are given by[cite: 1]:
-
-$$\gamma^0 = \begin{bmatrix} I_2 & 0 \\ 0 & -I_2 \end{bmatrix}, \quad \gamma^k = \begin{bmatrix} 0 & \sigma_k \\ -\sigma_k & 0 \end{bmatrix}$$
-
-with $\sigma_k$ representing the standard Pauli matrices[cite: 1].
-
----
-
-## 2. Dimensional Reduction to 1D and Component Decoupling
-
-To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$)[cite: 2, 3].
-
-Expanding the matrix equation for a four-component spinor $\Psi = \begin{pmatrix} \psi_1 & \psi_2 & \psi_3 & \psi_4 \end{pmatrix}^T$, the system splits naturally into **two independent pairs of coupled equations**[cite: 2, 3]:
-1. A coupling between **$\psi_1$ and $\psi_4$**[cite: 2, 3].
-2. A coupling between **$\psi_2$ and $\psi_3$**[cite: 2, 3].
-
-For the first pair ($\psi_1$ and $\psi_4$), the system reads[cite: 2, 3]:
+For the first pair ($\psi_1$ and $\psi_4$), the system reads:
 
 $$\begin{cases}
 \frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 - i\hbar \partial_x \psi_4 = 0 \\[6pt]
 -i\hbar \partial_x \psi_1 + \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
 \end{cases}$$
 
-### Reduction to Klein-Gordon Form
-By isolating $\partial_x \psi_4$ from the first equation and substituting it into the second, the mixed temporal-spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation[cite: 2, 3]:
+**Reduction to Klein-Gordon Equation for individual components.**
+By isolating $\partial_x \psi_4$ from the first equation and substituting it into the second, the mixed temporal-spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation:
 
-$$\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0$$
+$$\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ ,$$
 
-where $\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2$ is the d'Alembertian operator[cite: 2, 3].
+where $\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2$ is the d'Alembertian operator.
 
----
+#### Plane Wave Solutions and Component Relations
 
-## 3. Plane Wave Solutions and Component Relations
+Assuming a plane wave ansatz for the components of the form $\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}$, we can convert the differential coupling into an algebraic relation between the "large" and "small" components.
 
-Assuming a plane wave ansatz for the components of the form $\psi_1 = K e^{-\frac{i}{\hbar}(Et - p_x x)}$[cite: 4], we can convert the differential coupling into an algebraic relation between the "large" and "small" components[cite: 4].
+From the first equation:
 
-From the first equation[cite: 2, 3, 4]:
 $$i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1$$
 
-Evaluating the temporal derivative on the plane wave yields[cite: 4]:
+Evaluating the temporal derivative on the plane wave yields:
+
 $$\left( \frac{i\hbar}{c} \left( -\frac{i E}{\hbar} \right) - mc \right) \psi_1 = \left( \frac{E}{c} - mc \right) \psi_1 = \frac{E - mc^2}{c} \psi_1$$
 
-Accounting for the spatial derivative operator $\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4$, we obtain the direct algebraic ratio between $\psi_4$ and $\psi_1$[cite: 4]:
+Accounting for the spatial derivative operator $\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4$, we obtain the direct algebraic ratio between $\psi_4$ and $\psi_1$:
 
 $$\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1$$
 
-An identical decoupling procedure applies symmetrically to the second pair ($\psi_2$ and $\psi_3$)[cite: 2, 3].
+An identical decoupling procedure applies symmetrically to the second pair ($\psi_2$ and $\psi_3$).
 
----
-
-## 4. Physical Insights and Interpretation
+```{dropdown} Physical Insights and Interpretation
+:open:
 
 1. **Large vs. Small Components:**
    * The upper pair $(\psi_1, \psi_2)$ represents the **large components**, which in the non-relativistic limit ($v \ll c$) reduce to the standard two-component Pauli spinor describing spin.
@@ -143,6 +120,8 @@ An identical decoupling procedure applies symmetrically to the second pair ($\ps
 
 3. **Antimatter and Negative Energies:**
    The dispersion relation permits both positive ($E = +\sqrt{c^2p^2 + m^2c^4}$) and negative ($E = -\sqrt{...}$) energy solutions. In modern quantum field theory, these negative energy states are reinterpreted through second quantization as antiparticles (such as the positron), resolving historical vacuum stability issues.
+
+```
 
 ## Dirac equation for a particle in the EM field
 
