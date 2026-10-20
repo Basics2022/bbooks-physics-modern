@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -263,6 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../relativistic-qm.html">22. Relativistic Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">22.1. Dirac equation</a></li>
+
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../many-body/many-body-quantum-mechanics.html">23. Many-body systems</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -510,13 +502,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">22.1. Dirac equation</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-gordon-equation-for-a-free-particle">22.1.1. Klein-Gordon equation for a free particle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-solutions-of-dirac-equation-for-a-free-particle">22.1.2.1. Elementary solutions of Dirac equation for a free particle</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.1.3. Dirac equation for a particle in the EM field</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation-formulation-1d-reduction-and-physical-insights">22.2. The Dirac Equation: Formulation, 1D Reduction, and Physical Insights</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-and-covariant-formulation">22.2.1. 1. Introduction and Covariant Formulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensional-reduction-to-1d-and-component-decoupling">22.2.2. 2. Dimensional Reduction to 1D and Component Decoupling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-to-klein-gordon-form">22.2.2.1. Reduction to Klein-Gordon Form</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plane-wave-solutions-and-component-relations">22.2.3. 3. Plane Wave Solutions and Component Relations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-insights-and-interpretation">22.2.4. 4. Physical Insights and Interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.2.5. Dirac equation for a particle in the EM field</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -589,8 +595,77 @@ Details of the solution<div class="sd-summary-down docutils">
 <h3><span class="section-number">22.1.2.1. </span>Elementary solutions of Dirac equation for a free particle<a class="headerlink" href="#elementary-solutions-of-dirac-equation-for-a-free-particle" title="Permalink to this heading">#</a></h3>
 </div>
 </div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="the-dirac-equation-formulation-1d-reduction-and-physical-insights">
+<h1><span class="section-number">22.2. </span>The Dirac Equation: Formulation, 1D Reduction, and Physical Insights<a class="headerlink" href="#the-dirac-equation-formulation-1d-reduction-and-physical-insights" title="Permalink to this heading">#</a></h1>
+<div class="section" id="introduction-and-covariant-formulation">
+<h2><span class="section-number">22.2.1. </span>1. Introduction and Covariant Formulation<a class="headerlink" href="#introduction-and-covariant-formulation" title="Permalink to this heading">#</a></h2>
+<p>The Dirac equation was formulated to reconcile quantum mechanics with special relativity while maintaining a linear dependence on the time derivative (unlike the Klein-Gordon equation, which is second-order in time and leads to indefinite probability densities).</p>
+<p>The equation starts from the Hamiltonian operator as a linear combination of the momentum components and the rest mass term[cite: 1]:</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \alpha_0 m c + \sum_{k=1}^{3} \alpha_k \hat{p}_k\]</div>
+<p>In its covariant form, the Dirac equation for a free particle is expressed as[cite: 1]:</p>
+<div class="math notranslate nohighlight">
+\[(i\hbar \gamma^\mu \partial_\mu - mc) \Psi = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Psi\)</span> is a four-component column vector known as a <strong>Dirac spinor</strong>, and <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> are the gamma matrices defined via <span class="math notranslate nohighlight">\(\gamma^0 = \beta\)</span> and <span class="math notranslate nohighlight">\(\gamma^k = \beta \alpha_k\)</span>[cite: 1]. In the standard Dirac representation, these are given by[cite: 1]:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\gamma^0 = \begin{bmatrix} I_2 &amp; 0 \\ 0 &amp; -I_2 \end{bmatrix}, \quad \gamma^k = \begin{bmatrix} 0 &amp; \sigma_k \\ -\sigma_k &amp; 0 \end{bmatrix}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\sigma_k\)</span> representing the standard Pauli matrices[cite: 1].</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dimensional-reduction-to-1d-and-component-decoupling">
+<h2><span class="section-number">22.2.2. </span>2. Dimensional Reduction to 1D and Component Decoupling<a class="headerlink" href="#dimensional-reduction-to-1d-and-component-decoupling" title="Permalink to this heading">#</a></h2>
+<p>To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes, setting spatial derivatives to zero (<span class="math notranslate nohighlight">\(\partial_y = \partial_z = 0\)</span>)[cite: 2, 3].</p>
+<p>Expanding the matrix equation for a four-component spinor <span class="math notranslate nohighlight">\(\Psi = \begin{pmatrix} \psi_1 &amp; \psi_2 &amp; \psi_3 &amp; \psi_4 \end{pmatrix}^T\)</span>, the system splits naturally into <strong>two independent pairs of coupled equations</strong>[cite: 2, 3]:</p>
+<ol class="arabic simple">
+<li><p>A coupling between <strong><span class="math notranslate nohighlight">\(\psi_1\)</span> and <span class="math notranslate nohighlight">\(\psi_4\)</span></strong>[cite: 2, 3].</p></li>
+<li><p>A coupling between <strong><span class="math notranslate nohighlight">\(\psi_2\)</span> and <span class="math notranslate nohighlight">\(\psi_3\)</span></strong>[cite: 2, 3].</p></li>
+</ol>
+<p>For the first pair (<span class="math notranslate nohighlight">\(\psi_1\)</span> and <span class="math notranslate nohighlight">\(\psi_4\)</span>), the system reads[cite: 2, 3]:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 - i\hbar \partial_x \psi_4 = 0 \\[6pt]
+-i\hbar \partial_x \psi_1 + \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
+\end{cases}\end{split}\]</div>
+<div class="section" id="reduction-to-klein-gordon-form">
+<h3><span class="section-number">22.2.2.1. </span>Reduction to Klein-Gordon Form<a class="headerlink" href="#reduction-to-klein-gordon-form" title="Permalink to this heading">#</a></h3>
+<p>By isolating <span class="math notranslate nohighlight">\(\partial_x \psi_4\)</span> from the first equation and substituting it into the second, the mixed temporal-spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation[cite: 2, 3]:</p>
+<div class="math notranslate nohighlight">
+\[\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2\)</span> is the d’Alembertian operator[cite: 2, 3].</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="plane-wave-solutions-and-component-relations">
+<h2><span class="section-number">22.2.3. </span>3. Plane Wave Solutions and Component Relations<a class="headerlink" href="#plane-wave-solutions-and-component-relations" title="Permalink to this heading">#</a></h2>
+<p>Assuming a plane wave ansatz for the components of the form <span class="math notranslate nohighlight">\(\psi_1 = K e^{-\frac{i}{\hbar}(Et - p_x x)}\)</span>[cite: 4], we can convert the differential coupling into an algebraic relation between the “large” and “small” components[cite: 4].</p>
+<p>From the first equation[cite: 2, 3, 4]:
+$<span class="math notranslate nohighlight">\(i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1\)</span>$</p>
+<p>Evaluating the temporal derivative on the plane wave yields[cite: 4]:
+$<span class="math notranslate nohighlight">\(\left( \frac{i\hbar}{c} \left( -\frac{i E}{\hbar} \right) - mc \right) \psi_1 = \left( \frac{E}{c} - mc \right) \psi_1 = \frac{E - mc^2}{c} \psi_1\)</span>$</p>
+<p>Accounting for the spatial derivative operator <span class="math notranslate nohighlight">\(\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4\)</span>, we obtain the direct algebraic ratio between <span class="math notranslate nohighlight">\(\psi_4\)</span> and <span class="math notranslate nohighlight">\(\psi_1\)</span>[cite: 4]:</p>
+<div class="math notranslate nohighlight">
+\[\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1\]</div>
+<p>An identical decoupling procedure applies symmetrically to the second pair (<span class="math notranslate nohighlight">\(\psi_2\)</span> and <span class="math notranslate nohighlight">\(\psi_3\)</span>)[cite: 2, 3].</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="physical-insights-and-interpretation">
+<h2><span class="section-number">22.2.4. </span>4. Physical Insights and Interpretation<a class="headerlink" href="#physical-insights-and-interpretation" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Large vs. Small Components:</strong></p>
+<ul class="simple">
+<li><p>The upper pair <span class="math notranslate nohighlight">\((\psi_1, \psi_2)\)</span> represents the <strong>large components</strong>, which in the non-relativistic limit (<span class="math notranslate nohighlight">\(v \ll c\)</span>) reduce to the standard two-component Pauli spinor describing spin.</p></li>
+<li><p>The lower pair <span class="math notranslate nohighlight">\((\psi_3, \psi_4)\)</span> represents the <strong>small components</strong>, suppressed by a factor of <span class="math notranslate nohighlight">\(v/c\)</span>, which carry the relativistic corrections responsible for spin-orbit coupling and magnetic moments.</p></li>
+</ul>
+</li>
+<li><p><strong>Emergence of Spin:</strong>
+Unlike non-relativistic quantum mechanics where spin is added ad-hoc via Pauli matrices, spin emerges naturally in the Dirac equation as a direct consequence of the linearization required for Lorentz covariance, combining with orbital angular momentum into a conserved total angular momentum <span class="math notranslate nohighlight">\(\mathbf{J} = \mathbf{L} + \mathbf{S}\)</span>.</p></li>
+<li><p><strong>Antimatter and Negative Energies:</strong>
+The dispersion relation permits both positive (<span class="math notranslate nohighlight">\(E = +\sqrt{c^2p^2 + m^2c^4}\)</span>) and negative (<span class="math notranslate nohighlight">\(E = -\sqrt{...}\)</span>) energy solutions. In modern quantum field theory, these negative energy states are reinterpreted through second quantization as antiparticles (such as the positron), resolving historical vacuum stability issues.</p></li>
+</ol>
+</div>
 <div class="section" id="dirac-equation-for-a-particle-in-the-em-field">
-<h2><span class="section-number">22.1.3. </span>Dirac equation for a particle in the EM field<a class="headerlink" href="#dirac-equation-for-a-particle-in-the-em-field" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">22.2.5. </span>Dirac equation for a particle in the EM field<a class="headerlink" href="#dirac-equation-for-a-particle-in-the-em-field" title="Permalink to this heading">#</a></h2>
 <p>Following the <strong>minimal coupling</strong>, the momentum of a free particle is replaced by the momentum of a charged particle in a EM field,<a class="footnote-reference brackets" href="#sr-em" id="id1">1</a></p>
 <div class="math notranslate nohighlight">
 \[\mathbf{P} \rightarrow  \mathbf{P} + q \mathbf{A} \ ,\]</div>
@@ -703,13 +778,27 @@ Special Relativity and Invariance<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">22.1. Dirac equation</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-gordon-equation-for-a-free-particle">22.1.1. Klein-Gordon equation for a free particle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-solutions-of-dirac-equation-for-a-free-particle">22.1.2.1. Elementary solutions of Dirac equation for a free particle</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.1.3. Dirac equation for a particle in the EM field</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation-formulation-1d-reduction-and-physical-insights">22.2. The Dirac Equation: Formulation, 1D Reduction, and Physical Insights</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-and-covariant-formulation">22.2.1. 1. Introduction and Covariant Formulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensional-reduction-to-1d-and-component-decoupling">22.2.2. 2. Dimensional Reduction to 1D and Component Decoupling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-to-klein-gordon-form">22.2.2.1. Reduction to Klein-Gordon Form</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plane-wave-solutions-and-component-relations">22.2.3. 3. Plane Wave Solutions and Component Relations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-insights-and-interpretation">22.2.4. 4. Physical Insights and Interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.2.5. Dirac equation for a particle in the EM field</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
