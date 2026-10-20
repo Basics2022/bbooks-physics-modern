@@ -511,7 +511,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-gordon-equation-for-a-free-particle">22.1.1. Klein-Gordon equation for a free particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-solutions-of-dirac-equation-for-a-free-particle">22.1.2.1. Elementary solutions of Dirac equation for a free particle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.1.3. Dirac equation for a particle in the EM field</a></li>
 </ul>
             </nav>
         </div>
@@ -552,28 +556,87 @@ Details of the solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>todo</strong>…</p>
 </div>
-</details><p>Dirac’s equation is found to be</p>
+</details><p>The Hamiltonian operator becomes</p>
 <div class="math notranslate nohighlight">
-\[i \hbar \partial_t \Psi(\mathbf{r},t) = - i \hbar c \boldsymbol\alpha \cdot \nabla \Psi(\mathbf{r},t) + m c^2 \beta \Psi(\mathbf{r},t) \ ,\]</div>
-<p>using the set of matrices <span class="math notranslate nohighlight">\(\beta = \gamma^0\)</span>, <span class="math notranslate nohighlight">\(\gamma^k = \beta \alpha_k\)</span></p>
+\[\hat{H} = m c^2 \beta + c \boldsymbol\alpha \cdot \hat{\mathbf{p}} = m c^2 \beta - i \hbar c \boldsymbol\alpha \cdot \nabla \ , \]</div>
+<p>so that the position representation of Dirac’s equation can be written using 3+1 formalism (space+time) as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i \hbar \partial_t \Psi(\mathbf{r},t) 
+  &amp; = \langle \mathbf{r} | \hat{H} | \Psi \rangle = \\
+  &amp; = - i \hbar c \boldsymbol\alpha \cdot \nabla \Psi(\mathbf{r},t) + m c^2 \beta \Psi(\mathbf{r},t) \ ,
+\end{aligned}\end{split}\]</div>
+<p>with the set of <span class="math notranslate nohighlight">\(4 \times 4\)</span> complex matrices <span class="math notranslate nohighlight">\(\beta = \gamma^0\)</span>, <span class="math notranslate nohighlight">\(\gamma^k = \beta \alpha_k\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
   \gamma^0 = \begin{bmatrix} I_2 &amp; \cdot \\ \cdot &amp; -I_2 \end{bmatrix}
   \quad , \quad
-  \gamma^k = \begin{bmatrix} \cdot &amp; \sigma_k \\ -\sigma_k &amp; \cdot \end{bmatrix} \ .
+  \gamma^k = \begin{bmatrix} \cdot &amp; \sigma_k \\ -\sigma_k &amp; \cdot \end{bmatrix} \ ,
 \end{split}\]</div>
-<p>Dirac’s equation can be recast, multipyling by <span class="math notranslate nohighlight">\(\beta\)</span>, as</p>
+<p>built with <span class="math notranslate nohighlight">\(2 \times 2\)</span> identity and <a class="reference internal" href="../angular-momentum/angular-momentum-spin.html#quantum-mechanics-angular-momentum-spin-pauli-matrices"><span class="std std-ref">Pauli matrices</span></a> <span class="math notranslate nohighlight">\(\sigma_k\)</span>. Dirac’s equation can be recast in the 4-dimensional formalism of special relativity, after multiplication by <span class="math notranslate nohighlight">\(\beta\)</span>, as</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \left( i \hbar \gamma^\mu \partial_\mu - m c \right) \Psi = 0 \ ,
+\end{aligned}\]</div>
+<p>since</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  0
  &amp; = i \hbar \left( \beta \partial_t + c \beta \boldsymbol\alpha \cdot \nabla \right) \Psi - m c^2 \Psi = \\
- &amp; = i \hbar \gamma^\mu \partial_\mu \Psi - m c^2 \Psi \ ,
+ &amp; = i \hbar c \gamma^\mu \partial_\mu \Psi - m c^2 \Psi \ .
 \end{aligned}\end{split}\]</div>
-<p>and thus</p>
+<div class="section" id="elementary-solutions-of-dirac-equation-for-a-free-particle">
+<h3><span class="section-number">22.1.2.1. </span>Elementary solutions of Dirac equation for a free particle<a class="headerlink" href="#elementary-solutions-of-dirac-equation-for-a-free-particle" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="dirac-equation-for-a-particle-in-the-em-field">
+<h2><span class="section-number">22.1.3. </span>Dirac equation for a particle in the EM field<a class="headerlink" href="#dirac-equation-for-a-particle-in-the-em-field" title="Permalink to this heading">#</a></h2>
+<p>Following the <strong>minimal coupling</strong>, the momentum of a free particle is replaced by the momentum of a charged particle in a EM field,<a class="footnote-reference brackets" href="#sr-em" id="id1">1</a></p>
 <div class="math notranslate nohighlight">
-\[\begin{aligned}
- \left( i \hbar \gamma^\mu \partial_\mu - m c^2 \right) \Psi = 0 \ .
-\end{aligned}\]</div>
+\[\mathbf{P} \rightarrow  \mathbf{P} + q \mathbf{A} \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{P} = m \mathbf{U} = \gamma m ( c, \mathbf{v} ) = \left( \frac{E}{c}, \mathbf{p} \right)\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{A} = \left( \frac{\varphi}{c}, \mathbf{a} \right)\)</span>, so that</p>
+<div class="math notranslate nohighlight">
+\[\left\{ \mathbf{P} + q \mathbf{A} \right\}^{\mu} = \left( \frac{E + q \varphi}{c}, \mathbf{p} + q \mathbf{a} \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\left\{ \mathbf{P} + q \mathbf{A} \right\}_{\mu} = \left( \frac{E + q \varphi}{c}, -\mathbf{p} - q \mathbf{a} \right)\]</div>
+<p>and the Hamiltonian in space representation becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{H} &amp; = m c^2 \beta - i \hbar c \boldsymbol\alpha \cdot \nabla \\
+\quad \rightarrow \quad \hat{H} &amp; = m c^2 \beta + q \varphi + c \boldsymbol\alpha \cdot \left( - i \hbar \nabla + q\mathbf{a} \right)
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = i \hbar \beta \partial_t \Psi - \beta \hat{H} \Psi = \\
+  &amp; = i \hbar \beta \partial_t \Psi - m c^2 - q \beta \varphi \Psi + i c \hbar \beta \alpha_k \partial_k \Psi - c q \beta \alpha_k a_k \Psi = \\
+  &amp; = i \hbar c \gamma^0 \frac{1}{c}\partial_t \Psi + i \hbar c \gamma^k \partial_k \Psi - m c^2 \Psi + q c \gamma^0 \frac{\varphi}{c} \Psi - q c \gamma^k a_k \Psi = \\
+\end{aligned}\end{split}\]</div>
+<p>and thus, after dividing by <span class="math notranslate nohighlight">\(c\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\left( i \hbar \gamma^\mu \left( \partial_{\mu} - q A_\mu \right) - m c^2 \right) \Psi = 0 \ .\]</div>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>check signs, when switching to 3+1 to 4 formalism</p></li>
+<li><p>motivation of the introduction of <span class="math notranslate nohighlight">\(\varphi\)</span> in the minimal coupling. Why is it without <span class="math notranslate nohighlight">\(\beta\)</span>? Does it go with <span class="math notranslate nohighlight">\(E\)</span>, from the transformation <span class="math notranslate nohighlight">\(\frac{E}{c} \rightarrow \frac{E + q \varphi}{c}\)</span>?</p></li>
+<li><p>Invariance in special relativity</p></li>
+<li><p>Limit cases</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Special Relativity and Invariance<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong>…</p>
+</div>
+</details><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="sr-em"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/examples.html#lagrange-equations-in-special-relativity">Math: Calculus of Variations: Examples: Lagrange Equations in Special Relativity Using Tensor Formalism</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -641,7 +704,11 @@ Details of the solution<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-gordon-equation-for-a-free-particle">22.1.1. Klein-Gordon equation for a free particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-free-particle">22.1.2. Dirac equation for a free particle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-solutions-of-dirac-equation-for-a-free-particle">22.1.2.1. Elementary solutions of Dirac equation for a free particle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirac-equation-for-a-particle-in-the-em-field">22.1.3. Dirac equation for a particle in the EM field</a></li>
 </ul>
   </nav></div>
 
