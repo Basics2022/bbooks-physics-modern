@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Oct 15, 2026}
+\date{Oct 20, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Please check out the Github repo of the project, \sphinxhref{https://github.com/Basics2022}{basics\sphinxhyphen{}book project}.
@@ -222,7 +222,11 @@ Quantum Mechanics
 
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/quantum-mechanics/many-body/second-quantization::doc}]{\sphinxcrossref{Second Quantization}}}
+{\hyperref[\detokenize{ch/quantum-mechanics/relativistic-qm::doc}]{\sphinxcrossref{Relativistic Quantum Mechanics}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/many-body-quantum-mechanics::doc}]{\sphinxcrossref{Many\sphinxhyphen{}body systems}}}
 
 \item {} 
 \sphinxAtStartPar
@@ -3424,54 +3428,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : 48.0
-N. of spin up: 502
-Magnetization: \PYGZhy{}20
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{n+ne}{KeyboardInterrupt}\PYG{g+gWhitespace}{                         }Traceback (most recent call last)
-\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{18}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{15} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Magnetization: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{17} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Run Metropolis\PYGZhy{}Hastings algorithm}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{18} \PYG{n}{Es}\PYG{p}{,} \PYG{n}{Ms}\PYG{p}{,} \PYG{n}{states} \PYG{o}{=} \PYG{n}{isi}\PYG{o}{.}\PYG{n}{metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{p}{(}\PYG{n}{n\PYGZus{}steps}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}\PYG{p}{,} \PYG{n}{output\PYGZus{}states}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
-
-\PYG{n+nn}{Cell In[2], line 79,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{77} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update output arrays}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{78} \PYG{n}{Es} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n}{E} \PYG{p}{]}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{80} \PYG{k}{if} \PYG{n}{output\PYGZus{}states}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
-
-\PYG{n+nn}{Cell In[2], line 56,} in \PYG{n+ni}{IsingLattice.compute\PYGZus{}total\PYGZus{}magnetization}\PYG{n+nt}{(self)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{54} \PYG{k}{def} \PYG{n+nf}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{p}{)}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{55}\PYG{+w}{     }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}  \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{56}     \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZlt{}\PYGZus{}\PYGZus{}array\PYGZus{}function\PYGZus{}\PYGZus{} internals\PYGZgt{}:200,} in \PYG{n+ni}{sum}\PYG{n+nt}{(*args, **kwargs)}
-
-\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:2324,} in \PYG{n+ni}{sum}\PYG{n+nt}{(a, axis, dtype, out, keepdims, initial, where)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2321}         \PYG{k}{return} \PYG{n}{out}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2322}     \PYG{k}{return} \PYG{n}{res}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2324} \PYG{k}{return} \PYG{n}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{add}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sum}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{n}{keepdims}\PYG{o}{=}\PYG{n}{keepdims}\PYG{p}{,}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2325}                       \PYG{n}{initial}\PYG{o}{=}\PYG{n}{initial}\PYG{p}{,} \PYG{n}{where}\PYG{o}{=}\PYG{n}{where}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:70,} in \PYG{n+ni}{\PYGZus{}wrapreduction}\PYG{n+nt}{(obj, ufunc, method, axis, dtype, out, **kwargs)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{69} \PYG{k}{def} \PYG{n+nf}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{ufunc}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
-\PYG{n+nn}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} 70     passkwargs = \PYGZob{}k: v for k, v} in \PYG{n+ni}{kwargs.items}\PYG{n+nt}{()}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{71}                   \PYG{k}{if} \PYG{n}{v} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{np}\PYG{o}{.}\PYG{n}{\PYGZus{}NoValue}\PYG{p}{\PYGZcb{}}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{73}     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{mu}\PYG{o}{.}\PYG{n}{ndarray}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{74}         \PYG{k}{try}\PYG{p}{:}
-
-\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:70,} in \PYG{n+ni}{\PYGZlt{}dictcomp\PYGZgt{}}\PYG{n+nt}{(.0)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{69} \PYG{k}{def} \PYG{n+nf}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{ufunc}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
-\PYG{n+nn}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} 70     passkwargs = \PYGZob{}k: v for k, v} in \PYG{n+ni}{kwargs.items}\PYG{n+nt}{()}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{71}                   \PYG{k}{if} \PYG{n}{v} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{np}\PYG{o}{.}\PYG{n}{\PYGZus{}NoValue}\PYG{p}{\PYGZcb{}}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{73}     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{)} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{mu}\PYG{o}{.}\PYG{n}{ndarray}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{74}         \PYG{k}{try}\PYG{p}{:}
-
-\PYG{n+ne}{KeyboardInterrupt}: 
+Energy       : 16.0
+N. of spin up: 514
+Magnetization: 4
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3529,9 +3488,9 @@ Magnetization: \PYGZhy{}20
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b}.png}
+\noindent\sphinxincludegraphics{{92904c678ff6e6121a3f87b93f6d396536f49806395ab306ee27267753377b0f}.png}
 
-\noindent\sphinxincludegraphics{{62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002}.png}
+\noindent\sphinxincludegraphics{{46a85a43c49b227b2abf73fad6154cb292448c7ddbd71550f6cbc0840fcd3d97}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3595,9 +3554,9 @@ Magnetization: \PYGZhy{}20
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a}.png}
+\noindent\sphinxincludegraphics{{eea9f06751579254d0eeccf6e46166ab949eea93242215f2bd0ca9075a4dcedb}.png}
 
-\noindent\sphinxincludegraphics{{4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83}.png}
+\noindent\sphinxincludegraphics{{6dfd74e1ede8258c7ca2cf6fb77c4324359a9b50912a1cf8c4a86b8da79b9934}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5196,10 +5155,24 @@ Now, for \(\ell_{z,min} = -m_{l,max} \hbar\), and \(\ell_{z,max} = m_{l,max} \hb
 
 
 \section{Spin}
-\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin::doc}}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Properties of spin angular momentum operators
 
-\subsection{Properties}
-\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:properties}}
+\item {} 
+\sphinxAtStartPar
+Pauli matrices
+
+\item {} 
+\sphinxAtStartPar
+Pauli equation
+
+\end{itemize}
+
+
+\subsection{Properties of spin angular momentum operators \protect\(\hat{S}^2\protect\), \protect\(\hat{S}_z\protect\)}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:properties-of-spin-angular-momentum-operators-hat-s-2-hat-s-z}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin-operator}}
 \sphinxAtStartPar
 In analogy with the spatial angular momentum, and using Cartesian coordinates
 \begin{equation*}
@@ -5219,6 +5192,38 @@ As the operators \(S_z\) and \(S^2\) commute, they share the same eigenvectors \
 \sphinxAtStartPar
 The value of \(s\) depends on the system of interest: for an electron \(s = \frac{1}{2}\). The value of the spin projection quantum number \(m_s\) belongs to \(m_s \in \{ -s, -s+1, \dots, s-1, s \}\). For an electron, \(m_s \in \left\{ - \frac{1}{2}, \frac{1}{2} \right\}\).
 
+
+\subsection{Pauli matrices}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:pauli-matrices}}\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin-pauli-matrices}}\begin{equation*}
+\begin{split}\begin{aligned}
+ \sigma_x & = \begin{bmatrix} 0 &  1 \\ 1 &  0 \end{bmatrix} \\
+ \sigma_y & = \begin{bmatrix} 0 & -i \\ i &  0 \end{bmatrix} \\
+ \sigma_z & = \begin{bmatrix} 1 &  0 \\ 0 & -1 \end{bmatrix} \\
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Properties}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:properties}}
+
+\subsubsection{Pauli vectors}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:pauli-vectors}}
+\sphinxAtStartPar
+Using a Cartesian basis, a Pauli vector is defined as
+\begin{equation*}
+\begin{split}\boldsymbol\sigma := \sum_k \sigma_k \hat{\mathbf{x}}_k\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the dot product with a vector \(\mathbf{a} = \sum_k a_k \hat{\mathbf{x}}_k\) is defined as
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \mathbf{a} \cdot \boldsymbol\sigma 
+ & = \sum_{l,k} a_l \underbrace{\hat{\mathbf{x}}_l \cdot \hat{\mathbf{x}}_k}_{\delta_{kl}} \sigma_k = \sum_k a_k \, \sigma_k
+   = \begin{bmatrix} a_3 & a_1 - i a_2 \\ a_1 + i a_2 & - a_3 \end{bmatrix} \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\paragraph{Properties}
+\label{\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:id1}}
 \sphinxstepscope
 
 
@@ -6617,6 +6622,29 @@ and thus
 \sphinxstepscope
 
 
+\subsection{Spin}
+\label{\detokenize{ch/quantum-mechanics/history/spin:spin}}\label{\detokenize{ch/quantum-mechanics/history/spin:quantum-mechanics-history-spin}}\label{\detokenize{ch/quantum-mechanics/history/spin::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Early 1910s: Experiments about emission spectra of alkali metals (transition between levels obey selection rules) and the Zeeman effect (strong magnetic fields can influence atomic spectra)
+
+\item {} 
+\sphinxAtStartPar
+1924: W.Pauli proposed an additional degree of freedom, the spin, a “two\sphinxhyphen{}valuedness without a classical counterpart”. This physical quantity is related to angular momentum. This physical quantity was also required to formulated the Pauli exclusion principle, and linking this quantity to symmetry properties of the wave function of systems with many indentical bodies.
+
+\item {} 
+\sphinxAtStartPar
+W.Pauli first introduced the new degree of freedom in the non\sphinxhyphen{}relativistic Schrodinger equation, later shown to be the non\sphinxhyphen{}relativistic limit of the relativistic quantum mehcanics equation by Dirac (1928).
+
+\item {} 
+\sphinxAtStartPar
+1922\sphinxhyphen{}1927: Stern\sphinxhyphen{}Gerlach experiment. First performed to test Bohr\sphinxhyphen{}Sommerfeld atomic model, then used to verify and investigate the properties of spin.
+
+\end{itemize}
+
+\sphinxstepscope
+
+
 \subsection{Modern reinterpretation of Heisenberg mechanics}
 \label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:modern-reinterpretation-of-heisenberg-mechanics}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation::doc}}
 
@@ -7122,7 +7150,7 @@ where Fermi’s Golden Rule gives the absorption rate \(W_{a \to b}\):
 \begin{sphinxuseclass}{tag_hide-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{397b9724b39d7d0952be55fc45b1c197bc5f20bec6afad2013b926b88bc4333d}.png}
+\noindent\sphinxincludegraphics{{28d405b8d5596ed04f0e799ddb39d2e97a8c162ac4198f7a7a833a96e96600ef}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8899,22 +8927,345 @@ Since \(\partial_d | \mathbf{r}| = \partial_d \sqrt{x_a x_a} = \frac{x_d}{|\math
 \sphinxstepscope
 
 
-\chapter{Second Quantization}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:second-quantization}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization::doc}}\subsubsection*{Contents}
+\section{Atomic model using Dirac equation}
+\label{\detokenize{ch/quantum-mechanics/atom-models/dirac:atomic-model-using-dirac-equation}}\label{\detokenize{ch/quantum-mechanics/atom-models/dirac:quantum-mechanics-atom-models-dirac}}\label{\detokenize{ch/quantum-mechanics/atom-models/dirac::doc}}
+\sphinxstepscope
+
+
+\chapter{Relativistic Quantum Mechanics}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm:relativistic-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm:quantum-mechanics-relativistic}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\DUrole{xref,myst}{Spin} \sphinxhyphen{} some links in:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-Indistinguishability of identical systems: bosons and fermions
+{\hyperref[\detokenize{ch/quantum-mechanics/history/spin:quantum-mechanics-history-spin}]{\sphinxcrossref{\DUrole{std,std-ref}{historical approach to QM: spin}}}}
 
 \item {} 
 \sphinxAtStartPar
-Second quantization: asking which particle is which state? is meaningless, as particles are indistinguishable. How many particles are in each state? could be a reasonable question
+{\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum:quantum-mechanics-angular-momentum}]{\sphinxcrossref{\DUrole{std,std-ref}{angular momentum operator}}}}
+
+\item {} 
+\sphinxAtStartPar
+…
 
 \end{itemize}
 
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:quantum-mechanics-relativistic-dirac-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{Dirac equation}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/dirac:quantum-mechanics-atom-models-dirac}]{\sphinxcrossref{\DUrole{std,std-ref}{Atomic model with Dirac equation}}}} \sphinxhyphen{} in \sphinxstylestrong{atomic model} section
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\section{Dirac equation}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:dirac-equation}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:quantum-mechanics-relativistic-dirac-equation}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation::doc}}
+
+\subsection{Klein\sphinxhyphen{}Gordon equation for a free particle}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:klein-gordon-equation-for-a-free-particle}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:quantum-mechanics-relativistic-dirac-equation-klein-gordon-free}}
+\sphinxAtStartPar
+The relation between energy and momentum for a massive particle in {\hyperref[\detokenize{ch/relativity-special/notes:relativity-special-notes}]{\sphinxcrossref{\DUrole{std,std-ref}{special relativity}}}}
+\begin{equation}\label{equation:ch/quantum-mechanics/relativistic-qm/dirac-equation:eq:dirac-eq:einstein:en-mom}
+\begin{split}m^2 c^2 = \frac{E^2}{c^2} - | \mathbf{p} |^2 \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+can be seamlessly promoted to a operator equation, \(\mathbf{p} \rightarrow \hat{\mathbf{p}}\), \(E \rightarrow \hat{H}t\), to only get Klein\sphinxhyphen{}Gordon equation
+\begin{equation*}
+\begin{split} \frac{m^2}{c^2}{\hbar^2} = \frac{\hat{H}^2}{c^2} - |\hat{\mathbf{p}}|^2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or in position representation, where \(\langle \mathbf{r} | \hat{\mathbf{p}} = - i \hbar \nabla \langle \mathbf{r} |\), \(\langle \mathbf{r} | \hat{H} = i \hbar \partial_t \langle \mathbf{r} |\), applied to a wave function \(| \Psi \rangle\)
+\begin{equation*}
+\begin{split}\left\{ \square + \frac{m^2 \hbar^2}{c^2} \right\} \Psi(\mathbf{r},t) = 0 \ .\end{split}
+\end{equation*}
+
+\subsection{Dirac equation for a free particle}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:dirac-equation-for-a-free-particle}}\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:quantum-mechanics-relativistic-dirac-equation-dirac-free}}
+\sphinxAtStartPar
+Dirac’s equation follows from the expression of the Hamiltonian operator as a linear combination of the components of the momentum operator and the \(m c\),
+\begin{equation*}
+\begin{split}\hat{H} = \alpha_0 m c + \sum_{k=1}^{3} \alpha_k \hat{p}_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that satisfies the relation \eqref{equation:ch/quantum-mechanics/relativistic-qm/dirac-equation:eq:dirac-eq:einstein:en-mom}.
+\subsubsection*{Details of the solution}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}…
+
+\sphinxAtStartPar
+The Hamiltonian operator becomes
+\begin{equation*}
+\begin{split}\hat{H} = m c^2 \beta + c \boldsymbol\alpha \cdot \hat{\mathbf{p}} = m c^2 \beta - i \hbar c \boldsymbol\alpha \cdot \nabla \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the position representation of Dirac’s equation can be written using 3+1 formalism (space+time) as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \partial_t \Psi(\mathbf{r},t) 
+  & = \langle \mathbf{r} | \hat{H} | \Psi \rangle = \\
+  & = - i \hbar c \boldsymbol\alpha \cdot \nabla \Psi(\mathbf{r},t) + m c^2 \beta \Psi(\mathbf{r},t) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the set of \(4 \times 4\) complex matrices \(\beta = \gamma^0\), \(\gamma^k = \beta \alpha_k\)
+\begin{equation*}
+\begin{split}
+  \gamma^0 = \begin{bmatrix} I_2 & \cdot \\ \cdot & -I_2 \end{bmatrix}
+  \quad , \quad
+  \gamma^k = \begin{bmatrix} \cdot & \sigma_k \\ -\sigma_k & \cdot \end{bmatrix} \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+built with \(2 \times 2\) identity and {\hyperref[\detokenize{ch/quantum-mechanics/angular-momentum/angular-momentum-spin:quantum-mechanics-angular-momentum-spin-pauli-matrices}]{\sphinxcrossref{\DUrole{std,std-ref}{Pauli matrices}}}} \(\sigma_k\). Dirac’s equation can be recast in the 4\sphinxhyphen{}dimensional formalism of special relativity, after multiplication by \(\beta\), as
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \left( i \hbar \gamma^\mu \partial_\mu - m c \right) \Psi = 0 \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since
+\begin{equation*}
+\begin{split}\begin{aligned}
+ 0
+ & = i \hbar \left( \beta \partial_t + c \beta \boldsymbol\alpha \cdot \nabla \right) \Psi - m c^2 \Psi = \\
+ & = i \hbar c \gamma^\mu \partial_\mu \Psi - m c^2 \Psi \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Elementary solutions of Dirac equation for a free particle}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:elementary-solutions-of-dirac-equation-for-a-free-particle}}\begin{equation*}
+\begin{split}
+\left\{
+i \frac{\hbar}{c} \begin{bmatrix} 1 & & & \\ & 1 & & \\ & & -1 & \\ & & & -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} & & & 1 \\ & & 1 & \\ & -1 & & \\ -1 & & &  \end{bmatrix} \partial_x
++ i \hbar \begin{bmatrix} & & & -i \\ & & i & \\ & i & & \\ -i & & &  \end{bmatrix} \partial_y
++ i \hbar \begin{bmatrix} & & 1 & \\ & & & -1 \\ -1 & & & \\ & 1 & &  \end{bmatrix} \partial_z
+- m c \right\} \Psi(t, \mathbf{r}) = \mathbf{0} \ .
+\end{split}
+\end{equation*}
+
+\paragraph{Dimensional Reduction to 1D and Component Decoupling}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:dimensional-reduction-to-1d-and-component-decoupling}}
+\sphinxAtStartPar
+To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the \(y\) and \(z\) axes, setting spatial derivatives to zero (\(\partial_y = \partial_z = 0\)). Dirac’s equation reduces to
+\begin{equation*}
+\begin{split}
+\left\{
+i \frac{\hbar}{c} \begin{bmatrix} 1 & & & \\ & 1 & & \\ & & -1 & \\ & & & -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} & & & 1 \\ & & 1 & \\ & -1 & & \\ -1 & & &  \end{bmatrix} \partial_x
+- m c \right\} \Psi(t, x) = \mathbf{0} \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Expanding the matrix equation for a four\sphinxhyphen{}component spinor \(\Psi = \begin{pmatrix} \psi_1 & \psi_2 & \psi_3 & \psi_4 \end{pmatrix}^T\), the system splits naturally into \sphinxstylestrong{two independent pairs of coupled equations}:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+A coupling between \sphinxstylestrong{\(\psi_1\) and \(\psi_4\)}
+
+\item {} 
+\sphinxAtStartPar
+A coupling between \sphinxstylestrong{\(\psi_2\) and \(\psi_3\)}
+
+\end{enumerate}
+
+\sphinxAtStartPar
+For the first pair (\(\psi_1\) and \(\psi_4\)), the system reads:
+\begin{equation*}
+\begin{split}\begin{cases}
+\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 + i\hbar \partial_x \psi_4 = 0 \\[6pt]
+-i\hbar \partial_x \psi_1 - \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Reduction to Klein\sphinxhyphen{}Gordon Equation for individual components.}
+By isolating \(\partial_x \psi_4\) from the first equation and substituting it into the second, the mixed temporal\sphinxhyphen{}spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation:
+\begin{equation*}
+\begin{split}\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2\) is the d’Alembertian operator.
+\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\partial_x \psi_4 = \frac{1}{i\hbar} \left( m c \psi_1 - \frac{i \hbar}{c} \partial_t \psi_1 \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = -i \hbar \partial_{xx} \psi_1 - \left( \frac{i \hbar}{c} \partial_t + m c \right) \partial_x \psi_4 = \\
+  & = -i \hbar \partial_{xx} \psi_1 + \frac{1}{i \hbar} \left( \frac{i \hbar}{c} \partial_t + m c \right) \left( \frac{i \hbar}{c} \partial_t - m c  \right) \psi_1 = \\
+  & = - i \hbar \partial_{xx} \psi_1 - \frac{i}{\hbar} \left( - \frac{\hbar^2}{c^2} \partial_{tt} - m^2 c^2 \right) \psi_1 \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, after dividing by \(i \hbar\),
+\begin{equation*}
+\begin{split}\left( \frac{1}{c^2} \partial_{tt} - \partial_{xx} + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ .\end{split}
+\end{equation*}
+
+\paragraph{Plane Wave Solutions and Component Relations}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:plane-wave-solutions-and-component-relations}}
+\sphinxAtStartPar
+Assuming a plane wave ansatz for the components of the form \(\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}\), the \sphinxstylestrong{dispersion relation} \(- \frac{E^2}{\hbar^2 c^2} + \frac{p_x^2}{\hbar^2} + \frac{m^2 c^2}{\hbar^2} = 0\) is found between the energy and the momentum of the free particle, or after multiplying by \(\hbar^2\),
+\begin{equation*}
+\begin{split}E^2 = p_x^2 c^2 + m^2 c^4 = 0 \quad \rightarrow \quad E = \mp c \sqrt{ p_x^2 + m^2 c^2 } \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the very same Einstein energy\sphinxhyphen{}momentum equation \eqref{equation:ch/quantum-mechanics/relativistic-qm/dirac-equation:eq:dirac-eq:einstein:en-mom}. Convert the differential coupling into an algebraic relation between the “large” and “small” components, the first equation
+\begin{equation*}
+\begin{split}i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+becomes
+\begin{equation*}
+\begin{split}i \hbar \cdot i \frac{p_x}{\hbar} \psi_4 = \left( \frac{i\hbar}{c} \left(- \frac{i E}{\hbar} \right) - mc \right) \psi_1 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, the relation between \(\psi_1\) and \(\psi_4\) is the ratio
+\begin{equation*}
+\begin{split}\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+An identical decoupling procedure applies symmetrically to the second pair (\(\psi_2\) and \(\psi_3\)).
+\subsubsection*{Physical Insights and Interpretation}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Large vs. Small Components:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The upper pair \((\psi_1, \psi_2)\) represents the \sphinxstylestrong{large components}, which in the non\sphinxhyphen{}relativistic limit (\(v \ll c\)) reduce to the standard two\sphinxhyphen{}component Pauli spinor describing spin.
+
+\item {} 
+\sphinxAtStartPar
+The lower pair \((\psi_3, \psi_4)\) represents the \sphinxstylestrong{small components}, suppressed by a factor of \(v/c\), which carry the relativistic corrections responsible for spin\sphinxhyphen{}orbit coupling and magnetic moments.
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Emergence of Spin:}
+Unlike non\sphinxhyphen{}relativistic quantum mechanics where spin is added ad\sphinxhyphen{}hoc via Pauli matrices, spin emerges naturally in the Dirac equation as a direct consequence of the linearization required for Lorentz covariance, combining with orbital angular momentum into a conserved total angular momentum \(\mathbf{J} = \mathbf{L} + \mathbf{S}\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Antimatter and Negative Energies:}
+The dispersion relation permits both positive (\(E = +\sqrt{c^2p^2 + m^2c^4}\)) and negative (\(E = -\sqrt{...}\)) energy solutions. In modern quantum field theory, these negative energy states are reinterpreted through second quantization as antiparticles (such as the positron), resolving historical vacuum stability issues.
+
+\end{enumerate}
+
+
+\subsection{Dirac equation for a particle in the EM field}
+\label{\detokenize{ch/quantum-mechanics/relativistic-qm/dirac-equation:dirac-equation-for-a-particle-in-the-em-field}}
+\sphinxAtStartPar
+Following the \sphinxstylestrong{minimal coupling}, the momentum of a free particle is replaced by the momentum of a charged particle in a EM field,%
+\begin{footnote}[1]\sphinxAtStartFootnote
+\sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/examples.html\#lagrange-equations-in-special-relativity}{Math: Calculus of Variations: Examples: Lagrange Equations in Special Relativity Using Tensor Formalism}
+%
+\end{footnote}
+\begin{equation*}
+\begin{split}\mathbf{P} \rightarrow  \mathbf{P} + q \mathbf{A} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\mathbf{P} = m \mathbf{U} = \gamma m ( c, \mathbf{v} ) = \left( \frac{E}{c}, \mathbf{p} \right)\), and \(\mathbf{A} = \left( \frac{\varphi}{c}, \mathbf{a} \right)\), so that
+\begin{equation*}
+\begin{split}\left\{ \mathbf{P} + q \mathbf{A} \right\}^{\mu} = \left( \frac{E + q \varphi}{c}, \mathbf{p} + q \mathbf{a} \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\left\{ \mathbf{P} + q \mathbf{A} \right\}_{\mu} = \left( \frac{E + q \varphi}{c}, -\mathbf{p} - q \mathbf{a} \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the Hamiltonian in space representation becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{H} & = m c^2 \beta - i \hbar c \boldsymbol\alpha \cdot \nabla \\
+\quad \rightarrow \quad \hat{H} & = m c^2 \beta + q \varphi + c \boldsymbol\alpha \cdot \left( - i \hbar \nabla + q\mathbf{a} \right)
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  0
+  & = i \hbar \beta \partial_t \Psi - \beta \hat{H} \Psi = \\
+  & = i \hbar \beta \partial_t \Psi - m c^2 - q \beta \varphi \Psi + i c \hbar \beta \alpha_k \partial_k \Psi - c q \beta \alpha_k a_k \Psi = \\
+  & = i \hbar c \gamma^0 \frac{1}{c}\partial_t \Psi + i \hbar c \gamma^k \partial_k \Psi - m c^2 \Psi + q c \gamma^0 \frac{\varphi}{c} \Psi - q c \gamma^k a_k \Psi = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, after dividing by \(c\),
+\begin{equation*}
+\begin{split}\left( i \hbar \gamma^\mu \left( \partial_{\mu} - q A_\mu \right) - m c^2 \right) \Psi = 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+check signs, when switching to 3+1 to 4 formalism
+
+\item {} 
+\sphinxAtStartPar
+motivation of the introduction of \(\varphi\) in the minimal coupling. Why is it without \(\beta\)? Does it go with \(E\), from the transformation \(\frac{E}{c} \rightarrow \frac{E + q \varphi}{c}\)?
+
+\item {} 
+\sphinxAtStartPar
+Invariance in special relativity
+
+\item {} 
+\sphinxAtStartPar
+Limit cases
+
+\end{itemize}
+\subsubsection*{Special Relativity and Invariance}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}…
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
+\chapter{Many\sphinxhyphen{}body systems}
+\label{\detokenize{ch/quantum-mechanics/many-body/many-body-quantum-mechanics:many-body-systems}}\label{\detokenize{ch/quantum-mechanics/many-body/many-body-quantum-mechanics:quantum-mechanics-many-body-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/many-body/many-body-quantum-mechanics::doc}}\subsubsection*{Contents}
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/identical-systems:quantum-mechanics-second-quantizazion-identical}]{\sphinxcrossref{\DUrole{std,std-ref}{Indistinguishability of identical systems}}}}. Bosons and fermions. Symmetric basis for bosons, anti\sphinxhyphen{}symmetric basis for fermions.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/fock-space:quantum-mechanics-second-quantizazion-second-quantization}]{\sphinxcrossref{\DUrole{std,std-ref}{Second quantization. Fock space}}}}. Asking \sphinxstyleemphasis{which particle is which state?} is meaningless, as particles are indistinguishable. \sphinxstyleemphasis{How many particles are in each state?} could be a reasonable question. Fock space formarlism is introduced.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons}]{\sphinxcrossref{\DUrole{std,std-ref}{Second quantization. Bosons}}}}. Creation and annihilation operators, number operator, CCR.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions}]{\sphinxcrossref{\DUrole{std,std-ref}{Second quantization. Fermions}}}}. Creation and annihilation operators, number operator, CCR satisfying \sphinxstylestrong{Pauli exclusion principle}.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/quantum-fields:quantum-mechanics-second-quantizazion-quantum-fields}]{\sphinxcrossref{\DUrole{std,std-ref}{Quantum fields}}}}. From occupation number representation to space/momentum representation. One\sphinxhyphen{}body Examples in one\sphinxhyphen{}particle, two\sphinxhyphen{}particle, and many\sphinxhyphen{}particle systems.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/many-body/operators:quantum-mechanics-second-quantizazion-operators}]{\sphinxcrossref{\DUrole{std,std-ref}{Operators in quantum field theory}}}}. One\sphinxhyphen{}body operators. Two\sphinxhyphen{}body operators.
+
+
+
+\sphinxstepscope
+
 
 \section{Identical systems}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-identical}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:identical-systems}}
+\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:quantum-mechanics-second-quantizazion-identical}}\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:identical-systems}}\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems::doc}}
 \sphinxAtStartPar
 Let a system be composed of \(N\) identical indistinguishable sub\sphinxhyphen{}systems. The state of the subsystem \(k\) is described by a single\sphinxhyphen{}system wave function \(| \psi_k \rangle\) belonging to the single\sphinxhyphen{}system Hilbert space \(\mathcal{H}_1\). Thus, the state of the many\sphinxhyphen{}body subsystem is described by a wave function \(| \Psi \rangle\) belonging to the \(N\) tensor product space
 \begin{equation*}
@@ -8954,10 +9305,10 @@ Fermions, \(P_{ij} = -1\),
 
 
 \subsection{Symmetrization and anti\sphinxhyphen{}symmetrization}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:symmetrization-and-anti-symmetrization}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-identical-symmetrization}}
+\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:symmetrization-and-anti-symmetrization}}\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:quantum-mechanics-second-quantizazion-identical-symmetrization}}
 
 \subsubsection{Symmetric basis for bosons}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:symmetric-basis-for-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-identical-symmetrization-bosons}}
+\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:symmetric-basis-for-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:quantum-mechanics-second-quantizazion-identical-symmetrization-bosons}}
 \sphinxAtStartPar
 Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \begin{equation*}
@@ -8965,8 +9316,8 @@ Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \end{equation*}
 \sphinxAtStartPar
 with \(n_k\) the occupation number of the single\sphinxhyphen{}body state \(k\). The factor before the summation is required for normalization of the symmetric state, as it’s the square root of the inverse of the number of permutations with repetitions, see \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html\#permutazioni-con-ripetizioni}{Combinatorics: Permutations with Repetitions}.
-\label{None:example-0}
-\begin{sphinxadmonition}{note}{Example  (Low\sphinxhyphen{}dimensional example)}
+\label{ch/quantum-mechanics/many-body/identical-systems:example-0}
+\begin{sphinxadmonition}{note}{Example 23.1.1 (Low\sphinxhyphen{}dimensional example)}
 
 
 
@@ -8987,7 +9338,7 @@ This state is unit\sphinxhyphen{}norm, as
 
 
 \subsubsection{Anti\sphinxhyphen{}symmetric basis for fermions}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:anti-symmetric-basis-for-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-identical-symmetrization-fermions}}
+\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:anti-symmetric-basis-for-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/identical-systems:quantum-mechanics-second-quantizazion-identical-symmetrization-fermions}}
 \sphinxAtStartPar
 Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \begin{equation*}
@@ -8995,8 +9346,8 @@ Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \end{equation*}
 \sphinxAtStartPar
 If two bodies were in the same state, two rows of the matrix would be equal and thus the determinant be zero. The factor before the determinant is required for normalization, as it’s the square root of the inverse of the number of simple pertumations of \(N\) objects without repetitions, see \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html\#permutazioni-semplici}{Combinatorics: Permutations with Repetitions}.
-\label{None:example-1}
-\begin{sphinxadmonition}{note}{Example  (Low\sphinxhyphen{}dimensional example)}
+\label{ch/quantum-mechanics/many-body/identical-systems:example-1}
+\begin{sphinxadmonition}{note}{Example 23.1.2 (Low\sphinxhyphen{}dimensional example)}
 
 
 
@@ -9020,9 +9371,11 @@ This state is unit\sphinxhyphen{}norm, as
 \end{aligned}\end{split}
 \end{equation*}\end{sphinxadmonition}
 
+\sphinxstepscope
 
-\section{Second quantization}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-second-quantization}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:id1}}
+
+\section{Second quantization. Fock space}
+\label{\detokenize{ch/quantum-mechanics/many-body/fock-space:second-quantization-fock-space}}\label{\detokenize{ch/quantum-mechanics/many-body/fock-space:quantum-mechanics-second-quantizazion-second-quantization}}\label{\detokenize{ch/quantum-mechanics/many-body/fock-space::doc}}
 \sphinxAtStartPar
 Let \(\{ | \alpha \rangle \}\) a basis of the 1\sphinxhyphen{}body system. Let \(n_\alpha\) the number of subsystems in the single\sphinxhyphen{}body state \(| \alpha \rangle\), i.e. the \sphinxstylestrong{occupation number} of the state. The sum of the occupation numbers is equal to the number of particles \(N\), i.e. \(\sum_\alpha n_\alpha = N\). In the second quantization, the state of the system is represented in the occupation number state
 \begin{equation*}
@@ -9033,19 +9386,18 @@ Let \(\{ | \alpha \rangle \}\) a basis of the 1\sphinxhyphen{}body system. Let \
 
 
 \subsection{Fock states}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:fock-states}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-second-quantization-fock-space}}
+\label{\detokenize{ch/quantum-mechanics/many-body/fock-space:fock-states}}\label{\detokenize{ch/quantum-mechanics/many-body/fock-space:quantum-mechanics-second-quantizazion-second-quantization-fock-space}}
 \sphinxAtStartPar
 \sphinxstylestrong{todo} \sphinxstyleemphasis{Properties of Fock states}
 
+\sphinxstepscope
 
-\section{Bosons and Fermions}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:bosons-and-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions}}
 
-\subsection{Bosons}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions-bosons}}
+\section{Second quantization. Bosons}
+\label{\detokenize{ch/quantum-mechanics/many-body/bosons:second-quantization-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons::doc}}
 
-\subsubsection{Creation and annihilation operators}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions-bosons-creation-annihilation}}
+\subsection{Creation and annihilation operators}
+\label{\detokenize{ch/quantum-mechanics/many-body/bosons:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons-creation-annihilation}}
 \sphinxAtStartPar
 \sphinxstylestrong{Creation operator, \(\hat{b}_i^{\dagger}\).} The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator \(\hat{b}_i\).
 \begin{equation*}
@@ -9138,15 +9490,17 @@ and thus
 \end{equation*}\begin{equation*}
 \begin{split}[ \hat{b}_i^\dagger, \hat{b}_j^\dagger ] = 0\end{split}
 \end{equation*}
+\sphinxstepscope
 
-\subsection{Fermions}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions-fermions}}
 
-\subsubsection{Creation and annihilation operators}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions-fermions-creation-annihilation}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:id2}}
+\section{Second quantization. Fermions}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:second-quantization-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions::doc}}
 
-\paragraph{Jordan–Wigner (1928), “On the Pauli exclusion principle”}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:jordanwigner-1928-on-the-pauli-exclusion-principle}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-bosons-fermions-fermions-jordan-wigner}}
+\subsection{Creation and annihilation operators}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-creation-annihilation}}
+
+\subsubsection{Jordan–Wigner (1928), “On the Pauli exclusion principle”}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:jordanwigner-1928-on-the-pauli-exclusion-principle}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-jordan-wigner}}
 \sphinxAtStartPar
 The state of an atom is described by the occupation numbers of the orbitals: \(|n_1\,n_2\dots\rangle\).
 \begin{itemize}
@@ -9168,28 +9522,71 @@ Solution of Jordan and Wigner:
 \sphinxAtStartPar
 with \(\theta_k=(-1)^{n_1+\dots+n_{k-1}}\).
 
+\sphinxstepscope
+
 
 \section{Quantum fields}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-fields}}\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:quantum-mechanics-second-quantizazion-quantum-fields}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:quantum-fields}}\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:quantum-mechanics-second-quantizazion-quantum-fields}}\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields::doc}}
 \sphinxAtStartPar
-Let \(\{ | \nu_k \rangle \}_k\) a basis of quantum states of the 1\sphinxhyphen{}body system. The 1\sphinxhyphen{}body wave function can be represented as a linear combination of the vectors of this basis,
-\begin{equation*}
-\begin{split}| \psi \rangle = \sum_k | \nu_k \rangle c_k = \sum_k | \nu_k \rangle \langle \nu_k | \psi \rangle \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and in position representation
-\begin{equation*}
-\begin{split}\psi(\mathbf{r},t) = \langle \mathbf{r} | \psi \rangle = \sum_k \nu_k(\mathbf{r}) c_k(t) \ .\end{split}
-\end{equation*}
+In this section, creation and annihilation operators in continuous basis (like space or momentum) are introduced, in terms of creation/annihilation operators in a given (and discrete?) basis \(\{ \nu_a \}_a\)
 
-\subsection{Field creation operator}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:field-creation-operator}}
+
+
+
+\subsection{Field creation and annihilation operators}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:field-creation-and-annihilation-operators}}
+\sphinxAtStartPar
+Creation and annihilation operators in space basis can be written using the basis \(\{ \nu_a \}\) as
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:creation}
+\begin{split}\Psi^\dagger(\mathbf{r}) = \sum_a \nu_a^*(\mathbf{r}) \hat{a}^\dagger_{\nu_a}\end{split}
+\end{equation}\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:annihilation}
+\begin{split}\Psi        (\mathbf{r}) = \sum_a \nu_a  (\mathbf{r}) \hat{a}_{\nu_a}        \end{split}
+\end{equation}
+\sphinxAtStartPar
+Creation operator \(\Psi^\dagger(\mathbf{r})\) \sphinxstyleemphasis{creates a particle} in state \(| \mathbf{r} \rangle\), while annihilation operator \(\Psi(\mathbf{r})\) \sphinxstyleemphasis{destroys a particle} in state \(| \mathbf{r} \rangle\).
+
+\sphinxAtStartPar
+The inverse relations hold
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:creation:inverse}
+\begin{split}\begin{aligned}
+  \hat{a}^\dagger_{\nu_a} 
+  & = \int_{\mathbf{r}} \nu_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation}\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:annihilation:inverse}
+\begin{split}\begin{aligned}
+  \hat{a}_{\nu_a} 
+  & = \int_{\mathbf{r}} \nu_a^*(\mathbf{r}) \Psi(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation}\subsubsection*{Details. Inverse relations}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{a}^\dagger_{\nu_a} 
+  & = \sum_b \hat{a}_{\nu_b}^\dagger \langle \nu_b | \nu_a \rangle =  \\
+  & = \sum_b \hat{a}_{\nu_b}^\dagger \langle \nu_b | \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \, d \mathbf{r} \, | \nu_a \rangle =  \\
+  & = \int_{\mathbf{r}} \nu_a(\mathbf{r}) \sum_b \nu^*_b(\mathbf{r}) \hat{a}_{\nu_b}^\dagger \, d \mathbf{r} = \\
+  & = \int_{\mathbf{r}} \nu_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{a}_{\nu_a} 
+  & = \sum_b \hat{a}_{\nu_b} \langle \nu_a | \nu_b \rangle =  \\
+  & = \sum_b \hat{a}_{\nu_b} \langle \nu_a | \int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \, d \mathbf{r} \, | \nu_b \rangle =  \\
+  & = \int_{\mathbf{r}} \nu_a^*(\mathbf{r}) \sum_b \nu_b(\mathbf{r}) \hat{a}_{\nu_b} \, d \mathbf{r} = \\
+  & = \int_{\mathbf{r}} \nu_a^*(\mathbf{r}) \Psi(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Need to distinguish between bosons and fermions? Or one can just use the proper set of creation/annihilation operators, without any other major change in the formulas}
+
+
+\subsubsection{CCR}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:ccr}}
 
 \subsubsection{One\sphinxhyphen{}particle system}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:one-particle-system}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:one-particle-system}}
 \sphinxAtStartPar
 \sphinxstylestrong{Action of \(\hat{\Psi}^\dagger(\mathbf{r})\) on the vacuum state.} The action of the operator \(\hat{\Psi}^\dagger(\mathbf{r})\) on the vacuum places a particle in the state \(| \mathbf{r} \rangle\), i.e.
-\begin{equation}\label{equation:ch/quantum-mechanics/many-body/second-quantization:eq:second-quantization:field:r-1}
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:second-quantization:field:r-1}
 \begin{split}| \mathbf{r} \rangle = \hat{\Psi}^\dagger(\mathbf{r}) | 0 \rangle \ .\end{split}
 \end{equation}\subsubsection*{Discrete basis}
 
@@ -9200,11 +9597,11 @@ The state \(| \mathbf{r} \rangle\) can be written as a linear combination of the
 \end{equation*}
 \sphinxAtStartPar
 A vector of the basis of the 1\sphinxhyphen{}body system \(| \nu_k \rangle\) can be built with the creation operator acting on the ground state, \(| \nu_k \rangle = \hat{a}^\dagger_{\nu_k} | 0 \rangle\), and thus
-\begin{equation}\label{equation:ch/quantum-mechanics/many-body/second-quantization:eq:second-quantization:field:r-2}
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:second-quantization:field:r-2}
 \begin{split}| \mathbf{r} \rangle = \sum_k \langle \nu_k | \mathbf{r} \rangle \, \hat{a}_{\nu_k}^\dagger | 0 \rangle = \sum_k \nu_k^*(\mathbf{r}) \, \hat{a}_{\nu_k}^\dagger | 0 \rangle \ .\end{split}
 \end{equation}
 \sphinxAtStartPar
-Comparision of \eqref{equation:ch/quantum-mechanics/many-body/second-quantization:eq:second-quantization:field:r-1} and \eqref{equation:ch/quantum-mechanics/many-body/second-quantization:eq:second-quantization:field:r-2} gives the expression of the field creation operator
+Comparision of \eqref{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:second-quantization:field:r-1} and \eqref{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:second-quantization:field:r-2} gives the expression of the field creation operator
 \begin{equation*}
 \begin{split}\hat{\Psi}^\dagger(\mathbf{r}) = \sum_k \nu_k^*(\mathbf{r}) \hat{a}_{\nu_k}^\dagger \ .\end{split}
 \end{equation*}\subsubsection*{Equivalent expression of the single\sphinxhyphen{}body wave function}
@@ -9224,10 +9621,10 @@ The single\sphinxhyphen{}body wave function in position representation reads
 
 
 \subsubsection{Two\sphinxhyphen{}particle system}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:two-particle-system}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:two-particle-system}}
 
 \paragraph{Bosons}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:id3}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:bosons}}
 \sphinxAtStartPar
 Position state can be expressed either with creation operators
 \begin{equation*}
@@ -9295,10 +9692,10 @@ The state function of the system in position representation is
 
 
 \subsubsection{Many\sphinxhyphen{}body systems}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:many-body-systems}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:many-body-systems}}
 
 \paragraph{Bosons}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:id4}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:id1}}
 \sphinxAtStartPar
 \sphinxstylestrong{Identity operator.}
 \begin{itemize}
@@ -9318,7 +9715,7 @@ Summing over all the indices (“creation operator represetnation”)
 
 
 \paragraph{Fermions}
-\label{\detokenize{ch/quantum-mechanics/many-body/second-quantization:id5}}
+\label{\detokenize{ch/quantum-mechanics/many-body/quantum-fields:fermions}}
 \sphinxAtStartPar
 \sphinxstylestrong{Identity operator.}
 \begin{itemize}
@@ -9336,6 +9733,200 @@ Summing over all the indices (“creation operator represetnation”)
 \end{equation*}
 \end{itemize}
 
+\sphinxstepscope
+
+
+\section{Operators in QFT}
+\label{\detokenize{ch/quantum-mechanics/many-body/operators:operators-in-qft}}\label{\detokenize{ch/quantum-mechanics/many-body/operators:quantum-mechanics-second-quantizazion-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/operators::doc}}
+\sphinxAtStartPar
+One\sphinxhyphen{}body operators act on individual particles. Let \(\hat{o}\) the operator acting on the single\sphinxhyphen{}particle wave function \(| \psi \rangle \in \mathcal{H}\), and \(o_{ab} = \langle \phi_a | \hat{o} | \phi_b \rangle\) its matrix components w.r.t. the vectors of the basis of \(\{ \psi_a \}_a\) of \(\mathcal{H}\), or in \sphinxstylestrong{position representation}
+\begin{equation*}
+\begin{split}
+o_{ab} = \langle \psi_a | \hat{o} | \psi_b \rangle = \langle \psi_a |\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \hat{o} | \psi_b \rangle \, d \mathbf{r} = \int_{\mathbf{r}} \psi_a^*(\mathbf{r}) \, o \psi_b(\mathbf{r}) \, d \mathbf{r} \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(o\) the linear (tipically differential) operator in space representation, and \(o \psi_b(\mathbf{r})\) its action of \(| \psi_b \rangle\) in space representation. Just as an example, the space representation of the action of the \(x\)\sphinxhyphen{}component of the momentum operator \(\hat{p}_x\) on vector \(| \psi_b \rangle\) reads
+\begin{equation*}
+\begin{split}\langle \mathbf{r} | \hat{p}_x | \psi_b \rangle = -i \hbar \partial_x \langle \mathbf{r} | \psi_b \rangle = - i \hbar \partial_x \psi_b(\mathbf{r}) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the linear differential operator in space representation acting on the space representation of the wave vector reads \(p_x = - i \hbar \partial_x\), and \(p_x \psi_b(\mathbf{r}) = - i \hbar \partial_x \psi_b(\mathbf{r})\).
+
+
+\subsection{One\sphinxhyphen{}body operators}
+\label{\detokenize{ch/quantum-mechanics/many-body/operators:one-body-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/operators:quantum-mechanics-second-quantizazion-operators-one-body}}
+\sphinxAtStartPar
+\sphinxstylestrong{First quantization.} The operator \(\hat{O}_1\) is the sum of the 1\sphinxhyphen{}particle operators \(\hat{o}\), each one acting on the corresponding particle,
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:first-quantization}
+\begin{split}\hat{O}_1 = \sum_{i=1}^{N} \hat{o}(q^i, p_i) \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+Let the state of the system \(| \Psi \rangle\) be represented in the basis \(\{ | \psi_{i_1}, \psi_{i_2}, \dots \rangle \}\), with the vectors \(|\psi_i \rangle\) being the eigenvectors of the operator \(\hat{o}\), with eigenvalues \(o_k\). Let the system be in state \(| \Psi \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle\). Then the action of the one\sphinxhyphen{}body operator on the state of the system reads
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:first-quantization:eig}
+\begin{split}\hat{O}_1 | \Psi \rangle = \sum_{k=1}^{N} \hat{o}^{(k)} | \Psi \rangle = \sum_{k=1}^N o_{i_k} | \Psi \rangle \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+i.e. the state \(| \psi_{i_1}, \psi_{i_2}, \dots \rangle\) is an eigenstate of the one\sphinxhyphen{}body operator \(\hat{O}_1\), with eigenvalue \(\sum_{k=1}^{N} o_{i_k}\).
+\subsubsection*{Examples for a 2\sphinxhyphen{}particle system.}
+
+\sphinxAtStartPar
+Let the state a two\sphinxhyphen{}particle system be represented by the wave vector \(| \Psi \rangle = | \psi_1, \psi_2 \rangle\). Its space representation reads
+\begin{equation*}
+\begin{split}\psi(\mathbf{r}_1, \mathbf{r}_2) = \langle \mathbf{r}_1, \mathbf{r}_2 | \Psi \rangle = \psi_1(\mathbf{r}_1) \psi_2(\mathbf{r}_2) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Discuss statistical independence…}
+
+\sphinxAtStartPar
+Some examples of one\sphinxhyphen{}body operators acting on a two\sphinxhyphen{}particle system are:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum} (1\sphinxhyphen{}dimensional domain), \(\hat{P}_x = \hat{p}_x^{(1)} + \hat{p}_x^{(2)}\), or \( = \hat{p}_x \otimes \hat{1} + \hat{1} \otimes \hat{p}_x\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \hat{P} | \Psi \rangle
+    & = \hat{P} | \Psi \rangle     
+      = | \hat{p} \psi_1, \psi_2 \rangle + | \psi_1, \hat{p}\psi_2 \rangle \ ,
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or in space representation
+\begin{equation*}
+\begin{split}\langle \mathbf{r}_1, \mathbf{r}_2 | \hat{P} | \Psi \rangle = -i \hbar \partial_{x_1} \psi_1(\mathbf{r}_1) \psi_2(\mathbf{r}_2) - i \hbar \psi_1(\mathbf{r}_1) \partial_{x_2} \psi_2(\mathbf{r}_2) \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Kinetic energy}, \(\hat{T} = \hat{t}^{(1)} + \hat{t}^{(2)}\)
+\begin{equation*}
+\begin{split}\dots\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{External potential energy}, \(\hat{V} = \hat{v}^{(1)} + \hat{v}^{(2)}\)
+\begin{equation*}
+\begin{split}\dots\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Total energy} (kinetic + external potential energy), \(\hat{H} = \hat{h}^{(1)} + \hat{h}^{(2)}\).
+If the state of the system \(| \psi_1, \psi_2 \rangle\) is in \(| \psi_a, \psi_b \rangle\), with \(| \psi_a \rangle\) a stationary state of the 1\sphinxhyphen{}particle system, with energy \(E_a\), then it follows that the action of the total energy operator is
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \hat{H} | \Psi \rangle
+    & = \left( \hat{h}^{(1)} + \hat{h}^{(2)} \right) | \psi_1, \psi_2 \rangle = \\
+    & = \left( \hat{h}^{(1)} + \hat{h}^{(2)} \right) | \psi_1, \psi_2 \rangle = \\
+    & = \left( \hat{h}^{(1)} + \hat{h}^{(2)} \right) | \psi_a, \psi_b \rangle = \\
+    & = | \hat{h} \psi_a, \psi_b \rangle +  | \psi_a, \hat{h} \psi_b \rangle = \\
+    & = \left( E_a + E_b \right) | \psi_a, \psi_b \rangle = \left( E_a + E_b \right) | \Psi \rangle \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Second quantization.}
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:second-quantization}
+\begin{split}\begin{aligned}
+  \hat{O}_1
+  & = \sum_{\alpha, \beta} o_{\alpha \beta} \hat{a}_{\alpha}^\dagger \hat{a}_\beta \ , 
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+with \(\hat{a}^\dagger_{\alpha}\), \(\hat{a}_{\beta}\) the creation and annihilation operators for one particle in states \(| \psi_a \rangle\), and \(| \psi_b \rangle\) respectively, and \(o_{\alpha \beta} = \langle \psi_a | \hat{o} | \psi_b \rangle\), with \(\{ | \psi_a \rangle \}\) vectors of a basis of the 1\sphinxhyphen{}particle space. The summations in \(\alpha\), and \(\beta\) here occur on all the 1\sphinxhyphen{}particle eigenstates.
+
+\sphinxAtStartPar
+If the operator is built using the 1\sphinxhyphen{}particle eigenstates of the operator \(\hat{o}\), then the matrix \(o_{\alpha \beta}\) is diagonal, and the operator can be written as
+\begin{equation*}
+\begin{split}\hat{O}_1 = \sum_{\alpha} o_{\alpha} \hat{a}_{\alpha}^\dagger \hat{a}_{\alpha}  = \sum_{\alpha} o_{\alpha} \hat{n}_{\alpha} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(o_{\alpha}\) the eigenvalues of the 1\sphinxhyphen{}particle operator \(\hat{o}\) and \(\hat{n}_{\alpha} = \hat{a}^{\dagger}_{\alpha} \hat{a}_{\alpha}\) the number operator of the state \(\alpha\). The action of the operator \(\hat{O}_1\) on the state of the system, represented in the occupation number basis \(| \Psi \rangle = | n_{o_1}, n_{o_2}, \dots \rangle\) built on the 1\sphinxhyphen{}particle eigenstates of the operator \(\hat{o}\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{O}_1 | \Psi \rangle 
+  & = \left( \sum_{\alpha} o_{\alpha \beta} \hat{a}_{\alpha}^\dagger \hat{a}_{\alpha} \right) | \Psi \rangle 
+    = \left( \sum_{\alpha} o_{\alpha \beta} \hat{n}_{\alpha} \right) | \Psi \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If the system is in an eigenstate of the operator \(\hat{O}\), represented by only one vector \(| \Psi \rangle = | \mathbf{n} \rangle = | n_{1}, n_{2}, \dots \rangle\), then
+\begin{equation}\label{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:second-quantization:eig}
+\begin{split}\begin{aligned}
+  \hat{O}_1 | \mathbf{n} \rangle 
+  & = \left( \sum_{\alpha} o_{\alpha} \hat{n}_{\alpha} \right) | \mathbf{n} \rangle = \\
+  & = \left( \sum_{\alpha} o_{\alpha} \hat{n}_{\alpha} \right) | \dots n_\alpha \dots \rangle = \\
+  & = \left( \sum_{\alpha} o_{\alpha} \, {n}_{\alpha} \right) | \dots n_\alpha \dots \rangle = \\
+  & = \underbrace{\left( \sum_{\alpha} {n}_{\alpha} o_{\alpha} \right)}_{=:o_{\mathbf{n}}} | \mathbf{n} \rangle \ ,
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+i.e. the state \(| \mathbf{n} \rangle\) of the occupation numbers of the eigenstates of \(\hat{o}\) is an eigenvector of the operator \(\hat{O}\) with eigenvalue \(o_{\mathbf{n}} := \sum_{\alpha} o_{\alpha} n_{\alpha}\).
+
+\begin{sphinxadmonition}{note}{Operators in first and second quantization}
+
+\sphinxAtStartPar
+The action of the operator \(\hat{O}_1\) can be expressed using second quantization formalism with \eqref{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:second-quantization:eig} or using the analogous first quantization formalism with \eqref{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:first-quantization:eig}: while summation in second quantization runs over the eigenstates, the summation runs over “particles” in first quantization. These two different points of view provide the same result, with the eigenvalue of the eigenstate \(| \mathbf{n} \rangle = | \psi_{i_1}, \psi_{i_2}, \dots \rangle\) (with \(n_1\) of the \(\psi_{i_k}\) in eigenstate \(\psi_{1}\),…) equal to
+\begin{equation*}
+\begin{split}o_{\mathbf{n}} = \sum_{\alpha} n_a o_a = \sum_{k} o_{i_k} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This analogy also provides a justification for the expressions \eqref{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:first-quantization} and \eqref{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:second-quantization} of the one\sphinxhyphen{}body operator \(\hat{O}_1\).
+\end{sphinxadmonition}
+
+
+\subsubsection{Space representation}
+\label{\detokenize{ch/quantum-mechanics/many-body/operators:space-representation}}
+\sphinxAtStartPar
+Using the relations \eqref{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:creation:inverse} and \eqref{equation:ch/quantum-mechanics/many-body/quantum-fields:eq:qft:fields:annihilation:inverse},
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{a}^\dagger_{a} 
+  & = \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{a}_{a} 
+  & = \int_{\mathbf{r}} \psi_a^*(\mathbf{r}) \Psi(\mathbf{r}) \, d \mathbf{r} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+it’s possible to find another equivalent expression of the expression \eqref{equation:ch/quantum-mechanics/many-body/operators:eq:qft:operator:one-body:second-quantization} of the \(\hat{O}_1\) operator,
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Review these steps. There’s too much free\sphinxhyphen{}style in swapping operators…}
+\begin{equation*}
+\begin{split}\begin{aligned}
+\hat{O}_1
+& = \sum_{\alpha, \beta} o_{\alpha \beta} \hat{a}_{\alpha}^{\dagger} \hat{a}_{\beta} = \\
+& = \sum_{\alpha, \beta} o_{\alpha \beta} \left( \int_{\mathbf{r}} \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r}) \, d \mathbf{r} \right) \left( \int_{\mathbf{r}'} \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r}' \right) = \\
+& = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'} o_{\alpha \beta}  \psi_a(\mathbf{r}) \Psi^\dagger(\mathbf{r})  \psi_\beta^*(\mathbf{r}') \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \sum_{\alpha, \beta}  \int_{\mathbf{r}} \int_{\mathbf{r}'}  \psi_a(\mathbf{r}) o_{\alpha \beta} \psi_\beta^*(\mathbf{r}')  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = && (1) \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \psi_a \rangle \langle \psi_a | \hat{o} | \psi_\beta \rangle \langle \psi_\beta | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  \langle \mathbf{r} | \hat{o} | \mathbf{r}' \rangle  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = && (2) \\
+& = \int_{\mathbf{r}} \int_{\mathbf{r}'} \sum_{\alpha, \beta}  o_{\mathbf{r}; \partial_{\mathbf{r}}}  \underbrace{\langle \mathbf{r} | \mathbf{r}' \rangle}_{\delta(\mathbf{r}-\mathbf{r}')}  \Psi^\dagger(\mathbf{r}) \Psi(\mathbf{r}') \, d \mathbf{r} \, d \mathbf{r}' = \\
+& = \int_{\mathbf{r}} \sum_{\alpha, \beta}  \Psi^\dagger(\mathbf{r}) o_{\mathbf{r}; \partial_{\mathbf{r}}}  \Psi(\mathbf{r}') \, d \mathbf{r} \ ,
+\end{aligned}\end{split}
+\end{equation*}\label{ch/quantum-mechanics/many-body/operators:example-0}
+\begin{sphinxadmonition}{note}{Example 23.6.1 (Kinetic energy)}
+
+
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \hat{T}
+ & = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \langle \mathbf{r} | \hat{t} \hat{\Psi}(\mathbf{r}) = \\
+ & = \dots = \\
+ & = \int_{\mathbf{r}} \hat{\Psi}^\dagger(\mathbf{r}) \left( - \frac{\hbar^2}{2m} \nabla^2 \right) \hat{\Psi}(\mathbf{r}) = \\
+ & = \int_{\mathbf{r}} \frac{\hbar^2}{2m} \nabla \hat{\Psi}^\dagger(\mathbf{r}) \cdot \nabla \hat{\Psi}(\mathbf{r}) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with integration by parts and vanishing operators for \(|\mathbf{r}| \rightarrow + \infty\).
+\end{sphinxadmonition}
+
+
+\subsection{Two\sphinxhyphen{}body operators}
+\label{\detokenize{ch/quantum-mechanics/many-body/operators:two-body-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/operators:quantum-mechanics-second-quantizazion-operators-two-body}}
 \sphinxstepscope
 
 
@@ -12788,10 +13379,10 @@ and thus \(J_n(x) = J - J_p(x)\).
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/second\sphinxhyphen{}quantization}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/second-quantization:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/operators}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/operators:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/second\sphinxhyphen{}quantization}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/second-quantization:\detokenize{example-1}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/identical\sphinxhyphen{}systems}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/identical-systems:\detokenize{example-1}}
 \indexspace
 \bigletter{example\sphinxhyphen{}2}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}2}\sphinxstyleindexextra{ch/relativity\sphinxhyphen{}special/lorentz}\sphinxstyleindexpageref{ch/relativity-special/lorentz:\detokenize{example-2}}
