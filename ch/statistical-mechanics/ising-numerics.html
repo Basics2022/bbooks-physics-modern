@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -232,8 +223,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/light-dispersion.html">20.4.1. Light dispersion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/einstein-planck.html">20.4.2. Light matter interaction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/larmor-formula.html">20.4.3. Radiation of moving charges - Larmor’s formula</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/heisenberg-reinterpretation.html">20.4.4. Modern reinterpretation of Heisenberg mechanics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/matrix-mechanics/electron-perturbation-numerical.html">20.4.5. Numerical simulation of the electron pertubation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/spin.html">20.4.4. Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/heisenberg-reinterpretation.html">20.4.5. Modern reinterpretation of Heisenberg mechanics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/matrix-mechanics/electron-perturbation-numerical.html">20.4.6. Numerical simulation of the electron pertubation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/history/origin-wave-mechanics.html">20.5. Origin of wave theory of quantum mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -257,31 +249,44 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-notes.html">21.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/dirac.html">21.6. Atomic model using Dirac equation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/many-body/second-quantization.html">22. Second Quantization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/many-body/electromagnetic-field-quantization.html">23. Quantization of the electromagnetic field</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/qft.html">24. Introduction to Quantum Field Theory</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/harmonic-oscillator.html">24.1. Harmonic Oscillator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/field-quantization.html">24.2. Field quantization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/photons.html">24.3. Photons - EM field quantization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/multi-body.html">24.4. Multi-body quantum mechanics and QFT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/interactions.html">24.5. Interacting Fields</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/relativistic-qm.html">22. Relativistic Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/relativistic-qm/dirac-equation.html">22.1. Dirac equation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/analytical-mechanics.html">25. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/many-body/many-body-quantum-mechanics.html">23. Many-body systems</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/identical-systems.html">23.1. Identical systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/fock-space.html">23.2. Second quantization. Fock space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/bosons.html">23.3. Second quantization. Bosons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/fermions.html">23.4. Second quantization. Fermions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/quantum-fields.html">23.5. Quantum fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/operators.html">23.6. Operators in QFT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/many-body/electromagnetic-field-quantization.html">24. Quantization of the electromagnetic field</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/qft.html">25. Introduction to Quantum Field Theory</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/harmonic-oscillator.html">25.1. Harmonic Oscillator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/field-quantization.html">25.2. Field quantization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/photons.html">25.3. Photons - EM field quantization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/multi-body.html">25.4. Multi-body quantum mechanics and QFT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/interactions.html">25.5. Interacting Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/analytical-mechanics.html">26. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">26. Introduction to Solid State Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">27. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">28. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">28.1. Introduction to the QM of Solids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">28.2. Semiconductors in Equilibrium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">28.3. Carrier Transport Phenomena</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">28.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">28.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">28.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">27. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">28. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">29. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">29.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">29.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">29.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">29.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">29.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">29.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
 </ul>
 </li>
 </ul>
@@ -707,9 +712,9 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lattice dimensions: 32,32
 Initial conditions:
-Energy       : 16.0
-N. of spin up: 514
-Magnetization: 4
+Energy       : -40.0
+N. of spin up: 522
+Magnetization: 20
 </pre></div>
 </div>
 </div>
@@ -762,8 +767,8 @@ Magnetization: 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/92904c678ff6e6121a3f87b93f6d396536f49806395ab306ee27267753377b0f.png" src="../../_images/92904c678ff6e6121a3f87b93f6d396536f49806395ab306ee27267753377b0f.png" />
-<img alt="../../_images/46a85a43c49b227b2abf73fad6154cb292448c7ddbd71550f6cbc0840fcd3d97.png" src="../../_images/46a85a43c49b227b2abf73fad6154cb292448c7ddbd71550f6cbc0840fcd3d97.png" />
+<img alt="../../_images/fd17c5b72c5797a05d2c4653ff2662838bd6e93e54527b149a14ec7145465ad4.png" src="../../_images/fd17c5b72c5797a05d2c4653ff2662838bd6e93e54527b149a14ec7145465ad4.png" />
+<img alt="../../_images/e3589abf05b954d8dfb39d557ba3148869adae1611bb23717f762b0398f37f3d.png" src="../../_images/e3589abf05b954d8dfb39d557ba3148869adae1611bb23717f762b0398f37f3d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -817,8 +822,8 @@ Magnetization: 4
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;P(M)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/eea9f06751579254d0eeccf6e46166ab949eea93242215f2bd0ca9075a4dcedb.png" src="../../_images/eea9f06751579254d0eeccf6e46166ab949eea93242215f2bd0ca9075a4dcedb.png" />
-<img alt="../../_images/6dfd74e1ede8258c7ca2cf6fb77c4324359a9b50912a1cf8c4a86b8da79b9934.png" src="../../_images/6dfd74e1ede8258c7ca2cf6fb77c4324359a9b50912a1cf8c4a86b8da79b9934.png" />
+<img alt="../../_images/6024ef8bd699de84c68b71bb283eba6ba2cbb628ecc121e6c36d4892aa8f1199.png" src="../../_images/6024ef8bd699de84c68b71bb283eba6ba2cbb628ecc121e6c36d4892aa8f1199.png" />
+<img alt="../../_images/b0ff5565139d85a1d2f10b1f6bbb679dc13e084cae8a26059ca926c2a1ca984c.png" src="../../_images/b0ff5565139d85a1d2f10b1f6bbb679dc13e084cae8a26059ca926c2a1ca984c.png" />
 </div>
 </div>
 <div class="cell docutils container">

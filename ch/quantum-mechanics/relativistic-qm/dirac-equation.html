@@ -583,17 +583,24 @@ Details of the solution<div class="sd-summary-down docutils">
 <div class="section" id="elementary-solutions-of-dirac-equation-for-a-free-particle">
 <h3><span class="section-number">22.1.2.1. </span>Elementary solutions of Dirac equation for a free particle<a class="headerlink" href="#elementary-solutions-of-dirac-equation-for-a-free-particle" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \left\{
-i \frac{\hbar}{c} \begin{bmatrix} \end{bmatrix} \partial_t
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_x
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_y
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_z
-- m c \right\} = \mathbf{0} \ .
-\]</div>
+i \frac{\hbar}{c} \begin{bmatrix} 1 &amp; &amp; &amp; \\ &amp; 1 &amp; &amp; \\ &amp; &amp; -1 &amp; \\ &amp; &amp; &amp; -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} &amp; &amp; &amp; 1 \\ &amp; &amp; 1 &amp; \\ &amp; -1 &amp; &amp; \\ -1 &amp; &amp; &amp;  \end{bmatrix} \partial_x
++ i \hbar \begin{bmatrix} &amp; &amp; &amp; -i \\ &amp; &amp; i &amp; \\ &amp; i &amp; &amp; \\ -i &amp; &amp; &amp;  \end{bmatrix} \partial_y
++ i \hbar \begin{bmatrix} &amp; &amp; 1 &amp; \\ &amp; &amp; &amp; -1 \\ -1 &amp; &amp; &amp; \\ &amp; 1 &amp; &amp;  \end{bmatrix} \partial_z
+- m c \right\} \Psi(t, \mathbf{r}) = \mathbf{0} \ .
+\end{split}\]</div>
 <div class="section" id="dimensional-reduction-to-1d-and-component-decoupling">
 <h4><span class="section-number">22.1.2.1.1. </span>Dimensional Reduction to 1D and Component Decoupling<a class="headerlink" href="#dimensional-reduction-to-1d-and-component-decoupling" title="Permalink to this heading">#</a></h4>
-<p>To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes, setting spatial derivatives to zero (<span class="math notranslate nohighlight">\(\partial_y = \partial_z = 0\)</span>).</p>
+<p>To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes, setting spatial derivatives to zero (<span class="math notranslate nohighlight">\(\partial_y = \partial_z = 0\)</span>). Dirac’s equation reduces to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{
+i \frac{\hbar}{c} \begin{bmatrix} 1 &amp; &amp; &amp; \\ &amp; 1 &amp; &amp; \\ &amp; &amp; -1 &amp; \\ &amp; &amp; &amp; -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} &amp; &amp; &amp; 1 \\ &amp; &amp; 1 &amp; \\ &amp; -1 &amp; &amp; \\ -1 &amp; &amp; &amp;  \end{bmatrix} \partial_x
+- m c \right\} \Psi(t, x) = \mathbf{0} \ .
+\end{split}\]</div>
 <p>Expanding the matrix equation for a four-component spinor <span class="math notranslate nohighlight">\(\Psi = \begin{pmatrix} \psi_1 &amp; \psi_2 &amp; \psi_3 &amp; \psi_4 \end{pmatrix}^T\)</span>, the system splits naturally into <strong>two independent pairs of coupled equations</strong>:</p>
 <ol class="arabic simple">
 <li><p>A coupling between <strong><span class="math notranslate nohighlight">\(\psi_1\)</span> and <span class="math notranslate nohighlight">\(\psi_4\)</span></strong></p></li>
@@ -602,27 +609,50 @@ i \frac{\hbar}{c} \begin{bmatrix} \end{bmatrix} \partial_t
 <p>For the first pair (<span class="math notranslate nohighlight">\(\psi_1\)</span> and <span class="math notranslate nohighlight">\(\psi_4\)</span>), the system reads:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 - i\hbar \partial_x \psi_4 = 0 \\[6pt]
--i\hbar \partial_x \psi_1 + \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
+\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 + i\hbar \partial_x \psi_4 = 0 \\[6pt]
+-i\hbar \partial_x \psi_1 - \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
 \end{cases}\end{split}\]</div>
 <p><strong>Reduction to Klein-Gordon Equation for individual components.</strong>
 By isolating <span class="math notranslate nohighlight">\(\partial_x \psi_4\)</span> from the first equation and substituting it into the second, the mixed temporal-spatial derivative terms cancel out, demonstrating that each individual component satisfies the relativistic dispersion relation:</p>
 <div class="math notranslate nohighlight">
 \[\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ ,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2\)</span> is the d’Alembertian operator.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\partial_x \psi_4 = \frac{1}{i\hbar} \left( m c \psi_1 - \frac{i \hbar}{c} \partial_t \psi_1 \right) \ ,\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = -i \hbar \partial_{xx} \psi_1 - \left( \frac{i \hbar}{c} \partial_t + m c \right) \partial_x \psi_4 = \\
+  &amp; = -i \hbar \partial_{xx} \psi_1 + \frac{1}{i \hbar} \left( \frac{i \hbar}{c} \partial_t + m c \right) \left( \frac{i \hbar}{c} \partial_t - m c  \right) \psi_1 = \\
+  &amp; = - i \hbar \partial_{xx} \psi_1 - \frac{i}{\hbar} \left( - \frac{\hbar^2}{c^2} \partial_{tt} - m^2 c^2 \right) \psi_1 \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus, after dividing by <span class="math notranslate nohighlight">\(i \hbar\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\left( \frac{1}{c^2} \partial_{tt} - \partial_{xx} + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ .\]</div>
 </div>
+</details></div>
 <div class="section" id="plane-wave-solutions-and-component-relations">
 <h4><span class="section-number">22.1.2.1.2. </span>Plane Wave Solutions and Component Relations<a class="headerlink" href="#plane-wave-solutions-and-component-relations" title="Permalink to this heading">#</a></h4>
-<p>Assuming a plane wave ansatz for the components of the form <span class="math notranslate nohighlight">\(\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}\)</span>, we can convert the differential coupling into an algebraic relation between the “large” and “small” components.</p>
-<p>From the first equation:</p>
+<p>Assuming a plane wave ansatz for the components of the form <span class="math notranslate nohighlight">\(\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}\)</span>, the <strong>dispersion relation</strong> <span class="math notranslate nohighlight">\(- \frac{E^2}{\hbar^2 c^2} + \frac{p_x^2}{\hbar^2} + \frac{m^2 c^2}{\hbar^2} = 0\)</span> is found between the energy and the momentum of the free particle, or after multiplying by <span class="math notranslate nohighlight">\(\hbar^2\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E^2 = p_x^2 c^2 + m^2 c^4 = 0 \quad \rightarrow \quad E = \mp c \sqrt{ p_x^2 + m^2 c^2 } \ ,\]</div>
+<p>i.e. the very same Einstein energy-momentum equation <a class="reference internal" href="#equation-eq-dirac-eq-einstein-en-mom">(22.1)</a>. Convert the differential coupling into an algebraic relation between the “large” and “small” components, the first equation</p>
 <div class="math notranslate nohighlight">
 \[i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1\]</div>
-<p>Evaluating the temporal derivative on the plane wave yields:</p>
+<p>becomes</p>
 <div class="math notranslate nohighlight">
-\[\left( \frac{i\hbar}{c} \left( -\frac{i E}{\hbar} \right) - mc \right) \psi_1 = \left( \frac{E}{c} - mc \right) \psi_1 = \frac{E - mc^2}{c} \psi_1\]</div>
-<p>Accounting for the spatial derivative operator <span class="math notranslate nohighlight">\(\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4\)</span>, we obtain the direct algebraic ratio between <span class="math notranslate nohighlight">\(\psi_4\)</span> and <span class="math notranslate nohighlight">\(\psi_1\)</span>:</p>
+\[i \hbar \cdot i \frac{p_x}{\hbar} \psi_4 = \left( \frac{i\hbar}{c} \left(- \frac{i E}{\hbar} \right) - mc \right) \psi_1 \]</div>
+<p>Thus, the relation between <span class="math notranslate nohighlight">\(\psi_1\)</span> and <span class="math notranslate nohighlight">\(\psi_4\)</span> is the ratio</p>
 <div class="math notranslate nohighlight">
-\[\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1\]</div>
+\[\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1 \ .\]</div>
 <p>An identical decoupling procedure applies symmetrically to the second pair (<span class="math notranslate nohighlight">\(\psi_2\)</span> and <span class="math notranslate nohighlight">\(\psi_3\)</span>).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">

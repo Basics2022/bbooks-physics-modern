@@ -70,17 +70,24 @@ $$\begin{aligned}
 
 $$
 \left\{
-i \frac{\hbar}{c} \begin{bmatrix} \end{bmatrix} \partial_t
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_x
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_y
-+ i \hbar \begin{bmatrix} \end{bmatrix} \partial_z
-- m c \right\} = \mathbf{0} \ .
+i \frac{\hbar}{c} \begin{bmatrix} 1 & & & \\ & 1 & & \\ & & -1 & \\ & & & -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} & & & 1 \\ & & 1 & \\ & -1 & & \\ -1 & & &  \end{bmatrix} \partial_x
++ i \hbar \begin{bmatrix} & & & -i \\ & & i & \\ & i & & \\ -i & & &  \end{bmatrix} \partial_y
++ i \hbar \begin{bmatrix} & & 1 & \\ & & & -1 \\ -1 & & & \\ & 1 & &  \end{bmatrix} \partial_z
+- m c \right\} \Psi(t, \mathbf{r}) = \mathbf{0} \ .
 $$
 
 
 #### Dimensional Reduction to 1D and Component Decoupling
 
-To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$).
+To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$). Dirac's equation reduces to
+
+$$
+\left\{
+i \frac{\hbar}{c} \begin{bmatrix} 1 & & & \\ & 1 & & \\ & & -1 & \\ & & & -1 \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} & & & 1 \\ & & 1 & \\ & -1 & & \\ -1 & & &  \end{bmatrix} \partial_x
+- m c \right\} \Psi(t, x) = \mathbf{0} \ .
+$$
 
 Expanding the matrix equation for a four-component spinor $\Psi = \begin{pmatrix} \psi_1 & \psi_2 & \psi_3 & \psi_4 \end{pmatrix}^T$, the system splits naturally into **two independent pairs of coupled equations**:
 1. A coupling between **$\psi_1$ and $\psi_4$**
@@ -89,8 +96,8 @@ Expanding the matrix equation for a four-component spinor $\Psi = \begin{pmatrix
 For the first pair ($\psi_1$ and $\psi_4$), the system reads:
 
 $$\begin{cases}
-\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 - i\hbar \partial_x \psi_4 = 0 \\[6pt]
--i\hbar \partial_x \psi_1 + \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
+\frac{i\hbar}{c} \partial_t \psi_1 - mc \, \psi_1 + i\hbar \partial_x \psi_4 = 0 \\[6pt]
+-i\hbar \partial_x \psi_1 - \frac{i\hbar}{c} \partial_t \psi_4 - mc \, \psi_4 = 0
 \end{cases}$$
 
 **Reduction to Klein-Gordon Equation for individual components.**
@@ -100,21 +107,42 @@ $$\left( \square + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ ,$$
 
 where $\square = \frac{1}{c^2}\partial_t^2 - \partial_x^2$ is the d'Alembertian operator.
 
+```{dropdown} Details
+
+$$\partial_x \psi_4 = \frac{1}{i\hbar} \left( m c \psi_1 - \frac{i \hbar}{c} \partial_t \psi_1 \right) \ ,$$
+
+and thus
+
+$$\begin{aligned}
+  0 
+  & = -i \hbar \partial_{xx} \psi_1 - \left( \frac{i \hbar}{c} \partial_t + m c \right) \partial_x \psi_4 = \\
+  & = -i \hbar \partial_{xx} \psi_1 + \frac{1}{i \hbar} \left( \frac{i \hbar}{c} \partial_t + m c \right) \left( \frac{i \hbar}{c} \partial_t - m c  \right) \psi_1 = \\
+  & = - i \hbar \partial_{xx} \psi_1 - \frac{i}{\hbar} \left( - \frac{\hbar^2}{c^2} \partial_{tt} - m^2 c^2 \right) \psi_1 \ ,
+\end{aligned}$$
+
+and thus, after dividing by $i \hbar$,
+
+$$\left( \frac{1}{c^2} \partial_{tt} - \partial_{xx} + \frac{m^2 c^2}{\hbar^2} \right) \psi_1 = 0 \ .$$
+
+```
+
 #### Plane Wave Solutions and Component Relations
 
-Assuming a plane wave ansatz for the components of the form $\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}$, we can convert the differential coupling into an algebraic relation between the "large" and "small" components.
+Assuming a plane wave ansatz for the components of the form $\psi_1 = K_{\mathbf{p}} e^{-\frac{i}{\hbar}(Et - p_x x)}$, the **dispersion relation** $- \frac{E^2}{\hbar^2 c^2} + \frac{p_x^2}{\hbar^2} + \frac{m^2 c^2}{\hbar^2} = 0$ is found between the energy and the momentum of the free particle, or after multiplying by $\hbar^2$,
 
-From the first equation:
+$$E^2 = p_x^2 c^2 + m^2 c^4 = 0 \quad \rightarrow \quad E = \mp c \sqrt{ p_x^2 + m^2 c^2 } \ ,$$
+
+i.e. the very same Einstein energy-momentum equation {eq}`eq:dirac-eq:einstein:en-mom`. Convert the differential coupling into an algebraic relation between the "large" and "small" components, the first equation
 
 $$i\hbar \partial_x \psi_4 = \left( \frac{i\hbar}{c} \partial_t - mc \right) \psi_1$$
 
-Evaluating the temporal derivative on the plane wave yields:
+becomes
 
-$$\left( \frac{i\hbar}{c} \left( -\frac{i E}{\hbar} \right) - mc \right) \psi_1 = \left( \frac{E}{c} - mc \right) \psi_1 = \frac{E - mc^2}{c} \psi_1$$
+$$i \hbar \cdot i \frac{p_x}{\hbar} \psi_4 = \left( \frac{i\hbar}{c} \left(- \frac{i E}{\hbar} \right) - mc \right) \psi_1 $$
 
-Accounting for the spatial derivative operator $\partial_x \psi_4 = \frac{i p_x}{\hbar} \psi_4$, we obtain the direct algebraic ratio between $\psi_4$ and $\psi_1$:
+Thus, the relation between $\psi_1$ and $\psi_4$ is the ratio
 
-$$\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1$$
+$$\psi_4 = \frac{mc^2 - E}{c \, p_x} \psi_1 \ .$$
 
 An identical decoupling procedure applies symmetrically to the second pair ($\psi_2$ and $\psi_3$).
 
