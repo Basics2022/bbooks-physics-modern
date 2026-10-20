@@ -68,6 +68,16 @@ $$\begin{aligned}
 
 ### Elementary solutions of Dirac equation for a free particle
 
+$$
+\left\{
+i \frac{\hbar}{c} \begin{bmatrix} \end{bmatrix} \partial_t
++ i \hbar \begin{bmatrix} \end{bmatrix} \partial_x
++ i \hbar \begin{bmatrix} \end{bmatrix} \partial_y
++ i \hbar \begin{bmatrix} \end{bmatrix} \partial_z
+- m c \right\} = \mathbf{0} \ .
+$$
+
+
 #### Dimensional Reduction to 1D and Component Decoupling
 
 To better understand the internal dynamics of the spinor, we can study a simplified scenario by assuming homogeneity along the $y$ and $z$ axes, setting spatial derivatives to zero ($\partial_y = \partial_z = 0$).
