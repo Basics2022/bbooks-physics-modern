@@ -62,6 +62,7 @@ parts:
       - file: ch/quantum-mechanics/history/light-dispersion
       - file: ch/quantum-mechanics/history/einstein-planck
       - file: ch/quantum-mechanics/history/larmor-formula
+      - file: ch/quantum-mechanics/history/spin
       - file: ch/quantum-mechanics/history/heisenberg-reinterpretation
       - file: ch/quantum-mechanics/history/matrix-mechanics/electron-perturbation-numerical
     - file: ch/quantum-mechanics/history/origin-wave-mechanics
@@ -81,6 +82,10 @@ parts:
       - file: ch/quantum-mechanics/atom-models/schrodinger-analytical-sln
       - file: ch/quantum-mechanics/atom-models/schrodinger-gallery
       - file: ch/quantum-mechanics/atom-models/schrodinger-notes
+    - file: ch/quantum-mechanics/atom-models/dirac
+  - file: ch/quantum-mechanics/relativistic-qm
+    sections:
+    - file: ch/quantum-mechanics/relativistic-qm/dirac-equation
   - file: ch/quantum-mechanics/many-body/many-body-quantum-mechanics
     sections:
     - file: ch/quantum-mechanics/many-body/identical-systems
