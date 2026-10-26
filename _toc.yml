@@ -103,6 +103,9 @@ parts:
     - file: ch/quantum-mechanics/qft/photons-coulomb
     - file: ch/quantum-mechanics/qft/multi-body
     - file: ch/quantum-mechanics/qft/interactions
+      sections:
+      - file: ch/quantum-mechanics/qft/interactions-perturbation
+      - file: ch/quantum-mechanics/qft/interactions-e-em-fields
   - file: ch/quantum-mechanics/analytical-mechanics
 - caption: Quantum Field Theory
   numbered: True
