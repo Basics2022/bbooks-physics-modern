@@ -155,11 +155,12 @@ with $\mathsf{H} = \text{tr} \left( \hat{H} \right) = \sum_a \langle a | \hat{H}
 (quantum-mechanics:history:heisenberg-reinterpretation:ccr-quantization-rule)=
 ## CCR and quantization rule
 
+(quantum-mechanics:history:heisenberg-reinterpretation:ccr-quantization-rule:matrix)=
 ### Modern approach. Matrix form of the CCR
 
 Given the CCR 
 
-$$\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = \mathbb{I} i \hbar \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,$$
+$$\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = i \hbar \mathbb{I} \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,$$
 
 its matrix components are
 
@@ -181,8 +182,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 ```
-...
 
+(quantum-mechanics:history:heisenberg-reinterpretation:ccr-quantization-rule:sommerfeld-to-ccr)=
 ### From Bohr-Sommerfeld quantization to CCR
 
 In old quantum mechanics - i.e. quantum mechanics before a quantum mechanics theory - Bohr-Sommerfeld quantization rule was
@@ -294,7 +295,7 @@ $$\sum_m f_{km} = 1$$
 
 This showed that Heisenberg's matrix mechanics naturally incorporated the empirically validated dispersion theory of Ladenburg, Kramers, and Kronig.
 
-
+(quantum-mechanics:history:heisenberg-reinterpretation:linear-harmonic-oscillator)=
 ## Application: The Linear Harmonic Oscillator
 
 
@@ -303,9 +304,13 @@ This showed that Heisenberg's matrix mechanics naturally incorporated the empiri
 For the harmonic oscillator Hamiltonian $\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2$:
 
 **Equations of Motion.**
-$$\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}$$
 
-Taking the second time derivative:
+$$\left\{ \begin{aligned}
+  \dot{\hat{x}} & = \frac{\hat{p}}{m} \\
+  \quad \dot{\hat{p}} & = -m\omega_0^2 \hat{x}
+\end{aligned} \right.$$
+
+Taking the derivative of the first equation and replacing the second equation for $\dot{\hat{p}}$, a second-order equation for $\hat{x}$ follows
 
 $$\ddot{\hat{x}} + \omega_0^2 \hat{x} = 0$$
 
@@ -330,6 +335,7 @@ $$E_n = \hbar \omega_0 \left( n + \frac{1}{2} \right)$$
 
 ```
 
+(quantum-mechanics:history:heisenberg-reinterpretation:transition-dipole-matrix)=
 ## Transition Probabilities as Dipole Matrix Elements
 
 When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:
@@ -345,6 +351,7 @@ The transition rate $W_{n \to m}$ (spontaneous emission / absorption probability
 $$W_{n \to m} \propto |\mathbf{d}_{mn}|^2 = q^2 |\langle m | \hat{\mathbf{x}} | n \rangle|^2$$
 
 
+(quantum-mechanics:history:heisenberg-reinterpretation:transition-perturbation-theory)=
 ## Perturbation Theory for Transition Probabilities in Weak Electric Fields
 
 Consider a time-dependent perturbation $\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)$.

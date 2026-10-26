@@ -536,76 +536,140 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="perturbation-theory">
 <span id="quantum-mechanics-qft-interactions-perturbation-theory"></span><h1><span class="section-number">25.6.1. </span>Perturbation theory<a class="headerlink" href="#perturbation-theory" title="Permalink to this heading">#</a></h1>
+<p>Other sections dealing with perturbation theory:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../history/heisenberg-reinterpretation.html#quantum-mechanics-history-heisenberg-reinterpretation-transition-perturbation-theory"><span class="std std-ref">Perturbation theory for transition probabilities in weak electric fields</span></a></p></li>
+<li><p><a class="reference internal" href="../einstein-coeffs-interaction-picture.html#quantum-mechanics-einstein-coeffs-interaction-picture-perturbation"><span class="std std-ref">Interaction picture and perturbation theory</span></a></p></li>
+</ul>
+<p><strong>todo</strong> <em>Need for cleaning</em></p>
+<hr class="docutils" />
+<p>Perturbation theory applies to systems governed by a Hamiltonian that can be written as the sum</p>
 <div class="math notranslate nohighlight">
 \[
-\hat H=\hat H_0+\hat H_{int}
+\hat H = \hat H_0+\hat H_{int} \ ,
 \]</div>
-<p>(<span class="math notranslate nohighlight">\(\hat H_0\)</span>: easy-to-solve unperturbed system; <span class="math notranslate nohighlight">\(\hat H_{int}\)</span>: “small interaction”.)</p>
+<p>with <span class="math notranslate nohighlight">\(\hat H_0\)</span> an easy-to-solve (unperturbed) system, whose spectral decomposition is usually known, and <span class="math notranslate nohighlight">\(\hat H_{int}\)</span> a “small” perturbation, either time independent or time dependent. Let <span class="math notranslate nohighlight">\(| \phi_n \rangle\)</span>, and <span class="math notranslate nohighlight">\(E_n\)</span> the eigenstates and the eigenvalues of the unperturbed Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_0 | \phi_n \rangle = E_n | \phi_n \rangle \ .\]</div>
+<p>Now, the perturbation Hamiltonian is explicitly written as the product of a “small” parameter <span class="math notranslate nohighlight">\(\lambda\)</span> and a scaled perturbation Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_1\)</span>, with the same order of the unperturbed Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \hat{H}_0 + \lambda \hat{H}_1 \ ,\]</div>
+<p>and a generic state <span class="math notranslate nohighlight">\(| \psi \rangle\)</span> of the system written as a linear combination of the eigenstates <span class="math notranslate nohighlight">\(\{ | \phi_n \rangle \}_n\)</span> of the unperturbed system,</p>
 <div class="math notranslate nohighlight">
 \[
-i\hbar|\dot\psi\rangle=(\hat H_0+\hat H_{int})|\psi\rangle,\qquad
-|\psi\rangle=\sum_nc_n(t)e^{-i\omega_nt}|\phi_n\rangle
+|\psi\rangle=\sum_nc_n(t)e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \ .
 \]</div>
-<p>Then</p>
+<p>Inserting this expression in the Schrodinger equation <span class="math notranslate nohighlight">\(i\hbar|\dot\psi\rangle=(\hat H_0+\hat H_{int})|\psi\rangle\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[
-i\hbar\sum_n\left(\dot c_n-i\omega_nc_n\right)e^{-i\omega_nt}|\phi_n\rangle=(\hat H_0+\hat H_{int})\sum_nc_ne^{-i\omega_nt}|\phi_n\rangle
-\]</div>
-<p>With <span class="math notranslate nohighlight">\(\hat H_0|\phi_n\rangle=E_n|\phi_n\rangle\)</span> the <span class="math notranslate nohighlight">\(E_n\)</span> terms cancel:</p>
-<div class="math notranslate nohighlight">
-\[
-0=\sum_n\left\{i\hbar\dot c_ne^{-i\omega_nt}|\phi_n\rangle-\hat H_{int}c_ne^{-i\omega_nt}|\phi_n\rangle\right\}
-\]</div>
-<p>Multiplying by <span class="math notranslate nohighlight">\(\langle\phi_m|\)</span>:</p>
+\[\begin{split}\begin{aligned}
+i\hbar\sum_n\left(\dot c_n-i \frac{E_n}{\hbar} c_n \right)e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle &amp; = (\hat H_0+\hat H_{int})\sum_nc_ne^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \\
+ \sum_n i\hbar\dot c_ne^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle &amp; = \hat H_{int}\sum_n c_n e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \ , 
+\end{aligned}\end{split}\]</div>
+<p>since <span class="math notranslate nohighlight">\(E_n| \phi_n \rangle = \hat{H}_0 | \phi_n \rangle\)</span>. Multiplying by <span class="math notranslate nohighlight">\(\langle\phi_m|\)</span>, and exploiting orthogonality <span class="math notranslate nohighlight">\(\langle \phi_m | \phi_n \rangle = \delta_{mn}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 i\hbar\dot c_me^{-i\omega_mt}=\sum_nc_ne^{-i\omega_nt}\langle\phi_m|\hat H_{int}|\phi_n\rangle
-\ \Rightarrow\
+\]</div>
+<p>i.e. the infinite system of equations - <span class="math notranslate nohighlight">\(m \in \{0,1,2,\dots\}\)</span> - follows</p>
+<div class="math notranslate nohighlight" id="equation-eq-interaction-perturbation">
+<span class="eqno">(25.5)<a class="headerlink" href="#equation-eq-interaction-perturbation" title="Permalink to this equation">#</a></span>\[
 \dot c_m=\frac1{i\hbar}\sum_nc_ne^{i(\omega_m-\omega_n)t}\langle\phi_m|\hat H_{int}|\phi_n\rangle
 \]</div>
-<p>an infinite set of equations. Power expansion in a small parameter <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<p>Perturbation theory looks for a solution writing the coefficients <span class="math notranslate nohighlight">\(c_m(t)\)</span> as power expansions in the “small” parameter <span class="math notranslate nohighlight">\(\lambda\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
 c_m(t)=c_m^{(0)}(t)+\lambda c_m^{(1)}(t)+\lambda^2c_m^{(2)}(t)+\dots
 \]</div>
+<p>Inserting this expression in <a class="reference internal" href="#equation-eq-interaction-perturbation">(25.5)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\dot c_m^{(0)}+\lambda\dot c_m^{(1)}+\lambda^2\dot c_m^{(2)}+\dots=\frac1{i\hbar}\sum_n\left(c_n^{(0)}+\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\right) \lambda H^{(1)}_{mn}e^{i(\omega_m-\omega_n)t} \ ,\]</div>
+<p>an (approximate) solution can be found by coefficient matching:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{ \begin{aligned}
+(0): &amp; \quad \dot{c}_m^{(0)} = 0 \\
+(k): &amp; \quad \dot{c}_m^{(k)} = \frac{1}{i\hbar} \sum_n c_n^{(k-1)} H^{(1)}_{mn} e^{i ( \omega_m - \omega_n ) t} \\
+\end{aligned} \right.\end{split}\]</div>
 <div class="section" id="th-order-solution">
 <h2><span class="section-number">25.6.1.1. </span>0th-order solution<a class="headerlink" href="#th-order-solution" title="Permalink to this heading">#</a></h2>
-<p>System starting in <span class="math notranslate nohighlight">\(|i\rangle\)</span>: <span class="math notranslate nohighlight">\(c_i(0)=1\)</span>, <span class="math notranslate nohighlight">\(c_{j\neq i}(0)=0\)</span>. Here <span class="math notranslate nohighlight">\(H^{int}_{mn}\propto\lambda H^{int}_{mn}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\dot c_m^{(0)}+\lambda\dot c_m^{(1)}+\lambda^2\dot c_m^{(2)}+\dots=\frac1{i\hbar}\sum_n\left(c_n^{(0)}+\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\right)\lambda H^{int}_{mn}e^{i(\omega_m-\omega_n)t}
-\]</div>
-<p>Check the 0th-order solution (the right way to represent the solution: <span class="math notranslate nohighlight">\(c^{(0)}_{n\neq m}(t)\equiv0\)</span>, <span class="math notranslate nohighlight">\(c_n(t)=\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\)</span>):</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(n=m\)</span>: <span class="math notranslate nohighlight">\(\dot c^{(0)}_m(t)=\frac1{i\hbar}c^{(0)}_mH^{int}_{mm}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(n\neq m\)</span>: <span class="math notranslate nohighlight">\(\dot c^{(0)}_n(t)=\frac1{i\hbar}c_m^{(0)}(t)H^{int}_{mn}e^{i\omega_{mn}t}\)</span> (with <span class="math notranslate nohighlight">\(c^{(0)}_m=1\)</span>)</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-c_m^{(0)}(t)=\begin{cases}\exp\!\left(-\dfrac{iH^{int}_{mm}}{\hbar}t\right)&amp;\text{if i.c. } c^{(0)}_m(0)=1,\ H^{int}_{mm}\neq0\\[2mm] 1&amp;\text{if } H^{int}_{mm}\equiv0\end{cases}
-\end{split}\]</div>
+<p>System starting in <span class="math notranslate nohighlight">\(| n \rangle\)</span>, <span class="math notranslate nohighlight">\(c_n(0)=1\)</span>, <span class="math notranslate nohighlight">\(c_{m \neq n}(0)=0\)</span>. As the <span class="math notranslate nohighlight">\(0^{th}\)</span>-order equations read <span class="math notranslate nohighlight">\(\dot{c}^{(0)}_m = 0\)</span>, then <span class="math notranslate nohighlight">\(0^{th}\)</span>-order coefficients are constant in time.</p>
 </div>
 <div class="section" id="st-order-solution">
 <h2><span class="section-number">25.6.1.2. </span>1st-order solution<a class="headerlink" href="#st-order-solution" title="Permalink to this heading">#</a></h2>
-<p>If <span class="math notranslate nohighlight">\(H_{mm}=0\)</span>, <span class="math notranslate nohighlight">\(c_m^{(0)}(t)=1\)</span>:</p>
+<p>If <span class="math notranslate nohighlight">\(c_n^{(0)}(t) = 1\)</span>, <span class="math notranslate nohighlight">\(c_{m \neq n}(t) = 0\)</span>, then infinite set of <span class="math notranslate nohighlight">\(1^{st}\)</span> order equations is</p>
 <div class="math notranslate nohighlight">
 \[
-\dot c_n^{(1)}(t)=\frac1{i\hbar}e^{i\omega_{mn}t}H^{int}_{mn}
+\dot c_m^{(1)}(t)= \frac{1}{i\hbar} e^{i\omega_{mn}t} H^{(1)}_{mn}
 \]</div>
-<p>If <span class="math notranslate nohighlight">\(\omega_{mn}\neq0\)</span>:</p>
+<ul>
+<li><p>coefficient <span class="math notranslate nohighlight">\(c_n^{(1)}\)</span></p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(H_{nn}^{(1)} = 0\)</span>, then the dynamical equation reads <span class="math notranslate nohighlight">\(\dot{c}^{(1)}_n = 0\)</span>, and the constant solution reads <span class="math notranslate nohighlight">\(c^{(1)}_n = 0\)</span>, as the i.c. for the non-zero order terms are identically zero</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(H_{nn}^{(1)} \ne 0\)</span>, then the dynamical equation reads <span class="math notranslate nohighlight">\(\dot{c}^{(1)}_n = \frac{1}{i\hbar} H^{(1)}_{nn}\)</span>, the solution reads <span class="math notranslate nohighlight">\(c_n^{(1)} = \frac{H^{(1)}_{nn}}{i\hbar} t\)</span></p></li>
+</ul>
+</li>
+<li><p>coefficients <span class="math notranslate nohighlight">\(c_m^{(1)}\)</span>, for <span class="math notranslate nohighlight">\(m \ne n\)</span>,</p>
+<ul>
+<li><p>if <span class="math notranslate nohighlight">\(H^{(1)}_{mn} = 0\)</span>, the dynamical eqaution reads <span class="math notranslate nohighlight">\(\dot{c}_m^{(1)} = 0\)</span>, and the constant solution reads <span class="math notranslate nohighlight">\(c_m^{(1)} = 0\)</span></p></li>
+<li><p>else</p>
+<ul>
+<li><p>if <span class="math notranslate nohighlight">\(\omega_{mn} := \omega_m - \omega_n \ne 0\)</span>, the dynamical equation reads <span class="math notranslate nohighlight">\(\dot{c}_m^{(1)} = \frac{e^{i \omega_{mn}t}}{i \hbar} H^{(1)}_{mn}\)</span>, then the solution reads</p>
+<div class="math notranslate nohighlight" id="equation-eq-interactions-perturbations-cm1">
+<span class="eqno">(25.6)<a class="headerlink" href="#equation-eq-interactions-perturbations-cm1" title="Permalink to this equation">#</a></span>\[c_m^{(1)}(t) = \left.\left[ - \frac{H^{(1)}_{mn} e^{i \omega_{mn} \tau}}{\hbar \omega_{mn}} \right]\right|_{\tau=0}^{t} = \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn}\]</div>
+</li>
+<li><p>if <span class="math notranslate nohighlight">\(\omega_{mn} := \omega_m - \omega_n = 0\)</span>, the dynamical equation reads <span class="math notranslate nohighlight">\(\dot{c}_m^{(1)} = \frac{1}{i \hbar} H^{(1)}_{mn}\)</span>, and the solution is <span class="math notranslate nohighlight">\(c_m^{(1)} = \frac{1}{i \hbar} H^{(1)}_{mn}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Probabilities.</strong> For a system starting in state <span class="math notranslate nohighlight">\(| n \rangle\)</span>, the power expansion of the coefficients <span class="math notranslate nohighlight">\(c_m(t)\)</span> reads</p>
 <div class="math notranslate nohighlight">
 \[
-c_n^{(1)}(t)=-\frac1{\hbar\omega_{mn}}e^{i\omega_{mn}t}\Big|_0^tH^{int}_{mn}=\frac{1-e^{i\omega_{mn}t}}{\hbar\omega_{mn}}H^{int}_{mn}
+ c_m(t) = \delta_{mn} + \sum_{k=1}^{+\infty} c_m^{(k)} \lambda^k \ .
 \]</div>
-<p>Probabilities (with <span class="math notranslate nohighlight">\(c_n^{(0)}\equiv0\)</span> for <span class="math notranslate nohighlight">\(n\neq m\)</span>):</p>
+<p>Thus,</p>
+<ul>
+<li><p>the probability <span class="math notranslate nohighlight">\(|c_n(t)|^2\)</span> contains zero and first order terms,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     |c_n|^2 
+     &amp; = \left( \sum_{k=0}^{+\infty} c_n^{(k)} \lambda^k \right)^* \left( \sum_{j=0}^{+\infty} c_n^{(j)} \lambda^j \right) = \\
+     &amp; = \sum_{k=0}^{+\infty} \sum_{j=0}^{+\infty} {c_n^{(k)}}^* c_n^{(j)} \lambda^{k+j} = \\
+     &amp; = \sum_{\ell=0}^{+\infty} \sum_{j=0}^{\ell} {c_n^{(\ell-j)}}^* c_n^{(j)} \lambda^{\ell} \ ,
+   \end{aligned}\end{split}\]</div>
+<p>or a bit more explicitly</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     | c_n |^2 
+     &amp; =  |c_n^{(0)}|^2 + \lambda \left( {c_n^{(0)}}^* c_n^{(1)} + {c_n^{(1)}}^* c_n^{(0)} \right) + \lambda^2 \left( {c_n^{(0)}}^* c_n^{(2)} + | c_n^{(1)} |^2 + {c_n^{(2)}}^* c_n^{(0)}  \right) + \dots = \\
+     &amp; =  1 + \lambda \left( c_n^{(1)} + {c_n^{(1)}}^* \right) + \lambda^2 \left( c_n^{(2)} + | c_n^{(1)} |^2 + {c_n^{(2)}}^*  \right) + \dots \ ,
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p>the probabilities <span class="math notranslate nohighlight">\(|c_m(t)|^2\)</span> with <span class="math notranslate nohighlight">\(m \ne n\)</span> only contains powers larger than or equal to <span class="math notranslate nohighlight">\(2\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     |c_m|^2 
+     &amp; = \left( \sum_{k=1}^{+\infty} c_m^{(k)} \lambda^k \right)^* \left( \sum_{j=1}^{+\infty} c_m^{(j)} \lambda^j \right) = \\
+     &amp; = \sum_{k=1}^{+\infty} \sum_{j=1}^{+\infty} {c_m^{(k)}}^* c_m^{(j)} \lambda^{k+j} = \\
+     &amp; = \sum_{\ell=2}^{+\infty} \sum_{j=1}^{\ell-1} {c_m^{(\ell-j)}}^* c_m^{(j)} \lambda^{\ell} \ ,
+   \end{aligned}\end{split}\]</div>
+<p>or a bit more explicitly</p>
+<div class="math notranslate nohighlight">
+\[| c_m |^2 = \lambda^2 |c_m^{(1)}|^2 + \lambda^3 \left( {c_m^{(2)}}^* c_m^{(1)} + {c_m^{(1)}}^* c_m^{(2)} \right) + \dots\]</div>
+</li>
+</ul>
+<p>Here the parameter <span class="math notranslate nohighlight">\(\lambda\)</span> is assumed to be real.</p>
+<p>If <span class="math notranslate nohighlight">\(H^{(1)}_{mn} \ne 0\)</span>, and <span class="math notranslate nohighlight">\(\omega_{mn} \ne 0\)</span>, the coefficient <span class="math notranslate nohighlight">\(c_{m}^{(1)}\)</span> is given by <a class="reference internal" href="#equation-eq-interactions-perturbations-cm1">(25.6)</a>, and its square modulus reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  |c_m^{(1)}|^2 
+  &amp; = \left( \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn} \right)^* \left( \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn} \right) = \\
+  &amp; = \left| H_{mn}^{(1)} \right|^2 \frac{4 \sin^2 \left( \frac{\omega_{mn} t}{2} \right)}{\hbar^2 \omega_{mn}^2} \ ,
+\end{aligned}\end{split}\]</div>
+<p>as <span class="math notranslate nohighlight">\((1 - e^{i a})^* (1- e^{i a}) = 2 - e^{ia} - e^{-ia} = 2 - 2 \cos( a ) = 4 \sin^2 \left( \tfrac{a}{2} \right)\)</span>. Thus the leading order of the probability <span class="math notranslate nohighlight">\(| c_n(t)|^2\)</span> - this is the probability of finding the state of the system in <span class="math notranslate nohighlight">\(| \phi_n \rangle\)</span> at time <span class="math notranslate nohighlight">\(t\)</span>, as this is the coefficient of <span class="math notranslate nohighlight">\(| \phi_n \rangle\)</span> of the state <span class="math notranslate nohighlight">\(| \psi \rangle\)</span> except for an irrelevant phase factor <span class="math notranslate nohighlight">\(e^{i \omega_{n} t}\)</span> - is</p>
 <div class="math notranslate nohighlight">
 \[
-|c_n(t)|^2=\lambda^2|c_n^{(1)}(t)|^2+\lambda^3\{\dots\}+\dots
-\]</div>
-<p>Using <span class="math notranslate nohighlight">\((1-e^{i\alpha})^*(1-e^{i\alpha})=2-2\cos\alpha=4\sin^2\frac\alpha2\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-|c_n(t)|^2\sim\lambda^2|H^{int}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
+|c_n(t)|^2\sim\lambda^2|H^{(1)}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
 \]</div>
 <p>As <span class="math notranslate nohighlight">\(t\to+\infty\)</span> this function goes to <strong>Dirac’s delta</strong>:</p>
 <div class="math notranslate nohighlight">
@@ -615,6 +679,7 @@ c_n^{(1)}(t)=-\frac1{\hbar\omega_{mn}}e^{i\omega_{mn}t}\Big|_0^tH^{int}_{mn}=\fr
 |c_n|^2\longrightarrow2\pi t\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)
 \]</div>
 <p>(natural units, <span class="math notranslate nohighlight">\(\hbar=1\)</span>.)</p>
+<p><strong>todo</strong> *See, update and cross-link <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html">Math: Dirac delta</a>.</p>
 </div>
 <div class="section" id="fermi-golden-rule">
 <h2><span class="section-number">25.6.1.3. </span>Fermi golden rule<a class="headerlink" href="#fermi-golden-rule" title="Permalink to this heading">#</a></h2>
