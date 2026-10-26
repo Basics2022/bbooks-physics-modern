@@ -97,6 +97,10 @@ $$
 
 ### Interaction Hamiltonian
 
+The Hamiltonian of a particle with mass $m$ and electric charge $q$ in a prescribed EM field is
+
+$$\mathcal{H} = \frac{1}{2} m | \dot{\vec{r}} |^2 + q \varphi = \frac{|\vec{p} - q \vec{a}|^2}{2 m} + q \varphi \ .$$
+
 Classical mechanics: $\vec p\to\vec p-q\vec a$ (without e.m. field → with e.m. field). Quantum: $\hat p\to\hat p-q\hat a$.
 
 $$
