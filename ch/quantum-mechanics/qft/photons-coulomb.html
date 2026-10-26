@@ -588,20 +588,21 @@ Details<div class="sd-summary-down docutils">
 \end{aligned}\end{split}\]</div>
 </div>
 </details><p><strong>Solution of the wave equation.</strong> Putting everything together, the solution of the wave equation for the vector potential can be written - here in a periodic domain - as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<div class="math notranslate nohighlight" id="equation-eq-photons-coulomb-vector-potential-fourier">
+<span class="eqno">(25.4)<a class="headerlink" href="#equation-eq-photons-coulomb-vector-potential-fourier" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   \vec{a}(\vec{r},t) 
   &amp; = \sum_{\vec{k}} \vec{a}(\vec{k},t) e^{i \vec{k} \cdot \vec{r}} = \\
-  &amp; = \sum_{\vec{k}} \left[ \vec{a}_{-}(\vec{k}) e^{i \omega_{\vec{k}} t} + \vec{a}_{+}(\vec{k}) e^{- i \omega_{\vec{k}} t}  \right] e^{i \vec{k} \cdot \vec{r}} = \\
+  &amp; = \sum_{\vec{k}} \left[ \vec{a}_{-}(\vec{k}) e^{i \omega_{\vec{k}} t} + \vec{a}_{+}(\vec{k}) e^{- i \omega_{\vec{k}} t}  \right] e^{i \vec{k} \cdot \vec{r}} = &amp;&amp; \text{(see re-arrangement)} \\
+  &amp; = \sum_{\vec{k}} \left[ \vec{a}_{-}(-\vec{k}) e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} + \vec{a}_{+}(\vec{k}) e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})}  \right] \ .
 \end{aligned}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Re-arrangement of the summation<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">For each <span class="math notranslate nohighlight">\(\vec{k}\)</span> (except for <span class="math notranslate nohighlight">\(vec{0}\)</span>), summing over <span class="math notranslate nohighlight">\(\vec{k}\)</span> and <span class="math notranslate nohighlight">\(-\vec{k}\)</span> produces 4 terms</p>
+<p class="sd-card-text">For each <span class="math notranslate nohighlight">\(\vec{k}\)</span> (except for <span class="math notranslate nohighlight">\(\vec{k} = \vec{0}\)</span>, to avoid summing twice the same contributions), summing over <span class="math notranslate nohighlight">\(\vec{k}\)</span> and <span class="math notranslate nohighlight">\(-\vec{k}\)</span> produces 4 terms</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   &amp; \vec{a}(\vec{k}, t) + \vec{a}(-\vec{k}, t) = \\
@@ -623,15 +624,16 @@ Re-arrangement of the summation<div class="sd-summary-down docutils">
 </div>
 <div class="section" id="quantization">
 <h2><span class="section-number">25.4.2. </span>Quantization<a class="headerlink" href="#quantization" title="Permalink to this heading">#</a></h2>
-<p>…</p>
-<p>In Hesienberg picture</p>
+<p>…<strong>todo</strong> <em>discuss promotion. Link to classical limit, other quantization procedures,…</em></p>
+<p>Promotion of the expression <a class="reference internal" href="#equation-eq-photons-coulomb-vector-potential-fourier">(25.4)</a> to operator. In Heisenberg picture</p>
 <div class="math notranslate nohighlight">
 \[
-\hat{\vec{a}}(\vec{r},t) = \sum_{\vec{k},\mu} 
+\hat{\vec{a}}(\vec{r},t) = \sum_{\vec{k}, \mu} \left[ e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \hat{a}^\dagger_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \hat{a}_{\vec{k},\mu} \right]
 \]</div>
 <p>…</p>
+<p>with Heisenberg picture for annihilation and creation operators being <span class="math notranslate nohighlight">\(\hat{a}^\dagger_H(t) = \hat{a}^\dagger e^{i \omega t}\)</span> and <span class="math notranslate nohighlight">\(\hat{a}_H(t) = \hat{a} e^{-i \omega t}\)</span> respectively.</p>
 <p><strong>todo</strong> <em>Discuss both Schrodinger and Heisenberg picture.</em></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Schrodinger and Heisenberg picture of annihilation/creation operators. Single simple harmonic oscillator<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -685,11 +687,144 @@ Schrodinger and Heisenberg picture of annihilation/creation operators. Single si
 <p>The state of an electromagnetic field can be written as a linear combination of states in the Fock space, with the occupation numbers of each possible modes <span class="math notranslate nohighlight">\(| \vec{k}, \mu \rangle\)</span>. A one-mode coherent state is defined as the <span class="math notranslate nohighlight">\(| \alpha_{\vec{k},\mu} \rangle\)</span> that’s an eigenstate of the annihilation operator <span class="math notranslate nohighlight">\(\hat{a}_{\vec{k},\mu}\)</span> for the mode <span class="math notranslate nohighlight">\(| \vec{k}, \mu \rangle\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\hat{a}_{\vec{k},\mu} | \alpha_{\vec{k},\mu} \rangle = c_{\vec{k}, \mu} | \alpha_{\vec{k},\mu} \rangle \ .\]</div>
-<p>Dropping the indices, the coherent state emerges to be</p>
+<p>The one-mode coherent state is a linear combination of states in the Fock space</p>
+<div class="math notranslate nohighlight">
+\[| \alpha_{\vec{k},\mu} \rangle = \sum_{n} b_n^{\vec{k},\mu} | \dots n_{\vec{k},\mu} \dots \rangle \ ,\]</div>
+<p>with zero occupation number of any state different from <span class="math notranslate nohighlight">\(|\vec{k}, \mu \rangle\)</span>, or dropping the indices,</p>
 <div class="math notranslate nohighlight">
 \[| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | n \rangle \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(b_n = b_0 \frac{c^n}{\sqrt{n!}}\)</span> from the definition and coefficient matching, and <span class="math notranslate nohighlight">\(b_0 = e^{-\frac{|c|^2}{2}}\)</span> from the normalization condition <span class="math notranslate nohighlight">\(\langle \alpha | \alpha \rangle = 1\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Annihilation operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Expected value when the system is in state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\langle \alpha | \hat{a} | \alpha \rangle = c \]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a} | \alpha \rangle 
+  &amp; = \sum_{n,m=0}^{+\infty} b_m^* b_n \langle m | \hat{a} | n \rangle = \\
+  &amp; = \sum_{m=0}^{+\infty} \sum_{n=1}^{+\infty} b_m^* b_n \sqrt{n} \langle m | n - 1 \rangle = \\
+  &amp; = \sum_{m=0}^{+\infty} \sum_{n=0}^{+\infty} b_m^* b_{n+1} \sqrt{n+1} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  &amp; = \sum_{n=0}^{+\infty} c \cdot |b_n|^2 = \\
+  &amp; = c \cdot \sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!} = \\
+  &amp; = c \cdot \underbrace{|b_0|^2 \cdot e^{|c|^2}}_{=1} = c \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since <span class="math notranslate nohighlight">\(\sqrt{n+1} b_{n+1} = c \cdot b_n\)</span>.</p>
 </div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Creation operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Expected value when the system is in state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\langle \alpha | \hat{a}^\dagger | \alpha \rangle = c^* \]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a}^\dagger | \alpha \rangle 
+  &amp; = \left( \langle \alpha | \hat{a} | \alpha \rangle \right)^* = \\
+  &amp; = \left( \sum_{n,m=0}^{+\infty} b_m^* b_n \langle m | \hat{a} | n \rangle \right)^* = \\
+  &amp; = \sum_{m=0}^{+\infty} \sum_{n=1}^{+\infty} b_m b_n^* \sqrt{n} \langle m | n - 1 \rangle = \\
+  &amp; = \sum_{m=0}^{+\infty} \sum_{n=0}^{+\infty} b_m b_{n+1}^* \sqrt{n+1} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  &amp; = \sum_{n=0}^{+\infty} c^* \cdot |b_n|^2 = \\
+  &amp; = c^* \cdot \sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!} = \\
+  &amp; = c^* \cdot \underbrace{|b_0|^2 \cdot e^{|c|^2}}_{=1}  = c^* \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Number operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Expected value of the number operator</p>
+<div class="math notranslate nohighlight">
+\[
+  \langle \alpha | \hat{n} | \alpha \rangle = |c|^2
+\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(\hat{n} = \hat{a}^\dagger \hat{a}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a}^\dagger \hat{a} | \alpha \rangle 
+  &amp; = \sum_{m,n=0}^{+\infty} b_m^* b_n \langle m | \hat{a}^\dagger \hat{a} | n \rangle = \\
+  &amp; = \sum_{m,n=0}^{+\infty} b_m^* b_n \sqrt{n} \langle m | \hat{a}^\dagger | n - 1 \rangle = \\
+  &amp; = \sum_{m,n=0}^{+\infty} b_m^* b_n \sqrt{n} \sqrt{n} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  &amp; = \sum_{n=0}^{+\infty} | b_n |^2 \cdot n = \\
+  &amp; = |b_0|^2 \sum_{n=1}^{+\infty} n \frac{|c|^{2n}}{n!} = \\
+  &amp; = |c|^2 \cdot |b_0|^2 \cdot \underbrace{\sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!}}_{ = e^{|c|^2} = |b_0|^{-2}} = \\
+  &amp; = |c|^2 \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Potential vector<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Expected value of the potential vector field operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \langle \alpha | \hat{\vec{a}}(\vec{r},t) | \alpha \rangle
+  &amp; =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \, c^*_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \, c_{\vec{k},\mu} \ .
+\end{aligned}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \alpha | \hat{\vec{a}}(\vec{r},t) | \alpha \rangle
+  &amp; = \langle \alpha | \sum_{\vec{k}', \mu'} \left[ e^{i ( \omega_{\vec{k}'} t - \vec{k}' \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}', \mu'} \hat{a}^\dagger_{\vec{k}',\mu'} + e^{- i ( \omega_{\vec{k}'} t - \vec{k}' \cdot \vec{r})} \vec{\epsilon}_{\vec{k}',\mu'} \hat{a}_{\vec{k}',\mu'} \right] | \alpha \rangle = \\
+  &amp; = \langle \alpha | \left[ e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \hat{a}^\dagger_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \hat{a}_{\vec{k},\mu} \right] | \alpha \rangle = \\
+  &amp; =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \langle \alpha | \hat{a}^\dagger_{\vec{k},\mu} | \alpha \rangle + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \langle \alpha | \hat{a}_{\vec{k},\mu} | \alpha \rangle = \\
+  &amp; =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \, c^* + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \, c \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Comparison with <a class="reference internal" href="#equation-eq-photons-coulomb-vector-potential-fourier">(25.4)</a> identifies the coefficients of the Fourier expansion with the eigenvalue of the annihilation operator corresponding to the coherent state,</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a}_+(\vec{k},\mu) \sim c_{\vec{k},\mu}
+\quad , \quad
+\vec{a}_-(-\vec{k},\mu) \sim c^*_{\vec{k},\mu} \ .
+\]</div>
+</div>
+</details></div>
+</details></div>
 </div>
 </div>
 
