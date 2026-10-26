@@ -100,9 +100,14 @@ parts:
     - file: ch/quantum-mechanics/qft/harmonic-oscillator
     - file: ch/quantum-mechanics/qft/field-quantization
     - file: ch/quantum-mechanics/qft/photons
+    - file: ch/quantum-mechanics/qft/photons-coulomb
     - file: ch/quantum-mechanics/qft/multi-body
     - file: ch/quantum-mechanics/qft/interactions
   - file: ch/quantum-mechanics/analytical-mechanics
+- caption: Quantum Field Theory
+  numbered: True
+  chapters:
+  - file: ch/qft/intro
 - caption: Solid State Physics
   numbered: True
   chapters:

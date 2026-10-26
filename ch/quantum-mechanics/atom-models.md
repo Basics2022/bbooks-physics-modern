@@ -6,6 +6,7 @@
 * [Bohr](quantum-mechanics:atom-models:bohr): atomic model, consistent with the relation $\Delta E = h \nu$ and emission/absorption of light
 * [Sommerfeld](quantum-mechanics:atom-models:sommerfeld): ...
 * [Schrodinger](quantum-mechanics:atom-models:schrodinger): atomic model from Schrodinger equation $i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle$
+* [Dirac](quantum-mechanics:atom-models:dirac): atomic model from Dirac equation $i \hbar \dot{| \Psi \rangle} = \left[ c \boldsymbol\alpha \cdot \hat{\mathbf{p}} + \beta m c^2 + V(\hat{r}) \right] | \Psi \rangle$.
 
 
 
