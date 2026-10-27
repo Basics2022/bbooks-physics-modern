@@ -298,7 +298,25 @@ All these results apply to a single particle, in a 1-dim domain, with a single o
 (quantum-mechanics:qft:harmonic-oscillator:classical-limit:coherent-states)=
 ### Coherent states
 
-A coherent state $| \alpha \rangle$ is defined as the eigenstate of the annihilation operator $\hat{a}$.
+* Definition
+* Properties:
+  * classical evolution of expected values
+  * minimum uncertainty
+
+#### Definition
+
+
+**Through the action of the displacement operator on the vacuum state.**
+
+$$| \alpha \rangle = \hat{D}(\alpha) | 0 \rangle = \exp\left(  \right) | 0 \rangle$$
+
+```{dropdown} Displacement operator
+:open:
+
+
+```
+
+**Eigen-state of the annihilation operator.** A coherent state $| \alpha \rangle$ is the eigenstate of the annihilation operator $\hat{a}$.
 
 **Schrodinger picture.** In Schrodinger picture, the operator is independent of time,
 
@@ -450,6 +468,8 @@ $$e^{-i \omega t} \hat{a} | \alpha \rangle_H = \alpha_H | \alpha \rangle_H $$
 $$\hat{a} | \alpha \rangle_H = e^{i \omega t} \alpha_H | \alpha \rangle_H $$
 
 and thus
+
+$$| \alpha \rangle_H = $$
 
 ...
 
