@@ -1,8 +1,22 @@
 (quantum-mechanics:second-quantizazion:bosons)=
 # Second quantization. Bosons
 
-The wavevector of a bosonnic field is symmetric under the exchange of particles, i.e. $| \Psi \rangle ( \dots, i, \dots, j, \dots ) = | \Psi \ranlge (\dots , j , \dots , i , \dots )$.
+The state of a many-body bosonic system is symmetric under the echange of 2 particles. This condition is represented in the [CCRs](quantum-mechanics:second-quantizazion:bosons:ccr).
 
+<!--
+$$| \Psi \rangle ( \dots, i, \dots, j, \dots ) = | \Psi \rangle (\dots , j , \dots , i , \dots ) \ .$$
+
+[Canonical commutation relations](quantum-mechanics:second-quantizazion:bosons:ccr) for the [creation and annihilation operators](quantum-mechanics:second-quantizazion:bosons:creation-annihilation) represent this symmetry. As an example, the CCRs
+
+$$[ \hat{b}_i, \hat{b}_j ] = [ \hat{b}^\dagger_i, \hat{b}^\dagger_j ] = 0 \ ,$$
+
+imply that the succcessive annihilation (or the creation) of two particles is independent from the order of the operation, $\hat{b}_i \hat{b}_j = \hat{b}_j \hat{b}_i$. The CCR
+
+$$[ \hat{b}_i, \hat{b}^\dagger_j ] = \delta_{ij} \ ,$$
+
+implies that the creation and annihilation of 2 particles in different states $i \ne j$, i.e. $\hat{b}_i \hat{b}_j^\dagger = \hat{b}_j^\dagger \hat{b}_i$, 
+
+-->
 
 (quantum-mechanics:second-quantizazion:bosons:creation-annihilation)=
 ## Creation and annihilation operators
@@ -13,7 +27,7 @@ $$\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i,
 
 A state $| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle$ can be obtained from the vacuum equation as
 
-$$| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | \mathbf{0} \rangle \ .$$
+$$| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} \dots | \mathbf{0} \rangle \ .$$
 
 
 **Annihilation operator, $\hat{b}_i$.** 
@@ -83,7 +97,15 @@ $$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n}
 ```
 -->
 
+
+(quantum-mechanics:second-quantizazion:bosons:number)=
+## Number operator
+
 **Total number operator.** $\hat{n} = \sum_{i} \hat{n}_i$
+
+
+(quantum-mechanics:second-quantizazion:bosons:ccr)=
+## Canonical commutation relations
 
 **CCRs.**
 

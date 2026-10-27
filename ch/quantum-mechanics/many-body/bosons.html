@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -511,6 +520,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">23.3.1. Creation and annihilation operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-operator">23.3.2. Number operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations">23.3.3. Canonical commutation relations</a></li>
 </ul>
             </nav>
         </div>
@@ -524,7 +535,21 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="second-quantization-bosons">
 <span id="quantum-mechanics-second-quantizazion-bosons"></span><h1><span class="section-number">23.3. </span>Second quantization. Bosons<a class="headerlink" href="#second-quantization-bosons" title="Permalink to this heading">#</a></h1>
-<p>The wavevector of a bosonnic field is symmetric under the exchange of particles, i.e. <span class="math notranslate nohighlight">\(| \Psi \rangle ( \dots, i, \dots, j, \dots ) = | \Psi \ranlge (\dots , j , \dots , i , \dots )\)</span>.</p>
+<p>The state of a many-body bosonic system is symmetric under the echange of 2 particles. This condition is represented in the <a class="reference internal" href="#quantum-mechanics-second-quantizazion-bosons-ccr"><span class="std std-ref">CCRs</span></a>.</p>
+<!--
+$$| \Psi \rangle ( \dots, i, \dots, j, \dots ) = | \Psi \rangle (\dots , j , \dots , i , \dots ) \ .$$
+
+[Canonical commutation relations](quantum-mechanics:second-quantizazion:bosons:ccr) for the [creation and annihilation operators](quantum-mechanics:second-quantizazion:bosons:creation-annihilation) represent this symmetry. As an example, the CCRs
+
+$$[ \hat{b}_i, \hat{b}_j ] = [ \hat{b}^\dagger_i, \hat{b}^\dagger_j ] = 0 \ ,$$
+
+imply that the succcessive annihilation (or the creation) of two particles is independent from the order of the operation, $\hat{b}_i \hat{b}_j = \hat{b}_j \hat{b}_i$. The CCR
+
+$$[ \hat{b}_i, \hat{b}^\dagger_j ] = \delta_{ij} \ ,$$
+
+implies that the creation and annihilation of 2 particles in different states $i \ne j$, i.e. $\hat{b}_i \hat{b}_j^\dagger = \hat{b}_j^\dagger \hat{b}_i$, 
+
+-->
 <div class="section" id="creation-and-annihilation-operators">
 <span id="quantum-mechanics-second-quantizazion-bosons-creation-annihilation"></span><h2><span class="section-number">23.3.1. </span>Creation and annihilation operators<a class="headerlink" href="#creation-and-annihilation-operators" title="Permalink to this heading">#</a></h2>
 <p><strong>Creation operator, <span class="math notranslate nohighlight">\(\hat{b}_i^{\dagger}\)</span>.</strong> The notation with the dagger is justified below, as the creation operator is the adjoint of the annihilation operator <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</p>
@@ -532,7 +557,7 @@ document.write(`
 \[\hat{b}_i^{\dagger} | \dots, n_i, \dots \rangle = \sqrt{n+1} | \dots, (n+1)_i, \dots \rangle \ .\]</div>
 <p>A state <span class="math notranslate nohighlight">\(| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle\)</span> can be obtained from the vacuum equation as</p>
 <div class="math notranslate nohighlight">
-\[| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | \mathbf{0} \rangle \ .\]</div>
+\[| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} \dots | \mathbf{0} \rangle \ .\]</div>
 <p><strong>Annihilation operator, <span class="math notranslate nohighlight">\(\hat{b}_i\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -594,7 +619,13 @@ $$n_i = \langle \mathbf{n} | \hat{n}_i | \mathbf{n} \rangle = \langle \mathbf{n}
 
 ```
 -->
+</div>
+<div class="section" id="number-operator">
+<span id="quantum-mechanics-second-quantizazion-bosons-number"></span><h2><span class="section-number">23.3.2. </span>Number operator<a class="headerlink" href="#number-operator" title="Permalink to this heading">#</a></h2>
 <p><strong>Total number operator.</strong> <span class="math notranslate nohighlight">\(\hat{n} = \sum_{i} \hat{n}_i\)</span></p>
+</div>
+<div class="section" id="canonical-commutation-relations">
+<span id="quantum-mechanics-second-quantizazion-bosons-ccr"></span><h2><span class="section-number">23.3.3. </span>Canonical commutation relations<a class="headerlink" href="#canonical-commutation-relations" title="Permalink to this heading">#</a></h2>
 <p><strong>CCRs.</strong></p>
 <div class="math notranslate nohighlight">
 \[[ \hat{b}_i, \hat{b}_j^\dagger ] = \delta_{ij} \ . \]</div>
@@ -685,6 +716,8 @@ Proof<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-and-annihilation-operators">23.3.1. Creation and annihilation operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-operator">23.3.2. Number operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#canonical-commutation-relations">23.3.3. Canonical commutation relations</a></li>
 </ul>
   </nav></div>
 
