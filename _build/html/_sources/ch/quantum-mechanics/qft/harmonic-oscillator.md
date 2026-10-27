@@ -514,6 +514,19 @@ $$\begin{aligned}
 
 ```
 
+Non-spreading wave-packets
+
+```{dropdown}
+:open:
+
+```
+
+Minimal uncertainty
+
+```{dropdown}
+:open:
+
+```
 
 ---
 
