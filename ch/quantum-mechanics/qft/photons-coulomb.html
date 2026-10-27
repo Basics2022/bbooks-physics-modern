@@ -281,7 +281,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="photons.html">25.3. Photons - EM field quantization</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">25.4. Photons - EM field quantization with Coulomb gauge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi-body.html">25.5. Multi-body quantum mechanics and QFT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactions.html">25.6. Interacting Fields</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="interactions.html">25.6. Interacting Fields</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="interactions-perturbation.html">25.6.1. Perturbation theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactions-e-em-fields.html">25.6.2. Interaction of the electron and electromagnetic field</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../analytical-mechanics.html">26. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
@@ -294,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../solid-state/intro.html">28. Introduction to Solid State Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../solid-state/notes-solid-state.html">29. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-solids-qm.html">30.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-equilibrium.html">30.2. Semiconductors in Equilibrium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../solid-state/semiconductors-transport-phenomena.html">30.3. Carrier Transport Phenomena</a></li>
@@ -623,7 +627,7 @@ Re-arrangement of the summation<div class="sd-summary-down docutils">
 <p>…</p>
 </div>
 <div class="section" id="quantization">
-<h2><span class="section-number">25.4.2. </span>Quantization<a class="headerlink" href="#quantization" title="Permalink to this heading">#</a></h2>
+<span id="quantum-mechanics-qft-photons-coulomb-quantization"></span><h2><span class="section-number">25.4.2. </span>Quantization<a class="headerlink" href="#quantization" title="Permalink to this heading">#</a></h2>
 <p>…<strong>todo</strong> <em>discuss promotion. Link to classical limit, other quantization procedures,…</em></p>
 <p>Promotion of the expression <a class="reference internal" href="#equation-eq-photons-coulomb-vector-potential-fourier">(25.4)</a> to operator. In Heisenberg picture</p>
 <div class="math notranslate nohighlight">
@@ -681,9 +685,9 @@ Schrodinger and Heisenberg picture of annihilation/creation operators. Single si
 </div>
 </div>
 <div class="section" id="classical-limit">
-<h2><span class="section-number">25.4.3. </span>Classical limit<a class="headerlink" href="#classical-limit" title="Permalink to this heading">#</a></h2>
+<span id="quantum-mechanics-qft-photons-coulomb-classical-limit"></span><h2><span class="section-number">25.4.3. </span>Classical limit<a class="headerlink" href="#classical-limit" title="Permalink to this heading">#</a></h2>
 <div class="section" id="one-mode-coherent-state">
-<h3><span class="section-number">25.4.3.1. </span>One-mode coherent state<a class="headerlink" href="#one-mode-coherent-state" title="Permalink to this heading">#</a></h3>
+<span id="quantum-mechanics-qft-photons-coulomb-classical-limit-one-mode-coherent"></span><h3><span class="section-number">25.4.3.1. </span>One-mode coherent state<a class="headerlink" href="#one-mode-coherent-state" title="Permalink to this heading">#</a></h3>
 <p>The state of an electromagnetic field can be written as a linear combination of states in the Fock space, with the occupation numbers of each possible modes <span class="math notranslate nohighlight">\(| \vec{k}, \mu \rangle\)</span>. A one-mode coherent state is defined as the <span class="math notranslate nohighlight">\(| \alpha_{\vec{k},\mu} \rangle\)</span> that’s an eigenstate of the annihilation operator <span class="math notranslate nohighlight">\(\hat{a}_{\vec{k},\mu}\)</span> for the mode <span class="math notranslate nohighlight">\(| \vec{k}, \mu \rangle\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\hat{a}_{\vec{k},\mu} | \alpha_{\vec{k},\mu} \rangle = c_{\vec{k}, \mu} | \alpha_{\vec{k},\mu} \rangle \ .\]</div>

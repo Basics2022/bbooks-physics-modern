@@ -300,6 +300,7 @@ All these results apply to a single particle, in a 1-dim domain, with a single o
 
 * Definition
 * Properties:
+  * time evolution of a coherent state
   * classical evolution of expected values
   * minimum uncertainty
 
@@ -330,11 +331,7 @@ $$| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | \phi_n \rangle \ ,$$
 
 with 
 
-$$b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{\alpha^2}{2}} e^{i \varphi}  \ .$$
-
-Thus the probabilities $|c_n|^2$ of being in states $| \phi_n \rangle$ follows a Poisson distribution,
-
-$$| c_n |^2 = \frac{ |\alpha|^{2n} e^{-\alpha^2}}{n!}$$
+$$b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{|\alpha|^2}{2}} e^{i \varphi}  \ .$$
 
 ```{dropdown} Details
 
@@ -362,6 +359,13 @@ $$b_0 = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \ .$$
 ```
 
 ````
+
+**Poisson distribution of probability coefficients in energy basis.** The probabilities $|c_n|^2$ of being in energy states $| \phi_n \rangle$ follows a **Poisson distribution**,
+
+$$| c_n |^2 = \frac{ |\alpha|^{2n} e^{-|\alpha|^2}}{n!} = p^{Poisson} (n; |\alpha|^2) \ ,$$
+
+and thus it has both **expected value** and **variance** equal to $|\alpha|^2$.
+
 
 **Time evolution of the state of a system, starting in a coherent state $| \Psi \rangle_0 = | \alpha \rangle$.** The evolution of a system governed by the Sschrodinger equation
 
@@ -472,6 +476,43 @@ and thus
 $$| \alpha \rangle_H = $$
 
 ...
+
+#### Classical limit
+
+The expected value of the position and the momentum of the system starting in a coherent state is
+
+$$\begin{aligned}
+ \langle \hat{x} \rangle & = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) = \sqrt{\frac{2 \hbar} {m \omega}} \left( \text{Re}\{ \alpha \} \cos(\omega t) + \text{Im}\{ \alpha \} \sin(\omega t) \right) \\
+ \langle \hat{p} \rangle & = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \sqrt{2 m \hbar \omega} \left( - \text{Re}\{ \alpha \} \sin(\omega t) + \text{Im}\{ \alpha \} \cos(\omega t) \right) = m \frac{d}{dt} \langle \hat{x} \rangle \\
+\end{aligned}$$
+
+
+```{dropdown} Details
+
+Using Heisenberg picture, the expected value of the position reads
+
+$$\begin{aligned}
+  \langle \hat{x} \rangle
+  & = \langle \alpha | \hat{x}_H | \alpha \rangle = \\
+  & = \langle \alpha | \sqrt{\frac{\hbar}{2 m \omega}} \left( \hat{a}^\dagger_H + \hat{a}_H \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{\hbar}{2 m \omega}} \langle \alpha | \left( \hat{a}^\dagger e^{i \omega t} + \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) \ ,
+\end{aligned}$$
+
+since $\langle \alpha | \hat{a} | \alpha \rangle = \alpha$, $\langle \alpha | \hat{a}^\dagger | \alpha \rangle = \alpha^*$ (see the section [One-mode coherent state, for the EM field](quantum-mechanics:qft:photons:coulomb:classical-limit:one-mode-coherent)). The expected value of the momentum, $\hat{p} = i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^{\dagger} - \hat{a} \right)$, reads
+
+$$\begin{aligned}
+  \langle \hat{p} \rangle
+  & = \langle \alpha | \hat{p}_H | \alpha \rangle = \\
+  & = \langle \alpha | i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^\dagger_H - \hat{a}_H \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \langle \alpha | i \left( \hat{a}^\dagger e^{i \omega t} - \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \cdot 2 \cdot \text{Re} \{ i \alpha^* e^{i \omega t} \} = \\
+  & = \sqrt{ 2 m \hbar \omega} \left( \text{Im}\{ \alpha \} \cos( \omega t ) - \text{Re} \{ \alpha \} \sin(\omega t) \right) \ ,
+\end{aligned}$$
+
+
+```
 
 
 ---
