@@ -1,6 +1,9 @@
 (quantum-mechanics:second-quantizazion:bosons)=
 # Second quantization. Bosons
 
+The wavevector of a bosonnic field is symmetric under the exchange of particles, i.e. $| \Psi \rangle ( \dots, i, \dots, j, \dots ) = | \Psi \ranlge (\dots , j , \dots , i , \dots )$.
+
+
 (quantum-mechanics:second-quantizazion:bosons:creation-annihilation)=
 ## Creation and annihilation operators
 
@@ -27,7 +30,6 @@ Annihilation and creation operators are not Hermitian.
 ```
 
 ```{dropdown} Creation operator is the adjoint of the annihilation operator
-:open:
 
 The adjoint operator of an operator $\hat{a}: A \rightarrow B$ is defined as the operator $\hat{a}^\dagger: B \rightarrow A$ so that
 
