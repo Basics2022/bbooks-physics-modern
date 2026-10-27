@@ -53,7 +53,6 @@ The lowest energy is $\neq0$ because of Heisenberg uncertainty, i.e. a particle 
 :::
 
 ````{dropdown} Details of the spectral decomposition of the Hamiltonian operator
-:open:
 
 Let $\xi = a x$. Then, as $\frac{d}{dx} = \frac{d \xi}{d x} \frac{d}{d \xi} = a \frac{d}{d \xi}$ the equation can be recast as
 
@@ -84,7 +83,6 @@ and comparing the leading order contributions $O(\xi^2 e^{-\xi^2/2})$.
 ```
 
 ```{dropdown} Full solution
-:open:
 
 Let the solution be $\psi(\xi) = h(\xi) e^{-\xi^2/2}$, with unknown $h(\xi)$. Its derivatives read
 
@@ -121,7 +119,6 @@ $$c_{k+2} = \frac{2k + 1 - \lambda}{(k+2)(k+1)} c_k \ .$$ (eq:hermite:recurrence
 ```
 
 ```{dropdown} Symmetry of the solutions
-:open:
 
 The recurrence relation {eq}`eq:hermite:recurrence` involves coefficients with the same parity, $c_k$ and $c_{k+2}$. Thus it's possible to select:
 
@@ -131,7 +128,6 @@ The recurrence relation {eq}`eq:hermite:recurrence` involves coefficients with t
 ```
 
 ```{dropdown} Asymptotic behavior of the power series
-:open:
 
 Let's discuss even solution here. The discussion for odd solutions is identical.
 
@@ -198,7 +194,6 @@ $$
 
 
 ```{dropdown} Creation and annihilation operators, and the Hamiltonian
-:open:
 
 $$\begin{aligned}
   \hat{H}
@@ -210,7 +205,6 @@ $$\begin{aligned}
 ```
 
 ```{dropdown} Commutation of annihilation and creation operator
-:open:
 
 $$\begin{aligned}
   \left[ \hat{a}, \hat{a}^\dagger \right]
@@ -224,7 +218,6 @@ $$\begin{aligned}
 ```
 
 ```{dropdown} Details about the action of creation and annihilation operators on eigenstates in position basis
-:open:
 
 The $n$ mode in space basis reads
 
@@ -297,6 +290,169 @@ $$
 All these results apply to a single particle, in a 1-dim domain, with a single oscillation frequency.
 
 **TODO**: generalization to more complex systems — is it possible?
+
+
+(quantum-mechanics:qft:harmonic-oscillator:classical-limit)=
+## Classical limit
+
+(quantum-mechanics:qft:harmonic-oscillator:classical-limit:coherent-states)=
+### Coherent states
+
+A coherent state $| \alpha \rangle$ is defined as the eigenstate of the annihilation operator $\hat{a}$.
+
+**Schrodinger picture.** In Schrodinger picture, the operator is independent of time,
+
+$$\hat{a} | \alpha \rangle = \alpha | \alpha \rangle \ .$$
+
+
+````{dropdown} Coherent state as a power series
+:open:
+
+$$| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | \phi_n \rangle \ ,$$
+
+with 
+
+$$b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{\alpha^2}{2}} e^{i \varphi}  \ .$$
+
+Thus the probabilities $|c_n|^2$ of being in states $| \phi_n \rangle$ follows a Poisson distribution,
+
+$$| c_n |^2 = \frac{ |\alpha|^{2n} e^{-\alpha^2}}{n!}$$
+
+```{dropdown} Details
+
+$$\begin{aligned}
+ \alpha \sum_{n=0}^{+\infty} b_n | n \rangle = \sum_{n=0}^{+\infty} \sqrt{n+1} b_{n+1} | n \rangle \ ,
+\end{aligned}$$
+
+and thus
+
+$$\sqrt{n+1} \, b_{n+1} = \alpha b_n \ ,$$
+
+and
+
+$$b_{n} = \frac{\alpha^n}{\sqrt{n!}} b_0$$
+
+Normalization gives
+
+$$1 = \langle \alpha | \alpha \rangle = \sum_{m,n=0}^{+\infty} b_m^* b_n \langle m | n \rangle = |b_0|^2 \sum_{n=0}^{+\infty} \frac{\alpha^{2n}}{n!} = |b_0|^2 \cdot e^{|\alpha|^2} \ ,$$
+
+i.e.
+
+$$b_0 = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \ .$$
+
+
+```
+
+````
+
+**Time evolution of the state of a system, starting in a coherent state $| \Psi \rangle_0 = | \alpha \rangle$.** The evolution of a system governed by the Sschrodinger equation
+
+$$i \hbar \dfrac{d}{dt} | \Psi \rangle_t = \hat{H} | \Psi \rangle_t = \left[ \frac{\hat{p}^2}{2m} + \frac{m \omega^2 \hat{x}^2}{2} \right] | \Psi \rangle_t \ ,$$
+
+can be written as
+
+$$\begin{aligned}
+  | \Psi \rangle_t 
+  & = \exp\left[ - i \frac{\hat{H}}{\hbar} t \right] | \Psi \rangle_0 = \\
+  & = \exp\left[ - i \frac{\hat{H}}{\hbar} t \right] \sum_{n=1}^{+\infty} \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{|\alpha|^2}{2}} e^{i \varphi} | \phi_n \rangle = \\ 
+  & = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \sum_{n=1}^{+\infty} \frac{\alpha^n}{\sqrt{n!}} e^{-i \frac{E_n}{\hbar} t} | \phi_n \rangle \ .
+\end{aligned}$$
+
+For a harmonic oscillator $E_n = \hbar \omega \left( n + \frac{1}{2} \right)$,
+
+$$\begin{aligned}
+  | \Psi \rangle_t 
+  & = e^{-i \frac{\omega}{2} t} \left[ e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \sum_{n=1}^{+\infty} \frac{\left( \alpha e^{-i \omega t} \right)^n}{\sqrt{n!}} | \phi_n \rangle \right] \ .
+\end{aligned}$$
+
+````{dropdown} In space representation
+:open:
+
+The annihilation operator reads
+
+$$\begin{aligned}
+  \langle x | \hat{a} 
+  & = \sqrt{\frac{m \omega}{2 \hbar}}\langle x | \left( \hat{x} + \frac{i \hat{p}}{m \omega} \right) = \\
+  & = \sqrt{\frac{m \omega}{2 \hbar}} \left( x + \frac{\hbar}{m \omega} \partial_x \right)
+\end{aligned}$$
+
+and its spectral decomposition
+
+$$\begin{aligned}
+  \langle x | \hat{a} | \alpha \rangle & = \alpha \langle x | \alpha \rangle \\
+  \sqrt{\frac{m \omega}{2 \hbar}} \left( x + \frac{\hbar}{m \omega} \partial_x \right) \psi_\alpha(x) & = \alpha \psi_\alpha(x)
+\end{aligned}$$
+
+whose solution is
+
+$$\psi_\alpha(x) = \left( \frac{m \omega}{\pi \hbar} \right)^{1/4} \exp \left[ -\frac{m \omega}{2 \hbar} \left( x - \sqrt{\frac{2 \hbar}{m \omega}} \text{Re}\{ \alpha \} \right)^2 + i \sqrt{\frac{m \omega}{2 \hbar}} \text{Im}\{ \alpha \} x + i \, \text{Im}\{ C \} \right] \ .$$
+
+```{dropdown} Details
+
+Solution of the equation
+
+$$ x y(x) + a y'(x) = b y(x) $$
+
+with separation of variables,
+
+$$\begin{aligned}
+  a y'(x) & = ( x - b ) y(x) \\
+  \int \frac{dy}{y} & = \int \frac{1}{a} \left( b - x \right) dx \\
+  \ln |y| & = \frac{1}{a} \left( - \frac{x^2}{2} + b x + C \right) \\
+  \rightarrow \quad y(x) & = \exp \left[ - \frac{x^2}{2 a} + \frac{b}{a} x + C \right] \\
+\end{aligned}$$
+
+The factor $K = \exp(C)$ is determined with the normalization condition, up to an irrelevant phase factor. In the problem $a \in \mathbb{R}$, $b \in \mathbb{C}$, and thus the squared magnitude is
+
+$$\begin{aligned}
+  |y(x)|^2 
+  & = \exp\left(-\frac{x^2}{a}\right) \cdot \exp\left( \frac{b + b^*}{a} x\right) \cdot \exp\left( C + C^*\right) = \\
+  & = \exp\left(-\frac{x^2}{a} + 2 \frac{\text{Re}\{ b \}}{a} x + 2 \text{Re}\{ C \} \right) = \\
+  & = \exp\left[ - \frac{1}{a} \left( x - \text{Re}\{ b \} \right)^2 + \frac{\text{Re}\{ b \}^2}{a} + 2 \text{Re}\{ C \} \right] = \\
+\end{aligned}$$
+
+and its integral
+
+$$1 = \int_{-\infty}^{+\infty} |y(x)|^2 dx = \int_{-\infty}^{+\infty} \exp\left( - \frac{1}{a} \left( x - \text{Re}\{ b \} \right)^2 \right) \, dx \cdot \exp \left[ \dots \right] = \sqrt{\pi a} \cdot \exp [ \dots ] ,$$
+
+so that the normalization factor reads $\exp[ \dots ] = \frac{1}{\sqrt{2 a}}$, having exploited 
+
+$$I^2 = \left[ \int_{x=-\infty}^{+\infty} e^{-\frac{x^2}{a}} \right]^2 = 2 \pi \cdot \frac{a}{2} \cdot \int_{r = 0}^{+\infty} e^{-\frac{r^2}{a}} d \frac{r^2}{a} = \pi a \ .$$
+
+As $\exp\left[ \frac{\text{Re}\{ b \}^2}{a} + 2 \text{Re}\{ C \} \right] = \frac{1}{\sqrt{2 a}}$, the normalized solution becomes
+
+$$\begin{aligned}
+  y(x) 
+  & = \exp\left[ - \frac{x^2}{2 a} + \frac{\text{Re}\{b\}}{a} x + i \frac{\text{Im}\{b\}}{a} x + \text{Re}\{ C \} + i \text{Im}\{ C \} \right] = \\
+  & = \exp\left[ - \frac{x^2}{2 a} + \frac{\text{Re}\{b\}}{a} x + i \frac{\text{Im}\{b\}}{a} x + i \text{Im}\{ C \} \right] \cdot \exp \left[ - \frac{\text{Re}\{ b \}^2}{2 a} \right] \cdot \frac{1}{(\pi a)^{1/4}} = \\
+  & = \exp\left[ - \frac{1}{2 a} \left( x - \text{Re}\{ b \} \right)^2 + i \frac{\text{Im}\{b\}}{a} x + i \text{Im}\{ C \} \right] \cdot \frac{1}{(\pi a)^{1/4}} \ .
+\end{aligned}$$
+
+Thus the solution of the eigenproblem of the annihilation operator is readily found with $a = \frac{\hbar}{m \omega}$, $b = \alpha \sqrt{\frac{2 \hbar}{m \omega}}$, and thus $\frac{b}{a} = \alpha \sqrt{\frac{m \omega}{2 \hbar}}$,
+
+$$\psi_\alpha(x) = \left( \frac{m \omega}{\pi \hbar} \right)^{1/4} \exp \left[ -\frac{m \omega}{2 \hbar} \left( x - \sqrt{\frac{2 \hbar}{m \omega}} \text{Re}\{ \alpha \} \right)^2 + i \sqrt{\frac{m \omega}{2 \hbar}} \text{Im}\{ \alpha \} x + i \, \text{Im}\{ C \} \right] \ .$$
+
+```
+
+
+````
+
+
+**Heisenberg picture.** Creation operator in Heisenberg picture satisfies Heisenberg dynamical equation,
+
+$$i \hbar \dfrac{d \hat{a}_H}{dt} = [\hat{a}, \hat{H}]_H = \dots = \hbar \omega \hat{a}_H \ ,$$
+
+and thus its evolution is $\hat{a}_H(t) = \hat{a}_H(0) \, e^{-i \omega t}$. Using the relation {} between Heisenberg and Schrodinger pictures of the same operator, $\hat{A}_H = \mathscr{U}_{t,t_0}^\dagger \hat{A}_S \mathscr{U}_{t,t_0}$, with $\mathscr{U}_{t_0,t_0} = \hat{\mathbf{1}}$, it follows that $\hat{a}_H(0) = \hat{a}$, and $\hat{a}_H(t) = \hat{a} \, e^{-i \omega t}$, without explicitly writing the index $S$ for Schrodinger picture.
+
+Thus the spectral decomposition of the annihilation operator in Heisenberg picture, $\hat{a}_H | \alpha \rangle_H = \alpha_H | \alpha \rangle_H$, becomes
+
+$$e^{-i \omega t} \hat{a} | \alpha \rangle_H = \alpha_H | \alpha \rangle_H $$
+$$\hat{a} | \alpha \rangle_H = e^{i \omega t} \alpha_H | \alpha \rangle_H $$
+
+and thus
+
+...
+
 
 ---
 

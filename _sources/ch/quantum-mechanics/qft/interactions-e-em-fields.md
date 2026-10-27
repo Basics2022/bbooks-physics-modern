@@ -97,24 +97,53 @@ $$
 
 ### Interaction Hamiltonian
 
-The Hamiltonian of a particle with mass $m$ and electric charge $q$ in a prescribed EM field is
+**Minimal coupling.** The Hamiltonian of a particle with mass $m$ and electric charge $q$ in a prescribed EM field is
 
-$$\mathcal{H} = \frac{1}{2} m | \dot{\vec{r}} |^2 + q \varphi = \frac{|\vec{p} - q \vec{a}|^2}{2 m} + q \varphi \ .$$
+$$\mathcal{H} = \frac{1}{2} m \left| \dot{\vec{r}} \right|^2 + q \varphi = \frac{|\vec{p} - q \vec{a}|^2}{2 m} + q \varphi \ .$$
 
-Classical mechanics: $\vec p\to\vec p-q\vec a$ (without e.m. field → with e.m. field). Quantum: $\hat p\to\hat p-q\hat a$.
+If the EM radiation field can be written with the vector EM potential field $\vec{a}$, while the scalar EM potential field fully represents the EM field of the nucleus, the Hamiltonian operator for a electron bound to an atom in an external EM field is obtained by the promotion to operators of the electron position and momentum, and the vector EM field,
 
-$$
-\hat H=\frac{\hat p^2}{2m_e}+V(\hat x)\ \longrightarrow\
-\frac{\hat p^2}{2m_e}+\underbrace{\frac{q^2}{2m_e}\left(\hat a_x^2+\hat a_y^2+\hat a_z^2\right)-\frac{q}{m_e}\,\hat p\cdot\hat a}_{\hat H_{int}}+V(\hat x)
-$$
+
+$$\begin{aligned}
+  \hat{H} 
+  & = \frac{\left| \hat{ \mathbf{p} } \right|^2}{2m_e} \underbrace{ - \frac{q}{m_e} \hat{\mathbf{p}} \cdot \hat{\mathbf{a}} + \frac{q^2}{2m_e} \left| \hat{\mathbf{a}} \right|^2}_{\hat{H}_{int}} + V(\hat{\mathbf{r}}) = \\
+\end{aligned}$$
+
+---
 
 Do $\hat p$ and $\hat a$ commute? Likely not! Maybe yes, if $\hat p$ only acts on $e^-$ while $\hat a$ acts on $\vec k,\alpha$.
+
+---
 
 To get the interaction Hamiltonian, put the 2 extra terms (due to the e.m. field) into the expectation formula:
 
 $$
 \hat H=\int_x\sum_m\hat b_m^\dagger\psi_m^*(x)\,\hat H_{int}\sum_n\hat b_n\psi_n(x)\,dx
 $$
+
+---
+
+```{dropdown} One-body operator for a bosonic field
+:open:
+
+Let $\hat{o}$, with $\hat{a}^\dagger$ and $\hat{a}$ creation and annihilation operators in the $\{ | \psi_k \rangle \}_k$ basis. Let $o_{\alpha \beta} = \langle \psi_{\alpha} | \hat{o} | \psi_{\beta} \rangle$.
+
+$$\hat{O}_1 = \sum_{\alpha,\beta} o_{\alpha \beta} \hat{a}^\dagger_{\alpha} \hat{a}_{\beta}$$
+
+or in space representation
+
+$$\hat{O}_1 = $$
+
+
+```
+
+```{dropdown} One-body operator for a fermionic field
+:open:
+
+
+```
+
+
 
 #### (1) $\vec p\cdot\vec a$ term
 
