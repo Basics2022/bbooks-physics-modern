@@ -97,6 +97,7 @@ s.t. each pair of terms gives a real contribution. Here the sum of the first pai
 
 ...
 
+(quantum-mechanics:qft:photons:coulomb:quantization)=
 ## Quantization
 
 ...**todo** *discuss promotion. Link to classical limit, other quantization procedures,...*
@@ -160,8 +161,10 @@ $$\hat{a}^\dagger_H(t) = \hat{a}^\dagger_H(0) e^{i \omega t} = \hat{a}^\dagger e
 
 ### ...
 
+(quantum-mechanics:qft:photons:coulomb:classical-limit)=
 ## Classical limit
 
+(quantum-mechanics:qft:photons:coulomb:classical-limit:one-mode-coherent)=
 ### One-mode coherent state
 
 The state of an electromagnetic field can be written as a linear combination of states in the Fock space, with the occupation numbers of each possible modes $| \vec{k}, \mu \rangle$. A one-mode coherent state is defined as the $| \alpha_{\vec{k},\mu} \rangle$ that's an eigenstate of the annihilation operator $\hat{a}_{\vec{k},\mu}$ for the mode $| \vec{k}, \mu \rangle$,

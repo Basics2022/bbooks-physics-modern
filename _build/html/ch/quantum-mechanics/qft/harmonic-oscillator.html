@@ -527,7 +527,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">25.1.3. Classical limit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coherent-states">25.1.3.1. Coherent states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coherent-states">25.1.3.1. Coherent states</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">25.1.3.1.1. Definition</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">25.1.3.1.2. Classical limit</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -870,7 +874,30 @@ Details about the action of creation and annihilation operators on eigenstates i
 <span id="quantum-mechanics-qft-harmonic-oscillator-classical-limit"></span><h2><span class="section-number">25.1.3. </span>Classical limit<a class="headerlink" href="#classical-limit" title="Permalink to this heading">#</a></h2>
 <div class="section" id="coherent-states">
 <span id="quantum-mechanics-qft-harmonic-oscillator-classical-limit-coherent-states"></span><h3><span class="section-number">25.1.3.1. </span>Coherent states<a class="headerlink" href="#coherent-states" title="Permalink to this heading">#</a></h3>
-<p>A coherent state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span> is defined as the eigenstate of the annihilation operator <span class="math notranslate nohighlight">\(\hat{a}\)</span>.</p>
+<ul class="simple">
+<li><p>Definition</p></li>
+<li><p>Properties:</p>
+<ul>
+<li><p>time evolution of a coherent state</p></li>
+<li><p>classical evolution of expected values</p></li>
+<li><p>minimum uncertainty</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="definition">
+<h4><span class="section-number">25.1.3.1.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h4>
+<p><strong>Through the action of the displacement operator on the vacuum state.</strong></p>
+<div class="math notranslate nohighlight">
+\[| \alpha \rangle = \hat{D}(\alpha) | 0 \rangle = \exp\left(  \right) | 0 \rangle\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Displacement operator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><p><strong>Eigen-state of the annihilation operator.</strong> A coherent state <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span> is the eigenstate of the annihilation operator <span class="math notranslate nohighlight">\(\hat{a}\)</span>.</p>
 <p><strong>Schrodinger picture.</strong> In Schrodinger picture, the operator is independent of time,</p>
 <div class="math notranslate nohighlight">
 \[\hat{a} | \alpha \rangle = \alpha | \alpha \rangle \ .\]</div>
@@ -885,10 +912,7 @@ Coherent state as a power series<div class="sd-summary-down docutils">
 \[| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | \phi_n \rangle \ ,\]</div>
 <p class="sd-card-text">with</p>
 <div class="math notranslate nohighlight">
-\[b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{\alpha^2}{2}} e^{i \varphi}  \ .\]</div>
-<p class="sd-card-text">Thus the probabilities <span class="math notranslate nohighlight">\(|c_n|^2\)</span> of being in states <span class="math notranslate nohighlight">\(| \phi_n \rangle\)</span> follows a Poisson distribution,</p>
-<div class="math notranslate nohighlight">
-\[| c_n |^2 = \frac{ |\alpha|^{2n} e^{-\alpha^2}}{n!}\]</div>
+\[b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{|\alpha|^2}{2}} e^{i \varphi}  \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Details<div class="sd-summary-down docutils">
@@ -914,7 +938,11 @@ Details<div class="sd-summary-down docutils">
 \[b_0 = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \ .\]</div>
 </div>
 </details></div>
-</details><p><strong>Time evolution of the state of a system, starting in a coherent state <span class="math notranslate nohighlight">\(| \Psi \rangle_0 = | \alpha \rangle\)</span>.</strong> The evolution of a system governed by the Sschrodinger equation</p>
+</details><p><strong>Poisson distribution of probability coefficients in energy basis.</strong> The probabilities <span class="math notranslate nohighlight">\(|c_n|^2\)</span> of being in energy states <span class="math notranslate nohighlight">\(| \phi_n \rangle\)</span> follows a <strong>Poisson distribution</strong>,</p>
+<div class="math notranslate nohighlight">
+\[| c_n |^2 = \frac{ |\alpha|^{2n} e^{-|\alpha|^2}}{n!} = p^{Poisson} (n; |\alpha|^2) \ ,\]</div>
+<p>and thus it has both <strong>expected value</strong> and <strong>variance</strong> equal to <span class="math notranslate nohighlight">\(|\alpha|^2\)</span>.</p>
+<p><strong>Time evolution of the state of a system, starting in a coherent state <span class="math notranslate nohighlight">\(| \Psi \rangle_0 = | \alpha \rangle\)</span>.</strong> The evolution of a system governed by the Sschrodinger equation</p>
 <div class="math notranslate nohighlight">
 \[i \hbar \dfrac{d}{dt} | \Psi \rangle_t = \hat{H} | \Psi \rangle_t = \left[ \frac{\hat{p}^2}{2m} + \frac{m \omega^2 \hat{x}^2}{2} \right] | \Psi \rangle_t \ ,\]</div>
 <p>can be written as</p>
@@ -1009,8 +1037,47 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\hat{a} | \alpha \rangle_H = e^{i \omega t} \alpha_H | \alpha \rangle_H \]</div>
 <p>and thus</p>
+<div class="math notranslate nohighlight">
+\[| \alpha \rangle_H = \]</div>
 <p>…</p>
-<hr class="docutils" />
+</div>
+<div class="section" id="id1">
+<h4><span class="section-number">25.1.3.1.2. </span>Classical limit<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>The expected value of the position and the momentum of the system starting in a coherent state is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \langle \hat{x} \rangle &amp; = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) = \sqrt{\frac{2 \hbar} {m \omega}} \left( \text{Re}\{ \alpha \} \cos(\omega t) + \text{Im}\{ \alpha \} \sin(\omega t) \right) \\
+ \langle \hat{p} \rangle &amp; = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \sqrt{2 m \hbar \omega} \left( - \text{Re}\{ \alpha \} \sin(\omega t) + \text{Im}\{ \alpha \} \cos(\omega t) \right) = m \frac{d}{dt} \langle \hat{x} \rangle \\
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using Heisenberg picture, the expected value of the position reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \hat{x} \rangle
+  &amp; = \langle \alpha | \hat{x}_H | \alpha \rangle = \\
+  &amp; = \langle \alpha | \sqrt{\frac{\hbar}{2 m \omega}} \left( \hat{a}^\dagger_H + \hat{a}_H \right) | \alpha \rangle = \\
+  &amp; = \sqrt{\frac{\hbar}{2 m \omega}} \langle \alpha | \left( \hat{a}^\dagger e^{i \omega t} + \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  &amp; = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since <span class="math notranslate nohighlight">\(\langle \alpha | \hat{a} | \alpha \rangle = \alpha\)</span>, <span class="math notranslate nohighlight">\(\langle \alpha | \hat{a}^\dagger | \alpha \rangle = \alpha^*\)</span> (see the section <a class="reference internal" href="photons-coulomb.html#quantum-mechanics-qft-photons-coulomb-classical-limit-one-mode-coherent"><span class="std std-ref">One-mode coherent state, for the EM field</span></a>). The expected value of the momentum, <span class="math notranslate nohighlight">\(\hat{p} = i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^{\dagger} - \hat{a} \right)\)</span>, reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \langle \hat{p} \rangle
+  &amp; = \langle \alpha | \hat{p}_H | \alpha \rangle = \\
+  &amp; = \langle \alpha | i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^\dagger_H - \hat{a}_H \right) | \alpha \rangle = \\
+  &amp; = \sqrt{\frac{m \hbar \omega}{2}} \langle \alpha | i \left( \hat{a}^\dagger e^{i \omega t} - \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  &amp; = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \\
+  &amp; = \sqrt{\frac{m \hbar \omega}{2}} \cdot 2 \cdot \text{Re} \{ i \alpha^* e^{i \omega t} \} = \\
+  &amp; = \sqrt{ 2 m \hbar \omega} \left( \text{Im}\{ \alpha \} \cos( \omega t ) - \text{Re} \{ \alpha \} \sin(\omega t) \right) \ ,
+\end{aligned}\end{split}\]</div>
+</div>
+</details><hr class="docutils" />
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 old version<div class="sd-summary-down docutils">
@@ -1111,6 +1178,7 @@ E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
 </details></div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1183,7 +1251,11 @@ E_n\psi_n=-\frac{\hbar^2}{2m}\psi_n''+\frac{m\omega^2x^2}{2}\psi_n
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-limit">25.1.3. Classical limit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coherent-states">25.1.3.1. Coherent states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coherent-states">25.1.3.1. Coherent states</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">25.1.3.1.1. Definition</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">25.1.3.1.2. Classical limit</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
