@@ -155,23 +155,51 @@ As $t\to+\infty$ this function goes to **Dirac's delta**:
 
 $$
 \int_{\omega=-\infty}^{+\infty}\left\{\frac{\sin(\omega t/2)}{\omega}\right\}^2d\omega=\frac\pi2t
-\qquad\text{and}\qquad
-|c_n|^2\longrightarrow2\pi t\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)
 $$
 
-(natural units, $\hbar=1$.)
+so that the transition rate probability between the initial state $m$ and the final state $n$ at the first order is
 
-**todo** *See, update and cross-link [Math: Dirac delta](https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html).
+$$
+ \frac{|c_n|^2}{t} \longrightarrow \frac{2\pi}{\hbar^2} \,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n) \ .
+$$
+
+
+**todo** *See, update and cross-link* [Math: Dirac delta](https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html).
 
 ## Fermi golden rule
 
-:::{admonition} Fermi golden rule
-- $\hat H_0$ with stationary states $|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}$.
-- $\hat H_{int}$ causes the state $|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}$ to transition to $|f\rangle=|\phi_f\rangle e^{-i\omega_ft}$ at the rate
-$$2\pi\,|M_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}$$
-:::
+```{prf:definition} Fermi golden rule - infinite time
+:label: qft:fermi-golden-rule
+
+For $t \rightarrow +\infty$, for a system with unperturbed Hamiltonian $\hat H_0$, with stationary states $|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}$, an additive "small" perturbation Hamiltonian $\hat{H}_{int}$ causes the initial state $|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}$ to transition to $|f\rangle=|\phi_f\rangle e^{-i\omega_ft}$ at the rate
+
+$$2\pi\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}$$
+
+<span style="color: red;">
+* What's the role of the delta here? <br>
+* Does it still make sense to set $t \rightarrow +\infty$ at the first order?. <br>
+</span>
+
+```
+
+```{prf:definition} Fermi golden rule - finite time
+:label: qft:fermi-golden-rule-finite
+
+For a system with unperturbed Hamiltonian $\hat H_0$, with stationary states $|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}$, an additive "small" perturbation Hamiltonian $\hat{H}_{int}$ causes the initial state $|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}$ to transition to $|f\rangle=|\phi_f\rangle e^{-i\omega_ft}$ at the rate
+
+$$
+|c_n(t)|^2\sim\lambda^2|H^{(1)}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
+$$
+
+<span style="color: red;">
+* The non-delta probability reflects the uncertainty principle involving Energy and Time. Without probing a system for an infinite time, it's impossible to get no uncertainty on its energy <br>
+</span>
+
+```
 
 ## Higher orders
+
+<span style="color: red;">Check it, and provide details about the mutliple interactions involving intermediate states.</span>
 
 $$
 \dot c_f^{(p+1)}(t)=\frac1{i\hbar}\sum_nc_n^{(p)}(t)\langle f|\hat H^{int}|n\rangle e^{i(\omega_f-\omega_n)t}

@@ -106,6 +106,9 @@ parts:
       sections:
       - file: ch/quantum-mechanics/qft/interactions-perturbation
       - file: ch/quantum-mechanics/qft/interactions-e-em-fields
+        sections:
+        - file: ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum
+        - file: ch/quantum-mechanics/qft/interactions-e-em-fields-compton
   - file: ch/quantum-mechanics/analytical-mechanics
 - caption: Quantum Field Theory
   numbered: True

@@ -675,25 +675,43 @@ c_m(t)=c_m^{(0)}(t)+\lambda c_m^{(1)}(t)+\lambda^2c_m^{(2)}(t)+\dots
 <div class="math notranslate nohighlight">
 \[
 \int_{\omega=-\infty}^{+\infty}\left\{\frac{\sin(\omega t/2)}{\omega}\right\}^2d\omega=\frac\pi2t
-\qquad\text{and}\qquad
-|c_n|^2\longrightarrow2\pi t\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)
 \]</div>
-<p>(natural units, <span class="math notranslate nohighlight">\(\hbar=1\)</span>.)</p>
-<p><strong>todo</strong> *See, update and cross-link <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html">Math: Dirac delta</a>.</p>
+<p>so that the transition rate probability between the initial state <span class="math notranslate nohighlight">\(m\)</span> and the final state <span class="math notranslate nohighlight">\(n\)</span> at the first order is</p>
+<div class="math notranslate nohighlight">
+\[
+ \frac{|c_n|^2}{t} \longrightarrow \frac{2\pi}{\hbar^2} \,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n) \ .
+\]</div>
+<p><strong>todo</strong> <em>See, update and cross-link</em> <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html">Math: Dirac delta</a>.</p>
 </div>
 <div class="section" id="fermi-golden-rule">
 <h2><span class="section-number">25.6.1.3. </span>Fermi golden rule<a class="headerlink" href="#fermi-golden-rule" title="Permalink to this heading">#</a></h2>
-<div class="admonition-fermi-golden-rule admonition">
-<p class="admonition-title">Fermi golden rule</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\hat H_0\)</span> with stationary states <span class="math notranslate nohighlight">\(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\hat H_{int}\)</span> causes the state <span class="math notranslate nohighlight">\(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\)</span> to transition to <span class="math notranslate nohighlight">\(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\)</span> at the rate
-$<span class="math notranslate nohighlight">\(2\pi\,|M_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}\)</span>$</p></li>
-</ul>
+<div class="proof definition admonition" id="qft:fermi-golden-rule">
+<p class="admonition-title"><span class="caption-number">Definition 25.1 </span> (Fermi golden rule - infinite time)</p>
+<div class="definition-content section" id="proof-content">
+<p>For <span class="math notranslate nohighlight">\(t \rightarrow +\infty\)</span>, for a system with unperturbed Hamiltonian <span class="math notranslate nohighlight">\(\hat H_0\)</span>, with stationary states <span class="math notranslate nohighlight">\(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\)</span>, an additive “small” perturbation Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_{int}\)</span> causes the initial state <span class="math notranslate nohighlight">\(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\)</span> to transition to <span class="math notranslate nohighlight">\(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\)</span> at the rate</p>
+<div class="math notranslate nohighlight">
+\[2\pi\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}\]</div>
+<span style="color: red;">
+* What's the role of the delta here? <br>
+* Does it still make sense to set $t \rightarrow +\infty$ at the first order?. <br>
+</span>
 </div>
+</div><div class="proof definition admonition" id="qft:fermi-golden-rule-finite">
+<p class="admonition-title"><span class="caption-number">Definition 25.2 </span> (Fermi golden rule - finite time)</p>
+<div class="definition-content section" id="proof-content">
+<p>For a system with unperturbed Hamiltonian <span class="math notranslate nohighlight">\(\hat H_0\)</span>, with stationary states <span class="math notranslate nohighlight">\(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\)</span>, an additive “small” perturbation Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_{int}\)</span> causes the initial state <span class="math notranslate nohighlight">\(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\)</span> to transition to <span class="math notranslate nohighlight">\(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\)</span> at the rate</p>
+<div class="math notranslate nohighlight">
+\[
+|c_n(t)|^2\sim\lambda^2|H^{(1)}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
+\]</div>
+<span style="color: red;">
+* The non-delta probability reflects the uncertainty principle involving Energy and Time. Without probing a system for an infinite time, it's impossible to get no uncertainty on its energy <br>
+</span>
 </div>
+</div></div>
 <div class="section" id="higher-orders">
 <h2><span class="section-number">25.6.1.4. </span>Higher orders<a class="headerlink" href="#higher-orders" title="Permalink to this heading">#</a></h2>
+<p><span style="color: red;">Check it, and provide details about the mutliple interactions involving intermediate states.</span></p>
 <div class="math notranslate nohighlight">
 \[
 \dot c_f^{(p+1)}(t)=\frac1{i\hbar}\sum_nc_n^{(p)}(t)\langle f|\hat H^{int}|n\rangle e^{i(\omega_f-\omega_n)t}

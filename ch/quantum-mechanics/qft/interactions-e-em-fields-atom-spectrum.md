@@ -1,0 +1,137 @@
+(quantum-mechanics:qft:interactions:e-em-fields:atom-spectra)=
+# Bound electrons - Atom spectra
+
+...
+
+**todo**
+* Schrodinger, Heisenberg and interaction pictures
+* Time dependence of the interaction Hamiltonian, in order to make energy conservation applear
+* ...
+
+## The Hamiltonian
+
+The full Hamiltonian is $H=H_{\rm el}+H_{\rm rad}+H_1+H_2$ with, from §2.3 (second-quantised via §1.5),
+
+$$
+H_1=\frac em\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A\!\cdot\!(-i\hbar\nabla)\,\psi_\sigma,\qquad
+H_2=\frac{e^2}{2m}\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A^2\,\psi_\sigma .
+$$
+
+Expanding $\mathbf A$ with §3.2 and the electron field in any basis $\{\alpha\}$ gives
+
+$$
+H_1=\frac em\sum_{\alpha\beta}\sum_{\mathbf k\lambda}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}+\langle\alpha|e^{-i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
+$$
+
+(the orderings of $e^{\pm i\mathbf k\cdot\mathbf x}$ and $\boldsymbol\varepsilon\!\cdot\!\mathbf p$ do not matter since $\boldsymbol\varepsilon\!\cdot\!\mathbf k=0$). Reading the structure:
+
+- $c^\dagger_\alpha c_\beta\,a$: the electron goes from $\beta$ to $\alpha$ **absorbing** a photon; $c^\dagger_\alpha c_\beta\,a^\dagger$: it goes from $\beta$ to $\alpha$ **emitting** one. Electron number is conserved (§2.2), photon number changes by $\pm1$.
+- $H_2$ contains $a^\dagger a$ (scattering, photon number unchanged) and $aa$, $a^\dagger a^\dagger$ (two photons absorbed or emitted), each with a factor $c^\dagger_\alpha c_\beta$.
+- Total momentum $\mathbf P_{\rm el}+\mathbf P_{\rm rad}$ is conserved when $V=0$, and the total angular momentum and parity in general (§2).
+
+## Transition rates
+
+For $H=H_0+H_I$ with $H_0=H_{\rm el}+H_{\rm rad}$ and eigenstates $|i\rangle,|f\rangle$ of $H_0$, time-dependent perturbation theory (Dyson series, long-time limit) gives the **golden rule**
+
+$$
+\Gamma_{i\to f}=\frac{2\pi}{\hbar}\,|T_{fi}|^2\,\delta(E_f-E_i),\qquad
+T_{fi}=\langle f|H_I|i\rangle+\sum_m\frac{\langle f|H_I|m\rangle\langle m|H_I|i\rangle}{E_i-E_m+i0}+\dots
+$$
+
+where $m$ runs over *all* intermediate states of $H_0$ (including states with extra photons). The sum over final photon modes is $\sum_{\mathbf k}\to V\!\int d^3k/(2\pi)^3=V\!\int\omega^2\,d\omega\,d\Omega\big/\big((2\pi)^3c^3\big)$, using $k=\omega/c$.
+
+## Absorption and emission of light by an atom
+
+```{dropdown} Time dependence and energy conservation
+:open:
+
+$$\begin{aligned}
+ \hat{a}_{\mathbf{k}, \mu}^\dagger & \sim e^{ i \frac{E_{\mathbf{k},\mu}}{\hbar} t} \\
+ \hat{a}_{\mathbf{k}, \mu}         & \sim e^{-i \frac{E_{\mathbf{k},\mu}}{\hbar} t} \\
+ \hat{c}_\alpha^\dagger            & \sim e^{ i \frac{E_\alpha}{\hbar} t} \\
+ \hat{c}_\beta                     & \sim e^{-i \frac{E_\beta }{\hbar} t} \\
+\end{aligned}$$
+
+---
+
+$$ \hat{c}_\alpha^\dagger \hat{c}_\beta \hat{a}_{\mathbf{k},\mu} | n_\alpha n_\beta n_{\mathbf{k}, \mu}\rangle = | (n+1)_\alpha (n-1)_\beta (n-1)_{\mathbf{k}, \mu}\rangle$$
+
+```
+
+
+**Matrix elements.** Let the atom go from level $a$ to $b$. With $n$ photons in the mode $(\mathbf k,\lambda)$:
+
+$$
+\text{absorption}\ (E_b>E_a):\ \langle b;n{-}1|H_1|a;n\rangle=\frac em N_k\sqrt n\,\langle b|e^{i\mathbf k\cdot\mathbf x}\boldsymbol\varepsilon\!\cdot\!\mathbf p|a\rangle,
+$$
+$$
+\text{emission}\ (E_b<E_a):\ \langle b;n{+}1|H_1|a;n\rangle=\frac em N_k\sqrt{n+1}\,\langle b|e^{-i\mathbf k\cdot\mathbf x}\boldsymbol\varepsilon\!\cdot\!\mathbf p|a\rangle,
+$$
+
+using $a|n\rangle=\sqrt n|n-1\rangle$ and $a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$. The rates are therefore proportional to $n$ for absorption and to $(n+1)$ for emission: the part $\propto n$ is **stimulated emission** (the mirror image of absorption), and the part $\propto1$ is **spontaneous emission**, which survives in the vacuum ($n=0$) and is caused by the zero-point field of §3.3. A classical field acting on quantised matter gives no spontaneous emission at all (cf. Chapter 1, §2.4).
+
+**Dipole approximation.** Over the size of the atom, $\mathbf k\!\cdot\!\mathbf x\sim ka_0$. For the hydrogen Lyman-$\alpha$ line, $\omega a_0/c=\tfrac38\alpha=2.7\times10^{-3}$, so $e^{\pm i\mathbf k\cdot\mathbf x}=1+O(10^{-3})$ and we replace it by $1$. The remaining matrix element is converted using $[\mathbf x,H_0]=i\hbar\mathbf p/m$:
+
+$$
+\langle b|[\mathbf x,H_0]|a\rangle=(E_a-E_b)\langle b|\mathbf x|a\rangle=\frac{i\hbar}{m}\langle b|\mathbf p|a\rangle
+\;\Longrightarrow\;
+\langle b|\mathbf p|a\rangle=-\,i\,m\,\omega\,\langle b|\mathbf x|a\rangle\quad\big(\hbar\omega=E_a-E_b\big),
+$$
+
+(for absorption $E_a<E_b$ the same identity holds with a sign change, which drops out of $|\cdot|^2$). With the dipole matrix element $\mathbf d_{ba}=-e\langle b|\mathbf x|a\rangle$ the emission matrix element has modulus
+
+$$
+|M|^2=\Big(\frac em\Big)^2N_k^2\,(n+1)\,m^2\omega^2|\boldsymbol\varepsilon\!\cdot\!\langle b|\mathbf x|a\rangle|^2=\frac{\hbar\omega}{2\varepsilon_0V}\,(n+1)\,|\boldsymbol\varepsilon\!\cdot\!\mathbf d_{ba}|^2 .
+$$
+
+**Spontaneous emission rate** ($n=0$). Apply the golden rule, with $\delta(E_a-E_b-\hbar\omega)=\delta(\omega-\omega_{ab})/\hbar$ and the sum of §5.2:
+
+$$
+\Gamma=\frac{2\pi}{\hbar}\cdot\frac{1}{\hbar}\cdot\frac{V\omega^2}{(2\pi)^3c^3}\cdot\frac{\hbar\omega}{2\varepsilon_0V}\int d\Omega\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d_{ba}|^2
+=\frac{\omega^3}{8\pi^2\varepsilon_0\hbar c^3}\int d\Omega\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d_{ba}|^2 .
+$$
+
+By polarisation completeness, $\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d|^2=|\mathbf d|^2-|\hat{\mathbf k}\!\cdot\!\mathbf d|^2$, and with $\int d\Omega\,\hat k_i\hat k_j=\tfrac{4\pi}{3}\delta_{ij}$ the angular integral is $4\pi|\mathbf d|^2-\tfrac{4\pi}{3}|\mathbf d|^2=\tfrac{8\pi}{3}|\mathbf d|^2$. The result is
+
+$$
+\boxed{\;\Gamma_{a\to b}=\frac{\omega^3\,|\mathbf d_{ba}|^2}{3\pi\varepsilon_0\hbar c^3}\;}\qquad\Big(\text{angular distribution }\propto\sin^2\theta\text{ from }\mathbf d\Big),
+$$
+
+the Einstein $A$ coefficient derived from first principles (Dirac, 1927). It is the number quoted in Chapter 1, §2.4.
+
+```{prf:example} **Worked example: hydrogen $2p\to1s$ (Lyman-$\alpha$).** 
+
+The photon energy is $\hbar\omega=\tfrac34\,\text{Ry}=10.204$ eV, i.e. $\lambda=121.5$ nm. With $R_{10}=2e^{-r/a_0}a_0^{-3/2}$, $R_{21}=\frac{1}{2\sqrt6}(r/a_0)\,e^{-r/2a_0}a_0^{-3/2}$, the radial integral is $\int R_{10}\,r\,R_{21}\,r^2dr=1.2903\,a_0$ and the angular factor $\langle00|\cos\theta|10\rangle=1/\sqrt3$, giving
+
+$$
+\langle1s|z|2p,m{=}0\rangle=\frac{2^{15/2}}{3^5}\,a_0=0.7449\,a_0 .
+$$
+
+(The rate is the same for $m=0,\pm1$ by rotation symmetry.) Then $|\mathbf d_{ba}|^2=e^2(0.7449\,a_0)^2$ and
+
+$$
+\Gamma=6.27\times10^{8}\ \text{s}^{-1},\qquad\tau=1/\Gamma=1.60\ \text{ns},\qquad\Delta\nu_{\rm nat}=\Gamma/2\pi\simeq100\ \text{MHz}.
+$$
+
+The measured $2p$ lifetime is $1.60$ ns. By contrast, the $2s$ level cannot decay to $1s$ by a one-photon E1 transition (no parity change, $\Delta l=0$, §2.4); in isolated hydrogen it decays by emitting *two* photons at a rate of only $\approx8\ \text{s}^{-1}$ (lifetime $\approx0.12$ s), about eight orders of magnitude slower than the allowed $2p$ decay.
+
+```
+
+**The classical limit of the rate.** A classical electron oscillator (Lorentz model) of angular frequency $\omega$ radiates, by Larmor's formula $P=e^2\omega^4x_0^2/(12\pi\varepsilon_0c^3)$, with energy $\tfrac12m\omega^2x_0^2$, so its energy decays at rate $\gamma_{\rm cl}=e^2\omega^2/(6\pi\varepsilon_0mc^3)$. Define the oscillator strength $f_{ba}=\frac{2m\omega}{3\hbar g_b}\sum_{ab}|\langle a|\mathbf r|b\rangle|^2$ ($g$ = degeneracy; the sum runs over all sublevels). Substituting into $\Gamma$ gives
+
+$$
+\Gamma_{a\to b}=3\,\frac{g_b}{g_a}\,f_{ba}\,\gamma_{\rm cl}.
+$$
+
+For Lyman-$\alpha$, $f=0.416$, $g_{1s}/g_{2p}=1/3$ (orbital degeneracies) and $\gamma_{\rm cl}=1.51\times10^{9}\ \text{s}^{-1}$, so $\Gamma=f\gamma_{\rm cl}=6.27\times10^8\ \text{s}^{-1}$ again: **the quantum emission rate is the classical radiation-damping rate times the oscillator strength**, the dimensionless measure of "how much of a classical oscillator" the transition is. The factor $\hbar$ has dropped out of the structure, as it must in a correspondence-principle statement.
+
+**Thermal equilibrium and Einstein's relations.** In blackbody radiation each mode has mean occupation $\bar n=1/(e^{\hbar\omega/k_BT}-1)$. Summing the above over modes, the total emission rate from a level $a$ is $A(\bar n+1)$ and the absorption rate of an atom in $b$ is $(g_a/g_b)A\bar n$ (because the double sum $\sum_{ab}|\mathbf d_{ab}|^2$ is common). Balancing the populations, $N_a\,A(\bar n+1)=N_b\,(g_a/g_b)A\bar n$, gives
+
+$$
+\frac{N_a}{N_b}=\frac{g_a}{g_b}\frac{\bar n}{\bar n+1}=\frac{g_a}{g_b}\,e^{-\hbar\omega/k_BT},
+$$
+
+exactly the Boltzmann distribution. This is Einstein's 1917 argument (Chapter 1, §2.4), where $A$, $B_{12}$, $B_{21}$ were related by consistency, now obtained as a *theorem* of the quantised theory: the "+1" is spontaneous emission.
+
+**Beyond the dipole approximation.** Expanding $e^{i\mathbf k\cdot\mathbf x}=1+i\mathbf k\!\cdot\!\mathbf x+\dots$ gives electric-quadrupole and magnetic-dipole transitions, suppressed by $(ka_0)^2\sim10^{-5}$ in rate: these account for "forbidden" lines.
+

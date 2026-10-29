@@ -1,6 +1,69 @@
 (quantum-mechanics:qft:interactions:e-em-fields)=
 # Interaction of the electron and electromagnetic field
 
+The behavior of the interactions between electron and electromagnetic fields strongly depends on the characteristic of the electron field:
+
+* [Bound electrons - Atom spectra](quantum-mechanics:qft:interactions:e-em-fields:atom-spectra)
+* [Free electrons - Compton scattering](quantum-mechanics:qft:interactions:e-em-fields:compton-scattering)
+
+
+````{dropdown} Non-relativistic model of the electron field. Schrodinger equation
+:open:
+
+For an electron in a potential $V(\mathbf x)$ we impose $\{\psi_\sigma(\mathbf x),\psi_{\sigma'}^\dagger(\mathbf y)\}=\delta_{\sigma\sigma'}\delta^3(\mathbf x-\mathbf y)$ and use the one-body Hamiltonian:
+
+$$
+H_{\rm el}=\sum_\sigma\int d^3x\;\psi_\sigma^\dagger(\mathbf x)\Big[-\frac{\hbar^2\nabla^2}{2m}+V(\mathbf x)\Big]\psi_\sigma(\mathbf x).
+$$
+
+The Heisenberg equation follows from $[A,BC]=\{A,B\}C-B\{A,C\}$:
+
+$$
+[\psi_\sigma(\mathbf x),\,\psi^\dagger_{\sigma'}(\mathbf y)\,h\,\psi_{\sigma'}(\mathbf y)]=\delta(\mathbf x-\mathbf y)\,h\,\psi_\sigma(\mathbf y)-\psi^\dagger(\mathbf y)\,h\,\underbrace{\{\psi_\sigma(\mathbf x),\psi_{\sigma'}(\mathbf y)\}}_{=0},
+$$
+
+so, integrating over $\mathbf y$,
+
+$$
+i\hbar\,\partial_t\psi_\sigma(\mathbf x,t)=[\psi_\sigma,H_{\rm el}]=\Big[-\frac{\hbar^2\nabla^2}{2m}+V\Big]\psi_\sigma(\mathbf x,t).
+$$
+
+The *operator* $\psi$ obeys the *Schrödinger equation*, and the one-particle wave function is recovered as $\Phi(\mathbf x,\sigma)=\langle0|\psi_\sigma(\mathbf x)|\Phi\rangle$. "Second quantisation" is therefore not a second quantisation of the same object: what is quantised is a field whose classical equation of motion happens to be the Schrödinger equation.
+
+Free electrons
+---
+
+For $V=0$ in the periodic box use plane waves $\phi_{\mathbf k\sigma}(\mathbf x)=V^{-1/2}e^{i\mathbf k\cdot\mathbf x}\chi_\sigma$:
+
+$$
+\psi_\sigma(\mathbf x)=\frac{1}{\sqrt V}\sum_{\mathbf k}e^{i\mathbf k\cdot\mathbf x}c_{\mathbf k\sigma},\qquad
+H_{\rm el}=\sum_{\mathbf k\sigma}\frac{\hbar^2k^2}{2m}\,c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma},\qquad
+\mathbf P=\sum_{\mathbf k\sigma}\hbar\mathbf k\,c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma}.
+$$
+
+A single free electron is $c^\dagger_{\mathbf k\sigma}|0\rangle$, with energy $\hbar^2k^2/2m$ and momentum $\hbar\mathbf k$. The ground state of $N$ non-interacting electrons fills the $N$ lowest $(\mathbf k,\sigma)$ levels, the Fermi sea (a consequence of $(c^\dagger)^2=0$). The spin label is conserved by $H_{\rm el}$.
+
+Bound electrons
+---
+
+For a hydrogen-like atom, $V=-Ze^2/4\pi\varepsilon_0r$, use the orbitals $\phi_{nlm}(\mathbf x)\chi_\sigma$ with $E_n=-Z^2\,\text{Ry}/n^2$:
+
+$$
+\psi_\sigma(\mathbf x)=\sum_{nlm}\phi_{nlm}(\mathbf x)\,c_{nlm\sigma}+\int\!d^3k\;\phi^{(+)}_{\mathbf k}(\mathbf x)\,c_{\mathbf k\sigma},\qquad
+H_{\rm el}=\sum_{nlm\sigma}E_n\,c^\dagger_{nlm\sigma}c_{nlm\sigma}+\int\!d^3k\,\frac{\hbar^2k^2}{2m}c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma}.
+$$
+
+The second term, the **Coulomb scattering states** $\phi^{(+)}_{\mathbf k}$, completes the basis: bound and continuum states together span $\mathcal H$. By §1.6 these operators are related to the plane-wave operators of §4.2 by a unitary transformation, $c^{\rm plane}_{\mathbf p}=\sum_b\langle\mathbf p|b\rangle c_b+\int\langle\mathbf p|\mathbf k^{(+)}\rangle c_{\mathbf k}$, with the bound-state momentum distribution $\langle\mathbf p|b\rangle$ spread over $|\mathbf p|\sim\hbar/a_0$. **The Fock space is the same; free and bound electrons differ only by which single-particle basis diagonalises $H_{\rm el}$.** A transition $c^\dagger_{\mathbf k}c_{b}$ is a photoionisation; $c^\dagger_{b'}c_{b}$ is a bound–bound transition; both are matrix elements of the *same* operator. For an atom with several electrons one adds the two-body Coulomb term of §1.5 and, in the single-active-electron approximation, treats the outermost electron in an effective potential; the light–matter formalism below is unchanged.
+
+**Spin.** Besides the orbital coupling, the electron has a Zeeman-type term $H_{\rm spin}=(e\hbar/2m)\,\boldsymbol\sigma\!\cdot\!\mathbf B$ ($g=2$). Compared with $H_1=(e/m)\mathbf A\!\cdot\!\mathbf p$, using $p\sim\hbar/a_0$ and $B\sim kA$, the ratio is $\sim ka_0\sim10^{-3}$ for optical and UV light, so we neglect it; it produces magnetic-dipole transitions. The fully consistent treatment of spin and its relativistic corrections is given by the Dirac field (§5.6).
+
+````
+
+---
+
+````{dropdown} Old - from Via Science - to be cleaned
+:open:
+
 **Photon field (Heisenberg picture).** The vector potential field operator and the Hamiltonian read
 
 $$
@@ -348,4 +411,4 @@ Annotations in the notes: $n_{\vec k\alpha}$ = "photon in initial state"; the $(
 (In the notes, a small diagram shows the initial state $|\vec p\rangle$ + photon $|\vec k,\alpha\rangle$ → final state $|\vec p'\rangle$ + photon $|\vec l,\beta\rangle$ in a space–time plot.)
 
 
-
+````
