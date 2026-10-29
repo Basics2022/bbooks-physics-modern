@@ -8,22 +8,71 @@
 * Time dependence of the interaction Hamiltonian, in order to make energy conservation applear
 * ...
 
+## Bound electron
+
+An electron bound to an isolated atom is governed by the Schrodinger equation - here neglecting spin for simplicity; use Pauli equation for non-relativistic approximation, or Dirac equation -
+
+$i \hbar \dot{| \Psi \rangle} = \left( \frac{|\hat{\mathbf{p}}|^2}{2 m} + V(\hat{\mathbf{r}}) \right) | \Psi \rangle \ ,$$
+
+being $V(\hat{\mathbf{r}})$ the potential energy operator, due to Coulomb force from the nucleus.
+
+
 ## The Hamiltonian
 
-The full Hamiltonian is $H=H_{\rm el}+H_{\rm rad}+H_1+H_2$ with, from §2.3 (second-quantised via §1.5),
+The full Hamiltonian is $\hat{H}=\hat{H}_{\rm el}+\hat{H}_{\rm rad}+\hat{H}_1+\hat{H}_2$ with, from §2.3 (second-quantised via §1.5),
 
 $$
-H_1=\frac em\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A\!\cdot\!(-i\hbar\nabla)\,\psi_\sigma,\qquad
-H_2=\frac{e^2}{2m}\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A^2\,\psi_\sigma .
+\hat{H}_1(t)=\frac{q}{m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r})  \quad , \quad
+\hat{H}_2(t)=\frac{q^2}{2m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) |\mathbf{A}(\mathbf{r},t)|^2 \hat{\Psi}(\mathbf{r}) \ .
 $$
 
-Expanding $\mathbf A$ with §3.2 and the electron field in any basis $\{\alpha\}$ gives
+Now,
+* expanding $\mathbf{A}(\mathbf{r},t)$ with
+
+  $$\hat{\mathbf{A}}(\mathbf{r},t) = \sum_{\mathbf{k}, \mu} \sqrt{\frac{\hbar}{2 \varepsilon_0 \omega_{\mathbf{k}} V}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \ ,$$
+
+* writing the electron fields as linear combinations of creation an annihilation operators $\hat{c}^\dagger$, $\hat{c}$ in any basis $\{ |\alpha \rangle \}$ as 
+
+  $$\begin{aligned}
+    \hat{\Psi}^\dagger(\mathbf{r}) & = \sum_{\alpha} \alpha^*(\mathbf{r}) \hat{c}^\dagger_{\alpha} && = \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha} \\
+    \hat{\Psi}        (\mathbf{r}) & = \sum_{\beta} \beta  (\mathbf{r}) \hat{c}_{\beta} && = \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \\
+  \end{aligned}$$
+
+the $\hat{H}_1$ interaction Hamiltonian becomes
 
 $$
-H_1=\frac em\sum_{\alpha\beta}\sum_{\mathbf k\lambda}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}+\langle\alpha|e^{-i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
-$$
+\hat{H}_1(t)=\frac em\sum_{\alpha\beta}\sum_{\mathbf k \mu}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k} \mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{-i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda} +\langle\alpha|e^{-i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k}\mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
+$$ (eq:atom-spectra:H1)
 
-(the orderings of $e^{\pm i\mathbf k\cdot\mathbf x}$ and $\boldsymbol\varepsilon\!\cdot\!\mathbf p$ do not matter since $\boldsymbol\varepsilon\!\cdot\!\mathbf k=0$). Reading the structure:
+<div style="color:red">in Schrodinger picture? In interaction picture, the creation and annihilation operators of the photon fields includes the time-dependent complex exponent?</div>
+
+(the orderings of $e^{\pm i\mathbf k\cdot\mathbf x}$ and $\boldsymbol\varepsilon\!\cdot\!\mathbf p$ do not matter since $\boldsymbol\varepsilon\!\cdot\!\mathbf k=0$).
+
+```{dropdown} Details
+
+$$\begin{aligned}
+  \hat{H}_1(t)
+  & = \frac{q}{m} \int \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r}) d^3 \mathbf{r} = \\
+  & = \frac{q}{m} \int \left( \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha}\right) \left( \sum_{\mathbf{k},\mu} N_{\mathbf{k}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \right) \cdot \left( - i \hbar \nabla \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \right) d^3 \mathbf{r} = && (1) \\
+  & = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \int \langle \alpha | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right)  = && (2) \\
+  & = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i \omega_{\mathbf{k}}t } + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i\omega_{\mathbf{k}}t } \right) \ ,
+\end{aligned}$$
+
+since (1) $\langle \mathbf{r} | \hat{\mathbf{p}} | \beta \rangle = - i \hbar \nabla \langle \mathbf{r} | \beta \rangle$, and (2) 
+
+$$\begin{aligned}
+  \int_{\mathbf{r}} \langle \alpha | \mathbf{r} \rangle e^{i \mathbf{k} \cdot \mathbf{r}} \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r}
+  & = \int_{\mathbf{r}} \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} = \\
+  & = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \ ,
+\end{aligned}$$
+
+since $e^{i \mathbf{k} \cdot \mathbf{r}} | \mathbf{r} \rangle = e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle$, following from $\hat{x}^n | \mathbf{r} \rangle = x^n | \mathbf{r} \rangle$, and $e^{i \mathbf{k} \cdot \mathbf{r}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \mathbf{r})^n}{n!}$, and $e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \hat{\mathbf{r}})^n}{n!}$, and $\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \, d^2 \mathbf{r} = \hat{\mathbf{1}}$.
+
+
+```
+
+
+Reading the structure:
 
 - $c^\dagger_\alpha c_\beta\,a$: the electron goes from $\beta$ to $\alpha$ **absorbing** a photon; $c^\dagger_\alpha c_\beta\,a^\dagger$: it goes from $\beta$ to $\alpha$ **emitting** one. Electron number is conserved (§2.2), photon number changes by $\pm1$.
 - $H_2$ contains $a^\dagger a$ (scattering, photon number unchanged) and $aa$, $a^\dagger a^\dagger$ (two photons absorbed or emitted), each with a factor $c^\dagger_\alpha c_\beta$.
@@ -31,7 +80,22 @@ $$
 
 ## Transition rates
 
-For $H=H_0+H_I$ with $H_0=H_{\rm el}+H_{\rm rad}$ and eigenstates $|i\rangle,|f\rangle$ of $H_0$, time-dependent perturbation theory (Dyson series, long-time limit) gives the **golden rule**
+<div style="color:red">In order to get $\hat{H}_{int}$ independent from time, should one use interaction picture?</div>
+
+Perturbation theory allows to evaluate the transition probability between an initial state $| i \rangle$ and a final state $| f \rangle$ of the unperturbed system, with Hamiltonian $\hat{H}_0$.
+
+For $\hat{H}=\hat{H}_0+\hat{H}_I$ with the Hamiltonian $\hat{H}_0=\hat{H}_{\rm el}+\hat{H}_{\rm rad}$ the Hamiltonian of the non-interacting fields. Let the initial and final states be eigenvectors of the unperturbed Hamiltonian, i.e.
+
+$$\begin{aligned}
+  \hat{H}_0 | i \rangle & = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_i \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_i \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,i}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,i}^{\rm rad} E_{\mathbf{k} \mu} \right) | i \rangle = E_i | i \rangle \\
+  \hat{H}_0 | f \rangle & = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_f \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_f \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,f}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,f}^{\rm rad} E_{\mathbf{k} \mu} \right) | f \rangle = E_f | f \rangle \\
+\end{aligned}$$
+
+<!--
+and eigenstates $|i\rangle,|f\rangle$ of $H_0$, time-dependent perturbation theory (Dyson series, long-time limit) gives the **golden rule**
+-->
+
+**Fermi golden rule** provides the ratio of transition probabilities from $| i \rangle$ to $| f \rangle$ as 
 
 $$
 \Gamma_{i\to f}=\frac{2\pi}{\hbar}\,|T_{fi}|^2\,\delta(E_f-E_i),\qquad
@@ -39,6 +103,69 @@ T_{fi}=\langle f|H_I|i\rangle+\sum_m\frac{\langle f|H_I|m\rangle\langle m|H_I|i\
 $$
 
 where $m$ runs over *all* intermediate states of $H_0$ (including states with extra photons). The sum over final photon modes is $\sum_{\mathbf k}\to V\!\int d^3k/(2\pi)^3=V\!\int\omega^2\,d\omega\,d\Omega\big/\big((2\pi)^3c^3\big)$, using $k=\omega/c$.
+
+Absorbption and emission are first-order processes and the transition probabilities are dominated by the term $\langle f | \hat{H}^{int} | \rangle \sim \langle f | \hat{H}_{\rm 1} | i \rangle$, i.e. using the expression {eq}`eq:atom-spectra:H1`
+
+* Absorption, **assuming** an existing electron in $| \beta \rangle$ and non existing electron in $| \alpha \rangle$ (to avoid unnecessary complications with the notation, at least here),
+
+   $$\begin{aligned}
+     & \langle f | \hat{H}^{abs}_{\rm 1} | i \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} \sqrt{n_{\mathbf{k}\mu}} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}$$
+
+   Thus in a final state with non-zero transition probability
+   * there's one electron more in $| \alpha \rangle$, and one electron less in $| \beta \rangle$ w.r.t. the initial state, and thus $E^{\rm el}_f = E^{\rm el}_i + E_a - E_b$,
+   * a photon with $\mathbf{k} \mu$ is annihilated (absorbed), so that the radiation energies of the initial and final states are related by $E_f^{\rm rad} - E_i^{\rm rad} = - \hbar \omega_{\mathbf{k}}$.
+
+   As the delta condition implies $E_f = E_i$, then $E_a - E_b = \hbar \omega_{\mathbf{k}}$ (energy conservation), the transition probability is proportional to
+
+   $$|\langle f | \hat{H}^{\rm abs}_{\rm 1} | i \rangle|^2 = n_{\mathbf{k} \mu} | M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} |^2 \ .$$
+
+
+* Emission, **assuming** an existing electron in $| \beta \rangle$ and non existing electron in $| \alpha \rangle$ (to avoid unnecessary complications with the notation, at least here),
+
+   $$\begin{aligned}
+     & \langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} \sqrt{n_{\mathbf{k}\mu} + 1} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}$$
+
+   Thus in a final state with non-zero transition probability
+   * there's one electron more in $| \alpha \rangle$, and one electron less in $| \beta \rangle$ w.r.t. the initial state, and thus $E^{\rm el}_f = E^{\rm el}_i + E_a - E_b$,
+   * a photon with $\mathbf{k} \mu$ is created (emitted), so that the radiation energies of the initial and final states are related by $E_f^{\rm rad} - E_i^{\rm rad} = \hbar \omega_{\mathbf{k}}$.
+
+   As the delta condition implies $E_f = E_i$, then $E_a = E_b - \hbar \omega_{\mathbf{k}}$ (energy conservation), the transition probability is proportional to
+
+   $$|\langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle|^2 = ( n_{\mathbf{k} \mu} + 1) | M^{\rm em}_{\alpha \beta \mathbf{k} \mu} |^2 \ .$$
+
+```{admonition} Absorption, and stimulated and spontanteous emission
+
+Absorption is proportional to $n_{\mathbf{k} \mu}$, while emission is proportional to $n_{\mathbf{k} \mu} + 1$, as the sum of the stimulated and the spontaneous emission transition probability.
+
+```
+
+
+````{admonition} Symmetry of absorption and stimulated emission factors
+
+
+$$M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} = \left( M^{\rm abs}_{\beta \alpha \mathbf{k} \mu} \right)^* \ .$$
+
+```{dropdown} Proof
+
+$$M^{\rm em }_{\alpha \beta \mathbf{k} \mu} = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \boldsymbol\epsilon_{\mathbf{k}\mu} \cdot \hat{\mathbf{p}} | \beta \rangle = \dots$$
+
+```
+
+````
+
+```{admonition} Dipole approximation and Einstein coefficients
+
+...
+
+
+```
+
 
 ## Absorption and emission of light by an atom
 
