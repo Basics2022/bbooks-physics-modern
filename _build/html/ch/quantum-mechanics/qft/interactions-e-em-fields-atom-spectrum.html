@@ -523,9 +523,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamiltonian">25.6.2.1.1. The Hamiltonian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-rates">25.6.2.1.2. Transition rates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption-and-emission-of-light-by-an-atom">25.6.2.1.3. Absorption and emission of light by an atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-electron">25.6.2.1.1. Bound electron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamiltonian">25.6.2.1.2. The Hamiltonian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-rates">25.6.2.1.3. Transition rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption-and-emission-of-light-by-an-atom">25.6.2.1.4. Absorption and emission of light by an atom</a></li>
 </ul>
             </nav>
         </div>
@@ -546,20 +547,66 @@ document.write(`
 <li><p>Time dependence of the interaction Hamiltonian, in order to make energy conservation applear</p></li>
 <li><p>…</p></li>
 </ul>
+<div class="section" id="bound-electron">
+<h2><span class="section-number">25.6.2.1.1. </span>Bound electron<a class="headerlink" href="#bound-electron" title="Permalink to this heading">#</a></h2>
+<p>An electron bound to an isolated atom is governed by the Schrodinger equation - here neglecting spin for simplicity; use Pauli equation for non-relativistic approximation, or Dirac equation -</p>
+<p><span class="math notranslate nohighlight">\(i \hbar \dot{| \Psi \rangle} = \left( \frac{|\hat{\mathbf{p}}|^2}{2 m} + V(\hat{\mathbf{r}}) \right) | \Psi \rangle \ ,\)</span>$</p>
+<p>being <span class="math notranslate nohighlight">\(V(\hat{\mathbf{r}})\)</span> the potential energy operator, due to Coulomb force from the nucleus.</p>
+</div>
 <div class="section" id="the-hamiltonian">
-<h2><span class="section-number">25.6.2.1.1. </span>The Hamiltonian<a class="headerlink" href="#the-hamiltonian" title="Permalink to this heading">#</a></h2>
-<p>The full Hamiltonian is <span class="math notranslate nohighlight">\(H=H_{\rm el}+H_{\rm rad}+H_1+H_2\)</span> with, from §2.3 (second-quantised via §1.5),</p>
+<h2><span class="section-number">25.6.2.1.2. </span>The Hamiltonian<a class="headerlink" href="#the-hamiltonian" title="Permalink to this heading">#</a></h2>
+<p>The full Hamiltonian is <span class="math notranslate nohighlight">\(\hat{H}=\hat{H}_{\rm el}+\hat{H}_{\rm rad}+\hat{H}_1+\hat{H}_2\)</span> with, from §2.3 (second-quantised via §1.5),</p>
 <div class="math notranslate nohighlight">
 \[
-H_1=\frac em\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A\!\cdot\!(-i\hbar\nabla)\,\psi_\sigma,\qquad
-H_2=\frac{e^2}{2m}\sum_\sigma\!\int d^3x\;\psi_\sigma^\dagger\,\mathbf A^2\,\psi_\sigma .
+\hat{H}_1(t)=\frac{q}{m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r})  \quad , \quad
+\hat{H}_2(t)=\frac{q^2}{2m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) |\mathbf{A}(\mathbf{r},t)|^2 \hat{\Psi}(\mathbf{r}) \ .
 \]</div>
-<p>Expanding <span class="math notranslate nohighlight">\(\mathbf A\)</span> with §3.2 and the electron field in any basis <span class="math notranslate nohighlight">\(\{\alpha\}\)</span> gives</p>
+<p>Now,</p>
+<ul>
+<li><p>expanding <span class="math notranslate nohighlight">\(\mathbf{A}(\mathbf{r},t)\)</span> with</p>
 <div class="math notranslate nohighlight">
-\[
-H_1=\frac em\sum_{\alpha\beta}\sum_{\mathbf k\lambda}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}+\langle\alpha|e^{-i\mathbf k\cdot\mathbf x}\,\boldsymbol\varepsilon\!\cdot\!\mathbf p|\beta\rangle\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
+\[\hat{\mathbf{A}}(\mathbf{r},t) = \sum_{\mathbf{k}, \mu} \sqrt{\frac{\hbar}{2 \varepsilon_0 \omega_{\mathbf{k}} V}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \ ,\]</div>
+</li>
+<li><p>writing the electron fields as linear combinations of creation an annihilation operators <span class="math notranslate nohighlight">\(\hat{c}^\dagger\)</span>, <span class="math notranslate nohighlight">\(\hat{c}\)</span> in any basis <span class="math notranslate nohighlight">\(\{ |\alpha \rangle \}\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \hat{\Psi}^\dagger(\mathbf{r}) &amp; = \sum_{\alpha} \alpha^*(\mathbf{r}) \hat{c}^\dagger_{\alpha} &amp;&amp; = \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha} \\
+    \hat{\Psi}        (\mathbf{r}) &amp; = \sum_{\beta} \beta  (\mathbf{r}) \hat{c}_{\beta} &amp;&amp; = \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \\
+  \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+<p>the <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> interaction Hamiltonian becomes</p>
+<div class="math notranslate nohighlight" id="equation-eq-atom-spectra-h1">
+<span class="eqno">(25.7)<a class="headerlink" href="#equation-eq-atom-spectra-h1" title="Permalink to this equation">#</a></span>\[
+\hat{H}_1(t)=\frac em\sum_{\alpha\beta}\sum_{\mathbf k \mu}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k} \mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{-i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda} +\langle\alpha|e^{-i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k}\mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
 \]</div>
-<p>(the orderings of <span class="math notranslate nohighlight">\(e^{\pm i\mathbf k\cdot\mathbf x}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol\varepsilon\!\cdot\!\mathbf p\)</span> do not matter since <span class="math notranslate nohighlight">\(\boldsymbol\varepsilon\!\cdot\!\mathbf k=0\)</span>). Reading the structure:</p>
+<div style="color:red">in Schrodinger picture? In interaction picture, the creation and annihilation operators of the photon fields includes the time-dependent complex exponent?</div>
+<p>(the orderings of <span class="math notranslate nohighlight">\(e^{\pm i\mathbf k\cdot\mathbf x}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol\varepsilon\!\cdot\!\mathbf p\)</span> do not matter since <span class="math notranslate nohighlight">\(\boldsymbol\varepsilon\!\cdot\!\mathbf k=0\)</span>).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{H}_1(t)
+  &amp; = \frac{q}{m} \int \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r}) d^3 \mathbf{r} = \\
+  &amp; = \frac{q}{m} \int \left( \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha}\right) \left( \sum_{\mathbf{k},\mu} N_{\mathbf{k}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \right) \cdot \left( - i \hbar \nabla \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \right) d^3 \mathbf{r} = &amp;&amp; (1) \\
+  &amp; = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \int \langle \alpha | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right)  = &amp;&amp; (2) \\
+  &amp; = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i \omega_{\mathbf{k}}t } + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i\omega_{\mathbf{k}}t } \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since (1) <span class="math notranslate nohighlight">\(\langle \mathbf{r} | \hat{\mathbf{p}} | \beta \rangle = - i \hbar \nabla \langle \mathbf{r} | \beta \rangle\)</span>, and (2)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \int_{\mathbf{r}} \langle \alpha | \mathbf{r} \rangle e^{i \mathbf{k} \cdot \mathbf{r}} \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r}
+  &amp; = \int_{\mathbf{r}} \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} = \\
+  &amp; = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">since <span class="math notranslate nohighlight">\(e^{i \mathbf{k} \cdot \mathbf{r}} | \mathbf{r} \rangle = e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle\)</span>, following from <span class="math notranslate nohighlight">\(\hat{x}^n | \mathbf{r} \rangle = x^n | \mathbf{r} \rangle\)</span>, and <span class="math notranslate nohighlight">\(e^{i \mathbf{k} \cdot \mathbf{r}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \mathbf{r})^n}{n!}\)</span>, and <span class="math notranslate nohighlight">\(e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \hat{\mathbf{r}})^n}{n!}\)</span>, and <span class="math notranslate nohighlight">\(\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \, d^2 \mathbf{r} = \hat{\mathbf{1}}\)</span>.</p>
+</div>
+</details><p>Reading the structure:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(c^\dagger_\alpha c_\beta\,a\)</span>: the electron goes from <span class="math notranslate nohighlight">\(\beta\)</span> to <span class="math notranslate nohighlight">\(\alpha\)</span> <strong>absorbing</strong> a photon; <span class="math notranslate nohighlight">\(c^\dagger_\alpha c_\beta\,a^\dagger\)</span>: it goes from <span class="math notranslate nohighlight">\(\beta\)</span> to <span class="math notranslate nohighlight">\(\alpha\)</span> <strong>emitting</strong> one. Electron number is conserved (§2.2), photon number changes by <span class="math notranslate nohighlight">\(\pm1\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(H_2\)</span> contains <span class="math notranslate nohighlight">\(a^\dagger a\)</span> (scattering, photon number unchanged) and <span class="math notranslate nohighlight">\(aa\)</span>, <span class="math notranslate nohighlight">\(a^\dagger a^\dagger\)</span> (two photons absorbed or emitted), each with a factor <span class="math notranslate nohighlight">\(c^\dagger_\alpha c_\beta\)</span>.</p></li>
@@ -567,17 +614,86 @@ H_1=\frac em\sum_{\alpha\beta}\sum_{\mathbf k\lambda}N_k\Big[\langle\alpha|e^{i\
 </ul>
 </div>
 <div class="section" id="transition-rates">
-<h2><span class="section-number">25.6.2.1.2. </span>Transition rates<a class="headerlink" href="#transition-rates" title="Permalink to this heading">#</a></h2>
-<p>For <span class="math notranslate nohighlight">\(H=H_0+H_I\)</span> with <span class="math notranslate nohighlight">\(H_0=H_{\rm el}+H_{\rm rad}\)</span> and eigenstates <span class="math notranslate nohighlight">\(|i\rangle,|f\rangle\)</span> of <span class="math notranslate nohighlight">\(H_0\)</span>, time-dependent perturbation theory (Dyson series, long-time limit) gives the <strong>golden rule</strong></p>
+<h2><span class="section-number">25.6.2.1.3. </span>Transition rates<a class="headerlink" href="#transition-rates" title="Permalink to this heading">#</a></h2>
+<div style="color:red">In order to get $\hat{H}_{int}$ independent from time, should one use interaction picture?</div>
+<p>Perturbation theory allows to evaluate the transition probability between an initial state <span class="math notranslate nohighlight">\(| i \rangle\)</span> and a final state <span class="math notranslate nohighlight">\(| f \rangle\)</span> of the unperturbed system, with Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(\hat{H}=\hat{H}_0+\hat{H}_I\)</span> with the Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_0=\hat{H}_{\rm el}+\hat{H}_{\rm rad}\)</span> the Hamiltonian of the non-interacting fields. Let the initial and final states be eigenvectors of the unperturbed Hamiltonian, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{H}_0 | i \rangle &amp; = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_i \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_i \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,i}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,i}^{\rm rad} E_{\mathbf{k} \mu} \right) | i \rangle = E_i | i \rangle \\
+  \hat{H}_0 | f \rangle &amp; = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_f \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_f \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,f}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,f}^{\rm rad} E_{\mathbf{k} \mu} \right) | f \rangle = E_f | f \rangle \\
+\end{aligned}\end{split}\]</div>
+<!--
+and eigenstates $|i\rangle,|f\rangle$ of $H_0$, time-dependent perturbation theory (Dyson series, long-time limit) gives the **golden rule**
+-->
+<p><strong>Fermi golden rule</strong> provides the ratio of transition probabilities from <span class="math notranslate nohighlight">\(| i \rangle\)</span> to <span class="math notranslate nohighlight">\(| f \rangle\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[
 \Gamma_{i\to f}=\frac{2\pi}{\hbar}\,|T_{fi}|^2\,\delta(E_f-E_i),\qquad
 T_{fi}=\langle f|H_I|i\rangle+\sum_m\frac{\langle f|H_I|m\rangle\langle m|H_I|i\rangle}{E_i-E_m+i0}+\dots
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> runs over <em>all</em> intermediate states of <span class="math notranslate nohighlight">\(H_0\)</span> (including states with extra photons). The sum over final photon modes is <span class="math notranslate nohighlight">\(\sum_{\mathbf k}\to V\!\int d^3k/(2\pi)^3=V\!\int\omega^2\,d\omega\,d\Omega\big/\big((2\pi)^3c^3\big)\)</span>, using <span class="math notranslate nohighlight">\(k=\omega/c\)</span>.</p>
+<p>Absorbption and emission are first-order processes and the transition probabilities are dominated by the term <span class="math notranslate nohighlight">\(\langle f | \hat{H}^{int} | \rangle \sim \langle f | \hat{H}_{\rm 1} | i \rangle\)</span>, i.e. using the expression <a class="reference internal" href="#equation-eq-atom-spectra-h1">(25.7)</a></p>
+<ul>
+<li><p>Absorption, <strong>assuming</strong> an existing electron in <span class="math notranslate nohighlight">\(| \beta \rangle\)</span> and non existing electron in <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span> (to avoid unnecessary complications with the notation, at least here),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     &amp; \langle f | \hat{H}^{abs}_{\rm 1} | i \rangle = \\
+     &amp; = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     &amp; = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} \sqrt{n_{\mathbf{k}\mu}} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}\end{split}\]</div>
+<p>Thus in a final state with non-zero transition probability</p>
+<ul class="simple">
+<li><p>there’s one electron more in <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>, and one electron less in <span class="math notranslate nohighlight">\(| \beta \rangle\)</span> w.r.t. the initial state, and thus <span class="math notranslate nohighlight">\(E^{\rm el}_f = E^{\rm el}_i + E_a - E_b\)</span>,</p></li>
+<li><p>a photon with <span class="math notranslate nohighlight">\(\mathbf{k} \mu\)</span> is annihilated (absorbed), so that the radiation energies of the initial and final states are related by <span class="math notranslate nohighlight">\(E_f^{\rm rad} - E_i^{\rm rad} = - \hbar \omega_{\mathbf{k}}\)</span>.</p></li>
+</ul>
+<p>As the delta condition implies <span class="math notranslate nohighlight">\(E_f = E_i\)</span>, then <span class="math notranslate nohighlight">\(E_a - E_b = \hbar \omega_{\mathbf{k}}\)</span> (energy conservation), the transition probability is proportional to</p>
+<div class="math notranslate nohighlight">
+\[|\langle f | \hat{H}^{\rm abs}_{\rm 1} | i \rangle|^2 = n_{\mathbf{k} \mu} | M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} |^2 \ .\]</div>
+</li>
+<li><p>Emission, <strong>assuming</strong> an existing electron in <span class="math notranslate nohighlight">\(| \beta \rangle\)</span> and non existing electron in <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span> (to avoid unnecessary complications with the notation, at least here),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     &amp; \langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle = \\
+     &amp; = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     &amp; = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} \sqrt{n_{\mathbf{k}\mu} + 1} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}\end{split}\]</div>
+<p>Thus in a final state with non-zero transition probability</p>
+<ul class="simple">
+<li><p>there’s one electron more in <span class="math notranslate nohighlight">\(| \alpha \rangle\)</span>, and one electron less in <span class="math notranslate nohighlight">\(| \beta \rangle\)</span> w.r.t. the initial state, and thus <span class="math notranslate nohighlight">\(E^{\rm el}_f = E^{\rm el}_i + E_a - E_b\)</span>,</p></li>
+<li><p>a photon with <span class="math notranslate nohighlight">\(\mathbf{k} \mu\)</span> is created (emitted), so that the radiation energies of the initial and final states are related by <span class="math notranslate nohighlight">\(E_f^{\rm rad} - E_i^{\rm rad} = \hbar \omega_{\mathbf{k}}\)</span>.</p></li>
+</ul>
+<p>As the delta condition implies <span class="math notranslate nohighlight">\(E_f = E_i\)</span>, then <span class="math notranslate nohighlight">\(E_a = E_b - \hbar \omega_{\mathbf{k}}\)</span> (energy conservation), the transition probability is proportional to</p>
+<div class="math notranslate nohighlight">
+\[|\langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle|^2 = ( n_{\mathbf{k} \mu} + 1) | M^{\rm em}_{\alpha \beta \mathbf{k} \mu} |^2 \ .\]</div>
+</li>
+</ul>
+<div class="admonition-absorption-and-stimulated-and-spontanteous-emission admonition">
+<p class="admonition-title">Absorption, and stimulated and spontanteous emission</p>
+<p>Absorption is proportional to <span class="math notranslate nohighlight">\(n_{\mathbf{k} \mu}\)</span>, while emission is proportional to <span class="math notranslate nohighlight">\(n_{\mathbf{k} \mu} + 1\)</span>, as the sum of the stimulated and the spontaneous emission transition probability.</p>
+</div>
+<div class="admonition-symmetry-of-absorption-and-stimulated-emission-factors admonition">
+<p class="admonition-title">Symmetry of absorption and stimulated emission factors</p>
+<div class="math notranslate nohighlight">
+\[M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} = \left( M^{\rm abs}_{\beta \alpha \mathbf{k} \mu} \right)^* \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[M^{\rm em }_{\alpha \beta \mathbf{k} \mu} = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \boldsymbol\epsilon_{\mathbf{k}\mu} \cdot \hat{\mathbf{p}} | \beta \rangle = \dots\]</div>
+</div>
+</details></div>
+<div class="admonition-dipole-approximation-and-einstein-coefficients admonition">
+<p class="admonition-title">Dipole approximation and Einstein coefficients</p>
+<p>…</p>
+</div>
 </div>
 <div class="section" id="absorption-and-emission-of-light-by-an-atom">
-<h2><span class="section-number">25.6.2.1.3. </span>Absorption and emission of light by an atom<a class="headerlink" href="#absorption-and-emission-of-light-by-an-atom" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">25.6.2.1.4. </span>Absorption and emission of light by an atom<a class="headerlink" href="#absorption-and-emission-of-light-by-an-atom" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Time dependence and energy conservation<div class="sd-summary-down docutils">
@@ -724,9 +840,10 @@ Time dependence and energy conservation<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamiltonian">25.6.2.1.1. The Hamiltonian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-rates">25.6.2.1.2. Transition rates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption-and-emission-of-light-by-an-atom">25.6.2.1.3. Absorption and emission of light by an atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bound-electron">25.6.2.1.1. Bound electron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamiltonian">25.6.2.1.2. The Hamiltonian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-rates">25.6.2.1.3. Transition rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption-and-emission-of-light-by-an-atom">25.6.2.1.4. Absorption and emission of light by an atom</a></li>
 </ul>
   </nav></div>
 

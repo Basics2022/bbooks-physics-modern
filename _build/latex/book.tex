@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Oct 20, 2026}
+\date{Oct 29, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -239,6 +239,18 @@ Quantum Mechanics
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/analytical-mechanics::doc}]{\sphinxcrossref{Analtycal Mechanics \sphinxhyphen{} Notes for Quantum Mechanics}}}
+
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Quantum Field Theory
+
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/qft/intro::doc}]{\sphinxcrossref{Introduction to QFT}}}
 
 \end{itemize}
 \end{itemize}
@@ -3428,9 +3440,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : 16.0
-N. of spin up: 514
-Magnetization: 4
+Energy       : \PYGZhy{}40.0
+N. of spin up: 522
+Magnetization: 20
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3488,9 +3500,9 @@ Magnetization: 4
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{92904c678ff6e6121a3f87b93f6d396536f49806395ab306ee27267753377b0f}.png}
+\noindent\sphinxincludegraphics{{fd17c5b72c5797a05d2c4653ff2662838bd6e93e54527b149a14ec7145465ad4}.png}
 
-\noindent\sphinxincludegraphics{{46a85a43c49b227b2abf73fad6154cb292448c7ddbd71550f6cbc0840fcd3d97}.png}
+\noindent\sphinxincludegraphics{{e3589abf05b954d8dfb39d557ba3148869adae1611bb23717f762b0398f37f3d}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3554,9 +3566,9 @@ Magnetization: 4
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{eea9f06751579254d0eeccf6e46166ab949eea93242215f2bd0ca9075a4dcedb}.png}
+\noindent\sphinxincludegraphics{{6024ef8bd699de84c68b71bb283eba6ba2cbb628ecc121e6c36d4892aa8f1199}.png}
 
-\noindent\sphinxincludegraphics{{6dfd74e1ede8258c7ca2cf6fb77c4324359a9b50912a1cf8c4a86b8da79b9934}.png}
+\noindent\sphinxincludegraphics{{b0ff5565139d85a1d2f10b1f6bbb679dc13e084cae8a26059ca926c2a1ca984c}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6805,11 +6817,11 @@ with \(\mathsf{H} = \text{tr} \left( \hat{H} \right) = \sum_a \langle a | \hat{H
 \label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:ccr-and-quantization-rule}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-ccr-quantization-rule}}
 
 \paragraph{Modern approach. Matrix form of the CCR}
-\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:modern-approach-matrix-form-of-the-ccr}}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:modern-approach-matrix-form-of-the-ccr}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-ccr-quantization-rule-matrix}}
 \sphinxAtStartPar
 Given the CCR
 \begin{equation*}
-\begin{split}\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = \mathbb{I} i \hbar \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,\end{split}
+\begin{split}\left[ \hat{\mathbf{x}}, \hat{\mathbf{p}} \right] = i \hbar \mathbb{I} \qquad , \qquad \left[ \hat{x}_a, \hat{p}_b \right] = i \hbar \delta_{ab} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 its matrix components are
@@ -6829,12 +6841,9 @@ its matrix components are
   & = \sum_{\ell} \left\{ X^{a}_{j \ell} P^{b}_{\ell k} - P^{b}_{j \ell} X^{a}_{\ell k} \right\} \ .
 \end{aligned}\end{split}
 \end{equation*}
-\sphinxAtStartPar
-…
-
 
 \paragraph{From Bohr\sphinxhyphen{}Sommerfeld quantization to CCR}
-\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:from-bohr-sommerfeld-quantization-to-ccr}}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:from-bohr-sommerfeld-quantization-to-ccr}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-ccr-quantization-rule-sommerfeld-to-ccr}}
 \sphinxAtStartPar
 In old quantum mechanics \sphinxhyphen{} i.e. quantum mechanics before a quantum mechanics theory \sphinxhyphen{} Bohr\sphinxhyphen{}Sommerfeld quantization rule was
 \begin{equation*}
@@ -6959,17 +6968,21 @@ This showed that Heisenberg’s matrix mechanics naturally incorporated the empi
 
 
 \subsubsection{Application: The Linear Harmonic Oscillator}
-\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:application-the-linear-harmonic-oscillator}}\subsubsection*{Linear harmonic oscillator}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:application-the-linear-harmonic-oscillator}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-linear-harmonic-oscillator}}\subsubsection*{Linear harmonic oscillator}
 
 \sphinxAtStartPar
 For the harmonic oscillator Hamiltonian \(\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega_0^2 \hat{x}^2\):
 
 \sphinxAtStartPar
 \sphinxstylestrong{Equations of Motion.}
-\$\(\dot{\hat{x}} = \frac{\hat{p}}{m}, \quad \dot{\hat{p}} = -m\omega_0^2 \hat{x}\)\$
-
+\begin{equation*}
+\begin{split}\left\{ \begin{aligned}
+  \dot{\hat{x}} & = \frac{\hat{p}}{m} \\
+  \quad \dot{\hat{p}} & = -m\omega_0^2 \hat{x}
+\end{aligned} \right.\end{split}
+\end{equation*}
 \sphinxAtStartPar
-Taking the second time derivative:
+Taking the derivative of the first equation and replacing the second equation for \(\dot{\hat{p}}\), a second\sphinxhyphen{}order equation for \(\hat{x}\) follows
 \begin{equation*}
 \begin{split}\ddot{\hat{x}} + \omega_0^2 \hat{x} = 0\end{split}
 \end{equation*}
@@ -6999,7 +7012,7 @@ The energy matrix elements give the discrete eigenvalues:
 \end{equation*}
 
 \subsubsection{Transition Probabilities as Dipole Matrix Elements}
-\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:transition-probabilities-as-dipole-matrix-elements}}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:transition-probabilities-as-dipole-matrix-elements}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-transition-dipole-matrix}}
 \sphinxAtStartPar
 When an atom interacts with an electromagnetic field, the interaction Hamiltonian is dominated by the electric dipole coupling:
 \begin{equation*}
@@ -7017,7 +7030,7 @@ The transition rate \(W_{n \to m}\) (spontaneous emission / absorption probabili
 \end{equation*}
 
 \subsubsection{Perturbation Theory for Transition Probabilities in Weak Electric Fields}
-\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:perturbation-theory-for-transition-probabilities-in-weak-electric-fields}}
+\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:perturbation-theory-for-transition-probabilities-in-weak-electric-fields}}\label{\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-transition-perturbation-theory}}
 \sphinxAtStartPar
 Consider a time\sphinxhyphen{}dependent perturbation \(\hat{V}(t) = \hat{W} \cos(\omega t) = -q \hat{\mathbf{x}} \cdot \mathbf{E}_0 \cos(\omega t)\).
 
@@ -7150,7 +7163,7 @@ where Fermi’s Golden Rule gives the absorption rate \(W_{a \to b}\):
 \begin{sphinxuseclass}{tag_hide-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{28d405b8d5596ed04f0e799ddb39d2e97a8c162ac4198f7a7a833a96e96600ef}.png}
+\noindent\sphinxincludegraphics{{0d53c0761bd883a116354b3dd23f737b731bed0a82e3540a224bfd83918aea0f}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7253,6 +7266,10 @@ See {\hyperref[\detokenize{ch/quantum-mechanics/wave-mechanics:quantum-mechanics
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/atom-models/schrodinger:quantum-mechanics-atom-models-schrodinger}]{\sphinxcrossref{\DUrole{std,std-ref}{Schrodinger}}}}: atomic model from Schrodinger equation \(i \hbar | \dot{\Psi} \rangle = \hat{H} | \Psi \rangle\)
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/atom-models/dirac:quantum-mechanics-atom-models-dirac}]{\sphinxcrossref{\DUrole{std,std-ref}{Dirac}}}}: atomic model from Dirac equation \(i \hbar \dot{| \Psi \rangle} = \left[ c \boldsymbol\alpha \cdot \hat{\mathbf{p}} + \beta m c^2 + V(\hat{r}) \right] | \Psi \rangle\).
 
 \end{itemize}
 
@@ -9395,6 +9412,11 @@ Let \(\{ | \alpha \rangle \}\) a basis of the 1\sphinxhyphen{}body system. Let \
 
 \section{Second quantization. Bosons}
 \label{\detokenize{ch/quantum-mechanics/many-body/bosons:second-quantization-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons::doc}}
+\sphinxAtStartPar
+The state of a many\sphinxhyphen{}body bosonic system is symmetric under the echange of 2 particles. This condition is represented in the {\hyperref[\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons-ccr}]{\sphinxcrossref{\DUrole{std,std-ref}{CCRs}}}}.
+
+
+
 
 \subsection{Creation and annihilation operators}
 \label{\detokenize{ch/quantum-mechanics/many-body/bosons:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons-creation-annihilation}}
@@ -9406,7 +9428,7 @@ Let \(\{ | \alpha \rangle \}\) a basis of the 1\sphinxhyphen{}body system. Let \
 \sphinxAtStartPar
 A state \(| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle\) can be obtained from the vacuum equation as
 \begin{equation*}
-\begin{split}| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} | \mathbf{0} \rangle \ .\end{split}
+\begin{split}| \mathbf{n} \rangle = | n_1, n_2, \dots, n_i, \dots \rangle = \dfrac{1}{\sqrt{\prod_k n_k!}} \left( \hat{b}_1^{\dagger} \right)^{n_1} \dots \left( \hat{b}_i^\dagger \right)^{n_i} \dots | \mathbf{0} \rangle \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Annihilation operator, \(\hat{b}_i\).}
@@ -9465,9 +9487,15 @@ with the Kronecker’s delta acting on all the indices \sphinxhyphen{} just as a
 \end{equation*}
 
 
+
+\subsection{Number operator}
+\label{\detokenize{ch/quantum-mechanics/many-body/bosons:number-operator}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons-number}}
 \sphinxAtStartPar
 \sphinxstylestrong{Total number operator.} \(\hat{n} = \sum_{i} \hat{n}_i\)
 
+
+\subsection{Canonical commutation relations}
+\label{\detokenize{ch/quantum-mechanics/many-body/bosons:canonical-commutation-relations}}\label{\detokenize{ch/quantum-mechanics/many-body/bosons:quantum-mechanics-second-quantizazion-bosons-ccr}}
 \sphinxAtStartPar
 \sphinxstylestrong{CCRs.}
 \begin{equation*}
@@ -9495,32 +9523,125 @@ and thus
 
 \section{Second quantization. Fermions}
 \label{\detokenize{ch/quantum-mechanics/many-body/fermions:second-quantization-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions::doc}}
+\sphinxAtStartPar
+The state of a many\sphinxhyphen{}body fermionic system is anti\sphinxhyphen{}symmetric under the exchange of 2 particles. This is the Pauli exclusion principle, that’s represented in the {\hyperref[\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-car}]{\sphinxcrossref{\DUrole{std,std-ref}{CARs}}}}.
+
 
 \subsection{Creation and annihilation operators}
-\label{\detokenize{ch/quantum-mechanics/many-body/fermions:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-creation-annihilation}}
-
-\subsubsection{Jordan–Wigner (1928), “On the Pauli exclusion principle”}
-\label{\detokenize{ch/quantum-mechanics/many-body/fermions:jordanwigner-1928-on-the-pauli-exclusion-principle}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-jordan-wigner}}
-\sphinxAtStartPar
-The state of an atom is described by the occupation numbers of the orbitals: \(|n_1\,n_2\dots\rangle\).
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Inconsistency of results if \(b_1^\dagger b_2^\dagger|0,0\rangle=-b_2^\dagger b_1^\dagger|0,0\rangle\) ⟹ \(|1,1\rangle=-1\times|1,1\rangle\) \sphinxstylestrong{(!)} — anticommutation relation.
-
-\item {} 
-\sphinxAtStartPar
-Solution of Jordan and Wigner:
-
-\end{itemize}
-\begin{equation*}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:creation-and-annihilation-operators}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-creation-annihilation}}\begin{equation*}
 \begin{split}\begin{aligned}
-\hat b^\dagger_k|\dots n_k\dots\rangle & = \theta_k\sqrt{1-n_k}\,|\dots(1-n)_k\dots\rangle \\
-\hat b_k|\dots n_k\dots\rangle & = \theta_k\sqrt{n_k}\,|\dots(1-n)_k\dots\rangle
+\hat c^\dagger_k|\dots n_k\dots\rangle & = \theta_k\sqrt{1-n_k}\,|\dots(1-n)_k\dots\rangle \\
+\hat c_k|\dots n_k\dots\rangle & = \theta_k\sqrt{n_k}\,|\dots(1-n)_k\dots\rangle
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-with \(\theta_k=(-1)^{n_1+\dots+n_{k-1}}\).
+with \(\theta_k=(-1)^{\sum_{j=1}^{k-1} n_j}\).
+\subsubsection*{Road to the formalization of creation and annihilation operators}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Pauli exclusion principle.} Pauli exclusion principle implies that the occupation number of a state can be either \(0\) or \(1\). Creation and annihilation operators should satisfy the following conditions
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{c}_i | 0 \rangle & =   0         &&                                \\
+  \hat{c}_i | 1 \rangle & = | 0 \rangle && \hat{c}_i^\dagger | 0 \rangle = | 1 \rangle \\
+                        &               && \hat{c}_i^\dagger | 1 \rangle = 0 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+A first \sphinxhyphen{} but wrong, see \sphinxstylestrong{Jordan\sphinxhyphen{}Wigner} solution \sphinxhyphen{} try of the definition of creation \(\hat{c}_i^\dagger\) and annihilation operator \(\hat{c}_i\) for a fermionic field could be
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{c}_k^\dagger | \dots n_k \dots \rangle & = \sqrt{1-n_k} | \dots (1-n)_k \dots \rangle \\
+  \hat{c}_k         | \dots n_k \dots \rangle & = \sqrt{  n_k} | \dots (1-n)_k \dots \rangle \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This definition would provide an inconsistent behavior with the {\hyperref[\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-car}]{\sphinxcrossref{\DUrole{std,std-ref}{canonical anticommuation relations}}}}. As an example, with \(i < j\)
+\begin{equation*}
+\begin{split}\hat{c}_i^\dagger \hat{c}_j^\dagger | 0 \rangle = - \hat{c}_j^\dagger \hat{c}_i^\dagger | 0 \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Applying the \sphinxhyphen{} wrong \sphinxhyphen{} expression of the creation and annihilation operators given above, the result would be
+\begin{equation*}
+\begin{split}| 1_i, 1_j \rangle = - | 1_i, 1_j \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that would imply the state is identically zero.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Jordan\sphinxhyphen{}Wigner, “On the Pauli exclusion principle”.}%
+\begin{footnote}[1]\sphinxAtStartFootnote
+Jordan–Wigner (1928), “On the Pauli exclusion principle”
+%
+\end{footnote}
+\begin{equation*}
+\begin{split}\begin{aligned}
+\hat c^\dagger_k|\dots n_k\dots\rangle & = \theta_k\sqrt{1-n_k}\,|\dots(1-n)_k\dots\rangle \\
+\hat c_k|\dots n_k\dots\rangle & = \theta_k\sqrt{n_k}\,|\dots(1-n)_k\dots\rangle
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\theta_k=(-1)^{\sum_{j=1}^{k-1} n_j}\). With this definition of the creation and annihilation operators the example above, with \(i < j\) becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{c}_i^\dagger \hat{c}_j^\dagger | 0 \rangle & = (-1)^0 \hat{c}_i^\dagger | 1_j \rangle = (-1)^0 | 1_i, 1_j \rangle =   | 1_i, 1_j \rangle \\
+  \hat{c}_j^\dagger \hat{c}_i^\dagger | 0 \rangle & = (-1)^0 \hat{c}_j^\dagger | 1_i \rangle = (-1)^1 | 1_i, 1_j \rangle = - | 1_i, 1_j \rangle
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Number operator}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:number-operator}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-number}}
+
+\subsection{Canonical anti\sphinxhyphen{}commutation relations}
+\label{\detokenize{ch/quantum-mechanics/many-body/fermions:canonical-anti-commutation-relations}}\label{\detokenize{ch/quantum-mechanics/many-body/fermions:quantum-mechanics-second-quantizazion-fermions-car}}
+\sphinxAtStartPar
+The commutation relation
+\begin{equation*}
+\begin{split}\{ \hat{c}_i^\dagger, \hat{c}_j^\dagger \} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\hat{c}_i^\dagger \hat{c}_i^\dagger = - \hat{c}_i^\dagger \hat{c}_i^\dagger \), and thus \(\left( \hat{c}_i^\dagger \right)^2 = 0\). If \(\hat{c}_i^\dagger\) creates the state \(| 1_i \rangle\) from the vacuum state \(| 0 \rangle\), and a state proportional to \(| 2_i \rangle\) when applied to state \(| 1_i \rangle\), i.e. with 2 applications to \(| 0 \rangle\), then this implies that it’s not possible to get \(| 2_i \rangle\), and states with larger occupation numbers. Thus, the occupation number of each state can be either \(0\) or \(1\).
+
+\item {} 
+\sphinxAtStartPar
+\(\hat{c}_i^\dagger \hat{c}_j^\dagger = - \hat{c}_j^\dagger \hat{c}_i^\dagger \)
+
+\end{itemize}
+\subsubsection*{Proof}
+
+\sphinxAtStartPar
+If \(i < j\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \left( \hat{c}_i^\dagger \hat{c}_j^\dagger + \hat{c}_j^\dagger \hat{c}_i^\dagger \right) | \dots n_i \dots n_j \dots \rangle = \\
+  & = \sqrt{n_j - 1} \cdot (-1)^{\sum_{k=1}^{j-1} n_k} \hat{c}_i^\dagger | \dots n_i \dots (n-1)_j \dots \rangle + \sqrt{n_i-1} \cot (-1)^{\sum_{l=1}^{i-1} n_l} \hat{c}_j^\dagger | \dots (n-1)_i \dots n_j \dots \rangle   = \\
+  & = \sqrt{n_j - 1} \sqrt{n_i - 1 } \cdot \left\{ (-1)^{\sum_{l=1}^{i-1} n_l} \cdot (-1)^{\sum_{k=1}^{j-1} n_k} + (-1)^{\sum_{k=1, l\ne i}^{k-1} n_l} \cdot (-1)^{n_i-1} \cdot (-1)^{\sum_{l=1}^{i-1} n_l}  \right\} | \dots (n-1)_i \dots (n-1)_j \dots \rangle  = \\
+  & = \sqrt{n_j - 1} \sqrt{n_i - 1 } \cdot \left\{ \underbrace{\left( (-1)^{n_i} + (-1)^{n_i-1} \right)}_{=0} (-1)^{\sum_{k=1, l\ne i}^{k-1} n_l} \cdot (-1)^{\sum_{l=1}^{i-1} n_l}  \right\} | \dots (n-1)_i \dots (n-1)_j \dots \rangle  = \\
+  & = 0 \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If \(j = i\), the equality immediately follows from \(\left( c^\dagger_i \right)^2 = 0\).
+\begin{equation*}
+\begin{split}\{ \hat{c}_i, \hat{c}_j \} = 0\end{split}
+\end{equation*}\subsubsection*{Proof}
+
+\sphinxAtStartPar
+…
+\begin{equation*}
+\begin{split}\{ \hat{c}_i, \hat{c}_j^\dagger \} = \delta_{ij} \ . \end{split}
+\end{equation*}\subsubsection*{Proof}
+
+\sphinxAtStartPar
+…
+
+
+\bigskip\hrule\bigskip
+
 
 \sphinxstepscope
 
@@ -9954,6 +10075,38 @@ In non\sphinxhyphen{}relativistic quantum mechanics, Coulomb gauge \(\nabla \cdo
 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/quantum-mechanics/qft/interactions:quantum-mechanics-qft-interactions}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Interacting fields}}}}}. Perturbation theory and Fermi goldern rule. Interaction between electron and EM field.
+\subsubsection*{Summary}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Fock space} is built from commutators (bosons) or anticommutators (fermions) of creation/annihilation operators; Pauli exclusion is the algebraic fact \((c^\dagger)^2=0\), and one\sphinxhyphen{}body operators are \(\sum t_{ij}a_i^\dagger a_j\) for both statistics.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Symmetries} act by unitary operators \(e^{-i\theta T}\) generated by one\sphinxhyphen{}body operators; their eigenvalues are additive over occupied modes. Number conservation of electrons (global \(U(1)\)) versus the absence of such a charge for the photon explains why photons are created singly.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Local \(U(1)\) gauge invariance} fixes the electron–photon coupling \(\mathbf p\to\mathbf p+e\mathbf A\), producing both \(H_1\propto\mathbf A\!\cdot\!\mathbf p\) and the seagull \(H_2\propto\mathbf A^2\) with locked coefficients.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{The photon field} is a set of oscillators with \([a,a^\dagger]=1\); the classical limit is the coherent state with \(\Delta E/E=1/(2\sqrt{\bar n})\), and radiation by a classical current produces exactly that state.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{The electron field} obeys the Schrödinger equation as an operator equation. Free and bound electrons are two different bases of one and the same field, related by a unitary transformation.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Emission and absorption}: matrix elements \(\propto\sqrt{n}\) and \(\sqrt{n+1}\) give stimulated and spontaneous emission; in the dipole approximation \(\Gamma=\omega^3|\mathbf d|^2/(3\pi\varepsilon_0\hbar c^3)\), which reproduces the measured hydrogen \(2p\) lifetime of 1.6 ns, equals (oscillator strength) × (classical radiation\sphinxhyphen{}damping rate), and enforces Einstein’s thermal balance.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Free electrons cannot absorb a single photon}; the lowest\sphinxhyphen{}order free\sphinxhyphen{}electron process is Compton scattering. In the non\sphinxhyphen{}relativistic theory only the seagull contributes for an electron at rest, giving the Thomson cross\sphinxhyphen{}section \(\sigma_{\rm T}=\tfrac{8\pi}{3}r_e^2\) and the Compton shift to leading order in \(\hbar\omega/mc^2\); the relativistic Klein–Nishina result requires the Dirac field.
+
+\end{enumerate}
 
 \sphinxstepscope
 
@@ -10397,6 +10550,256 @@ All these results apply to a single particle, in a 1\sphinxhyphen{}dim domain, w
 
 \sphinxAtStartPar
 \sphinxstylestrong{TODO}: generalization to more complex systems — is it possible?
+
+
+\subsection{Classical limit}
+\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:classical-limit}}\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:quantum-mechanics-qft-harmonic-oscillator-classical-limit}}
+
+\subsubsection{Coherent states}
+\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:coherent-states}}\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:quantum-mechanics-qft-harmonic-oscillator-classical-limit-coherent-states}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Definition
+
+\item {} 
+\sphinxAtStartPar
+Properties:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+time evolution of a coherent state
+
+\item {} 
+\sphinxAtStartPar
+classical evolution of expected values
+
+\item {} 
+\sphinxAtStartPar
+minimum uncertainty
+
+\end{itemize}
+
+\end{itemize}
+
+
+\paragraph{Definition}
+\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:definition}}
+\sphinxAtStartPar
+\sphinxstylestrong{Through the action of the displacement operator on the vacuum state.}
+\begin{equation*}
+\begin{split}| \alpha \rangle = \hat{D}(\alpha) | 0 \rangle = \exp\left(  \right) | 0 \rangle\end{split}
+\end{equation*}\subsubsection*{Displacement operator}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Eigen\sphinxhyphen{}state of the annihilation operator.} A coherent state \(| \alpha \rangle\) is the eigenstate of the annihilation operator \(\hat{a}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Schrodinger picture.} In Schrodinger picture, the operator is independent of time,
+\begin{equation*}
+\begin{split}\hat{a} | \alpha \rangle = \alpha | \alpha \rangle \ .\end{split}
+\end{equation*}\subsubsection*{Coherent state as a power series}
+\begin{equation*}
+\begin{split}| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | \phi_n \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{equation*}
+\begin{split}b_n = \frac{\alpha^n}{\sqrt{n!}} \, b_0 =  \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{|\alpha|^2}{2}} e^{i \varphi}  \ .\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \alpha \sum_{n=0}^{+\infty} b_n | n \rangle = \sum_{n=0}^{+\infty} \sqrt{n+1} b_{n+1} | n \rangle \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\sqrt{n+1} \, b_{n+1} = \alpha b_n \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}b_{n} = \frac{\alpha^n}{\sqrt{n!}} b_0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Normalization gives
+\begin{equation*}
+\begin{split}1 = \langle \alpha | \alpha \rangle = \sum_{m,n=0}^{+\infty} b_m^* b_n \langle m | n \rangle = |b_0|^2 \sum_{n=0}^{+\infty} \frac{\alpha^{2n}}{n!} = |b_0|^2 \cdot e^{|\alpha|^2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e.
+\begin{equation*}
+\begin{split}b_0 = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Poisson distribution of probability coefficients in energy basis.} The probabilities \(|c_n|^2\) of being in energy states \(| \phi_n \rangle\) follows a \sphinxstylestrong{Poisson distribution},
+\begin{equation*}
+\begin{split}| c_n |^2 = \frac{ |\alpha|^{2n} e^{-|\alpha|^2}}{n!} = p^{Poisson} (n; |\alpha|^2) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus it has both \sphinxstylestrong{expected value} and \sphinxstylestrong{variance} equal to \(|\alpha|^2\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Time evolution of the state of a system, starting in a coherent state \(| \Psi \rangle_0 = | \alpha \rangle\).} The evolution of a system governed by the Sschrodinger equation
+\begin{equation*}
+\begin{split}i \hbar \dfrac{d}{dt} | \Psi \rangle_t = \hat{H} | \Psi \rangle_t = \left[ \frac{\hat{p}^2}{2m} + \frac{m \omega^2 \hat{x}^2}{2} \right] | \Psi \rangle_t \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+can be written as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  | \Psi \rangle_t 
+  & = \exp\left[ - i \frac{\hat{H}}{\hbar} t \right] | \Psi \rangle_0 = \\
+  & = \exp\left[ - i \frac{\hat{H}}{\hbar} t \right] \sum_{n=1}^{+\infty} \frac{\alpha^n}{\sqrt{n!}} e^{- \frac{|\alpha|^2}{2}} e^{i \varphi} | \phi_n \rangle = \\ 
+  & = e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \sum_{n=1}^{+\infty} \frac{\alpha^n}{\sqrt{n!}} e^{-i \frac{E_n}{\hbar} t} | \phi_n \rangle \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For a harmonic oscillator \(E_n = \hbar \omega \left( n + \frac{1}{2} \right)\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  | \Psi \rangle_t 
+  & = e^{-i \frac{\omega}{2} t} \left[ e^{i \varphi} e^{- \frac{|\alpha|^2}{2}} \sum_{n=1}^{+\infty} \frac{\left( \alpha e^{-i \omega t} \right)^n}{\sqrt{n!}} | \phi_n \rangle \right] \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{In space representation}
+
+\sphinxAtStartPar
+The annihilation operator reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle x | \hat{a} 
+  & = \sqrt{\frac{m \omega}{2 \hbar}}\langle x | \left( \hat{x} + \frac{i \hat{p}}{m \omega} \right) = \\
+  & = \sqrt{\frac{m \omega}{2 \hbar}} \left( x + \frac{\hbar}{m \omega} \partial_x \right)
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its spectral decomposition
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle x | \hat{a} | \alpha \rangle & = \alpha \langle x | \alpha \rangle \\
+  \sqrt{\frac{m \omega}{2 \hbar}} \left( x + \frac{\hbar}{m \omega} \partial_x \right) \psi_\alpha(x) & = \alpha \psi_\alpha(x)
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution is
+\begin{equation*}
+\begin{split}\psi_\alpha(x) = \left( \frac{m \omega}{\pi \hbar} \right)^{1/4} \exp \left[ -\frac{m \omega}{2 \hbar} \left( x - \sqrt{\frac{2 \hbar}{m \omega}} \text{Re}\{ \alpha \} \right)^2 + i \sqrt{\frac{m \omega}{2 \hbar}} \text{Im}\{ \alpha \} x + i \, \text{Im}\{ C \} \right] \ .\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+Solution of the equation
+\begin{equation*}
+\begin{split} x y(x) + a y'(x) = b y(x) \end{split}
+\end{equation*}
+\sphinxAtStartPar
+with separation of variables,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  a y'(x) & = ( x - b ) y(x) \\
+  \int \frac{dy}{y} & = \int \frac{1}{a} \left( b - x \right) dx \\
+  \ln |y| & = \frac{1}{a} \left( - \frac{x^2}{2} + b x + C \right) \\
+  \rightarrow \quad y(x) & = \exp \left[ - \frac{x^2}{2 a} + \frac{b}{a} x + C \right] \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The factor \(K = \exp(C)\) is determined with the normalization condition, up to an irrelevant phase factor. In the problem \(a \in \mathbb{R}\), \(b \in \mathbb{C}\), and thus the squared magnitude is
+\begin{equation*}
+\begin{split}\begin{aligned}
+  |y(x)|^2 
+  & = \exp\left(-\frac{x^2}{a}\right) \cdot \exp\left( \frac{b + b^*}{a} x\right) \cdot \exp\left( C + C^*\right) = \\
+  & = \exp\left(-\frac{x^2}{a} + 2 \frac{\text{Re}\{ b \}}{a} x + 2 \text{Re}\{ C \} \right) = \\
+  & = \exp\left[ - \frac{1}{a} \left( x - \text{Re}\{ b \} \right)^2 + \frac{\text{Re}\{ b \}^2}{a} + 2 \text{Re}\{ C \} \right] = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and its integral
+\begin{equation*}
+\begin{split}1 = \int_{-\infty}^{+\infty} |y(x)|^2 dx = \int_{-\infty}^{+\infty} \exp\left( - \frac{1}{a} \left( x - \text{Re}\{ b \} \right)^2 \right) \, dx \cdot \exp \left[ \dots \right] = \sqrt{\pi a} \cdot \exp [ \dots ] ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the normalization factor reads \(\exp[ \dots ] = \frac{1}{\sqrt{2 a}}\), having exploited
+\begin{equation*}
+\begin{split}I^2 = \left[ \int_{x=-\infty}^{+\infty} e^{-\frac{x^2}{a}} \right]^2 = 2 \pi \cdot \frac{a}{2} \cdot \int_{r = 0}^{+\infty} e^{-\frac{r^2}{a}} d \frac{r^2}{a} = \pi a \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(\exp\left[ \frac{\text{Re}\{ b \}^2}{a} + 2 \text{Re}\{ C \} \right] = \frac{1}{\sqrt{2 a}}\), the normalized solution becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  y(x) 
+  & = \exp\left[ - \frac{x^2}{2 a} + \frac{\text{Re}\{b\}}{a} x + i \frac{\text{Im}\{b\}}{a} x + \text{Re}\{ C \} + i \text{Im}\{ C \} \right] = \\
+  & = \exp\left[ - \frac{x^2}{2 a} + \frac{\text{Re}\{b\}}{a} x + i \frac{\text{Im}\{b\}}{a} x + i \text{Im}\{ C \} \right] \cdot \exp \left[ - \frac{\text{Re}\{ b \}^2}{2 a} \right] \cdot \frac{1}{(\pi a)^{1/4}} = \\
+  & = \exp\left[ - \frac{1}{2 a} \left( x - \text{Re}\{ b \} \right)^2 + i \frac{\text{Im}\{b\}}{a} x + i \text{Im}\{ C \} \right] \cdot \frac{1}{(\pi a)^{1/4}} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the solution of the eigenproblem of the annihilation operator is readily found with \(a = \frac{\hbar}{m \omega}\), \(b = \alpha \sqrt{\frac{2 \hbar}{m \omega}}\), and thus \(\frac{b}{a} = \alpha \sqrt{\frac{m \omega}{2 \hbar}}\),
+\begin{equation*}
+\begin{split}\psi_\alpha(x) = \left( \frac{m \omega}{\pi \hbar} \right)^{1/4} \exp \left[ -\frac{m \omega}{2 \hbar} \left( x - \sqrt{\frac{2 \hbar}{m \omega}} \text{Re}\{ \alpha \} \right)^2 + i \sqrt{\frac{m \omega}{2 \hbar}} \text{Im}\{ \alpha \} x + i \, \text{Im}\{ C \} \right] \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Heisenberg picture.} Creation operator in Heisenberg picture satisfies Heisenberg dynamical equation,
+\begin{equation*}
+\begin{split}i \hbar \dfrac{d \hat{a}_H}{dt} = [\hat{a}, \hat{H}]_H = \dots = \hbar \omega \hat{a}_H \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus its evolution is \(\hat{a}_H(t) = \hat{a}_H(0) \, e^{-i \omega t}\). Using the relation \{\} between Heisenberg and Schrodinger pictures of the same operator, \(\hat{A}_H = \mathscr{U}_{t,t_0}^\dagger \hat{A}_S \mathscr{U}_{t,t_0}\), with \(\mathscr{U}_{t_0,t_0} = \hat{\mathbf{1}}\), it follows that \(\hat{a}_H(0) = \hat{a}\), and \(\hat{a}_H(t) = \hat{a} \, e^{-i \omega t}\), without explicitly writing the index \(S\) for Schrodinger picture.
+
+\sphinxAtStartPar
+Thus the spectral decomposition of the annihilation operator in Heisenberg picture, \(\hat{a}_H | \alpha \rangle_H = \alpha_H | \alpha \rangle_H\), becomes
+\begin{equation*}
+\begin{split}e^{-i \omega t} \hat{a} | \alpha \rangle_H = \alpha_H | \alpha \rangle_H \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\hat{a} | \alpha \rangle_H = e^{i \omega t} \alpha_H | \alpha \rangle_H \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}| \alpha \rangle_H = \end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+
+\paragraph{Classical limit}
+\label{\detokenize{ch/quantum-mechanics/qft/harmonic-oscillator:id1}}
+\sphinxAtStartPar
+The expected value of the position and the momentum of the system starting in a coherent state is
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \langle \hat{x} \rangle & = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) = \sqrt{\frac{2 \hbar} {m \omega}} \left( \text{Re}\{ \alpha \} \cos(\omega t) + \text{Im}\{ \alpha \} \sin(\omega t) \right) \\
+ \langle \hat{p} \rangle & = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \sqrt{2 m \hbar \omega} \left( - \text{Re}\{ \alpha \} \sin(\omega t) + \text{Im}\{ \alpha \} \cos(\omega t) \right) = m \frac{d}{dt} \langle \hat{x} \rangle \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+Using Heisenberg picture, the expected value of the position reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \hat{x} \rangle
+  & = \langle \alpha | \hat{x}_H | \alpha \rangle = \\
+  & = \langle \alpha | \sqrt{\frac{\hbar}{2 m \omega}} \left( \hat{a}^\dagger_H + \hat{a}_H \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{\hbar}{2 m \omega}} \langle \alpha | \left( \hat{a}^\dagger e^{i \omega t} + \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{\hbar}{2 m \omega}} \left( \alpha^* e^{i \omega t} + \alpha e^{-i \omega t} \right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \(\langle \alpha | \hat{a} | \alpha \rangle = \alpha\), \(\langle \alpha | \hat{a}^\dagger | \alpha \rangle = \alpha^*\) (see the section {\hyperref[\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb-classical-limit-one-mode-coherent}]{\sphinxcrossref{\DUrole{std,std-ref}{One\sphinxhyphen{}mode coherent state, for the EM field}}}}). The expected value of the momentum, \(\hat{p} = i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^{\dagger} - \hat{a} \right)\), reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \hat{p} \rangle
+  & = \langle \alpha | \hat{p}_H | \alpha \rangle = \\
+  & = \langle \alpha | i \sqrt{\frac{m \hbar \omega}{2}} \left( \hat{a}^\dagger_H - \hat{a}_H \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \langle \alpha | i \left( \hat{a}^\dagger e^{i \omega t} - \hat{a} e^{-i \omega t} \right) | \alpha \rangle = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \left( i \alpha^* e^{i \omega t} - i \alpha e^{-i \omega t} \right) = \\
+  & = \sqrt{\frac{m \hbar \omega}{2}} \cdot 2 \cdot \text{Re} \{ i \alpha^* e^{i \omega t} \} = \\
+  & = \sqrt{ 2 m \hbar \omega} \left( \text{Im}\{ \alpha \} \cos( \omega t ) - \text{Re} \{ \alpha \} \sin(\omega t) \right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Non\sphinxhyphen{}spreading wave\sphinxhyphen{}packets
+
+\sphinxAtStartPar
+Minimal uncertainty
 
 
 \bigskip\hrule\bigskip
@@ -11035,6 +11438,289 @@ But as the field amplitude goes to zero (\(|c|\to0\), \# photons → 0), only \s
 \sphinxstepscope
 
 
+\section{Photons \sphinxhyphen{} EM field quantization with Coulomb gauge}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:photons-em-field-quantization-with-coulomb-gauge}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb::doc}}
+
+
+
+\subsection{Classical fields}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:classical-fields}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb-classical}}
+\sphinxAtStartPar
+In free space without charge and current densities, the vector potential satisfies the homogeneous wave equation \(\square \vec{a} = \vec{0}\), whose solution can be written as a linear combination of Fourier modes. For finite (or periodic) domains
+\begin{equation*}
+\begin{split}\vec{a}(\vec{r},t) = \sum_{\vec{k}} \vec{a}(\vec{k},t) e^{i \vec{k} \cdot \vec{r}} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(k_a L_a = n_a 2 \pi\), \(n_a \in \mathbb{Z}\). For infinite domains
+\begin{equation*}
+\begin{split}\vec{a}(\vec{r},t) = \dfrac{1}{(2 \pi )^{3/2}} \int_{\vec{k}} \vec{a}(\vec{k},t) e^{i \vec{k} \cdot \vec{r}} \, d \vec{k} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Coulomb gauge.} Exploiting the orthogonality of the base functions \(\frac{e^{i \vec{k} \cdot \vec{r}}}{(2\pi)^{3/2}}\), Coulomb gauge \(\nabla \cdot \vec{a} = 0\) implies
+\begin{equation*}
+\begin{split}i \vec{k} \cdot \vec{a}(\vec{k}, t) = 0 \quad , \quad \forall \vec{k} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, as each coefficient \(\vec{a}(\vec{k},t)\) is orthogonal to its corresponding wave vector \(\vec{k}\), it only has 2 independent components (corresponding to \sphinxstylestrong{polarization}). Let \(\{ \vec{\epsilon}_{\vec{k},\mu} \}_{\mu \in \{1, 2\}}\) an orthogonal basis \sphinxhyphen{} with \(\vec{\epsilon}_{\vec{k},\mu} \cdot \vec{k} = 0\) \sphinxhyphen{} for the coefficient \(\vec{a}(\vec{k},t)\), then this coefficient can be written as
+\begin{equation*}
+\begin{split}\vec{a}(\vec{k}, t) = \sum_{\mu} \vec{\epsilon}_{\vec{k}, \mu} a(\vec{k},\mu, t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Real\sphinxhyphen{}valued field, \(\vec{a}(\vec{r},t)\).} Since \(\vec{a}(\vec{r},t)\) is a real\sphinxhyphen{}valued field, then
+\begin{equation}\label{equation:ch/quantum-mechanics/qft/photons-coulomb:eq:photons:a:real-value}
+\begin{split}\vec{a}(\vec{k},t) = \vec{a}^*(-\vec{k},t) \ . \end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Solution of the homogeneous wave equation.} Exploiting the orthogonality of the base functions, and the linearity of the wave equation, each coefficient of the Fourier expansion satisfies a linear second\sphinxhyphen{}order equation (simple harmonic oscillator),
+\begin{equation*}
+\begin{split}\frac{1}{c^2}\partial_{tt} \vec{a}(\vec{k}, t) + |\vec{k}|^2 \vec{a}(\vec{k},t) = \vec{0} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution reads
+\begin{equation*}
+\begin{split}\vec{a}(\vec{k},t) = \vec{a}_{-}(\vec{k}) e^{i \omega_{\vec{k}} t} + \vec{a}_{+}(\vec{k}) e^{- i \omega_{\vec{k}} t} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\omega_{\vec{k}} = c | \vec{k} |\), and the coefficients to be determined with the initial conditions for the potential governed by the wave equation. The condition \eqref{equation:ch/quantum-mechanics/qft/photons-coulomb:eq:photons:a:real-value} about real\sphinxhyphen{}valued field \(\vec{a}(\vec{r},t)\) implies
+\begin{equation*}
+\begin{split}\vec{a}_+(\vec{k},t) = \vec{a}^*_-(-\vec{k},t) \quad , \quad \vec{a}_-(\vec{k},t) = \vec{a}^*_+(-\vec{k},t) \ .\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{a}(\vec{k},t) & = \vec{a}_{-}(\vec{k}) e^{i \omega_{\vec{k}} t} + \vec{a}_{+}(\vec{k}) e^{- i \omega_{\vec{k}} t} \\
+  \vec{a}^*(-\vec{k},t) & = \left( \vec{a}_{-}(-\vec{k}) e^{i \omega_{-\vec{k}} t} + \vec{a}_{+}(-\vec{k}) e^{- i \omega_{-\vec{k}} t} \right)^* = \\
+                        & =        \vec{a}_{-}^*(-\vec{k}) e^{-i \omega_{\vec{k}} t} + \vec{a}^*_{+}(-\vec{k}) e^{i \omega_{\vec{k}} t} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Solution of the wave equation.} Putting everything together, the solution of the wave equation for the vector potential can be written \sphinxhyphen{} here in a periodic domain \sphinxhyphen{} as
+\begin{equation}\label{equation:ch/quantum-mechanics/qft/photons-coulomb:eq:photons-coulomb:vector-potential:fourier}
+\begin{split}\begin{aligned}
+  \vec{a}(\vec{r},t) 
+  & = \sum_{\vec{k}} \vec{a}(\vec{k},t) e^{i \vec{k} \cdot \vec{r}} = \\
+  & = \sum_{\vec{k}} \left[ \vec{a}_{-}(\vec{k}) e^{i \omega_{\vec{k}} t} + \vec{a}_{+}(\vec{k}) e^{- i \omega_{\vec{k}} t}  \right] e^{i \vec{k} \cdot \vec{r}} = && \text{(see re-arrangement)} \\
+  & = \sum_{\vec{k}} \left[ \vec{a}_{-}(-\vec{k}) e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} + \vec{a}_{+}(\vec{k}) e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})}  \right] \ .
+\end{aligned}\end{split}
+\end{equation}\subsubsection*{Re\sphinxhyphen{}arrangement of the summation}
+
+\sphinxAtStartPar
+For each \(\vec{k}\) (except for \(\vec{k} = \vec{0}\), to avoid summing twice the same contributions), summing over \(\vec{k}\) and \(-\vec{k}\) produces 4 terms
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \vec{a}(\vec{k}, t) + \vec{a}(-\vec{k}, t) = \\
+  & = \vec{a}_{-}(\vec{k}) e^{i ( \omega_{\vec{k}} t + \vec{k} \cdot \vec{r})} + \vec{a}_{+}(\vec{k}) e^{i( - \omega_{\vec{k}} t + \vec{k} \cdot \vec{r})} 
+    +  \vec{a}_{-}(-\vec{k}) e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} + \vec{a}_{+}(-\vec{k}) e^{i(- \omega_{\vec{k}} t -i \vec{k} \cdot \vec{r})} \\ 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that can be re\sphinxhyphen{}grouped as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & = \underbrace{ \vec{a}_{-}(\vec{k}) e^{i ( \omega_{\vec{k}} t + \vec{k} \cdot \vec{r})} + \vec{a}_{+}(-\vec{k}) e^{-i(\omega_{\vec{k}} t + i \vec{k} \cdot \vec{r})} }
+   + \underbrace{ \vec{a}_{+}(\vec{k}) e^{-i(\omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} + \vec{a}_{-}(-\vec{k}) e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} } \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+s.t. each pair of terms gives a real contribution. Here the sum of the first pair fives a travelling wave in \(- \hat{k}\) direction, while the second pair gives a travelling wave in \(+ \hat{k}\) direction.
+
+\sphinxAtStartPar
+\sphinxstylestrong{EOMs and solutions as a function of generalized coordinates and momenta.}
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+\sphinxstylestrong{Electro\sphinxhyphen{}magnetic field.}
+
+\sphinxAtStartPar
+…
+
+
+\subsection{Quantization}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantization}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb-quantization}}
+\sphinxAtStartPar
+…\sphinxstylestrong{todo} \sphinxstyleemphasis{discuss promotion. Link to classical limit, other quantization procedures,…}
+
+\sphinxAtStartPar
+Promotion of the expression \eqref{equation:ch/quantum-mechanics/qft/photons-coulomb:eq:photons-coulomb:vector-potential:fourier} to operator. In Heisenberg picture
+\begin{equation*}
+\begin{split}
+\hat{\vec{a}}(\vec{r},t) = \sum_{\vec{k}, \mu} \left[ e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \hat{a}^\dagger_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \hat{a}_{\vec{k},\mu} \right]
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+with Heisenberg picture for annihilation and creation operators being \(\hat{a}^\dagger_H(t) = \hat{a}^\dagger e^{i \omega t}\) and \(\hat{a}_H(t) = \hat{a} e^{-i \omega t}\) respectively.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Discuss both Schrodinger and Heisenberg picture.}
+\subsubsection*{Schrodinger and Heisenberg picture of annihilation/creation operators. Single simple harmonic oscillator}
+
+\sphinxAtStartPar
+The Hamiltonian operator of a single simple harmonic oscillator reads
+\begin{equation*}
+\begin{split}\hat{H} = \frac{\hat{p}^2}{2} + \frac{\omega^2 \hat{q}^2}{2} = \hbar \omega \left( \hat{a}^{\dagger} \hat{a} + \frac{1}{2} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Annihilation operator.} Heisenberg equations of motion for the annihilation operator reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \dfrac{d \hat{a}_H}{d t}
+  & = \left[ \hat{a}, \hat{H} \right]_{H} + \cancelto{0}{\left( \partial_t \hat{a} \right)_H} = \\
+  & = \left[ \hat{a}, \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \hbar \omega \right]_{H} + \cancelto{0}{\left( \partial_t \hat{A} \right)_H} = \\
+  & = \left\{ \left( \hat{a} \hat{a}^\dagger \hat{a} - \hat{a}^\dagger \hat{a} \hat{a} \right)  \right\}_H \hbar \omega = \\
+  & = \left\{ \left[ \hat{a}, \hat{a}^\dagger \right] \hat{a} \right\}_H \hbar \omega = \\
+  & = \hbar \omega  \hat{a}_{H} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution provides the relation between the Heisenberg and Schdoringer picture of the annihilation operator,
+\begin{equation*}
+\begin{split}\hat{a}_H(t) = \hat{a}_H(0) e^{-i \omega t} = \hat{a} e^{-i \omega t} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Creation operator.} Heisenberg equations of motion for the creation operator reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i \hbar \dfrac{d \hat{a}^\dagger_H}{d t}
+  & = \left[ \hat{a}^\dagger, \hat{H} \right]_{H} + \cancelto{0}{\left( \partial_t \hat{a}^\dagger \right)_H} = \\
+  & = \left[ \hat{a}^\dagger, \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) \hbar \omega \right]_{H} + \cancelto{0}{\left( \partial_t \hat{A} \right)_H} = \\
+  & = \left\{ \left( \hat{a}^\dagger \hat{a}^\dagger \hat{a} - \hat{a}^\dagger \hat{a} \hat{a}^\dagger \right)  \right\}_H \hbar \omega = \\
+  & = \left\{ \hat{a}^\dagger \left[ \hat{a}^\dagger, \hat{a} \right] \right\}_H \hbar \omega = \\
+  & = - \hbar \omega  \hat{a}^\dagger_{H} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose solution provides the relation between the Heisenberg and Schdoringer picture of the creation operator,
+\begin{equation*}
+\begin{split}\hat{a}^\dagger_H(t) = \hat{a}^\dagger_H(0) e^{i \omega t} = \hat{a}^\dagger e^{i \omega t} \ .\end{split}
+\end{equation*}
+
+\subsubsection{Energy}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:energy}}
+
+\subsubsection{Momentum}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:momentum}}
+
+\subsubsection{…}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:id1}}
+
+\subsection{Classical limit}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:classical-limit}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb-classical-limit}}
+
+\subsubsection{One\sphinxhyphen{}mode coherent state}
+\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:one-mode-coherent-state}}\label{\detokenize{ch/quantum-mechanics/qft/photons-coulomb:quantum-mechanics-qft-photons-coulomb-classical-limit-one-mode-coherent}}
+\sphinxAtStartPar
+The state of an electromagnetic field can be written as a linear combination of states in the Fock space, with the occupation numbers of each possible modes \(| \vec{k}, \mu \rangle\). A one\sphinxhyphen{}mode coherent state is defined as the \(| \alpha_{\vec{k},\mu} \rangle\) that’s an eigenstate of the annihilation operator \(\hat{a}_{\vec{k},\mu}\) for the mode \(| \vec{k}, \mu \rangle\),
+\begin{equation*}
+\begin{split}\hat{a}_{\vec{k},\mu} | \alpha_{\vec{k},\mu} \rangle = c_{\vec{k}, \mu} | \alpha_{\vec{k},\mu} \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The one\sphinxhyphen{}mode coherent state is a linear combination of states in the Fock space
+\begin{equation*}
+\begin{split}| \alpha_{\vec{k},\mu} \rangle = \sum_{n} b_n^{\vec{k},\mu} | \dots n_{\vec{k},\mu} \dots \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with zero occupation number of any state different from \(|\vec{k}, \mu \rangle\), or dropping the indices,
+\begin{equation*}
+\begin{split}| \alpha \rangle = \sum_{n=0}^{+\infty} b_n | n \rangle \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(b_n = b_0 \frac{c^n}{\sqrt{n!}}\) from the definition and coefficient matching, and \(b_0 = e^{-\frac{|c|^2}{2}}\) from the normalization condition \(\langle \alpha | \alpha \rangle = 1\).
+\subsubsection*{Annihilation operator}
+
+\sphinxAtStartPar
+Expected value when the system is in state \(| \alpha \rangle\),
+\begin{equation*}
+\begin{split}\langle \alpha | \hat{a} | \alpha \rangle = c \end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a} | \alpha \rangle 
+  & = \sum_{n,m=0}^{+\infty} b_m^* b_n \langle m | \hat{a} | n \rangle = \\
+  & = \sum_{m=0}^{+\infty} \sum_{n=1}^{+\infty} b_m^* b_n \sqrt{n} \langle m | n - 1 \rangle = \\
+  & = \sum_{m=0}^{+\infty} \sum_{n=0}^{+\infty} b_m^* b_{n+1} \sqrt{n+1} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  & = \sum_{n=0}^{+\infty} c \cdot |b_n|^2 = \\
+  & = c \cdot \sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!} = \\
+  & = c \cdot \underbrace{|b_0|^2 \cdot e^{|c|^2}}_{=1} = c \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \(\sqrt{n+1} b_{n+1} = c \cdot b_n\).
+\subsubsection*{Creation operator}
+
+\sphinxAtStartPar
+Expected value when the system is in state \(| \alpha \rangle\),
+\begin{equation*}
+\begin{split}\langle \alpha | \hat{a}^\dagger | \alpha \rangle = c^* \end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a}^\dagger | \alpha \rangle 
+  & = \left( \langle \alpha | \hat{a} | \alpha \rangle \right)^* = \\
+  & = \left( \sum_{n,m=0}^{+\infty} b_m^* b_n \langle m | \hat{a} | n \rangle \right)^* = \\
+  & = \sum_{m=0}^{+\infty} \sum_{n=1}^{+\infty} b_m b_n^* \sqrt{n} \langle m | n - 1 \rangle = \\
+  & = \sum_{m=0}^{+\infty} \sum_{n=0}^{+\infty} b_m b_{n+1}^* \sqrt{n+1} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  & = \sum_{n=0}^{+\infty} c^* \cdot |b_n|^2 = \\
+  & = c^* \cdot \sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!} = \\
+  & = c^* \cdot \underbrace{|b_0|^2 \cdot e^{|c|^2}}_{=1}  = c^* \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Number operator}
+
+\sphinxAtStartPar
+Expected value of the number operator
+\begin{equation*}
+\begin{split}
+  \langle \alpha | \hat{n} | \alpha \rangle = |c|^2
+\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+With \(\hat{n} = \hat{a}^\dagger \hat{a}\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \alpha | \hat{a}^\dagger \hat{a} | \alpha \rangle 
+  & = \sum_{m,n=0}^{+\infty} b_m^* b_n \langle m | \hat{a}^\dagger \hat{a} | n \rangle = \\
+  & = \sum_{m,n=0}^{+\infty} b_m^* b_n \sqrt{n} \langle m | \hat{a}^\dagger | n - 1 \rangle = \\
+  & = \sum_{m,n=0}^{+\infty} b_m^* b_n \sqrt{n} \sqrt{n} \underbrace{\langle m | n \rangle}_{=\delta_{mn}} = \\
+  & = \sum_{n=0}^{+\infty} | b_n |^2 \cdot n = \\
+  & = |b_0|^2 \sum_{n=1}^{+\infty} n \frac{|c|^{2n}}{n!} = \\
+  & = |c|^2 \cdot |b_0|^2 \cdot \underbrace{\sum_{n=0}^{+\infty} \frac{|c|^{2n}}{n!}}_{ = e^{|c|^2} = |b_0|^{-2}} = \\
+  & = |c|^2 \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Potential vector}
+
+\sphinxAtStartPar
+Expected value of the potential vector field operator
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \alpha | \hat{\vec{a}}(\vec{r},t) | \alpha \rangle
+  & =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \, c^*_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \, c_{\vec{k},\mu} \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \langle \alpha | \hat{\vec{a}}(\vec{r},t) | \alpha \rangle
+  & = \langle \alpha | \sum_{\vec{k}', \mu'} \left[ e^{i ( \omega_{\vec{k}'} t - \vec{k}' \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}', \mu'} \hat{a}^\dagger_{\vec{k}',\mu'} + e^{- i ( \omega_{\vec{k}'} t - \vec{k}' \cdot \vec{r})} \vec{\epsilon}_{\vec{k}',\mu'} \hat{a}_{\vec{k}',\mu'} \right] | \alpha \rangle = \\
+  & = \langle \alpha | \left[ e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \hat{a}^\dagger_{\vec{k},\mu} + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \hat{a}_{\vec{k},\mu} \right] | \alpha \rangle = \\
+  & =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \langle \alpha | \hat{a}^\dagger_{\vec{k},\mu} | \alpha \rangle + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \langle \alpha | \hat{a}_{\vec{k},\mu} | \alpha \rangle = \\
+  & =  e^{i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r} )} \vec{\epsilon}_{\vec{k}, \mu} \, c^* + e^{- i ( \omega_{\vec{k}} t - \vec{k} \cdot \vec{r})} \vec{\epsilon}_{\vec{k},\mu} \, c \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparison with \eqref{equation:ch/quantum-mechanics/qft/photons-coulomb:eq:photons-coulomb:vector-potential:fourier} identifies the coefficients of the Fourier expansion with the eigenvalue of the annihilation operator corresponding to the coherent state,
+\begin{equation*}
+\begin{split}
+\vec{a}_+(\vec{k},\mu) \sim c_{\vec{k},\mu}
+\quad , \quad
+\vec{a}_-(-\vec{k},\mu) \sim c^*_{\vec{k},\mu} \ .
+\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
 \section{Multi\sphinxhyphen{}body quantum mechanics and QFT}
 \label{\detokenize{ch/quantum-mechanics/qft/multi-body:multi-body-quantum-mechanics-and-qft}}\label{\detokenize{ch/quantum-mechanics/qft/multi-body:quantum-mechanics-qft-multi-body}}\label{\detokenize{ch/quantum-mechanics/qft/multi-body::doc}}
 \sphinxAtStartPar
@@ -11194,127 +11880,297 @@ number operator \(\hat n=\hat b^\dagger\hat b\) satisfies \(\hat n^2=\hat b^\dag
 
 
 \section{Interacting Fields}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:interacting-fields}}\label{\detokenize{ch/quantum-mechanics/qft/interactions:quantum-mechanics-qft-interactions}}\label{\detokenize{ch/quantum-mechanics/qft/interactions::doc}}\begin{equation*}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions:interacting-fields}}\label{\detokenize{ch/quantum-mechanics/qft/interactions:quantum-mechanics-qft-interactions}}\label{\detokenize{ch/quantum-mechanics/qft/interactions::doc}}\subsubsection*{Contents}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:quantum-mechanics-qft-interactions-perturbation-theory}]{\sphinxcrossref{\DUrole{std,std-ref}{Perturbation theory}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields:quantum-mechanics-qft-interactions-e-em-fields}]{\sphinxcrossref{\DUrole{std,std-ref}{Interaction between electron and EM fields}}}}
+
+\end{itemize}
+
+\sphinxAtStartPar
+A model for interacting electron and electomagnetic fields requires an interaction contribution in the Hamiltonian of the system, namely
+\begin{equation*}
 \begin{split}
-\hat H=\hat H_{atom}+\hat H_{rad}+\hat H_{inter},\qquad
-\hat H_{atom}=\sum E_k\hat b_k^\dagger\hat b_k,\quad
+\hat H=\hat H_{atom}+\hat H_{rad}+\hat H_{inter}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being
+\begin{equation*}
+\begin{split}
+\hat H_{atom}=\sum E_k\hat b_k^\dagger\hat b_k
+\quad , \quad
 \hat H_{rad}=\sum E_{k,\alpha}\hat a^\dagger_{k,\alpha}\hat a_{k,\alpha}
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-Examples (space–time diagrams in the notes): all these processes should be weighted by some probability.
+the Hamiltonian of the electron bound to the atom, and the Hamiltonian of the EM field. Interaction comes from the coupling of the electron dynamics and the EM field: electron may act as a source of the EM field, and its state is influenced by the EM field, as shown…
+\subsubsection*{References}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Add references to}
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Absorption} process: \(\hat b_n^\dagger\hat b_m\hat a_{k,\alpha}\) — atom \(|\psi_m\rangle\to|\psi_n\rangle\), photon \(|k,\alpha\rangle\) absorbed.
+\sphinxstyleemphasis{classical electromagnetism}
 
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Emission} process: \(\hat b_m^\dagger\hat a^\dagger_{k,\alpha}\hat b_n\) — atom \(|\psi_n\rangle\to|\psi_m\rangle\), photon \(|k,\alpha\rangle\) emitted.
+\sphinxstyleemphasis{electromagnetism in special relativity}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstyleemphasis{notes about calculus of variations and Lagrangian approach}
 
 \end{itemize}
 
+\sphinxAtStartPar
+As an example, minimal coupling for the motion of acharged particle in an EM field is readily obtained replacing the momentum \(\mathbf{P}\) with the sum \(\mathbf{P} + q \mathbf{A}\), or in classical mechanics \(\vec{p} \rightarrow \vec{p} + q \vec{a}\). In classical mechanics the Hamiltonian reads
+\begin{equation*}
+\begin{split}\mathcal{H} = \frac{1}{2}\frac{|\vec{p}- q \vec{a}|^2}{m} + q \varphi \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+producing two coupling terms, one linear and one quadratic in \(\vec{a}\).
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The linear term produces the dominant interaction processes \sphinxhyphen{} for EM with low intensity \sphinxhyphen{} in the Hamiltonian terms with three creation/annihilation operators: a pair of creation/annihilation operators of the electron field and one creation or annihilation operator of the photon field, represent absorption and emission of light from the atom. As an example
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Absorption} process: \(\hat b_n^\dagger\hat b_m\hat a_{k,\alpha}\) — atom \(|\psi_m\rangle\to|\psi_n\rangle\), photon \(|k,\alpha\rangle\) absorbed (destroyed from the EM field).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Emission} process: \(\hat b_m^\dagger\hat a^\dagger_{k,\alpha}\hat b_n\) — atom \(|\psi_n\rangle\to|\psi_m\rangle\), photon \(|k,\alpha\rangle\) emitted (created in the EM field).
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+The quadratic term is responsible for scattering…
+
+\end{itemize}
+
+\sphinxstepscope
+
 
 \subsection{Perturbation theory}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:perturbation-theory}}\begin{equation*}
-\begin{split}
-\hat H=\hat H_0+\hat H_{int}
-\end{split}
-\end{equation*}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:perturbation-theory}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:quantum-mechanics-qft-interactions-perturbation-theory}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation::doc}}
 \sphinxAtStartPar
-(\(\hat H_0\): easy\sphinxhyphen{}to\sphinxhyphen{}solve unperturbed system; \(\hat H_{int}\): “small interaction”.)
+Other sections dealing with perturbation theory:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/history/heisenberg-reinterpretation:quantum-mechanics-history-heisenberg-reinterpretation-transition-perturbation-theory}]{\sphinxcrossref{\DUrole{std,std-ref}{Perturbation theory for transition probabilities in weak electric fields}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/einstein-coeffs-interaction-picture:quantum-mechanics-einstein-coeffs-interaction-picture-perturbation}]{\sphinxcrossref{\DUrole{std,std-ref}{Interaction picture and perturbation theory}}}}
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Need for cleaning}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Perturbation theory applies to systems governed by a Hamiltonian that can be written as the sum
 \begin{equation*}
 \begin{split}
-i\hbar|\dot\psi\rangle=(\hat H_0+\hat H_{int})|\psi\rangle,\qquad
-|\psi\rangle=\sum_nc_n(t)e^{-i\omega_nt}|\phi_n\rangle
+\hat H = \hat H_0+\hat H_{int} \ ,
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-Then
+with \(\hat H_0\) an easy\sphinxhyphen{}to\sphinxhyphen{}solve (unperturbed) system, whose spectral decomposition is usually known, and \(\hat H_{int}\) a “small” perturbation, either time independent or time dependent. Let \(| \phi_n \rangle\), and \(E_n\) the eigenstates and the eigenvalues of the unperturbed Hamiltonian \(\hat{H}_0\), i.e.
+\begin{equation*}
+\begin{split}\hat{H}_0 | \phi_n \rangle = E_n | \phi_n \rangle \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, the perturbation Hamiltonian is explicitly written as the product of a “small” parameter \(\lambda\) and a scaled perturbation Hamiltonian \(\hat{H}_1\), with the same order of the unperturbed Hamiltonian \(\hat{H}_0\), i.e.
+\begin{equation*}
+\begin{split}\hat{H} = \hat{H}_0 + \lambda \hat{H}_1 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and a generic state \(| \psi \rangle\) of the system written as a linear combination of the eigenstates \(\{ | \phi_n \rangle \}_n\) of the unperturbed system,
 \begin{equation*}
 \begin{split}
-i\hbar\sum_n\left(\dot c_n-i\omega_nc_n\right)e^{-i\omega_nt}|\phi_n\rangle=(\hat H_0+\hat H_{int})\sum_nc_ne^{-i\omega_nt}|\phi_n\rangle
+|\psi\rangle=\sum_nc_n(t)e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \ .
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-With \(\hat H_0|\phi_n\rangle=E_n|\phi_n\rangle\) the \(E_n\) terms cancel:
+Inserting this expression in the Schrodinger equation \(i\hbar|\dot\psi\rangle=(\hat H_0+\hat H_{int})|\psi\rangle\),
 \begin{equation*}
-\begin{split}
-0=\sum_n\left\{i\hbar\dot c_ne^{-i\omega_nt}|\phi_n\rangle-\hat H_{int}c_ne^{-i\omega_nt}|\phi_n\rangle\right\}
-\end{split}
+\begin{split}\begin{aligned}
+i\hbar\sum_n\left(\dot c_n-i \frac{E_n}{\hbar} c_n \right)e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle & = (\hat H_0+\hat H_{int})\sum_nc_ne^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \\
+ \sum_n i\hbar\dot c_ne^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle & = \hat H_{int}\sum_n c_n e^{-i \frac{E_n}{\hbar} t}|\phi_n\rangle \ , 
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Multiplying by \(\langle\phi_m|\):
+since \(E_n| \phi_n \rangle = \hat{H}_0 | \phi_n \rangle\). Multiplying by \(\langle\phi_m|\), and exploiting orthogonality \(\langle \phi_m | \phi_n \rangle = \delta_{mn}\),
 \begin{equation*}
 \begin{split}
 i\hbar\dot c_me^{-i\omega_mt}=\sum_nc_ne^{-i\omega_nt}\langle\phi_m|\hat H_{int}|\phi_n\rangle
-\ \Rightarrow\
-\dot c_m=\frac1{i\hbar}\sum_nc_ne^{i(\omega_m-\omega_n)t}\langle\phi_m|\hat H_{int}|\phi_n\rangle
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-an infinite set of equations. Power expansion in a small parameter \(\lambda\):
+i.e. the infinite system of equations \sphinxhyphen{} \(m \in \{0,1,2,\dots\}\) \sphinxhyphen{} follows
+\begin{equation}\label{equation:ch/quantum-mechanics/qft/interactions-perturbation:eq:interaction:perturbation}
+\begin{split}
+\dot c_m=\frac1{i\hbar}\sum_nc_ne^{i(\omega_m-\omega_n)t}\langle\phi_m|\hat H_{int}|\phi_n\rangle
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+Perturbation theory looks for a solution writing the coefficients \(c_m(t)\) as power expansions in the “small” parameter \(\lambda\),
 \begin{equation*}
 \begin{split}
 c_m(t)=c_m^{(0)}(t)+\lambda c_m^{(1)}(t)+\lambda^2c_m^{(2)}(t)+\dots
 \end{split}
 \end{equation*}
-
-\subsubsection{0th\sphinxhyphen{}order solution}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:th-order-solution}}
 \sphinxAtStartPar
-System starting in \(|i\rangle\): \(c_i(0)=1\), \(c_{j\neq i}(0)=0\). Here \(H^{int}_{mn}\propto\lambda H^{int}_{mn}\):
+Inserting this expression in \eqref{equation:ch/quantum-mechanics/qft/interactions-perturbation:eq:interaction:perturbation},
 \begin{equation*}
-\begin{split}
-\dot c_m^{(0)}+\lambda\dot c_m^{(1)}+\lambda^2\dot c_m^{(2)}+\dots=\frac1{i\hbar}\sum_n\left(c_n^{(0)}+\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\right)\lambda H^{int}_{mn}e^{i(\omega_m-\omega_n)t}
-\end{split}
+\begin{split}\dot c_m^{(0)}+\lambda\dot c_m^{(1)}+\lambda^2\dot c_m^{(2)}+\dots=\frac1{i\hbar}\sum_n\left(c_n^{(0)}+\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\right) \lambda H^{(1)}_{mn}e^{i(\omega_m-\omega_n)t} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Check the 0th\sphinxhyphen{}order solution (the right way to represent the solution: \(c^{(0)}_{n\neq m}(t)\equiv0\), \(c_n(t)=\lambda c_n^{(1)}+\lambda^2c_n^{(2)}+\dots\)):
+an (approximate) solution can be found by coefficient matching:
+\begin{equation*}
+\begin{split}\left\{ \begin{aligned}
+(0): & \quad \dot{c}_m^{(0)} = 0 \\
+(k): & \quad \dot{c}_m^{(k)} = \frac{1}{i\hbar} \sum_n c_n^{(k-1)} H^{(1)}_{mn} e^{i ( \omega_m - \omega_n ) t} \\
+\end{aligned} \right.\end{split}
+\end{equation*}
+
+\subsubsection{0th\sphinxhyphen{}order solution}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:th-order-solution}}
+\sphinxAtStartPar
+System starting in \(| n \rangle\), \(c_n(0)=1\), \(c_{m \neq n}(0)=0\). As the \(0^{th}\)\sphinxhyphen{}order equations read \(\dot{c}^{(0)}_m = 0\), then \(0^{th}\)\sphinxhyphen{}order coefficients are constant in time.
+
+
+\subsubsection{1st\sphinxhyphen{}order solution}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:st-order-solution}}
+\sphinxAtStartPar
+If \(c_n^{(0)}(t) = 1\), \(c_{m \neq n}(t) = 0\), then infinite set of \(1^{st}\) order equations is
+\begin{equation*}
+\begin{split}
+\dot c_m^{(1)}(t)= \frac{1}{i\hbar} e^{i\omega_{mn}t} H^{(1)}_{mn}
+\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+coefficient \(c_n^{(1)}\)
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\(n=m\): \(\dot c^{(0)}_m(t)=\frac1{i\hbar}c^{(0)}_mH^{int}_{mm}\)
+if \(H_{nn}^{(1)} = 0\), then the dynamical equation reads \(\dot{c}^{(1)}_n = 0\), and the constant solution reads \(c^{(1)}_n = 0\), as the i.c. for the non\sphinxhyphen{}zero order terms are identically zero
 
 \item {} 
 \sphinxAtStartPar
-\(n\neq m\): \(\dot c^{(0)}_n(t)=\frac1{i\hbar}c_m^{(0)}(t)H^{int}_{mn}e^{i\omega_{mn}t}\) (with \(c^{(0)}_m=1\))
+if \(H_{nn}^{(1)} \ne 0\), then the dynamical equation reads \(\dot{c}^{(1)}_n = \frac{1}{i\hbar} H^{(1)}_{nn}\), the solution reads \(c_n^{(1)} = \frac{H^{(1)}_{nn}}{i\hbar} t\)
 
 \end{itemize}
-\begin{equation*}
-\begin{split}
-c_m^{(0)}(t)=\begin{cases}\exp\!\left(-\dfrac{iH^{int}_{mm}}{\hbar}t\right)&\text{if i.c. } c^{(0)}_m(0)=1,\ H^{int}_{mm}\neq0\\[2mm] 1&\text{if } H^{int}_{mm}\equiv0\end{cases}
-\end{split}
-\end{equation*}
 
-\subsubsection{1st\sphinxhyphen{}order solution}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:st-order-solution}}
+\item {} 
 \sphinxAtStartPar
-If \(H_{mm}=0\), \(c_m^{(0)}(t)=1\):
+coefficients \(c_m^{(1)}\), for \(m \ne n\),
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+if \(H^{(1)}_{mn} = 0\), the dynamical eqaution reads \(\dot{c}_m^{(1)} = 0\), and the constant solution reads \(c_m^{(1)} = 0\)
+
+\item {} 
+\sphinxAtStartPar
+else
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+if \(\omega_{mn} := \omega_m - \omega_n \ne 0\), the dynamical equation reads \(\dot{c}_m^{(1)} = \frac{e^{i \omega_{mn}t}}{i \hbar} H^{(1)}_{mn}\), then the solution reads
+\begin{equation}\label{equation:ch/quantum-mechanics/qft/interactions-perturbation:eq:interactions:perturbations:cm1}
+\begin{split}c_m^{(1)}(t) = \left.\left[ - \frac{H^{(1)}_{mn} e^{i \omega_{mn} \tau}}{\hbar \omega_{mn}} \right]\right|_{\tau=0}^{t} = \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn}\end{split}
+\end{equation}
+\item {} 
+\sphinxAtStartPar
+if \(\omega_{mn} := \omega_m - \omega_n = 0\), the dynamical equation reads \(\dot{c}_m^{(1)} = \frac{1}{i \hbar} H^{(1)}_{mn}\), and the solution is \(c_m^{(1)} = \frac{1}{i \hbar} H^{(1)}_{mn}\).
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Probabilities.} For a system starting in state \(| n \rangle\), the power expansion of the coefficients \(c_m(t)\) reads
 \begin{equation*}
 \begin{split}
-\dot c_n^{(1)}(t)=\frac1{i\hbar}e^{i\omega_{mn}t}H^{int}_{mn}
+ c_m(t) = \delta_{mn} + \sum_{k=1}^{+\infty} c_m^{(k)} \lambda^k \ .
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-If \(\omega_{mn}\neq0\):
+Thus,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the probability \(|c_n(t)|^2\) contains zero and first order terms,
 \begin{equation*}
-\begin{split}
-c_n^{(1)}(t)=-\frac1{\hbar\omega_{mn}}e^{i\omega_{mn}t}\Big|_0^tH^{int}_{mn}=\frac{1-e^{i\omega_{mn}t}}{\hbar\omega_{mn}}H^{int}_{mn}
-\end{split}
+\begin{split}\begin{aligned}
+     |c_n|^2 
+     & = \left( \sum_{k=0}^{+\infty} c_n^{(k)} \lambda^k \right)^* \left( \sum_{j=0}^{+\infty} c_n^{(j)} \lambda^j \right) = \\
+     & = \sum_{k=0}^{+\infty} \sum_{j=0}^{+\infty} {c_n^{(k)}}^* c_n^{(j)} \lambda^{k+j} = \\
+     & = \sum_{\ell=0}^{+\infty} \sum_{j=0}^{\ell} {c_n^{(\ell-j)}}^* c_n^{(j)} \lambda^{\ell} \ ,
+   \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Probabilities (with \(c_n^{(0)}\equiv0\) for \(n\neq m\)):
+or a bit more explicitly
 \begin{equation*}
-\begin{split}
-|c_n(t)|^2=\lambda^2|c_n^{(1)}(t)|^2+\lambda^3\{\dots\}+\dots
-\end{split}
+\begin{split}\begin{aligned}
+     | c_n |^2 
+     & =  |c_n^{(0)}|^2 + \lambda \left( {c_n^{(0)}}^* c_n^{(1)} + {c_n^{(1)}}^* c_n^{(0)} \right) + \lambda^2 \left( {c_n^{(0)}}^* c_n^{(2)} + | c_n^{(1)} |^2 + {c_n^{(2)}}^* c_n^{(0)}  \right) + \dots = \\
+     & =  1 + \lambda \left( c_n^{(1)} + {c_n^{(1)}}^* \right) + \lambda^2 \left( c_n^{(2)} + | c_n^{(1)} |^2 + {c_n^{(2)}}^*  \right) + \dots \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+the probabilities \(|c_m(t)|^2\) with \(m \ne n\) only contains powers larger than or equal to \(2\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+     |c_m|^2 
+     & = \left( \sum_{k=1}^{+\infty} c_m^{(k)} \lambda^k \right)^* \left( \sum_{j=1}^{+\infty} c_m^{(j)} \lambda^j \right) = \\
+     & = \sum_{k=1}^{+\infty} \sum_{j=1}^{+\infty} {c_m^{(k)}}^* c_m^{(j)} \lambda^{k+j} = \\
+     & = \sum_{\ell=2}^{+\infty} \sum_{j=1}^{\ell-1} {c_m^{(\ell-j)}}^* c_m^{(j)} \lambda^{\ell} \ ,
+   \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Using \((1-e^{i\alpha})^*(1-e^{i\alpha})=2-2\cos\alpha=4\sin^2\frac\alpha2\):
+or a bit more explicitly
+\begin{equation*}
+\begin{split}| c_m |^2 = \lambda^2 |c_m^{(1)}|^2 + \lambda^3 \left( {c_m^{(2)}}^* c_m^{(1)} + {c_m^{(1)}}^* c_m^{(2)} \right) + \dots\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Here the parameter \(\lambda\) is assumed to be real.
+
+\sphinxAtStartPar
+If \(H^{(1)}_{mn} \ne 0\), and \(\omega_{mn} \ne 0\), the coefficient \(c_{m}^{(1)}\) is given by \eqref{equation:ch/quantum-mechanics/qft/interactions-perturbation:eq:interactions:perturbations:cm1}, and its square modulus reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  |c_m^{(1)}|^2 
+  & = \left( \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn} \right)^* \left( \frac{1 - e^{i \omega_{mn} t}}{\hbar\omega_{mn}} H^{(1)}_{mn} \right) = \\
+  & = \left| H_{mn}^{(1)} \right|^2 \frac{4 \sin^2 \left( \frac{\omega_{mn} t}{2} \right)}{\hbar^2 \omega_{mn}^2} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \((1 - e^{i a})^* (1- e^{i a}) = 2 - e^{ia} - e^{-ia} = 2 - 2 \cos( a ) = 4 \sin^2 \left( \tfrac{a}{2} \right)\). Thus the leading order of the probability \(| c_n(t)|^2\) \sphinxhyphen{} this is the probability of finding the state of the system in \(| \phi_n \rangle\) at time \(t\), as this is the coefficient of \(| \phi_n \rangle\) of the state \(| \psi \rangle\) except for an irrelevant phase factor \(e^{i \omega_{n} t}\) \sphinxhyphen{} is
 \begin{equation*}
 \begin{split}
-|c_n(t)|^2\sim\lambda^2|H^{int}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
+|c_n(t)|^2\sim\lambda^2|H^{(1)}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -11322,33 +12178,53 @@ As \(t\to+\infty\) this function goes to \sphinxstylestrong{Dirac’s delta}:
 \begin{equation*}
 \begin{split}
 \int_{\omega=-\infty}^{+\infty}\left\{\frac{\sin(\omega t/2)}{\omega}\right\}^2d\omega=\frac\pi2t
-\qquad\text{and}\qquad
-|c_n|^2\longrightarrow2\pi t\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-(natural units, \(\hbar=1\).)
+so that the transition rate probability between the initial state \(m\) and the final state \(n\) at the first order is
+\begin{equation*}
+\begin{split}
+ \frac{|c_n|^2}{t} \longrightarrow \frac{2\pi}{\hbar^2} \,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{See, update and cross\sphinxhyphen{}link} \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/functional-analysis/dirac-delta.html}{Math: Dirac delta}.
 
 
 \subsubsection{Fermi golden rule}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:fermi-golden-rule}}
-\begin{sphinxadmonition}{note}{Fermi golden rule}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\(\hat H_0\) with stationary states \(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\).
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:fermi-golden-rule}}\label{ch/quantum-mechanics/qft/interactions-perturbation:qft:fermi-golden-rule}
+\begin{sphinxadmonition}{note}{Definition 25.6.1 (Fermi golden rule \sphinxhyphen{} infinite time)}
 
-\item {} 
-\sphinxAtStartPar
-\(\hat H_{int}\) causes the state \(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\) to transition to \(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\) at the rate
-\$\(2\pi\,|M_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}\)\$
 
-\end{itemize}
+
+\sphinxAtStartPar
+For \(t \rightarrow +\infty\), for a system with unperturbed Hamiltonian \(\hat H_0\), with stationary states \(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\), an additive “small” perturbation Hamiltonian \(\hat{H}_{int}\) causes the initial state \(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\) to transition to \(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\) at the rate
+\begin{equation*}
+\begin{split}2\pi\,|H^{int}_{mn}|^2\,\delta(\omega_m-\omega_n)\qquad\text{(to the 1st order)}\end{split}
+\end{equation*}
+
+\end{sphinxadmonition}
+\label{ch/quantum-mechanics/qft/interactions-perturbation:qft:fermi-golden-rule-finite}
+\begin{sphinxadmonition}{note}{Definition 25.6.2 (Fermi golden rule \sphinxhyphen{} finite time)}
+
+
+
+\sphinxAtStartPar
+For a system with unperturbed Hamiltonian \(\hat H_0\), with stationary states \(|\phi_n\rangle_t=|\phi_n\rangle e^{-i\omega_nt}\), an additive “small” perturbation Hamiltonian \(\hat{H}_{int}\) causes the initial state \(|i\rangle_t=|\phi_i\rangle e^{-i\omega_it}\) to transition to \(|f\rangle=|\phi_f\rangle e^{-i\omega_ft}\) at the rate
+\begin{equation*}
+\begin{split}
+|c_n(t)|^2\sim\lambda^2|H^{(1)}_{mn}|^2\frac{4\sin^2\!\left(\frac{\omega_{mn}t}{2}\right)}{\hbar^2\omega_{mn}^2}
+\end{split}
+\end{equation*}
+
 \end{sphinxadmonition}
 
 
 \subsubsection{Higher orders}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:higher-orders}}\begin{equation*}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:higher-orders}}
+\sphinxAtStartPar
+Check it, and provide details about the mutliple interactions involving intermediate states.
+\begin{equation*}
 \begin{split}
 \dot c_f^{(p+1)}(t)=\frac1{i\hbar}\sum_nc_n^{(p)}(t)\langle f|\hat H^{int}|n\rangle e^{i(\omega_f-\omega_n)t}
 \end{split}
@@ -11377,88 +12253,162 @@ E.g. 2nd order: \(c_n^{(1)}\propto\langle n|\hat H^{int}|m\rangle\times\frac{1-e
 
 \end{itemize}
 
+\sphinxstepscope
 
-\subsection{Interaction between electron and electromagnetic fields}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:interaction-between-electron-and-electromagnetic-fields}}
+
+\subsection{Interaction of the electron and electromagnetic field}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields:interaction-of-the-electron-and-electromagnetic-field}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields:quantum-mechanics-qft-interactions-e-em-fields}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Photon field (Heisenberg picture)}
+The behavior of the interactions between electron and electromagnetic fields strongly depends on the characteristic of the electron field:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:quantum-mechanics-qft-interactions-e-em-fields-atom-spectra}]{\sphinxcrossref{\DUrole{std,std-ref}{Bound electrons \sphinxhyphen{} Atom spectra}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-compton:quantum-mechanics-qft-interactions-e-em-fields-compton-scattering}]{\sphinxcrossref{\DUrole{std,std-ref}{Free electrons \sphinxhyphen{} Compton scattering}}}}
+
+\end{itemize}
+\subsubsection*{Non\sphinxhyphen{}relativistic model of the electron field. Schrodinger equation}
+
+\sphinxAtStartPar
+For an electron in a potential \(V(\mathbf x)\) we impose \(\{\psi_\sigma(\mathbf x),\psi_{\sigma'}^\dagger(\mathbf y)\}=\delta_{\sigma\sigma'}\delta^3(\mathbf x-\mathbf y)\) and use the one\sphinxhyphen{}body Hamiltonian:
 \begin{equation*}
 \begin{split}
-\hat A=\sum_{\vec k,\alpha}\frac{\vec u_{\vec k,\alpha}}{\sqrt{2\omega_k}}\left(\hat a_{\vec k,\alpha}e^{-i\omega_kt}e^{i\vec k\cdot\vec r}+\hat a^\dagger_{\vec k,\alpha}e^{i\omega_kt}e^{-i\vec k\cdot\vec r}\right)
-\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}
-\hat H_r=\sum_{\vec k,\alpha}\hat n_{\vec k,\alpha}\,\hbar\omega_k
+H_{\rm el}=\sum_\sigma\int d^3x\;\psi_\sigma^\dagger(\mathbf x)\Big[-\frac{\hbar^2\nabla^2}{2m}+V(\mathbf x)\Big]\psi_\sigma(\mathbf x).
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-(Energy \sphinxstylestrong{renormalization}: zero\sphinxhyphen{}point energy set \(\equiv0\).)
+The Heisenberg equation follows from \([A,BC]=\{A,B\}C-B\{A,C\}\):
+\begin{equation*}
+\begin{split}
+[\psi_\sigma(\mathbf x),\,\psi^\dagger_{\sigma'}(\mathbf y)\,h\,\psi_{\sigma'}(\mathbf y)]=\delta(\mathbf x-\mathbf y)\,h\,\psi_\sigma(\mathbf y)-\psi^\dagger(\mathbf y)\,h\,\underbrace{\{\psi_\sigma(\mathbf x),\psi_{\sigma'}(\mathbf y)\}}_{=0},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so, integrating over \(\mathbf y\),
+\begin{equation*}
+\begin{split}
+i\hbar\,\partial_t\psi_\sigma(\mathbf x,t)=[\psi_\sigma,H_{\rm el}]=\Big[-\frac{\hbar^2\nabla^2}{2m}+V\Big]\psi_\sigma(\mathbf x,t).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The \sphinxstyleemphasis{operator} \(\psi\) obeys the \sphinxstyleemphasis{Schrödinger equation}, and the one\sphinxhyphen{}particle wave function is recovered as \(\Phi(\mathbf x,\sigma)=\langle0|\psi_\sigma(\mathbf x)|\Phi\rangle\). “Second quantisation” is therefore not a second quantisation of the same object: what is quantised is a field whose classical equation of motion happens to be the Schrödinger equation.
+\subsubsection*{Free electrons}
+
+\sphinxAtStartPar
+For \(V=0\) in the periodic box use plane waves \(\phi_{\mathbf k\sigma}(\mathbf x)=V^{-1/2}e^{i\mathbf k\cdot\mathbf x}\chi_\sigma\):
+\begin{equation*}
+\begin{split}
+\psi_\sigma(\mathbf x)=\frac{1}{\sqrt V}\sum_{\mathbf k}e^{i\mathbf k\cdot\mathbf x}c_{\mathbf k\sigma},\qquad
+H_{\rm el}=\sum_{\mathbf k\sigma}\frac{\hbar^2k^2}{2m}\,c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma},\qquad
+\mathbf P=\sum_{\mathbf k\sigma}\hbar\mathbf k\,c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+A single free electron is \(c^\dagger_{\mathbf k\sigma}|0\rangle\), with energy \(\hbar^2k^2/2m\) and momentum \(\hbar\mathbf k\). The ground state of \(N\) non\sphinxhyphen{}interacting electrons fills the \(N\) lowest \((\mathbf k,\sigma)\) levels, the Fermi sea (a consequence of \((c^\dagger)^2=0\)). The spin label is conserved by \(H_{\rm el}\).
+\subsubsection*{Bound electrons}
+
+\sphinxAtStartPar
+For a hydrogen\sphinxhyphen{}like atom, \(V=-Ze^2/4\pi\varepsilon_0r\), use the orbitals \(\phi_{nlm}(\mathbf x)\chi_\sigma\) with \(E_n=-Z^2\,\text{Ry}/n^2\):
+\begin{equation*}
+\begin{split}
+\psi_\sigma(\mathbf x)=\sum_{nlm}\phi_{nlm}(\mathbf x)\,c_{nlm\sigma}+\int\!d^3k\;\phi^{(+)}_{\mathbf k}(\mathbf x)\,c_{\mathbf k\sigma},\qquad
+H_{\rm el}=\sum_{nlm\sigma}E_n\,c^\dagger_{nlm\sigma}c_{nlm\sigma}+\int\!d^3k\,\frac{\hbar^2k^2}{2m}c^\dagger_{\mathbf k\sigma}c_{\mathbf k\sigma}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The second term, the \sphinxstylestrong{Coulomb scattering states} \(\phi^{(+)}_{\mathbf k}\), completes the basis: bound and continuum states together span \(\mathcal H\). By §1.6 these operators are related to the plane\sphinxhyphen{}wave operators of §4.2 by a unitary transformation, \(c^{\rm plane}_{\mathbf p}=\sum_b\langle\mathbf p|b\rangle c_b+\int\langle\mathbf p|\mathbf k^{(+)}\rangle c_{\mathbf k}\), with the bound\sphinxhyphen{}state momentum distribution \(\langle\mathbf p|b\rangle\) spread over \(|\mathbf p|\sim\hbar/a_0\). \sphinxstylestrong{The Fock space is the same; free and bound electrons differ only by which single\sphinxhyphen{}particle basis diagonalises \(H_{\rm el}\).} A transition \(c^\dagger_{\mathbf k}c_{b}\) is a photoionisation; \(c^\dagger_{b'}c_{b}\) is a bound–bound transition; both are matrix elements of the \sphinxstyleemphasis{same} operator. For an atom with several electrons one adds the two\sphinxhyphen{}body Coulomb term of §1.5 and, in the single\sphinxhyphen{}active\sphinxhyphen{}electron approximation, treats the outermost electron in an effective potential; the light–matter formalism below is unchanged.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Spin.} Besides the orbital coupling, the electron has a Zeeman\sphinxhyphen{}type term \(H_{\rm spin}=(e\hbar/2m)\,\boldsymbol\sigma\!\cdot\!\mathbf B\) (\(g=2\)). Compared with \(H_1=(e/m)\mathbf A\!\cdot\!\mathbf p\), using \(p\sim\hbar/a_0\) and \(B\sim kA\), the ratio is \(\sim ka_0\sim10^{-3}\) for optical and UV light, so we neglect it; it produces magnetic\sphinxhyphen{}dipole transitions. The fully consistent treatment of spin and its relativistic corrections is given by the Dirac field (§5.6).
+
+
+\bigskip\hrule\bigskip
+
+\subsubsection*{Old \sphinxhyphen{} from Via Science \sphinxhyphen{} to be cleaned}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Photon field (Heisenberg picture).} The vector potential field operator and the Hamiltonian read
+\begin{equation*}
+\begin{split}
+\hat{\vec{a}}(\vec{r}, t) = \sum_{\vec k,\alpha}\frac{\vec{\epsilon}_{\vec k,\alpha}}{\sqrt{2\omega_k}}\left(\hat a_{\vec k,\alpha}e^{-i\omega_kt}e^{i\vec k\cdot\vec r}+\hat a^\dagger_{\vec k,\alpha}e^{i\omega_kt}e^{-i\vec k\cdot\vec r}\right)
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\hat H_r=\sum_{\vec k,\alpha}\hat n_{\vec k,\alpha}\,\hbar\omega_k \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+after \sphinxstylestrong{energy renormalization}, i.e. zero\sphinxhyphen{}point energy set \(\equiv0\).
+\subsubsection*{Expected value of the enerdy of the EM field}
 \begin{equation*}
 \begin{split}
 \langle\hat H_r\rangle=\langle\dots n_{\vec k,\alpha}\dots|\hat H_r|\dots n_{\vec k,\alpha}\dots\rangle=\sum_{\vec k,\alpha}n_{\vec k,\alpha}\hbar\omega_k
 \end{split}
 \end{equation*}
-\sphinxAtStartPar
-Natural units: \(c=1\), \(\hbar=1\).
+
 
 \sphinxAtStartPar
-\sphinxstylestrong{Electron field}
+\sphinxstylestrong{Electron field.} Annihilation and creation field operators for the electron read
 \begin{equation*}
 \begin{split}
-\hat\psi(\vec x,t)=\sum_k\hat b_ke^{-i\omega_kt}\varphi_k(\vec r),\qquad
+\hat\psi(\vec{r},t)=\sum_k\hat b_ke^{-i\omega_kt}\varphi_k(\vec r) \quad ,\qquad
 \hat\psi^\dagger(\vec r,t)=\sum_k\hat b^\dagger_ke^{i\omega_kt}\varphi^*_k(\vec r)
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-(\(\varphi_k\) are the “orbitals” of the atom.)
+being \(\varphi_k\) the “orbitals” of the atom of interest, solution of the eigenproblem for the Hamiltonian of the system, \(\hat{H} | \psi_n \rangle = E_n | \psi_n \rangle\). The Hamiltonian for one electron (assuming no interaction between electrons?) is
 \begin{equation*}
 \begin{split}
-\hat H=\frac1{2m_e}\hat p^2+V(\hat x)\quad\text{(Hamiltonian of the electron in the atom)},\qquad
-\hat H|\psi_k\rangle=E_k|\psi_k\rangle
+\hat H=\frac1{2m_e}\hat p^2+V(\hat x) \ .
 \end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Expected value of \(\hat H\).} Let the system be in \(|\psi\rangle\); then
+\end{equation*}\subsubsection*{Expected value of \protect\(\hat H\protect\)}
 \begin{equation*}
-\begin{split}
-\langle\hat H\rangle=\langle\psi|\hat H|\psi\rangle=\int_{x,x'}\langle\psi|x\rangle\langle x|\hat H|x'\rangle\langle x'|\psi\rangle\,dx\,dx'
-\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and with \(|\psi\rangle=\sum_kc_k|\phi_k\rangle\):
-\begin{equation*}
-\begin{split}
-\langle\hat H\rangle=\sum_{k,k'}\int_xc_k^*\langle\phi_k|x\rangle\langle x|\hat H|\phi_{k'}\rangle c_{k'}\,dx
-=\sum_{k,k'}\int_xc_k^*c_{k'}\langle\phi_k|x\rangle E_{k'}\langle x|\phi_{k'}\rangle dx=\dots=\sum_k|c_k|^2E_k
-\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{QFT form of the Hamiltonian}: just replacing the wavefunction \(\phi_k(\vec r)\) with the field operator, and \(\phi_k^*(\vec r)\) with \(\hat\psi^\dagger\):
-\begin{equation*}
-\begin{split}
-\hat H_e=\int_x\hat\psi^\dagger(x,t)\hat H\hat\psi(x,t)\,dx
-=\int_x\sum_{m,m'}\hat b^\dagger_m\psi_m^*(x)\hat H\hat b_{m'}\psi_{m'}(x)\,dx
-\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}
-=\sum_{m,m'}\int_x\psi_m^*(x)\hat H\psi_{m'}(x)dx\ \hat b_m^\dagger\hat b_{m'}
-=\sum_{m,m'}E_{m'}\,\delta_{mm'}\,\hat b_m^\dagger\hat b_{m'}
-=\sum_mE_m\hat b_m^\dagger\hat b_m=\sum_mE_m\hat n_m
-\end{split}
+\begin{split}\begin{aligned}
+\langle \hat{H} \rangle
+ & = \langle \psi | \hat{H} | \psi \rangle = \\
+ & = \sum_{m,n} c_m^* c_n \langle m | \hat{H} | n \rangle = \\
+ & = \sum_{m,n} c_m^* c_n \, E_n \, \underbrace{\langle m | n \rangle}_{\delta_{mn}} = \\
+ & = \sum_{n} | c_n |^2 \, E_n \ .
+\end{aligned}\end{split}
 \end{equation*}
 
-\subsubsection{Interaction Hamiltonian}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:interaction-hamiltonian}}
+\subsubsection*{QFT form of the Hamiltonian}
+
 \sphinxAtStartPar
-Classical mechanics: \(\vec p\to\vec p-q\vec a\) (without e.m. field → with e.m. field). Quantum: \(\hat p\to\hat p-q\hat a\).
+…
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Check and uncomment}
+
+
+\subsubsection*{Interaction Hamiltonian}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Minimal coupling.} The Hamiltonian of a particle with mass \(m\) and electric charge \(q\) in a prescribed EM field is
 \begin{equation*}
-\begin{split}
-\hat H=\frac{\hat p^2}{2m_e}+V(\hat x)\ \longrightarrow\
-\frac{\hat p^2}{2m_e}+\underbrace{\frac{q^2}{2m_e}\left(\hat a_x^2+\hat a_y^2+\hat a_z^2\right)-\frac{q}{m_e}\,\hat p\cdot\hat a}_{\hat H_{int}}+V(\hat x)
-\end{split}
+\begin{split}\mathcal{H} = \frac{1}{2} m \left| \dot{\vec{r}} \right|^2 + q \varphi = \frac{|\vec{p} - q \vec{a}|^2}{2 m} + q \varphi \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
+If the EM radiation field can be written with the vector EM potential field \(\vec{a}\), while the scalar EM potential field fully represents the EM field of the nucleus, the Hamiltonian operator for a electron bound to an atom in an external EM field is obtained by the promotion to operators of the electron position and momentum, and the vector EM field,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{H} 
+  & = \frac{\left| \hat{ \mathbf{p} } \right|^2}{2m_e} \underbrace{ - \frac{q}{m_e} \hat{\mathbf{p}} \cdot \hat{\mathbf{a}} + \frac{q^2}{2m_e} \left| \hat{\mathbf{a}} \right|^2}_{\hat{H}_{int}} + V(\hat{\mathbf{r}}) = \\
+\end{aligned}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
 Do \(\hat p\) and \(\hat a\) commute? Likely not! Maybe yes, if \(\hat p\) only acts on \(e^-\) while \(\hat a\) acts on \(\vec k,\alpha\).
+
+
+\bigskip\hrule\bigskip
+
 
 \sphinxAtStartPar
 To get the interaction Hamiltonian, put the 2 extra terms (due to the e.m. field) into the expectation formula:
@@ -11468,8 +12418,22 @@ To get the interaction Hamiltonian, put the 2 extra terms (due to the e.m. field
 \end{split}
 \end{equation*}
 
-\paragraph{(1) \protect\(\vec p\cdot\vec a\protect\) term}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:vec-p-cdot-vec-a-term}}\begin{equation*}
+\bigskip\hrule\bigskip
+
+\subsubsection*{One\sphinxhyphen{}body operator for a bosonic field}
+
+\sphinxAtStartPar
+Let \(\hat{o}\), with \(\hat{a}^\dagger\) and \(\hat{a}\) creation and annihilation operators in the \(\{ | \psi_k \rangle \}_k\) basis. Let \(o_{\alpha \beta} = \langle \psi_{\alpha} | \hat{o} | \psi_{\beta} \rangle\).
+\begin{equation*}
+\begin{split}\hat{O}_1 = \sum_{\alpha,\beta} o_{\alpha \beta} \hat{a}^\dagger_{\alpha} \hat{a}_{\beta}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or in space representation
+\begin{equation*}
+\begin{split}\hat{O}_1 = \end{split}
+\end{equation*}\subsubsection*{One\sphinxhyphen{}body operator for a fermionic field}
+\subsubsection*{(1) \protect\(\vec p\cdot\vec a\protect\) term}
+\begin{equation*}
 \begin{split}
 \hat H^{(1)}=\int_x\sum_m\dots\frac{q}{m_e}\left(\hat A_x\hat p_x+\hat A_y\hat p_y+\hat A_z\hat p_z\right)\sum_n\dots\,dx
 \end{split}
@@ -11540,10 +12504,8 @@ give the “relevant processes”, i.e. those with constant time dependence, as 
 \begin{split}
 \text{ABS: }\ \omega_k+\omega_n=\omega_m,\qquad\text{EM: }\ \omega_k=\omega_n-\omega_m\qquad(\text{cons. of energy})
 \end{split}
-\end{equation*}
-
-\paragraph{(2) \protect\(a^2\protect\) terms}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:a-2-terms}}\begin{equation*}
+\end{equation*}\subsubsection*{(2) \protect\(a^2\protect\) terms}
+\begin{equation*}
 \begin{split}
 \hat H^{(2)}=\sum_{m,n}\int_x\hat b_m^\dagger\psi^*_m(x)\,\frac{q^2}{2m_e}\left(\hat a_x^2+\hat a_y^2+\hat a_z^2\right)\sum_n\hat b_n\psi_n(x)\,dx
 \end{split}
@@ -11581,10 +12543,8 @@ with \(\hat a_x=\sum_{\vec k,\alpha}\frac{\{\vec e_{k\alpha}\}_x}{\sqrt{2\omega_
 \begin{split}
 \hat H_{int}=\hat H^{(1)}_{int}+\hat H^{(2)}_{int}=\hat H^{(1)}_{abs}+\hat H^{(1)}_{em}+\hat H^{(2)}_{int}
 \end{split}
-\end{equation*}
+\end{equation*}\subsubsection*{Dipole approximation}
 
-\subsubsection{Dipole approximation}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:dipole-approximation}}
 \sphinxAtStartPar
 Usually the size of the atom (e.g. \(H_2\)) orbitals \(\propto10^{-9}\) m, while \(\lambda_{EM,\,jump}\propto10^{-7}\) m. Thus \(\vec k\cdot\vec x\) is small within the atom:
 \begin{equation*}
@@ -11594,13 +12554,9 @@ e^{i\vec k\cdot\vec x}=1+i\vec k\cdot\vec x+\dots\sim1\qquad\Rightarrow\qquad\te
 \end{equation*}
 \sphinxAtStartPar
 In the dipole approximation the ABS and EM coefficients are identical.
+\subsubsection*{Selection rules}
+\subsubsection*{Interesting physical interpretation using angular momentum}
 
-
-\subsection{Selection rules}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:selection-rules}}
-
-\subsubsection{Interesting physical interpretation using angular momentum}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:interesting-physical-interpretation-using-angular-momentum}}
 \sphinxAtStartPar
 Quantum numbers \(n,\ell,m_\ell,m_s\).
 \begin{itemize}
@@ -11645,10 +12601,8 @@ Quantum numbers \(n,\ell,m_\ell,m_s\).
 
 \bigskip\hrule\bigskip
 
+\subsubsection*{Linear momentum}
 
-
-\subsubsection{Linear momentum}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:linear-momentum}}
 \sphinxAtStartPar
 \sphinxstyleemphasis{Smells like Compton effect.}
 
@@ -11669,10 +12623,8 @@ p_\gamma=p_{atom}\simeq m\,V_{atom}\ \ (\sim m_{proton}V_{atom})
 \end{equation*}
 \sphinxAtStartPar
 The \sphinxstylestrong{nucleus} absorbs the \(\gamma\) linear momentum.
-
-
-\subsubsection{Example 1: \protect\(1s+\gamma\to2p\protect\) (absorption)}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:example-1-1s-gamma-to2p-absorption}}\begin{equation*}
+\subsubsection*{Example 1: \protect\(1s+\gamma\to2p\protect\) (absorption)}
+\begin{equation*}
 \begin{split}
 |i\rangle=|1,0,\dots\rangle_a\,|0\dots n_{\vec k\alpha}\dots0\rangle_r=|1_1\rangle_a|n_{\vec k\alpha}\rangle_r
 \end{split}
@@ -11703,10 +12655,8 @@ The transition rate ∝ the \sphinxstylestrong{number of photons in the state \(
 
 \sphinxAtStartPar
 This can be used in the Fermi golden rule.
-
-
-\subsubsection{Example 2: emission process \protect\(2p\to1s+\gamma\protect\)}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:example-2-emission-process-2p-to1s-gamma}}\begin{equation*}
+\subsubsection*{Example 2: emission process \protect\(2p\to1s+\gamma\protect\)}
+\begin{equation*}
 \begin{split}
 |i\rangle=|1_3\rangle_a|n_{\vec k\alpha}\rangle_r,\qquad|f\rangle=|1_1\rangle_a|(n+1)_{\vec k\alpha}\rangle_r
 \end{split}
@@ -11715,16 +12665,12 @@ This can be used in the Fermi golden rule.
 |M_{fi}|^2=|\langle f|\hat H_{int}|i\rangle|^2=\left|\langle f|M_e(1,3,\vec k,\alpha)\,\hat b_1^\dagger\hat b_3\hat a^\dagger_{\vec k\alpha}|i\rangle\right|^2
 =\underbrace{(n_{\vec k,\alpha}+1)}_{\substack{n:\ \text{stimulated emission}\\1:\ \text{spontaneous emission}}}\ \underbrace{|M(1,3,\vec k,\alpha)|^2}_{\text{symmetry properties}}
 \end{split}
-\end{equation*}
+\end{equation*}\subsubsection*{Revisiting Einstein coefficients (1917)}
 
-\subsubsection{Revisiting Einstein coefficients (1917)}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:revisiting-einstein-coefficients-1917}}
 \sphinxAtStartPar
 …
+\subsubsection*{Photon–\protect\(e^-\protect\) scattering}
 
-
-\subsection{Photon–\protect\(e^-\protect\) scattering}
-\label{\detokenize{ch/quantum-mechanics/qft/interactions:photone-scattering}}
 \sphinxAtStartPar
 A free \(e^-\) can’t absorb a \(\gamma\) (conditions about conservation of \(E\) and \(\vec p\) cannot be met simultaneously).
 
@@ -11756,6 +12702,500 @@ Annotations in the notes: \(n_{\vec k\alpha}\) = “photon in initial state”; 
 
 \sphinxAtStartPar
 (In the notes, a small diagram shows the initial state \(|\vec p\rangle\) + photon \(|\vec k,\alpha\rangle\) → final state \(|\vec p'\rangle\) + photon \(|\vec l,\beta\rangle\) in a space–time plot.)
+
+\sphinxstepscope
+
+
+\subsubsection{Bound electrons \sphinxhyphen{} Atom spectra}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:bound-electrons-atom-spectra}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:quantum-mechanics-qft-interactions-e-em-fields-atom-spectra}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum::doc}}
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Schrodinger, Heisenberg and interaction pictures
+
+\item {} 
+\sphinxAtStartPar
+Time dependence of the interaction Hamiltonian, in order to make energy conservation applear
+
+\item {} 
+\sphinxAtStartPar
+…
+
+\end{itemize}
+
+
+\paragraph{Bound electron}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:bound-electron}}
+\sphinxAtStartPar
+An electron bound to an isolated atom is governed by the Schrodinger equation \sphinxhyphen{} here neglecting spin for simplicity; use Pauli equation for non\sphinxhyphen{}relativistic approximation, or Dirac equation \sphinxhyphen{}
+
+\sphinxAtStartPar
+\(i \hbar \dot{| \Psi \rangle} = \left( \frac{|\hat{\mathbf{p}}|^2}{2 m} + V(\hat{\mathbf{r}}) \right) | \Psi \rangle \ ,\)\$
+
+\sphinxAtStartPar
+being \(V(\hat{\mathbf{r}})\) the potential energy operator, due to Coulomb force from the nucleus.
+
+
+\paragraph{The Hamiltonian}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:the-hamiltonian}}
+\sphinxAtStartPar
+The full Hamiltonian is \(\hat{H}=\hat{H}_{\rm el}+\hat{H}_{\rm rad}+\hat{H}_1+\hat{H}_2\) with, from §2.3 (second\sphinxhyphen{}quantised via §1.5),
+\begin{equation*}
+\begin{split}
+\hat{H}_1(t)=\frac{q}{m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r})  \quad , \quad
+\hat{H}_2(t)=\frac{q^2}{2m} \int d^3 \mathbf{r} \hat{\Psi}^\dagger(\mathbf{r}) |\mathbf{A}(\mathbf{r},t)|^2 \hat{\Psi}(\mathbf{r}) \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+expanding \(\mathbf{A}(\mathbf{r},t)\) with
+\begin{equation*}
+\begin{split}\hat{\mathbf{A}}(\mathbf{r},t) = \sum_{\mathbf{k}, \mu} \sqrt{\frac{\hbar}{2 \varepsilon_0 \omega_{\mathbf{k}} V}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \ ,\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+writing the electron fields as linear combinations of creation an annihilation operators \(\hat{c}^\dagger\), \(\hat{c}\) in any basis \(\{ |\alpha \rangle \}\) as
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \hat{\Psi}^\dagger(\mathbf{r}) & = \sum_{\alpha} \alpha^*(\mathbf{r}) \hat{c}^\dagger_{\alpha} && = \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha} \\
+    \hat{\Psi}        (\mathbf{r}) & = \sum_{\beta} \beta  (\mathbf{r}) \hat{c}_{\beta} && = \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \\
+  \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+the \(\hat{H}_1\) interaction Hamiltonian becomes
+\begin{equation}\label{equation:ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:eq:atom-spectra:H1}
+\begin{split}
+\hat{H}_1(t)=\frac em\sum_{\alpha\beta}\sum_{\mathbf k \mu}N_k\Big[\langle\alpha|e^{i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k} \mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{-i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda} +\langle\alpha|e^{-i\mathbf k\cdot\hat{\mathbf{r}}}\,\boldsymbol\epsilon_{\mathbf{k}\mu}\!\cdot\!\hat{\mathbf{p}}|\beta\rangle\, e^{i \omega_{\mathbf{k}} t}\,c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}\Big],
+\end{split}
+\end{equation}
+
+
+\sphinxAtStartPar
+(the orderings of \(e^{\pm i\mathbf k\cdot\mathbf x}\) and \(\boldsymbol\varepsilon\!\cdot\!\mathbf p\) do not matter since \(\boldsymbol\varepsilon\!\cdot\!\mathbf k=0\)).
+\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{H}_1(t)
+  & = \frac{q}{m} \int \hat{\Psi}^\dagger(\mathbf{r}) \mathbf{A}(\mathbf{r},t) \cdot (-i\hbar\nabla) \hat{\Psi}(\mathbf{r}) d^3 \mathbf{r} = \\
+  & = \frac{q}{m} \int \left( \sum_{\alpha} \langle \alpha | \mathbf{r} \rangle \hat{c}^\dagger_{\alpha}\right) \left( \sum_{\mathbf{k},\mu} N_{\mathbf{k}} \boldsymbol\epsilon_{\mathbf{k},\mu} \left( \hat{a}_{\mathbf{k}, \mu} e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right) \right) \cdot \left( - i \hbar \nabla \sum_{\beta} \langle \mathbf{r} | \beta \rangle \hat{c}_{\beta} \right) d^3 \mathbf{r} = && (1) \\
+  & = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \int \langle \alpha | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i(\omega_{\mathbf{k}}t - \mathbf{k} \cdot \mathbf{r})} \right)  = && (2) \\
+  & = \frac{q}{m} \sum_{\alpha, \beta} \sum_{\mathbf{k},\mu} N_k \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle \, \hat{c}^\dagger_{\alpha} \hat{c}_{\beta} \left( \hat{a}_{\mathbf{k}, \mu}  e^{-i \omega_{\mathbf{k}}t } + \hat{a}^\dagger_{\mathbf{k}, \mu} e^{i\omega_{\mathbf{k}}t } \right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since (1) \(\langle \mathbf{r} | \hat{\mathbf{p}} | \beta \rangle = - i \hbar \nabla \langle \mathbf{r} | \beta \rangle\), and (2)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \int_{\mathbf{r}} \langle \alpha | \mathbf{r} \rangle e^{i \mathbf{k} \cdot \mathbf{r}} \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r}
+  & = \int_{\mathbf{r}} \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle \langle \mathbf{r} | \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} = \\
+  & = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \, \boldsymbol\epsilon_{\mathbf{k},\mu} \cdot \hat{\mathbf{p}} | \beta \rangle d^3 \mathbf{r} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \(e^{i \mathbf{k} \cdot \mathbf{r}} | \mathbf{r} \rangle = e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} | \mathbf{r} \rangle\), following from \(\hat{x}^n | \mathbf{r} \rangle = x^n | \mathbf{r} \rangle\), and \(e^{i \mathbf{k} \cdot \mathbf{r}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \mathbf{r})^n}{n!}\), and \(e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} = \sum_{j=0}^{+\infty} \frac{(i \mathbf{k} \cdot \hat{\mathbf{r}})^n}{n!}\), and \(\int_{\mathbf{r}} | \mathbf{r} \rangle \langle \mathbf{r} | \, d^2 \mathbf{r} = \hat{\mathbf{1}}\).
+
+\sphinxAtStartPar
+Reading the structure:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(c^\dagger_\alpha c_\beta\,a\): the electron goes from \(\beta\) to \(\alpha\) \sphinxstylestrong{absorbing} a photon; \(c^\dagger_\alpha c_\beta\,a^\dagger\): it goes from \(\beta\) to \(\alpha\) \sphinxstylestrong{emitting} one. Electron number is conserved (§2.2), photon number changes by \(\pm1\).
+
+\item {} 
+\sphinxAtStartPar
+\(H_2\) contains \(a^\dagger a\) (scattering, photon number unchanged) and \(aa\), \(a^\dagger a^\dagger\) (two photons absorbed or emitted), each with a factor \(c^\dagger_\alpha c_\beta\).
+
+\item {} 
+\sphinxAtStartPar
+Total momentum \(\mathbf P_{\rm el}+\mathbf P_{\rm rad}\) is conserved when \(V=0\), and the total angular momentum and parity in general (§2).
+
+\end{itemize}
+
+
+\paragraph{Transition rates}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:transition-rates}}
+\sphinxAtStartPar
+Perturbation theory allows to evaluate the transition probability between an initial state \(| i \rangle\) and a final state \(| f \rangle\) of the unperturbed system, with Hamiltonian \(\hat{H}_0\).
+
+\sphinxAtStartPar
+For \(\hat{H}=\hat{H}_0+\hat{H}_I\) with the Hamiltonian \(\hat{H}_0=\hat{H}_{\rm el}+\hat{H}_{\rm rad}\) the Hamiltonian of the non\sphinxhyphen{}interacting fields. Let the initial and final states be eigenvectors of the unperturbed Hamiltonian, i.e.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{H}_0 | i \rangle & = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_i \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_i \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,i}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,i}^{\rm rad} E_{\mathbf{k} \mu} \right) | i \rangle = E_i | i \rangle \\
+  \hat{H}_0 | f \rangle & = \left( \hat{H}_{\rm el} + \hat{H}_{\rm rad} \right) | \mathbf{n}^{\rm el}_f \rangle_{\rm el} \otimes | \mathbf{n}^{\rm rad}_f \rangle_{\mathbf{k} \mu} = \left( \sum_{a} n_{a,f}^{\rm el} E_a^{\rm el} + \sum_{\mathbf{k} \mu} n_{\mathbf{k} \mu,f}^{\rm rad} E_{\mathbf{k} \mu} \right) | f \rangle = E_f | f \rangle \\
+\end{aligned}\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Fermi golden rule} provides the ratio of transition probabilities from \(| i \rangle\) to \(| f \rangle\) as
+\begin{equation*}
+\begin{split}
+\Gamma_{i\to f}=\frac{2\pi}{\hbar}\,|T_{fi}|^2\,\delta(E_f-E_i),\qquad
+T_{fi}=\langle f|H_I|i\rangle+\sum_m\frac{\langle f|H_I|m\rangle\langle m|H_I|i\rangle}{E_i-E_m+i0}+\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(m\) runs over \sphinxstyleemphasis{all} intermediate states of \(H_0\) (including states with extra photons). The sum over final photon modes is \(\sum_{\mathbf k}\to V\!\int d^3k/(2\pi)^3=V\!\int\omega^2\,d\omega\,d\Omega\big/\big((2\pi)^3c^3\big)\), using \(k=\omega/c\).
+
+\sphinxAtStartPar
+Absorbption and emission are first\sphinxhyphen{}order processes and the transition probabilities are dominated by the term \(\langle f | \hat{H}^{int} | \rangle \sim \langle f | \hat{H}_{\rm 1} | i \rangle\), i.e. using the expression \eqref{equation:ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:eq:atom-spectra:H1}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Absorption, \sphinxstylestrong{assuming} an existing electron in \(| \beta \rangle\) and non existing electron in \(| \alpha \rangle\) (to avoid unnecessary complications with the notation, at least here),
+\begin{equation*}
+\begin{split}\begin{aligned}
+     & \langle f | \hat{H}^{abs}_{\rm 1} | i \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} c_\alpha^\dagger c_\beta\,a_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm abs} \sqrt{n_{\mathbf{k}\mu}} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus in a final state with non\sphinxhyphen{}zero transition probability
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+there’s one electron more in \(| \alpha \rangle\), and one electron less in \(| \beta \rangle\) w.r.t. the initial state, and thus \(E^{\rm el}_f = E^{\rm el}_i + E_a - E_b\),
+
+\item {} 
+\sphinxAtStartPar
+a photon with \(\mathbf{k} \mu\) is annihilated (absorbed), so that the radiation energies of the initial and final states are related by \(E_f^{\rm rad} - E_i^{\rm rad} = - \hbar \omega_{\mathbf{k}}\).
+
+\end{itemize}
+
+\sphinxAtStartPar
+As the delta condition implies \(E_f = E_i\), then \(E_a - E_b = \hbar \omega_{\mathbf{k}}\) (energy conservation), the transition probability is proportional to
+\begin{equation*}
+\begin{split}|\langle f | \hat{H}^{\rm abs}_{\rm 1} | i \rangle|^2 = n_{\mathbf{k} \mu} | M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} |^2 \ .\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Emission, \sphinxstylestrong{assuming} an existing electron in \(| \beta \rangle\) and non existing electron in \(| \alpha \rangle\) (to avoid unnecessary complications with the notation, at least here),
+\begin{equation*}
+\begin{split}\begin{aligned}
+     & \langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \left( \sum_{\alpha\beta}\sum_{\mathbf k \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} c_\alpha^\dagger c_\beta\,a^\dagger_{\mathbf k\lambda}  \right)  | \mathbf{n}^{\rm el}_i \rangle \otimes | \mathbf{n}_i^{\rm rad} \rangle = \\
+     & = \langle \mathbf{n}^{\rm el}_f | \otimes \langle \mathbf{n}_f^{\rm rad} | \sum_{\alpha\beta \mathbf{k} \mu} M_{\alpha \beta \mathbf{k} \mu}^{\rm em} \sqrt{n_{\mathbf{k}\mu} + 1} | \mathbf{n}^{\rm el}_{i+\alpha-\beta} \rangle \otimes | \mathbf{n}^{\rm rad}_i - \mathbf{1}_{\mathbf{k}\mu} \rangle 
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus in a final state with non\sphinxhyphen{}zero transition probability
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+there’s one electron more in \(| \alpha \rangle\), and one electron less in \(| \beta \rangle\) w.r.t. the initial state, and thus \(E^{\rm el}_f = E^{\rm el}_i + E_a - E_b\),
+
+\item {} 
+\sphinxAtStartPar
+a photon with \(\mathbf{k} \mu\) is created (emitted), so that the radiation energies of the initial and final states are related by \(E_f^{\rm rad} - E_i^{\rm rad} = \hbar \omega_{\mathbf{k}}\).
+
+\end{itemize}
+
+\sphinxAtStartPar
+As the delta condition implies \(E_f = E_i\), then \(E_a = E_b - \hbar \omega_{\mathbf{k}}\) (energy conservation), the transition probability is proportional to
+\begin{equation*}
+\begin{split}|\langle f | \hat{H}^{\rm em}_{\rm 1} | i \rangle|^2 = ( n_{\mathbf{k} \mu} + 1) | M^{\rm em}_{\alpha \beta \mathbf{k} \mu} |^2 \ .\end{split}
+\end{equation*}
+\end{itemize}
+
+
+
+
+\paragraph{Absorption and emission of light by an atom}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:absorption-and-emission-of-light-by-an-atom}}\subsubsection*{Time dependence and energy conservation}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \hat{a}_{\mathbf{k}, \mu}^\dagger & \sim e^{ i \frac{E_{\mathbf{k},\mu}}{\hbar} t} \\
+ \hat{a}_{\mathbf{k}, \mu}         & \sim e^{-i \frac{E_{\mathbf{k},\mu}}{\hbar} t} \\
+ \hat{c}_\alpha^\dagger            & \sim e^{ i \frac{E_\alpha}{\hbar} t} \\
+ \hat{c}_\beta                     & \sim e^{-i \frac{E_\beta }{\hbar} t} \\
+\end{aligned}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+\begin{equation*}
+\begin{split} \hat{c}_\alpha^\dagger \hat{c}_\beta \hat{a}_{\mathbf{k},\mu} | n_\alpha n_\beta n_{\mathbf{k}, \mu}\rangle = | (n+1)_\alpha (n-1)_\beta (n-1)_{\mathbf{k}, \mu}\rangle\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Matrix elements.} Let the atom go from level \(a\) to \(b\). With \(n\) photons in the mode \((\mathbf k,\lambda)\):
+\begin{equation*}
+\begin{split}
+\text{absorption}\ (E_b>E_a):\ \langle b;n{-}1|H_1|a;n\rangle=\frac em N_k\sqrt n\,\langle b|e^{i\mathbf k\cdot\mathbf x}\boldsymbol\varepsilon\!\cdot\!\mathbf p|a\rangle,
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\text{emission}\ (E_b<E_a):\ \langle b;n{+}1|H_1|a;n\rangle=\frac em N_k\sqrt{n+1}\,\langle b|e^{-i\mathbf k\cdot\mathbf x}\boldsymbol\varepsilon\!\cdot\!\mathbf p|a\rangle,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+using \(a|n\rangle=\sqrt n|n-1\rangle\) and \(a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle\). The rates are therefore proportional to \(n\) for absorption and to \((n+1)\) for emission: the part \(\propto n\) is \sphinxstylestrong{stimulated emission} (the mirror image of absorption), and the part \(\propto1\) is \sphinxstylestrong{spontaneous emission}, which survives in the vacuum (\(n=0\)) and is caused by the zero\sphinxhyphen{}point field of §3.3. A classical field acting on quantised matter gives no spontaneous emission at all (cf. Chapter 1, §2.4).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Dipole approximation.} Over the size of the atom, \(\mathbf k\!\cdot\!\mathbf x\sim ka_0\). For the hydrogen Lyman\sphinxhyphen{}\(\alpha\) line, \(\omega a_0/c=\tfrac38\alpha=2.7\times10^{-3}\), so \(e^{\pm i\mathbf k\cdot\mathbf x}=1+O(10^{-3})\) and we replace it by \(1\). The remaining matrix element is converted using \([\mathbf x,H_0]=i\hbar\mathbf p/m\):
+\begin{equation*}
+\begin{split}
+\langle b|[\mathbf x,H_0]|a\rangle=(E_a-E_b)\langle b|\mathbf x|a\rangle=\frac{i\hbar}{m}\langle b|\mathbf p|a\rangle
+\;\Longrightarrow\;
+\langle b|\mathbf p|a\rangle=-\,i\,m\,\omega\,\langle b|\mathbf x|a\rangle\quad\big(\hbar\omega=E_a-E_b\big),
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+(for absorption \(E_a<E_b\) the same identity holds with a sign change, which drops out of \(|\cdot|^2\)). With the dipole matrix element \(\mathbf d_{ba}=-e\langle b|\mathbf x|a\rangle\) the emission matrix element has modulus
+\begin{equation*}
+\begin{split}
+|M|^2=\Big(\frac em\Big)^2N_k^2\,(n+1)\,m^2\omega^2|\boldsymbol\varepsilon\!\cdot\!\langle b|\mathbf x|a\rangle|^2=\frac{\hbar\omega}{2\varepsilon_0V}\,(n+1)\,|\boldsymbol\varepsilon\!\cdot\!\mathbf d_{ba}|^2 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Spontaneous emission rate} (\(n=0\)). Apply the golden rule, with \(\delta(E_a-E_b-\hbar\omega)=\delta(\omega-\omega_{ab})/\hbar\) and the sum of §5.2:
+\begin{equation*}
+\begin{split}
+\Gamma=\frac{2\pi}{\hbar}\cdot\frac{1}{\hbar}\cdot\frac{V\omega^2}{(2\pi)^3c^3}\cdot\frac{\hbar\omega}{2\varepsilon_0V}\int d\Omega\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d_{ba}|^2
+=\frac{\omega^3}{8\pi^2\varepsilon_0\hbar c^3}\int d\Omega\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d_{ba}|^2 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+By polarisation completeness, \(\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cdot\!\mathbf d|^2=|\mathbf d|^2-|\hat{\mathbf k}\!\cdot\!\mathbf d|^2\), and with \(\int d\Omega\,\hat k_i\hat k_j=\tfrac{4\pi}{3}\delta_{ij}\) the angular integral is \(4\pi|\mathbf d|^2-\tfrac{4\pi}{3}|\mathbf d|^2=\tfrac{8\pi}{3}|\mathbf d|^2\). The result is
+\begin{equation*}
+\begin{split}
+\boxed{\;\Gamma_{a\to b}=\frac{\omega^3\,|\mathbf d_{ba}|^2}{3\pi\varepsilon_0\hbar c^3}\;}\qquad\Big(\text{angular distribution }\propto\sin^2\theta\text{ from }\mathbf d\Big),
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the Einstein \(A\) coefficient derived from first principles (Dirac, 1927). It is the number quoted in Chapter 1, §2.4.
+\label{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:example-0}
+\begin{sphinxadmonition}{note}{Example 25.6.1 (\sphinxstylestrong{Worked example: hydrogen \protect\(2p\to1s\protect\) (Lyman\sphinxhyphen{}\protect\(\alpha\protect\)).} )}
+
+
+
+\sphinxAtStartPar
+The photon energy is \(\hbar\omega=\tfrac34\,\text{Ry}=10.204\) eV, i.e. \(\lambda=121.5\) nm. With \(R_{10}=2e^{-r/a_0}a_0^{-3/2}\), \(R_{21}=\frac{1}{2\sqrt6}(r/a_0)\,e^{-r/2a_0}a_0^{-3/2}\), the radial integral is \(\int R_{10}\,r\,R_{21}\,r^2dr=1.2903\,a_0\) and the angular factor \(\langle00|\cos\theta|10\rangle=1/\sqrt3\), giving
+\begin{equation*}
+\begin{split}
+\langle1s|z|2p,m{=}0\rangle=\frac{2^{15/2}}{3^5}\,a_0=0.7449\,a_0 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+(The rate is the same for \(m=0,\pm1\) by rotation symmetry.) Then \(|\mathbf d_{ba}|^2=e^2(0.7449\,a_0)^2\) and
+\begin{equation*}
+\begin{split}
+\Gamma=6.27\times10^{8}\ \text{s}^{-1},\qquad\tau=1/\Gamma=1.60\ \text{ns},\qquad\Delta\nu_{\rm nat}=\Gamma/2\pi\simeq100\ \text{MHz}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The measured \(2p\) lifetime is \(1.60\) ns. By contrast, the \(2s\) level cannot decay to \(1s\) by a one\sphinxhyphen{}photon E1 transition (no parity change, \(\Delta l=0\), §2.4); in isolated hydrogen it decays by emitting \sphinxstyleemphasis{two} photons at a rate of only \(\approx8\ \text{s}^{-1}\) (lifetime \(\approx0.12\) s), about eight orders of magnitude slower than the allowed \(2p\) decay.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{The classical limit of the rate.} A classical electron oscillator (Lorentz model) of angular frequency \(\omega\) radiates, by Larmor’s formula \(P=e^2\omega^4x_0^2/(12\pi\varepsilon_0c^3)\), with energy \(\tfrac12m\omega^2x_0^2\), so its energy decays at rate \(\gamma_{\rm cl}=e^2\omega^2/(6\pi\varepsilon_0mc^3)\). Define the oscillator strength \(f_{ba}=\frac{2m\omega}{3\hbar g_b}\sum_{ab}|\langle a|\mathbf r|b\rangle|^2\) (\(g\) = degeneracy; the sum runs over all sublevels). Substituting into \(\Gamma\) gives
+\begin{equation*}
+\begin{split}
+\Gamma_{a\to b}=3\,\frac{g_b}{g_a}\,f_{ba}\,\gamma_{\rm cl}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For Lyman\sphinxhyphen{}\(\alpha\), \(f=0.416\), \(g_{1s}/g_{2p}=1/3\) (orbital degeneracies) and \(\gamma_{\rm cl}=1.51\times10^{9}\ \text{s}^{-1}\), so \(\Gamma=f\gamma_{\rm cl}=6.27\times10^8\ \text{s}^{-1}\) again: \sphinxstylestrong{the quantum emission rate is the classical radiation\sphinxhyphen{}damping rate times the oscillator strength}, the dimensionless measure of “how much of a classical oscillator” the transition is. The factor \(\hbar\) has dropped out of the structure, as it must in a correspondence\sphinxhyphen{}principle statement.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Thermal equilibrium and Einstein’s relations.} In blackbody radiation each mode has mean occupation \(\bar n=1/(e^{\hbar\omega/k_BT}-1)\). Summing the above over modes, the total emission rate from a level \(a\) is \(A(\bar n+1)\) and the absorption rate of an atom in \(b\) is \((g_a/g_b)A\bar n\) (because the double sum \(\sum_{ab}|\mathbf d_{ab}|^2\) is common). Balancing the populations, \(N_a\,A(\bar n+1)=N_b\,(g_a/g_b)A\bar n\), gives
+\begin{equation*}
+\begin{split}
+\frac{N_a}{N_b}=\frac{g_a}{g_b}\frac{\bar n}{\bar n+1}=\frac{g_a}{g_b}\,e^{-\hbar\omega/k_BT},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+exactly the Boltzmann distribution. This is Einstein’s 1917 argument (Chapter 1, §2.4), where \(A\), \(B_{12}\), \(B_{21}\) were related by consistency, now obtained as a \sphinxstyleemphasis{theorem} of the quantised theory: the “+1” is spontaneous emission.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Beyond the dipole approximation.} Expanding \(e^{i\mathbf k\cdot\mathbf x}=1+i\mathbf k\!\cdot\!\mathbf x+\dots\) gives electric\sphinxhyphen{}quadrupole and magnetic\sphinxhyphen{}dipole transitions, suppressed by \((ka_0)^2\sim10^{-5}\) in rate: these account for “forbidden” lines.
+
+\sphinxstepscope
+
+
+\subsubsection{Free electrons \sphinxhyphen{} Compton scattering}
+\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-compton:free-electrons-compton-scattering}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-compton:quantum-mechanics-qft-interactions-e-em-fields-compton-scattering}}\label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-compton::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Setup.} Take \(V=0\) and an electron initially at rest with spin \(\sigma\):
+\begin{equation*}
+\begin{split}
+|i\rangle=c^\dagger_{\mathbf 0\sigma}\,a^\dagger_{\mathbf k\lambda}|0\rangle,\qquad|f\rangle=c^\dagger_{\mathbf p'\sigma'}\,a^\dagger_{\mathbf k'\lambda'}|0\rangle,\qquad\mathbf p'=\hbar(\mathbf k-\mathbf k')\ \ \text{(momentum conservation)}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+There are three contributions at order \(e^2\), the time\sphinxhyphen{}ordered diagrams: (a) the seagull \(H_2\) acting once; (b) \(H_1\) twice, absorbing \(\mathbf k\) first then emitting \(\mathbf k'\); (c) \(H_1\) twice, emitting \(\mathbf k'\) first then absorbing \(\mathbf k\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{The \(H_1H_1\) terms vanish.} In (b) the first vertex is \(\langle\hbar\mathbf k|e^{i\mathbf k\cdot\mathbf x}\boldsymbol\varepsilon\!\cdot\!\mathbf p|\mathbf 0\rangle\propto\boldsymbol\varepsilon\!\cdot\!\mathbf p_i=0\) because \(\mathbf p\) acts on the initial state, which has \(\mathbf p_i=0\). In (c) the first vertex is \(\propto\boldsymbol\varepsilon'\!\cdot\!\mathbf p_i=0\) for the same reason. (This is exact in Coulomb gauge: \(\boldsymbol\varepsilon\!\cdot\!\mathbf p\) acts \sphinxstyleemphasis{before} the intermediate momentum appears.) For a moving electron these terms are of relative order \(p/mc\), producing the Doppler broadening of the Compton line.
+
+\sphinxAtStartPar
+\sphinxstylestrong{The seagull term.} The matrix element of \(\mathbf A^2\) between \(|\mathbf k\lambda\rangle\) and \(|\mathbf k'\lambda'\rangle\) has two contributions (\(q=\mathbf k,q'=\mathbf k'\) and the swap), so
+\begin{equation*}
+\begin{split}
+\langle f|H_2|i\rangle=\frac{e^2}{2m}\cdot2N_kN_{k'}\,(\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon')\;\underbrace{\frac1V\!\int d^3x\,e^{i(\mathbf k-\mathbf k')\cdot\mathbf x}\,e^{-i\mathbf p'\cdot\mathbf x/\hbar}}_{\delta_{\mathbf p',\hbar(\mathbf k-\mathbf k')}}
+=\frac{e^2\hbar}{2m\varepsilon_0V\sqrt{\omega\omega'}}\,(\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon')\,\delta_{\mathbf p',\hbar(\mathbf k-\mathbf k')},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+(using \(N_kN_{k'}=\hbar/(2\varepsilon_0V\sqrt{\omega\omega'})\); the electron plane waves \(V^{-1/2}e^{i\mathbf p\cdot\mathbf x/\hbar}\) supply the \(1/V\), and \(\mathbf p_i=0\)).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Cross\sphinxhyphen{}section.} The golden rule with the final photon density of states \(V\omega'^2d\Omega/\big((2\pi)^3c^3\hbar\big)\) (we neglect the electron recoil in the Jacobian \(dE_f/d\omega'=\hbar(1+O(\hbar\omega/mc^2))\)) gives
+\begin{equation*}
+\begin{split}
+\frac{d\Gamma}{d\Omega}=\frac{2\pi}{\hbar}\Big(\frac{e^2\hbar}{2m\varepsilon_0V\sqrt{\omega\omega'}}\Big)^2|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'|^2\frac{V\omega'^2}{8\pi^3c^3\hbar}
+=\frac{e^4}{16\pi^2m^2\varepsilon_0^2c^3V}\,\frac{\omega'}{\omega}\,|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'|^2 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The incident flux is one photon per volume \(V\) at speed \(c\), i.e. \(c/V\). Dividing,
+\begin{equation*}
+\begin{split}
+\boxed{\;\frac{d\sigma}{d\Omega}=r_e^2\,\frac{\omega'}{\omega}\,|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'|^2,\qquad r_e=\frac{e^2}{4\pi\varepsilon_0mc^2}=2.818\ \text{fm}\;}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+(using \(e^4/(16\pi^2m^2\varepsilon_0^2c^4)=r_e^2\)). This is \sphinxstylestrong{Thomson scattering}, derived here from the quantised theory, with a polarisation dependence \(|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'|^2\) (the scattered photon keeps the projected polarisation of the incident one).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Unpolarised light.} Summing over the final polarisations with completeness, \(\sum_{\lambda'}|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'_{\lambda'}|^2=1-(\boldsymbol\varepsilon\!\cdot\!\hat{\mathbf k}')^2\), and averaging over the two incident polarisations, \(\tfrac12\sum_\lambda(\boldsymbol\varepsilon_\lambda\!\cdot\!\hat{\mathbf k}')^2=\tfrac12\sin^2\theta\) (the two polarisations transverse to \(\hat{\mathbf k}\) together project onto \(\hat{\mathbf k}'\) with weight \(1-\cos^2\theta\)). The polarisation\sphinxhyphen{}averaged factor is thus \(1-\tfrac12\sin^2\theta=\tfrac12(1+\cos^2\theta)\). Hence
+\begin{equation*}
+\begin{split}
+\frac{d\sigma}{d\Omega}\Big|_{\rm unpol}=\frac{r_e^2}{2}\,\frac{\omega'}{\omega}\,(1+\cos^2\theta),\qquad
+\sigma_{\rm T}=\frac{8\pi}{3}r_e^2=6.652\times10^{-29}\ \text{m}^2=0.665\ \text{b},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+using \(\int(1+\cos^2\theta)\,d\Omega=16\pi/3\) and \(\omega'/\omega\to1\). The cross\sphinxhyphen{}section is independent of the frequency and of \(\hbar\): it is the classical result of an electron driven by the wave and radiating as a Hertzian dipole, recovered as the leading term of a quantum calculation.
+
+\sphinxAtStartPar
+Two physical consequences follow from the factor \(|\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'|^2\):
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The component of the incident polarisation perpendicular to the scattering plane scatters with weight \(1\), the in\sphinxhyphen{}plane component with weight \(\cos^2\theta\). At \(\theta=90^\circ\) the scattered light is therefore \sphinxstylestrong{100\% linearly polarised} (perpendicular to the plane), with degree of polarisation \((1-\cos^2\theta)/(1+\cos^2\theta)\) in general. This is why scattered light, in the sky and in the cosmic microwave background, is polarised.
+
+\item {} 
+\sphinxAtStartPar
+Where electrons are free, mean free paths are set by \(\ell=1/(n_e\sigma_{\rm T})\): in the solar core (\(n_e\approx6\times10^{31}\,\text{m}^{-3}\)) this is \(\approx0.25\) mm.
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Kinematics: the Compton shift from energy conservation.} The delta function enforces \(\hbar\omega=\hbar\omega'+\hbar^2|\mathbf k-\mathbf k'|^2/2m\). Write \(|\mathbf k-\mathbf k'|^2=(k-k')^2+2kk'(1-\cos\theta)\). The first term is second order in the small shift, so to leading order in \(\hbar\omega/mc^2\),
+\begin{equation*}
+\begin{split}
+c\,(k-k')=\frac{\hbar k^2(1-\cos\theta)}{m}\quad\Longrightarrow\quad\frac1{k'}-\frac1k=\frac{k-k'}{kk'}\simeq\frac{\hbar(1-\cos\theta)}{mc},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and with \(\lambda=2\pi/k\),
+\begin{equation*}
+\begin{split}
+\lambda'-\lambda=\frac{h}{mc}\,(1-\cos\theta),
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the Compton formula of Chapter 1, now as the energy conservation of the Fock\sphinxhyphen{}space matrix element above. (The exact \sphinxstyleemphasis{relativistic} kinematics gives the same formula without approximation.)
+
+\sphinxAtStartPar
+\sphinxstylestrong{Where the non\sphinxhyphen{}relativistic theory fails.} We can quantify the neglected corrections by comparing the scattered\sphinxhyphen{}photon energy at \(90^\circ\) from exact relativistic kinematics, \(E'=E/(1+E/mc^2)\), with that from the non\sphinxhyphen{}relativistic energy balance used above (computed numerically):
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Incident \(E\)
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Exact \(E'\) (\(90^\circ\))
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Non\sphinxhyphen{}relativistic \(E'\)
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Error
+\\
+\hline
+\sphinxAtStartPar
+17.44 keV (Mo K\(\alpha\))
+&
+\sphinxAtStartPar
+16.8644 keV
+&
+\sphinxAtStartPar
+16.8641 keV
+&
+\sphinxAtStartPar
+\(2\times10^{-5}\)
+\\
+\hline
+\sphinxAtStartPar
+100 keV
+&
+\sphinxAtStartPar
+83.63 keV
+&
+\sphinxAtStartPar
+83.41 keV
+&
+\sphinxAtStartPar
+0.27\%
+\\
+\hline
+\sphinxAtStartPar
+661.66 keV (\(^{137}\)Cs)
+&
+\sphinxAtStartPar
+288.3 keV
+&
+\sphinxAtStartPar
+195.8 keV
+&
+\sphinxAtStartPar
+32\%
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+\sphinxAtStartPar
+(For the Mo line, the wavelength shift is \(2.4263\) pm exactly, against \(2.4277\) pm from the non\sphinxhyphen{}relativistic balance.) The relativistic theory (quoted: \sphinxstylestrong{Klein–Nishina}, 1929, requiring the Dirac field) gives for unpolarised light
+\begin{equation*}
+\begin{split}
+\frac{d\sigma}{d\Omega}=\frac{r_e^2}{2}\Big(\frac{\omega'}{\omega}\Big)^2\Big[\frac{\omega'}{\omega}+\frac{\omega}{\omega'}-\sin^2\theta\Big],
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+which reduces to our result when \(\omega'\to\omega\): \(\tfrac12(2-\sin^2\theta)=\tfrac12(1+\cos^2\theta)\). Integrated over angles, the total cross\sphinxhyphen{}section relative to Thomson is \(\sigma_{\rm KN}/\sigma_{\rm T}=0.937\) at 17.44 keV, \(0.741\) at 100 keV, \(0.385\) at 662 keV and \(0.125\) at 5 MeV: the forward\sphinxhyphen{}peaked, energy\sphinxhyphen{}dependent suppression that makes high\sphinxhyphen{}energy photons penetrating.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Gauge invariance and the seagull.} In the calculation above only \(H_2\) contributed. Had we dropped it as “a second\sphinxhyphen{}order nuisance”, the amplitude for a free electron at rest would vanish and scattering would be absent, which contradicts the classical (and experimental) Thomson result. The coefficient of \(H_2\) is tied to that of \(H_1\) by gauge invariance (§2.3), and the amplitude at \(\omega\to0\), \(-r_e\,\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'\), is fixed by the charge and mass alone (a \sphinxstyleemphasis{low\sphinxhyphen{}energy theorem}).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Scattering by a bound electron (quoted).} For an atomic electron initially in \(|a\rangle\) and finally in \(|b\rangle\), with the same ingredients (the three diagrams and the dipole approximation), the amplitude is
+\begin{equation*}
+\begin{split}
+T_{ba}\propto\frac{e^2}{m}\Big[\boldsymbol\varepsilon\!\cdot\!\boldsymbol\varepsilon'\,\delta_{ba}+\frac1m\sum_m\Big(\frac{\langle b|\boldsymbol\varepsilon'\!\cdot\!\mathbf p|m\rangle\langle m|\boldsymbol\varepsilon\!\cdot\!\mathbf p|a\rangle}{E_a+\hbar\omega-E_m}+\frac{\langle b|\boldsymbol\varepsilon\!\cdot\!\mathbf p|m\rangle\langle m|\boldsymbol\varepsilon'\!\cdot\!\mathbf p|a\rangle}{E_a-\hbar\omega'-E_m}\Big)\Big],
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the \sphinxstylestrong{Kramers–Heisenberg formula} (1925), with the intermediate states \(m\) of the atom (including the continuum). The three regimes are all contained in it: for \(\hbar\omega\gg\) binding energies the denominators are large, the second term is negligible and one recovers free\sphinxhyphen{}electron \sphinxstylestrong{Thomson} scattering; for \(\hbar\omega\ll E_m-E_a\) the \(\omega\)\sphinxhyphen{}independent terms cancel against the seagull by the Thomas–Reiche–Kuhn sum rule \(\sum_m(E_m-E_a)|\langle m|x|a\rangle|^2=\hbar^2/2m\), leaving the \sphinxstylestrong{Rayleigh} law \(\sigma\propto\omega^4\) (blue sky); and for \(\hbar\omega\to E_m-E_a\) the denominators vanish and the amplitude has a \sphinxstylestrong{resonance} (resonance fluorescence), regulated by the natural linewidth \(\Gamma\) of §5.3.
 
 \sphinxstepscope
 
@@ -12191,6 +13631,16 @@ definition of action variables in separable systems
 \bigskip\hrule\bigskip
 
 
+\sphinxstepscope
+
+
+\part{Quantum Field Theory}
+
+\sphinxstepscope
+
+
+\chapter{Introduction to QFT}
+\label{\detokenize{ch/qft/intro:introduction-to-qft}}\label{\detokenize{ch/qft/intro:qft-intro}}\label{\detokenize{ch/qft/intro::doc}}
 \sphinxstepscope
 
 
@@ -13379,16 +14829,22 @@ and thus \(J_n(x) = J - J_p(x)\).
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/operators}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/operators:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/qft/interactions\sphinxhyphen{}e\sphinxhyphen{}em\sphinxhyphen{}fields\sphinxhyphen{}atom\sphinxhyphen{}spectrum}\sphinxstyleindexpageref{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/many\sphinxhyphen{}body/identical\sphinxhyphen{}systems}\sphinxstyleindexpageref{ch/quantum-mechanics/many-body/identical-systems:\detokenize{example-1}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-1}}
 \indexspace
 \bigletter{example\sphinxhyphen{}2}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}2}\sphinxstyleindexextra{ch/relativity\sphinxhyphen{}special/lorentz}\sphinxstyleindexpageref{ch/relativity-special/lorentz:\detokenize{example-2}}
 \indexspace
 \bigletter{example\sphinxhyphen{}3}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}3}\sphinxstyleindexextra{ch/relativity\sphinxhyphen{}special/lorentz}\sphinxstyleindexpageref{ch/relativity-special/lorentz:\detokenize{example-3}}
+\indexspace
+\bigletter{qft:fermi\sphinxhyphen{}golden\sphinxhyphen{}rule}
+\item\relax\sphinxstyleindexentry{qft:fermi\sphinxhyphen{}golden\sphinxhyphen{}rule}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/qft/interactions\sphinxhyphen{}perturbation}\sphinxstyleindexpageref{ch/quantum-mechanics/qft/interactions-perturbation:\detokenize{qft:fermi-golden-rule}}
+\indexspace
+\bigletter{qft:fermi\sphinxhyphen{}golden\sphinxhyphen{}rule\sphinxhyphen{}finite}
+\item\relax\sphinxstyleindexentry{qft:fermi\sphinxhyphen{}golden\sphinxhyphen{}rule\sphinxhyphen{}finite}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/qft/interactions\sphinxhyphen{}perturbation}\sphinxstyleindexpageref{ch/quantum-mechanics/qft/interactions-perturbation:\detokenize{qft:fermi-golden-rule-finite}}
 \indexspace
 \bigletter{theorem\sphinxhyphen{}0}
 \item\relax\sphinxstyleindexentry{theorem\sphinxhyphen{}0}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/liouville\sphinxhyphen{}boltzmann}\sphinxstyleindexpageref{ch/statistical-mechanics/liouville-boltzmann:\detokenize{theorem-0}}
