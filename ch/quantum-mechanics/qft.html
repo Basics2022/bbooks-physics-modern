@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/quantum-mechanics/qft';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -281,7 +283,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="qft/multi-body.html">25.5. Multi-body quantum mechanics and QFT</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="qft/interactions.html">25.6. Interacting Fields</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="qft/interactions-perturbation.html">25.6.1. Perturbation theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qft/interactions-e-em-fields.html">25.6.2. Interaction of the electron and electromagnetic field</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="qft/interactions-e-em-fields.html">25.6.2. Interaction of the electron and electromagnetic field</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="qft/interactions-e-em-fields-atom-spectrum.html">25.6.2.5. Bound electrons - Atom spectra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qft/interactions-e-em-fields-compton.html">25.6.2.6. Free electrons - Compton scattering</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -296,7 +302,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">28. Introduction to Solid State Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">29. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">30.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">30.2. Semiconductors in Equilibrium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">30.3. Carrier Transport Phenomena</a></li>
@@ -526,7 +532,24 @@ document.write(`
 <p><a class="reference internal" href="qft/photons.html#quantum-mechanics-qft-photons"><span class="std std-ref"><strong>Photons. EM field quantization</strong></span></a> Quantization of the EM field. Introduction: Fermi ideal cavity, EM in free space. Classical limit of the quantum field: incoherent and coherent states (Glauber, 1963 <em>Photon Correlations</em>)</p>
 <p><a class="reference internal" href="qft/multi-body.html#quantum-mechanics-qft-multi-body"><span class="std std-ref"><strong>Multi-body quantum mechanics and QFT</strong></span></a>. System with many identical bodies. Bosons: creation and annihilation operatos; quantization of the EM field. Fermions: Pauli exclusion principle; creation and annihilation operators; second quantization of the electron field.</p>
 <p><a class="reference internal" href="qft/interactions.html#quantum-mechanics-qft-interactions"><span class="std std-ref"><strong>Interacting fields</strong></span></a>. Perturbation theory and Fermi goldern rule. Interaction between electron and EM field.</p>
-<div class="toctree-wrapper compound">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Summary<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic simple">
+<li><p class="sd-card-text"><strong>Fock space</strong> is built from commutators (bosons) or anticommutators (fermions) of creation/annihilation operators; Pauli exclusion is the algebraic fact <span class="math notranslate nohighlight">\((c^\dagger)^2=0\)</span>, and one-body operators are <span class="math notranslate nohighlight">\(\sum t_{ij}a_i^\dagger a_j\)</span> for both statistics.</p></li>
+<li><p class="sd-card-text"><strong>Symmetries</strong> act by unitary operators <span class="math notranslate nohighlight">\(e^{-i\theta T}\)</span> generated by one-body operators; their eigenvalues are additive over occupied modes. Number conservation of electrons (global <span class="math notranslate nohighlight">\(U(1)\)</span>) versus the absence of such a charge for the photon explains why photons are created singly.</p></li>
+<li><p class="sd-card-text"><strong>Local <span class="math notranslate nohighlight">\(U(1)\)</span> gauge invariance</strong> fixes the electron–photon coupling <span class="math notranslate nohighlight">\(\mathbf p\to\mathbf p+e\mathbf A\)</span>, producing both <span class="math notranslate nohighlight">\(H_1\propto\mathbf A\!\cdot\!\mathbf p\)</span> and the seagull <span class="math notranslate nohighlight">\(H_2\propto\mathbf A^2\)</span> with locked coefficients.</p></li>
+<li><p class="sd-card-text"><strong>The photon field</strong> is a set of oscillators with <span class="math notranslate nohighlight">\([a,a^\dagger]=1\)</span>; the classical limit is the coherent state with <span class="math notranslate nohighlight">\(\Delta E/E=1/(2\sqrt{\bar n})\)</span>, and radiation by a classical current produces exactly that state.</p></li>
+<li><p class="sd-card-text"><strong>The electron field</strong> obeys the Schrödinger equation as an operator equation. Free and bound electrons are two different bases of one and the same field, related by a unitary transformation.</p></li>
+<li><p class="sd-card-text"><strong>Emission and absorption</strong>: matrix elements <span class="math notranslate nohighlight">\(\propto\sqrt{n}\)</span> and <span class="math notranslate nohighlight">\(\sqrt{n+1}\)</span> give stimulated and spontaneous emission; in the dipole approximation <span class="math notranslate nohighlight">\(\Gamma=\omega^3|\mathbf d|^2/(3\pi\varepsilon_0\hbar c^3)\)</span>, which reproduces the measured hydrogen <span class="math notranslate nohighlight">\(2p\)</span> lifetime of 1.6 ns, equals (oscillator strength) × (classical radiation-damping rate), and enforces Einstein’s thermal balance.</p></li>
+<li><p class="sd-card-text"><strong>Free electrons cannot absorb a single photon</strong>; the lowest-order free-electron process is Compton scattering. In the non-relativistic theory only the seagull contributes for an electron at rest, giving the Thomson cross-section <span class="math notranslate nohighlight">\(\sigma_{\rm T}=\tfrac{8\pi}{3}r_e^2\)</span> and the Compton shift to leading order in <span class="math notranslate nohighlight">\(\hbar\omega/mc^2\)</span>; the relativistic Klein–Nishina result requires the Dirac field.</p></li>
+</ol>
+</div>
+</details><div class="toctree-wrapper compound">
 </div>
 </div>
 

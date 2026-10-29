@@ -286,7 +286,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="ch/quantum-mechanics/qft/multi-body.html">25.5. Multi-body quantum mechanics and QFT</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions.html">25.6. Interacting Fields</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions-perturbation.html">25.6.1. Perturbation theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions-e-em-fields.html">25.6.2. Interaction of the electron and electromagnetic field</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions-e-em-fields.html">25.6.2. Interaction of the electron and electromagnetic field</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum.html">25.6.2.1. Bound electrons - Atom spectra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ch/quantum-mechanics/qft/interactions-e-em-fields-compton.html">25.6.2.2. Free electrons - Compton scattering</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -301,7 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ch/solid-state/intro.html">28. Introduction to Solid State Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ch/solid-state/notes-solid-state.html">29. Notes about Solid State Physics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ch/solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ch/solid-state/semiconductors-intro.html">30. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ch/solid-state/semiconductors-solids-qm.html">30.1. Introduction to the QM of Solids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch/solid-state/semiconductors-equilibrium.html">30.2. Semiconductors in Equilibrium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ch/solid-state/semiconductors-transport-phenomena.html">30.3. Carrier Transport Phenomena</a></li>
@@ -470,6 +474,8 @@ document.write(`
    <a href="#cap-example-1"><strong>example-1</strong></a> | 
    <a href="#cap-example-2"><strong>example-2</strong></a> | 
    <a href="#cap-example-3"><strong>example-3</strong></a> | 
+   <a href="#cap-qft:fermi-golden-rule"><strong>qft:fermi-golden-rule</strong></a> | 
+   <a href="#cap-qft:fermi-golden-rule-finite"><strong>qft:fermi-golden-rule-finite</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a>
    </div>
 
@@ -504,7 +510,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="ch/statistical-mechanics/notes.html#example-0"><code class="xref">example-0</code></a> <em>(ch/statistical-mechanics/notes)</em></td><td>
+       <a href="ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum.html#example-0"><code class="xref">example-0</code></a> <em>(ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-1"><td></td><td>
@@ -530,6 +536,22 @@ document.write(`
        <td>
        <a href="ch/relativity-special/lorentz.html#example-3"><code class="xref">example-3</code></a> <em>(ch/relativity-special/lorentz)</em></td><td>
        <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-qft:fermi-golden-rule"><td></td><td>
+       <strong>qft:fermi-golden-rule</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ch/quantum-mechanics/qft/interactions-perturbation.html#qft:fermi-golden-rule"><code class="xref">qft:fermi-golden-rule</code></a> <em>(ch/quantum-mechanics/qft/interactions-perturbation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-qft:fermi-golden-rule-finite"><td></td><td>
+       <strong>qft:fermi-golden-rule-finite</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="ch/quantum-mechanics/qft/interactions-perturbation.html#qft:fermi-golden-rule-finite"><code class="xref">qft:fermi-golden-rule-finite</code></a> <em>(ch/quantum-mechanics/qft/interactions-perturbation)</em></td><td>
+       <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-0"><td></td><td>
        <strong>theorem-0</strong></td><td></td></tr>
