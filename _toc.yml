@@ -22,10 +22,12 @@ parts:
     - file: ch/relativity-general/differential-geometry
     - file: ch/relativity-general/einstein-equation
     - file: ch/relativity-general/linearized-efe
+    - file: ch/relativity-general/efe-properties
     - file: ch/relativity-general/examples
       sections:
       - file: ch/relativity-general/schwarzschild-metric
       - file: ch/relativity-general/schwarzschild-orbits
+      - file: ch/relativity-general/rays-of-light-deflection
 - caption: Statistical Mechanics
   numbered: True
   chapters:

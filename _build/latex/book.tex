@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Oct 29, 2026}
+\date{Nov 05, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1417,7 +1417,7 @@ Equation of motion of a point charge in a EM field,
 \label{\detokenize{ch/relativity-general/notes:general-relativity-notes}}\label{\detokenize{ch/relativity-general/notes:relativity-general-notes}}\label{\detokenize{ch/relativity-general/notes::doc}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/relativity-general/differential-geometry:relativity-general-notes-differential-geometry}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Differential geometry}}}}}: metrics, derivatives, curvatures
+{\hyperref[\detokenize{ch/relativity-general/differential-geometry:relativity-general-notes-differential-geometry}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Differential geometry}}}}}: metrics, derivatives, curvatures. This could be a short version of the notes about \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/differential-geometry/intro.html}{Differential Geometry} and \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/calculus-euclidean.html}{Tensor Calclulus}
 
 \item {} 
 \sphinxAtStartPar
@@ -1490,7 +1490,7 @@ it follows that \(\partial_d g^{ec} = - g^{ea} \partial_d g_{ab} g^{bc}\).
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-so that, summing the first 2 equations and subracting the last one,
+so that, summing the first 2 equations and subtracting the last one,
 \begin{equation}\label{equation:ch/relativity-general/differential-geometry:eqn:differential-geometry:gamma:g}
 \begin{split}\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)\end{split}
 \end{equation}
@@ -1707,9 +1707,9 @@ as \(\partial_{\nu} g_{\mu \eta} = \Gamma_{\nu \mu}^{\sigma} g_{\sigma \eta} + \
 \item {} 
 \sphinxAtStartPar
 Correct the relation, replacing Ricci’s tensor with its divergence\sphinxhyphen{}free part
-\begin{equation*}
+\begin{equation}\label{equation:ch/relativity-general/einstein-equation:eq:einstein:equation}
 \begin{split}R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \kappa T^{\mu \sigma} \ ,\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 or
 \begin{equation*}
@@ -1821,8 +1821,178 @@ By direct comparison with the Poisson equation for Newtonian gravitation, \(\nab
 \sphinxstepscope
 
 
+\section{Linearization of Einstein’s equation}
+\label{\detokenize{ch/relativity-general/linearized-efe:linearization-of-einstein-s-equation}}\label{\detokenize{ch/relativity-general/linearized-efe:relativity-general-notes-einstein-equation-linearization}}\label{\detokenize{ch/relativity-general/linearized-efe::doc}}
+\sphinxAtStartPar
+In this section, linearization of Einstein field equation \eqref{equation:ch/relativity-general/einstein-equation:eq:einstein:equation}
+\begin{equation*}
+\begin{split}R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \kappa T^{\mu \sigma} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+is performed in the limit of weak gravitational field, inducing a metric that only slightly deviates from Minkowski metric \(\eta_{\mu \nu} = \text{diag}\{ 1, -1, -1, -1\}\),
+\begin{equation*}
+\begin{split}g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using \sphinxstyleemphasis{harmonic gauge condition}, the linearized Einstein field equation reduces to a wave equation for \(\overline{h}^{\mu \sigma} := h^{\mu \sigma} - \frac{1}{2} \eta^{\mu \sigma} h\),
+\begin{equation}\label{equation:ch/relativity-general/linearized-efe:eq:efe-linearization:linearized-efe}
+\begin{split}\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+First the inverse of the metric and Christoffel symbols are linearized, and then they’re used to find the linearized expression of Riemann tensor, Ricci tensor, and scalar curvature, to find the expression of the linearized Einstein equation.
+\subsubsection*{Linearized Christoffel symbols}
+
+\sphinxAtStartPar
+Christoffel symbols can be written in terms of the metric tensor and its derivatives with \eqref{equation:ch/relativity-general/differential-geometry:eqn:differential-geometry:gamma:g}
+\begin{equation*}
+\begin{split}\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The derivatives are first\sphinxhyphen{}order contributions, thus linearization only involves zero\sphinxhyphen{}order term of \(g^{bd}\). Thus linearized Christoffel symbols are
+\begin{equation*}
+\begin{split}\Gamma_{ac}^{b} \sim \frac{1}{2} \eta^{bd} \left( \partial_c h_{ad} + \partial_a h_{dc} - \partial_{d} h_{ac} \right) \ .\end{split}
+\end{equation*}\subsubsection*{Linearized inverse metric}
+
+\sphinxAtStartPar
+Linearization of the inverse metric
+\begin{equation*}
+\begin{split}\delta_{\mu}^{\xi} = g_{\mu \nu} g^{\nu \xi} = ( \eta_{\mu \nu} + h_{\mu \nu} ) ( \eta^{\nu \xi} + h^{\nu \xi} ) = \delta_{\mu}^{\xi} + h_{\mu \nu} \eta^{\nu \xi} + \eta_{\mu \nu} h^{\nu \xi} + h_{\mu \nu} h^{\nu \xi} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies \(0 = h_{\mu \nu} \eta^{\nu \xi} + \eta_{\mu \nu} h^{\nu \xi}\), so that the linear correction to the Minkowski metric is
+\begin{equation*}
+\begin{split}h^{\mu \nu} = - h_{\xi \chi} \eta^{\mu \xi} \eta^{\nu \chi} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the linearized inverse metric is
+\begin{equation*}
+\begin{split}g^{\mu \nu} = \eta^{\mu \nu} + h^{\mu \nu} = \eta^{\mu \nu} - \eta^{\mu \xi} \eta^{\nu \chi} h_{\xi \chi} \ .\end{split}
+\end{equation*}\subsubsection*{Linearization of Riemann tensor}
+
+\sphinxAtStartPar
+Riemann tensor,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R^{\xi}_{\ \ \sigma \chi \nu}
+  & = \partial_{\chi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\chi \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \chi}^{\xi} - \Gamma_{\chi \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi} = \\
+  & \sim \partial_{\chi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\chi \sigma}^{\xi} = \\
+  & = \frac{1}{2} \partial_{\chi} \left\{ \eta^{\xi \phi} \left( \partial_\nu h_{\sigma \phi} + \partial_\sigma h_{\phi \nu} - \partial_{\phi} h_{\sigma \nu} \right) \right\}
+    - \frac{1}{2} \partial_{\nu } \left\{ \eta^{\xi \phi} \left( \partial_\chi h_{\sigma \phi} + \partial_\sigma h_{\phi \chi} - \partial_{\phi} h_{\sigma \chi} \right) \right\} = \\
+  & = \frac{1}{2} \eta^{\xi \phi} \left( \partial_{\chi \sigma} h_{\phi \nu} - \partial_{\chi \phi} h_{\sigma \nu} - \partial_{\nu \sigma} h_{\phi \chi} + \partial_{\nu \phi} h_{\sigma \chi} \right) \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Linearization of Ricci tensor}
+
+\sphinxAtStartPar
+Ricci tensor, \(R_{\sigma \nu} = R^{\mu}_{\ \ \sigma \mu \nu}\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R_{\sigma \nu} = R^{\xi}_{\ \ \sigma \xi \nu}
+  & \sim \frac{1}{2} \eta^{\xi \phi} \left( \partial_{\xi \sigma} h_{\phi \nu} - \partial_{\xi \phi} h_{\sigma \nu} - \partial_{\nu \sigma} h_{\phi \xi} + \partial_{\nu \phi} h_{\sigma \xi} \right) = R_{\sigma \nu}^{(1)} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the contravariant components read
+\begin{equation}\label{equation:ch/relativity-general/linearized-efe:eq:linearize-efe:ricci}
+\begin{split}R^{\mu \nu (1)} = \eta^{\mu \chi} \eta^{\nu \xi} R_{\chi \xi}^{(1)} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+or, explicitly
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R^{\mu \chi (1)}
+  & = \eta^{\mu \sigma} \eta^{\chi \nu} R_{\sigma \nu}^{(1)} = \\
+  & = \eta^{\mu \sigma} \eta^{\chi \nu} \left\{ \frac{1}{2} \eta^{\xi \phi} \left( \partial_{\xi \sigma} h_{\phi \nu} - \partial_{\xi \phi} h_{\sigma \nu} - \partial_{\nu \sigma} h_{\phi \xi} + \partial_{\nu \phi} h_{\sigma \xi} \right) \right\} = \\
+  & = \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \chi} - \square h^{\mu \chi} - \partial^{\mu \chi} h + \partial^{\chi} \partial_{\phi} h^{\phi \mu} \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection*{Linearization of the term \protect\(\ -\frac{1}{2} g^{\mu \sigma} R\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R 
+  & := g^{\sigma \nu} R_{\sigma \nu} = \\
+  & \sim \frac{1}{2} \eta^{\sigma \nu} \eta^{\xi \phi} \left( \partial_{\xi \sigma} h_{\phi \nu} - \partial_{\xi \phi} h_{\sigma \nu} - \partial_{\nu \sigma} h_{\phi \xi} + \partial_{\nu \phi} h_{\sigma \xi} \right) = \\
+  & = \partial^{\nu \phi} h_{\nu \phi} - \square h = R^{(1)} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \eta^{\sigma \nu} \partial_{\sigma} & = \partial^{\nu} \\
+ \eta^{\xi \phi} \partial_{\xi \phi} & = \square \\
+ \eta^{\sigma \nu} h_{\sigma \nu} & =: h
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Linearization of the term \(-\frac{1}{2} g^{\mu \sigma} R\) only involves the constant contribution of the metric, i.e.
+\begin{equation}\label{equation:ch/relativity-general/linearized-efe:eq:linearize-efe:gR}
+\begin{split}- \frac{1}{2} g^{\mu \sigma} R \sim - \frac{1}{2} \eta^{\mu \sigma} R^{(1)}\end{split}
+\end{equation}\subsubsection*{Linearized Einstein field equation}
+
+\sphinxAtStartPar
+Putting together \eqref{equation:ch/relativity-general/linearized-efe:eq:linearize-efe:ricci} and \eqref{equation:ch/relativity-general/linearized-efe:eq:linearize-efe:gR}, the linearized Einstein equation becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \kappa T^{\mu \sigma}
+ & = R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \\
+ & \sim R^{\mu \sigma (1)} - \frac{1}{2} \eta^{\mu \sigma} R^{(1)} = \\
+ & = \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \square h^{\mu \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} \right\} - \frac{1}{2} \eta^{\mu \sigma} \left\{ \partial^{\nu \phi} h_{\nu \phi} - \square h \right\} = \\
+ & = \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \square h^{\mu \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} + \eta^{\mu \sigma} \square h \right\} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, defining
+\begin{equation*}
+\begin{split}\overline{h}_{\mu \nu} := h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}h_{\mu \nu} = \overline{h}_{\mu \nu} + \frac{1}{2} \eta_{\mu \nu} h = \overline{h}_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} \overline{h} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, exploiting the the expression \eqref{equation:ch/relativity-general/linearized-efe:eq:efe-linearization:non-laplacian} in the box, the equation becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \kappa T^{\mu \sigma}
+  & = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
+  & = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
+  & = - \frac{1}{2} \square \overline{h}^{\mu \sigma} + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi}  \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Prescribing harmonic gauge condition (de Donder), \(\partial_{\xi} \overline{h}^{\xi \mu} = 0\), linearized Einstein equation becomes a wave equation for \(\overline{h}^{\mu \sigma}\),
+\begin{equation*}
+\begin{split}\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .\end{split}
+\end{equation*}\subsubsection*{\protect\(\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}\protect\)}
+\begin{equation}\label{equation:ch/relativity-general/linearized-efe:eq:efe-linearization:non-laplacian}
+\begin{split}\begin{aligned}
+  & \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\xi} h^{\xi \mu} - \eta^{\mu \sigma} \partial^{\nu \xi} h_{\nu \xi} = \\
+  & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} - \underbrace{ \frac{1}{2} \eta^{\xi \sigma} \partial^{\mu} \partial_{\xi} \overline{h}}_{} + \underbrace{ \partial^{\mu \sigma} \overline{h} }_{} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \underbrace{ \frac{1}{2} \eta^{\xi \mu} \partial^{\sigma} \partial_{\xi} \overline{h} }_{} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \underbrace{ \frac{1}{2} \eta^{\mu \sigma} \eta^{\nu \xi} \partial_{\nu \xi} \overline{h} }_{ \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} } =  \\
+  & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \ .
+\end{aligned}\end{split}
+\end{equation}
+\sphinxstepscope
+
+
+\section{Properties of Einstein field equation}
+\label{\detokenize{ch/relativity-general/efe-properties:properties-of-einstein-field-equation}}\label{\detokenize{ch/relativity-general/efe-properties:relativity-general-notes-einstein-equation-properties}}\label{\detokenize{ch/relativity-general/efe-properties::doc}}\subsubsection*{10 independent components, due to symmetries}
+\subsubsection*{Only 4 independent components, after removing arbitrary choice of coordinates}
+
+
+\subsection{Properties of linearized Einstein field equation}
+\label{\detokenize{ch/relativity-general/efe-properties:properties-of-linearized-einstein-field-equation}}\label{\detokenize{ch/relativity-general/efe-properties:relativity-general-notes-einstein-equation-properties-linear}}
+\sphinxstepscope
+
+
 \section{Examples}
-\label{\detokenize{ch/relativity-general/examples:examples}}\label{\detokenize{ch/relativity-general/examples:relativity-general-notes-examples}}\label{\detokenize{ch/relativity-general/examples::doc}}\begin{itemize}
+\label{\detokenize{ch/relativity-general/examples:examples}}\label{\detokenize{ch/relativity-general/examples:relativity-general-notes-examples}}\label{\detokenize{ch/relativity-general/examples::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Schwarzschild metric.} First Schwarzschild metric is derived, and some properties are discussed (Schwarzschild radius, event horizon,…). Then, the orbit of a light but non\sphinxhyphen{}zero mass object in a Schwarzschild metric is derived, and the \sphinxstylestrong{precession of perihelion} is discussed (precession of Mercury perihelion was used as a test for GR). Eventually, the trajectory of a zero\sphinxhyphen{}mass particle in a Schwarzschild metric is derived, and the \sphinxstylestrong{deflection of a light ray} is discussed (Eddington, 1919. Experimental measurements of the deflection of light during a solar eclipse).
+\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/relativity-general/schwarzschild-metric:relativity-general-notes-examples-schwarzschild}]{\sphinxcrossref{\DUrole{std,std-ref}{Schwarzschild metric}}}}
@@ -1830,6 +2000,10 @@ By direct comparison with the Poisson equation for Newtonian gravitation, \(\nab
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/relativity-general/schwarzschild-orbits:relativity-general-notes-examples-schwarzschild-orbits}]{\sphinxcrossref{\DUrole{std,std-ref}{Orbits in Schwarzschild spacetime}}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-general/rays-of-light-deflection:relativity-general-notes-examples-deflection-of-ray-of-light}]{\sphinxcrossref{\DUrole{std,std-ref}{Deflection of a ray of light}}}}
 
 \end{itemize}
 
@@ -2274,6 +2448,167 @@ so that
   C & = \alpha \left( 1 + \frac{e}{2} \right) \\
   F & = - \frac{1}{6} \alpha e^2 \ .
 \end{aligned}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\subsection{Deflection of a ray of light, and Eddington measurements (1919)}
+\label{\detokenize{ch/relativity-general/rays-of-light-deflection:deflection-of-a-ray-of-light-and-eddington-measurements-1919}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection:relativity-general-notes-examples-deflection-of-ray-of-light}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection::doc}}
+\sphinxAtStartPar
+Light particles travel at the speed of light \(c\). Thus the elementary increment of proper interval (or proper time \(\tau\)) is zero,
+\begin{equation*}
+\begin{split}0 = ds^2 = g_{ij} \frac{d q^i}{d \lambda} \frac{d q^j}{d \lambda} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using Schwarzschild metric \eqref{equation:ch/relativity-general/schwarzschild-metric:eq:schwarzschild-metrics}
+\begin{equation*}
+\begin{split}
+ds^2 =
+- \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
+  \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+A similar procedure as the one followed to compute {\hyperref[\detokenize{ch/relativity-general/schwarzschild-orbits:relativity-general-notes-examples-schwarzschild-orbits}]{\sphinxcrossref{\DUrole{std,std-ref}{orbits of non\sphinxhyphen{}zero mass light objects in a Schwarzschild metric}}}} is followed. The main and fundamental difference is in the use of \(ds\). For non\sphinxhyphen{}zero mass objects the relation \(ds^2 = c^2 d \tau^2 = g_{\mu \nu} d q^{\mu} d q^{\nu}\) holds, and thus \(c^2 = g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu}\), with \(\dot{q}^{\mu} = \tfrac{d q^{\mu}}{d \tau}\). For zero mass objects, it’s not possible to use the proper time as a parameters (as it’s constant and thus \(d \tau = 0\)); using an arbitrary parameter \(\lambda\), it follows that \(0 = \frac{d s^2}{d \lambda^2} = g_{\mu \nu} \frac{d q^{\mu}}{d \lambda} \frac{d q^{\nu}}{d \lambda}\).
+
+\sphinxAtStartPar
+Let’s choose a planar trajectory with prescribed \(\theta=\frac{\pi}{2}\) (or with prescribed \(\phi = \overline{\phi}\)). The equations of the geodesics are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \ddot{t} + \frac{1}{1 - \frac{r_s}{r}}\frac{r_s}{r} \, \dot{t} \, \dot{r} \\
+  0 & = \ddot{r} + A' e^{4 A} c^2 \dot{t}^2 - A'(r) \dot{r}^2 - r \theta e^{2 A} \dot{\phi}^2 \\ 
+  0 & = \ddot{\phi} + \frac{2}{r} \, \dot{r} \, \dot{\phi} \\
+  0 & = \ddot{\theta} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+From the first and the third equations, the conserved quantities follow
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{E}{c} & = \left( 1 - \frac{r_s}{r} \right) \dot{t} = \text{const.} \\
+  L & = r^2 \dot{\phi} = \text{const.}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Replacing these relations in the constraint \(ds = 0\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+0
+ & = - \left(1 - \frac{r_s}{r} \right) c^2 \dot{t}^2 + \left(1 - \frac{r_s}{r} \right)^{-1} \dot{r}^2 + r^2 \, \dot{\phi}^2 = \\
+ & = - E^2 \left(1 - \frac{r_s}{r} \right)^{-1} + \left(1 - \frac{r_s}{r} \right)^{-1} \dot{r}^2 + \frac{L^2}{r^2} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus the differential equation for \(r(\lambda)\) becomes
+\begin{equation*}
+\begin{split}0 = \dot{r}^2 - E^2 + \left( 1 - \frac{r_s}{r} \right) \frac{L^2}{r^2} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now, changing variable \(u = \frac{1}{r}\), and exploiting a relation \(r(\phi(\lambda))\)
+\begin{equation*}
+\begin{split}\dot{r} = \frac{d \phi}{d \lambda} \frac{d r}{d \phi} = \frac{L}{r^2} \frac{d r}{d \phi} = L u^2 \left( - \frac{1}{u^2} \right) u'(\phi) = - L u'(\phi) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the equation becomes
+\begin{equation*}
+\begin{split}0 = L^2 \left( u'(\phi) \right)^2 - E^2 + ( 1 - r_s u ) L^2 u^2 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Differentiating both sides by \(\phi\) and dividing by \(2 L^2 u'(\phi)\), a second order equation for \(u(\phi)\) appears
+\begin{equation*}
+\begin{split}u''(\phi) + u(\phi) = \frac{3}{2} r_{s} u^2(\phi) = \frac{3 GM}{c^2} u^2 \ .\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Solution via perturbation method.} As \(\frac{3 GM}{c^2} \to 0\), the equation becomes \(u''(\phi) + u(\phi) = 0\), whose solution is \(u_0(\phi) = A \cos(\phi) + B\sin(\phi)\), i.e.
+\begin{equation*}
+\begin{split}r_{0}(\phi) = \frac{1}{A \cos(\phi) + B \sin(\phi)} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The problem is independent from an offset in \(\phi\). Setting \(\lim_{\phi \to \dots} r(\phi) = +\infty\), then \(B = 0\), and. \sphinxstylestrong{todo} \sphinxstyleemphasis{Set this condition, \(\overline{\phi} = \tfrac{\pi}{2}\)?} \sphinxstyleemphasis{Which condition sets \(A = {1}{R}\)? Minimum distance}
+\begin{equation*}
+\begin{split}u_0(\phi) = \frac{1}{R} \cos(\phi) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the equation of a straight line with minimum distance \(R\) from the origin of the coordinates, i.e. the trajectory of a body in free\sphinxhyphen{}space. Let the solution be \(u(\phi) = u_0(\phi) + u_1(\phi)\). An approximate equation for \(u_1\) is obtained introducing this decomposition in the original equation,
+\begin{equation*}
+\begin{split}\begin{aligned}
+0
+& = u''(\phi) + u(\phi) - \frac{3}{2} r_{s} u^2(\phi) = \\
+& = u_0''(\phi) + u_1''(\phi) + u_0(\phi) + u_1(\phi) - \frac{3}{2} r_{s} (u_0(\phi) + u_1(\phi) )^2 = \\
+& = \underbrace{ u_0''(\phi) + u_0(\phi) }_{ = 0 } + u_1''(\phi) + u_1(\phi) - \frac{3}{2} r_{s} u_0^2(\phi) - 3 r_{s} u_0(\phi) u_1(\phi) - \frac{3}{2} r_{s} u_1^2(\phi) = \\
+& = u_1''(\phi) + u_1(\phi) - \frac{3}{2} r_s u_0^2(\phi) u_1(\phi) = \\ 
+& \sim u_1''(\phi) + u_1(\phi) - \frac{3}{2} \frac{r_s}{R^2} \cos^2(\phi) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+With \(\cos^2(\phi) = \frac{1}{2} + \frac{1}{2} \cos(2 \phi)\), the approximate equation for \(u_1(\phi)\) becomes
+\begin{equation*}
+\begin{split}
+  u_1''(\phi) + u_1(\phi) = \frac{3}{4} \frac{r_s}{R^2} \left[ 1 + \cos(2 \phi) \right] \ .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The solution is
+\begin{equation*}
+\begin{split}u_1(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{4} \frac{r_s}{R^2} \left[ 1 - \frac{1}{3} \cos(2\phi) \right] \ .\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dx} \cos(2 x) & = - 2 \sin (2x) \\
+  \dfrac{d^2}{dx^2} \cos(2 x) & = - 4 \cos (2x)
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\left( - 4 + 1 \right) D = \frac{3}{4}\frac{r_s}{R^2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+thus \(D = - \frac{1}{4} \frac{r_s}{R^2}\).
+
+\sphinxAtStartPar
+Putting together the zero\sphinxhyphen{} and first\sphinxhyphen{}order contributions, the approximate solution is
+\begin{equation*}
+\begin{split}u(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{2} \frac{GM}{c^2 R^2} \left( 1 - \frac{1}{3} \cos(2 \phi) \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Assuming symmetric trajectory w.r.t. \(\theta = 0\), then \(B = 0\). Setting the other integration constant by the condition \(u(0) = \frac{1}{R}\), then
+\begin{equation*}
+\begin{split}
+\frac{1}{R} = A + \frac{GM}{c^2 R^2}
+\quad \rightarrow \quad
+A = \frac{1}{R} \left( 1 - \frac{GM}{c^2 R} \right)
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}r(\phi) = \frac{R}{\left( 1 - \frac{GM}{c^2 R} \right) \cos(\phi) + \frac{3}{2} \frac{GM}{c^2 R} \left( 1 - \frac{1}{3} \cos(2 \phi) \right)} \ .\end{split}
+\end{equation*}\subsubsection*{Extremes of the trajectory}
+
+\sphinxAtStartPar
+Limit angles for \(\phi = \frac{\pi}{2} - \frac{\delta}{2}\), or \(\phi = - \left( \frac{\pi}{2} - \frac{\delta}{2} \right)\) with “small” \(\delta > 0\).
+\begin{equation*}
+\begin{split}\cos\left(\frac{\pi}{2} - \frac{\delta}{2} \right) = \sin \frac{\delta}{2} \sim \frac{\delta}{2} - \frac{\left(\delta/2\right)^3}{3!}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  1 - \frac{1}{3} \cos\left[ 2 \left(\frac{\pi}{2} - \frac{\delta}{2} \right) \right]
+  & = 1 - \frac{1}{3} \cos \left( \pi - \delta \right) = \\
+  & = 1 + \frac{1}{3} \cos(\delta) = \\
+  & \sim 1 + \frac{1}{3} \left( 1 - \frac{\delta^2}{2!} \right) = \\
+  & = \frac{4}{3} - \frac{1}{12}\delta^2
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+An approximation of the denominator for “small” \(\delta\) thus becomes
+\begin{equation*}
+\begin{split}\text{den}(\delta) = \left( 1 - \gamma \right) \frac{\delta}{2} + \frac{3}{2} \gamma \left( \frac{4}{3} - \frac{1}{12} \delta^2 \right) = \left( 1 - \gamma \right) \frac{\delta}{2} + 2 \gamma - \frac{1}{8} \gamma \delta^2 \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and setting it equal to zero, neglecting the second\sphinxhyphen{}degree contribution
+\begin{equation*}
+\begin{split}\delta = \frac{4 \gamma}{1 - \gamma} \sim 4 \gamma = 4 \frac{GM}{c^2 R} \ .\end{split}
 \end{equation*}
 \sphinxstepscope
 
@@ -3440,9 +3775,45 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : \PYGZhy{}40.0
-N. of spin up: 522
-Magnetization: 20
+Energy       : \PYGZhy{}16.0
+N. of spin up: 515
+Magnetization: 6
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{KeyboardInterrupt}\PYG{g+gWhitespace}{                         }Traceback (most recent call last)
+\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{18}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{15} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Magnetization: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{17} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Run Metropolis\PYGZhy{}Hastings algorithm}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{18} \PYG{n}{Es}\PYG{p}{,} \PYG{n}{Ms}\PYG{p}{,} \PYG{n}{states} \PYG{o}{=} \PYG{n}{isi}\PYG{o}{.}\PYG{n}{metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{p}{(}\PYG{n}{n\PYGZus{}steps}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}\PYG{p}{,} \PYG{n}{output\PYGZus{}states}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{n+nn}{Cell In[2], line 79,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{77} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update output arrays}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{78} \PYG{n}{Es} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n}{E} \PYG{p}{]}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{80} \PYG{k}{if} \PYG{n}{output\PYGZus{}states}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
+
+\PYG{n+nn}{Cell In[2], line 56,} in \PYG{n+ni}{IsingLattice.compute\PYGZus{}total\PYGZus{}magnetization}\PYG{n+nt}{(self)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{54} \PYG{k}{def} \PYG{n+nf}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{p}{)}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{55}\PYG{+w}{     }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}  \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{56}     \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZlt{}\PYGZus{}\PYGZus{}array\PYGZus{}function\PYGZus{}\PYGZus{} internals\PYGZgt{}:200,} in \PYG{n+ni}{sum}\PYG{n+nt}{(*args, **kwargs)}
+
+\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:2324,} in \PYG{n+ni}{sum}\PYG{n+nt}{(a, axis, dtype, out, keepdims, initial, where)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2321}         \PYG{k}{return} \PYG{n}{out}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2322}     \PYG{k}{return} \PYG{n}{res}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2324} \PYG{k}{return} \PYG{n}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{add}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sum}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{n}{keepdims}\PYG{o}{=}\PYG{n}{keepdims}\PYG{p}{,}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2325}                       \PYG{n}{initial}\PYG{o}{=}\PYG{n}{initial}\PYG{p}{,} \PYG{n}{where}\PYG{o}{=}\PYG{n}{where}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:86,} in \PYG{n+ni}{\PYGZus{}wrapreduction}\PYG{n+nt}{(obj, ufunc, method, axis, dtype, out, **kwargs)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{83}         \PYG{k}{else}\PYG{p}{:}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{84}             \PYG{k}{return} \PYG{n}{reduction}\PYG{p}{(}\PYG{n}{axis}\PYG{o}{=}\PYG{n}{axis}\PYG{p}{,} \PYG{n}{out}\PYG{o}{=}\PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{passkwargs}\PYG{p}{)}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{86} \PYG{k}{return} \PYG{n}{ufunc}\PYG{o}{.}\PYG{n}{reduce}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{passkwargs}\PYG{p}{)}
+
+\PYG{n+ne}{KeyboardInterrupt}: 
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3500,9 +3871,9 @@ Magnetization: 20
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{fd17c5b72c5797a05d2c4653ff2662838bd6e93e54527b149a14ec7145465ad4}.png}
+\noindent\sphinxincludegraphics{{9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b}.png}
 
-\noindent\sphinxincludegraphics{{e3589abf05b954d8dfb39d557ba3148869adae1611bb23717f762b0398f37f3d}.png}
+\noindent\sphinxincludegraphics{{62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3566,9 +3937,9 @@ Magnetization: 20
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{6024ef8bd699de84c68b71bb283eba6ba2cbb628ecc121e6c36d4892aa8f1199}.png}
+\noindent\sphinxincludegraphics{{7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a}.png}
 
-\noindent\sphinxincludegraphics{{b0ff5565139d85a1d2f10b1f6bbb679dc13e084cae8a26059ca926c2a1ca984c}.png}
+\noindent\sphinxincludegraphics{{4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7163,7 +7534,7 @@ where Fermi’s Golden Rule gives the absorption rate \(W_{a \to b}\):
 \begin{sphinxuseclass}{tag_hide-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{0d53c0761bd883a116354b3dd23f737b731bed0a82e3540a224bfd83918aea0f}.png}
+\noindent\sphinxincludegraphics{{0f2cb16ec9dbe042a75725372397aad0ea3a968841dcef0213930388c1a1aa31}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -12824,6 +13195,8 @@ Total momentum \(\mathbf P_{\rm el}+\mathbf P_{\rm rad}\) is conserved when \(V=
 
 \paragraph{Transition rates}
 \label{\detokenize{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:transition-rates}}
+
+
 \sphinxAtStartPar
 Perturbation theory allows to evaluate the transition probability between an initial state \(| i \rangle\) and a final state \(| f \rangle\) of the unperturbed system, with Hamiltonian \(\hat{H}_0\).
 
@@ -12909,7 +13282,25 @@ As the delta condition implies \(E_f = E_i\), then \(E_a = E_b - \hbar \omega_{\
 \end{equation*}
 \end{itemize}
 
+\begin{sphinxadmonition}{note}{Absorption, and stimulated and spontanteous emission}
 
+\sphinxAtStartPar
+Absorption is proportional to \(n_{\mathbf{k} \mu}\), while emission is proportional to \(n_{\mathbf{k} \mu} + 1\), as the sum of the stimulated and the spontaneous emission transition probability.
+\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Symmetry of absorption and stimulated emission factors}
+\begin{equation*}
+\begin{split}M^{\rm abs}_{\alpha \beta \mathbf{k} \mu} = \left( M^{\rm abs}_{\beta \alpha \mathbf{k} \mu} \right)^* \ .\end{split}
+\end{equation*}\subsubsection*{Proof}
+\begin{equation*}
+\begin{split}M^{\rm em }_{\alpha \beta \mathbf{k} \mu} = \langle \alpha | e^{i \mathbf{k} \cdot \hat{\mathbf{r}}} \boldsymbol\epsilon_{\mathbf{k}\mu} \cdot \hat{\mathbf{p}} | \beta \rangle = \dots\end{split}
+\end{equation*}\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Dipole approximation and Einstein coefficients}
+
+\sphinxAtStartPar
+…
+\end{sphinxadmonition}
 
 
 \paragraph{Absorption and emission of light by an atom}

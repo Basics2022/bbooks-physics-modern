@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.4. Examples" href="examples.html" />
+    <link rel="next" title="6.4. Properties of Einstein field equation" href="efe-properties.html" />
     <link rel="prev" title="6.2. Einstein’s equation" href="einstein-equation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,9 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">6.1. Differential Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">6.2. Einstein’s equation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.3. Linearization of Einstein’s equation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">6.4. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">6.4.1. Schwarzschild metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">6.4.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="efe-properties.html">6.4. Properties of Einstein field equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">6.5. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">6.5.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">6.5.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rays-of-light-deflection.html">6.5.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
 </ul>
 </li>
 </ul>
@@ -534,6 +536,9 @@ document.write(`
 <p>is performed in the limit of weak gravitational field, inducing a metric that only slightly deviates from Minkowski metric <span class="math notranslate nohighlight">\(\eta_{\mu \nu} = \text{diag}\{ 1, -1, -1, -1\}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu} \ .\]</div>
+<p>Using <em>harmonic gauge condition</em>, the linearized Einstein field equation reduces to a wave equation for <span class="math notranslate nohighlight">\(\overline{h}^{\mu \sigma} := h^{\mu \sigma} - \frac{1}{2} \eta^{\mu \sigma} h\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-efe-linearization-linearized-efe">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-efe-linearization-linearized-efe" title="Permalink to this equation">#</a></span>\[\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .\]</div>
 <p>First the inverse of the metric and Christoffel symbols are linearized, and then they’re used to find the linearized expression of Riemann tensor, Ricci tensor, and scalar curvature, to find the expression of the linearized Einstein equation.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
@@ -599,7 +604,7 @@ Linearization of Ricci tensor<div class="sd-summary-down docutils">
 \end{aligned}\]</div>
 <p class="sd-card-text">and the contravariant components read</p>
 <div class="math notranslate nohighlight" id="equation-eq-linearize-efe-ricci">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-linearize-efe-ricci" title="Permalink to this equation">#</a></span>\[R^{\mu \nu (1)} = \eta^{\mu \chi} \eta^{\nu \xi} R_{\chi \xi}^{(1)} \ .\]</div>
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-linearize-efe-ricci" title="Permalink to this equation">#</a></span>\[R^{\mu \nu (1)} = \eta^{\mu \chi} \eta^{\nu \xi} R_{\chi \xi}^{(1)} \ .\]</div>
 <p class="sd-card-text">or, explicitly</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -635,9 +640,16 @@ Linearization of the term <span class="math notranslate nohighlight">\(\ -\frac{
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Linearization of the term <span class="math notranslate nohighlight">\(-\frac{1}{2} g^{\mu \sigma} R\)</span> only involves the constant contribution of the metric, i.e.</p>
 <div class="math notranslate nohighlight" id="equation-eq-linearize-efe-gr">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-linearize-efe-gr" title="Permalink to this equation">#</a></span>\[- \frac{1}{2} g^{\mu \sigma} R \sim - \frac{1}{2} \eta^{\mu \sigma} R^{(1)}\]</div>
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-eq-linearize-efe-gr" title="Permalink to this equation">#</a></span>\[- \frac{1}{2} g^{\mu \sigma} R \sim - \frac{1}{2} \eta^{\mu \sigma} R^{(1)}\]</div>
 </div>
-</details><p>Putting together <a class="reference internal" href="#equation-eq-linearize-efe-ricci">(6.4)</a> and <a class="reference internal" href="#equation-eq-linearize-efe-gr">(6.5)</a>, the linearized Einstein equation becomes</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Linearized Einstein field equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Putting together <a class="reference internal" href="#equation-eq-linearize-efe-ricci">(6.5)</a> and <a class="reference internal" href="#equation-eq-linearize-efe-gr">(6.6)</a>, the linearized Einstein equation becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  \kappa T^{\mu \sigma}
@@ -646,31 +658,35 @@ Linearization of the term <span class="math notranslate nohighlight">\(\ -\frac{
  &amp; = \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \square h^{\mu \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} \right\} - \frac{1}{2} \eta^{\mu \sigma} \left\{ \partial^{\nu \phi} h_{\nu \phi} - \square h \right\} = \\
  &amp; = \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \square h^{\mu \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} + \eta^{\mu \sigma} \square h \right\} = \\
 \end{aligned}\end{split}\]</div>
-<p>Now, defining</p>
+<p class="sd-card-text">Now, defining</p>
 <div class="math notranslate nohighlight">
 \[\overline{h}_{\mu \nu} := h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \ ,\]</div>
 <div class="math notranslate nohighlight">
 \[\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ ,\]</div>
-<p>so that</p>
+<p class="sd-card-text">so that</p>
 <div class="math notranslate nohighlight">
 \[h_{\mu \nu} = \overline{h}_{\mu \nu} + \frac{1}{2} \eta_{\mu \nu} h = \overline{h}_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} \overline{h} \]</div>
-<p>Thus, exploiting the result of the box, the equation becomes</p>
+<p class="sd-card-text">Thus, exploiting the the expression <a class="reference internal" href="#equation-eq-efe-linearization-non-laplacian">(6.7)</a> in the box, the equation becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \kappa T^{\mu \sigma}
-  &amp; =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \dots \right\} = \\
-  &amp; = \dots \\
-  &amp; = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
+  &amp; = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
+  &amp; = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
+  &amp; = - \frac{1}{2} \square \overline{h}^{\mu \sigma} + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi}  \right\} \ .
 \end{aligned}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<p class="sd-card-text">Prescribing harmonic gauge condition (de Donder), <span class="math notranslate nohighlight">\(\partial_{\xi} \overline{h}^{\xi \mu} = 0\)</span>, linearized Einstein equation becomes a wave equation for <span class="math notranslate nohighlight">\(\overline{h}^{\mu \sigma}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="math notranslate nohighlight">\(\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}\)</span><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<div class="math notranslate nohighlight" id="equation-eq-efe-linearization-non-laplacian">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-eq-efe-linearization-non-laplacian" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   &amp; \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\xi} h^{\xi \mu} - \eta^{\mu \sigma} \partial^{\nu \xi} h_{\nu \xi} = \\
   &amp; = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} - \underbrace{ \frac{1}{2} \eta^{\xi \sigma} \partial^{\mu} \partial_{\xi} \overline{h}}_{} + \underbrace{ \partial^{\mu \sigma} \overline{h} }_{} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \underbrace{ \frac{1}{2} \eta^{\xi \mu} \partial^{\sigma} \partial_{\xi} \overline{h} }_{} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \underbrace{ \frac{1}{2} \eta^{\mu \sigma} \eta^{\nu \xi} \partial_{\nu \xi} \overline{h} }_{ \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} } =  \\
   &amp; = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \ .
@@ -718,11 +734,11 @@ Linearization of the term <span class="math notranslate nohighlight">\(\ -\frac{
       </div>
     </a>
     <a class="right-next"
-       href="examples.html"
+       href="efe-properties.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Examples</p>
+        <p class="prev-next-title"><span class="section-number">6.4. </span>Properties of Einstein field equation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
