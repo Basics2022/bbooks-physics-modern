@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -658,8 +649,8 @@ Linearization of the term <span class="math notranslate nohighlight">\(\ -\frac{
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \kappa T^{\mu \sigma}
-  &amp; =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \dots \right\} = \\
-  &amp; = \dots \\
+  &amp; =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
+  &amp; = \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
   &amp; = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
 \end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">

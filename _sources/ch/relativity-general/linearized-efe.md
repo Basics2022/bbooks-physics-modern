@@ -135,8 +135,8 @@ Thus, exploiting the result of the box, the equation becomes
 
 $$\begin{aligned}
   \kappa T^{\mu \sigma}
-  & =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \dots \right\} = \\
-  & = \dots \\
+  & =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
+  & = \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
   & = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
 \end{aligned}$$
 
