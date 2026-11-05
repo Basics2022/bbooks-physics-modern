@@ -125,13 +125,29 @@ Now, defining
 
 $$\overline{h}_{\mu \nu} := h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \ ,$$
 
-$$\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ .$$ 
+$$\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ ,$$ 
 
-```{dropdown} $$\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}$$
+so that
+
+$$h_{\mu \nu} = \overline{h}_{\mu \nu} + \frac{1}{2} \eta_{\mu \nu} h = \overline{h}_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} \overline{h} $$
+
+Thus, exploiting the result of the box, the equation becomes
+
+$$\begin{aligned}
+  \kappa T^{\mu \sigma}
+  & =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \dots \right\} = \\
+  & = \dots \\
+  & = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
+\end{aligned}$$
+
+
+```{dropdown} $\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}$
 :open:
 
 $$\begin{aligned}
-  & \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} = \\
+  & \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\xi} h^{\xi \mu} - \eta^{\mu \sigma} \partial^{\nu \xi} h_{\nu \xi} = \\
+  & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} - \underbrace{ \frac{1}{2} \eta^{\xi \sigma} \partial^{\mu} \partial_{\xi} \overline{h}}_{} + \underbrace{ \partial^{\mu \sigma} \overline{h} }_{} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \underbrace{ \frac{1}{2} \eta^{\xi \mu} \partial^{\sigma} \partial_{\xi} \overline{h} }_{} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \underbrace{ \frac{1}{2} \eta^{\mu \sigma} \eta^{\nu \xi} \partial_{\nu \xi} \overline{h} }_{ \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} } =  \\
+  & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \ .
 \end{aligned}$$
 
 ```

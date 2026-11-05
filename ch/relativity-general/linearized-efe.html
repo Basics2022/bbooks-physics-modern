@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -641,17 +650,30 @@ Linearization of the term <span class="math notranslate nohighlight">\(\ -\frac{
 <div class="math notranslate nohighlight">
 \[\overline{h}_{\mu \nu} := h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \ ,\]</div>
 <div class="math notranslate nohighlight">
-\[\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ .\]</div>
+\[\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ ,\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[h_{\mu \nu} = \overline{h}_{\mu \nu} + \frac{1}{2} \eta_{\mu \nu} h = \overline{h}_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} \overline{h} \]</div>
+<p>Thus, exploiting the result of the box, the equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \kappa T^{\mu \sigma}
+  &amp; =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \dots \right\} = \\
+  &amp; = \dots \\
+  &amp; = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
+\end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-$<span class="math notranslate nohighlight">\(\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}\)</span>$<div class="sd-summary-down docutils">
+<span class="math notranslate nohighlight">\(\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}\)</span><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  &amp; \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} = \\
+  &amp; \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\xi} h^{\xi \mu} - \eta^{\mu \sigma} \partial^{\nu \xi} h_{\nu \xi} = \\
+  &amp; = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} - \underbrace{ \frac{1}{2} \eta^{\xi \sigma} \partial^{\mu} \partial_{\xi} \overline{h}}_{} + \underbrace{ \partial^{\mu \sigma} \overline{h} }_{} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \underbrace{ \frac{1}{2} \eta^{\xi \mu} \partial^{\sigma} \partial_{\xi} \overline{h} }_{} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \underbrace{ \frac{1}{2} \eta^{\mu \sigma} \eta^{\nu \xi} \partial_{\nu \xi} \overline{h} }_{ \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} } =  \\
+  &amp; = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \ .
 \end{aligned}\end{split}\]</div>
 </div>
 </details></div>
