@@ -127,6 +127,13 @@ $$\overline{h}_{\mu \nu} := h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \ ,$$
 
 $$\overline{h} = \eta^{\mu \nu} \overline{h}_{\mu \nu} = \eta^{\mu \nu} \left( h_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} h \right) = h - 2 h = - h \ .$$ 
 
+```{dropdown} $$\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}$$
+:open:
 
+$$\begin{aligned}
+  & \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} = \\
+\end{aligned}$$
+
+```
 
 
