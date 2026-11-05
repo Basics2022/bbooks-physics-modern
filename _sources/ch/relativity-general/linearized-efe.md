@@ -9,6 +9,10 @@ is performed in the limit of weak gravitational field, inducing a metric that on
 
 $$g_{\mu \nu} = \eta_{\mu \nu} + h_{\mu \nu} \ .$$
 
+Using *harmonic gauge condition*, the linearized Einstein field equation reduces to a wave equation for $\overline{h}^{\mu \sigma} := h^{\mu \sigma} - \frac{1}{2} \eta^{\mu \sigma} h$,
+
+$$\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .$$ (eq:efe-linearization:linearized-efe)
+
 First the inverse of the metric and Christoffel symbols are linearized, and then they're used to find the linearized expression of Riemann tensor, Ricci tensor, and scalar curvature, to find the expression of the linearized Einstein equation.
 
 ```{dropdown} Linearized Christoffel symbols
@@ -111,6 +115,9 @@ $$- \frac{1}{2} g^{\mu \sigma} R \sim - \frac{1}{2} \eta^{\mu \sigma} R^{(1)}$$ 
 
 ```
 
+```{dropdown} Linearized Einstein field equation
+:open:
+
 Putting together {eq}`eq:linearize-efe:ricci` and {eq}`eq:linearize-efe:gR`, the linearized Einstein equation becomes
 
 $$\begin{aligned}
@@ -131,24 +138,28 @@ so that
 
 $$h_{\mu \nu} = \overline{h}_{\mu \nu} + \frac{1}{2} \eta_{\mu \nu} h = \overline{h}_{\mu \nu} - \frac{1}{2} \eta_{\mu \nu} \overline{h} $$
 
-Thus, exploiting the result of the box, the equation becomes
+Thus, exploiting the the expression {eq}`eq:efe-linearization:non-laplacian` in the box, the equation becomes
 
 $$\begin{aligned}
   \kappa T^{\mu \sigma}
-  & =  \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
-  & = \square \left( - \frac{1}{2} h^{\mu \sigma} + \frac{1}{4} \eta^{\mu \sigma} h + \frac{1}{4} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
-  & = \frac{1}{2} \square \overline{h}^{\mu \sigma} \ .
+  & = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{ \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi} \right\} = \\
+  & = \frac{1}{2} \square \left( - h^{\mu \sigma} + \frac{1}{2} \eta^{\mu \sigma} h + \frac{1}{2} \eta^{\mu \sigma} h \right) + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \right\}  \\
+  & = - \frac{1}{2} \square \overline{h}^{\mu \sigma} + \frac{1}{2} \left\{  \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi}  \right\} \ .
 \end{aligned}$$
 
+Prescribing harmonic gauge condition (de Donder), $\partial_{\xi} \overline{h}^{\xi \mu} = 0$, linearized Einstein equation becomes a wave equation for $\overline{h}^{\mu \sigma}$,
+
+$$\square \overline{h}^{\mu \sigma} = - 2 \kappa T^{\mu \sigma} \ .$$
+
+```
 
 ```{dropdown} $\partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\phi} h^{\phi \mu} - \eta^{\mu \sigma} \partial^{\nu \phi} h_{\nu \phi}$
-:open:
 
 $$\begin{aligned}
   & \partial^{\mu} \partial_{\xi} h^{\xi \sigma} - \partial^{\mu \sigma} h + \partial^{\sigma} \partial_{\xi} h^{\xi \mu} - \eta^{\mu \sigma} \partial^{\nu \xi} h_{\nu \xi} = \\
   & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} - \underbrace{ \frac{1}{2} \eta^{\xi \sigma} \partial^{\mu} \partial_{\xi} \overline{h}}_{} + \underbrace{ \partial^{\mu \sigma} \overline{h} }_{} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \underbrace{ \frac{1}{2} \eta^{\xi \mu} \partial^{\sigma} \partial_{\xi} \overline{h} }_{} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \underbrace{ \frac{1}{2} \eta^{\mu \sigma} \eta^{\nu \xi} \partial_{\nu \xi} \overline{h} }_{ \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} } =  \\
   & = \partial^{\mu} \partial_{\xi} \overline{h}^{\xi \sigma} + \partial^{\sigma} \partial_{\xi} \overline{h}^{\xi \mu} - \eta^{\mu \sigma} \partial_{\nu \xi} \overline{h}^{\nu \xi} + \frac{1}{2} \eta^{\mu \sigma} \square \overline{h} \ .
-\end{aligned}$$
+\end{aligned}$$ (eq:efe-linearization:non-laplacian)
 
 ```
 

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.4.1. Schwarzschild metrics &#8212; Modern Physics</title>
+    <title>6.5.1. Schwarzschild metrics &#8212; Modern Physics</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.4.2. Planetary orbits in Schwarzschild spacetime" href="schwarzschild-orbits.html" />
-    <link rel="prev" title="6.4. Examples" href="examples.html" />
+    <link rel="next" title="6.5.2. Planetary orbits in Schwarzschild spacetime" href="schwarzschild-orbits.html" />
+    <link rel="prev" title="6.5. Examples" href="examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,9 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">6.1. Differential Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">6.2. Einstein’s equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">6.3. Linearization of Einstein’s equation</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">6.4. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.4.1. Schwarzschild metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">6.4.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="efe-properties.html">6.4. Properties of Einstein field equation</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">6.5. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.5.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">6.5.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rays-of-light-deflection.html">6.5.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
 </ul>
 </li>
 </ul>
@@ -524,12 +526,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.4.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.4.1.2. Christoffel Symbols</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.4.1.3. Components of the Ricci Tensor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.4.1.4. Solving the Differential Equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.4.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.4.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.5.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.5.1.2. Christoffel Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.5.1.3. Components of the Ricci Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.5.1.4. Solving the Differential Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.5.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.5.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
 </ul>
             </nav>
         </div>
@@ -542,11 +544,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="schwarzschild-metrics">
-<span id="relativity-general-notes-examples-schwarzschild"></span><h1><span class="section-number">6.4.1. </span>Schwarzschild metrics<a class="headerlink" href="#schwarzschild-metrics" title="Permalink to this heading">#</a></h1>
+<span id="relativity-general-notes-examples-schwarzschild"></span><h1><span class="section-number">6.5.1. </span>Schwarzschild metrics<a class="headerlink" href="#schwarzschild-metrics" title="Permalink to this heading">#</a></h1>
 <p><strong>Spatially spherically symmetric</strong> and <strong>static vacuum</strong> solution of the Einstein equation, representing the exterior gravitational field of a <strong>non-rotating</strong>, <strong>uncharged</strong> massive body.</p>
 <p>Schwarzschild metrics gives</p>
 <div class="math notranslate nohighlight" id="equation-eq-schwarzschild-metrics">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-eq-schwarzschild-metrics" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-eq-schwarzschild-metrics" title="Permalink to this equation">#</a></span>\[
 ds^2 =
 - \left(1 - \frac{r_s}{r} \right) c^2 dt^2 + 
   \left(1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 \ .
@@ -561,7 +563,7 @@ Vacuum equation<div class="sd-summary-down docutils">
 <p class="sd-card-text">Without mass density and electric charge and current, <span class="math notranslate nohighlight">\(\mathsf{T} = \mathsf{0}\)</span>. From the expression of <a class="reference internal" href="einstein-equation.html#equation-eq-einstein-alternative">(6.3)</a>, it immediately follows, <span class="math notranslate nohighlight">\(\mathsf{R} = \mathsf{0}\)</span>.</p>
 </div>
 </details><div class="section" id="metric-ansatz-symmetry-assumptions">
-<h2><span class="section-number">6.4.1.1. </span>Metric Ansatz &amp; Symmetry Assumptions<a class="headerlink" href="#metric-ansatz-symmetry-assumptions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.1. </span>Metric Ansatz &amp; Symmetry Assumptions<a class="headerlink" href="#metric-ansatz-symmetry-assumptions" title="Permalink to this heading">#</a></h2>
 <p>The four coordinates used to parametrize the space-time are <span class="math notranslate nohighlight">\((t, r, \theta, \phi)\)</span>. The two physical symmetry constraints in Schwarzschild solution of EFE are</p>
 <ol class="arabic simple">
 <li><p><strong>Spherical Symmetry:</strong> the spatial geometry is invariant under rotation, s.t. the angular part of the metric is given by the standard round metric on <span class="math notranslate nohighlight">\(S^2\)</span>, <span class="math notranslate nohighlight">\(d\Omega^2 = d \theta^2 + \sin^2 \theta \, d\phi^2\)</span></p></li>
@@ -583,7 +585,7 @@ u} = 0\)</span>); the further assumption that the line element is invariant unde
 <p>As the metric tensor is diagonal, it’s contravariant components are just the inverse of its covariant components.</p>
 </div>
 <div class="section" id="christoffel-symbols">
-<h2><span class="section-number">6.4.1.2. </span>Christoffel Symbols<a class="headerlink" href="#christoffel-symbols" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.2. </span>Christoffel Symbols<a class="headerlink" href="#christoffel-symbols" title="Permalink to this heading">#</a></h2>
 <p>The Christoffel symbols of the second kind are computed via the expression <a class="reference internal" href="differential-geometry.html#equation-eqn-differential-geometry-gamma-g">(6.1)</a>,</p>
 <div class="math notranslate nohighlight">
 \[\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right) \ .\]</div>
@@ -601,7 +603,7 @@ u} = 0\)</span>); the further assumption that the line element is invariant unde
 </ul>
 </div>
 <div class="section" id="components-of-the-ricci-tensor">
-<h2><span class="section-number">6.4.1.3. </span>Components of the Ricci Tensor<a class="headerlink" href="#components-of-the-ricci-tensor" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.3. </span>Components of the Ricci Tensor<a class="headerlink" href="#components-of-the-ricci-tensor" title="Permalink to this heading">#</a></h2>
 <p>The Ricci tensor is defined by contracting the Riemann curvature tensor:</p>
 <div class="math notranslate nohighlight">
 \[R_{\mu
@@ -632,7 +634,7 @@ u\sigma}\]</div>
 </ul>
 </div>
 <div class="section" id="solving-the-differential-equations">
-<h2><span class="section-number">6.4.1.4. </span>Solving the Differential Equations<a class="headerlink" href="#solving-the-differential-equations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.4. </span>Solving the Differential Equations<a class="headerlink" href="#solving-the-differential-equations" title="Permalink to this heading">#</a></h2>
 <p><strong>Combining <span class="math notranslate nohighlight">\(R_{tt}\)</span> and <span class="math notranslate nohighlight">\(R_{rr}\)</span></strong> (linear combination <span class="math notranslate nohighlight">\(e^{-2(A-B)} \frac{R_{tt}}{c^2} + R_{rr} = 0\)</span>) immediately gives</p>
 <div class="math notranslate nohighlight">
 \[A'(r) = -B'(r) \ .\]</div>
@@ -663,7 +665,7 @@ u\sigma}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant of integration. Since <span class="math notranslate nohighlight">\(e^{2B(r)} = e^{-2A(r)}\)</span>, it follows <span class="math notranslate nohighlight">\(e^{2B(r)} = \left(1 + \frac{C}{r} \right)^{-1}\)</span>.</p>
 </div>
 <div class="section" id="determining-the-integration-constant-c-the-newtonian-limit">
-<h2><span class="section-number">6.4.1.5. </span>Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)<a class="headerlink" href="#determining-the-integration-constant-c-the-newtonian-limit" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.5. </span>Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)<a class="headerlink" href="#determining-the-integration-constant-c-the-newtonian-limit" title="Permalink to this heading">#</a></h2>
 <p>To determine <span class="math notranslate nohighlight">\(C\)</span>, we examine the metric in the weak-field, low-velocity limit (<span class="math notranslate nohighlight">\(r \to \infty\)</span>). In this limit, general relativity recovers <strong>Newtonian gravity</strong>, as shown in <a class="reference internal" href="einstein-equation.html#relativity-general-notes-einstein-equation-classical-limit"><span class="std std-ref">classical limit</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[g_{tt} = \eta_{tt} + h_{tt} \approx - 1 - \frac{2}{c^2} \Phi \ ,\]</div>
@@ -682,7 +684,7 @@ ds^2 =
 \]</div>
 </div>
 <div class="section" id="special-case-complete-vacuum-m-0">
-<h2><span class="section-number">6.4.1.6. </span>Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)<a class="headerlink" href="#special-case-complete-vacuum-m-0" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1.6. </span>Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)<a class="headerlink" href="#special-case-complete-vacuum-m-0" title="Permalink to this heading">#</a></h2>
 <p>If the spacetime contains no mass (<span class="math notranslate nohighlight">\(M = 0\)</span>), the Minkowski flat spacetime follows</p>
 <div class="math notranslate nohighlight">
 \[ds^2 = -c^2 dt^2 + d r^2 + r^2 d \theta^2 + r^2 \sin^2 \theta \, d\phi^2 = - c^2 dt^2 + |d \vec{r}|^2 \ , \]</div>
@@ -735,7 +737,7 @@ ds^2 =
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Examples</p>
+        <p class="prev-next-title"><span class="section-number">6.5. </span>Examples</p>
       </div>
     </a>
     <a class="right-next"
@@ -743,7 +745,7 @@ ds^2 =
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4.2. </span>Planetary orbits in Schwarzschild spacetime</p>
+        <p class="prev-next-title"><span class="section-number">6.5.2. </span>Planetary orbits in Schwarzschild spacetime</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -762,12 +764,12 @@ ds^2 =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.4.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.4.1.2. Christoffel Symbols</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.4.1.3. Components of the Ricci Tensor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.4.1.4. Solving the Differential Equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.4.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.4.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-ansatz-symmetry-assumptions">6.5.1.1. Metric Ansatz &amp; Symmetry Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols">6.5.1.2. Christoffel Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-the-ricci-tensor">6.5.1.3. Components of the Ricci Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-differential-equations">6.5.1.4. Solving the Differential Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-integration-constant-c-the-newtonian-limit">6.5.1.5. Determining the Integration Constant <span class="math notranslate nohighlight">\(C\)</span> (The Newtonian Limit)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-case-complete-vacuum-m-0">6.5.1.6. Special Case: Complete Vacuum (<span class="math notranslate nohighlight">\(M = 0\)</span>)</a></li>
 </ul>
   </nav></div>
 
