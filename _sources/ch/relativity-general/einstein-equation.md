@@ -29,7 +29,7 @@ Idea:
 
 2. Correct the relation, replacing Ricci's tensor with its divergence-free part
 
-   $$R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \kappa T^{\mu \sigma} \ ,$$
+   $$R^{\mu \sigma} - \frac{1}{2} g^{\mu \sigma} R = \kappa T^{\mu \sigma} \ ,$$ (eq:einstein:equation)
 
    or
 
