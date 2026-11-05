@@ -56,7 +56,7 @@ $$\begin{aligned}
   \partial_b g_{ca} & = \Gamma_{cb}^{d} g_{da} + \Gamma_{ab}^{d} g_{cd} \\
 \end{aligned}$$
 
-so that, summing the first 2 equations and subracting the last one,
+so that, summing the first 2 equations and subtracting the last one,
 
 $$\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)$$ (eqn:differential-geometry:gamma:g)
 
