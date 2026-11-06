@@ -503,7 +503,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -519,6 +521,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">6.5.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">6.5.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -530,6 +541,13 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="deflection-of-a-ray-of-light-and-eddington-measurements-1919">
 <span id="relativity-general-notes-examples-deflection-of-ray-of-light"></span><h1><span class="section-number">6.5.3. </span>Deflection of a ray of light, and Eddington measurements (1919)<a class="headerlink" href="#deflection-of-a-ray-of-light-and-eddington-measurements-1919" title="Permalink to this heading">#</a></h1>
+<p>Newton’s theory of universal gravitation is fundamentally incompatible with special relativity: in Newtonian mechanics, gravitational interactions act instantaneously across space, violating the relativistic principle that no physical signal or interaction can propagate faster than the speed of light <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>In this section, the equation of the trajectory of zero-mass object in Schwarzschild metrics is derived here, using perturbation method for weak gravitational fields. The equations of general relativity imply that a ray of light is deflected by a body with mass <span class="math notranslate nohighlight">\(M\)</span> by an angle</p>
+<div class="math notranslate nohighlight">
+\[\delta \simeq 4 \frac{GM}{R c^2} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(R\)</span> the minimum distance of the ray from the center of the massive body. This results is compared is twice the deflection predicted by the laws of classical mechanics using Newton gravitation, <span class="math notranslate nohighlight">\(\delta^{\rm Newton} \simeq 2 \frac{GM}{R c^2}\)</span>. <strong>Eddington experiment</strong> during the total solar eclipse of the 1919 measured the amount of deflection of light rays passing close to the sun, confirming that general gravitation has better predictions and matches the experimental measurements, providing the first experimental tests of Einstein theory of general relativity as a new and better theory of gravitation.</p>
+<div class="section" id="trajectory-of-zero-mass-objects-in-schwarzschild-metrics">
+<span id="relativity-general-notes-examples-deflection-of-ray-of-light-trajectory-schwarzschild"></span><h2><span class="section-number">6.5.3.1. </span>Trajectory of zero-mass objects in Schwarzschild metrics<a class="headerlink" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics" title="Permalink to this heading">#</a></h2>
 <p>Light particles travel at the speed of light <span class="math notranslate nohighlight">\(c\)</span>. Thus the elementary increment of proper interval (or proper time <span class="math notranslate nohighlight">\(\tau\)</span>) is zero,</p>
 <div class="math notranslate nohighlight">
 \[0 = ds^2 = g_{ij} \frac{d q^i}{d \lambda} \frac{d q^j}{d \lambda} \ .\]</div>
@@ -617,17 +635,17 @@ Details<div class="sd-summary-down docutils">
 </div>
 </details><p>Putting together the zero- and first-order contributions, the approximate solution is</p>
 <div class="math notranslate nohighlight">
-\[u(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{2} \frac{GM}{c^2 R^2} \left( 1 - \frac{1}{3} \cos(2 \phi) \right) \ .\]</div>
+\[u(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{2} \frac{GM}{R^2 c^2 } \left( 1 - \frac{1}{3} \cos(2 \phi) \right) \ .\]</div>
 <p>Assuming symmetric trajectory w.r.t. <span class="math notranslate nohighlight">\(\theta = 0\)</span>, then <span class="math notranslate nohighlight">\(B = 0\)</span>. Setting the other integration constant by the condition <span class="math notranslate nohighlight">\(u(0) = \frac{1}{R}\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{1}{R} = A + \frac{GM}{c^2 R^2}
+\frac{1}{R} = A + \frac{GM}{R^2 c^2}
 \quad \rightarrow \quad
-A = \frac{1}{R} \left( 1 - \frac{GM}{c^2 R} \right)
+A = \frac{1}{R} \left( 1 - \frac{GM}{ R c^2} \right)
 \]</div>
 <p>so that</p>
 <div class="math notranslate nohighlight">
-\[r(\phi) = \frac{R}{\left( 1 - \frac{GM}{c^2 R} \right) \cos(\phi) + \frac{3}{2} \frac{GM}{c^2 R} \left( 1 - \frac{1}{3} \cos(2 \phi) \right)} \ .\]</div>
+\[r(\phi) = \frac{R}{\left( 1 - \frac{GM}{ R c^2} \right) \cos(\phi) + \frac{3}{2} \frac{GM}{R c^2 } \left( 1 - \frac{1}{3} \cos(2 \phi) \right)} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Extremes of the trajectory<div class="sd-summary-down docutils">
@@ -650,10 +668,39 @@ Extremes of the trajectory<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\text{den}(\delta) = \left( 1 - \gamma \right) \frac{\delta}{2} + \frac{3}{2} \gamma \left( \frac{4}{3} - \frac{1}{12} \delta^2 \right) = \left( 1 - \gamma \right) \frac{\delta}{2} + 2 \gamma - \frac{1}{8} \gamma \delta^2 \ , \]</div>
 <p class="sd-card-text">and setting it equal to zero, neglecting the second-degree contribution</p>
-<div class="math notranslate nohighlight">
-\[\delta = \frac{4 \gamma}{1 - \gamma} \sim 4 \gamma = 4 \frac{GM}{c^2 R} \ .\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-rays-of-light-deflection-relativity">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-eq-rays-of-light-deflection-relativity" title="Permalink to this equation">#</a></span>\[\delta = \frac{4 \gamma}{1 - \gamma} \sim 4 \gamma = 4 \frac{GM}{R c^2 } \ .\]</div>
 </div>
-</details><p><strong>todo</strong> Compare with the results of classical mechanics using Newtonian mechanics for a hyperbolic orbit of a body with mass <span class="math notranslate nohighlight">\(m \to 0\)</span> (the orbit is independent from the mass of the object, as <span class="math notranslate nohighlight">\(m \tfrac{d^2 \mathbf{r}}{d t^2} = - G M m \frac{\mathbf{r}}{| \mathbf{r} |^3}\)</span>.</p>
+</details><!--
+**todo** Compare with the results of classical mechanics using Newtonian mechanics for a hyperbolic orbit of a body with mass $m \to 0$ (the orbit is independent from the mass of the object, as $m \tfrac{d^2 \mathbf{r}}{d t^2} = - G M m \frac{\mathbf{r}}{| \mathbf{r} |^3}$.
+-->
+</div>
+<div class="section" id="comparison-with-the-laws-of-classical-mechanics-newton-gravitation">
+<span id="relativity-general-notes-examples-deflection-of-ray-of-light-newton"></span><h2><span class="section-number">6.5.3.2. </span>Comparison with the laws of classical mechanics - Newton gravitation<a class="headerlink" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation" title="Permalink to this heading">#</a></h2>
+<p><strong>See</strong>: <a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/mechanics/dynamics-central.html">Physics - HS: Classical Mechanics: Dynamics: Central Motions</a></p>
+<p>With the laws of classical mechanics, the equation of the trajectory of central motions with force <span class="math notranslate nohighlight">\(\vec{F} = c \frac{\vec{r}}{\left| \vec{r} \right|^3}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[r(\phi) = \frac{\frac{L^2}{m|c|}}{-\text{sign}(c) + \sqrt{1 + 2 \frac{E L^2}{m|c|^2}} \cos(\phi-\phi_0)} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(m\)</span> the mass of the light body, <span class="math notranslate nohighlight">\(L\)</span> the constant angular momentum, and <span class="math notranslate nohighlight">\(E\)</span> the constant energy of the light body, and <span class="math notranslate nohighlight">\(\phi_0\)</span> a reference angle to describe trajectories with different orientation: without loss of generallity, let’s set it equal to zero, <span class="math notranslate nohighlight">\(\phi_0 = 0\)</span>. For gravitation, <span class="math notranslate nohighlight">\(c = G M m\)</span>, so that <span class="math notranslate nohighlight">\(\text{sign}(c) = 1\)</span>.</p>
+<p>Open trajectories have <span class="math notranslate nohighlight">\(E \ge 0\)</span>, with parabolic orbits for <span class="math notranslate nohighlight">\(E = 0\)</span>, and hyperbolic orbits for <span class="math notranslate nohighlight">\(E &gt; 0\)</span>. The minimum distance between the bodies occurs when the denominator is maximum, and thus for <span class="math notranslate nohighlight">\(\cos( \phi ) = 1\)</span>, i.e. <span class="math notranslate nohighlight">\(\phi = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\frac{L^2}{G M m^2}}{-1 + \sqrt{1 + 2 \frac{E}{m} \frac{L^2}{G^2 M^2 m^2}} } \ .\]</div>
+<p>Hyperbolic orbits havei asymptotes corresponding to limit angles <span class="math notranslate nohighlight">\(\phi_\infty\)</span> and <span class="math notranslate nohighlight">\(-\phi_{\infty}\)</span>, where the denominator becomes zero. The total deflection of the trajectory is the angle <span class="math notranslate nohighlight">\(\delta\)</span> (better, <span class="math notranslate nohighlight">\(\pi - \delta\)</span>) between the asymptotes. The limit angles satisfy the condition</p>
+<div class="math notranslate nohighlight">
+\[\cos \phi_{\infty} = \frac{1}{\sqrt{1 + 2 \frac{E}{m} \frac{L^2}{G^2 M^2 m^2}}} \ .\]</div>
+<p>The total delection is <span class="math notranslate nohighlight">\(\delta = \pi - 2 \phi_\infty\)</span>. For small deviations of the trajectory, the angles at infinity only slightly differs from <span class="math notranslate nohighlight">\(\pm \frac{\pi}{2}\)</span>. Writing <span class="math notranslate nohighlight">\(\phi_{\infty} = \frac{\pi}{2} - \frac{\delta}{2}\)</span>, then <span class="math notranslate nohighlight">\(\cos(\phi_{\infty}) = \sin\left( \frac{\delta}{2} \right)\)</span>. As <span class="math notranslate nohighlight">\(\delta \to 0\)</span>, then <span class="math notranslate nohighlight">\(\cos \phi_\infty \to 0\)</span>. Since</p>
+<div class="math notranslate nohighlight">
+\[\cos \phi_\infty = \frac{1}{\sqrt{1 + \varepsilon}} = \sin\left( \frac{\delta}{2} \right) \sim \frac{\delta}{2} \ ,\]</div>
+<p>it follows that the parameter <span class="math notranslate nohighlight">\(\varepsilon = 2 \frac{E}{m} \left( \frac{L}{GMm} \right)^2\)</span> is “large”, and the approximation of <span class="math notranslate nohighlight">\(\cos \phi_\infty\)</span> holds</p>
+<div class="math notranslate nohighlight">
+\[\cos \phi_\infty = \frac{1}{\sqrt{1 + \varepsilon}} \sim \frac{1}{\sqrt{\varepsilon}} \ .\]</div>
+<p>If this approximation holds, the minimum distance of the trajectory from the massive body approximately is</p>
+<div class="math notranslate nohighlight">
+\[R  \sim \frac{G M}{2} \frac{m}{E} \sqrt{\varepsilon} \quad \rightarrow \quad  \frac{1}{\sqrt{\varepsilon}} \sim \frac{GMm}{2ER} \ .\]</div>
+<p>Then, the total delection for a body travelling close to the speed of light - assuming that laws of classical mechanics still hold, and that kinetic energy prevails over potential energy - <span class="math notranslate nohighlight">\(E \sim \frac{1}{2} m c^2\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-rays-of-light-deflection-classical">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-eq-rays-of-light-deflection-classical" title="Permalink to this equation">#</a></span>\[\delta \sim \frac{GMm}{ER} \sim \frac{2GM}{R c^2} \ .\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -710,6 +757,21 @@ Extremes of the trajectory<div class="sd-summary-down docutils">
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">6.5.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">6.5.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
