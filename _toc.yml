@@ -13,6 +13,7 @@ parts:
   - file: ch/relativity-special/notes
   - file: ch/relativity-special/lorentz
   - file: ch/relativity-special/em
+  - file: ch/relativity-special/rindler
 - caption: General Relativity
   numbered: True
   chapters:
@@ -23,6 +24,7 @@ parts:
     - file: ch/relativity-general/einstein-equation
     - file: ch/relativity-general/linearized-efe
     - file: ch/relativity-general/efe-properties
+    - file: ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle
     - file: ch/relativity-general/examples
       sections:
       - file: ch/relativity-general/schwarzschild-metric
