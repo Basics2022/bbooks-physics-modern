@@ -529,26 +529,21 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-and-notation">7.5.1. Setting and notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.2. First order: the tetrad</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-free-parameters">7.5.2.1. How many free parameters?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis">7.5.2. Local vector basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-set-of-coordinates">7.5.3. Local set of coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.4. First order: the tetrad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.5. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-order-in-q-mu-x-alpha">7.5.6. Third order in <span class="math notranslate nohighlight">\(q^{\mu}(x^\alpha)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-of-t">7.5.6.1. 3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-normal-coordinates">7.5.6.2. Riemann normal coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric-to-second-order">7.5.6.3. The metric to second order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-check">7.5.6.4. Counting check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-what-each-order-does">7.5.6.5. Summary: what each order does</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.3. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-same-a-removes-partial-g">7.5.3.1. The same <span class="math notranslate nohighlight">\(A\)</span> removes <span class="math notranslate nohighlight">\(\partial g'\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-term-a-a-x-sigma-x-xi-is-not-trustworthy">7.5.3.2. 2.3 Why the term <span class="math notranslate nohighlight">\(A\,A\,x^\sigma x^\xi\)</span> is not trustworthy</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-order-what-cannot-be-removed">7.5.4. 3. Third order: what cannot be removed</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-of-t">7.5.4.1. 3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-normal-coordinates">7.5.4.2. 3.2 Riemann normal coordinates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric-to-second-order">7.5.4.3. 3.3 The metric to second order</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-check">7.5.4.4. 3.4 Counting check</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-what-each-order-does">7.5.5. 4. Summary: what each order does</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equivalence-principle">7.5.6. 5. The equivalence principle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-uniformly-accelerated-frame-link-to-the-rindler-notes">7.5.7. 6. Example: uniformly accelerated frame (link to the Rindler notes)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-along-a-worldline-fermi-normal-coordinates">7.5.8. 7. Extension along a worldline (Fermi normal coordinates)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equivalence-principle">7.5.7. The equivalence principle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-uniformly-accelerated-frame-in-free-space-rindler-coordinates-in-special-relativity">7.5.8. Example: uniformly accelerated frame in free space - Rindler coordinates in special relativity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-along-a-worldline-fermi-normal-coordinates">7.5.9. Extension along a worldline (Fermi normal coordinates)</a></li>
 </ul>
             </nav>
         </div>
@@ -576,13 +571,16 @@ document.write(`
 </div>
 <div class="section" id="setting-and-notation">
 <span id="general-relativity-local-inertial-reference-frame-introduction"></span><h2><span class="section-number">7.5.1. </span>Setting and notation<a class="headerlink" href="#setting-and-notation" title="Permalink to this heading">#</a></h2>
-<p>Spacetime points are <span class="math notranslate nohighlight">\(\mathbf X(q^\mu)\)</span>. The event <span class="math notranslate nohighlight">\(P\)</span> has coordinates <span class="math notranslate nohighlight">\(q_P^\mu\)</span>. The choice of the coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}\)</span>m induces</p>
+<p>Events in space time are parametrized with a set of coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}_{\mu=0:3}\)</span> as <span class="math notranslate nohighlight">\(\mathbf X(q^\mu)\)</span>. The event <span class="math notranslate nohighlight">\(P\)</span> has coordinates <span class="math notranslate nohighlight">\(q_P^\mu\)</span>. The choice of the coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}\)</span> induces</p>
 <ul>
 <li><p>Coordinate natural basis <span class="math notranslate nohighlight">\(\mathbf{b}_\mu=\partial_\mu\mathbf{X}\)</span> and metrics <span class="math notranslate nohighlight">\(g_{\mu\nu}=\mathbf{ b}_\mu \cdot \mathbf{ b}_\nu\)</span>, and the reciprocal basis <span class="math notranslate nohighlight">\(\mathbf{ b}^\mu\cdot\mathbf {b}_\nu=\delta^\mu_\nu\)</span>.</p></li>
-<li><p>Connection -</p>
+<li><p>Connection - Christoffel symbols, <span class="math notranslate nohighlight">\(\Gamma_{\mu \nu}^{\lambda}\)</span>, defined as the components in the natural basis of the derivative of the vectors of the natural basis themselves, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2\mathbf{X}}{\partial q^{\mu} q^{\nu}} = \partial_{q^{\nu}} \mathbf{b}_{\mu} = \partial_{q^{\mu}} \mathbf{b}_{\nu} = \Gamma_{\mu \nu}^{\lambda} \mathbf{b}_{\lambda} \ .\]</div>
+<p>Exploiting the orthogonality of the vectors of a basis and the vectors of its reciprocal basis,</p>
 <div class="math notranslate nohighlight">
 \[
-   \Gamma^\lambda{}_{\mu\nu}=\mathbf b^\lambda\cdot\partial_\mu\mathbf b_\nu,\qquad
+   \Gamma^\lambda_{\mu\nu}=\mathbf b^\lambda\cdot\partial_\mu\mathbf b_\nu,\qquad
    \Gamma_{\lambda,\mu\nu}:=g_{\lambda\sigma}\Gamma^\sigma{}_{\mu\nu}=\mathbf b_\lambda\cdot\partial_\mu\mathbf b_\nu .
    \]</div>
 <p>It is symmetric in <span class="math notranslate nohighlight">\(\mu\nu\)</span> because <span class="math notranslate nohighlight">\(\partial_\mu\mathbf b_\nu=\partial_\nu\mathbf b_\mu\)</span>.</p>
@@ -610,19 +608,32 @@ The second line follows from $\Gamma'^\gamma{}_{\alpha\beta}=\mathbf b'^\gamma\c
 $\partial_\alpha\mathbf b'_\beta=\partial_\alpha\partial_\beta q^\nu\,\mathbf b_\nu+\partial_\beta q^\nu\partial_\alpha q^\mu\,\partial_\mu\mathbf b_\nu$.
 The inhomogeneous term $\partial_\alpha\partial_\beta q^\lambda$ is why $\Gamma$ is **not a tensor** and can be switched off at a point.
 -->
-<p><strong>Local set of coordinates, <span class="math notranslate nohighlight">\(\{ x^{\alpha} \}\)</span>, with <span class="math notranslate nohighlight">\(\partial_{x^{\alpha}} \mathbf{X} \cdot \partial_{x^{\beta}} \mathbf{X} = \eta_{\alpha \beta}\)</span>.</strong> Expand the new coordinates around <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(x^\alpha=0\)</span> at <span class="math notranslate nohighlight">\(P\)</span>):</p>
-<div class="math notranslate nohighlight" id="equation-eq-ansatz">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-ansatz" title="Permalink to this equation">#</a></span>\[
+</div>
+<div class="section" id="local-vector-basis">
+<h2><span class="section-number">7.5.2. </span>Local vector basis<a class="headerlink" href="#local-vector-basis" title="Permalink to this heading">#</a></h2>
+<p>Definition of a local basis <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu}\)</span>, s.t. <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}\)</span>.</p>
+<p>…</p>
+<p>Transformation of coordinates</p>
+<p>…</p>
+</div>
+<div class="section" id="local-set-of-coordinates">
+<h2><span class="section-number">7.5.3. </span>Local set of coordinates<a class="headerlink" href="#local-set-of-coordinates" title="Permalink to this heading">#</a></h2>
+<p>Let the vectors <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu}\)</span> of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates <span class="math notranslate nohighlight">\(\{ x^\mu \}_{\mu=0:3}\)</span>, identifying the event <span class="math notranslate nohighlight">\(P\)</span> with <span class="math notranslate nohighlight">\(x^{\mu}_P = 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .\]</div>
+<p>A polynomial expansion of the coordinates <span class="math notranslate nohighlight">\(q^{\mu}\)</span> as a function of the local coordinates <span class="math notranslate nohighlight">\(x^{\alpha}\)</span> around <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(x^\alpha=0\)</span> at <span class="math notranslate nohighlight">\(P\)</span>) reads</p>
+<div class="math notranslate nohighlight" id="equation-eq-polynomial-expansion">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-polynomial-expansion" title="Permalink to this equation">#</a></span>\[
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are totally symmetric in their lower indices. All coefficients are evaluated at <span class="math notranslate nohighlight">\(P\)</span>. The inverse of <span class="math notranslate nohighlight">\(\tilde e\)</span> is <span class="math notranslate nohighlight">\(e^\alpha{}_\mu\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are totally symmetric in their lower indices. The inverse of <span class="math notranslate nohighlight">\(\tilde e\)</span> is <span class="math notranslate nohighlight">\(e^\alpha{}_\mu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
-\)</span>$</p>
+\]</div>
 </div>
-<hr class="docutils" />
 <div class="section" id="first-order-the-tetrad">
-<h2><span class="section-number">7.5.2. </span>First order: the tetrad<a class="headerlink" href="#first-order-the-tetrad" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.5.4. </span>First order: the tetrad<a class="headerlink" href="#first-order-the-tetrad" title="Permalink to this heading">#</a></h2>
 <p>The vectors <span class="math notranslate nohighlight">\(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\)</span> form a <strong>local basis</strong> (tetrad) at <span class="math notranslate nohighlight">\(P\)</span>. Requiring <span class="math notranslate nohighlight">\(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\)</span> gives</p>
 <div class="math notranslate nohighlight" id="equation-eq-tetrad">
 <span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-tetrad" title="Permalink to this equation">#</a></span>\[
@@ -630,8 +641,8 @@ g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta=\eta_{\alpha\beta}\quad
 g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
 \]</div>
 <p>and the reciprocal basis is <span class="math notranslate nohighlight">\(\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu\)</span> with <span class="math notranslate nohighlight">\(\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta\)</span>.</p>
-<div class="section" id="how-many-free-parameters">
-<h3><span class="section-number">7.5.2.1. </span>How many free parameters?<a class="headerlink" href="#how-many-free-parameters" title="Permalink to this heading">#</a></h3>
+<div class="admonition-how-many-free-parameters admonition">
+<p class="admonition-title">How many free parameters?</p>
 <ul>
 <li><p><strong>Counting.</strong> <span class="math notranslate nohighlight">\(\tilde e^\mu{}_\alpha\)</span> has <span class="math notranslate nohighlight">\(16\)</span> components, and the symmetric equation <a class="reference internal" href="#equation-eq-tetrad">(7.9)</a> gives <span class="math notranslate nohighlight">\(10\)</span> conditions. So <span class="math notranslate nohighlight">\(16-10=\mathbf{6}\)</span> parameters remain: the Lorentz group <span class="math notranslate nohighlight">\(SO(1,3)\)</span> (3 boosts + 3 rotations).</p></li>
 <li><p><strong>Counting along an observer’s worldline.</strong> Let the observer have worldline <span class="math notranslate nohighlight">\(\mathbf X_P(\tau)\)</span> and 4-velocity</p>
@@ -652,6 +663,7 @@ g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
 <p>Choosing <span class="math notranslate nohighlight">\(\mathbf u_P\)</span> ties the frame to the observer. The <span class="math notranslate nohighlight">\(3\)</span> remaining parameters (<span class="math notranslate nohighlight">\(SO(3)\)</span>) are the orientation of the spatial axes. Different <span class="math notranslate nohighlight">\(\mathbf u_P\)</span> give different, equally valid, local inertial frames related by boosts.</p>
 </li>
 </ul>
+</div>
 <div class="admonition-result-of-the-first-order admonition">
 <p class="admonition-title">Result of the first order</p>
 <p><span class="math notranslate nohighlight">\(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\)</span>. The residual freedom is exactly the Lorentz group: <strong>6 parameters</strong>.</p>
@@ -667,10 +679,9 @@ Christoffel symbols and coordinate transformations<div class="sd-summary-down do
 <span class="eqno">(7.10)<a class="headerlink" href="#equation-eq-gamma-transf" title="Permalink to this equation">#</a></span>\[ \dots \]</div>
 </div>
 </details></div>
-</div>
 <div class="section" id="second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">
-<h2><span class="section-number">7.5.3. </span>Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span><a class="headerlink" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0" title="Permalink to this heading">#</a></h2>
-<p>The requirement that <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span> fixes the value of the coefficients <span class="math notranslate nohighlight">\(A^{\lambda}_{\alpha \beta}\)</span> in the expansion.
+<h2><span class="section-number">7.5.5. </span>Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span><a class="headerlink" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0" title="Permalink to this heading">#</a></h2>
+<p>The requirement that <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span> fixes the value of the coefficients <span class="math notranslate nohighlight">\(A^{\lambda}_{\alpha \beta}\)</span> in the expansion <a class="reference internal" href="#equation-eq-polynomial-expansion">(7.8)</a>.
 From the transformation law <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a>, using <span class="math notranslate nohighlight">\(\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha\)</span> and <span class="math notranslate nohighlight">\(\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -686,43 +697,48 @@ From the transformation law <a class="reference internal" href="#equation-eq-gam
 \[
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
 \]</div>
-<div class="section" id="the-same-a-removes-partial-g">
-<h3><span class="section-number">7.5.3.1. </span>The same <span class="math notranslate nohighlight">\(A\)</span> removes <span class="math notranslate nohighlight">\(\partial g'\)</span><a class="headerlink" href="#the-same-a-removes-partial-g" title="Permalink to this heading">#</a></h3>
-<p>Expand <code class="xref eq docutils literal notranslate"><span class="pre">eq-g-transf</span></code> to first order in <span class="math notranslate nohighlight">\(x\)</span>. The ingredients are</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+The same <span class="math notranslate nohighlight">\(A\)</span> removes <span class="math notranslate nohighlight">\(\partial g'\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Expand <code class="xref eq docutils literal notranslate"><span class="pre">eq-g-transf</span></code> to first order in <span class="math notranslate nohighlight">\(x\)</span>. The ingredients are</p>
 <div class="math notranslate nohighlight">
 \[
 \partial_\alpha q^\mu=\tilde e^\mu{}_\alpha+A^\mu{}_{\alpha\sigma}x^\sigma+O(x^2),\qquad
 g_{\mu\nu}(q(x))=g_{\mu\nu}(P)+\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma x^\sigma+O(x^2).
 \]</div>
-<p>Using <a class="reference internal" href="#equation-eq-tetrad">(7.9)</a> for the zeroth-order term:</p>
+<p class="sd-card-text">Using <a class="reference internal" href="#equation-eq-tetrad">(7.9)</a> for the zeroth-order term:</p>
 <div class="math notranslate nohighlight">
 \[
 g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
 +g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
 \]</div>
-<p>Insert <a class="reference internal" href="#equation-eq-a">(7.11)</a> and use <span class="math notranslate nohighlight">\(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\)</span> (and the symmetry in the last two indices):</p>
+<p class="sd-card-text">Insert <a class="reference internal" href="#equation-eq-a">(7.11)</a> and use <span class="math notranslate nohighlight">\(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\)</span> (and the symmetry in the last two indices):</p>
 <div class="math notranslate nohighlight">
 \[
 g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\Big[\partial_\rho g_{\mu\nu}-\Gamma_{\mu,\rho\nu}-\Gamma_{\nu,\rho\mu}\Big]+O(x^2).
 \]</div>
-<p>The bracket vanishes identically by metric compatibility <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code>. Therefore</p>
+<p class="sd-card-text">The bracket vanishes identically by metric compatibility <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code>. Therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq-second-order">
 <span class="eqno">(7.12)<a class="headerlink" href="#equation-eq-second-order" title="Permalink to this equation">#</a></span>\[
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+O(x^2)\,}\qquad\Longleftrightarrow\qquad \Gamma'(P)=0\ \Longleftrightarrow\ \partial_\gamma g'_{\alpha\beta}(P)=0 .
 \]</div>
-<div class="admonition note">
+</div>
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The two statements “<span class="math notranslate nohighlight">\(\Gamma'(P)=0\)</span>” and “<span class="math notranslate nohighlight">\(\partial g'(P)=0\)</span>” are equivalent <em>because</em> of <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code>. This is the precise sense in which gravity is “transformed away” at a point: <span class="math notranslate nohighlight">\(g_{\mu\nu}\)</span> and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.</p>
 </div>
-</div>
-<div class="section" id="why-the-term-a-a-x-sigma-x-xi-is-not-trustworthy">
-<h3><span class="section-number">7.5.3.2. </span>2.3 Why the term <span class="math notranslate nohighlight">\(A\,A\,x^\sigma x^\xi\)</span> is not trustworthy<a class="headerlink" href="#why-the-term-a-a-x-sigma-x-xi-is-not-trustworthy" title="Permalink to this heading">#</a></h3>
+<div class="admonition-the-term-a-a-x-sigma-x-xi-is-not-trustworthy admonition">
+<p class="admonition-title">The term <span class="math notranslate nohighlight">\(A\,A\,x^\sigma x^\xi\)</span> is not trustworthy</p>
 <p>The product of the two <span class="math notranslate nohighlight">\(A\)</span> terms is <span class="math notranslate nohighlight">\(O(x^2)\)</span>. At that order one also needs <span class="math notranslate nohighlight">\(B\)</span> (from <span class="math notranslate nohighlight">\(\partial_\alpha q^\mu\)</span>) and <span class="math notranslate nohighlight">\(\partial\partial g\)</span> (from the expansion of <span class="math notranslate nohighlight">\(g_{\mu\nu}(q(x))\)</span>). A consistent expansion must therefore be organised by order, which is done in the next section.</p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="third-order-what-cannot-be-removed">
-<h2><span class="section-number">7.5.4. </span>3. Third order: what cannot be removed<a class="headerlink" href="#third-order-what-cannot-be-removed" title="Permalink to this heading">#</a></h2>
+<div class="section" id="third-order-in-q-mu-x-alpha">
+<h2><span class="section-number">7.5.6. </span>Third order in <span class="math notranslate nohighlight">\(q^{\mu}(x^\alpha)\)</span><a class="headerlink" href="#third-order-in-q-mu-x-alpha" title="Permalink to this heading">#</a></h2>
 <p>The cubic coefficients <span class="math notranslate nohighlight">\(B^\lambda{}_{\alpha\beta\gamma}\)</span> are totally symmetric. Differentiate <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a> once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'(P)=0\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-t">
 <span class="eqno">(7.13)<a class="headerlink" href="#equation-eq-t" title="Permalink to this equation">#</a></span>\[
@@ -730,16 +746,18 @@ T^\gamma{}_{\alpha\beta\delta}:=\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is built only from <span class="math notranslate nohighlight">\(\tilde e\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\Gamma(P)\)</span> and <span class="math notranslate nohighlight">\(\partial\Gamma(P)\)</span> (it does not depend on <span class="math notranslate nohighlight">\(B\)</span>). The derivative of the prefactor <span class="math notranslate nohighlight">\(\partial x^\gamma/\partial q^\lambda\)</span> does not contribute, because it multiplies the bracket of <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a>, which vanishes at <span class="math notranslate nohighlight">\(P\)</span>. The only place <span class="math notranslate nohighlight">\(B\)</span> enters is through <span class="math notranslate nohighlight">\(\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}\)</span>. <span class="math notranslate nohighlight">\(T\)</span> is symmetric in <span class="math notranslate nohighlight">\(\alpha\beta\)</span>.</p>
 <div class="section" id="decomposition-of-t">
-<h3><span class="section-number">7.5.4.1. </span>3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span><a class="headerlink" href="#decomposition-of-t" title="Permalink to this heading">#</a></h3>
-<p>Define the totally symmetric part
-$<span class="math notranslate nohighlight">\(
+<h3><span class="section-number">7.5.6.1. </span>3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span><a class="headerlink" href="#decomposition-of-t" title="Permalink to this heading">#</a></h3>
+<p>Define the totally symmetric part</p>
+<div class="math notranslate nohighlight">
+\[
 S^\gamma{}_{\alpha\beta\delta}=\tfrac13\big(T^\gamma{}_{\alpha\beta\delta}+T^\gamma{}_{\beta\delta\alpha}+T^\gamma{}_{\delta\alpha\beta}\big).
-\)</span><span class="math notranslate nohighlight">\(
-The Riemann tensor at \)</span>P<span class="math notranslate nohighlight">\( (where the \)</span>\Gamma\Gamma<span class="math notranslate nohighlight">\( terms vanish) is
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>The Riemann tensor at <span class="math notranslate nohighlight">\(P\)</span> (where the <span class="math notranslate nohighlight">\(\Gamma\Gamma\)</span> terms vanish) is</p>
+<div class="math notranslate nohighlight">
+\[
 R'^\gamma{}_{\alpha\beta\delta}=T^\gamma{}_{\delta\alpha\beta}-T^\gamma{}_{\beta\alpha\delta}.
-\)</span><span class="math notranslate nohighlight">\(
-Symmetrising in \)</span>(\alpha\beta)<span class="math notranslate nohighlight">\( and using the symmetry of \)</span>T$ in its first two lower indices:</p>
+\]</div>
+<p>Symmetrising in <span class="math notranslate nohighlight">\((\alpha\beta)\)</span> and using the symmetry of <span class="math notranslate nohighlight">\(T\)</span> in its first two lower indices:</p>
 <div class="math notranslate nohighlight">
 \[
 R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}
@@ -751,28 +769,31 @@ R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}
 <span class="eqno">(7.14)<a class="headerlink" href="#equation-eq-decomp" title="Permalink to this equation">#</a></span>\[
 \boxed{\,\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=S^\gamma{}_{\alpha\beta\delta}-\tfrac13\big(R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}\big)\,}
 \]</div>
-<ul class="simple">
+<ul>
 <li><p>The <strong>totally symmetric part <span class="math notranslate nohighlight">\(S\)</span></strong> is pure gauge: by <a class="reference internal" href="#equation-eq-t">(7.13)</a> it can be shifted at will through <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
-<li><p>The <strong>rest</strong> is fixed by the Riemann tensor, which transforms as a tensor and therefore cannot be changed by any coordinate choice:
-$<span class="math notranslate nohighlight">\(
-R'^\gamma{}_{\alpha\beta\delta}(P)=e^\gamma{}_\lambda\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\tilde e^\kappa{}_\delta\;R^\lambda{}_{\mu\nu\kappa}(P).
-\)</span>$</p></li>
+<li><p>The <strong>rest</strong> is fixed by the Riemann tensor, which transforms as a tensor and therefore cannot be changed by any coordinate choice:</p>
+<div class="math notranslate nohighlight">
+\[
+   R'^\gamma{}_{\alpha\beta\delta}(P)=e^\gamma{}_\lambda\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\tilde e^\kappa{}_\delta\;R^\lambda{}_{\mu\nu\kappa}(P).
+   \]</div>
+</li>
 </ul>
 </div>
 <div class="section" id="riemann-normal-coordinates">
-<h3><span class="section-number">7.5.4.2. </span>3.2 Riemann normal coordinates<a class="headerlink" href="#riemann-normal-coordinates" title="Permalink to this heading">#</a></h3>
-<p>Choose
-$<span class="math notranslate nohighlight">\(
+<h3><span class="section-number">7.5.6.2. </span>Riemann normal coordinates<a class="headerlink" href="#riemann-normal-coordinates" title="Permalink to this heading">#</a></h3>
+<p>Choose</p>
+<div class="math notranslate nohighlight">
+\[
 B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\beta\delta)}
-\)</span><span class="math notranslate nohighlight">\(
-(total symmetrisation of \)</span>C<span class="math notranslate nohighlight">\(). Then \)</span>S=0<span class="math notranslate nohighlight">\(. The freedom in \)</span>B$ is <strong>entirely used up</strong>. This defines <strong>Riemann normal coordinates</strong>, in which</p>
+\]</div>
+<p>with a total symmetrisation of <span class="math notranslate nohighlight">\(C\)</span>. Then <span class="math notranslate nohighlight">\(S=0\)</span>. The freedom in <span class="math notranslate nohighlight">\(B\)</span> is <strong>entirely used up</strong>. This defines <strong>Riemann normal coordinates</strong>, in which</p>
 <div class="math notranslate nohighlight">
 \[
 \partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=-\tfrac13\big(R^\gamma{}_{\alpha\beta\delta}+R^\gamma{}_{\beta\alpha\delta}\big).
 \]</div>
 </div>
 <div class="section" id="the-metric-to-second-order">
-<h3><span class="section-number">7.5.4.3. </span>3.3 The metric to second order<a class="headerlink" href="#the-metric-to-second-order" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.6.3. </span>The metric to second order<a class="headerlink" href="#the-metric-to-second-order" title="Permalink to this heading">#</a></h3>
 <p>Differentiate the metric-compatibility relation <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code> (written in the primed coordinates) once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'=0\)</span>, so that derivatives of <span class="math notranslate nohighlight">\(g'\)</span> drop out:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -796,17 +817,15 @@ B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\
 \]</div>
 </div>
 <div class="section" id="counting-check">
-<h3><span class="section-number">7.5.4.4. </span>3.4 Counting check<a class="headerlink" href="#counting-check" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.6.4. </span>Counting check<a class="headerlink" href="#counting-check" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Second derivatives <span class="math notranslate nohighlight">\(\partial_\gamma\partial_\delta g'_{\alpha\beta}\)</span>: <span class="math notranslate nohighlight">\(10\times10=100\)</span> numbers.</p></li>
 <li><p>Cubic coefficients <span class="math notranslate nohighlight">\(B^\lambda{}_{\alpha\beta\delta}\)</span>: <span class="math notranslate nohighlight">\(4\times20=80\)</span> numbers, all used to set <span class="math notranslate nohighlight">\(S=0\)</span>.</p></li>
 <li><p>Left over: <span class="math notranslate nohighlight">\(100-80=\mathbf{20}\)</span>, exactly the number of independent components of the Riemann tensor in four dimensions.</p></li>
 </ul>
 </div>
-</div>
-<hr class="docutils" />
 <div class="section" id="summary-what-each-order-does">
-<h2><span class="section-number">7.5.5. </span>4. Summary: what each order does<a class="headerlink" href="#summary-what-each-order-does" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">7.5.6.5. </span>Summary: what each order does<a class="headerlink" href="#summary-what-each-order-does" title="Permalink to this heading">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Order of <span class="math notranslate nohighlight">\(q(x)\)</span></p></th>
@@ -835,61 +854,72 @@ B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\
 </table>
 <p>Each order of the coordinate map controls the same order of the metric: the first removes <span class="math notranslate nohighlight">\(g-\eta\)</span>, the second removes <span class="math notranslate nohighlight">\(\partial g\)</span>, and the third can only rearrange <span class="math notranslate nohighlight">\(\partial\partial g\)</span>, never eliminate it.</p>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="the-equivalence-principle">
-<h2><span class="section-number">7.5.6. </span>5. The equivalence principle<a class="headerlink" href="#the-equivalence-principle" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.5.7. </span>The equivalence principle<a class="headerlink" href="#the-equivalence-principle" title="Permalink to this heading">#</a></h2>
 <p>In the coordinates <span class="math notranslate nohighlight">\(x^\alpha\)</span> built above:</p>
-<ol class="arabic simple">
-<li><p><strong>Free fall is inertial motion at <span class="math notranslate nohighlight">\(P\)</span>.</strong> The geodesic equation
-$<span class="math notranslate nohighlight">\(
-\frac{d^2x^\alpha}{d\tau^2}=-\Gamma'^\alpha{}_{\beta\gamma}\frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}
-\)</span><span class="math notranslate nohighlight">\(
-has vanishing right-hand side at \)</span>P<span class="math notranslate nohighlight">\(: free particles move in straight lines, with corrections that grow linearly in \)</span>x<span class="math notranslate nohighlight">\( through \)</span>\partial\Gamma’\sim R$.</p></li>
-<li><p><strong>Non-gravitational physics reduces to special relativity at <span class="math notranslate nohighlight">\(P\)</span></strong> (<em>minimal coupling</em>). Replacing <span class="math notranslate nohighlight">\(\eta\to g\)</span> and <span class="math notranslate nohighlight">\(\partial\to\nabla\)</span>, for example
-$<span class="math notranslate nohighlight">\(
-\nabla_\mu T^{\mu\nu}=\partial_\mu T^{\mu\nu}+\Gamma^\mu{}_{\mu\lambda}T^{\lambda\nu}+\Gamma^\nu{}_{\mu\lambda}T^{\mu\lambda}\ \xrightarrow{\ P\ }\ \partial_\mu T^{\mu\nu},
-\)</span><span class="math notranslate nohighlight">\(
-so all local laws take their special-relativistic form, with relative corrections of order \)</span>|R|,L^2<span class="math notranslate nohighlight">\( in a region of size \)</span>L$.</p></li>
-<li><p><strong>What remains is tidal.</strong> The residual gravitational information is the Riemann tensor, as seen in <a class="reference internal" href="#equation-eq-rnc">(7.15)</a> and in the <strong>geodesic deviation</strong> of two neighbouring free-falling particles with separation <span class="math notranslate nohighlight">\(\xi^\mu\)</span> and 4-velocity <span class="math notranslate nohighlight">\(u^\mu\)</span>:
-$<span class="math notranslate nohighlight">\(
-\frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
-\)</span>$</p></li>
-</ol>
+<ol class="arabic">
+<li><p><strong>Free fall is inertial motion at <span class="math notranslate nohighlight">\(P\)</span>.</strong> The geodesic equation</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{d^2x^\alpha}{d\tau^2}=-\Gamma'^\alpha{}_{\beta\gamma}\frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}
+   \]</div>
+<p>has vanishing right-hand side at <span class="math notranslate nohighlight">\(P\)</span>: free particles move in straight lines, with corrections that grow linearly in <span class="math notranslate nohighlight">\(x\)</span> through <span class="math notranslate nohighlight">\(\partial\Gamma'\sim R\)</span>.</p>
+</li>
+<li><p><strong>Non-gravitational physics reduces to special relativity at <span class="math notranslate nohighlight">\(P\)</span></strong> (<em>minimal coupling</em>). Replacing <span class="math notranslate nohighlight">\(\eta\to g\)</span> and <span class="math notranslate nohighlight">\(\partial\to\nabla\)</span>, for example</p>
+<div class="math notranslate nohighlight">
+\[
+   \nabla_\mu T^{\mu\nu}=\partial_\mu T^{\mu\nu}+\Gamma^\mu{}_{\mu\lambda}T^{\lambda\nu}+\Gamma^\nu{}_{\mu\lambda}T^{\mu\lambda}\ \xrightarrow{\ P\ }\ \partial_\mu T^{\mu\nu},
+   \]</div>
+<p>so all local laws take their special-relativistic form, with relative corrections of order <span class="math notranslate nohighlight">\(|R|\,L^2\)</span> in a region of size <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</li>
+<li><p><strong>What remains is tidal.</strong> The residual gravitational information is the Riemann tensor, as seen in <a class="reference internal" href="#equation-eq-rnc">(7.15)</a> and in the <strong>geodesic deviation</strong> of two neighbouring free-falling particles with separation <span class="math notranslate nohighlight">\(\xi^\mu\)</span> and 4-velocity <span class="math notranslate nohighlight">\(u^\mu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
+   \]</div>
 <p>Hence “local” means: the region is small enough that <span class="math notranslate nohighlight">\(|R|\,L^2\)</span> is below the precision of the measurement. The equivalence principle is the statement that the metric and its first derivatives can be made to coincide with those of Minkowski at <span class="math notranslate nohighlight">\(P\)</span>, but the second derivatives cannot.</p>
+</li>
+</ol>
 </div>
 <hr class="docutils" />
-<div class="section" id="example-uniformly-accelerated-frame-link-to-the-rindler-notes">
-<h2><span class="section-number">7.5.7. </span>6. Example: uniformly accelerated frame (link to the Rindler notes)<a class="headerlink" href="#example-uniformly-accelerated-frame-link-to-the-rindler-notes" title="Permalink to this heading">#</a></h2>
-<p>See <a class="reference internal" href="../relativity-special/rindler.html#relativity-general-rindler"><span class="std std-ref">“Constant” acceleration observer and Rindler coordinates</span></a>.</p>
-<p>In Rindler coordinates <span class="math notranslate nohighlight">\((T=ct,\xi)\)</span> with <span class="math notranslate nohighlight">\(a\)</span> the proper acceleration of the observer at <span class="math notranslate nohighlight">\(\xi=0\)</span>,
-$<span class="math notranslate nohighlight">\(
+<div class="section" id="example-uniformly-accelerated-frame-in-free-space-rindler-coordinates-in-special-relativity">
+<h2><span class="section-number">7.5.8. </span>Example: uniformly accelerated frame in free space - Rindler coordinates in special relativity<a class="headerlink" href="#example-uniformly-accelerated-frame-in-free-space-rindler-coordinates-in-special-relativity" title="Permalink to this heading">#</a></h2>
+<p>See <a class="reference internal" href="../relativity-special/rindler.html#relativity-special-rindler"><span class="std std-ref">“Constant” acceleration observer and Rindler coordinates</span></a>.</p>
+<p>In Rindler coordinates <span class="math notranslate nohighlight">\((T=ct,\xi)\)</span> with <span class="math notranslate nohighlight">\(a\)</span> the proper acceleration of the observer at <span class="math notranslate nohighlight">\(\xi=0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
 ds^2=\Big(1+\frac{a\xi}{c^2}\Big)^2dT^2-d\xi^2-dy^2-dz^2 .
-\)</span><span class="math notranslate nohighlight">\(
-The Riemann tensor is identically zero (flat spacetime), but the connection is not:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>The Riemann tensor is identically zero (flat spacetime), but the connection is not:</p>
+<div class="math notranslate nohighlight">
+\[
 \Gamma^\xi{}_{TT}=\frac{a}{c^2}\Big(1+\frac{a\xi}{c^2}\Big)\ \xrightarrow{\ \xi=0\ }\ \frac{a}{c^2}.
-\)</span><span class="math notranslate nohighlight">\(
-Take \)</span>\tilde e=\mathbb 1<span class="math notranslate nohighlight">\( at \)</span>P<span class="math notranslate nohighlight">\( (the observer's own frame). Then by {eq}`eq-A`,
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Take <span class="math notranslate nohighlight">\(\tilde e=\mathbb 1\)</span> at <span class="math notranslate nohighlight">\(P\)</span> (the observer’s own frame). Then by <a class="reference internal" href="#equation-eq-a">(7.11)</a>,</p>
+<div class="math notranslate nohighlight">
+\[
 A^\xi{}_{TT}=-\frac{a}{c^2}
 \qquad\Longrightarrow\qquad
 \xi=x^\xi-\frac{a}{2c^2}\,(x^T)^2+O(x^3).
-\)</span><span class="math notranslate nohighlight">\(
-This is exactly the transformation to the freely falling (inertial) frame: a free particle at rest in \)</span>x<span class="math notranslate nohighlight">\( has \)</span>\xi=\text{const}-\tfrac{a}{2c^2}T^2<span class="math notranslate nohighlight">\(, i.e. it &quot;falls&quot; with acceleration \)</span>-a<span class="math notranslate nohighlight">\( as seen by the accelerated observer. This is the equivalence between a uniform gravitational field and an accelerated frame: both are removed at \)</span>P<span class="math notranslate nohighlight">\( by \)</span>A<span class="math notranslate nohighlight">\(, and in flat spacetime nothing remains at third order since \)</span>R=0$.</p>
+\]</div>
+<p>This is exactly the transformation to the freely falling (inertial) frame: a free particle at rest in <span class="math notranslate nohighlight">\(x\)</span> has <span class="math notranslate nohighlight">\(\xi=\text{const}-\tfrac{a}{2c^2}T^2\)</span>, i.e. it “falls” with acceleration <span class="math notranslate nohighlight">\(-a\)</span> as seen by the accelerated observer. This is the equivalence between a uniform gravitational field and an accelerated frame: both are removed at <span class="math notranslate nohighlight">\(P\)</span> by <span class="math notranslate nohighlight">\(A\)</span>, and in flat spacetime nothing remains at third order since <span class="math notranslate nohighlight">\(R=0\)</span>.</p>
 <p>In a genuine gravitational field (e.g. a static observer in Schwarzschild) the same quadratic map removes the local acceleration, but the third-order term leaves the tidal tensor <span class="math notranslate nohighlight">\(R\neq0\)</span>, which distinguishes the two situations.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="extension-along-a-worldline-fermi-normal-coordinates">
-<h2><span class="section-number">7.5.8. </span>7. Extension along a worldline (Fermi normal coordinates)<a class="headerlink" href="#extension-along-a-worldline-fermi-normal-coordinates" title="Permalink to this heading">#</a></h2>
-<p>If the frame is carried along the whole worldline with the tetrad transported (parallel transport for a geodesic, Fermi–Walker transport otherwise), the same construction gives coordinates in which, for a geodesic observer with a non-rotating triad,
-$<span class="math notranslate nohighlight">\(
+<h2><span class="section-number">7.5.9. </span>Extension along a worldline (Fermi normal coordinates)<a class="headerlink" href="#extension-along-a-worldline-fermi-normal-coordinates" title="Permalink to this heading">#</a></h2>
+<p>If the frame is carried along the whole worldline with the tetrad transported (parallel transport for a geodesic, Fermi–Walker transport otherwise), the same construction gives coordinates in which, for a geodesic observer with a non-rotating triad,</p>
+<div class="math notranslate nohighlight">
+\[
 g_{00}=1-R_{0i0j}\,x^ix^j+\dots,\qquad g_{0i}=-\tfrac23R_{0jik}\,x^jx^k+\dots,\qquad g_{ij}=-\delta_{ij}-\tfrac13R_{ikjl}\,x^kx^l+\dots
-\)</span><span class="math notranslate nohighlight">\(
-For an accelerated or rotating observer the leading terms also contain the acceleration \)</span>a_i<span class="math notranslate nohighlight">\( and the angular velocity \)</span>\boldsymbol\omega<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>For an accelerated or rotating observer the leading terms also contain the acceleration <span class="math notranslate nohighlight">\(a_i\)</span> and the angular velocity <span class="math notranslate nohighlight">\(\boldsymbol\omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 g_{00}=(1+a_ix^i)^2-(\boldsymbol\omega\times\mathbf x)^2+\dots
-\)</span><span class="math notranslate nohighlight">\(
-In flat spacetime with \)</span>a=\text{const}<span class="math notranslate nohighlight">\( and \)</span>\boldsymbol\omega=0$ this is exactly the Rindler metric of Section 6.</p>
+\]</div>
+<p>In flat spacetime with <span class="math notranslate nohighlight">\(a=\text{const}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol\omega=0\)</span> this is exactly the Rindler metric of Section 6.</p>
 </div>
 </div>
 
@@ -957,26 +987,21 @@ In flat spacetime with \)</span>a=\text{const}<span class="math notranslate nohi
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-and-notation">7.5.1. Setting and notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.2. First order: the tetrad</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-free-parameters">7.5.2.1. How many free parameters?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis">7.5.2. Local vector basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-set-of-coordinates">7.5.3. Local set of coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.4. First order: the tetrad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.5. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-order-in-q-mu-x-alpha">7.5.6. Third order in <span class="math notranslate nohighlight">\(q^{\mu}(x^\alpha)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-of-t">7.5.6.1. 3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-normal-coordinates">7.5.6.2. Riemann normal coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric-to-second-order">7.5.6.3. The metric to second order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-check">7.5.6.4. Counting check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-what-each-order-does">7.5.6.5. Summary: what each order does</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.3. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-same-a-removes-partial-g">7.5.3.1. The same <span class="math notranslate nohighlight">\(A\)</span> removes <span class="math notranslate nohighlight">\(\partial g'\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-term-a-a-x-sigma-x-xi-is-not-trustworthy">7.5.3.2. 2.3 Why the term <span class="math notranslate nohighlight">\(A\,A\,x^\sigma x^\xi\)</span> is not trustworthy</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-order-what-cannot-be-removed">7.5.4. 3. Third order: what cannot be removed</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-of-t">7.5.4.1. 3.1 Decomposition of <span class="math notranslate nohighlight">\(T\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-normal-coordinates">7.5.4.2. 3.2 Riemann normal coordinates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric-to-second-order">7.5.4.3. 3.3 The metric to second order</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-check">7.5.4.4. 3.4 Counting check</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-what-each-order-does">7.5.5. 4. Summary: what each order does</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equivalence-principle">7.5.6. 5. The equivalence principle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-uniformly-accelerated-frame-link-to-the-rindler-notes">7.5.7. 6. Example: uniformly accelerated frame (link to the Rindler notes)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-along-a-worldline-fermi-normal-coordinates">7.5.8. 7. Extension along a worldline (Fermi normal coordinates)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equivalence-principle">7.5.7. The equivalence principle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-uniformly-accelerated-frame-in-free-space-rindler-coordinates-in-special-relativity">7.5.8. Example: uniformly accelerated frame in free space - Rindler coordinates in special relativity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extension-along-a-worldline-fermi-normal-coordinates">7.5.9. Extension along a worldline (Fermi normal coordinates)</a></li>
 </ul>
   </nav></div>
 

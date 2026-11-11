@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-special/rindler';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -503,7 +505,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -519,6 +523,35 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-4d-kinematics-of-an-accelerated-point">5.1. 3+1 and 4D Kinematics of an Accelerated Point</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-definitions-in-an-inertial-frame">5.1.1. 4-Vector Definitions in an Inertial Frame</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniformly-accelerated-trajectory">5.2. Uniformly Accelerated Trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-of-the-accelerated-observer-frame-rindler-coordinates">5.3. Construction of the Accelerated Observer Frame &amp; Rindler Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-assignment-for-event-q">5.3.1. Coordinate Assignment for Event <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-rindler-coordinates-eta-bar-xi">5.3.2. Definition of Rindler Coordinates <span class="math notranslate nohighlight">\((\eta, \bar{\xi})\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-tensor-in-rindler-coordinates">5.4. Metric Tensor in Rindler Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-basis-vectors-and-dual-metric-components">5.4.1. Natural Basis Vectors and Dual Metric Components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols-riemann-tensor">5.5. Christoffel Symbols &amp; Riemann Tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-of-basis-vectors">5.5.1. Derivatives of Basis Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-zero-christoffel-symbols">5.5.2. Non-Zero Christoffel Symbols</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-zero-riemann-tensor">5.5.3. Curvature (Zero Riemann Tensor)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-in-rindler-coordinates">5.6. Geodesics in Rindler Coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-newtonian-limit">5.7. Classical / Newtonian Limit</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -529,8 +562,201 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="constant-acceleration-observer-and-rindler-coordinates">
-<span id="relativity-general-rindler"></span><h1><span class="section-number">5. </span>“Constant” acceleration observer and Rindler coordinates<a class="headerlink" href="#constant-acceleration-observer-and-rindler-coordinates" title="Permalink to this heading">#</a></h1>
-<p><strong>todo</strong> Convert hand-written notes into .md</p>
+<span id="relativity-special-rindler"></span><h1><span class="section-number">5. </span>“Constant” acceleration observer and Rindler coordinates<a class="headerlink" href="#constant-acceleration-observer-and-rindler-coordinates" title="Permalink to this heading">#</a></h1>
+<p><strong>todo</strong> Check the hand-written notes into .md converted by Gemini below</p>
+<hr class="docutils" />
+<p>This section covers the kinematics of uniformly accelerated motion in Special Relativity, the construction of the reference frame of an accelerated observer, the derivation of Rindler coordinates, and their geometric properties (metric, Christoffel symbols, geodesics, zero Riemann curvature tensor, and the Newtonian/classical limit).</p>
+<hr class="docutils" />
+<div class="section" id="and-4d-kinematics-of-an-accelerated-point">
+<h2><span class="section-number">5.1. </span>3+1 and 4D Kinematics of an Accelerated Point<a class="headerlink" href="#and-4d-kinematics-of-an-accelerated-point" title="Permalink to this heading">#</a></h2>
+<div class="section" id="vector-definitions-in-an-inertial-frame">
+<h3><span class="section-number">5.1.1. </span>4-Vector Definitions in an Inertial Frame<a class="headerlink" href="#vector-definitions-in-an-inertial-frame" title="Permalink to this heading">#</a></h3>
+<p>Consider an inertial reference frame with Cartesian basis vectors <span class="math notranslate nohighlight">\(\{\underline{E}_\mu\}\)</span> such that <span class="math notranslate nohighlight">\(\underline{E}_\mu \cdot \underline{E}_\nu = \eta_{\mu\nu} = \text{diag}(1, -1, -1, -1)\)</span>.</p>
+<ul>
+<li><p><strong>4-position:</strong></p>
+<div class="math notranslate nohighlight">
+\[\underline{X}(\tau) = X^\mu(\tau) \underline{E}_\mu = c t \underline{E}_0 + x_i \underline{E}_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the proper time defined by:</p>
+<div class="math notranslate nohighlight">
+\[c^2 d\tau^2 = c^2 dt^2 - |d\vec{x}|^2 = c^2 \left(1 - \frac{|\vec{v}|^2}{c^2}\right) dt^2 \implies d\tau = \gamma^{-1} dt\]</div>
+<p>with <span class="math notranslate nohighlight">\(\gamma = \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-1/2}\)</span>.</p>
+</li>
+<li><p><strong>4-velocity:</strong></p>
+<div class="math notranslate nohighlight">
+\[\underline{U} = \frac{d\underline{X}}{d\tau} = \frac{dt}{d\tau} \frac{d\underline{X}}{dt} = c \gamma \underline{E}_0 + \gamma v_i \underline{E}_i\]</div>
+<p>which satisfies <span class="math notranslate nohighlight">\(\underline{U} \cdot \underline{U} = c^2\)</span>.</p>
+</li>
+<li><p><strong>4-acceleration:</strong></p>
+<div class="math notranslate nohighlight">
+\[\underline{A} = \frac{d\underline{U}}{d\tau} = \gamma \frac{d\underline{U}}{dt}\]</div>
+<p>Expanding component-wise:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}(\gamma c) = c \frac{d\gamma}{dt} = c \left(-\frac{1}{2}\right) \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-3/2} \left(-2 \vec{v} \cdot \frac{d\vec{v}}{dt}\right) \frac{1}{c^2} = \frac{\gamma^3}{c} (\vec{v} \cdot \vec{a})\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}(\gamma v_i) = \gamma^3 \frac{1}{c^2} (\vec{v} \cdot \vec{a}) v_i + \gamma a_i\]</div>
+<p>Combining these gives:</p>
+<div class="math notranslate nohighlight">
+\[\underline{A} = \left( \frac{\gamma^4}{c} (\vec{v} \cdot \vec{a}), \, \gamma^2 \vec{a} + \frac{\gamma^4}{c^2} \vec{v} (\vec{v} \cdot \vec{a}) \right)\]</div>
+<p>Using the longitudinal/transverse decomposition of acceleration:</p>
+<div class="math notranslate nohighlight">
+\[\underline{A} = \gamma^4 \left\{ \frac{\vec{v} \cdot \vec{a}}{c}, \, \frac{\vec{v}}{c} \left(\frac{\vec{v}}{c} \cdot \vec{a}\right) + \left(1 - \frac{|\vec{v}|^2}{c^2}\right) \vec{a}_\perp \right\}\]</div>
+</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="uniformly-accelerated-trajectory">
+<h2><span class="section-number">5.2. </span>Uniformly Accelerated Trajectory<a class="headerlink" href="#uniformly-accelerated-trajectory" title="Permalink to this heading">#</a></h2>
+<p>Consider motion along one spatial direction (<span class="math notranslate nohighlight">\(x\)</span>) with constant proper acceleration magnitude <span class="math notranslate nohighlight">\(\alpha_p\)</span> such that <span class="math notranslate nohighlight">\(\underline{A} \cdot \underline{A} = -\alpha_p^2\)</span>.</p>
+<p>Assuming initial conditions at <span class="math notranslate nohighlight">\(\tau = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(c t, x)|_{\tau=0} = (0, x_{P0}), \quad v(0) = 0\]</div>
+<p>The solution to the equations of motion yields hyperbolic motion:</p>
+<div class="math notranslate nohighlight">
+\[c t(\tau) = \frac{c^2}{\alpha_p} \sinh\left(\frac{\alpha_p \tau}{c}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[x(\tau) = \frac{c^2}{\alpha_p} \cosh\left(\frac{\alpha_p \tau}{c}\right) - \frac{c^2}{\alpha_p} + x_{P0}\]</div>
+<p>Choosing <span class="math notranslate nohighlight">\(x_{P0} = \frac{c^2}{\alpha_p}\)</span>, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} c t = \frac{c^2}{\alpha_p} \sinh\left(\frac{\alpha_p \tau}{c}\right) \\ x = \frac{c^2}{\alpha_p} \cosh\left(\frac{\alpha_p \tau}{c}\right) \end{cases}\end{split}\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="construction-of-the-accelerated-observer-frame-rindler-coordinates">
+<h2><span class="section-number">5.3. </span>Construction of the Accelerated Observer Frame &amp; Rindler Coordinates<a class="headerlink" href="#construction-of-the-accelerated-observer-frame-rindler-coordinates" title="Permalink to this heading">#</a></h2>
+<p>An accelerated observer <span class="math notranslate nohighlight">\(P\)</span> builds a local coordinate system using:</p>
+<ol class="arabic">
+<li><p><strong>Proper time standard (<span class="math notranslate nohighlight">\(\tau\)</span>):</strong> Measuring time along their worldline using their own clock.</p></li>
+<li><p><strong>Orthogonal local frame:</strong> Constructing an instantaneous rest frame basis <span class="math notranslate nohighlight">\(\{\underline{e}_0(\tau), \underline{e}_1(\tau)\}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{e}_0(\tau) = \frac{\underline{U}}{c} = \cosh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \sinh\left(\frac{g \tau}{c}\right) \underline{E}_1\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{e}_1(\tau) = \sinh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \cosh\left(\frac{g \tau}{c}\right) \underline{E}_1\]</div>
+<p>where <span class="math notranslate nohighlight">\(g = \alpha_p\)</span>. Note that <span class="math notranslate nohighlight">\(\underline{e}_0 \cdot \underline{e}_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\underline{e}_1 \cdot \underline{e}_1 = -1\)</span>, and <span class="math notranslate nohighlight">\(\underline{e}_0 \cdot \underline{e}_1 = 0\)</span>.</p>
+</li>
+</ol>
+<div class="section" id="coordinate-assignment-for-event-q">
+<h3><span class="section-number">5.3.1. </span>Coordinate Assignment for Event <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#coordinate-assignment-for-event-q" title="Permalink to this heading">#</a></h3>
+<p>An event <span class="math notranslate nohighlight">\(Q\)</span> at spatial distance <span class="math notranslate nohighlight">\(z\)</span> along the observer’s instantaneous spatial axis <span class="math notranslate nohighlight">\(\underline{e}_1(\tau)\)</span> has the spacetime position:</p>
+<div class="math notranslate nohighlight">
+\[\underline{X}_Q(\tau, z) = \underline{X}_P(\tau) + z \, \underline{e}_1(\tau)\]</div>
+<p>Expanding in the Minkowski background frame <span class="math notranslate nohighlight">\(\{\underline{E}_0, \underline{E}_1\}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\underline{X}_Q = \underline{E}_0 \left( \frac{c^2}{g} \sinh\frac{g\tau}{c} + z \sinh\frac{g\tau}{c} \right) + \underline{E}_1 \left( \frac{c^2}{g} \cosh\frac{g\tau}{c} + z \cosh\frac{g\tau}{c} \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{X}_Q = \left( \frac{c^2}{g} + z \right) \sinh\left(\frac{g\tau}{c}\right) \underline{E}_0 + \left( \frac{c^2}{g} + z \right) \cosh\left(\frac{g\tau}{c}\right) \underline{E}_1\]</div>
+</div>
+<div class="section" id="definition-of-rindler-coordinates-eta-bar-xi">
+<h3><span class="section-number">5.3.2. </span>Definition of Rindler Coordinates <span class="math notranslate nohighlight">\((\eta, \bar{\xi})\)</span><a class="headerlink" href="#definition-of-rindler-coordinates-eta-bar-xi" title="Permalink to this heading">#</a></h3>
+<p>Define the transformed coordinates:</p>
+<div class="math notranslate nohighlight">
+\[\bar{\xi} = \frac{c^2}{g} + z, \quad \eta = \frac{g \tau}{c}\]</div>
+<p>This maps Minkowski coordinates <span class="math notranslate nohighlight">\((ct, x)\)</span> to Rindler coordinates <span class="math notranslate nohighlight">\((\eta, \bar{\xi})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} c t = \bar{\xi} \sinh \eta \\ x = \bar{\xi} \cosh \eta \end{cases}\end{split}\]</div>
+<p>Curves of constant spatial coordinate <span class="math notranslate nohighlight">\(\bar{\xi} = \bar{\xi}_k\)</span> represent hyperbolas (<span class="math notranslate nohighlight">\(x^2 - c^2 t^2 = \bar{\xi}_k^2\)</span>) corresponding to observers maintaining constant acceleration <span class="math notranslate nohighlight">\(\alpha = c^2 / \bar{\xi}_k\)</span>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="metric-tensor-in-rindler-coordinates">
+<h2><span class="section-number">5.4. </span>Metric Tensor in Rindler Coordinates<a class="headerlink" href="#metric-tensor-in-rindler-coordinates" title="Permalink to this heading">#</a></h2>
+<p>Differentials of the coordinate transformation are given by:</p>
+<div class="math notranslate nohighlight">
+\[c dt = \cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta\]</div>
+<div class="math notranslate nohighlight">
+\[dx = \sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta\]</div>
+<p>Substituting these into the flat Minkowski line element <span class="math notranslate nohighlight">\(ds^2 = c^2 dt^2 - dx^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ds^2 = (\cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta)^2 - (\sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta)^2\]</div>
+<div class="math notranslate nohighlight">
+\[ds^2 = \bar{\xi}^2 d\eta^2 - d\bar{\xi}^2\]</div>
+<p>Alternatively, writing the metric in terms of proper time <span class="math notranslate nohighlight">\(\tau\)</span> and local spatial coordinate <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2\]</div>
+<div class="section" id="natural-basis-vectors-and-dual-metric-components">
+<h3><span class="section-number">5.4.1. </span>Natural Basis Vectors and Dual Metric Components<a class="headerlink" href="#natural-basis-vectors-and-dual-metric-components" title="Permalink to this heading">#</a></h3>
+<p>The natural basis vectors <span class="math notranslate nohighlight">\(\underline{b}_\eta = \partial_\eta \underline{X}\)</span> and <span class="math notranslate nohighlight">\(\underline{b}_{\bar{\xi}} = \partial_{\bar{\xi}} \underline{X}\)</span> are:</p>
+<div class="math notranslate nohighlight">
+\[\underline{b}_\eta = \bar{\xi} \cosh\eta \, \underline{E}_0 + \bar{\xi} \sinh\eta \, \underline{E}_1\]</div>
+<div class="math notranslate nohighlight">
+\[\underline{b}_{\bar{\xi}} = \sinh\eta \, \underline{E}_0 + \cosh\eta \, \underline{E}_1\]</div>
+<p>The metric components <span class="math notranslate nohighlight">\(g_{\mu\nu} = \underline{b}_\mu \cdot \underline{b}_\nu\)</span> are:</p>
+<div class="math notranslate nohighlight">
+\[g_{\eta\eta} = \bar{\xi}^2, \quad g_{\bar{\xi}\bar{\xi}} = -1, \quad g_{\eta\bar{\xi}} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{g} = \begin{pmatrix} \bar{\xi}^2 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}, \quad \mathbf{g}^{-1} = \begin{pmatrix} \frac{1}{\bar{\xi}^2} &amp; 0 \\ 0 &amp; -1 \end{pmatrix}\end{split}\]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="christoffel-symbols-riemann-tensor">
+<h2><span class="section-number">5.5. </span>Christoffel Symbols &amp; Riemann Tensor<a class="headerlink" href="#christoffel-symbols-riemann-tensor" title="Permalink to this heading">#</a></h2>
+<div class="section" id="derivatives-of-basis-vectors">
+<h3><span class="section-number">5.5.1. </span>Derivatives of Basis Vectors<a class="headerlink" href="#derivatives-of-basis-vectors" title="Permalink to this heading">#</a></h3>
+<p>Calculating derivatives of the natural basis vectors with respect to coordinates <span class="math notranslate nohighlight">\((\bar{\xi}, \eta)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\partial_{\bar{\xi}} \underline{b}_{\bar{\xi}} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\partial_\eta \underline{b}_{\bar{\xi}} = \cosh\eta \, \underline{E}_0 + \sinh\eta \, \underline{E}_1 = \frac{1}{\bar{\xi}} \underline{b}_\eta\]</div>
+<div class="math notranslate nohighlight">
+\[\partial_\eta \underline{b}_\eta = \bar{\xi} \sinh\eta \, \underline{E}_0 + \bar{\xi} \cosh\eta \, \underline{E}_1 = \bar{\xi} \, \underline{b}_{\bar{\xi}}\]</div>
+</div>
+<div class="section" id="non-zero-christoffel-symbols">
+<h3><span class="section-number">5.5.2. </span>Non-Zero Christoffel Symbols<a class="headerlink" href="#non-zero-christoffel-symbols" title="Permalink to this heading">#</a></h3>
+<p>From <span class="math notranslate nohighlight">\(\partial_\mu \underline{b}_\nu = \Gamma^\lambda_{\mu\nu} \underline{b}_\lambda\)</span>, the non-zero Christoffel symbols are:</p>
+<div class="math notranslate nohighlight">
+\[\Gamma^\eta_{\eta \bar{\xi}} = \Gamma^\eta_{\bar{\xi} \eta} = \frac{1}{\bar{\xi}}\]</div>
+<div class="math notranslate nohighlight">
+\[\Gamma^{\bar{\xi}}_{\eta\eta} = \bar{\xi}\]</div>
+</div>
+<div class="section" id="curvature-zero-riemann-tensor">
+<h3><span class="section-number">5.5.3. </span>Curvature (Zero Riemann Tensor)<a class="headerlink" href="#curvature-zero-riemann-tensor" title="Permalink to this heading">#</a></h3>
+<p>Calculating the Riemann curvature tensor components using <span class="math notranslate nohighlight">\(R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \partial_{\bar{\xi}}\Gamma^{\bar{\xi}}_{\eta\eta} - \partial_\eta \Gamma^{\bar{\xi}}_{\bar{\xi}\eta} + \Gamma^{\bar{\xi}}_{\bar{\xi}\lambda}\Gamma^\lambda_{\eta\eta} - \Gamma^{\bar{\xi}}_{\eta\lambda}\Gamma^\lambda_{\bar{\xi}\eta}\]</div>
+<div class="math notranslate nohighlight">
+\[R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \frac{\partial}{\partial\bar{\xi}}(\bar{\xi}) - 0 + 0 - \left(\Gamma^{\bar{\xi}}_{\eta\eta}\Gamma^\eta_{\bar{\xi}\eta}\right) = 1 - \left(\bar{\xi} \cdot \frac{1}{\bar{\xi}}\right) = 0\]</div>
+<p>Thus, all components of the Riemann tensor vanish (<span class="math notranslate nohighlight">\(R^\rho{}_{\sigma\mu\nu} = 0\)</span>), confirming that the Rindler frame describes <strong>flat spacetime</strong> in non-inertial coordinates.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="geodesics-in-rindler-coordinates">
+<h2><span class="section-number">5.6. </span>Geodesics in Rindler Coordinates<a class="headerlink" href="#geodesics-in-rindler-coordinates" title="Permalink to this heading">#</a></h2>
+<p>The geodesic equations are given by:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{x}^\mu + \Gamma^\mu_{\alpha\beta} \dot{x}^\alpha \dot{x}^\beta = 0\]</div>
+<p>where dots denote derivatives with respect to an affine parameter (e.g., proper time <span class="math notranslate nohighlight">\(s\)</span>).
+Writing explicit components for <span class="math notranslate nohighlight">\(\bar{\xi}\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \ddot{\bar{\xi}} + \Gamma^{\bar{\xi}}_{\eta\eta} \dot{\eta}^2 = 0 \implies \ddot{\bar{\xi}} + \bar{\xi} \dot{\eta}^2 = 0 \\ \ddot{\eta} + 2 \Gamma^\eta_{\bar{\xi}\eta} \dot{\bar{\xi}}\dot{\eta} = 0 \implies \ddot{\eta} + \frac{2}{\bar{\xi}} \dot{\bar{\xi}}\dot{\eta} = 0 \end{cases}\end{split}\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="classical-newtonian-limit">
+<h2><span class="section-number">5.7. </span>Classical / Newtonian Limit<a class="headerlink" href="#classical-newtonian-limit" title="Permalink to this heading">#</a></h2>
+<p>For low speeds (<span class="math notranslate nohighlight">\(v \ll c\)</span>) and small spatial extents around the observer line (<span class="math notranslate nohighlight">\(z \ll c^2/g\)</span>):</p>
+<ol class="arabic">
+<li><p><strong>Coordinate expansion:</strong></p>
+<div class="math notranslate nohighlight">
+\[\bar{\xi} = \frac{c^2}{g} + z \implies 1 + \frac{gz}{c^2} \approx 1\]</div>
+<div class="math notranslate nohighlight">
+\[\tau = \frac{c}{g} \eta \implies \eta \ll 1\]</div>
+</li>
+<li><p><strong>Metric limit:</strong></p>
+<div class="math notranslate nohighlight">
+\[ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2 \approx \left(1 + \frac{2gz}{c^2}\right) c^2 d\tau^2 - dz^2\]</div>
+<p>Matching with the weak static field limit metric <span class="math notranslate nohighlight">\(g_{00} = 1 + \frac{2\Phi}{c^2}\)</span>, we identify the fictitious Newtonian gravitational potential:</p>
+<div class="math notranslate nohighlight">
+\[\Phi(z) = g z\]</div>
+</li>
+<li><p><strong>Geodesic / Acceleration Equation:</strong>
+Substituting <span class="math notranslate nohighlight">\(\bar{\xi} = \frac{c^2}{g} + z\)</span> into the spatial geodesic equation with <span class="math notranslate nohighlight">\(\dot{\eta} \approx \frac{g}{c} \dot{t}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{z} + \left(\frac{c^2}{g} + z\right) \left(\frac{g}{c}\right)^2 = 0 \implies \ddot{z} + g + \frac{g^2 z}{c^2} = 0\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(c \to \infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\ddot{z} + g = 0 \implies \ddot{z} = -g\]</div>
+</li>
+</ol>
+<p>This recovers the expected non-relativistic inertial force (apparent constant downward gravitational field <span class="math notranslate nohighlight">\(-g\)</span>) experienced in a uniformly accelerating reference frame.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -587,6 +813,41 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-4d-kinematics-of-an-accelerated-point">5.1. 3+1 and 4D Kinematics of an Accelerated Point</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-definitions-in-an-inertial-frame">5.1.1. 4-Vector Definitions in an Inertial Frame</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniformly-accelerated-trajectory">5.2. Uniformly Accelerated Trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-of-the-accelerated-observer-frame-rindler-coordinates">5.3. Construction of the Accelerated Observer Frame &amp; Rindler Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-assignment-for-event-q">5.3.1. Coordinate Assignment for Event <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-rindler-coordinates-eta-bar-xi">5.3.2. Definition of Rindler Coordinates <span class="math notranslate nohighlight">\((\eta, \bar{\xi})\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-tensor-in-rindler-coordinates">5.4. Metric Tensor in Rindler Coordinates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-basis-vectors-and-dual-metric-components">5.4.1. Natural Basis Vectors and Dual Metric Components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#christoffel-symbols-riemann-tensor">5.5. Christoffel Symbols &amp; Riemann Tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-of-basis-vectors">5.5.1. Derivatives of Basis Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-zero-christoffel-symbols">5.5.2. Non-Zero Christoffel Symbols</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curvature-zero-riemann-tensor">5.5.3. Curvature (Zero Riemann Tensor)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-in-rindler-coordinates">5.6. Geodesics in Rindler Coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-newtonian-limit">5.7. Classical / Newtonian Limit</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

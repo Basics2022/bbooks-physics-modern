@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Nov 05, 2026}
+\date{Nov 11, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -127,6 +127,10 @@ Special Relativity
 \item {} 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/relativity-special/em::doc}]{\sphinxcrossref{Electromagnetism}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-special/rindler::doc}]{\sphinxcrossref{“Constant” acceleration observer and Rindler coordinates}}}
 
 \end{itemize}
 \end{itemize}
@@ -1403,6 +1407,318 @@ Equation of motion of a point charge in a EM field,
 \sphinxstepscope
 
 
+\chapter{“Constant” acceleration observer and Rindler coordinates}
+\label{\detokenize{ch/relativity-special/rindler:constant-acceleration-observer-and-rindler-coordinates}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler}}\label{\detokenize{ch/relativity-special/rindler::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Check the hand\sphinxhyphen{}written notes into .md converted by Gemini below
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+This section covers the kinematics of uniformly accelerated motion in Special Relativity, the construction of the reference frame of an accelerated observer, the derivation of Rindler coordinates, and their geometric properties (metric, Christoffel symbols, geodesics, zero Riemann curvature tensor, and the Newtonian/classical limit).
+
+
+\bigskip\hrule\bigskip
+
+
+
+\section{3+1 and 4D Kinematics of an Accelerated Point}
+\label{\detokenize{ch/relativity-special/rindler:and-4d-kinematics-of-an-accelerated-point}}
+
+\subsection{4\sphinxhyphen{}Vector Definitions in an Inertial Frame}
+\label{\detokenize{ch/relativity-special/rindler:vector-definitions-in-an-inertial-frame}}
+\sphinxAtStartPar
+Consider an inertial reference frame with Cartesian basis vectors \(\{\underline{E}_\mu\}\) such that \(\underline{E}_\mu \cdot \underline{E}_\nu = \eta_{\mu\nu} = \text{diag}(1, -1, -1, -1)\).
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}position:}
+\begin{equation*}
+\begin{split}\underline{X}(\tau) = X^\mu(\tau) \underline{E}_\mu = c t \underline{E}_0 + x_i \underline{E}_i\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\tau\) is the proper time defined by:
+\begin{equation*}
+\begin{split}c^2 d\tau^2 = c^2 dt^2 - |d\vec{x}|^2 = c^2 \left(1 - \frac{|\vec{v}|^2}{c^2}\right) dt^2 \implies d\tau = \gamma^{-1} dt\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\gamma = \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-1/2}\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}velocity:}
+\begin{equation*}
+\begin{split}\underline{U} = \frac{d\underline{X}}{d\tau} = \frac{dt}{d\tau} \frac{d\underline{X}}{dt} = c \gamma \underline{E}_0 + \gamma v_i \underline{E}_i\end{split}
+\end{equation*}
+\sphinxAtStartPar
+which satisfies \(\underline{U} \cdot \underline{U} = c^2\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}acceleration:}
+\begin{equation*}
+\begin{split}\underline{A} = \frac{d\underline{U}}{d\tau} = \gamma \frac{d\underline{U}}{dt}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Expanding component\sphinxhyphen{}wise:
+\begin{equation*}
+\begin{split}\frac{d}{dt}(\gamma c) = c \frac{d\gamma}{dt} = c \left(-\frac{1}{2}\right) \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-3/2} \left(-2 \vec{v} \cdot \frac{d\vec{v}}{dt}\right) \frac{1}{c^2} = \frac{\gamma^3}{c} (\vec{v} \cdot \vec{a})\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\frac{d}{dt}(\gamma v_i) = \gamma^3 \frac{1}{c^2} (\vec{v} \cdot \vec{a}) v_i + \gamma a_i\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Combining these gives:
+\begin{equation*}
+\begin{split}\underline{A} = \left( \frac{\gamma^4}{c} (\vec{v} \cdot \vec{a}), \, \gamma^2 \vec{a} + \frac{\gamma^4}{c^2} \vec{v} (\vec{v} \cdot \vec{a}) \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using the longitudinal/transverse decomposition of acceleration:
+\begin{equation*}
+\begin{split}\underline{A} = \gamma^4 \left\{ \frac{\vec{v} \cdot \vec{a}}{c}, \, \frac{\vec{v}}{c} \left(\frac{\vec{v}}{c} \cdot \vec{a}\right) + \left(1 - \frac{|\vec{v}|^2}{c^2}\right) \vec{a}_\perp \right\}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Uniformly Accelerated Trajectory}
+\label{\detokenize{ch/relativity-special/rindler:uniformly-accelerated-trajectory}}
+\sphinxAtStartPar
+Consider motion along one spatial direction (\(x\)) with constant proper acceleration magnitude \(\alpha_p\) such that \(\underline{A} \cdot \underline{A} = -\alpha_p^2\).
+
+\sphinxAtStartPar
+Assuming initial conditions at \(\tau = 0\):
+\begin{equation*}
+\begin{split}(c t, x)|_{\tau=0} = (0, x_{P0}), \quad v(0) = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The solution to the equations of motion yields hyperbolic motion:
+\begin{equation*}
+\begin{split}c t(\tau) = \frac{c^2}{\alpha_p} \sinh\left(\frac{\alpha_p \tau}{c}\right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}x(\tau) = \frac{c^2}{\alpha_p} \cosh\left(\frac{\alpha_p \tau}{c}\right) - \frac{c^2}{\alpha_p} + x_{P0}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Choosing \(x_{P0} = \frac{c^2}{\alpha_p}\), this simplifies to:
+\begin{equation*}
+\begin{split}\begin{cases} c t = \frac{c^2}{\alpha_p} \sinh\left(\frac{\alpha_p \tau}{c}\right) \\ x = \frac{c^2}{\alpha_p} \cosh\left(\frac{\alpha_p \tau}{c}\right) \end{cases}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Construction of the Accelerated Observer Frame \& Rindler Coordinates}
+\label{\detokenize{ch/relativity-special/rindler:construction-of-the-accelerated-observer-frame-rindler-coordinates}}
+\sphinxAtStartPar
+An accelerated observer \(P\) builds a local coordinate system using:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Proper time standard (\(\tau\)):} Measuring time along their worldline using their own clock.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Orthogonal local frame:} Constructing an instantaneous rest frame basis \(\{\underline{e}_0(\tau), \underline{e}_1(\tau)\}\):
+\begin{equation*}
+\begin{split}\underline{e}_0(\tau) = \frac{\underline{U}}{c} = \cosh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \sinh\left(\frac{g \tau}{c}\right) \underline{E}_1\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\underline{e}_1(\tau) = \sinh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \cosh\left(\frac{g \tau}{c}\right) \underline{E}_1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(g = \alpha_p\). Note that \(\underline{e}_0 \cdot \underline{e}_0 = 1\), \(\underline{e}_1 \cdot \underline{e}_1 = -1\), and \(\underline{e}_0 \cdot \underline{e}_1 = 0\).
+
+\end{enumerate}
+
+
+\subsection{Coordinate Assignment for Event \protect\(Q\protect\)}
+\label{\detokenize{ch/relativity-special/rindler:coordinate-assignment-for-event-q}}
+\sphinxAtStartPar
+An event \(Q\) at spatial distance \(z\) along the observer’s instantaneous spatial axis \(\underline{e}_1(\tau)\) has the spacetime position:
+\begin{equation*}
+\begin{split}\underline{X}_Q(\tau, z) = \underline{X}_P(\tau) + z \, \underline{e}_1(\tau)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Expanding in the Minkowski background frame \(\{\underline{E}_0, \underline{E}_1\}\):
+\begin{equation*}
+\begin{split}\underline{X}_Q = \underline{E}_0 \left( \frac{c^2}{g} \sinh\frac{g\tau}{c} + z \sinh\frac{g\tau}{c} \right) + \underline{E}_1 \left( \frac{c^2}{g} \cosh\frac{g\tau}{c} + z \cosh\frac{g\tau}{c} \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\underline{X}_Q = \left( \frac{c^2}{g} + z \right) \sinh\left(\frac{g\tau}{c}\right) \underline{E}_0 + \left( \frac{c^2}{g} + z \right) \cosh\left(\frac{g\tau}{c}\right) \underline{E}_1\end{split}
+\end{equation*}
+
+\subsection{Definition of Rindler Coordinates \protect\((\eta, \bar{\xi})\protect\)}
+\label{\detokenize{ch/relativity-special/rindler:definition-of-rindler-coordinates-eta-bar-xi}}
+\sphinxAtStartPar
+Define the transformed coordinates:
+\begin{equation*}
+\begin{split}\bar{\xi} = \frac{c^2}{g} + z, \quad \eta = \frac{g \tau}{c}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This maps Minkowski coordinates \((ct, x)\) to Rindler coordinates \((\eta, \bar{\xi})\):
+\begin{equation*}
+\begin{split}\begin{cases} c t = \bar{\xi} \sinh \eta \\ x = \bar{\xi} \cosh \eta \end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Curves of constant spatial coordinate \(\bar{\xi} = \bar{\xi}_k\) represent hyperbolas (\(x^2 - c^2 t^2 = \bar{\xi}_k^2\)) corresponding to observers maintaining constant acceleration \(\alpha = c^2 / \bar{\xi}_k\).
+
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Metric Tensor in Rindler Coordinates}
+\label{\detokenize{ch/relativity-special/rindler:metric-tensor-in-rindler-coordinates}}
+\sphinxAtStartPar
+Differentials of the coordinate transformation are given by:
+\begin{equation*}
+\begin{split}c dt = \cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}dx = \sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Substituting these into the flat Minkowski line element \(ds^2 = c^2 dt^2 - dx^2\):
+\begin{equation*}
+\begin{split}ds^2 = (\cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta)^2 - (\sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta)^2\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}ds^2 = \bar{\xi}^2 d\eta^2 - d\bar{\xi}^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Alternatively, writing the metric in terms of proper time \(\tau\) and local spatial coordinate \(z\):
+\begin{equation*}
+\begin{split}ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2\end{split}
+\end{equation*}
+
+\subsection{Natural Basis Vectors and Dual Metric Components}
+\label{\detokenize{ch/relativity-special/rindler:natural-basis-vectors-and-dual-metric-components}}
+\sphinxAtStartPar
+The natural basis vectors \(\underline{b}_\eta = \partial_\eta \underline{X}\) and \(\underline{b}_{\bar{\xi}} = \partial_{\bar{\xi}} \underline{X}\) are:
+\begin{equation*}
+\begin{split}\underline{b}_\eta = \bar{\xi} \cosh\eta \, \underline{E}_0 + \bar{\xi} \sinh\eta \, \underline{E}_1\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\underline{b}_{\bar{\xi}} = \sinh\eta \, \underline{E}_0 + \cosh\eta \, \underline{E}_1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The metric components \(g_{\mu\nu} = \underline{b}_\mu \cdot \underline{b}_\nu\) are:
+\begin{equation*}
+\begin{split}g_{\eta\eta} = \bar{\xi}^2, \quad g_{\bar{\xi}\bar{\xi}} = -1, \quad g_{\eta\bar{\xi}} = 0\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\mathbf{g} = \begin{pmatrix} \bar{\xi}^2 & 0 \\ 0 & -1 \end{pmatrix}, \quad \mathbf{g}^{-1} = \begin{pmatrix} \frac{1}{\bar{\xi}^2} & 0 \\ 0 & -1 \end{pmatrix}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Christoffel Symbols \& Riemann Tensor}
+\label{\detokenize{ch/relativity-special/rindler:christoffel-symbols-riemann-tensor}}
+
+\subsection{Derivatives of Basis Vectors}
+\label{\detokenize{ch/relativity-special/rindler:derivatives-of-basis-vectors}}
+\sphinxAtStartPar
+Calculating derivatives of the natural basis vectors with respect to coordinates \((\bar{\xi}, \eta)\):
+\begin{equation*}
+\begin{split}\partial_{\bar{\xi}} \underline{b}_{\bar{\xi}} = 0\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\partial_\eta \underline{b}_{\bar{\xi}} = \cosh\eta \, \underline{E}_0 + \sinh\eta \, \underline{E}_1 = \frac{1}{\bar{\xi}} \underline{b}_\eta\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\partial_\eta \underline{b}_\eta = \bar{\xi} \sinh\eta \, \underline{E}_0 + \bar{\xi} \cosh\eta \, \underline{E}_1 = \bar{\xi} \, \underline{b}_{\bar{\xi}}\end{split}
+\end{equation*}
+
+\subsection{Non\sphinxhyphen{}Zero Christoffel Symbols}
+\label{\detokenize{ch/relativity-special/rindler:non-zero-christoffel-symbols}}
+\sphinxAtStartPar
+From \(\partial_\mu \underline{b}_\nu = \Gamma^\lambda_{\mu\nu} \underline{b}_\lambda\), the non\sphinxhyphen{}zero Christoffel symbols are:
+\begin{equation*}
+\begin{split}\Gamma^\eta_{\eta \bar{\xi}} = \Gamma^\eta_{\bar{\xi} \eta} = \frac{1}{\bar{\xi}}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\Gamma^{\bar{\xi}}_{\eta\eta} = \bar{\xi}\end{split}
+\end{equation*}
+
+\subsection{Curvature (Zero Riemann Tensor)}
+\label{\detokenize{ch/relativity-special/rindler:curvature-zero-riemann-tensor}}
+\sphinxAtStartPar
+Calculating the Riemann curvature tensor components using \(R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}\):
+\begin{equation*}
+\begin{split}R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \partial_{\bar{\xi}}\Gamma^{\bar{\xi}}_{\eta\eta} - \partial_\eta \Gamma^{\bar{\xi}}_{\bar{\xi}\eta} + \Gamma^{\bar{\xi}}_{\bar{\xi}\lambda}\Gamma^\lambda_{\eta\eta} - \Gamma^{\bar{\xi}}_{\eta\lambda}\Gamma^\lambda_{\bar{\xi}\eta}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \frac{\partial}{\partial\bar{\xi}}(\bar{\xi}) - 0 + 0 - \left(\Gamma^{\bar{\xi}}_{\eta\eta}\Gamma^\eta_{\bar{\xi}\eta}\right) = 1 - \left(\bar{\xi} \cdot \frac{1}{\bar{\xi}}\right) = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, all components of the Riemann tensor vanish (\(R^\rho{}_{\sigma\mu\nu} = 0\)), confirming that the Rindler frame describes \sphinxstylestrong{flat spacetime} in non\sphinxhyphen{}inertial coordinates.
+
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Geodesics in Rindler Coordinates}
+\label{\detokenize{ch/relativity-special/rindler:geodesics-in-rindler-coordinates}}
+\sphinxAtStartPar
+The geodesic equations are given by:
+\begin{equation*}
+\begin{split}\ddot{x}^\mu + \Gamma^\mu_{\alpha\beta} \dot{x}^\alpha \dot{x}^\beta = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where dots denote derivatives with respect to an affine parameter (e.g., proper time \(s\)).
+Writing explicit components for \(\bar{\xi}\) and \(\eta\):
+\begin{equation*}
+\begin{split}\begin{cases} \ddot{\bar{\xi}} + \Gamma^{\bar{\xi}}_{\eta\eta} \dot{\eta}^2 = 0 \implies \ddot{\bar{\xi}} + \bar{\xi} \dot{\eta}^2 = 0 \\ \ddot{\eta} + 2 \Gamma^\eta_{\bar{\xi}\eta} \dot{\bar{\xi}}\dot{\eta} = 0 \implies \ddot{\eta} + \frac{2}{\bar{\xi}} \dot{\bar{\xi}}\dot{\eta} = 0 \end{cases}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+
+\section{Classical / Newtonian Limit}
+\label{\detokenize{ch/relativity-special/rindler:classical-newtonian-limit}}
+\sphinxAtStartPar
+For low speeds (\(v \ll c\)) and small spatial extents around the observer line (\(z \ll c^2/g\)):
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Coordinate expansion:}
+\begin{equation*}
+\begin{split}\bar{\xi} = \frac{c^2}{g} + z \implies 1 + \frac{gz}{c^2} \approx 1\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\tau = \frac{c}{g} \eta \implies \eta \ll 1\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Metric limit:}
+\begin{equation*}
+\begin{split}ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2 \approx \left(1 + \frac{2gz}{c^2}\right) c^2 d\tau^2 - dz^2\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Matching with the weak static field limit metric \(g_{00} = 1 + \frac{2\Phi}{c^2}\), we identify the fictitious Newtonian gravitational potential:
+\begin{equation*}
+\begin{split}\Phi(z) = g z\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Geodesic / Acceleration Equation:}
+Substituting \(\bar{\xi} = \frac{c^2}{g} + z\) into the spatial geodesic equation with \(\dot{\eta} \approx \frac{g}{c} \dot{t}\):
+\begin{equation*}
+\begin{split}\ddot{z} + \left(\frac{c^2}{g} + z\right) \left(\frac{g}{c}\right)^2 = 0 \implies \ddot{z} + g + \frac{g^2 z}{c^2} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Taking \(c \to \infty\):
+\begin{equation*}
+\begin{split}\ddot{z} + g = 0 \implies \ddot{z} = -g\end{split}
+\end{equation*}
+\end{enumerate}
+
+\sphinxAtStartPar
+This recovers the expected non\sphinxhyphen{}relativistic inertial force (apparent constant downward gravitational field \(-g\)) experienced in a uniformly accelerating reference frame.
+
+\sphinxstepscope
+
+
 \part{General Relativity}
 
 \sphinxstepscope
@@ -1421,7 +1737,31 @@ Equation of motion of a point charge in a EM field,
 
 \item {} 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Einstein’s equation}}}}}
+\sphinxstylestrong{Equivalence principle} and the free fall as the natural state of motion: the physics in a freely falling laboratory is locally undistinguishable from physics in a gravity\sphinxhyphen{}free inertial frame in special relativity.
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Einstein field equation}}}}}. EFE is derived as the simplest linear relation between Ricci tensor \sphinxhyphen{} a second\sphinxhyphen{}order curvature tensor \sphinxhyphen{} and the energy momentum tensor, satisfying the energy\sphinxhyphen{}momentum conservation relation. {\hyperref[\detokenize{ch/relativity-general/linearized-efe:relativity-general-notes-einstein-equation-linearization}]{\sphinxcrossref{\DUrole{std,std-ref}{Linearization of Einstein equation}}}} is performed to show the finite velocity of propagation: in the limit of weak gravitation, EFE can be recast as a linear wave equation with characteristic speed \(c\).
+
+\item {} 
+\sphinxAtStartPar
+Examples:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Schwarzschild metrics
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+orbit of a planet, and precession of perihelion
+
+\item {} 
+\sphinxAtStartPar
+trajectory of a zero\sphinxhyphen{}mass particle, and bending of rays of light
+
+\end{itemize}
+
+\end{itemize}
 
 \end{itemize}
 
@@ -1988,6 +2328,536 @@ Prescribing harmonic gauge condition (de Donder), \(\partial_{\xi} \overline{h}^
 \sphinxstepscope
 
 
+\section{Local inertial reference frame and equivalence principle}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-inertial-reference-frame-and-equivalence-principle}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Goal.} Starting from \sphinxstyleemphasis{generic} coordinates \(q^\mu\) on spacetime, build coordinates \(x^\alpha\) around an event \(P\) in which the metric is Minkowskian up to second\sphinxhyphen{}order terms. Then show:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+what is arbitrary in this construction (and what is not),
+
+\item {} 
+\sphinxAtStartPar
+that “\(\Gamma'(P)=0\)” and “\(\partial g'(P)=0\)” are the same condition,
+
+\item {} 
+\sphinxAtStartPar
+that the first deviation from flatness is the Riemann tensor, which no coordinate choice can remove.
+
+\end{enumerate}
+
+\sphinxAtStartPar
+This is the mathematical content of the \sphinxstylestrong{equivalence principle}.
+
+\begin{sphinxadmonition}{note}{Notation, and signature}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Conventions.} Signature \(\eta_{\alpha\beta}=\mathrm{diag}(+1,-1,-1,-1)\), so \(c^2\,d\tau^2=d\mathbf X\cdot d\mathbf X\). Nothing below depends on the signature. Riemann tensor:
+
+\sphinxAtStartPar
+\(R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\).
+\end{sphinxadmonition}
+
+
+\subsection{Setting and notation}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:setting-and-notation}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame-introduction}}
+\sphinxAtStartPar
+Events in space time are parametrized with a set of coordinates \(\{ q^\mu \}_{\mu=0:3}\) as \(\mathbf X(q^\mu)\). The event \(P\) has coordinates \(q_P^\mu\). The choice of the coordinates \(\{ q^\mu \}\) induces
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Coordinate natural basis \(\mathbf{b}_\mu=\partial_\mu\mathbf{X}\) and metrics \(g_{\mu\nu}=\mathbf{ b}_\mu \cdot \mathbf{ b}_\nu\), and the reciprocal basis \(\mathbf{ b}^\mu\cdot\mathbf {b}_\nu=\delta^\mu_\nu\).
+
+\item {} 
+\sphinxAtStartPar
+Connection \sphinxhyphen{} Christoffel symbols, \(\Gamma_{\mu \nu}^{\lambda}\), defined as the components in the natural basis of the derivative of the vectors of the natural basis themselves, i.e.
+\begin{equation*}
+\begin{split}\frac{\partial^2\mathbf{X}}{\partial q^{\mu} q^{\nu}} = \partial_{q^{\nu}} \mathbf{b}_{\mu} = \partial_{q^{\mu}} \mathbf{b}_{\nu} = \Gamma_{\mu \nu}^{\lambda} \mathbf{b}_{\lambda} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Exploiting the orthogonality of the vectors of a basis and the vectors of its reciprocal basis,
+\begin{equation*}
+\begin{split}
+   \Gamma^\lambda_{\mu\nu}=\mathbf b^\lambda\cdot\partial_\mu\mathbf b_\nu,\qquad
+   \Gamma_{\lambda,\mu\nu}:=g_{\lambda\sigma}\Gamma^\sigma{}_{\mu\nu}=\mathbf b_\lambda\cdot\partial_\mu\mathbf b_\nu .
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+It is symmetric in \(\mu\nu\) because \(\partial_\mu\mathbf b_\nu=\partial_\nu\mathbf b_\mu\).
+
+\end{itemize}
+
+
+
+
+\subsection{Local vector basis}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-vector-basis}}
+\sphinxAtStartPar
+Definition of a local basis \(\mathbf{e}_{\mu}\), s.t. \(\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}\).
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+Transformation of coordinates
+
+\sphinxAtStartPar
+…
+
+
+\subsection{Local set of coordinates}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-set-of-coordinates}}
+\sphinxAtStartPar
+Let the vectors \(\mathbf{e}_{\mu}\) of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates \(\{ x^\mu \}_{\mu=0:3}\), identifying the event \(P\) with \(x^{\mu}_P = 0\)
+\begin{equation*}
+\begin{split}\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+A polynomial expansion of the coordinates \(q^{\mu}\) as a function of the local coordinates \(x^{\alpha}\) around \(P\) (\(x^\alpha=0\) at \(P\)) reads
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}
+\begin{split}
+q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+where \(A\) and \(B\) are totally symmetric in their lower indices. The inverse of \(\tilde e\) is \(e^\alpha{}_\mu\):
+\begin{equation*}
+\begin{split}
+e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
+\end{split}
+\end{equation*}
+
+\subsection{First order: the tetrad}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:first-order-the-tetrad}}
+\sphinxAtStartPar
+The vectors \(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\) form a \sphinxstylestrong{local basis} (tetrad) at \(P\). Requiring \(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\) gives
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-tetrad}
+\begin{split}
+g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta=\eta_{\alpha\beta}\quad\Longleftrightarrow\quad
+g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+and the reciprocal basis is \(\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu\) with \(\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta\).
+
+\begin{sphinxadmonition}{note}{How many free parameters?}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Counting.} \(\tilde e^\mu{}_\alpha\) has \(16\) components, and the symmetric equation \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-tetrad} gives \(10\) conditions. So \(16-10=\mathbf{6}\) parameters remain: the Lorentz group \(SO(1,3)\) (3 boosts + 3 rotations).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Counting along an observer’s worldline.} Let the observer have worldline \(\mathbf X_P(\tau)\) and 4\sphinxhyphen{}velocity
+\begin{equation*}
+\begin{split}
+   \mathbf u_P=\frac{d\mathbf X_P}{d\tau}=\frac{dq^\mu}{d\tau}\mathbf b_\mu,\qquad \mathbf u_P\cdot\mathbf u_P=c^2 .
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Choose the time leg
+\begin{equation*}
+\begin{split}
+   \mathbf e_0=\frac{\mathbf u_P}{c},\qquad \mathbf e_0\cdot\mathbf e_0=1 .
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Then \(\mathbf e_0\) is \sphinxstylestrong{fully fixed by the worldline}. The other three vectors must satisfy \(\mathbf e_k\cdot\mathbf e_0=0\) and \(\mathbf e_k\cdot\mathbf e_l=-\delta_{kl}\), i.e. they form an orthonormal triad of the spacelike 3\sphinxhyphen{}plane orthogonal to \(\mathbf u_P\) (Gram–Schmidt always works there). The remaining freedom is the choice of this triad, and counting it as
+\begin{equation*}
+\begin{split}
+   \underbrace{3}_{\text{choice of }\mathbf u_P\ (\text{boost})}+\underbrace{2}_{\mathbf e_1}+\underbrace{1}_{\mathbf e_2}+\underbrace{0}_{\mathbf e_3}=6 .
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Choosing \(\mathbf u_P\) ties the frame to the observer. The \(3\) remaining parameters (\(SO(3)\)) are the orientation of the spatial axes. Different \(\mathbf u_P\) give different, equally valid, local inertial frames related by boosts.
+
+\end{itemize}
+\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Result of the first order}
+
+\sphinxAtStartPar
+\(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\). The residual freedom is exactly the Lorentz group: \sphinxstylestrong{6 parameters}.
+\end{sphinxadmonition}
+\subsubsection*{Christoffel symbols and coordinate transformations}
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}
+\begin{split} \dots \end{split}
+\end{equation}
+
+\subsection{Second order, \protect\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\protect\), and \protect\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\protect\)}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0}}
+\sphinxAtStartPar
+The requirement that \(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\) fixes the value of the coefficients \(A^{\lambda}_{\alpha \beta}\) in the expansion \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}.
+From the transformation law \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}, using \(\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha\) and \(\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}\):
+\begin{equation*}
+\begin{split}
+\Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda\Big[\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+A^\lambda{}_{\alpha\beta}\Big].
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Setting this to zero:
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-A}
+\begin{split}
+\boxed{\,A^\lambda{}_{\alpha\beta}=-\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\,}
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+The right side is symmetric in \(\alpha\beta\), as required. The solution is \sphinxstylestrong{unique}: no freedom is left at second order. So the quadratic approximation of the coordinate map is
+\begin{equation*}
+\begin{split}
+q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
+\end{split}
+\end{equation*}\subsubsection*{The same \protect\(A\protect\) removes \protect\(\partial g'\protect\)}
+
+\sphinxAtStartPar
+Expand \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}g\sphinxhyphen{}transf}} to first order in \(x\). The ingredients are
+\begin{equation*}
+\begin{split}
+\partial_\alpha q^\mu=\tilde e^\mu{}_\alpha+A^\mu{}_{\alpha\sigma}x^\sigma+O(x^2),\qquad
+g_{\mu\nu}(q(x))=g_{\mu\nu}(P)+\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma x^\sigma+O(x^2).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-tetrad} for the zeroth\sphinxhyphen{}order term:
+\begin{equation*}
+\begin{split}
+g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
++g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Insert \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-A} and use \(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\) (and the symmetry in the last two indices):
+\begin{equation*}
+\begin{split}
+g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\Big[\partial_\rho g_{\mu\nu}-\Gamma_{\mu,\rho\nu}-\Gamma_{\nu,\rho\mu}\Big]+O(x^2).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The bracket vanishes identically by metric compatibility \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}compat}}. Therefore
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-second-order}
+\begin{split}
+\boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+O(x^2)\,}\qquad\Longleftrightarrow\qquad \Gamma'(P)=0\ \Longleftrightarrow\ \partial_\gamma g'_{\alpha\beta}(P)=0 .
+\end{split}
+\end{equation}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The two statements “\(\Gamma'(P)=0\)” and “\(\partial g'(P)=0\)” are equivalent \sphinxstyleemphasis{because} of \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}compat}}. This is the precise sense in which gravity is “transformed away” at a point: \(g_{\mu\nu}\) and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.
+\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{The term \protect\(A\,A\,x^\sigma x^\xi\protect\) is not trustworthy}
+
+\sphinxAtStartPar
+The product of the two \(A\) terms is \(O(x^2)\). At that order one also needs \(B\) (from \(\partial_\alpha q^\mu\)) and \(\partial\partial g\) (from the expansion of \(g_{\mu\nu}(q(x))\)). A consistent expansion must therefore be organised by order, which is done in the next section.
+\end{sphinxadmonition}
+
+
+\bigskip\hrule\bigskip
+
+
+
+\subsection{Third order in \protect\(q^{\mu}(x^\alpha)\protect\)}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:third-order-in-q-mu-x-alpha}}
+\sphinxAtStartPar
+The cubic coefficients \(B^\lambda{}_{\alpha\beta\gamma}\) are totally symmetric. Differentiate \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf} once more and evaluate at \(P\), where \(\Gamma'(P)=0\):
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-T}
+\begin{split}
+T^\gamma{}_{\alpha\beta\delta}:=\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda B^\lambda{}_{\alpha\beta\delta}+C^\gamma{}_{\alpha\beta\delta},
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+where \(C\) is built only from \(\tilde e\), \(A\), \(\Gamma(P)\) and \(\partial\Gamma(P)\) (it does not depend on \(B\)). The derivative of the prefactor \(\partial x^\gamma/\partial q^\lambda\) does not contribute, because it multiplies the bracket of \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}, which vanishes at \(P\). The only place \(B\) enters is through \(\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}\). \(T\) is symmetric in \(\alpha\beta\).
+
+
+\subsubsection{3.1 Decomposition of \protect\(T\protect\)}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:decomposition-of-t}}
+\sphinxAtStartPar
+Define the totally symmetric part
+\begin{equation*}
+\begin{split}
+S^\gamma{}_{\alpha\beta\delta}=\tfrac13\big(T^\gamma{}_{\alpha\beta\delta}+T^\gamma{}_{\beta\delta\alpha}+T^\gamma{}_{\delta\alpha\beta}\big).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The Riemann tensor at \(P\) (where the \(\Gamma\Gamma\) terms vanish) is
+\begin{equation*}
+\begin{split}
+R'^\gamma{}_{\alpha\beta\delta}=T^\gamma{}_{\delta\alpha\beta}-T^\gamma{}_{\beta\alpha\delta}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Symmetrising in \((\alpha\beta)\) and using the symmetry of \(T\) in its first two lower indices:
+\begin{equation*}
+\begin{split}
+R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}
+=\big(T^\gamma{}_{\alpha\delta\beta}+T^\gamma{}_{\beta\delta\alpha}\big)-2\,T^\gamma{}_{\alpha\beta\delta}
+=3S^\gamma{}_{\alpha\beta\delta}-3\,T^\gamma{}_{\alpha\beta\delta}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Hence, in any coordinate system with \(\Gamma'(P)=0\),
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-decomp}
+\begin{split}
+\boxed{\,\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=S^\gamma{}_{\alpha\beta\delta}-\tfrac13\big(R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}\big)\,}
+\end{split}
+\end{equation}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The \sphinxstylestrong{totally symmetric part \(S\)} is pure gauge: by \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-T} it can be shifted at will through \(B\).
+
+\item {} 
+\sphinxAtStartPar
+The \sphinxstylestrong{rest} is fixed by the Riemann tensor, which transforms as a tensor and therefore cannot be changed by any coordinate choice:
+\begin{equation*}
+\begin{split}
+   R'^\gamma{}_{\alpha\beta\delta}(P)=e^\gamma{}_\lambda\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\tilde e^\kappa{}_\delta\;R^\lambda{}_{\mu\nu\kappa}(P).
+   \end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsubsection{Riemann normal coordinates}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:riemann-normal-coordinates}}
+\sphinxAtStartPar
+Choose
+\begin{equation*}
+\begin{split}
+B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\beta\delta)}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with a total symmetrisation of \(C\). Then \(S=0\). The freedom in \(B\) is \sphinxstylestrong{entirely used up}. This defines \sphinxstylestrong{Riemann normal coordinates}, in which
+\begin{equation*}
+\begin{split}
+\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=-\tfrac13\big(R^\gamma{}_{\alpha\beta\delta}+R^\gamma{}_{\beta\alpha\delta}\big).
+\end{split}
+\end{equation*}
+
+\subsubsection{The metric to second order}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:the-metric-to-second-order}}
+\sphinxAtStartPar
+Differentiate the metric\sphinxhyphen{}compatibility relation \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}compat}} (written in the primed coordinates) once more and evaluate at \(P\), where \(\Gamma'=0\), so that derivatives of \(g'\) drop out:
+\begin{equation*}
+\begin{split}
+\partial_\delta\partial_\gamma g'_{\alpha\beta}(P)=\eta_{\alpha\lambda}T^\lambda{}_{\gamma\beta\delta}+\eta_{\beta\lambda}T^\lambda{}_{\gamma\alpha\delta}
+=T_{\alpha\gamma\beta\delta}+T_{\beta\gamma\alpha\delta}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Insert \(T_{\alpha\beta\gamma\delta}=-\tfrac13(R_{\alpha\beta\gamma\delta}+R_{\alpha\gamma\beta\delta})\):
+\begin{equation*}
+\begin{split}
+\partial_\gamma\partial_\delta g'_{\alpha\beta}=-\tfrac13\Big[R_{\alpha\gamma\beta\delta}+R_{\alpha\beta\gamma\delta}+R_{\beta\gamma\alpha\delta}+R_{\beta\alpha\gamma\delta}\Big].
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The terms \(R_{\alpha\beta\gamma\delta}+R_{\beta\alpha\gamma\delta}\) cancel by antisymmetry in the first pair, and \(R_{\beta\gamma\alpha\delta}=R_{\alpha\delta\beta\gamma}\) by pair symmetry. So
+\begin{equation*}
+\begin{split}
+\partial_\gamma\partial_\delta g'_{\alpha\beta}(P)=-\tfrac13\big(R_{\alpha\gamma\beta\delta}+R_{\alpha\delta\beta\gamma}\big),
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the Taylor expansion of the metric is
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-rnc}
+\begin{split}
+\boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}-\tfrac13\,R_{\alpha\gamma\beta\delta}(P)\,x^\gamma x^\delta+O(x^3)\,}
+\end{split}
+\end{equation}
+
+\subsubsection{Counting check}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:counting-check}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Second derivatives \(\partial_\gamma\partial_\delta g'_{\alpha\beta}\): \(10\times10=100\) numbers.
+
+\item {} 
+\sphinxAtStartPar
+Cubic coefficients \(B^\lambda{}_{\alpha\beta\delta}\): \(4\times20=80\) numbers, all used to set \(S=0\).
+
+\item {} 
+\sphinxAtStartPar
+Left over: \(100-80=\mathbf{20}\), exactly the number of independent components of the Riemann tensor in four dimensions.
+
+\end{itemize}
+
+
+\subsubsection{Summary: what each order does}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:summary-what-each-order-does}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Order of \(q(x)\)
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Coefficient
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+What it fixes
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Freedom left
+\\
+\hline
+\sphinxAtStartPar
+1
+&
+\sphinxAtStartPar
+\(\tilde e^\mu{}_\alpha\)
+&
+\sphinxAtStartPar
+\(g'(P)=\eta\)
+&
+\sphinxAtStartPar
+6 (Lorentz group)
+\\
+\hline
+\sphinxAtStartPar
+2
+&
+\sphinxAtStartPar
+\(A^\mu{}_{\alpha\beta}=-\Gamma^\mu{}_{\nu\sigma}\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\)
+&
+\sphinxAtStartPar
+\(\Gamma'(P)=0\iff\partial g'(P)=0\)
+&
+\sphinxAtStartPar
+none (unique)
+\\
+\hline
+\sphinxAtStartPar
+3
+&
+\sphinxAtStartPar
+\(B^\mu{}_{\alpha\beta\gamma}\)
+&
+\sphinxAtStartPar
+totally symmetric part \(S\) of \(\partial\Gamma'(P)\)
+&
+\sphinxAtStartPar
+all of \(S\) (80 numbers). The remaining 20 are \(R\) and are \sphinxstylestrong{not removable}.
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+\sphinxAtStartPar
+Each order of the coordinate map controls the same order of the metric: the first removes \(g-\eta\), the second removes \(\partial g\), and the third can only rearrange \(\partial\partial g\), never eliminate it.
+
+
+\subsection{The equivalence principle}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:the-equivalence-principle}}
+\sphinxAtStartPar
+In the coordinates \(x^\alpha\) built above:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Free fall is inertial motion at \(P\).} The geodesic equation
+\begin{equation*}
+\begin{split}
+   \frac{d^2x^\alpha}{d\tau^2}=-\Gamma'^\alpha{}_{\beta\gamma}\frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+has vanishing right\sphinxhyphen{}hand side at \(P\): free particles move in straight lines, with corrections that grow linearly in \(x\) through \(\partial\Gamma'\sim R\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Non\sphinxhyphen{}gravitational physics reduces to special relativity at \(P\)} (\sphinxstyleemphasis{minimal coupling}). Replacing \(\eta\to g\) and \(\partial\to\nabla\), for example
+\begin{equation*}
+\begin{split}
+   \nabla_\mu T^{\mu\nu}=\partial_\mu T^{\mu\nu}+\Gamma^\mu{}_{\mu\lambda}T^{\lambda\nu}+\Gamma^\nu{}_{\mu\lambda}T^{\mu\lambda}\ \xrightarrow{\ P\ }\ \partial_\mu T^{\mu\nu},
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+so all local laws take their special\sphinxhyphen{}relativistic form, with relative corrections of order \(|R|\,L^2\) in a region of size \(L\).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{What remains is tidal.} The residual gravitational information is the Riemann tensor, as seen in \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-rnc} and in the \sphinxstylestrong{geodesic deviation} of two neighbouring free\sphinxhyphen{}falling particles with separation \(\xi^\mu\) and 4\sphinxhyphen{}velocity \(u^\mu\):
+\begin{equation*}
+\begin{split}
+   \frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
+   \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Hence “local” means: the region is small enough that \(|R|\,L^2\) is below the precision of the measurement. The equivalence principle is the statement that the metric and its first derivatives can be made to coincide with those of Minkowski at \(P\), but the second derivatives cannot.
+
+\end{enumerate}
+
+
+\bigskip\hrule\bigskip
+
+
+
+\subsection{Example: uniformly accelerated frame in free space \sphinxhyphen{} Rindler coordinates in special relativity}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:example-uniformly-accelerated-frame-in-free-space-rindler-coordinates-in-special-relativity}}
+\sphinxAtStartPar
+See {\hyperref[\detokenize{ch/relativity-special/rindler:relativity-special-rindler}]{\sphinxcrossref{\DUrole{std,std-ref}{“Constant” acceleration observer and Rindler coordinates}}}}.
+
+\sphinxAtStartPar
+In Rindler coordinates \((T=ct,\xi)\) with \(a\) the proper acceleration of the observer at \(\xi=0\),
+\begin{equation*}
+\begin{split}
+ds^2=\Big(1+\frac{a\xi}{c^2}\Big)^2dT^2-d\xi^2-dy^2-dz^2 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The Riemann tensor is identically zero (flat spacetime), but the connection is not:
+\begin{equation*}
+\begin{split}
+\Gamma^\xi{}_{TT}=\frac{a}{c^2}\Big(1+\frac{a\xi}{c^2}\Big)\ \xrightarrow{\ \xi=0\ }\ \frac{a}{c^2}.
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Take \(\tilde e=\mathbb 1\) at \(P\) (the observer’s own frame). Then by \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-A},
+\begin{equation*}
+\begin{split}
+A^\xi{}_{TT}=-\frac{a}{c^2}
+\qquad\Longrightarrow\qquad
+\xi=x^\xi-\frac{a}{2c^2}\,(x^T)^2+O(x^3).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This is exactly the transformation to the freely falling (inertial) frame: a free particle at rest in \(x\) has \(\xi=\text{const}-\tfrac{a}{2c^2}T^2\), i.e. it “falls” with acceleration \(-a\) as seen by the accelerated observer. This is the equivalence between a uniform gravitational field and an accelerated frame: both are removed at \(P\) by \(A\), and in flat spacetime nothing remains at third order since \(R=0\).
+
+\sphinxAtStartPar
+In a genuine gravitational field (e.g. a static observer in Schwarzschild) the same quadratic map removes the local acceleration, but the third\sphinxhyphen{}order term leaves the tidal tensor \(R\neq0\), which distinguishes the two situations.
+
+
+\bigskip\hrule\bigskip
+
+
+
+\subsection{Extension along a worldline (Fermi normal coordinates)}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:extension-along-a-worldline-fermi-normal-coordinates}}
+\sphinxAtStartPar
+If the frame is carried along the whole worldline with the tetrad transported (parallel transport for a geodesic, Fermi–Walker transport otherwise), the same construction gives coordinates in which, for a geodesic observer with a non\sphinxhyphen{}rotating triad,
+\begin{equation*}
+\begin{split}
+g_{00}=1-R_{0i0j}\,x^ix^j+\dots,\qquad g_{0i}=-\tfrac23R_{0jik}\,x^jx^k+\dots,\qquad g_{ij}=-\delta_{ij}-\tfrac13R_{ikjl}\,x^kx^l+\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For an accelerated or rotating observer the leading terms also contain the acceleration \(a_i\) and the angular velocity \(\boldsymbol\omega\):
+\begin{equation*}
+\begin{split}
+g_{00}=(1+a_ix^i)^2-(\boldsymbol\omega\times\mathbf x)^2+\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In flat spacetime with \(a=\text{const}\) and \(\boldsymbol\omega=0\) this is exactly the Rindler metric of Section 6.
+
+\sphinxstepscope
+
+
 \section{Examples}
 \label{\detokenize{ch/relativity-general/examples:examples}}\label{\detokenize{ch/relativity-general/examples:relativity-general-notes-examples}}\label{\detokenize{ch/relativity-general/examples::doc}}
 \sphinxAtStartPar
@@ -2455,6 +3325,20 @@ so that
 \subsection{Deflection of a ray of light, and Eddington measurements (1919)}
 \label{\detokenize{ch/relativity-general/rays-of-light-deflection:deflection-of-a-ray-of-light-and-eddington-measurements-1919}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection:relativity-general-notes-examples-deflection-of-ray-of-light}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection::doc}}
 \sphinxAtStartPar
+Newton’s theory of universal gravitation is fundamentally incompatible with special relativity: in Newtonian mechanics, gravitational interactions act instantaneously across space, violating the relativistic principle that no physical signal or interaction can propagate faster than the speed of light \(c\).
+
+\sphinxAtStartPar
+In this section, the equation of the trajectory of zero\sphinxhyphen{}mass object in Schwarzschild metrics is derived here, using perturbation method for weak gravitational fields. The equations of general relativity imply that a ray of light is deflected by a body with mass \(M\) by an angle
+\begin{equation*}
+\begin{split}\delta \simeq 4 \frac{GM}{R c^2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(R\) the minimum distance of the ray from the center of the massive body. This results is compared is twice the deflection predicted by the laws of classical mechanics using Newton gravitation, \(\delta^{\rm Newton} \simeq 2 \frac{GM}{R c^2}\). \sphinxstylestrong{Eddington experiment} during the total solar eclipse of the 1919 measured the amount of deflection of light rays passing close to the sun, confirming that general gravitation has better predictions and matches the experimental measurements, providing the first experimental tests of Einstein theory of general relativity as a new and better theory of gravitation.
+
+
+\subsubsection{Trajectory of zero\sphinxhyphen{}mass objects in Schwarzschild metrics}
+\label{\detokenize{ch/relativity-general/rays-of-light-deflection:trajectory-of-zero-mass-objects-in-schwarzschild-metrics}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection:relativity-general-notes-examples-deflection-of-ray-of-light-trajectory-schwarzschild}}
+\sphinxAtStartPar
 Light particles travel at the speed of light \(c\). Thus the elementary increment of proper interval (or proper time \(\tau\)) is zero,
 \begin{equation*}
 \begin{split}0 = ds^2 = g_{ij} \frac{d q^i}{d \lambda} \frac{d q^j}{d \lambda} \ .\end{split}
@@ -2570,21 +3454,21 @@ thus \(D = - \frac{1}{4} \frac{r_s}{R^2}\).
 \sphinxAtStartPar
 Putting together the zero\sphinxhyphen{} and first\sphinxhyphen{}order contributions, the approximate solution is
 \begin{equation*}
-\begin{split}u(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{2} \frac{GM}{c^2 R^2} \left( 1 - \frac{1}{3} \cos(2 \phi) \right) \ .\end{split}
+\begin{split}u(\phi) = A \cos(\phi) + B \sin(\phi) + \frac{3}{2} \frac{GM}{R^2 c^2 } \left( 1 - \frac{1}{3} \cos(2 \phi) \right) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Assuming symmetric trajectory w.r.t. \(\theta = 0\), then \(B = 0\). Setting the other integration constant by the condition \(u(0) = \frac{1}{R}\), then
 \begin{equation*}
 \begin{split}
-\frac{1}{R} = A + \frac{GM}{c^2 R^2}
+\frac{1}{R} = A + \frac{GM}{R^2 c^2}
 \quad \rightarrow \quad
-A = \frac{1}{R} \left( 1 - \frac{GM}{c^2 R} \right)
+A = \frac{1}{R} \left( 1 - \frac{GM}{ R c^2} \right)
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
 so that
 \begin{equation*}
-\begin{split}r(\phi) = \frac{R}{\left( 1 - \frac{GM}{c^2 R} \right) \cos(\phi) + \frac{3}{2} \frac{GM}{c^2 R} \left( 1 - \frac{1}{3} \cos(2 \phi) \right)} \ .\end{split}
+\begin{split}r(\phi) = \frac{R}{\left( 1 - \frac{GM}{ R c^2} \right) \cos(\phi) + \frac{3}{2} \frac{GM}{R c^2 } \left( 1 - \frac{1}{3} \cos(2 \phi) \right)} \ .\end{split}
 \end{equation*}\subsubsection*{Extremes of the trajectory}
 
 \sphinxAtStartPar
@@ -2607,9 +3491,55 @@ An approximation of the denominator for “small” \(\delta\) thus becomes
 \end{equation*}
 \sphinxAtStartPar
 and setting it equal to zero, neglecting the second\sphinxhyphen{}degree contribution
+\begin{equation}\label{equation:ch/relativity-general/rays-of-light-deflection:eq:rays-of-light-deflection:relativity}
+\begin{split}\delta = \frac{4 \gamma}{1 - \gamma} \sim 4 \gamma = 4 \frac{GM}{R c^2 } \ .\end{split}
+\end{equation}
+
+
+
+\subsubsection{Comparison with the laws of classical mechanics \sphinxhyphen{} Newton gravitation}
+\label{\detokenize{ch/relativity-general/rays-of-light-deflection:comparison-with-the-laws-of-classical-mechanics-newton-gravitation}}\label{\detokenize{ch/relativity-general/rays-of-light-deflection:relativity-general-notes-examples-deflection-of-ray-of-light-newton}}
+\sphinxAtStartPar
+\sphinxstylestrong{See}: \sphinxhref{https://basics2022.github.io/bbooks-physics-hs/ch/mechanics/dynamics-central.html}{Physics \sphinxhyphen{} HS: Classical Mechanics: Dynamics: Central Motions}
+
+\sphinxAtStartPar
+With the laws of classical mechanics, the equation of the trajectory of central motions with force \(\vec{F} = c \frac{\vec{r}}{\left| \vec{r} \right|^3}\),
 \begin{equation*}
-\begin{split}\delta = \frac{4 \gamma}{1 - \gamma} \sim 4 \gamma = 4 \frac{GM}{c^2 R} \ .\end{split}
+\begin{split}r(\phi) = \frac{\frac{L^2}{m|c|}}{-\text{sign}(c) + \sqrt{1 + 2 \frac{E L^2}{m|c|^2}} \cos(\phi-\phi_0)} \ ,\end{split}
 \end{equation*}
+\sphinxAtStartPar
+being \(m\) the mass of the light body, \(L\) the constant angular momentum, and \(E\) the constant energy of the light body, and \(\phi_0\) a reference angle to describe trajectories with different orientation: without loss of generallity, let’s set it equal to zero, \(\phi_0 = 0\). For gravitation, \(c = G M m\), so that \(\text{sign}(c) = 1\).
+
+\sphinxAtStartPar
+Open trajectories have \(E \ge 0\), with parabolic orbits for \(E = 0\), and hyperbolic orbits for \(E > 0\). The minimum distance between the bodies occurs when the denominator is maximum, and thus for \(\cos( \phi ) = 1\), i.e. \(\phi = 0\).
+\begin{equation*}
+\begin{split}R = \frac{\frac{L^2}{G M m^2}}{-1 + \sqrt{1 + 2 \frac{E}{m} \frac{L^2}{G^2 M^2 m^2}} } \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Hyperbolic orbits havei asymptotes corresponding to limit angles \(\phi_\infty\) and \(-\phi_{\infty}\), where the denominator becomes zero. The total deflection of the trajectory is the angle \(\delta\) (better, \(\pi - \delta\)) between the asymptotes. The limit angles satisfy the condition
+\begin{equation*}
+\begin{split}\cos \phi_{\infty} = \frac{1}{\sqrt{1 + 2 \frac{E}{m} \frac{L^2}{G^2 M^2 m^2}}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The total delection is \(\delta = \pi - 2 \phi_\infty\). For small deviations of the trajectory, the angles at infinity only slightly differs from \(\pm \frac{\pi}{2}\). Writing \(\phi_{\infty} = \frac{\pi}{2} - \frac{\delta}{2}\), then \(\cos(\phi_{\infty}) = \sin\left( \frac{\delta}{2} \right)\). As \(\delta \to 0\), then \(\cos \phi_\infty \to 0\). Since
+\begin{equation*}
+\begin{split}\cos \phi_\infty = \frac{1}{\sqrt{1 + \varepsilon}} = \sin\left( \frac{\delta}{2} \right) \sim \frac{\delta}{2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+it follows that the parameter \(\varepsilon = 2 \frac{E}{m} \left( \frac{L}{GMm} \right)^2\) is “large”, and the approximation of \(\cos \phi_\infty\) holds
+\begin{equation*}
+\begin{split}\cos \phi_\infty = \frac{1}{\sqrt{1 + \varepsilon}} \sim \frac{1}{\sqrt{\varepsilon}} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If this approximation holds, the minimum distance of the trajectory from the massive body approximately is
+\begin{equation*}
+\begin{split}R  \sim \frac{G M}{2} \frac{m}{E} \sqrt{\varepsilon} \quad \rightarrow \quad  \frac{1}{\sqrt{\varepsilon}} \sim \frac{GMm}{2ER} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Then, the total delection for a body travelling close to the speed of light \sphinxhyphen{} assuming that laws of classical mechanics still hold, and that kinetic energy prevails over potential energy \sphinxhyphen{} \(E \sim \frac{1}{2} m c^2\),
+\begin{equation}\label{equation:ch/relativity-general/rays-of-light-deflection:eq:rays-of-light-deflection:classical}
+\begin{split}\delta \sim \frac{GMm}{ER} \sim \frac{2GM}{R c^2} \ .\end{split}
+\end{equation}
 \sphinxstepscope
 
 
@@ -2628,7 +3558,7 @@ and setting it equal to zero, neglecting the second\sphinxhyphen{}degree contrib
 
 \section{Liouville theorem}
 \label{\detokenize{ch/statistical-mechanics/liouville-boltzmann:liouville-theorem}}\label{\detokenize{ch/statistical-mechanics/liouville-boltzmann:statistical-mechanics-liouville}}\label{ch/statistical-mechanics/liouville-boltzmann:theorem-0}
-\begin{sphinxadmonition}{note}{Theorem 8.1.1 (Liouville’s theorem)}
+\begin{sphinxadmonition}{note}{Theorem 9.1.1 (Liouville’s theorem)}
 
 
 
@@ -2966,7 +3896,7 @@ and the average occupation number of one of the \(g_k\) sublevels in the \(k\) l
 \begin{split}n_k := \frac{N_k}{G_k} = \frac{1}{e^{\alpha + \beta E_k} - 1}\end{split}
 \end{equation*}\subsubsection*{\sphinxstylestrong{Meaning of \protect\(\alpha\protect\), \protect\(\beta\protect\)}}
 \label{ch/statistical-mechanics/notes:example-0}
-\begin{sphinxadmonition}{note}{Example 9.5.1 (Black\sphinxhyphen{}body radiation: Planck, Wien, and Stefan\sphinxhyphen{}Boltzmann laws)}
+\begin{sphinxadmonition}{note}{Example 10.5.1 (Black\sphinxhyphen{}body radiation: Planck, Wien, and Stefan\sphinxhyphen{}Boltzmann laws)}
 
 
 
@@ -3124,7 +4054,7 @@ The value of the integral is \(\frac{\pi^4}{15}\) and thus
 \begin{split}\frac{P}{A} = \sigma T^4 \qquad , \qquad \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} \ .\end{split}
 \end{equation*}\end{sphinxadmonition}
 \label{ch/statistical-mechanics/notes:example-1}
-\begin{sphinxadmonition}{note}{Example 9.5.2 (Energy density and radiance)}
+\begin{sphinxadmonition}{note}{Example 10.5.2 (Energy density and radiance)}
 
 
 
@@ -3411,7 +4341,7 @@ each transition is splitted in \sphinxstylestrong{two sub\sphinxhyphen{}steps}: 
 \sphinxAtStartPar
 \sphinxstylestrong{Example: Boltmann distribution with uniform proposal.} Let a system have Boltzmann stationary distribution, \(p(s) \propto \exp\left( - \beta E(s) \right)\), and uniform proposal conditional probability \(g(s'|s) = \frac{1}{N}\), with \(N\) the number of accessible states from the state \(s\).
 \label{ch/statistical-mechanics/ising-notes:example-0}
-\begin{sphinxadmonition}{note}{Example 11.1.1 (Ising model on a 2D lattice with 1 flip per update)}
+\begin{sphinxadmonition}{note}{Example 12.1.1 (Ising model on a 2D lattice with 1 flip per update)}
 
 
 
@@ -3419,7 +4349,7 @@ each transition is splitted in \sphinxstylestrong{two sub\sphinxhyphen{}steps}: 
 As an example, for an Ising model on a 2D lattice with dimension \(m \times n\) with proposal update with \(1\) flip \(N = mn\).
 \end{sphinxadmonition}
 \label{ch/statistical-mechanics/ising-notes:example-1}
-\begin{sphinxadmonition}{note}{Example 11.1.2 (Ising model on a 2D lattice with \protect\(k\protect\) flips per update)}
+\begin{sphinxadmonition}{note}{Example 12.1.2 (Ising model on a 2D lattice with \protect\(k\protect\) flips per update)}
 
 
 
@@ -3775,45 +4705,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : \PYGZhy{}16.0
-N. of spin up: 515
-Magnetization: 6
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{n+ne}{KeyboardInterrupt}\PYG{g+gWhitespace}{                         }Traceback (most recent call last)
-\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{18}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{15} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Magnetization: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{17} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Run Metropolis\PYGZhy{}Hastings algorithm}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{18} \PYG{n}{Es}\PYG{p}{,} \PYG{n}{Ms}\PYG{p}{,} \PYG{n}{states} \PYG{o}{=} \PYG{n}{isi}\PYG{o}{.}\PYG{n}{metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{p}{(}\PYG{n}{n\PYGZus{}steps}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{1e6}\PYG{p}{)}\PYG{p}{,} \PYG{n}{output\PYGZus{}states}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
-
-\PYG{n+nn}{Cell In[2], line 79,} in \PYG{n+ni}{IsingLattice.metropolis\PYGZus{}hastings\PYGZus{}run}\PYG{n+nt}{(self, n\PYGZus{}steps, output\PYGZus{}states)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{77} \PYG{c+c1}{\PYGZsh{}\PYGZgt{} Update output arrays}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{78} \PYG{n}{Es} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n}{E} \PYG{p}{]}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{79} \PYG{n}{Ms} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{80} \PYG{k}{if} \PYG{n}{output\PYGZus{}states}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{81}     \PYG{n}{states} \PYG{o}{+}\PYG{o}{=} \PYG{p}{[} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)} \PYG{p}{]}   \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{} ! Memory. Add some sampling period, }
-
-\PYG{n+nn}{Cell In[2], line 56,} in \PYG{n+ni}{IsingLattice.compute\PYGZus{}total\PYGZus{}magnetization}\PYG{n+nt}{(self)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{54} \PYG{k}{def} \PYG{n+nf}{compute\PYGZus{}total\PYGZus{}magnetization}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{p}{)}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{55}\PYG{+w}{     }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}  \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{56}     \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{isi}\PYG{o}{.}\PYG{n}{state}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZlt{}\PYGZus{}\PYGZus{}array\PYGZus{}function\PYGZus{}\PYGZus{} internals\PYGZgt{}:200,} in \PYG{n+ni}{sum}\PYG{n+nt}{(*args, **kwargs)}
-
-\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:2324,} in \PYG{n+ni}{sum}\PYG{n+nt}{(a, axis, dtype, out, keepdims, initial, where)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2321}         \PYG{k}{return} \PYG{n}{out}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2322}     \PYG{k}{return} \PYG{n}{res}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2324} \PYG{k}{return} \PYG{n}{\PYGZus{}wrapreduction}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{add}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{sum}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{n}{keepdims}\PYG{o}{=}\PYG{n}{keepdims}\PYG{p}{,}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{2325}                       \PYG{n}{initial}\PYG{o}{=}\PYG{n}{initial}\PYG{p}{,} \PYG{n}{where}\PYG{o}{=}\PYG{n}{where}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/.local/lib/python3.8/site\PYGZhy{}packages/numpy/core/fromnumeric.py:86,} in \PYG{n+ni}{\PYGZus{}wrapreduction}\PYG{n+nt}{(obj, ufunc, method, axis, dtype, out, **kwargs)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{83}         \PYG{k}{else}\PYG{p}{:}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{84}             \PYG{k}{return} \PYG{n}{reduction}\PYG{p}{(}\PYG{n}{axis}\PYG{o}{=}\PYG{n}{axis}\PYG{p}{,} \PYG{n}{out}\PYG{o}{=}\PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{passkwargs}\PYG{p}{)}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{86} \PYG{k}{return} \PYG{n}{ufunc}\PYG{o}{.}\PYG{n}{reduce}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{n}{axis}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{,} \PYG{n}{out}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{passkwargs}\PYG{p}{)}
-
-\PYG{n+ne}{KeyboardInterrupt}: 
+Energy       : \PYGZhy{}24.0
+N. of spin up: 516
+Magnetization: 8
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -3871,9 +4765,9 @@ Magnetization: 6
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{9b567f62644b318932bc106cb76ce77100982291e862b9ad2b8520a9c2d09a9b}.png}
+\noindent\sphinxincludegraphics{{2eac0ef9991e071d21679eab4be7164a45921085ebb586211a7835dbc2975cff}.png}
 
-\noindent\sphinxincludegraphics{{62d96d76707a5160e05c6c4a398cac4388ba917db9955194d3e1939174396002}.png}
+\noindent\sphinxincludegraphics{{c6f0836888463ae6ad98cc1c03ab8538c490718bc08b68ff9b818866226827e0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3937,9 +4831,9 @@ Magnetization: 6
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{7252f85acc618c82a35aa06fbe544affcaa5cd8788971f95edc155500f42692a}.png}
+\noindent\sphinxincludegraphics{{d35f97cf9b49962ded0a806f111ba541fe3d9760e8e2be9d6f0ff09d438d336e}.png}
 
-\noindent\sphinxincludegraphics{{4b58eb0690330e8c4225b3c85518d2f5a57b13d5107c769596dc521af9f06b83}.png}
+\noindent\sphinxincludegraphics{{443c8db891a95a2afc2062838b66b66c6d810ea3d8fcbee7248b2cf5f88d6835}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -4382,12 +5276,12 @@ angluar momentum, spin, and atom
 
 \section{Mathematical tools for quantum mechanics}
 \label{\detokenize{ch/quantum-mechanics/intro:mathematical-tools-for-quantum-mechanics}}\label{\detokenize{ch/quantum-mechanics/intro:quantum-mechanics-intro-math}}\label{ch/quantum-mechanics/intro:Operator}
-\begin{sphinxadmonition}{note}{Definition 13.1.1 (Operator)}
+\begin{sphinxadmonition}{note}{Definition 14.1.1 (Operator)}
 
 
 \end{sphinxadmonition}
 \label{ch/quantum-mechanics/intro:Adjoint Operator}
-\begin{sphinxadmonition}{note}{Definition 13.1.2 (Adjoint operator)}
+\begin{sphinxadmonition}{note}{Definition 14.1.2 (Adjoint operator)}
 
 
 
@@ -4400,7 +5294,7 @@ Given an operator \(\hat{A}: U \rightarrow V\), its adjoint operator \(\hat{A}^*
 holds for \(\forall \mathbf{u} \in U, \ \mathbf{v} \in V\).
 \end{sphinxadmonition}
 \label{ch/quantum-mechanics/intro:Self-Adjoint Operator}
-\begin{sphinxadmonition}{note}{Definition 13.1.3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
+\begin{sphinxadmonition}{note}{Definition 14.1.3 (Hermitian (self\sphinxhyphen{}adjoint) operator)}
 
 
 
@@ -5853,7 +6747,7 @@ Thus, the relation
 
 
 \label{ch/quantum-mechanics/density-operator:example-0}
-\begin{sphinxadmonition}{note}{Example 17.1 (Difference between mixed states and pure state in superposition)}
+\begin{sphinxadmonition}{note}{Example 18.1 (Difference between mixed states and pure state in superposition)}
 
 
 
@@ -7534,7 +8428,7 @@ where Fermi’s Golden Rule gives the absorption rate \(W_{a \to b}\):
 \begin{sphinxuseclass}{tag_hide-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{0f2cb16ec9dbe042a75725372397aad0ea3a968841dcef0213930388c1a1aa31}.png}
+\noindent\sphinxincludegraphics{{40676585d828fcf5e72dcd277f05887830f12eb7ec97433159f5e5be89c2c591}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -9705,7 +10599,7 @@ Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \sphinxAtStartPar
 with \(n_k\) the occupation number of the single\sphinxhyphen{}body state \(k\). The factor before the summation is required for normalization of the symmetric state, as it’s the square root of the inverse of the number of permutations with repetitions, see \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html\#permutazioni-con-ripetizioni}{Combinatorics: Permutations with Repetitions}.
 \label{ch/quantum-mechanics/many-body/identical-systems:example-0}
-\begin{sphinxadmonition}{note}{Example 23.1.1 (Low\sphinxhyphen{}dimensional example)}
+\begin{sphinxadmonition}{note}{Example 24.1.1 (Low\sphinxhyphen{}dimensional example)}
 
 
 
@@ -9735,7 +10629,7 @@ Let \(| \alpha_1, \dots, \alpha_N \rangle\)
 \sphinxAtStartPar
 If two bodies were in the same state, two rows of the matrix would be equal and thus the determinant be zero. The factor before the determinant is required for normalization, as it’s the square root of the inverse of the number of simple pertumations of \(N\) objects without repetitions, see \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/statistics/combinatorics.html\#permutazioni-semplici}{Combinatorics: Permutations with Repetitions}.
 \label{ch/quantum-mechanics/many-body/identical-systems:example-1}
-\begin{sphinxadmonition}{note}{Example 23.1.2 (Low\sphinxhyphen{}dimensional example)}
+\begin{sphinxadmonition}{note}{Example 24.1.2 (Low\sphinxhyphen{}dimensional example)}
 
 
 
@@ -10400,7 +11294,7 @@ it’s possible to find another equivalent expression of the expression \eqref{e
 & = \int_{\mathbf{r}} \sum_{\alpha, \beta}  \Psi^\dagger(\mathbf{r}) o_{\mathbf{r}; \partial_{\mathbf{r}}}  \Psi(\mathbf{r}') \, d \mathbf{r} \ ,
 \end{aligned}\end{split}
 \end{equation*}\label{ch/quantum-mechanics/many-body/operators:example-0}
-\begin{sphinxadmonition}{note}{Example 23.6.1 (Kinetic energy)}
+\begin{sphinxadmonition}{note}{Example 24.6.1 (Kinetic energy)}
 
 
 \begin{equation*}
@@ -11947,7 +12841,7 @@ The Hamiltonian operator of a single simple harmonic oscillator reads
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-whose solution provides the relation between the Heisenberg and Schdoringer picture of the annihilation operator,
+whose solution provides the relation between the Heisenberg and Schrodinger picture of the annihilation operator,
 \begin{equation*}
 \begin{split}\hat{a}_H(t) = \hat{a}_H(0) e^{-i \omega t} = \hat{a} e^{-i \omega t} \ .\end{split}
 \end{equation*}
@@ -12564,7 +13458,7 @@ so that the transition rate probability between the initial state \(m\) and the 
 
 \subsubsection{Fermi golden rule}
 \label{\detokenize{ch/quantum-mechanics/qft/interactions-perturbation:fermi-golden-rule}}\label{ch/quantum-mechanics/qft/interactions-perturbation:qft:fermi-golden-rule}
-\begin{sphinxadmonition}{note}{Definition 25.6.1 (Fermi golden rule \sphinxhyphen{} infinite time)}
+\begin{sphinxadmonition}{note}{Definition 26.6.1 (Fermi golden rule \sphinxhyphen{} infinite time)}
 
 
 
@@ -12576,7 +13470,7 @@ For \(t \rightarrow +\infty\), for a system with unperturbed Hamiltonian \(\hat 
 
 \end{sphinxadmonition}
 \label{ch/quantum-mechanics/qft/interactions-perturbation:qft:fermi-golden-rule-finite}
-\begin{sphinxadmonition}{note}{Definition 25.6.2 (Fermi golden rule \sphinxhyphen{} finite time)}
+\begin{sphinxadmonition}{note}{Definition 26.6.2 (Fermi golden rule \sphinxhyphen{} finite time)}
 
 
 
@@ -13367,7 +14261,7 @@ By polarisation completeness, \(\sum_\lambda|\boldsymbol\varepsilon_\lambda\!\cd
 \sphinxAtStartPar
 the Einstein \(A\) coefficient derived from first principles (Dirac, 1927). It is the number quoted in Chapter 1, §2.4.
 \label{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:example-0}
-\begin{sphinxadmonition}{note}{Example 25.6.1 (\sphinxstylestrong{Worked example: hydrogen \protect\(2p\to1s\protect\) (Lyman\sphinxhyphen{}\protect\(\alpha\protect\)).} )}
+\begin{sphinxadmonition}{note}{Example 26.6.1 (\sphinxstylestrong{Worked example: hydrogen \protect\(2p\to1s\protect\) (Lyman\sphinxhyphen{}\protect\(\alpha\protect\)).} )}
 
 
 
@@ -15220,7 +16114,7 @@ and thus \(J_n(x) = J - J_p(x)\).
 \item\relax\sphinxstyleindexentry{Self\sphinxhyphen{}Adjoint Operator}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/intro}\sphinxstyleindexpageref{ch/quantum-mechanics/intro:\detokenize{Self-Adjoint Operator}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/quantum\sphinxhyphen{}mechanics/qft/interactions\sphinxhyphen{}e\sphinxhyphen{}em\sphinxhyphen{}fields\sphinxhyphen{}atom\sphinxhyphen{}spectrum}\sphinxstyleindexpageref{ch/quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/statistical\sphinxhyphen{}mechanics/notes}\sphinxstyleindexpageref{ch/statistical-mechanics/notes:\detokenize{example-1}}
