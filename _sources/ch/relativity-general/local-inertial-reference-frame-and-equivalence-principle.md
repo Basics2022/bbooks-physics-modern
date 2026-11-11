@@ -21,14 +21,18 @@ $R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\pa
 (general-relativity:local-inertial-reference-frame:introduction)=
 ## Setting and notation
 
-Spacetime points are $\mathbf X(q^\mu)$. The event $P$ has coordinates $q_P^\mu$. The choice of the coordinates $\{ q^\mu \}$m induces
+Events in space time are parametrized with a set of coordinates $\{ q^\mu \}_{\mu=0:3}$ as $\mathbf X(q^\mu)$. The event $P$ has coordinates $q_P^\mu$. The choice of the coordinates $\{ q^\mu \}$ induces
 
 - Coordinate natural basis $\mathbf{b}_\mu=\partial_\mu\mathbf{X}$ and metrics $g_{\mu\nu}=\mathbf{ b}_\mu \cdot \mathbf{ b}_\nu$, and the reciprocal basis $\mathbf{ b}^\mu\cdot\mathbf {b}_\nu=\delta^\mu_\nu$.
 
-- Connection - 
+- Connection - Christoffel symbols, $\Gamma_{\mu \nu}^{\lambda}$, defined as the components in the natural basis of the derivative of the vectors of the natural basis themselves, i.e. 
+
+   $$\frac{\partial^2\mathbf{X}}{\partial q^{\mu} q^{\nu}} = \partial_{q^{\nu}} \mathbf{b}_{\mu} = \partial_{q^{\mu}} \mathbf{b}_{\nu} = \Gamma_{\mu \nu}^{\lambda} \mathbf{b}_{\lambda} \ .$$
+
+   Exploiting the orthogonality of the vectors of a basis and the vectors of its reciprocal basis,
 
    $$
-   \Gamma^\lambda{}_{\mu\nu}=\mathbf b^\lambda\cdot\partial_\mu\mathbf b_\nu,\qquad
+   \Gamma^\lambda_{\mu\nu}=\mathbf b^\lambda\cdot\partial_\mu\mathbf b_\nu,\qquad
    \Gamma_{\lambda,\mu\nu}:=g_{\lambda\sigma}\Gamma^\sigma{}_{\mu\nu}=\mathbf b_\lambda\cdot\partial_\mu\mathbf b_\nu .
    $$
 
@@ -57,18 +61,36 @@ $\partial_\alpha\mathbf b'_\beta=\partial_\alpha\partial_\beta q^\nu\,\mathbf b_
 The inhomogeneous term $\partial_\alpha\partial_\beta q^\lambda$ is why $\Gamma$ is **not a tensor** and can be switched off at a point.
 -->
 
-**Local set of coordinates, $\{ x^{\alpha} \}$, with $\partial_{x^{\alpha}} \mathbf{X} \cdot \partial_{x^{\beta}} \mathbf{X} = \eta_{\alpha \beta}$.** Expand the new coordinates around $P$ ($x^\alpha=0$ at $P$):
+## Local vector basis
+
+Definition of a local basis $\mathbf{e}_{\mu}$, s.t. $\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}$.
+
+...
+
+Transformation of coordinates
+
+...
+
+
+## Local set of coordinates
+
+Let the vectors $\mathbf{e}_{\mu}$ of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates $\{ x^\mu \}_{\mu=0:3}$, identifying the event $P$ with $x^{\mu}_P = 0$
+
+$$\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .$$
+
+
+A polynomial expansion of the coordinates $q^{\mu}$ as a function of the local coordinates $x^{\alpha}$ around $P$ ($x^\alpha=0$ at $P$) reads
 
 $$
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
-$$ (eq-ansatz)
+$$ (eq-polynomial-expansion)
 
-where $A$ and $B$ are totally symmetric in their lower indices. All coefficients are evaluated at $P$. The inverse of $\tilde e$ is $e^\alpha{}_\mu$:
+where $A$ and $B$ are totally symmetric in their lower indices. The inverse of $\tilde e$ is $e^\alpha{}_\mu$:
+
 $$
 e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
 $$
 
----
 
 ##  First order: the tetrad
 
@@ -81,7 +103,7 @@ $$ (eq-tetrad)
 
 and the reciprocal basis is $\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu$ with $\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta$.
 
-### How many free parameters?
+```{admonition} How many free parameters?
 
 - **Counting.** $\tilde e^\mu{}_\alpha$ has $16$ components, and the symmetric equation {eq}`eq-tetrad` gives $10$ conditions. So $16-10=\mathbf{6}$ parameters remain: the Lorentz group $SO(1,3)$ (3 boosts + 3 rotations).
 
@@ -105,6 +127,8 @@ and the reciprocal basis is $\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu$ wit
    
    Choosing $\mathbf u_P$ ties the frame to the observer. The $3$ remaining parameters ($SO(3)$) are the orientation of the spatial axes. Different $\mathbf u_P$ give different, equally valid, local inertial frames related by boosts.
 
+```
+
 ```{admonition} Result of the first order
 $g'_{\alpha\beta}(P)=\eta_{\alpha\beta}$. The residual freedom is exactly the Lorentz group: **6 parameters**.
 ```
@@ -119,7 +143,7 @@ $$ \dots $$ (eq-gamma-transf)
 
 ## Second order, $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$, and $\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0$
 
-The requirement that $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$ fixes the value of the coefficients $A^{\lambda}_{\alpha \beta}$ in the expansion.
+The requirement that $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$ fixes the value of the coefficients $A^{\lambda}_{\alpha \beta}$ in the expansion {eq}`eq-polynomial-expansion`.
 From the transformation law {eq}`eq-gamma-transf`, using $\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha$ and $\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}$:
 
 $$
@@ -138,7 +162,8 @@ $$
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
 $$
 
-### The same $A$ removes $\partial g'$
+```{dropdown} The same $A$ removes $\partial g'$
+:open:
 
 Expand {eq}`eq-g-transf` to first order in $x$. The ingredients are
 
@@ -166,18 +191,21 @@ $$
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+O(x^2)\,}\qquad\Longleftrightarrow\qquad \Gamma'(P)=0\ \Longleftrightarrow\ \partial_\gamma g'_{\alpha\beta}(P)=0 .
 $$ (eq-second-order)
 
+```
+
 ```{note}
 The two statements "$\Gamma'(P)=0$" and "$\partial g'(P)=0$" are equivalent *because* of {eq}`eq-compat`. This is the precise sense in which gravity is "transformed away" at a point: $g_{\mu\nu}$ and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.
 ```
 
 
-### 2.3 Why the term $A\,A\,x^\sigma x^\xi$ is not trustworthy
+```{admonition} The term $A\,A\,x^\sigma x^\xi$ is not trustworthy
 
 The product of the two $A$ terms is $O(x^2)$. At that order one also needs $B$ (from $\partial_\alpha q^\mu$) and $\partial\partial g$ (from the expansion of $g_{\mu\nu}(q(x))$). A consistent expansion must therefore be organised by order, which is done in the next section.
 
+```
 ---
 
-## 3. Third order: what cannot be removed
+## Third order in $q^{\mu}(x^\alpha)$
 
 The cubic coefficients $B^\lambda{}_{\alpha\beta\gamma}$ are totally symmetric. Differentiate {eq}`eq-gamma-transf` once more and evaluate at $P$, where $\Gamma'(P)=0$:
 
@@ -190,13 +218,17 @@ where $C$ is built only from $\tilde e$, $A$, $\Gamma(P)$ and $\partial\Gamma(P)
 ### 3.1 Decomposition of $T$
 
 Define the totally symmetric part
+
 $$
 S^\gamma{}_{\alpha\beta\delta}=\tfrac13\big(T^\gamma{}_{\alpha\beta\delta}+T^\gamma{}_{\beta\delta\alpha}+T^\gamma{}_{\delta\alpha\beta}\big).
 $$
+
 The Riemann tensor at $P$ (where the $\Gamma\Gamma$ terms vanish) is
+
 $$
 R'^\gamma{}_{\alpha\beta\delta}=T^\gamma{}_{\delta\alpha\beta}-T^\gamma{}_{\beta\alpha\delta}.
 $$
+
 Symmetrising in $(\alpha\beta)$ and using the symmetry of $T$ in its first two lower indices:
 
 $$
@@ -213,23 +245,26 @@ $$ (eq-decomp)
 
 - The **totally symmetric part $S$** is pure gauge: by {eq}`eq-T` it can be shifted at will through $B$.
 - The **rest** is fixed by the Riemann tensor, which transforms as a tensor and therefore cannot be changed by any coordinate choice:
-$$
-R'^\gamma{}_{\alpha\beta\delta}(P)=e^\gamma{}_\lambda\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\tilde e^\kappa{}_\delta\;R^\lambda{}_{\mu\nu\kappa}(P).
-$$
 
-### 3.2 Riemann normal coordinates
+   $$
+   R'^\gamma{}_{\alpha\beta\delta}(P)=e^\gamma{}_\lambda\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\tilde e^\kappa{}_\delta\;R^\lambda{}_{\mu\nu\kappa}(P).
+   $$
+
+### Riemann normal coordinates
 
 Choose
+
 $$
 B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\beta\delta)}
 $$
-(total symmetrisation of $C$). Then $S=0$. The freedom in $B$ is **entirely used up**. This defines **Riemann normal coordinates**, in which
+
+with a total symmetrisation of $C$. Then $S=0$. The freedom in $B$ is **entirely used up**. This defines **Riemann normal coordinates**, in which
 
 $$
 \partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=-\tfrac13\big(R^\gamma{}_{\alpha\beta\delta}+R^\gamma{}_{\beta\alpha\delta}\big).
 $$
 
-### 3.3 The metric to second order
+### The metric to second order
 
 Differentiate the metric-compatibility relation {eq}`eq-compat` (written in the primed coordinates) once more and evaluate at $P$, where $\Gamma'=0$, so that derivatives of $g'$ drop out:
 
@@ -256,15 +291,13 @@ $$
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}-\tfrac13\,R_{\alpha\gamma\beta\delta}(P)\,x^\gamma x^\delta+O(x^3)\,}
 $$ (eq-rnc)
 
-### 3.4 Counting check
+### Counting check
 
 - Second derivatives $\partial_\gamma\partial_\delta g'_{\alpha\beta}$: $10\times10=100$ numbers.
 - Cubic coefficients $B^\lambda{}_{\alpha\beta\delta}$: $4\times20=80$ numbers, all used to set $S=0$.
 - Left over: $100-80=\mathbf{20}$, exactly the number of independent components of the Riemann tensor in four dimensions.
 
----
-
-## 4. Summary: what each order does
+### Summary: what each order does
 
 | Order of $q(x)$ | Coefficient | What it fixes | Freedom left |
 |---|---|---|---|
@@ -274,66 +307,82 @@ $$ (eq-rnc)
 
 Each order of the coordinate map controls the same order of the metric: the first removes $g-\eta$, the second removes $\partial g$, and the third can only rearrange $\partial\partial g$, never eliminate it.
 
----
 
-## 5. The equivalence principle
+## The equivalence principle
 
 In the coordinates $x^\alpha$ built above:
 
 1. **Free fall is inertial motion at $P$.** The geodesic equation
-$$
-\frac{d^2x^\alpha}{d\tau^2}=-\Gamma'^\alpha{}_{\beta\gamma}\frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}
-$$
-has vanishing right-hand side at $P$: free particles move in straight lines, with corrections that grow linearly in $x$ through $\partial\Gamma'\sim R$.
+
+   $$
+   \frac{d^2x^\alpha}{d\tau^2}=-\Gamma'^\alpha{}_{\beta\gamma}\frac{dx^\beta}{d\tau}\frac{dx^\gamma}{d\tau}
+   $$
+   
+   has vanishing right-hand side at $P$: free particles move in straight lines, with corrections that grow linearly in $x$ through $\partial\Gamma'\sim R$.
 
 2. **Non-gravitational physics reduces to special relativity at $P$** (*minimal coupling*). Replacing $\eta\to g$ and $\partial\to\nabla$, for example
-$$
-\nabla_\mu T^{\mu\nu}=\partial_\mu T^{\mu\nu}+\Gamma^\mu{}_{\mu\lambda}T^{\lambda\nu}+\Gamma^\nu{}_{\mu\lambda}T^{\mu\lambda}\ \xrightarrow{\ P\ }\ \partial_\mu T^{\mu\nu},
-$$
-so all local laws take their special-relativistic form, with relative corrections of order $|R|\,L^2$ in a region of size $L$.
+
+   $$
+   \nabla_\mu T^{\mu\nu}=\partial_\mu T^{\mu\nu}+\Gamma^\mu{}_{\mu\lambda}T^{\lambda\nu}+\Gamma^\nu{}_{\mu\lambda}T^{\mu\lambda}\ \xrightarrow{\ P\ }\ \partial_\mu T^{\mu\nu},
+   $$
+   
+   so all local laws take their special-relativistic form, with relative corrections of order $|R|\,L^2$ in a region of size $L$.
 
 3. **What remains is tidal.** The residual gravitational information is the Riemann tensor, as seen in {eq}`eq-rnc` and in the **geodesic deviation** of two neighbouring free-falling particles with separation $\xi^\mu$ and 4-velocity $u^\mu$:
-$$
-\frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
-$$
 
-Hence "local" means: the region is small enough that $|R|\,L^2$ is below the precision of the measurement. The equivalence principle is the statement that the metric and its first derivatives can be made to coincide with those of Minkowski at $P$, but the second derivatives cannot.
+   $$
+   \frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
+   $$
+   
+   Hence "local" means: the region is small enough that $|R|\,L^2$ is below the precision of the measurement. The equivalence principle is the statement that the metric and its first derivatives can be made to coincide with those of Minkowski at $P$, but the second derivatives cannot.
 
 ---
 
-## 6. Example: uniformly accelerated frame (link to the Rindler notes)
+## Example: uniformly accelerated frame in free space - Rindler coordinates in special relativity
 
-See ["Constant" acceleration observer and Rindler coordinates](relativity-general:rindler).
+See ["Constant" acceleration observer and Rindler coordinates](relativity-special:rindler).
 
 In Rindler coordinates $(T=ct,\xi)$ with $a$ the proper acceleration of the observer at $\xi=0$,
+
 $$
 ds^2=\Big(1+\frac{a\xi}{c^2}\Big)^2dT^2-d\xi^2-dy^2-dz^2 .
 $$
+
 The Riemann tensor is identically zero (flat spacetime), but the connection is not:
+
 $$
 \Gamma^\xi{}_{TT}=\frac{a}{c^2}\Big(1+\frac{a\xi}{c^2}\Big)\ \xrightarrow{\ \xi=0\ }\ \frac{a}{c^2}.
 $$
+
 Take $\tilde e=\mathbb 1$ at $P$ (the observer's own frame). Then by {eq}`eq-A`,
+
 $$
 A^\xi{}_{TT}=-\frac{a}{c^2}
 \qquad\Longrightarrow\qquad
 \xi=x^\xi-\frac{a}{2c^2}\,(x^T)^2+O(x^3).
 $$
+
 This is exactly the transformation to the freely falling (inertial) frame: a free particle at rest in $x$ has $\xi=\text{const}-\tfrac{a}{2c^2}T^2$, i.e. it "falls" with acceleration $-a$ as seen by the accelerated observer. This is the equivalence between a uniform gravitational field and an accelerated frame: both are removed at $P$ by $A$, and in flat spacetime nothing remains at third order since $R=0$.
 
 In a genuine gravitational field (e.g. a static observer in Schwarzschild) the same quadratic map removes the local acceleration, but the third-order term leaves the tidal tensor $R\neq0$, which distinguishes the two situations.
 
 ---
 
-## 7. Extension along a worldline (Fermi normal coordinates)
+## Extension along a worldline (Fermi normal coordinates)
 
 If the frame is carried along the whole worldline with the tetrad transported (parallel transport for a geodesic, Fermi–Walker transport otherwise), the same construction gives coordinates in which, for a geodesic observer with a non-rotating triad,
+
 $$
 g_{00}=1-R_{0i0j}\,x^ix^j+\dots,\qquad g_{0i}=-\tfrac23R_{0jik}\,x^jx^k+\dots,\qquad g_{ij}=-\delta_{ij}-\tfrac13R_{ikjl}\,x^kx^l+\dots
 $$
+
 For an accelerated or rotating observer the leading terms also contain the acceleration $a_i$ and the angular velocity $\boldsymbol\omega$:
+
 $$
 g_{00}=(1+a_ix^i)^2-(\boldsymbol\omega\times\mathbf x)^2+\dots
 $$
+
 In flat spacetime with $a=\text{const}$ and $\boldsymbol\omega=0$ this is exactly the Rindler metric of Section 6.
+
+ 
 
