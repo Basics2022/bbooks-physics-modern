@@ -737,6 +737,43 @@ The same <span class="math notranslate nohighlight">\(\ A \ \)</span> removes <s
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A polynomial expansion of the metric tensor <span class="math notranslate nohighlight">\(g'_{\alpha \beta}\)</span> in the local coordinates <span class="math notranslate nohighlight">\(x^\gamma\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text">By direct computation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  g'_{\alpha \beta}(x)
+  &amp; = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  &amp; = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  &amp; = \left( \widetilde{e}^{\mu}_\alpha - \Gamma^{\mu}_{\ \ \xi \sigma}(P) \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta - \Gamma^{\nu}_{\ \ \varphi \psi}(P) \widetilde{e}^{\mu}_{\beta} \widetilde{e}^{\varphi}_{\chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda)) = \\
+  &amp; = \left( \widetilde{e}^{\mu}_\alpha + A^{\mu}_{\alpha \phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta +  A^{\nu}_{\beta \chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda))
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the first derivative evaluated in <span class="math notranslate nohighlight">\(x^\lambda = 0\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} 
+  &amp; = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{x^\gamma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) = \\
+  &amp; = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having used</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \left. \dfrac{\partial}{\partial x^\gamma} g_{\mu \nu}(q^\sigma(x^\alpha)) \right|_{x^\beta = 0}
+  &amp; = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \left. \frac{\partial q^\sigma}{\partial x^\gamma}\right|_{x^\lambda=0} 
+    = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \widetilde{e}^{\sigma}_{\ \gamma} \ .
+\end{aligned}\]</div>
+<p class="sd-card-text">Exploiting the relation <a class="reference internal" href="#equation-eq-a">(7.12)</a>, the first derivative of the metric <span class="math notranslate nohighlight">\(g'_{\alpha \beta}\)</span> evaluated in <span class="math notranslate nohighlight">\(P\)</span> becomes identically zero,</p>
+<p class="sd-card-text">…</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Expand <span class="math notranslate nohighlight">\(g_{\mu \nu}(q^\sigma (x^\alpha))\)</span> to first order in <span class="math notranslate nohighlight">\(x\)</span>. The ingredients are</p>
 <div class="math notranslate nohighlight">
 \[
@@ -746,8 +783,7 @@ g_{\mu\nu}(q(x))=g_{\mu\nu}(P)+\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma 
 <p class="sd-card-text">Using <a class="reference internal" href="#equation-eq-tetrad">(7.9)</a> for the zeroth-order term:</p>
 <div class="math notranslate nohighlight">
 \[
-g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
-+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
+g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
 \]</div>
 <p class="sd-card-text">Insert <a class="reference internal" href="#equation-eq-a">(7.12)</a> and use <span class="math notranslate nohighlight">\(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\)</span> (and the symmetry in the last two indices):</p>
 <div class="math notranslate nohighlight">
@@ -760,6 +796,7 @@ g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\,\tilde e^\rho{}_\sigma\tilde e^
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+O(x^2)\,}\qquad\Longleftrightarrow\qquad \Gamma'(P)=0\ \Longleftrightarrow\ \partial_\gamma g'_{\alpha\beta}(P)=0 .
 \]</div>
 </div>
+</details></div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The two statements “<span class="math notranslate nohighlight">\(\Gamma'(P)=0\)</span>” and “<span class="math notranslate nohighlight">\(\partial g'(P)=0\)</span>” are equivalent <em>because</em> of <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code>. This is the precise sense in which gravity is “transformed away” at a point: <span class="math notranslate nohighlight">\(g_{\mu\nu}\)</span> and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.</p>
@@ -827,7 +864,24 @@ B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\
 </div>
 <div class="section" id="the-metric-to-second-order">
 <h3><span class="section-number">7.5.6.3. </span>The metric to second order<a class="headerlink" href="#the-metric-to-second-order" title="Permalink to this heading">#</a></h3>
-<p>Differentiate the metric-compatibility relation <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code> (written in the primed coordinates) once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'=0\)</span>, so that derivatives of <span class="math notranslate nohighlight">\(g'\)</span> drop out:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Metric to the second order<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  g'_{\alpha \beta}(x)
+  &amp; = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  &amp; = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Need for the second order expansion in <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(\frac{\partial q^{\mu}}{\partial x^\alpha}\)</span>, and <span class="math notranslate nohighlight">\(g_{\mu \nu}(q^\sigma(x^\lambda))\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^\beta} x^\gamma\]</div>
+</div>
+</details><p>Differentiate the metric-compatibility relation <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code> (written in the primed coordinates) once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'=0\)</span>, so that derivatives of <span class="math notranslate nohighlight">\(g'\)</span> drop out:</p>
 <div class="math notranslate nohighlight">
 \[
 \partial_\delta\partial_\gamma g'_{\alpha\beta}(P)=\eta_{\alpha\lambda}T^\lambda{}_{\gamma\beta\delta}+\eta_{\beta\lambda}T^\lambda{}_{\gamma\alpha\delta}

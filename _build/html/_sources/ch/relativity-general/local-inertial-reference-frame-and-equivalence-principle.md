@@ -196,8 +196,49 @@ $$
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
 $$
 
-```{dropdown} The same $\ A \ $ removes $\ \partial g'$
+````{dropdown} The same $\ A \ $ removes $\ \partial g'$
 :open:
+
+A polynomial expansion of the metric tensor $g'_{\alpha \beta}$ in the local coordinates $x^\gamma$ reads
+
+$$g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .$$
+
+being $g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}$.
+
+---
+
+By direct computation
+
+$$\begin{aligned}
+  g'_{\alpha \beta}(x)
+  & = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  & = \left( \widetilde{e}^{\mu}_\alpha - \Gamma^{\mu}_{\ \ \xi \sigma}(P) \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta - \Gamma^{\nu}_{\ \ \varphi \psi}(P) \widetilde{e}^{\mu}_{\beta} \widetilde{e}^{\varphi}_{\chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda)) = \\
+  & = \left( \widetilde{e}^{\mu}_\alpha + A^{\mu}_{\alpha \phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta +  A^{\nu}_{\beta \chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda))
+\end{aligned}$$
+
+so that the first derivative evaluated in $x^\lambda = 0$ is
+
+$$\begin{aligned}
+  \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} 
+  & = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{x^\gamma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) = \\
+  & = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) \ ,
+\end{aligned}$$
+
+having used
+
+$$\begin{aligned}
+  \left. \dfrac{\partial}{\partial x^\gamma} g_{\mu \nu}(q^\sigma(x^\alpha)) \right|_{x^\beta = 0}
+  & = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \left. \frac{\partial q^\sigma}{\partial x^\gamma}\right|_{x^\lambda=0} 
+    = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \widetilde{e}^{\sigma}_{\ \gamma} \ .
+\end{aligned}$$
+
+Exploiting the relation {eq}`eq-A`, the first derivative of the metric $g'_{\alpha \beta}$ evaluated in $P$ becomes identically zero,
+
+...
+
+
+```{dropdown} Details
 
 Expand $g_{\mu \nu}(q^\sigma (x^\alpha))$ to first order in $x$. The ingredients are
 
@@ -209,8 +250,7 @@ $$
 Using {eq}`eq-tetrad` for the zeroth-order term:
 
 $$
-g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
-+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
+g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
 $$
 
 Insert {eq}`eq-A` and use $g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}$ (and the symmetry in the last two indices):
@@ -226,6 +266,8 @@ $$
 $$ (eq-second-order)
 
 ```
+
+````
 
 ```{note}
 The two statements "$\Gamma'(P)=0$" and "$\partial g'(P)=0$" are equivalent *because* of {eq}`eq-compat`. This is the precise sense in which gravity is "transformed away" at a point: $g_{\mu\nu}$ and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.
@@ -299,6 +341,22 @@ $$
 $$
 
 ### The metric to second order
+
+````{dropdown} Metric to the second order
+:open:
+
+$$\begin{aligned}
+  g'_{\alpha \beta}(x)
+  & = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} \ .
+\end{aligned}$$
+
+Need for the second order expansion in $x$ of $\frac{\partial q^{\mu}}{\partial x^\alpha}$, and $g_{\mu \nu}(q^\sigma(x^\lambda))$
+
+$$\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^\beta} x^\gamma$$
+
+````
+
 
 Differentiate the metric-compatibility relation {eq}`eq-compat` (written in the primed coordinates) once more and evaluate at $P$, where $\Gamma'=0$, so that derivatives of $g'$ drop out:
 
