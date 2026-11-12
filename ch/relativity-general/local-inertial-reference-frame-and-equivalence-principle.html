@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -739,7 +730,7 @@ The same <span class="math notranslate nohighlight">\(\ A \ \)</span> removes <s
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">A polynomial expansion of the metric tensor <span class="math notranslate nohighlight">\(g'_{\alpha \beta}\)</span> in the local coordinates <span class="math notranslate nohighlight">\(x^\gamma\)</span> reads</p>
 <div class="math notranslate nohighlight">
-\[g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .\]</div>
+\[g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma \partial x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .\]</div>
 <p class="sd-card-text">being <span class="math notranslate nohighlight">\(g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}\)</span>.</p>
 <hr class="docutils" />
 <p class="sd-card-text">By direct computation</p>

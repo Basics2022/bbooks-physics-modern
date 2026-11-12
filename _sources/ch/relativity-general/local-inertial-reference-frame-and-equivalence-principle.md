@@ -201,7 +201,7 @@ $$
 
 A polynomial expansion of the metric tensor $g'_{\alpha \beta}$ in the local coordinates $x^\gamma$ reads
 
-$$g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .$$
+$$g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma \partial x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .$$
 
 being $g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}$.
 
