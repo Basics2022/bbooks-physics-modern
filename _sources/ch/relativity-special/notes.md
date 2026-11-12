@@ -34,7 +34,8 @@ Its "length", or better pseudo-norm with Minkowski metric, is invariant and read
 
 $$d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 $$
 
-## Kinematics of point
+(relativity-special:notes:kinematics-point)=
+## Kinematics of a point
 
 **Proper time.** For a co-moving observer, $d \vec{r}' = \vec{0}$, and $t'$ is commonly indicated with $\tau$, and its differential is invariant itself, being the product of a constant ($c$ is a universal constant in special relativity) and an invariant quantity.
 
@@ -59,7 +60,7 @@ with $\gamma(w) = \frac{1}{\sqrt{1 - w^2}}$.
 
 $$\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)$$
 
-or
+or - with the notation abuse of using the same symbol $\mathbf{U}$ for the function representing the derivative of $\mathbf{X}$ w.r.t. two different variables -
 
 $$\mathbf{U}(s) := \mathbf{X}'(s) = \dfrac{d t}{ ds } \dfrac{d}{dt} \mathbf{X}(t) = \dots = \gamma(v/c) \left( \mathbf{E}_0 + \frac{\vec{v}}{c} \right) \ .$$
 
@@ -71,7 +72,78 @@ $$\mathbf{U}(s) \cdot \mathbf{U}(s) = \gamma^2 \underbrace{\left( 1 - \frac{|\ve
 Using $\tau$ as the parameter, $\mathbf{U}$ has physical dimension of a velocity and pseudo-norm = $c$.
 ```
 
-**4-acceleration** $\mathbf{X}''(\tau)$ or $\mathbf{X}''(s)$, **todo**
+```{admonition} Orthogonality condition between 4-velocity and 4-acceleration
+
+As $\mathbf{U}(\tau) \cdot \mathbf{U}(\tau) = c^2$ constant, then its derivative is identically zero, i.e.
+
+$$\mathbf{U} \cdot \mathbf{A} = 0 \ .$$ (eq:relativity:kinematics:vel-acc-orthogonality)
+
+```
+
+**4-acceleration** $\mathbf{X}''(\tau)$ or $\mathbf{X}''(s)$.
+
+$$\begin{aligned}
+  \mathbf{A}(\tau) := \mathbf{U}'(\tau) = \mathbf{X}''(\tau) \ .
+\end{aligned}$$
+
+or using reference frame time $t$ as independent variable
+
+$$\mathbf{A} = \gamma^4 \frac{\vec{v}}{c} \cdot\vec{a} \, \mathbf{E}_0 + \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} \ .$$
+
+````{dropdown} Details. Relation between 4-dimensional and 3+1 dimensional representation
+:open:
+
+Let's write the acceleration as a function of the independent variable $t$, the inertial frame time coordinate,
+
+$$\mathbf{A} = \frac{d \mathbf{U}}{d \tau} = \frac{d t}{d \tau} \frac{d}{dt} \left( c \gamma \mathbf{E}_0 + \gamma v_i \mathbf{E}_i \right) \ .$$
+
+The time component reads 
+
+$$ A^0 = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} $$
+
+```{dropdown} Details
+
+$$\begin{aligned}
+  A^0 
+  & = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma c \right) = \\
+  & = \gamma c \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} = \\
+  & = \gamma c \left( - \frac{1}{2} \right) \left( 1 - \frac{| \vec{v} |^2}{c^2} \right)^{-\frac{3}{2}} \left( - 2 \frac{\vec{v} \cdot \vec{a}}{c^2} \right) = \\
+  & = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} \ .
+\end{aligned}$$
+
+```
+
+Space components read
+
+$$\begin{aligned}
+  A^i & = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \\
+  \vec{A}^{(3)}
+  & = \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} = \\
+  & = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\}  \ .
+\end{aligned}$$
+
+```{dropdown} Details
+
+$$\begin{aligned}
+  A^i 
+  & = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma v_i \right) = \\
+  & = \gamma \left\{ \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} v_i + \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} \frac{d v_i}{dt} \right\} = \\
+  & = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \ .
+\end{aligned}$$
+
+or
+
+$$\begin{aligned}
+  \vec{A}^{(3)}
+  & = \gamma^4  \frac{\vec{v}}{c} \frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 \vec{a} = \\
+  & = \gamma^4 \left\{ \frac{\vec{v}}{c} \frac{\vec{v}\cdot\vec{a}}{c} + \left( 1 - \frac{|\vec{v}|^2}{c^2} \right) \vec{a} \right\} = \\
+  & = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\} \ . 
+\end{aligned}$$
+
+```
+
+````
+
 
 ## Dynamics of a point mass
 

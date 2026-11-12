@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -520,7 +529,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-and-notation">7.5.1. Setting and notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis">7.5.2. Local vector basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis-first-order-terms-of-local-coordinates">7.5.2. Local vector basis - first order terms of local coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-set-of-coordinates">7.5.3. Local set of coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.4. First order: the tetrad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.5. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a></li>
@@ -600,38 +609,42 @@ $\partial_\alpha\mathbf b'_\beta=\partial_\alpha\partial_\beta q^\nu\,\mathbf b_
 The inhomogeneous term $\partial_\alpha\partial_\beta q^\lambda$ is why $\Gamma$ is **not a tensor** and can be switched off at a point.
 -->
 </div>
-<div class="section" id="local-vector-basis">
-<h2><span class="section-number">7.5.2. </span>Local vector basis<a class="headerlink" href="#local-vector-basis" title="Permalink to this heading">#</a></h2>
-<p>Definition of a local basis <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu}\)</span>, s.t. <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}\)</span>.</p>
-<p>…</p>
-<p>Transformation of coordinates</p>
-<p>…</p>
-</div>
-<div class="section" id="local-set-of-coordinates">
-<h2><span class="section-number">7.5.3. </span>Local set of coordinates<a class="headerlink" href="#local-set-of-coordinates" title="Permalink to this heading">#</a></h2>
-<p>Let the vectors <span class="math notranslate nohighlight">\(\mathbf{e}_{\mu}\)</span> of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates <span class="math notranslate nohighlight">\(\{ x^\mu \}_{\mu=0:3}\)</span>, identifying the event <span class="math notranslate nohighlight">\(P\)</span> with <span class="math notranslate nohighlight">\(x^{\mu}_P = 0\)</span></p>
+<div class="section" id="local-vector-basis-first-order-terms-of-local-coordinates">
+<span id="general-relativity-local-inertial-reference-frame-local-basis"></span><h2><span class="section-number">7.5.2. </span>Local vector basis - first order terms of local coordinates<a class="headerlink" href="#local-vector-basis-first-order-terms-of-local-coordinates" title="Permalink to this heading">#</a></h2>
+<p><strong>Transformation of basis vectors.</strong> As <span class="math notranslate nohighlight">\(\mathbf{e}_{\alpha}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial x^\alpha}\right|_{x^\beta = 0}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{b}_{\mu}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial q^\mu}\right|_{q^{\nu}=q^{\nu}_P}\)</span>, using the rule of differentiation of composite functions on <span class="math notranslate nohighlight">\(\mathbf{X}(x^\alpha(q^\mu))\)</span></p>
 <div class="math notranslate nohighlight">
-\[\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .\]</div>
-<p>A polynomial expansion of the coordinates <span class="math notranslate nohighlight">\(q^{\mu}\)</span> as a function of the local coordinates <span class="math notranslate nohighlight">\(x^{\alpha}\)</span> around <span class="math notranslate nohighlight">\(P\)</span> (<span class="math notranslate nohighlight">\(x^\alpha=0\)</span> at <span class="math notranslate nohighlight">\(P\)</span>) reads</p>
-<div class="math notranslate nohighlight" id="equation-eq-polynomial-expansion">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-polynomial-expansion" title="Permalink to this equation">#</a></span>\[
-q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are totally symmetric in their lower indices. The inverse of <span class="math notranslate nohighlight">\(\tilde e\)</span> is <span class="math notranslate nohighlight">\(e^\alpha{}_\mu\)</span>:</p>
+\[\left.\mathbf{b}_{\mu}\right|_P = \left.\frac{\partial \mathbf{X}}{\partial q^{\mu}}\right|_{q^{\nu}_P} = \left.\frac{\partial x^{\alpha}}{\partial q^{\mu}}\right|_{q^\nu=0} \left.\frac{\partial \mathbf{X}}{\partial x^{\alpha}}\right|_{x^\beta=0} =:\left. e^{\alpha}_{\ \ \mu} \right|_P \left.\mathbf{e}_{\alpha}\right|_P \ ,\]</div>
+<p>having defined the matrix of transformation of the vectors of the local bases in <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(e^{\alpha}_{\ \ \mu}\)</span>. The inverse transformation is defined as</p>
+<div class="math notranslate nohighlight" id="equation-eq-local-inertial-basis-transformation-inverse">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-local-inertial-basis-transformation-inverse" title="Permalink to this equation">#</a></span>\[\widetilde{e}^{\mu}_{\ \ \alpha} = \left. \frac{\partial q^{\mu}}{\partial x^{\alpha}} \right|_{q^{\nu}_P} \ ,\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{e}^{\mu}_{\ \ \alpha} e^{\alpha}_{\ \ \nu} = \frac{\partial q^{\mu}}{\partial x^{\alpha}} \frac{\partial x^{\alpha}}{\partial q^{\nu}} = \frac{\partial q^{\mu}}{\partial q^{\nu}} = \delta^{\mu}_{\nu} \ . \]</div>
+<p>The vectors <span class="math notranslate nohighlight">\(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\)</span> form a <strong>local basis</strong> (tetrad) at <span class="math notranslate nohighlight">\(P\)</span>. Requiring <span class="math notranslate nohighlight">\(g'_{\alpha\beta}(P) = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \eta_{\alpha\beta}\)</span> immediately gives</p>
 <div class="math notranslate nohighlight">
 \[
-e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
-\]</div>
-</div>
-<div class="section" id="first-order-the-tetrad">
-<h2><span class="section-number">7.5.4. </span>First order: the tetrad<a class="headerlink" href="#first-order-the-tetrad" title="Permalink to this heading">#</a></h2>
-<p>The vectors <span class="math notranslate nohighlight">\(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\)</span> form a <strong>local basis</strong> (tetrad) at <span class="math notranslate nohighlight">\(P\)</span>. Requiring <span class="math notranslate nohighlight">\(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\)</span> gives</p>
+\eta_{\alpha \beta} = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} \mathbf{b}^{\mu} \cdot \mathbf{b}^{\nu} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} g_{\mu \nu}(P) \ , \]</div>
+<p>i.e.</p>
 <div class="math notranslate nohighlight" id="equation-eq-tetrad">
-<span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-tetrad" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-tetrad" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  \eta_{\alpha \beta} &amp; = g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta \\
+  g_{\mu\nu}(P) &amp; = e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta} \ .
+\end{aligned}\end{split}\]</div>
+<!--
+Definition of a local basis $\mathbf{e}_{\alpha}$, s.t. $\mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \eta_{\alpha \beta}$.
+
+...
+
+The vectors $\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu$ form a **local basis** (tetrad) at $P$. Requiring $g'_{\alpha\beta}(P)=\eta_{\alpha\beta}$ gives
+
+$$
 g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta=\eta_{\alpha\beta}\quad\Longleftrightarrow\quad
 g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
-\]</div>
-<p>and the reciprocal basis is <span class="math notranslate nohighlight">\(\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu\)</span> with <span class="math notranslate nohighlight">\(\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta\)</span>.</p>
+$$ (eq-tetrad)
+
+and the reciprocal basis is $\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu$ with $\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta$.
+
+-->
 <div class="admonition-how-many-free-parameters admonition">
 <p class="admonition-title">How many free parameters?</p>
 <ul>
@@ -670,9 +683,38 @@ Christoffel symbols and coordinate transformations<div class="sd-summary-down do
 <span class="eqno">(7.10)<a class="headerlink" href="#equation-eq-gamma-transf" title="Permalink to this equation">#</a></span>\[ \dots \]</div>
 </div>
 </details></div>
+<div class="section" id="local-set-of-coordinates">
+<span id="general-relativity-local-inertial-reference-frame-local-coordinates"></span><h2><span class="section-number">7.5.3. </span>Local set of coordinates<a class="headerlink" href="#local-set-of-coordinates" title="Permalink to this heading">#</a></h2>
+<p>Exploiting the inverse transformation <a class="reference internal" href="#equation-eq-local-inertial-basis-transformation-inverse">(7.8)</a>, it’s possible to write a polynomial expansion around the event <span class="math notranslate nohighlight">\(P\)</span> of the original coordinates <span class="math notranslate nohighlight">\(q^\mu\)</span> as a function of the local coordinates <span class="math notranslate nohighlight">\(x^{\alpha}\)</span> as</p>
+<div class="math notranslate nohighlight" id="equation-eq-polynomial-expansion">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-polynomial-expansion" title="Permalink to this equation">#</a></span>\[q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^{\mu}_{\ \ \alpha \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^{\alpha} x^{\beta} x^\gamma + o\left( \left( x^\lambda \right)^3 \right) \ .\]</div>
+<!--
+## Local set of coordinates
+Let the vectors $\mathbf{e}_{\mu}$ of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates $\{ x^\mu \}_{\mu=0:3}$, identifying the event $P$ with $x^{\mu}_P = 0$
+
+$$\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .$$
+
+
+A polynomial expansion of the coordinates $q^{\mu}$ as a function of the local coordinates $x^{\alpha}$ around $P$ ($x^\alpha=0$ at $P$) reads
+
+$$
+q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
+$$ (eq-polynomial-expansion)
+
+where $A$ and $B$ are totally symmetric in their lower indices. The inverse of $\tilde e$ is $e^\alpha{}_\mu$:
+
+$$
+e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
+$$
+-->
+</div>
+<div class="section" id="first-order-the-tetrad">
+<h2><span class="section-number">7.5.4. </span>First order: the tetrad<a class="headerlink" href="#first-order-the-tetrad" title="Permalink to this heading">#</a></h2>
+<p>Already discussed in the section about <a class="reference internal" href="#general-relativity-local-inertial-reference-frame-local-coordinates"><span class="std std-ref">Local basis</span></a>.</p>
+</div>
 <div class="section" id="second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">
 <h2><span class="section-number">7.5.5. </span>Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span><a class="headerlink" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0" title="Permalink to this heading">#</a></h2>
-<p>The requirement that <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span> fixes the value of the coefficients <span class="math notranslate nohighlight">\(A^{\lambda}_{\alpha \beta}\)</span> in the expansion <a class="reference internal" href="#equation-eq-polynomial-expansion">(7.8)</a>.
+<p>The requirement that <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span> fixes the value of the coefficients <span class="math notranslate nohighlight">\(A^{\lambda}_{\alpha \beta}\)</span> in the expansion <a class="reference internal" href="#equation-eq-polynomial-expansion">(7.11)</a>.
 From the transformation law <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a>, using <span class="math notranslate nohighlight">\(\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha\)</span> and <span class="math notranslate nohighlight">\(\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -680,7 +722,7 @@ From the transformation law <a class="reference internal" href="#equation-eq-gam
 \]</div>
 <p>Setting this to zero:</p>
 <div class="math notranslate nohighlight" id="equation-eq-a">
-<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-a" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-eq-a" title="Permalink to this equation">#</a></span>\[
 \boxed{\,A^\lambda{}_{\alpha\beta}=-\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\,}
 \]</div>
 <p>The right side is symmetric in <span class="math notranslate nohighlight">\(\alpha\beta\)</span>, as required. The solution is <strong>unique</strong>: no freedom is left at second order. So the quadratic approximation of the coordinate map is</p>
@@ -690,12 +732,12 @@ q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(
 \]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-The same <span class="math notranslate nohighlight">\(A\)</span> removes <span class="math notranslate nohighlight">\(\partial g'\)</span><div class="sd-summary-down docutils">
+The same <span class="math notranslate nohighlight">\(\ A \ \)</span> removes <span class="math notranslate nohighlight">\(\ \partial g'\)</span><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Expand <code class="xref eq docutils literal notranslate"><span class="pre">eq-g-transf</span></code> to first order in <span class="math notranslate nohighlight">\(x\)</span>. The ingredients are</p>
+<p class="sd-card-text">Expand <span class="math notranslate nohighlight">\(g_{\mu \nu}(q^\sigma (x^\alpha))\)</span> to first order in <span class="math notranslate nohighlight">\(x\)</span>. The ingredients are</p>
 <div class="math notranslate nohighlight">
 \[
 \partial_\alpha q^\mu=\tilde e^\mu{}_\alpha+A^\mu{}_{\alpha\sigma}x^\sigma+O(x^2),\qquad
@@ -707,14 +749,14 @@ g_{\mu\nu}(q(x))=g_{\mu\nu}(P)+\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma 
 g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
 +g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
 \]</div>
-<p class="sd-card-text">Insert <a class="reference internal" href="#equation-eq-a">(7.11)</a> and use <span class="math notranslate nohighlight">\(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\)</span> (and the symmetry in the last two indices):</p>
+<p class="sd-card-text">Insert <a class="reference internal" href="#equation-eq-a">(7.12)</a> and use <span class="math notranslate nohighlight">\(g_{\mu\nu}\Gamma^\mu{}_{\kappa\rho}=\Gamma_{\nu,\kappa\rho}\)</span> (and the symmetry in the last two indices):</p>
 <div class="math notranslate nohighlight">
 \[
 g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\Big[\partial_\rho g_{\mu\nu}-\Gamma_{\mu,\rho\nu}-\Gamma_{\nu,\rho\mu}\Big]+O(x^2).
 \]</div>
 <p class="sd-card-text">The bracket vanishes identically by metric compatibility <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code>. Therefore</p>
 <div class="math notranslate nohighlight" id="equation-eq-second-order">
-<span class="eqno">(7.12)<a class="headerlink" href="#equation-eq-second-order" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-eq-second-order" title="Permalink to this equation">#</a></span>\[
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+O(x^2)\,}\qquad\Longleftrightarrow\qquad \Gamma'(P)=0\ \Longleftrightarrow\ \partial_\gamma g'_{\alpha\beta}(P)=0 .
 \]</div>
 </div>
@@ -732,7 +774,7 @@ g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\,\tilde e^\rho{}_\sigma\tilde e^
 <h2><span class="section-number">7.5.6. </span>Third order in <span class="math notranslate nohighlight">\(q^{\mu}(x^\alpha)\)</span><a class="headerlink" href="#third-order-in-q-mu-x-alpha" title="Permalink to this heading">#</a></h2>
 <p>The cubic coefficients <span class="math notranslate nohighlight">\(B^\lambda{}_{\alpha\beta\gamma}\)</span> are totally symmetric. Differentiate <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a> once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'(P)=0\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-t">
-<span class="eqno">(7.13)<a class="headerlink" href="#equation-eq-t" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.14)<a class="headerlink" href="#equation-eq-t" title="Permalink to this equation">#</a></span>\[
 T^\gamma{}_{\alpha\beta\delta}:=\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda B^\lambda{}_{\alpha\beta\delta}+C^\gamma{}_{\alpha\beta\delta},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is built only from <span class="math notranslate nohighlight">\(\tilde e\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\Gamma(P)\)</span> and <span class="math notranslate nohighlight">\(\partial\Gamma(P)\)</span> (it does not depend on <span class="math notranslate nohighlight">\(B\)</span>). The derivative of the prefactor <span class="math notranslate nohighlight">\(\partial x^\gamma/\partial q^\lambda\)</span> does not contribute, because it multiplies the bracket of <a class="reference internal" href="#equation-eq-gamma-transf">(7.10)</a>, which vanishes at <span class="math notranslate nohighlight">\(P\)</span>. The only place <span class="math notranslate nohighlight">\(B\)</span> enters is through <span class="math notranslate nohighlight">\(\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}\)</span>. <span class="math notranslate nohighlight">\(T\)</span> is symmetric in <span class="math notranslate nohighlight">\(\alpha\beta\)</span>.</p>
@@ -757,11 +799,11 @@ R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}
 \]</div>
 <p>Hence, in any coordinate system with <span class="math notranslate nohighlight">\(\Gamma'(P)=0\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-decomp">
-<span class="eqno">(7.14)<a class="headerlink" href="#equation-eq-decomp" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.15)<a class="headerlink" href="#equation-eq-decomp" title="Permalink to this equation">#</a></span>\[
 \boxed{\,\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=S^\gamma{}_{\alpha\beta\delta}-\tfrac13\big(R'^\gamma{}_{\alpha\beta\delta}+R'^\gamma{}_{\beta\alpha\delta}\big)\,}
 \]</div>
 <ul>
-<li><p>The <strong>totally symmetric part <span class="math notranslate nohighlight">\(S\)</span></strong> is pure gauge: by <a class="reference internal" href="#equation-eq-t">(7.13)</a> it can be shifted at will through <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
+<li><p>The <strong>totally symmetric part <span class="math notranslate nohighlight">\(S\)</span></strong> is pure gauge: by <a class="reference internal" href="#equation-eq-t">(7.14)</a> it can be shifted at will through <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <li><p>The <strong>rest</strong> is fixed by the Riemann tensor, which transforms as a tensor and therefore cannot be changed by any coordinate choice:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -803,7 +845,7 @@ B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\
 \]</div>
 <p>and the Taylor expansion of the metric is</p>
 <div class="math notranslate nohighlight" id="equation-eq-rnc">
-<span class="eqno">(7.15)<a class="headerlink" href="#equation-eq-rnc" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7.16)<a class="headerlink" href="#equation-eq-rnc" title="Permalink to this equation">#</a></span>\[
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}-\tfrac13\,R_{\alpha\gamma\beta\delta}(P)\,x^\gamma x^\delta+O(x^3)\,}
 \]</div>
 </div>
@@ -864,7 +906,7 @@ B^\lambda{}_{\alpha\beta\delta}=-\tilde e^\lambda{}_\gamma\,C^\gamma{}_{(\alpha\
    \]</div>
 <p>so all local laws take their special-relativistic form, with relative corrections of order <span class="math notranslate nohighlight">\(|R|\,L^2\)</span> in a region of size <span class="math notranslate nohighlight">\(L\)</span>.</p>
 </li>
-<li><p><strong>What remains is tidal.</strong> The residual gravitational information is the Riemann tensor, as seen in <a class="reference internal" href="#equation-eq-rnc">(7.15)</a> and in the <strong>geodesic deviation</strong> of two neighbouring free-falling particles with separation <span class="math notranslate nohighlight">\(\xi^\mu\)</span> and 4-velocity <span class="math notranslate nohighlight">\(u^\mu\)</span>:</p>
+<li><p><strong>What remains is tidal.</strong> The residual gravitational information is the Riemann tensor, as seen in <a class="reference internal" href="#equation-eq-rnc">(7.16)</a> and in the <strong>geodesic deviation</strong> of two neighbouring free-falling particles with separation <span class="math notranslate nohighlight">\(\xi^\mu\)</span> and 4-velocity <span class="math notranslate nohighlight">\(u^\mu\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
    \frac{D^2\xi^\mu}{d\tau^2}=R^\mu{}_{\nu\rho\sigma}\,u^\nu u^\rho\,\xi^\sigma .
@@ -887,7 +929,7 @@ ds^2=\Big(1+\frac{a\xi}{c^2}\Big)^2dT^2-d\xi^2-dy^2-dz^2 .
 \[
 \Gamma^\xi{}_{TT}=\frac{a}{c^2}\Big(1+\frac{a\xi}{c^2}\Big)\ \xrightarrow{\ \xi=0\ }\ \frac{a}{c^2}.
 \]</div>
-<p>Take <span class="math notranslate nohighlight">\(\tilde e=\mathbb 1\)</span> at <span class="math notranslate nohighlight">\(P\)</span> (the observer’s own frame). Then by <a class="reference internal" href="#equation-eq-a">(7.11)</a>,</p>
+<p>Take <span class="math notranslate nohighlight">\(\tilde e=\mathbb 1\)</span> at <span class="math notranslate nohighlight">\(P\)</span> (the observer’s own frame). Then by <a class="reference internal" href="#equation-eq-a">(7.12)</a>,</p>
 <div class="math notranslate nohighlight">
 \[
 A^\xi{}_{TT}=-\frac{a}{c^2}
@@ -978,7 +1020,7 @@ g_{00}=(1+a_ix^i)^2-(\boldsymbol\omega\times\mathbf x)^2+\dots
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-and-notation">7.5.1. Setting and notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis">7.5.2. Local vector basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-vector-basis-first-order-terms-of-local-coordinates">7.5.2. Local vector basis - first order terms of local coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-set-of-coordinates">7.5.3. Local set of coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-the-tetrad">7.5.4. First order: the tetrad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0">7.5.5. Second order, <span class="math notranslate nohighlight">\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\)</span>, and <span class="math notranslate nohighlight">\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\)</span></a></li>

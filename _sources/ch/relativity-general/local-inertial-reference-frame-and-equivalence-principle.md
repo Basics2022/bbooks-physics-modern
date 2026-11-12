@@ -61,38 +61,37 @@ $\partial_\alpha\mathbf b'_\beta=\partial_\alpha\partial_\beta q^\nu\,\mathbf b_
 The inhomogeneous term $\partial_\alpha\partial_\beta q^\lambda$ is why $\Gamma$ is **not a tensor** and can be switched off at a point.
 -->
 
-## Local vector basis
+(general-relativity:local-inertial-reference-frame:local-basis)=
+## Local vector basis - first order terms of local coordinates
 
-Definition of a local basis $\mathbf{e}_{\mu}$, s.t. $\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}$.
+**Transformation of basis vectors.** As $\mathbf{e}_{\alpha}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial x^\alpha}\right|_{x^\beta = 0}$, and $\mathbf{b}_{\mu}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial q^\mu}\right|_{q^{\nu}=q^{\nu}_P}$, using the rule of differentiation of composite functions on $\mathbf{X}(x^\alpha(q^\mu))$
+
+$$\left.\mathbf{b}_{\mu}\right|_P = \left.\frac{\partial \mathbf{X}}{\partial q^{\mu}}\right|_{q^{\nu}_P} = \left.\frac{\partial x^{\alpha}}{\partial q^{\mu}}\right|_{q^\nu=0} \left.\frac{\partial \mathbf{X}}{\partial x^{\alpha}}\right|_{x^\beta=0} =:\left. e^{\alpha}_{\ \ \mu} \right|_P \left.\mathbf{e}_{\alpha}\right|_P \ ,$$
+
+having defined the matrix of transformation of the vectors of the local bases in $P$, $e^{\alpha}_{\ \ \mu}$. The inverse transformation is defined as
+
+$$\widetilde{e}^{\mu}_{\ \ \alpha} = \left. \frac{\partial q^{\mu}}{\partial x^{\alpha}} \right|_{q^{\nu}_P} \ ,$$ (eq:local-inertial:basis-transformation:inverse)
+
+so that 
+
+$$\widetilde{e}^{\mu}_{\ \ \alpha} e^{\alpha}_{\ \ \nu} = \frac{\partial q^{\mu}}{\partial x^{\alpha}} \frac{\partial x^{\alpha}}{\partial q^{\nu}} = \frac{\partial q^{\mu}}{\partial q^{\nu}} = \delta^{\mu}_{\nu} \ . $$
+
+The vectors $\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu$ form a **local basis** (tetrad) at $P$. Requiring $g'_{\alpha\beta}(P) = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \eta_{\alpha\beta}$ immediately gives
+
+$$
+\eta_{\alpha \beta} = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} \mathbf{b}^{\mu} \cdot \mathbf{b}^{\nu} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} g_{\mu \nu}(P) \ , $$
+
+i.e.
+
+$$\begin{aligned}
+  \eta_{\alpha \beta} & = g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta \\
+  g_{\mu\nu}(P) & = e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta} \ .
+\end{aligned}$$ (eq-tetrad)
+
+<!--
+Definition of a local basis $\mathbf{e}_{\alpha}$, s.t. $\mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \eta_{\alpha \beta}$.
 
 ...
-
-Transformation of coordinates
-
-...
-
-
-## Local set of coordinates
-
-Let the vectors $\mathbf{e}_{\mu}$ of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates $\{ x^\mu \}_{\mu=0:3}$, identifying the event $P$ with $x^{\mu}_P = 0$
-
-$$\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .$$
-
-
-A polynomial expansion of the coordinates $q^{\mu}$ as a function of the local coordinates $x^{\alpha}$ around $P$ ($x^\alpha=0$ at $P$) reads
-
-$$
-q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
-$$ (eq-polynomial-expansion)
-
-where $A$ and $B$ are totally symmetric in their lower indices. The inverse of $\tilde e$ is $e^\alpha{}_\mu$:
-
-$$
-e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
-$$
-
-
-##  First order: the tetrad
 
 The vectors $\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu$ form a **local basis** (tetrad) at $P$. Requiring $g'_{\alpha\beta}(P)=\eta_{\alpha\beta}$ gives
 
@@ -102,6 +101,8 @@ g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
 $$ (eq-tetrad)
 
 and the reciprocal basis is $\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu$ with $\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta$.
+
+-->
 
 ```{admonition} How many free parameters?
 
@@ -141,6 +142,39 @@ $$ \dots $$ (eq-gamma-transf)
 
 ```
 
+(general-relativity:local-inertial-reference-frame:local-coordinates)=
+## Local set of coordinates
+
+
+Exploiting the inverse transformation {eq}`eq:local-inertial:basis-transformation:inverse`, it's possible to write a polynomial expansion around the event $P$ of the original coordinates $q^\mu$ as a function of the local coordinates $x^{\alpha}$ as
+
+$$q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^{\mu}_{\ \ \alpha \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^{\alpha} x^{\beta} x^\gamma + o\left( \left( x^\lambda \right)^3 \right) \ .$$ (eq-polynomial-expansion)
+
+
+<!--
+## Local set of coordinates
+Let the vectors $\mathbf{e}_{\mu}$ of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates $\{ x^\mu \}_{\mu=0:3}$, identifying the event $P$ with $x^{\mu}_P = 0$
+
+$$\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .$$
+
+
+A polynomial expansion of the coordinates $q^{\mu}$ as a function of the local coordinates $x^{\alpha}$ around $P$ ($x^\alpha=0$ at $P$) reads
+
+$$
+q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
+$$ (eq-polynomial-expansion)
+
+where $A$ and $B$ are totally symmetric in their lower indices. The inverse of $\tilde e$ is $e^\alpha{}_\mu$:
+
+$$
+e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
+$$
+-->
+
+##  First order: the tetrad
+
+Already discussed in the section about [Local basis](general-relativity:local-inertial-reference-frame:local-coordinates).
+
 ## Second order, $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$, and $\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0$
 
 The requirement that $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$ fixes the value of the coefficients $A^{\lambda}_{\alpha \beta}$ in the expansion {eq}`eq-polynomial-expansion`.
@@ -162,10 +196,10 @@ $$
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
 $$
 
-```{dropdown} The same $A$ removes $\partial g'$
+```{dropdown} The same $\ A \ $ removes $\ \partial g'$
 :open:
 
-Expand {eq}`eq-g-transf` to first order in $x$. The ingredients are
+Expand $g_{\mu \nu}(q^\sigma (x^\alpha))$ to first order in $x$. The ingredients are
 
 $$
 \partial_\alpha q^\mu=\tilde e^\mu{}_\alpha+A^\mu{}_{\alpha\sigma}x^\sigma+O(x^2),\qquad

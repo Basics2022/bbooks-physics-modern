@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -519,7 +528,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-point">2.1. Kinematics of point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-a-point">2.1. Kinematics of a point</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics-of-a-point-mass">2.2. Dynamics of a point mass</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">2.2.1. Lagrangian approach</a></li>
 </ul>
@@ -582,8 +591,8 @@ Its "length", or better pseudo-norm with Minkowski metric, is invariant and read
 <p><strong>Elementary interval</strong> between two events</p>
 <div class="math notranslate nohighlight">
 \[d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 \]</div>
-<div class="section" id="kinematics-of-point">
-<h2><span class="section-number">2.1. </span>Kinematics of point<a class="headerlink" href="#kinematics-of-point" title="Permalink to this heading">#</a></h2>
+<div class="section" id="kinematics-of-a-point">
+<span id="relativity-special-notes-kinematics-point"></span><h2><span class="section-number">2.1. </span>Kinematics of a point<a class="headerlink" href="#kinematics-of-a-point" title="Permalink to this heading">#</a></h2>
 <p><strong>Proper time.</strong> For a co-moving observer, <span class="math notranslate nohighlight">\(d \vec{r}' = \vec{0}\)</span>, and <span class="math notranslate nohighlight">\(t'\)</span> is commonly indicated with <span class="math notranslate nohighlight">\(\tau\)</span>, and its differential is invariant itself, being the product of a constant (<span class="math notranslate nohighlight">\(c\)</span> is a universal constant in special relativity) and an invariant quantity.</p>
 <div class="math notranslate nohighlight">
 \[d s^2 = c^2 dt'^2 - |d \vec{r}'|^2 = c^2 d \tau^2 \ .\]</div>
@@ -602,7 +611,7 @@ Its "length", or better pseudo-norm with Minkowski metric, is invariant and read
 <p><strong>4-Velocity.</strong> Given the parametric representation of an event in space-time as a function of its proper time, <span class="math notranslate nohighlight">\(\mathbf{X}(\tau)\)</span> or coordinate <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X}(s)\)</span> the derivative w.r.t. this parameter is defined as the 4-velocity of the event in space time. Using Cartesian coordinates inducing constant and uniform basis <span class="math notranslate nohighlight">\(\mathbf{E}_{\alpha}\)</span>, as a function of the observer time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(c t\)</span>, <span class="math notranslate nohighlight">\(x^i(t)\)</span>, and the transformation of coordinates <span class="math notranslate nohighlight">\(t(\tau)\)</span>, with differential <span class="math notranslate nohighlight">\(d t = \frac{1}{\gamma} \, d \tau\)</span></p>
 <div class="math notranslate nohighlight">
 \[\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)\]</div>
-<p>or</p>
+<p>or - with the notation abuse of using the same symbol <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> for the function representing the derivative of <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> w.r.t. two different variables -</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{U}(s) := \mathbf{X}'(s) = \dfrac{d t}{ ds } \dfrac{d}{dt} \mathbf{X}(t) = \dots = \gamma(v/c) \left( \mathbf{E}_0 + \frac{\vec{v}}{c} \right) \ .\]</div>
 <div class="admonition note">
@@ -612,8 +621,82 @@ Its "length", or better pseudo-norm with Minkowski metric, is invariant and read
 \[\mathbf{U}(s) \cdot \mathbf{U}(s) = \gamma^2 \underbrace{\left( 1 - \frac{|\vec{v}|^2}{c^2} \right)}_{=\gamma^{-2}} = 1 \ .\]</div>
 <p>Using <span class="math notranslate nohighlight">\(\tau\)</span> as the parameter, <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> has physical dimension of a velocity and pseudo-norm = <span class="math notranslate nohighlight">\(c\)</span>.</p>
 </div>
-<p><strong>4-acceleration</strong> <span class="math notranslate nohighlight">\(\mathbf{X}''(\tau)\)</span> or <span class="math notranslate nohighlight">\(\mathbf{X}''(s)\)</span>, <strong>todo</strong></p>
+<div class="admonition-orthogonality-condition-between-4-velocity-and-4-acceleration admonition">
+<p class="admonition-title">Orthogonality condition between 4-velocity and 4-acceleration</p>
+<p>As <span class="math notranslate nohighlight">\(\mathbf{U}(\tau) \cdot \mathbf{U}(\tau) = c^2\)</span> constant, then its derivative is identically zero, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-relativity-kinematics-vel-acc-orthogonality">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-relativity-kinematics-vel-acc-orthogonality" title="Permalink to this equation">#</a></span>\[\mathbf{U} \cdot \mathbf{A} = 0 \ .\]</div>
 </div>
+<p><strong>4-acceleration</strong> <span class="math notranslate nohighlight">\(\mathbf{X}''(\tau)\)</span> or <span class="math notranslate nohighlight">\(\mathbf{X}''(s)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \mathbf{A}(\tau) := \mathbf{U}'(\tau) = \mathbf{X}''(\tau) \ .
+\end{aligned}\]</div>
+<p>or using reference frame time <span class="math notranslate nohighlight">\(t\)</span> as independent variable</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} = \gamma^4 \frac{\vec{v}}{c} \cdot\vec{a} \, \mathbf{E}_0 + \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details. Relation between 4-dimensional and 3+1 dimensional representation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s write the acceleration as a function of the independent variable <span class="math notranslate nohighlight">\(t\)</span>, the inertial frame time coordinate,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} = \frac{d \mathbf{U}}{d \tau} = \frac{d t}{d \tau} \frac{d}{dt} \left( c \gamma \mathbf{E}_0 + \gamma v_i \mathbf{E}_i \right) \ .\]</div>
+<p class="sd-card-text">The time component reads</p>
+<div class="math notranslate nohighlight">
+\[ A^0 = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} \]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  A^0 
+  &amp; = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma c \right) = \\
+  &amp; = \gamma c \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} = \\
+  &amp; = \gamma c \left( - \frac{1}{2} \right) \left( 1 - \frac{| \vec{v} |^2}{c^2} \right)^{-\frac{3}{2}} \left( - 2 \frac{\vec{v} \cdot \vec{a}}{c^2} \right) = \\
+  &amp; = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p class="sd-card-text">Space components read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  A^i &amp; = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \\
+  \vec{A}^{(3)}
+  &amp; = \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} = \\
+  &amp; = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\}  \ .
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  A^i 
+  &amp; = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma v_i \right) = \\
+  &amp; = \gamma \left\{ \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} v_i + \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} \frac{d v_i}{dt} \right\} = \\
+  &amp; = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{A}^{(3)}
+  &amp; = \gamma^4  \frac{\vec{v}}{c} \frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 \vec{a} = \\
+  &amp; = \gamma^4 \left\{ \frac{\vec{v}}{c} \frac{\vec{v}\cdot\vec{a}}{c} + \left( 1 - \frac{|\vec{v}|^2}{c^2} \right) \vec{a} \right\} = \\
+  &amp; = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\} \ . 
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details></div>
 <div class="section" id="dynamics-of-a-point-mass">
 <h2><span class="section-number">2.2. </span>Dynamics of a point mass<a class="headerlink" href="#dynamics-of-a-point-mass" title="Permalink to this heading">#</a></h2>
 <p><strong>4-momentum</strong></p>
@@ -675,23 +758,23 @@ Energy-momentum relation<div class="sd-summary-down docutils">
 </div>
 </details><p><strong>4-force and dynamical equation for a point mass.</strong> The dynamical equation of a point mass subject to a 4-force <span class="math notranslate nohighlight">\(\mathbf{f}\)</span> reads</p>
 <div class="math notranslate nohighlight" id="equation-eq-point-dynamics">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-point-dynamics" title="Permalink to this equation">#</a></span>\[\dfrac{d \mathbf{P}}{d \tau} = \mathbf{f} \ .\]</div>
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-point-dynamics" title="Permalink to this equation">#</a></span>\[\dfrac{d \mathbf{P}}{d \tau} = \mathbf{f} \ .\]</div>
 <p>Examples:</p>
 <ul>
 <li><p><strong>Free particle</strong> is subject to no net force, <span class="math notranslate nohighlight">\(\mathbf{f}\)</span>,</p></li>
-<li><p>Point charge <span class="math notranslate nohighlight">\(q\)</span> in EM field is subject to <strong>Lorentz force</strong>, <span class="math notranslate nohighlight">\(\mathbf{f} = q \mathbf{F} \cdot \mathbf{U}\)</span>, being <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> the EM field tensor, <a class="reference internal" href="#equation-eq-tensor-em-field">(2.4)</a>,</p>
+<li><p>Point charge <span class="math notranslate nohighlight">\(q\)</span> in EM field is subject to <strong>Lorentz force</strong>, <span class="math notranslate nohighlight">\(\mathbf{f} = q \mathbf{F} \cdot \mathbf{U}\)</span>, being <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> the EM field tensor, <a class="reference internal" href="#equation-eq-tensor-em-field">(2.5)</a>,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{F} = \nabla \mathbf{A} - \left( \nabla \mathbf{A} \right)^T \ .\]</div>
 </li>
 </ul>
 <div class="section" id="lagrangian-approach">
 <h3><span class="section-number">2.2.1. </span>Lagrangian approach<a class="headerlink" href="#lagrangian-approach" title="Permalink to this heading">#</a></h3>
-<p>Here variational approach to the motion of point particle in a force field <span class="math notranslate nohighlight">\(\mathbf{f}\)</span> is derived from the weak form of the dynamical equation <a class="reference internal" href="#equation-eq-point-dynamics">(2.1)</a>. In particular, the derivation is performed for a particle moving in a known EM field. The motion of a free particle immediately follows if the EM field is zero.</p>
+<p>Here variational approach to the motion of point particle in a force field <span class="math notranslate nohighlight">\(\mathbf{f}\)</span> is derived from the weak form of the dynamical equation <a class="reference internal" href="#equation-eq-point-dynamics">(2.2)</a>. In particular, the derivation is performed for a particle moving in a known EM field. The motion of a free particle immediately follows if the EM field is zero.</p>
 <div class="math notranslate nohighlight">
 \[m \dfrac{d \mathbf{U}}{d \tau} = q \mathbf{F} \cdot \mathbf{U}\]</div>
 <p>The equation of motion can be manipulated to get Lagrange equations</p>
 <div class="math notranslate nohighlight" id="equation-eq-point-dynamics-lagrange">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-point-dynamics-lagrange" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-point-dynamics-lagrange" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   \mathbf{0} 
   &amp; = m \dfrac{d \mathbf{U}}{d \tau} - q \nabla \mathbf{A} \cdot \mathbf{U} + q \left( \nabla \mathbf{A} \right)^T \cdot \mathbf{U} = \\
   &amp; = \dfrac{d}{d\tau} \left[ m \mathbf{U} + q \mathbf{A}(\mathbf{X}(\tau)) \right] - \nabla \left( q \mathbf{A} \cdot \mathbf{U} \right) = (1) \\
@@ -699,7 +782,7 @@ Energy-momentum relation<div class="sd-summary-down docutils">
   &amp; = \mathbf{E}^{\alpha} \left[ \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial X^{'\alpha}} - \dfrac{\partial \mathscr{L}}{\partial X^{\alpha}} \right] = \\
   &amp; = \dfrac{d}{d\tau} \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}^{'}} - \dfrac{\partial \mathscr{L}}{\partial \mathbf{X}}
 \end{aligned}\end{split}\]</div>
-<p>since (1) <span class="math notranslate nohighlight">\(\mathbf{U} = \mathbf{E}^{\alpha} U_\alpha = c \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}\)</span>, see <a class="reference internal" href="#equation-eq-proof-vel-der-c2">(2.3)</a>, and <span class="math notranslate nohighlight">\(\sqrt{\mathbf{U} \cdot \mathbf{U}}\)</span> independent from <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, and equal to <span class="math notranslate nohighlight">\(c^2\)</span> and (2) with the definition of the <strong>Lagrangian function</strong></p>
+<p>since (1) <span class="math notranslate nohighlight">\(\mathbf{U} = \mathbf{E}^{\alpha} U_\alpha = c \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}\)</span>, see <a class="reference internal" href="#equation-eq-proof-vel-der-c2">(2.4)</a>, and <span class="math notranslate nohighlight">\(\sqrt{\mathbf{U} \cdot \mathbf{U}}\)</span> independent from <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, and equal to <span class="math notranslate nohighlight">\(c^2\)</span> and (2) with the definition of the <strong>Lagrangian function</strong></p>
 <div class="math notranslate nohighlight">
 \[\mathscr{L}(\mathbf{X}'(\tau), \mathbf{X}(\tau), \tau) := - m c \sqrt{\mathbf{X}'(\tau) \cdot \mathbf{X}'(\tau)} - q \mathbf{A}(\mathbf{X}(\tau)) \cdot \mathbf{X}'(\tau)\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
@@ -710,7 +793,7 @@ Proof of the relation used in (1)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight" id="equation-eq-proof-vel-der-c2">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-proof-vel-der-c2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-proof-vel-der-c2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
    \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{U^{\beta} U_{\beta}}
    &amp; = \mathbf{E}^{\alpha} \frac{\partial}{\partial U^\alpha} \sqrt{ g_{\beta \gamma} U^{\beta} U^{\gamma}} = \\
    &amp; = \mathbf{E}^{\alpha} \dfrac{1}{2 \sqrt{U^\beta U_\beta}} \left( g_{\beta \gamma} \delta^{\beta}_{\alpha} U^{\gamma} +  g_{\beta \gamma} U^{\beta}\delta_{\alpha}^{\gamma} \right) = \\
@@ -721,7 +804,7 @@ Proof of the relation used in (1)<div class="sd-summary-down docutils">
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">since <span class="math notranslate nohighlight">\(\mathbf{U} \cdot \mathbf{U} = c^2\)</span> and the components of the metric tensor are independent from the velocity.</p>
 </div>
-</details><p>Weak form of the problem is derived from the Lagrange equation <a class="reference internal" href="#equation-eq-point-dynamics-lagrange">(2.2)</a>, with dot product with arbitrary 4-vector <span class="math notranslate nohighlight">\(\mathbf{W}\)</span>,</p>
+</details><p>Weak form of the problem is derived from the Lagrange equation <a class="reference internal" href="#equation-eq-point-dynamics-lagrange">(2.3)</a>, with dot product with arbitrary 4-vector <span class="math notranslate nohighlight">\(\mathbf{W}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{aligned}
   0 
@@ -870,7 +953,7 @@ Lagrange equations and variational principle with generalized coordinates<div cl
 \end{bmatrix}\end{split}\]</div>
 <p>The electromagnetic field tensor is defined as the anti-symmetric part of the gradient of the 4-electromagnetic potential,</p>
 <div class="math notranslate nohighlight" id="equation-eq-tensor-em-field">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-tensor-em-field" title="Permalink to this equation">#</a></span>\[\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]\]</div>
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-tensor-em-field" title="Permalink to this equation">#</a></span>\[\mathbf{F} = \left[ \symbf{\nabla} \mathbf{A} - \left( \symbf{\nabla} \mathbf{A} \right)^T \right]\]</div>
 <p>whose components may be collected in a 2-dimensional array (first index for rows, second index for columns),</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}F^{\alpha \beta} = 
@@ -1027,7 +1110,7 @@ $$\begin{aligned}
   \frac{\partial \vec{s}}{\partial t} + \nabla \cdot \left\{ c^2 \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] \right\} &amp; = - c^2 (\rho^f \vec{e} - \vec{b} \times \vec{j}^f) \\
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-energy-momentum-equation-3d">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-energy-momentum-equation-3d" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-energy-momentum-equation-3d" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   \frac{1}{c} \frac{\partial u}{\partial t} + \nabla \cdot \left( \frac{\vec{s}}{c} \right) &amp; = - \frac{\vec{e}}{c} \cdot \vec{j}^f \\
   \frac{1}{c} \frac{\partial}{\partial t} \frac{ \vec{s}}{c} + \nabla \cdot \left[ \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \right] &amp; = - \rho^f c \frac{\vec{e}}{c} + \vec{b} \times \vec{j}^f \\
 \end{aligned}\end{split}\]</div>
@@ -1036,7 +1119,7 @@ $$\begin{aligned}
 \[\symbf{\nabla} \cdot \mathbf{T} = - \mathbf{F} \cdot \mathbf{J}\]</div>
 <p>with the <strong>energy-momentum-stress tensor</strong>, <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-0">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-0" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-0" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
   T^{\alpha \beta} &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} D^{\beta}_{\ \ \nu} = \\
                    &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} - F^{\alpha \nu} g^{\beta \mu} D_{\mu \nu} = \\
                    &amp; = \dfrac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu} + F^{\alpha \nu} D_{\nu \mu} g^{\mu \beta} \\
@@ -1049,7 +1132,7 @@ Term <span class="math notranslate nohighlight">\(\ \mathbf{g} \ \mathbf{F} : \m
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-1">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-1" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{F} : \mathbf{D} = F_{\mu \nu} D^{\mu \nu} =
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-1" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{F} : \mathbf{D} = F_{\mu \nu} D^{\mu \nu} =
   \begin{bmatrix} 0 &amp; \frac{\underline{e}^T}{c} \\ -\frac{\underline{e}}{c} &amp; \underline{b}_{\times} \end{bmatrix} :
   \begin{bmatrix} 0 &amp; -c \underline{d}^T \\ c \underline{d} &amp; \underline{h}_{\times} \end{bmatrix} = - 2 \underline{e}^T \underline{d} + 2 \underline{b}^T \underline{h} = 2 \left( - \vec{e} \cdot \vec{d} + \vec{b} \cdot \vec{h} \right) \ .
 \end{split}\]</div>
@@ -1062,7 +1145,7 @@ Term <span class="math notranslate nohighlight">\(\ F^{\alpha \nu} D^{\beta}_{\ 
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight" id="equation-eq-energy-momentum-tensor-2">
-<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-2" title="Permalink to this equation">#</a></span>\[\begin{split}F^{\alpha \nu} D^{\beta}_{\ \ \nu} =
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-energy-momentum-tensor-2" title="Permalink to this equation">#</a></span>\[\begin{split}F^{\alpha \nu} D^{\beta}_{\ \ \nu} =
   \begin{bmatrix} 0 &amp; -\frac{\underline{e}^T}{c} \\ \frac{\underline{e}}{c} &amp; \underline{b}_{\times} \end{bmatrix} 
   \begin{bmatrix} 0 &amp; c \underline{d}^T \\ c \underline{d} &amp; -\underline{h}^T_{\times} \end{bmatrix} = 
   \begin{bmatrix}
@@ -1083,7 +1166,7 @@ Energy-stress tensor<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Putting together the expression <a class="reference internal" href="#equation-eq-energy-momentum-tensor-1">(2.7)</a> of term <span class="math notranslate nohighlight">\(\frac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu}\)</span> and <a class="reference internal" href="#equation-eq-energy-momentum-tensor-2">(2.8)</a> of term <span class="math notranslate nohighlight">\(F^{\alpha \nu} D^{\beta}_{\ \ \nu}\)</span>, with <span class="math notranslate nohighlight">\(\underline{d} = \varepsilon \underline{e}\)</span>, <span class="math notranslate nohighlight">\(\underline{b} = \mu \underline{h}\)</span> (<strong>todo</strong> do energy balance for all charges and currents and spearating contributions of free and bound charges and currents)</p>
+<p class="sd-card-text">Putting together the expression <a class="reference internal" href="#equation-eq-energy-momentum-tensor-1">(2.8)</a> of term <span class="math notranslate nohighlight">\(\frac{1}{4} g^{\alpha \beta} F_{\mu \nu} D^{\mu \nu}\)</span> and <a class="reference internal" href="#equation-eq-energy-momentum-tensor-2">(2.9)</a> of term <span class="math notranslate nohighlight">\(F^{\alpha \nu} D^{\beta}_{\ \ \nu}\)</span>, with <span class="math notranslate nohighlight">\(\underline{d} = \varepsilon \underline{e}\)</span>, <span class="math notranslate nohighlight">\(\underline{b} = \mu \underline{h}\)</span> (<strong>todo</strong> do energy balance for all charges and currents and spearating contributions of free and bound charges and currents)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  T^{\alpha \beta}
@@ -1107,7 +1190,7 @@ Energy-stress equation in 4-dimensional formalism<div class="sd-summary-down doc
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Energy and momentum balance equations <a class="reference internal" href="#equation-eq-energy-momentum-equation-3d">(2.5)</a> can be recast using 4-dimensional formalism,</p>
+<p class="sd-card-text">Energy and momentum balance equations <a class="reference internal" href="#equation-eq-energy-momentum-equation-3d">(2.6)</a> can be recast using 4-dimensional formalism,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \nabla \cdot \mathbf{T} &amp; = - \mathbf{F} \cdot \mathbf{J}  \\
@@ -1244,7 +1327,7 @@ Energy-momentum-stress tensor<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-point">2.1. Kinematics of point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-a-point">2.1. Kinematics of a point</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics-of-a-point-mass">2.2. Dynamics of a point mass</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-approach">2.2.1. Lagrangian approach</a></li>
 </ul>
