@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -866,11 +875,72 @@ Metric to the second order<div class="sd-summary-down docutils">
 \[\begin{split}\begin{aligned}
   g'_{\alpha \beta}(x)
   &amp; = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
-  &amp; = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} \ .
+  &amp; = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  &amp; = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} g_{\mu \nu}(q^\sigma(x^\lambda)) \ .
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Need for the second order expansion in <span class="math notranslate nohighlight">\(x\)</span> of <span class="math notranslate nohighlight">\(\frac{\partial q^{\mu}}{\partial x^\alpha}\)</span>, and <span class="math notranslate nohighlight">\(g_{\mu \nu}(q^\sigma(x^\lambda))\)</span></p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^\beta} x^\gamma\]</div>
+\[\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^{\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^{\beta} x^\gamma + o(x^2)\]</div>
+<div class="math notranslate nohighlight">
+\[g_{\mu \nu}(q^\sigma(x^\alpha)) = g_{\mu\nu}(P) + x^\alpha \left.\frac{\partial g_{\mu \nu}}{\partial x^\alpha}\right|_{x^\lambda = 0} + \frac{1}{2} x^\alpha x^\beta \left. \frac{\partial^2 g_{\mu \nu}}{\partial x^\alpha \partial x^\beta} \right|_{x^\lambda=0} + o(x^2) \ ,\]</div>
+<p class="sd-card-text">with the first derivative evaluated for <span class="math notranslate nohighlight">\(x^\lambda = 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial g_{\mu \nu}}{\partial x^\alpha} = \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}}= \widetilde{e}^{\sigma}_{\ \alpha} \partial_{q^\sigma} g_{\mu \nu}\]</div>
+<p class="sd-card-text">and the second derivative in <span class="math notranslate nohighlight">\(x^\lambda = 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{\partial^2 g_{\mu \nu}}{\partial x^\beta \partial x^\alpha} 
+  &amp; = \frac{\partial}{\partial x^{\beta}} \left( \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right) = \\
+  &amp; = \frac{\partial^2 q^{\sigma}}{\partial x^\alpha \partial x^\beta} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} + \frac{\partial q^{\sigma}}{\partial x^\alpha} \frac{\partial q^{\chi}}{\partial x^\beta} \frac{\partial^2 g_{\mu \nu}}{\partial q^\sigma \partial q^\chi} = \\
+  &amp; = A^{\sigma}_{\alpha \beta} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \alpha} \widetilde{e}^{\chi}_{\ \beta} \partial_{q^\sigma q^\chi} g_{\mu \nu} 
+\end{aligned}\end{split}\]</div>
+<hr class="docutils" />
+<p class="sd-card-text">Now the first terms of the polynomial expansion of the metrics <span class="math notranslate nohighlight">\(g'_{\alpha \beta}(x)\)</span> are</p>
+<ul>
+<li><p class="sd-card-text"><strong>zero-th order</strong></p>
+<div class="math notranslate nohighlight">
+\[{g'}_{\alpha \beta}^{(0)} = \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) = \eta_{\alpha \beta}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>first order</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   {g'}_{\alpha \beta}^{(1)} &amp; =
+   A^{\mu}_{\alpha \phi} x^\phi \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \phi} x^\phi g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\phi \widetilde{e}^{\sigma}_{\ \phi} \partial_{q^\sigma} g_{\mu \nu} = \\
+   &amp; = x^{\phi} \left[ A^{\mu}_{\alpha \phi} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \phi} \widetilde{e}^{\mu}_{\ \alpha} g_{\mu \nu}(P) + \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+   &amp; = x^{\phi} \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \left[ \partial_{q^\sigma} g_{\mu \nu} - \Gamma^{\xi}_{\mu \sigma}(P) g_{\xi \nu}(P) - \Gamma^{\xi}_{\nu \sigma}(P) g_{\xi \mu}(P) \right] = \\
+   &amp; = 0 \ .
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>second order</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   {g'}_{\alpha \beta}^{(2)} &amp; =
+   \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} x^\lambda x^\gamma \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} x^\lambda x^\gamma g_{\mu \nu}(P) + \\
+   &amp; + \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\lambda x^\gamma \left( A^{\sigma}_{\lambda \gamma} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \lambda} \widetilde{e}^{\chi}_{\ \gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu}  \right) + \\
+   &amp; + 
+   A^{\mu}_{\alpha \phi} x^\phi A^{\nu}_{\ \beta \chi} x^\chi g_{\mu \nu}(P) +
+   A^{\mu}_{\alpha \lambda} x^\lambda \widetilde{e}^{\nu}_{\ \beta} x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} + \\
+   &amp; + \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \lambda} x^\lambda x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} = \\
+   &amp; = x^\lambda x^\gamma \left[ \frac{1}{2} \left( B^{\mu}_{\ \alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} + A^{\mu}_{\alpha \lambda} A^{\nu}_{\beta \gamma} \right) g_{\mu \nu}  
+   + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu} \right. + \\ 
+   &amp; + \left. \left( 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \gamma} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}\)</span>, and differentiating by <span class="math notranslate nohighlight">\(\partial_{q^\chi}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
+     &amp; = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
+     &amp; = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
+   \end{aligned}\end{split}\]</div>
+</li>
+</ul>
 </div>
 </details><p>Differentiate the metric-compatibility relation <code class="xref eq docutils literal notranslate"><span class="pre">eq-compat</span></code> (written in the primed coordinates) once more and evaluate at <span class="math notranslate nohighlight">\(P\)</span>, where <span class="math notranslate nohighlight">\(\Gamma'=0\)</span>, so that derivatives of <span class="math notranslate nohighlight">\(g'\)</span> drop out:</p>
 <div class="math notranslate nohighlight">
