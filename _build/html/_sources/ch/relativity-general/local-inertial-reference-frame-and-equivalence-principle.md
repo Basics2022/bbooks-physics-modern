@@ -201,7 +201,7 @@ $$
 
 A polynomial expansion of the metric tensor $g'_{\alpha \beta}$ in the local coordinates $x^\gamma$ reads
 
-$$g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .$$
+$$g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma \partial x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .$$
 
 being $g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}$.
 
@@ -348,12 +348,77 @@ $$
 $$\begin{aligned}
   g'_{\alpha \beta}(x)
   & = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
-  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} \ .
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} g_{\mu \nu}(q^\sigma(x^\lambda)) \ .
 \end{aligned}$$
 
 Need for the second order expansion in $x$ of $\frac{\partial q^{\mu}}{\partial x^\alpha}$, and $g_{\mu \nu}(q^\sigma(x^\lambda))$
 
-$$\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^\beta} x^\gamma$$
+$$\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^{\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^{\beta} x^\gamma + o(x^2)$$
+
+$$g_{\mu \nu}(q^\sigma(x^\alpha)) = g_{\mu\nu}(P) + x^\alpha \left.\frac{\partial g_{\mu \nu}}{\partial x^\alpha}\right|_{x^\lambda = 0} + \frac{1}{2} x^\alpha x^\beta \left. \frac{\partial^2 g_{\mu \nu}}{\partial x^\alpha \partial x^\beta} \right|_{x^\lambda=0} + o(x^2) \ ,$$
+
+with the first derivative evaluated for $x^\lambda = 0$ 
+
+$$\frac{\partial g_{\mu \nu}}{\partial x^\alpha} = \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}}= \widetilde{e}^{\sigma}_{\ \alpha} \partial_{q^\sigma} g_{\mu \nu}$$
+
+and the second derivative in $x^\lambda = 0$
+
+$$\begin{aligned}
+  \frac{\partial^2 g_{\mu \nu}}{\partial x^\beta \partial x^\alpha} 
+  & = \frac{\partial}{\partial x^{\beta}} \left( \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right) = \\
+  & = \frac{\partial^2 q^{\sigma}}{\partial x^\alpha \partial x^\beta} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} + \frac{\partial q^{\sigma}}{\partial x^\alpha} \frac{\partial q^{\chi}}{\partial x^\beta} \frac{\partial^2 g_{\mu \nu}}{\partial q^\sigma \partial q^\chi} = \\
+  & = A^{\sigma}_{\alpha \beta} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \alpha} \widetilde{e}^{\chi}_{\ \beta} \partial_{q^\sigma q^\chi} g_{\mu \nu} 
+\end{aligned}$$
+
+---
+
+Now the first terms of the polynomial expansion of the metrics $g'_{\alpha \beta}(x)$ are
+
+* **zero-th order**
+
+   $${g'}_{\alpha \beta}^{(0)} = \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) = \eta_{\alpha \beta}$$
+
+* **first order**
+   
+   $$\begin{aligned}
+   {g'}_{\alpha \beta}^{(1)} & =
+   A^{\mu}_{\alpha \phi} x^\phi \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \phi} x^\phi g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\phi \widetilde{e}^{\sigma}_{\ \phi} \partial_{q^\sigma} g_{\mu \nu} = \\
+   & = x^{\phi} \left[ A^{\mu}_{\alpha \phi} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \phi} \widetilde{e}^{\mu}_{\ \alpha} g_{\mu \nu}(P) + \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+   & = x^{\phi} \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \left[ \partial_{q^\sigma} g_{\mu \nu} - \Gamma^{\xi}_{\mu \sigma}(P) g_{\xi \nu}(P) - \Gamma^{\xi}_{\nu \sigma}(P) g_{\xi \mu}(P) \right] = \\
+   & = 0 \ .
+   \end{aligned}$$
+
+* **second order**
+   
+   $$\begin{aligned}
+   {g'}_{\alpha \beta}^{(2)} & =
+   \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} x^\lambda x^\gamma \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} x^\lambda x^\gamma g_{\mu \nu}(P) + \\
+   & + \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\lambda x^\gamma \left( A^{\sigma}_{\lambda \gamma} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \lambda} \widetilde{e}^{\chi}_{\ \gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu}  \right) + \\
+   & + 
+   A^{\mu}_{\alpha \phi} x^\phi A^{\nu}_{\ \beta \chi} x^\chi g_{\mu \nu}(P) +
+   A^{\mu}_{\alpha \lambda} x^\lambda \widetilde{e}^{\nu}_{\ \beta} x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} + \\
+   & + \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \lambda} x^\lambda x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} = \\
+   & = x^\lambda x^\gamma \left[ \frac{1}{2} \left( B^{\mu}_{\ \alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} + A^{\mu}_{\alpha \lambda} A^{\nu}_{\beta \gamma} \right) g_{\mu \nu}  
+   + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu} \right. + \\ 
+   & + \left. \left( 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \gamma} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+   \end{aligned}$$
+
+   with $\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}$, and differentiating by $\partial_{q^\chi}$
+
+   $$\begin{aligned}
+     \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
+     & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
+     & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
+   \end{aligned}$$
+
 
 ````
 
