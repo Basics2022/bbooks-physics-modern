@@ -131,7 +131,7 @@ $$\begin{aligned}
   & = \hbar \omega  \hat{a}_{H} \ ,
 \end{aligned}$$
 
-whose solution provides the relation between the Heisenberg and Schdoringer picture of the annihilation operator,
+whose solution provides the relation between the Heisenberg and Schrodinger picture of the annihilation operator,
 
 $$\hat{a}_H(t) = \hat{a}_H(0) e^{-i \omega t} = \hat{a} e^{-i \omega t} \ .$$
 
