@@ -415,14 +415,48 @@ $$\begin{aligned}
    \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
 \end{aligned}$$
 
-with $\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}$, and differentiating by $\partial_{q^\chi}$
+With 
+
+* $\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}$, 
+
+* and differentiating by $\partial_{q^\chi}$
+
+   $$\begin{aligned}
+        \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
+        & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
+        & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
+   \end{aligned}$$
+
+* and the coefficients $A^\lambda{}_{\alpha\beta}=-\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta$
+
+it follows
 
 $$\begin{aligned}
-     \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
-     & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
-     & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
+ {g'}^{(2)}_{\alpha \beta} 
+ & = x^\lambda x^\gamma g_{\mu \nu}
+ \left\{ \frac{1}{2} \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) + \Gamma^{\mu}_{\chi \xi} \Gamma^{\nu}_{\phi \psi} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\xi}_{\lambda} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\psi}_{\gamma}
+ \right. + \\
+ & + \left.
+ \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right]
+ \right. + \\
+ & - \left.
+ \right\}
 \end{aligned}$$
 
+
+```
+
+```{dropdown} Other details
+:open:
+
+$$\begin{aligned}
+ & \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right] = \\
+ & = g_{\mu \nu} \left\{ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\mu}_{\chi\xi} \right) \right. + \\ 
+ & \quad \qquad + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi\xi} \right) + \\
+ & \quad \qquad + \left. \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \left( \Gamma^{\nu}_{\phi \sigma} \Gamma^{\mu}_{\chi \xi} + \Gamma^{\mu}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \right) \right\}
+\end{aligned}$$
+
+```
 
 ````
 
