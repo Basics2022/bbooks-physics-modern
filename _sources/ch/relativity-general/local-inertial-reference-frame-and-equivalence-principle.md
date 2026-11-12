@@ -392,8 +392,12 @@ Now the first terms of the polynomial expansion of the metrics $g'_{\alpha \beta
    \end{aligned}$$
 
 * **second order**
-   
-   $$\begin{aligned}
+
+
+```{dropdown} Details
+:open:
+
+$$\begin{aligned}
    {g'}_{\alpha \beta}^{(2)} & =
    \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} x^\lambda x^\gamma \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
    \widetilde{e}^{\mu}_{\ \alpha} \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} x^\lambda x^\gamma g_{\mu \nu}(P) + \\
@@ -409,15 +413,15 @@ Now the first terms of the polynomial expansion of the metrics $g'_{\alpha \beta
    \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \gamma} + 
    \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
    \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
-   \end{aligned}$$
+\end{aligned}$$
 
-   with $\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}$, and differentiating by $\partial_{q^\chi}$
+with $\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}$, and differentiating by $\partial_{q^\chi}$
 
-   $$\begin{aligned}
+$$\begin{aligned}
      \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
      & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
      & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
-   \end{aligned}$$
+\end{aligned}$$
 
 
 ````
