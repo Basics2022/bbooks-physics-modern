@@ -469,6 +469,25 @@ $$\begin{aligned}
    - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi}
    \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
  \right\} \ .
+ & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \left.
+  \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} \right] +
+  \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta \lambda \gamma}  \right] \right. \\
+ & \qquad \Big\}
+ \right. + \\
+ & \qquad + \left.
+     \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} 
+     + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+  \right. + \\
+ & \qquad \left.
+   - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\chi \sigma} \Gamma^{\nu}_{\phi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. + \\
+ & \qquad \left.
+   - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+ \right\} \ .
 \end{aligned}$$
 
 Anti-symmetric contributions $A^{\mu \nu}_{\gamma \lambda}$ in the brackets after swapping $\lambda$ and $\gamma$ or $\mu$ and $\nu$ has zero net-contribution, as $x^\gamma x^\lambda g_{\mu \nu}$ is symmetric - this is the contraction of a symmetric and an anti-symmetric tensor -, 
