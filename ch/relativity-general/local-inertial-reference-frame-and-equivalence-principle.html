@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -986,9 +995,17 @@ Details<div class="sd-summary-down docutils">
    \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
  \right\} \ .
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Anti-symmetric contributions in the brackets after swapping <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> has zero net-contribution, as <span class="math notranslate nohighlight">\(x^\gamma x^\lambda g_{\mu \nu}\)</span> is symmetric,</p>
+<p class="sd-card-text">Anti-symmetric contributions <span class="math notranslate nohighlight">\(A^{\mu \nu}_{\gamma \lambda}\)</span> in the brackets after swapping <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> has zero net-contribution, as <span class="math notranslate nohighlight">\(x^\gamma x^\lambda g_{\mu \nu}\)</span> is symmetric - this is the contraction of a symmetric and an anti-symmetric tensor -,</p>
 <div class="math notranslate nohighlight">
-\[x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} \right) = frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right)\]</div>
+\[\begin{split}\begin{aligned}
+  x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda}
+  &amp; = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right) = \\
+  &amp; = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} + \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\lambda \gamma} = \\
+  &amp; = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} - \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} = 0 \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The same holds for swapping <span class="math notranslate nohighlight">\(\sigma\)</span> \and <span class="math notranslate nohighlight">\(\chi\)</span> - <strong>todo</strong> <em>explicitly show that, how this follows from the terms <span class="math notranslate nohighlight">\(\widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\)</span></em>.</p>
+<p class="sd-card-text">This observation may lead the choice of <span class="math notranslate nohighlight">\(B^{\mu}_{\ \alpha \lambda \gamma}\)</span> symbols. <strong>Riemann normal coordinates</strong> follow from the choice of those <span class="math notranslate nohighlight">\(B^{\mu}_{\ \alpha \lambda \gamma}\)</span> that absorb and cancel the symmetric contributions.</p>
+<p class="sd-card-text">…</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">

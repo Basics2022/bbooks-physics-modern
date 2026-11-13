@@ -471,9 +471,22 @@ $$\begin{aligned}
  \right\} \ .
 \end{aligned}$$
 
-Anti-symmetric contributions in the brackets after swapping $\lambda$ and $\gamma$ or $\mu$ and $\nu$ has zero net-contribution, as $x^\gamma x^\lambda g_{\mu \nu}$ is symmetric, 
+Anti-symmetric contributions $A^{\mu \nu}_{\gamma \lambda}$ in the brackets after swapping $\lambda$ and $\gamma$ or $\mu$ and $\nu$ has zero net-contribution, as $x^\gamma x^\lambda g_{\mu \nu}$ is symmetric - this is the contraction of a symmetric and an anti-symmetric tensor -, 
 
-$$x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} \right) = frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right)$$
+$$\begin{aligned}
+  x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda}
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right) = \\
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} + \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\lambda \gamma} = \\
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} - \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} = 0 \ .
+\end{aligned}$$
+
+The same holds for swapping $\sigma$ \and $\chi$ - **todo** *explicitly show that, how this follows from the terms $\widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$*.
+
+This observation may lead the choice of $B^{\mu}_{\ \alpha \lambda \gamma}$ symbols. **Riemann normal coordinates** follow from the choice of those $B^{\mu}_{\ \alpha \lambda \gamma}$ that absorb and cancel the symmetric contributions.
+
+...
+
+
 
 ```
 
