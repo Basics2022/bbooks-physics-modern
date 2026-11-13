@@ -471,6 +471,9 @@ $$\begin{aligned}
  \right\} \ .
 \end{aligned}$$
 
+Anti-symmetric contributions in the brackets after swapping $\lambda$ and $\gamma$ or $\mu$ and $\nu$ has zero net-contribution, as $x^\gamma x^\lambda g_{\mu \nu}$ is symmetric, 
+
+$$x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} \right) = frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right)$$
 
 ```
 
