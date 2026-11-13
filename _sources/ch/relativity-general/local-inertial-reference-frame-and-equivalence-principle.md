@@ -451,8 +451,8 @@ $$\begin{aligned}
   & \qquad \left.
   - \frac{1}{2} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( 
      \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
-     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right) 
- \right\} = \\
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right) \right. \\
+ & \qquad \Big\} = \\
  & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
  \Big\{ \\
   & \qquad \left. \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) 
@@ -467,13 +467,13 @@ $$\begin{aligned}
    \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. + \\
  & \qquad \left.
    - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi}
-   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
- \right\} \ .
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. \\ 
+ & \qquad \Big\} = \\
  & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
  \Big\{ \\
-  & \qquad \left.
-  \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} \right] +
-  \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta \lambda \gamma}  \right] \right. \\
+  & \qquad \ \ \left.
+                    \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
+  & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\nu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
  & \qquad \Big\}
 \end{aligned}$$
 
@@ -492,6 +492,14 @@ This observation may lead the choice of $B^{\mu}_{\ \alpha \lambda \gamma}$ symb
 
 ...
 
+The first contribution in the curly brackets can be recast as
+
+$$\begin{aligned}
+  B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+  & = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ ,
+\end{aligned}$$
+
+with $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}$.
 
 
 ```
