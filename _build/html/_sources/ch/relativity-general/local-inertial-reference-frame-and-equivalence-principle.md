@@ -13,7 +13,7 @@ This is the mathematical content of the **equivalence principle**.
 
 **Conventions.** Signature $\eta_{\alpha\beta}=\mathrm{diag}(+1,-1,-1,-1)$, so $c^2\,d\tau^2=d\mathbf X\cdot d\mathbf X$. Nothing below depends on the signature. Riemann tensor:
 
-$R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}$.
+$$R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\ .$$
 
 ```
 
@@ -401,16 +401,16 @@ $$\begin{aligned}
    {g'}_{\alpha \beta}^{(2)} & =
    \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} x^\lambda x^\gamma \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
    \widetilde{e}^{\mu}_{\ \alpha} \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} x^\lambda x^\gamma g_{\mu \nu}(P) + \\
-   & + \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\lambda x^\gamma \left( A^{\sigma}_{\lambda \gamma} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \lambda} \widetilde{e}^{\chi}_{\ \gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu}  \right) + \\
+   & + \frac{1}{2} \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\lambda x^\gamma \left( A^{\sigma}_{\lambda \gamma} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \lambda} \widetilde{e}^{\chi}_{\ \gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu}  \right) + \\
    & + 
    A^{\mu}_{\alpha \phi} x^\phi A^{\nu}_{\ \beta \chi} x^\chi g_{\mu \nu}(P) +
    A^{\mu}_{\alpha \lambda} x^\lambda \widetilde{e}^{\nu}_{\ \beta} x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} + \\
    & + \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \lambda} x^\lambda x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} = \\
-   & = x^\lambda x^\gamma \left[ \frac{1}{2} \left( B^{\mu}_{\ \alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} + A^{\mu}_{\alpha \lambda} A^{\nu}_{\beta \gamma} \right) g_{\mu \nu}  
-   + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu} \right. + \\ 
+   & = x^\lambda x^\gamma \left[ \left( \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} + A^{\mu}_{\alpha \lambda} A^{\nu}_{\beta \gamma} \right) g_{\mu \nu}  
+   + \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu} \right. + \\ 
    & + \left. \left( 
-   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
-   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \gamma} + 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
    \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
    \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
 \end{aligned}$$
@@ -434,13 +434,42 @@ it follows
 $$\begin{aligned}
  {g'}^{(2)}_{\alpha \beta} 
  & = x^\lambda x^\gamma g_{\mu \nu}
- \left\{ \frac{1}{2} \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) + \Gamma^{\mu}_{\chi \xi} \Gamma^{\nu}_{\phi \psi} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\xi}_{\lambda} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\psi}_{\gamma}
+ \Big\{ \\
+  & \qquad \left. \frac{1}{2} \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) 
  \right. + \\
- & + \left.
- \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right]
+ & \qquad + \left.
+   \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma
+     \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} 
+     + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+  \right. + \\
+ & \qquad \left.
+   - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+    \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+  + \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right) 
  \right. + \\
- & - \left.
- \right\}
+  & \qquad \left.
+  - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right) 
+ \right\} = \\
+ & = x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \left. \frac{1}{2} \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) 
+ \right. + \\
+ & \qquad + \left.
+   \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma
+     \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} 
+     + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+  \right. + \\
+ & \qquad \left.
+   - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\chi \sigma} \Gamma^{\nu}_{\phi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. + \\
+ & \qquad \left.
+   - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+ \right\} = \\
 \end{aligned}$$
 
 
@@ -450,11 +479,118 @@ $$\begin{aligned}
 :open:
 
 $$\begin{aligned}
- & \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right] = \\
- & = g_{\mu \nu} \left\{ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\mu}_{\chi\xi} \right) \right. + \\ 
- & \quad \qquad + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi\xi} \right) + \\
- & \quad \qquad + \left. \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \left( \Gamma^{\nu}_{\phi \sigma} \Gamma^{\mu}_{\chi \xi} + \Gamma^{\mu}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \right) \right\}
+ & \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^{\sigma} q^{\chi}} g_{\mu \nu} = \\
+ & = \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right] = \\
+ & = \frac{1}{2} g_{\mu \nu} \left\{ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\mu}_{\chi\xi} \right) \right. + \\ 
+ & \qquad \qquad + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi\xi} \right) + \\
+ & \qquad \qquad + \left. \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \left( \Gamma^{\nu}_{\phi \sigma} \Gamma^{\mu}_{\chi \xi} + \Gamma^{\mu}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \right) \right\}
 \end{aligned}$$
+
+$$\begin{aligned}
+ & \left(
+   \frac{1}{2}\widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} +
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} = \\
+ & =  \left(
+   \frac{1}{2}\widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \left( \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} \right) = \\
+ & = g_{\mu \nu} \left\{ \Gamma^{\mu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\xi}_{\alpha \lambda} + 
+   \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+ \right) + \right. \\
+ & \ \qquad + \left. \Gamma^{\nu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\xi}_{\beta \lambda}   
+   \right) \right\} = \\
+ & = - g_{\mu \nu} \left\{ \Gamma^{\mu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\nu}_{\beta}     \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \Gamma^{\sigma}_{\phi \chi} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}\Gamma^{\xi   }_{\phi \chi} + 
+   \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}\Gamma^{\nu   }_{\phi \chi}   
+ \right) + \right. \\
+ & \quad \ \qquad + \left. \Gamma^{\nu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\beta}    \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \Gamma^{\sigma}_{\phi \chi} + 
+   \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda} \Gamma^{\mu   }_{\phi \chi} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma}\widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda} \Gamma^{\xi   }_{\phi \chi}   
+   \right) \right\} = \\
+ & = - g_{\mu \nu} \left\{
+                             \Gamma^{\mu}_{\xi \sigma} \Gamma^{\nu}_{\phi \chi} \left(
+     \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda} +
+     \widetilde{e}^{\xi}_{\beta } \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}
+   \right) \right. + \\
+ & \left. \qquad \quad \ \ + \Gamma^{\mu}_{\xi \sigma} \Gamma^{\xi}_{\phi \chi} \left( 
+     \frac{1}{2} \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} +
+     \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda} 
+   \right) \right. + \\
+ & \left. \qquad \quad \ \ + \Gamma^{\nu}_{\xi \sigma} \Gamma^{\xi}_{\phi \chi} \left(
+     \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}
+   \right) \right\} = 
+\end{aligned}$$
+
+
+```
+
+```{dropdown} Further details
+:open:
+
+Collecting four types of contributions, 1) $\Gamma^{\mu} \Gamma^{\nu}$, 2) $\Gamma^{\mu} \Gamma^{\xi}$, 3) $\Gamma^{\nu} \Gamma^{\xi}$, 4) terms with $\partial \Gamma$,
+
+$$\begin{aligned}
+  (1)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\sigma \phi} \Gamma^{\nu}_{\chi \xi} \left(
+  \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\beta} \widetilde{e}^{\xi}_{\gamma}
+  + \frac{1}{2} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\xi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}
+  + \frac{1}{2} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+  - \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\xi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}
+  - \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\xi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}
+  \right) = 0 \ ,
+\end{aligned}$$
+
+by the symmetries of the metric tensor $g_{\mu \nu}$, and Christoffel symbols $\Gamma_{\sigma\phi}^{\mu}$ w.r.t. the lower indeices.
+
+$$\begin{aligned}
+  (2)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+  \frac{1}{2} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+    - \frac{1}{2} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+    - \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\chi}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\sigma}_{\lambda} 
+  \right) = \\
+  & = -\frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+    \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+  + \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\chi}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\sigma}_{\lambda} 
+  \right) \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+  (3)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+     - \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     - \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda}
+  \right) = \\
+  & = - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda}
+  \right) 
+\end{aligned}$$
+
+$$\begin{aligned}
+  (4)
+  & = \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma
+     \left(  \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} 
+     +  \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ .
+\end{aligned}$$
+
+---
+
+$$R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}$$
+
+$$R_{\lambda\alpha\beta\delta}=g_{\lambda \gamma} R^{\gamma}_{\ \alpha\beta\delta} = g_{\lambda \gamma} \partial_\beta\Gamma^\gamma{}_{\delta\alpha}-g_{\lambda \gamma} \partial_\delta\Gamma^\gamma{}_{\beta\alpha}+g_{\lambda \gamma} \Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-g_{\lambda \gamma} \Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}$$
 
 ```
 
