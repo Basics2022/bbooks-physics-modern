@@ -457,6 +457,14 @@ $$\begin{aligned}
  & \quad \qquad + \left. \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \left( \Gamma^{\nu}_{\phi \sigma} \Gamma^{\mu}_{\chi \xi} + \Gamma^{\mu}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \right) \right\}
 \end{aligned}$$
 
+$$\begin{aligned}
+ & \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \gamma} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} = \\
+\end{aligned}$$
+
+
 ```
 
 ````
