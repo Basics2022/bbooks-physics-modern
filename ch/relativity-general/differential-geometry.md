@@ -38,9 +38,9 @@ $$\begin{aligned}
 
 and thus $\partial_k \mathbf{b}^m = - \Gamma_{kl}^{m} \mathbf{b}^l$.
 
-**Derivatives of the metric tensor.** Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it's easy to prove
+**Derivatives of the metric tensor - metric  compatibility.** Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it's easy to prove
 
-$$\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}$$
+$$\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}$$ (eq:metric-compatibility)
 
 Using the property $g_{ab} g^{bc} = \delta_{a^c}$, from its derivatives $\partial_d$,
 
@@ -179,7 +179,9 @@ $$R = g^{\sigma \nu} R_{\sigma \nu} = g^{\sigma \nu} \left( \partial_{\xi} \Gamm
 (relativity-general:notes:differential-geometry:curvature-tensor:properties)=
 ### Properties
 
-* $R_{abcd} = - R_{abdc}$
+*
+
+$$R_{abcd} = - R_{abdc}$$ (eq:riemann:prop:1)
 
 ```{dropdown} Proof
 :open:
@@ -192,7 +194,47 @@ and the symmetry of the Christoffel symbols, $\Gamma_{ab}^c = \Gamma_{ba}^c$.
 
 ```
 
-* $R_{abcd} = - R_{bacd}$
+* 
+
+$$ R_{abcd} = - R_{bacd}$$ (eq:riemann:prop:2)
+
+```{dropdown} Proof
+:open:
+
+Let's derive a useful result first, and then use it to prove the desired identity. Differentiating the metric compatibility {eq}`eq:metric-compatibility`, $\partial_{\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\sigma \mu} g_{\xi \nu} + \Gamma^{\xi}_{\sigma \nu} g_{\xi \mu}$,
+
+$$\begin{aligned}
+  \partial_{\chi \sigma} g_{\mu \nu}
+  & = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\nu \xi} + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\mu \xi} = && \text{(1)} \\
+  & = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ ,
+\end{aligned}$$
+
+having introduced the metric compatibility in $(1)$. Thus, 
+
+$$
+g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+= \partial_{\chi \sigma} g_{\mu \nu}
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ .
+$$ (eq:riemann:prop2:dim:1)
+
+This latter result is used to prove the desired identity,
+
+$$\begin{aligned}
+R_{\rho \sigma \mu \nu} + R_{\sigma \rho \mu \nu} 
+& = g_{\rho \lambda} R^{\lambda}_{\ \ \sigma \mu \nu} + g_{\sigma \lambda} R^{\lambda}_{\ \ \rho \mu \nu} = \\
+& = g_{\rho   \lambda} \left[ \partial_{\mu} \Gamma_{\sigma \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \sigma}^{\lambda} + \Gamma_{\sigma \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \sigma}^{\phi} \Gamma_{\phi \nu}^{\lambda} \right] + \\
+& + g_{\sigma \lambda} \left[ \partial_{\mu} \Gamma_{\rho   \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \rho  }^{\lambda} + \Gamma_{\rho   \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \rho  }^{\phi} \Gamma_{\phi \nu}^{\lambda}  \right] = \\
+\end{aligned}$$
+
+just replacing the contributions $g_{\rho \lambda} \partial_{\mu} \Gamma^{\lambda}_{\sigma \nu} + g_{\sigma \lambda} \partial_{\mu} \Gamma^{\lambda}_{\mu \rho}$, and $g_{\rho \lambda} \partial_{\nu} \Gamma^{\lambda}_{\sigma \mu} + g_{\sigma \lambda} \partial_{\nu} \Gamma^{\lambda}_{\mu \rho}$ with the corresponding expressions using {eq}`eq:riemann:prop2:dim:1`, and cancelling all the contributions, including the mixed second-order partial derivatives, $\partial_{\mu \nu} g_{\rho \sigma} - \partial_{\nu \mu} g_{\rho \sigma}$. $\blacksquare$
+
+
+```
+
 * $R_{abcd} + R_{acdb} + R_{adbc} = 0$
 * $R_{abcd} = R_{cdab}$
 * $R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0$ (Second Bianchi identity)
@@ -200,12 +242,14 @@ and the symmetry of the Christoffel symbols, $\Gamma_{ab}^c = \Gamma_{ba}^c$.
 ```{dropdown} Proof
 :open:
 
+<!--
 $$\begin{aligned}
   R_{\phi \sigma \eta \nu; \chi} 
   & = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
   & = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
   & = 
 \end{aligned}$$
+-->
 
 **todo**
 
@@ -222,6 +266,9 @@ $$
 ```{dropdown} Proof
 :open:
 
+**todo**
+
+<!--
 $$\begin{aligned}
   R_{\sigma \nu}
   = R^{\xi}_{\ \ \sigma \xi \nu} 
@@ -235,6 +282,7 @@ $$\begin{aligned}
   & = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
   & = \\ 
 \end{aligned}$$
+-->
 
 ```
 

@@ -499,7 +499,7 @@ $$\begin{aligned}
   & = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ ,
 \end{aligned}$$
 
-with $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}$.
+with $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}$. Symbols $K^{\mu}_{\ \ \phi \sigma \chi}$ are symmetric in $\phi \leftrightarrow \sigma$
 
 
 ```

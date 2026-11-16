@@ -588,9 +588,9 @@ Basics<div class="sd-summary-down docutils">
   &amp; = \Gamma_{kl}^{n} \underbrace{ \mathbf{b}_n \cdot \mathbf{b}^m}_{ = \delta_{n}^m} + \mathbf{b}_l \cdot \partial_k \mathbf{b}^m \ ,
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(\partial_k \mathbf{b}^m = - \Gamma_{kl}^{m} \mathbf{b}^l\)</span>.</p>
-<p class="sd-card-text"><strong>Derivatives of the metric tensor.</strong> Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it’s easy to prove</p>
-<div class="math notranslate nohighlight">
-\[\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}\]</div>
+<p class="sd-card-text"><strong>Derivatives of the metric tensor - metric  compatibility.</strong> Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it’s easy to prove</p>
+<div class="math notranslate nohighlight" id="equation-eq-metric-compatibility">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq-metric-compatibility" title="Permalink to this equation">#</a></span>\[\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}\]</div>
 <p class="sd-card-text">Using the property <span class="math notranslate nohighlight">\(g_{ab} g^{bc} = \delta_{a^c}\)</span>, from its derivatives <span class="math notranslate nohighlight">\(\partial_d\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\partial_d g_{ab} g^{bc} + g_{ab} \partial_d g^{bc} = 0 \ ,\]</div>
@@ -604,7 +604,7 @@ Basics<div class="sd-summary-down docutils">
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that, summing the first 2 equations and subtracting the last one,</p>
 <div class="math notranslate nohighlight" id="equation-eqn-differential-geometry-gamma-g">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-eqn-differential-geometry-gamma-g" title="Permalink to this equation">#</a></span>\[\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)\]</div>
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-eqn-differential-geometry-gamma-g" title="Permalink to this equation">#</a></span>\[\Gamma_{ac}^{b} = \frac{1}{2} g^{bd} \left( \partial_c g_{ad} + \partial_a g_{dc} - \partial_{d} g_{ac} \right)\]</div>
 </div>
 </details><div class="section" id="gradient-covariant-derivative-and-directional-derivative">
 <span id="relativity-general-notes-differential-geometry-gradient"></span><h2><span class="section-number">7.1.1. </span>Gradient, covariant derivative and directional derivative<a class="headerlink" href="#gradient-covariant-derivative-and-directional-derivative" title="Permalink to this heading">#</a></h2>
@@ -725,8 +725,10 @@ First term<div class="sd-summary-down docutils">
 <div class="section" id="properties">
 <span id="relativity-general-notes-differential-geometry-curvature-tensor-properties"></span><h3><span class="section-number">7.1.2.3. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_{abcd} = - R_{abdc}\)</span></p></li>
+<li></li>
 </ul>
+<div class="math notranslate nohighlight" id="equation-eq-riemann-prop-1">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-eq-riemann-prop-1" title="Permalink to this equation">#</a></span>\[R_{abcd} = - R_{abdc}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Proof<div class="sd-summary-down docutils">
@@ -740,7 +742,46 @@ Proof<div class="sd-summary-down docutils">
 <p class="sd-card-text">and the symmetry of the Christoffel symbols, <span class="math notranslate nohighlight">\(\Gamma_{ab}^c = \Gamma_{ba}^c\)</span>.</p>
 </div>
 </details><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_{abcd} = - R_{bacd}\)</span></p></li>
+<li></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-riemann-prop-2">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-eq-riemann-prop-2" title="Permalink to this equation">#</a></span>\[ R_{abcd} = - R_{bacd}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s derive a useful result first, and then use it to prove the desired identity. Differentiating the metric compatibility <a class="reference internal" href="#equation-eq-metric-compatibility">(7.1)</a>, <span class="math notranslate nohighlight">\(\partial_{\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\sigma \mu} g_{\xi \nu} + \Gamma^{\xi}_{\sigma \nu} g_{\xi \mu}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_{\chi \sigma} g_{\mu \nu}
+  &amp; = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\nu \xi} + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\mu \xi} = &amp;&amp; \text{(1)} \\
+  &amp; = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having introduced the metric compatibility in <span class="math notranslate nohighlight">\((1)\)</span>. Thus,</p>
+<div class="math notranslate nohighlight" id="equation-eq-riemann-prop2-dim-1">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-eq-riemann-prop2-dim-1" title="Permalink to this equation">#</a></span>\[
+g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+= \partial_{\chi \sigma} g_{\mu \nu}
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ .
+\]</div>
+<p class="sd-card-text">This latter result is used to prove the desired identity,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+R_{\rho \sigma \mu \nu} + R_{\sigma \rho \mu \nu} 
+&amp; = g_{\rho \lambda} R^{\lambda}_{\ \ \sigma \mu \nu} + g_{\sigma \lambda} R^{\lambda}_{\ \ \rho \mu \nu} = \\
+&amp; = g_{\rho   \lambda} \left[ \partial_{\mu} \Gamma_{\sigma \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \sigma}^{\lambda} + \Gamma_{\sigma \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \sigma}^{\phi} \Gamma_{\phi \nu}^{\lambda} \right] + \\
+&amp; + g_{\sigma \lambda} \left[ \partial_{\mu} \Gamma_{\rho   \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \rho  }^{\lambda} + \Gamma_{\rho   \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \rho  }^{\phi} \Gamma_{\phi \nu}^{\lambda}  \right] = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">just replacing the contributions <span class="math notranslate nohighlight">\(g_{\rho \lambda} \partial_{\mu} \Gamma^{\lambda}_{\sigma \nu} + g_{\sigma \lambda} \partial_{\mu} \Gamma^{\lambda}_{\mu \rho}\)</span>, and <span class="math notranslate nohighlight">\(g_{\rho \lambda} \partial_{\nu} \Gamma^{\lambda}_{\sigma \mu} + g_{\sigma \lambda} \partial_{\nu} \Gamma^{\lambda}_{\mu \rho}\)</span> with the corresponding expressions using <a class="reference internal" href="#equation-eq-riemann-prop2-dim-1">(7.5)</a>, and cancelling all the contributions, including the mixed second-order partial derivatives, <span class="math notranslate nohighlight">\(\partial_{\mu \nu} g_{\rho \sigma} - \partial_{\nu \mu} g_{\rho \sigma}\)</span>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+</details><ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R_{abcd} + R_{acdb} + R_{adbc} = 0\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(R_{abcd} = R_{cdab}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0\)</span> (Second Bianchi identity)</p></li>
@@ -752,13 +793,14 @@ Proof<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<!--
+$$\begin{aligned}
   R_{\phi \sigma \eta \nu; \chi} 
-  &amp; = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
-  &amp; = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
-  &amp; = 
-\end{aligned}\end{split}\]</div>
+  & = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
+  & = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
+  & = 
+\end{aligned}$$
+-->
 <p class="sd-card-text"><strong>todo</strong></p>
 </div>
 </details><div class="section" id="divergence-of-ricci-s-tensor">
@@ -774,20 +816,22 @@ Proof<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
+<p class="sd-card-text"><strong>todo</strong></p>
+<!--
+$$\begin{aligned}
   R_{\sigma \nu}
   = R^{\xi}_{\ \ \sigma \xi \nu} 
   = \partial_{\xi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\xi \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi} 
-\end{aligned}\]</div>
-<div class="math notranslate nohighlight">
-\[R^{\mu}_{\ \ \nu} = g^{\mu \sigma} R_{\sigma \nu}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+\end{aligned}$$
+
+$$R^{\mu}_{\ \ \nu} = g^{\mu \sigma} R_{\sigma \nu}$$
+
+$$\begin{aligned}
   \nabla_{\mu} R^{\mu}_{\ \ \nu}
-  &amp; = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
-  &amp; = \\ 
-\end{aligned}\end{split}\]</div>
+  & = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
+  & = \\ 
+\end{aligned}$$
+-->
 </div>
 </details></div>
 </div>
