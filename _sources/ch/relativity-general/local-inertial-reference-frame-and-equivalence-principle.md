@@ -640,6 +640,12 @@ with $T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} +
 
 ````
 
+$$\begin{aligned}
+ g_{\mu \nu} & = {g'}_{\alpha \beta} e^{\mu}_{\alpha} e^{\nu}_{\beta} \\
+{g'}_{\alpha \beta} & = g_{\mu \nu} \widetilde{e}^{\alpha}_{\mu} \widetilde{e}^{\beta}_{\nu} \\
+$$
+
+
 ```{dropdown} Relation between $\ T \ $ and $\ R \ $
 :open:
 
