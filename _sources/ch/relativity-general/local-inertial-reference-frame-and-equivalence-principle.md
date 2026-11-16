@@ -274,11 +274,13 @@ The two statements "$\Gamma'(P)=0$" and "$\partial g'(P)=0$" are equivalent *bec
 ```
 
 
+<!--
 ```{admonition} The term $A\,A\,x^\sigma x^\xi$ is not trustworthy
 
 The product of the two $A$ terms is $O(x^2)$. At that order one also needs $B$ (from $\partial_\alpha q^\mu$) and $\partial\partial g$ (from the expansion of $g_{\mu\nu}(q(x))$). A consistent expansion must therefore be organised by order, which is done in the next section.
 
 ```
+-->
 ---
 
 ## Third order in $q^{\mu}(x^\alpha)$
@@ -291,7 +293,7 @@ $$ (eq-T)
 
 where $C$ is built only from $\tilde e$, $A$, $\Gamma(P)$ and $\partial\Gamma(P)$ (it does not depend on $B$). The derivative of the prefactor $\partial x^\gamma/\partial q^\lambda$ does not contribute, because it multiplies the bracket of {eq}`eq-gamma-transf`, which vanishes at $P$. The only place $B$ enters is through $\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}$. $T$ is symmetric in $\alpha\beta$.
 
-### 3.1 Decomposition of $T$
+### Decomposition of $T$
 
 Define the totally symmetric part
 
@@ -622,6 +624,17 @@ $$R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\p
 $$R_{\lambda\alpha\beta\delta}=g_{\lambda \gamma} R^{\gamma}_{\ \alpha\beta\delta} = g_{\lambda \gamma} \partial_\beta\Gamma^\gamma{}_{\delta\alpha}-g_{\lambda \gamma} \partial_\delta\Gamma^\gamma{}_{\beta\alpha}+g_{\lambda \gamma} \Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-g_{\lambda \gamma} \Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}$$
 
 ```
+
+$$\begin{aligned}
+ {g'}^{(2)}_{\alpha \beta}
+ = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu}
+ \left\{ 
+  \widetilde{e}^{\nu}_{\ \beta } T^{\mu}_{\ \ \alpha \lambda \gamma} + 
+  \widetilde{e}^{\nu}_{\ \alpha} T^{\mu}_{\ \ \beta  \lambda \gamma}   
+ \right\} \ ,
+\end{aligned}$$
+
+with $T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} + K^{\mu}_{\ \ \alpha \lambda \gamma}$, and $K^{\mu}_{\ \ \alpha \lambda \gamma} = \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$
 
 ````
 
