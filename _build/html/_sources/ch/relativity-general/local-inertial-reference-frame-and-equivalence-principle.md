@@ -476,6 +476,12 @@ $$\begin{aligned}
   & \qquad \ \ \left.
                     \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
   & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\nu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
+ & \qquad \Big\} = \\
+ & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \ \ \left.
+                    \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{ \sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
+  & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{ \sigma \chi} - \Gamma^{\nu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
  & \qquad \Big\}
 \end{aligned}$$ (eq:local-inertial:metric:second-order:1)
 
@@ -497,11 +503,11 @@ This observation may lead the choice of $B^{\mu}_{\ \alpha \lambda \gamma}$ symb
 The first contribution in the curly brackets can be recast as
 
 $$\begin{aligned}
-  B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+  B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
   & = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ ,
 \end{aligned}$$
 
-with $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}$. Symbols $K^{\mu}_{\ \ \phi \sigma \chi}$ are symmetric in $\phi \leftrightarrow \sigma$
+with $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$. Symbols $K^{\mu}_{\ \ \phi \sigma \chi}$ are symmetric in $\phi \leftrightarrow \sigma$.
 
 
 ```
@@ -649,39 +655,44 @@ $$\begin{aligned}
 ```{dropdown} Relation between $\ T \ $ and $\ R \ $
 :open:
 
+Since $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$
+
 $$\begin{aligned}
   R^{\mu}_{\ \ \sigma \chi \phi} 
-  & = \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} + \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} = \\
-  & =        \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \\
-  & - \left( \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}\right) = \\
+  & = \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \partial_{\phi} \Gamma^{\mu}_{\sigma \chi} + \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} = \\
+  & =        \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} + \\
+  & - \left( \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}\right) = \\
   & = \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi}
 \end{aligned}$$
 
-Now multiplying by $ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$ to get $K^{\mu}_{\ \ \alpha \lambda \gamma}$, it follows
+Now multiplying by $ \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}$ to get $K^{\mu}_{\ \ \alpha \lambda \gamma}$, it follows
 
 $$\begin{aligned}
    \bar{R}^{\mu}_{\ \ \alpha \lambda \gamma}
-   & =\widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  R^{\mu}_{\ \ \sigma \chi \phi} \\
-   & = K^{\mu}_{\ \ \alpha \lambda \gamma} - K^{\mu}_{\ \ \gamma \lambda \alpha} = \\
-   & = T^{\mu}_{\ \ \alpha \lambda \gamma} - T^{\mu}_{\ \ \gamma \lambda \alpha} + \underbrace{ B^{\mu}_{\ \ \alpha \lambda \gamma} - B^{\mu}_{\ \ \gamma \lambda \alpha} }_{=0} \ ,
+   & =\widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  R^{\mu}_{\ \ \sigma \chi \phi} = \\
+   & =\widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma} \left( \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi } - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi} \right) = \\
+   & = K^{\mu}_{\ \ \gamma \alpha \lambda} - K^{\mu}_{\ \ \lambda \alpha \gamma} = \\
+   & = T^{\mu}_{\ \ \gamma \alpha \lambda} - T^{\mu}_{\ \ \lambda \alpha \gamma} \underbrace{ - B^{\mu}_{\ \ \gamma \alpha \lambda} + B^{\mu}_{\ \ \lambda \alpha \gamma} }_{=0} \ ,
 \end{aligned}$$
 
 as $B$ is symmetric under any swap of lower indices.
 
 $$\begin{aligned}
   \bar{R}^{\mu}_{\ \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma}
-  & = T^{\mu}_{\ \ \alpha \lambda \gamma} - T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma} - T^{\mu}_{\ \ \gamma \alpha \lambda} = && \left(\text{$T^{\cdot}_{\ \ \alpha \gamma \cdot} = T^{\cdot}_{\ \ \gamma \alpha \cdot}$, $\mp T^{\mu}_{\alpha \lambda \gamma}$}\right) \\
-  & = 3 T^{\mu}_{\ \ \alpha \lambda \gamma} - \left( T^{\mu}_{\ \ \lambda \gamma \alpha} + T^{\mu}_{\ \ \gamma \alpha \lambda} + T^{\mu}_{\ \ \alpha \lambda \gamma} \right) = \\
-  & = 3 T^{\mu}_{\ \ \alpha \lambda \gamma} - 3 S^{\mu}_{\ \ \alpha \lambda \gamma} \ , 
+  & = T^{\mu}_{\ \ \gamma \alpha \lambda} - T^{\mu}_{\ \ \lambda \alpha \gamma} + T^{\mu}_{\ \ \gamma \lambda \alpha} - T^{\mu}_{\ \ \alpha \lambda \gamma} = && \left(\text{$T^{\cdot}_{\ \ \alpha \gamma \cdot} = T^{\cdot}_{\ \ \gamma \alpha \cdot}$, $\mp T^{\mu}_{\alpha \lambda \gamma}$}\right) \\
+  & = - 3 T^{\mu}_{\ \ \lambda \alpha \gamma} + \left( T^{\mu}_{\ \ \alpha \gamma \lambda} + T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma} \right) = \\
+  & = - 3 T^{\mu}_{\ \ \lambda \alpha \gamma} + 3 S^{\mu}_{\ \ \alpha \lambda \gamma} \ , 
 \end{aligned}$$
 
-with the definition of the total symmetric part of $T$, $S^{\mu}_{\alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \ \lambda \gamma \alpha} + T^{\mu}_{\ \ \gamma \alpha \lambda} + T^{\mu}_{\ \ \alpha \lambda \gamma}  \right)$. This definition doesn't include repeated contributions that would follow from the symmetry $T^{\cdot}_{\ \ \alpha \gamma \ \cdot} = T^{\cdot}_{\ \ \gamma \alpha \ \cdot}$.
-
-**todo** *check it, as this could be the opposite of the right result*
+with the definition of the total symmetric part of $T$, $S^{\mu}_{\alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \ \alpha \gamma \lambda} + T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma}  \right)$. This definition doesn't include repeated contributions that would follow from the symmetry $T^{\cdot}_{\ \ \alpha \gamma \ \cdot} = T^{\cdot}_{\ \ \gamma \alpha \ \cdot}$.
 
 ...
 
-**Riemann normal coordinates** set $S^{\mu}_{\ \ \alpha \lambda \gamma} = 0$, and thus $T^{\mu}_{\ \ \alpha \lambda \gamma} = \frac{1}{3} {R'}^{\mu}_{\ \alpha \lambda \gamma}$, so that the second-order contribution of the polynomial exapnsion of the metrics reads
+**Riemann normal coordinates** set $S^{\mu}_{\ \ \alpha \lambda \gamma} = 0$, and thus 
+
+$$T^{\mu}_{\ \ \alpha \lambda \gamma} = - \frac{1}{3} \left( \bar{R}^{\mu}_{\ \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma} \right) \ , $$
+
+so that the second-order contribution of the polynomial exapnsion of the metrics reads
 
 $$\begin{aligned}
  {g'}^{(2)}_{\alpha \beta}
@@ -691,20 +702,59 @@ $$\begin{aligned}
   \widetilde{e}^{\nu}_{\ \alpha} T^{\mu}_{\ \ \beta  \lambda \gamma}   
  \right\} = \\
  & = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu} \left\{ 
-   \frac{1}{3} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} R^{\mu}_{\ \ \phi \sigma \chi}
- + \frac{1}{3} \widetilde{e}^{\nu}_{\alpha}\widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} R^{\mu}_{\ \ \phi \sigma \chi}
+ - \frac{1}{3} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( R^{\mu}_{\ \ \phi \sigma \chi} + R^{\mu}_{\ \ \sigma \phi \chi} \right)
+ - \frac{1}{3} \widetilde{e}^{\nu}_{\alpha}\widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( R^{\mu}_{\ \ \phi \sigma \chi} + R^{\mu}_{\ \ \sigma \phi \chi} \right)
  \right\} = \\
- & = \frac{1}{6} x^{\lambda} x^{\gamma} \left\{ 
-   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
- + \widetilde{e}^{\nu}_{\alpha}\widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
- \right\} R_{\nu \phi \sigma \chi }= \\
+ & = - \frac{1}{6} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+  \left\{ R_{\nu \phi \sigma \chi} + R_{\nu \sigma \phi \chi} + R_{\phi \nu \sigma \chi} + R_{\phi \sigma \nu \chi}
+ \right\} = && (1) \\
+ & = - \frac{1}{6} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+  \left\{ R_{\nu \sigma \phi \chi} + R_{\phi \sigma \nu \chi}
+ \right\} = && (2) \\
+ & = - \frac{1}{3} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+   R_{\nu \sigma \phi \chi} = && (3) \\
+ & = - \frac{1}{3} x^{\lambda} x^{\gamma} \, 
+   {R'}_{\beta \lambda \alpha \gamma} \ ,
 \end{aligned}$$
 
-**todo** *Something went wrong with the indices, as the symmetry of $R$ can't be used here to get the desired result.*
+since $(1)$ $ R_{\nu \phi \sigma \chi} + R_{\phi \nu \sigma \chi} = 0$ from {eq}`eq:riemann:prop:2`, and symmetry is exploited in $(2)$: first the symmetry of the expression in $\lambda \leftrightarrow \gamma$, and thus in $\sigma \leftrightarrow \chi$ in the second term, so that the content of the curly bracket van be recast as $R_{\nu \sigma \phi \chi} + R_{\phi \chi \nu \sigma} = 2 R_{\nu \sigma \phi \chi}$, from the property {eq}`eq:riemann:prop:4` $R_{\nu \sigma \phi \chi} = R_{\phi \chi \nu \sigma}$. In $(3)$ the Riemann tensor is represented in the local Minkowski set of coordinates.
 
 
 ```
 
+```{dropdown} Expression of $\ B\ $ coefficients
+:open:
+
+From the condition $S^{\mu}_{\ \ \alpha \lambda \gamma} = 0$, it follows that
+
+$$\begin{aligned}
+  B^{\mu}_{\ \ \alpha \lambda \gamma} 
+  & = T^{\mu}_{\ \ \alpha \lambda \gamma} - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = - \frac{1}{3} \left( \bar{R}^{\mu}_{\alpha \lambda \gamma} + \bar{R}^{\mu}_{\lambda \alpha \gamma} \right) - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = - \frac{1}{3} \left( K^{\mu}_{\gamma \alpha \lambda} - K^{\mu}_{\lambda \alpha \gamma} + K^{\mu}_{\gamma \lambda \alpha} - K^{\mu}_{\alpha \lambda \gamma} \right) - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = \dots
+\end{aligned}$$
+
+or
+
+$$\begin{aligned}
+  B^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma} 
+  & = \underbrace{ T^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma}}_{=0, \text{ since } S = 0} - K^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma} = \\
+  & = - \xi^{\sigma} \xi^{\chi} \xi^{\phi} \left[ \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right] = \\
+  & = - \xi^{\sigma} \xi^{\chi} \xi^{\phi} \left[ \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - 2 \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} \right] \ .
+\end{aligned}$$
+
+---
+
+$$K^{\mu}_{\ \ \alpha \lambda \gamma} = \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi }$$
+
+$$\widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$$
+
+
+```
 
 ```{dropdown} Relation $\ \partial_{\gamma} {\Gamma'}^{\mu}_{\beta \lambda}(P) = T^{\mu}_{\ \ \beta \lambda \gamma}$
 :open:
@@ -739,6 +789,11 @@ and the Taylor expansion of the metric is
 $$
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}-\tfrac13\,R_{\alpha\gamma\beta\delta}(P)\,x^\gamma x^\delta+O(x^3)\,}
 $$ (eq-rnc)
+
+### Polynomial expansion of the geodesics
+
+**todo**
+
 
 ### Counting check
 

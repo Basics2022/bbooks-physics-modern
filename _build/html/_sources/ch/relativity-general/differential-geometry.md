@@ -235,9 +235,17 @@ just replacing the contributions $g_{\rho \lambda} \partial_{\mu} \Gamma^{\lambd
 
 ```
 
-* $R_{abcd} + R_{acdb} + R_{adbc} = 0$
-* $R_{abcd} = R_{cdab}$
-* $R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0$ (Second Bianchi identity)
+* 
+
+   $$R_{abcd} + R_{acdb} + R_{adbc} = 0$$ (eq:riemann:prop:3)
+
+* 
+
+   $$R_{abcd} = R_{cdab}$$ (eq:riemann:prop:4)
+
+* Second Bianchi identity
+
+   $$R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0$$  (eq:riemann:prop:5)
 
 ```{dropdown} Proof
 :open:
