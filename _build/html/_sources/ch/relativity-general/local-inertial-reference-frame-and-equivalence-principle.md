@@ -274,11 +274,13 @@ The two statements "$\Gamma'(P)=0$" and "$\partial g'(P)=0$" are equivalent *bec
 ```
 
 
+<!--
 ```{admonition} The term $A\,A\,x^\sigma x^\xi$ is not trustworthy
 
 The product of the two $A$ terms is $O(x^2)$. At that order one also needs $B$ (from $\partial_\alpha q^\mu$) and $\partial\partial g$ (from the expansion of $g_{\mu\nu}(q(x))$). A consistent expansion must therefore be organised by order, which is done in the next section.
 
 ```
+-->
 ---
 
 ## Third order in $q^{\mu}(x^\alpha)$
@@ -291,7 +293,7 @@ $$ (eq-T)
 
 where $C$ is built only from $\tilde e$, $A$, $\Gamma(P)$ and $\partial\Gamma(P)$ (it does not depend on $B$). The derivative of the prefactor $\partial x^\gamma/\partial q^\lambda$ does not contribute, because it multiplies the bracket of {eq}`eq-gamma-transf`, which vanishes at $P$. The only place $B$ enters is through $\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}$. $T$ is symmetric in $\alpha\beta$.
 
-### 3.1 Decomposition of $T$
+### Decomposition of $T$
 
 Define the totally symmetric part
 
@@ -475,7 +477,7 @@ $$\begin{aligned}
                     \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
   & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\nu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
  & \qquad \Big\}
-\end{aligned}$$
+\end{aligned}$$ (eq:local-inertial:metric:second-order:1)
 
 Anti-symmetric contributions $A^{\mu \nu}_{\gamma \lambda}$ in the brackets after swapping $\lambda$ and $\gamma$ or $\mu$ and $\nu$ has zero net-contribution, as $x^\gamma x^\lambda g_{\mu \nu}$ is symmetric - this is the contraction of a symmetric and an anti-symmetric tensor -, 
 
@@ -623,7 +625,67 @@ $$R_{\lambda\alpha\beta\delta}=g_{\lambda \gamma} R^{\gamma}_{\ \alpha\beta\delt
 
 ```
 
+Putting everything together, from relation {eq}`eq:local-inertial:metric:second-order:1` the second-oder term of the polynomial expansion of the metric can be recast as
+
+$$\begin{aligned}
+ {g'}^{(2)}_{\alpha \beta}
+ = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu}
+ \left\{ 
+  \widetilde{e}^{\nu}_{\ \beta } T^{\mu}_{\ \ \alpha \lambda \gamma} + 
+  \widetilde{e}^{\nu}_{\ \alpha} T^{\mu}_{\ \ \beta  \lambda \gamma}   
+ \right\} \ ,
+\end{aligned}$$
+
+with $T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} + K^{\mu}_{\ \ \alpha \lambda \gamma}$, and $K^{\mu}_{\ \ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$. Here $B$ is symmetric under any swap of a pair of lower indices, while $K^{\mu}{\ \ \alpha \lambda \gamma}$ is symmetric under the swap $\alpha \leftrightarrow \lambda$.
+
 ````
+
+```{dropdown} Relation between $\ T \ $ and $\ R \ $
+:open:
+
+$$\begin{aligned}
+  R^{\mu}_{\ \ \sigma \chi \phi} 
+  & = \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} + \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} = \\
+  & =        \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \\
+  & - \left( \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma}\right) = \\
+  & = \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi}
+\end{aligned}$$
+
+Now multiplying by $ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$ to get $K^{\mu}_{\ \ \alpha \lambda \gamma}$, it follows
+
+$$\begin{aligned}
+   {R'}^{\mu}_{\ \ \alpha \lambda \gamma}
+   & = \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} R^{\mu}_{\ \ \sigma \chi \phi} \\
+   & = K^{\mu}_{\ \ \alpha \lambda \gamma} - K^{\mu}_{\ \ \gamma \lambda \alpha} = \\
+   & = T^{\mu}_{\ \ \alpha \lambda \gamma} - T^{\mu}_{\ \ \gamma \lambda \alpha} + \underbrace{ B^{\mu}_{\ \ \alpha \lambda \gamma} - B^{\mu}_{\ \ \gamma \lambda \alpha} }_{=0} \ ,
+\end{aligned}$$
+
+as $B$ is symmetric under any swap of lower indices.
+
+$$\begin{aligned}
+  {R'}^{\mu}_{\ \alpha \lambda \gamma} + {R'}^{\mu}_{\ \lambda \alpha \gamma}
+  & = T^{\mu}_{\ \ \alpha \lambda \gamma} - T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma} - T^{\mu}_{\ \ \gamma \alpha \lambda} = && \left(\text{$T^{\cdot}_{\ \ \alpha \gamma \cdot} = T^{\cdot}_{\ \ \gamma \alpha \cdot}$, $\mp T^{\mu}_{\alpha \lambda \gamma}$}\right) \\
+  & = 3 T^{\mu}_{\ \ \alpha \lambda \gamma} - \left( T^{\mu}_{\ \ \lambda \gamma \alpha} + T^{\mu}_{\ \ \gamma \alpha \lambda} + T^{\mu}_{\ \ \alpha \lambda \gamma} \right) = \\
+  & = 3 T^{\mu}_{\ \ \alpha \lambda \gamma} - 3 S^{\mu}_{\ \ \alpha \lambda \gamma} \ , 
+\end{aligned}$$
+
+with the definition of the total symmetric part of $T$, $S^{\mu}_{\alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \ \lambda \gamma \alpha} + T^{\mu}_{\ \ \gamma \alpha \lambda} + T^{\mu}_{\ \ \alpha \lambda \gamma}  \right)$. This definition doesn't include repeated contributions that would follow from the symmetry $T^{\cdot}_{\ \ \alpha \gamma \ \cdot} = T^{\cdot}_{\ \ \gamma \alpha \ \cdot}$.
+
+**todo** *check it, as this could be the opposite of the right result*
+
+...
+
+
+```
+
+
+```{dropdown} Relation $\ \partial_{\gamma} {\Gamma'}^{\mu}_{\beta \lambda}(P) = T^{\mu}_{\ \ \beta \lambda \gamma}$
+:open:
+
+**todo** *Convert hand-written notes*
+
+```
+
 
 
 Differentiate the metric-compatibility relation {eq}`eq-compat` (written in the primed coordinates) once more and evaluate at $P$, where $\Gamma'=0$, so that derivatives of $g'$ drop out:
