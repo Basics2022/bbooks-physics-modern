@@ -1,6 +1,8 @@
 (general-relativity:local-inertial-reference-frame)=
 # Local inertial reference frame and equivalence principle
 
+See also [**equivalence principle in classical mechanics**](https://basics2022.github.io/bbooks-physics-mechanics/ch/dynamics-equivalence-principle.html).
+
 **Goal.** Starting from *generic* coordinates $q^\mu$ on spacetime, build coordinates $x^\alpha$ around an event $P$ in which the metric is Minkowskian up to second-order terms. Then show:
 
 1. what is arbitrary in this construction (and what is not),
@@ -137,8 +139,44 @@ $g'_{\alpha\beta}(P)=\eta_{\alpha\beta}$. The residual freedom is exactly the Lo
 ```{dropdown} Christoffel symbols and coordinate transformations
 :open:
 
-$$ \dots $$ (eq-gamma-transf)
+Christoffel symbols $\Gamma^{c}_{\ \ a b}$ are defind as the component of the derivatives of the vectors of the natural basis w.r.t. the natural basis itself, $\tfrac{\partial \mathbf{b}_a}{\partial q^b} = \Gamma^{c}_{\ \ a b} \mathbf{b}_{c}$, or $\Gamma^{c}_{\ \ a b} = \tfrac{\partial \mathbf{b}_a}{\partial q^b} \cdot \mathbf{b}^c = \tfrac{\partial^2 \mathbf{X}}{\partial q^a \partial q^b} \cdot \tfrac{\partial \mathbf{X}}{\partial q^d} g^{cd}$. Christoffel symbols w.r.t. the coordinates $x^\alpha$ thus read
 
+$$\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
+  & = \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma}
+\end{aligned}$$ (eq-gamma-transf)
+
+with the derivatives
+
+$$\partial_{x^\beta} \mathbf{X} = \partial_{x^\beta} q^{\mu} \partial_{q^\mu} \mathbf{X} = \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \mathbf{b}_{\mu}$$
+
+$$\begin{aligned}
+  \partial_{x^\alpha} \partial_{x^\beta} \mathbf{X} 
+  & = \partial_{x^{\alpha}} \left\{ \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \mathbf{b}_{\mu} \right\} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + B^{\mu}_{\ \ \beta \alpha \gamma} x^{\gamma} + \dots \right) \mathbf{b}_{\mu} + \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \widetilde{e}^{\nu}_{\alpha} \Gamma_{\nu \mu}^{\sigma} \mathbf{b}_{\sigma} = \\
+  & = \partial_{x^\alpha x^\beta} q^{\mu} \partial_{q^{\mu}} \mathbf{X} + \partial_{x^\beta} q^{\mu} \partial_{x^\alpha} q^{\nu} \partial_{q^{\mu} q^{\nu}} \mathbf{X} = \\
+  & = \partial_{x^\alpha x^\beta} q^{\mu} \mathbf{b}_{\mu} + \partial_{x^\beta} q^{\mu} \partial_{x^\alpha} q^{\nu} \Gamma_{\mu \nu}^{\sigma} \mathbf{b}_{\sigma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \mathbf{b}_{\mu}
+\end{aligned}$$
+
+Crystoffel symbols can thus be written as
+
+$$\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
+  & = \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \mathbf{b}_{\mu} \cdot \mathbf{b}_{\nu} \partial_{x^\delta} q^{\nu} \, \eta^{\delta \gamma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \, \partial_{x^\delta} q^{\xi}  \, g_{\mu \xi}\, \eta^{\delta \gamma} \ .
+\end{aligned}$$
+
+
+Christoffel symbols w.r.t. $x^\alpha$ evaluated in $x^\alpha = 0$ thus are
+
+$$\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta}(P)
+  & = \left. \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma} \right|_{x^{\varepsilon} = 0} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \Gamma^{\mu}_{\nu \sigma}(P) \right) \mathbf{b}_{\mu}(P) \cdot \mathbf{b}_{\chi}(P) \widetilde{e}^{\chi}_{\delta}\eta^{\delta \gamma} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \Gamma^{\mu}_{\nu \sigma}(P) \right) \, \widetilde{e}^{\chi}_{\delta}\, g_{\mu \chi}(P) \, \eta^{\delta \gamma} \ .
+\end{aligned}$$ (eq-gamma-transf-P)
 
 ```
 
@@ -178,7 +216,7 @@ Already discussed in the section about [Local basis](general-relativity:local-in
 ## Second order, $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$, and $\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0$
 
 The requirement that $\Gamma^{(x) \gamma}_{\alpha \beta} = 0$ fixes the value of the coefficients $A^{\lambda}_{\alpha \beta}$ in the expansion {eq}`eq-polynomial-expansion`.
-From the transformation law {eq}`eq-gamma-transf`, using $\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha$ and $\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}$:
+From the transformation law {eq}`eq-gamma-transf-P`, using $\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha$ and $\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}$:
 
 $$
 \Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda\Big[\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+A^\lambda{}_{\alpha\beta}\Big].
@@ -285,13 +323,13 @@ The product of the two $A$ terms is $O(x^2)$. At that order one also needs $B$ (
 
 ## Third order in $q^{\mu}(x^\alpha)$
 
-The cubic coefficients $B^\lambda{}_{\alpha\beta\gamma}$ are totally symmetric. Differentiate {eq}`eq-gamma-transf` once more and evaluate at $P$, where $\Gamma'(P)=0$:
+The cubic coefficients $B^\lambda{}_{\alpha\beta\gamma}$ are totally symmetric. Differentiate {eq}`eq-gamma-transf-P` once more and evaluate at $P$, where $\Gamma'(P)=0$:
 
 $$
 T^\gamma{}_{\alpha\beta\delta}:=\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda B^\lambda{}_{\alpha\beta\delta}+C^\gamma{}_{\alpha\beta\delta},
 $$ (eq-T)
 
-where $C$ is built only from $\tilde e$, $A$, $\Gamma(P)$ and $\partial\Gamma(P)$ (it does not depend on $B$). The derivative of the prefactor $\partial x^\gamma/\partial q^\lambda$ does not contribute, because it multiplies the bracket of {eq}`eq-gamma-transf`, which vanishes at $P$. The only place $B$ enters is through $\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}$. $T$ is symmetric in $\alpha\beta$.
+where $C$ is built only from $\tilde e$, $A$, $\Gamma(P)$ and $\partial\Gamma(P)$ (it does not depend on $B$). The derivative of the prefactor $\partial x^\gamma/\partial q^\lambda$ does not contribute, because it multiplies the bracket of {eq}`eq-gamma-transf-P`, which vanishes at $P$. The only place $B$ enters is through $\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}$. $T$ is symmetric in $\alpha\beta$.
 
 ### Decomposition of $T$
 
@@ -792,7 +830,55 @@ $$ (eq-rnc)
 
 ### Polynomial expansion of the geodesics
 
-**todo**
+The equation of a geodesics in a region of spacetime where $\nabla_{\nu} T^{\nu \mu } = 0$ reads
+
+$$\partial_{\lambda \lambda} \mathbf{X} = \left\{ \ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}  \right\} \mathbf{b}_{\mu} = \mathbf{0} \ ,$$
+
+being $\lambda$ a parameter that provides a regular parametrization of the worldline $\mathbf{X}\left( q^{\mu} ( \lambda ) \right)$, identified with the geodesics, and $\dot{q}^{\mu} =: \partial_\lambda q^{\mu}$.
+
+**Polynomial expansion** of the global coordinates $q^{\mu}$ in local coordinates $x^{\alpha}$
+
+$$q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^{\mu}_{\ \ \alpha \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^{\alpha} x^{\beta} x^\gamma + o\left( \left( x^\lambda \right)^3 \right) \ .$$ (eq-polynomial-expansion)
+
+with $A^{\mu}_{\ \ \alpha \beta} = - \Gamma^{\mu}_{\ \ \nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta}$, and $B^{\mu}_{\ \ \alpha \beta \gamma} = \dots$
+
+```{dropdown} Details
+:open:
+
+**Velocity.** The velocity w.r.t. a parameter $\lambda$ describing the worldline $\mathbf{X}\left(q^{\mu}(\lambda)\right)$ reads
+
+$$\mathbf{U} = \partial_{\lambda} \mathbf{X} = \partial_{\lambda} q^{\mu} \, \partial_{q^{\mu}} \mathbf{X} = \partial_{\lambda} x^{\alpha} \partial_{x^{\alpha}} q^{\mu} \partial_{q^{\mu}} \mathbf{X} \ .$$
+
+The components of the velocity are
+
+$$\partial_{\lambda} q^{\mu}  = \partial_{\lambda} x^{\alpha} \partial_{x^{\alpha}} q^{\mu} \ .$$
+
+**Derivative of the components of the velocity**
+
+$$\begin{aligned}
+  \partial_{\lambda} \partial_{\lambda} q^{\mu}
+  & = \partial_{\lambda} \left( \partial_{\lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} \right) = \\
+  & = \partial_{\lambda \lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} + \partial_\lambda x^{\alpha} \partial_{\lambda} \partial_{x^\alpha} q^{\mu} = \\
+  & = \partial_{\lambda \lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} + \partial_\lambda x^{\alpha} \partial_{\lambda} x^\beta \partial_{x^\alpha x^\beta} q^{\mu} \ .
+\end{aligned}$$
+
+Thus the term $\Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}$ becomes
+
+$$\begin{aligned}
+ \Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}
+ & = \Gamma^{\mu}_{\nu \sigma} \partial_{x^\alpha} q^\mu \partial_{x^\beta} q^{\nu} \dot{x}^{\alpha} \dot{x}^{\beta} = \\
+\end{aligned}$$
+
+---
+
+$$\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \, \partial_{x^\delta} q^{\xi}  \, g_{\mu \xi}\, \eta^{\delta \gamma} \ .
+\end{aligned}$$
+
+Forcing ${\Gamma'}^{\gamma}_{\ \ \alpha \beta} = 0$, implies
+
+```
 
 
 ### Counting check
