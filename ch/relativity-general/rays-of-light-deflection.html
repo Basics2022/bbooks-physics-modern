@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.6.3. Deflection of a ray of light, and Eddington measurements (1919) &#8212; Modern Physics</title>
+    <title>7.7.3. Deflection of a ray of light, and Eddington measurements (1919) &#8212; Modern Physics</title>
   
   
   
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="8. Statistical Physics" href="../statistical-mechanics/intro.html" />
-    <link rel="prev" title="7.6.2. Planetary orbits in Schwarzschild spacetime" href="schwarzschild-orbits.html" />
+    <link rel="prev" title="7.7.2. Planetary orbits in Schwarzschild spacetime" href="schwarzschild-orbits.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,10 +192,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">7.3. Linearization of Einstein’s equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="efe-properties.html">7.4. Properties of Einstein field equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html">7.5. Local inertial reference frame and equivalence principle</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">7.6. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.6.1. Schwarzschild metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">7.6.2. Planetary orbits in Schwarzschild spacetime</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">7.6.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geodesics.html">7.6. Geodesics</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="examples.html">7.7. Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.7.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">7.7.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">7.7.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
 </ul>
 </li>
 </ul>
@@ -528,8 +529,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">7.6.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">7.6.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">7.7.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">7.7.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
 </ul>
             </nav>
         </div>
@@ -542,14 +543,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="deflection-of-a-ray-of-light-and-eddington-measurements-1919">
-<span id="relativity-general-notes-examples-deflection-of-ray-of-light"></span><h1><span class="section-number">7.6.3. </span>Deflection of a ray of light, and Eddington measurements (1919)<a class="headerlink" href="#deflection-of-a-ray-of-light-and-eddington-measurements-1919" title="Permalink to this heading">#</a></h1>
+<span id="relativity-general-notes-examples-deflection-of-ray-of-light"></span><h1><span class="section-number">7.7.3. </span>Deflection of a ray of light, and Eddington measurements (1919)<a class="headerlink" href="#deflection-of-a-ray-of-light-and-eddington-measurements-1919" title="Permalink to this heading">#</a></h1>
 <p>Newton’s theory of universal gravitation is fundamentally incompatible with special relativity: in Newtonian mechanics, gravitational interactions act instantaneously across space, violating the relativistic principle that no physical signal or interaction can propagate faster than the speed of light <span class="math notranslate nohighlight">\(c\)</span>.</p>
 <p>In this section, the equation of the trajectory of zero-mass object in Schwarzschild metrics is derived here, using perturbation method for weak gravitational fields. The equations of general relativity imply that a ray of light is deflected by a body with mass <span class="math notranslate nohighlight">\(M\)</span> by an angle</p>
 <div class="math notranslate nohighlight">
 \[\delta \simeq 4 \frac{GM}{R c^2} \ ,\]</div>
 <p>being <span class="math notranslate nohighlight">\(R\)</span> the minimum distance of the ray from the center of the massive body. This results is compared is twice the deflection predicted by the laws of classical mechanics using Newton gravitation, <span class="math notranslate nohighlight">\(\delta^{\rm Newton} \simeq 2 \frac{GM}{R c^2}\)</span>. <strong>Eddington experiment</strong> during the total solar eclipse of the 1919 measured the amount of deflection of light rays passing close to the sun, confirming that general gravitation has better predictions and matches the experimental measurements, providing the first experimental tests of Einstein theory of general relativity as a new and better theory of gravitation.</p>
 <div class="section" id="trajectory-of-zero-mass-objects-in-schwarzschild-metrics">
-<span id="relativity-general-notes-examples-deflection-of-ray-of-light-trajectory-schwarzschild"></span><h2><span class="section-number">7.6.3.1. </span>Trajectory of zero-mass objects in Schwarzschild metrics<a class="headerlink" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics" title="Permalink to this heading">#</a></h2>
+<span id="relativity-general-notes-examples-deflection-of-ray-of-light-trajectory-schwarzschild"></span><h2><span class="section-number">7.7.3.1. </span>Trajectory of zero-mass objects in Schwarzschild metrics<a class="headerlink" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics" title="Permalink to this heading">#</a></h2>
 <p>Light particles travel at the speed of light <span class="math notranslate nohighlight">\(c\)</span>. Thus the elementary increment of proper interval (or proper time <span class="math notranslate nohighlight">\(\tau\)</span>) is zero,</p>
 <div class="math notranslate nohighlight">
 \[0 = ds^2 = g_{ij} \frac{d q^i}{d \lambda} \frac{d q^j}{d \lambda} \ .\]</div>
@@ -678,7 +679,7 @@ Extremes of the trajectory<div class="sd-summary-down docutils">
 -->
 </div>
 <div class="section" id="comparison-with-the-laws-of-classical-mechanics-newton-gravitation">
-<span id="relativity-general-notes-examples-deflection-of-ray-of-light-newton"></span><h2><span class="section-number">7.6.3.2. </span>Comparison with the laws of classical mechanics - Newton gravitation<a class="headerlink" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation" title="Permalink to this heading">#</a></h2>
+<span id="relativity-general-notes-examples-deflection-of-ray-of-light-newton"></span><h2><span class="section-number">7.7.3.2. </span>Comparison with the laws of classical mechanics - Newton gravitation<a class="headerlink" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation" title="Permalink to this heading">#</a></h2>
 <p><strong>See</strong>: <a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/mechanics/dynamics-central.html">Physics - HS: Classical Mechanics: Dynamics: Central Motions</a></p>
 <p>With the laws of classical mechanics, the equation of the trajectory of central motions with force <span class="math notranslate nohighlight">\(\vec{F} = c \frac{\vec{r}}{\left| \vec{r} \right|^3}\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -741,7 +742,7 @@ Extremes of the trajectory<div class="sd-summary-down docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.6.2. </span>Planetary orbits in Schwarzschild spacetime</p>
+        <p class="prev-next-title"><span class="section-number">7.7.2. </span>Planetary orbits in Schwarzschild spacetime</p>
       </div>
     </a>
     <a class="right-next"
@@ -768,8 +769,8 @@ Extremes of the trajectory<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">7.6.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">7.6.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trajectory-of-zero-mass-objects-in-schwarzschild-metrics">7.7.3.1. Trajectory of zero-mass objects in Schwarzschild metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-with-the-laws-of-classical-mechanics-newton-gravitation">7.7.3.2. Comparison with the laws of classical mechanics - Newton gravitation</a></li>
 </ul>
   </nav></div>
 
