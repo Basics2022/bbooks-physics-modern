@@ -40,7 +40,7 @@ with $\partial_s \mathbf{b}_{\mu} = \partial_s q^{\nu} \partial_{\nu} \mathbf{b}
 
 The acceleration of the deviation is
 
-$$\Delta \mathbf{A} = \Delta s \, R^{\rho}_{\ \ \sigma \mu \nu} U^{\sigma} U^{\mu} \xi^{\nu} + o(\Delta s) \ ,$$
+$$\Delta \mathbf{A} = \Delta s \, R^{\rho}_{\ \ \sigma \mu \nu} U^{\sigma} U^{\mu} \xi^{\nu} \, \mathbf{b}_{\rho} + o(\Delta s) \ ,$$
 
 with $R^{\rho}_{\ \ \sigma \mu \nu}$ the components of the Riemann tensor in the natural basis induced by the coordinates $q^{\mu}$.
 
