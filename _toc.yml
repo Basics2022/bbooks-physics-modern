@@ -25,6 +25,7 @@ parts:
     - file: ch/relativity-general/linearized-efe
     - file: ch/relativity-general/efe-properties
     - file: ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle
+    - file: ch/relativity-general/geodesics
     - file: ch/relativity-general/examples
       sections:
       - file: ch/relativity-general/schwarzschild-metric
