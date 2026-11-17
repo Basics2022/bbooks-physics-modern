@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -530,7 +521,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.6.1. …</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.6.2.1. Velocity of the geodesics deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.6.2.2. Acceleration of the geodesics deviation</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -549,7 +544,7 @@ document.write(`
 </div>
 <div class="section" id="geodesics-deviation-equation">
 <span id="general-relativity-geodesics-deviation"></span><h2><span class="section-number">7.6.2. </span>Geodesics deviation equation<a class="headerlink" href="#geodesics-deviation-equation" title="Permalink to this heading">#</a></h2>
-<p>Let a region of spacetime be parametrized by two parameters, <span class="math notranslate nohighlight">\(\mathbf{X}(\lambda, s)\)</span>, so that</p>
+<p>Let a region of spacetime be parametrized by two parameters, <span class="math notranslate nohighlight">\(\mathbf{X}\left( q^{\mu}(\lambda, s) \right)\)</span>, so that</p>
 <ul>
 <li><p><strong>geodesics</strong> are constant-<span class="math notranslate nohighlight">\(s\)</span> lines parametrized by <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X}(\lambda, \bar{s})\)</span>. The velocity vector is</p>
 <div class="math notranslate nohighlight">
@@ -563,6 +558,8 @@ document.write(`
 <p>Since mixed partial derivatives of a multi-variable function are equal, and <span class="math notranslate nohighlight">\(U^{\mu} = \partial_{\lambda} q^{\mu}\)</span>, <span class="math notranslate nohighlight">\(\xi^{\mu} = \partial_s q^{\mu}\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\partial_s U^{\mu} = \partial_\lambda \xi^{\mu} \ .\]</div>
+<div class="section" id="velocity-of-the-geodesics-deviation">
+<span id="general-relativity-geodesics-deviation-velocity"></span><h3><span class="section-number">7.6.2.1. </span>Velocity of the geodesics deviation<a class="headerlink" href="#velocity-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
 <p>The evolution of the deviation elementary “segment” <span class="math notranslate nohighlight">\(\Delta \mathbf{X} = \Delta s \, \partial_s q^{\mu} \mathbf{b}_{\mu}\)</span> follows from the comparison of two neighboring geodesics. The velocity of the deviation is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -571,7 +568,22 @@ document.write(`
   &amp; = \partial_\lambda q^{\mu}(\lambda,s+ds) \mathbf{b}_{\mu}(\lambda,s+ds) - \partial_\lambda q^{\mu}(\lambda,s) \mathbf{b}_{\mu}(\lambda,s) = \\
   &amp; = \Delta s \left\{ \partial_{\lambda s} q^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dfrac{\partial q^{\nu}}{\partial s} \dfrac{\partial q^{\sigma}}{\partial \lambda} \right\} \mathbf{b}_{\mu} + o\left(\Delta s\right) \ ,
 \end{aligned}\end{split}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\partial_s \mathbf{b}_{\mu} = \partial_s q^{\nu} \partial_{\nu} \mathbf{b}_{\mu} = \partial_s q^{\nu} \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}\)</span>. The acceleration of the deviation</p>
+<p>with <span class="math notranslate nohighlight">\(\partial_s \mathbf{b}_{\mu} = \partial_s q^{\nu} \partial_{\nu} \mathbf{b}_{\mu} = \partial_s q^{\nu} \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}\)</span>.</p>
+</div>
+<div class="section" id="acceleration-of-the-geodesics-deviation">
+<span id="general-relativity-geodesics-deviation-acceleration"></span><h3><span class="section-number">7.6.2.2. </span>Acceleration of the geodesics deviation<a class="headerlink" href="#acceleration-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
+<p>The acceleration of the deviation is</p>
+<div class="math notranslate nohighlight">
+\[\Delta \mathbf{A} = \Delta s \, R^{\rho}_{\ \ \sigma \mu \nu} U^{\sigma} U^{\mu} \xi^{\nu} + o(\Delta s) \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(R^{\rho}_{\ \ \sigma \mu \nu}\)</span> the components of the Riemann tensor in the natural basis induced by the coordinates <span class="math notranslate nohighlight">\(q^{\mu}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The acceleration of the deviation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \Delta \mathbf{A}
@@ -596,17 +608,18 @@ document.write(`
      \partial_{\mu} \Gamma^{\rho}_{\nu \sigma} - \partial_{\nu} \Gamma^{\rho}_{\mu \sigma} + \Gamma^{\rho}_{\mu \lambda} \Gamma^{\lambda}_{\nu \sigma} - \Gamma^{\rho}_{\nu \lambda} \Gamma^{\lambda}_{\mu \sigma}
   \right\} \, \partial_s q^{\nu} \partial_{\lambda} q^{\mu} \partial_{\lambda} q^{\sigma} \,  \mathbf{b}_{\rho} + o(\Delta s) \ ,
 \end{aligned}\end{split}\]</div>
-<p>since <span class="math notranslate nohighlight">\((1)\)</span> the geodesics equation reads <span class="math notranslate nohighlight">\(\partial_{\lambda \lambda} q^{\mu} = - \Gamma^{\mu}_{\nu \sigma} \partial_\lambda q^{\nu} \partial_\lambda q^{\sigma}\)</span>; <span class="math notranslate nohighlight">\((2)\)</span> <span class="math notranslate nohighlight">\(\partial_s \Gamma^{\mu}_{\nu \sigma} = \partial_s q^{\chi} \partial_{\chi} \Gamma^{\mu}_{\nu \sigma}\)</span>; <span class="math notranslate nohighlight">\((3)\)</span> symmetry allows swapping some indices to make the components of the Riemann tensor in the natural basis appear</p>
+<p class="sd-card-text">since <span class="math notranslate nohighlight">\((1)\)</span> the geodesics equation reads <span class="math notranslate nohighlight">\(\partial_{\lambda \lambda} q^{\mu} = - \Gamma^{\mu}_{\nu \sigma} \partial_\lambda q^{\nu} \partial_\lambda q^{\sigma}\)</span>; <span class="math notranslate nohighlight">\((2)\)</span> <span class="math notranslate nohighlight">\(\partial_s \Gamma^{\mu}_{\nu \sigma} = \partial_s q^{\chi} \partial_{\chi} \Gamma^{\mu}_{\nu \sigma}\)</span>; <span class="math notranslate nohighlight">\((3)\)</span> symmetry allows swapping some indices to make the components of the Riemann tensor in the natural basis appear</p>
 <div class="math notranslate nohighlight">
 \[R^{\rho}_{\ \ \sigma \mu \nu} = \partial_{\mu} \Gamma^{\rho}_{\ \ \nu \sigma} - \partial_{\nu} \Gamma^{\rho}_{\ \ \mu \sigma} + \Gamma^{\rho}_{\ \ \mu \lambda} \Gamma^{\lambda}_{\ \ \nu \sigma} - \Gamma^{\rho}_{\ \ \nu \lambda} \Gamma^{\lambda}_{\ \ \mu \sigma} \ .\]</div>
-<p>Thus the</p>
-<!--
+</div>
+</details><!--
 The equation of the geodesics with parameters $s$ has velocity $\mathbf{U}(q^{\mu}(\lambda,s)) = \partial_{\lambda} q^{\mu} \partial_{\mu} \mathbf{X} = \partial_{\lambda} q^{\mu} \mathbf{b}_{\mu}$
 
 $$\mathbf{0} = \frac{\partial}{\partial \lambda} \mathbf{U}(\lambda, s) = \left. \left\{ \dfrac{\partial^2 q^\mu}{\partial \lambda^2} + \Gamma^{\mu}_{\nu \sigma} \dfrac{\partial q^{\nu}}{\partial \lambda} \dfrac{\partial q^{\sigma}}{\partial \lambda} \right\} \mathbf{b}_{\mu} \right|_{(\lambda,s)} \ ,$$
 
 since $\partial_\lambda \mathbf{b}_{\mu} = \partial_{\lambda} q^{\nu} \, \partial_{\nu} \mathbf{b}_{\mu} = U^\nu \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}$.
 -->
+</div>
 </div>
 </div>
 
@@ -674,7 +687,11 @@ since $\partial_\lambda \mathbf{b}_{\mu} = \partial_{\lambda} q^{\nu} \, \partia
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.6.1. …</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.6.2.1. Velocity of the geodesics deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.6.2.2. Acceleration of the geodesics deviation</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
