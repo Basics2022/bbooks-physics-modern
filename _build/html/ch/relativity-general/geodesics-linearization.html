@@ -654,15 +654,17 @@ M^{\mu}_{\ \ \nu}
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">with <span class="math notranslate nohighlight">\(\widetilde{M}^{\eta}_{i\ \ \nu \alpha \dots} = \left( M^{-1}_{0} \right)^{\eta}_{\ \ \mu} M^{\mu}_{i\ \ \nu \alpha \dots}\)</span>. Let <span class="math notranslate nohighlight">\(P^{\nu}_{\ \ \sigma}\)</span> s.t. <span class="math notranslate nohighlight">\(M^{\mu}_{\ \ \nu} P^{\nu}_{\ \ \sigma} = \delta^{\mu}_{\ \ \sigma}\)</span>, with its polynomial expansion</p>
 <div class="math notranslate nohighlight">
-\[
-P^{\nu}_{\ \ \sigma} = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots
-\]</div>
+\[\begin{split}\begin{aligned}
+P^{\nu}_{\ \ \sigma} 
+&amp; = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots = \\
+&amp; = P^{\nu}_{0 \ \ \eta} \left\{ \delta^{\eta}_{\ \ \sigma} + \widetilde{P}^{\eta}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} \widetilde{P}^{\eta}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} \widetilde{P}^{\eta}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots \right\}
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">The unknown coefficients <span class="math notranslate nohighlight">\(P^{\nu}_{i \ \ \sigma}\)</span> of the polynomial series are evaluate matching coefficients in the inverse relation.</p>
 <p class="sd-card-text"><strong>Zero-th order.</strong> <span class="math notranslate nohighlight">\(\delta^{\mu}_{\ \ \sigma} = M^{\mu}_{0\ \ \nu} P^{\nu}_{0 \ \ \sigma} \)</span> implies <span class="math notranslate nohighlight">\(P^{\nu}_{0\ \ \sigma} = \left( M_0^{-1} \right)^{\nu}_{\ \ \sigma}\)</span>.</p>
 <p class="sd-card-text"><strong>First order.</strong></p>
 <div class="math notranslate nohighlight">
 \[
-0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu} P^{\nu}_{0 \ \ \sigma \alpha} x^\alpha
+0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{0 \ \ \sigma} x^\alpha
 \]</div>
 <p class="sd-card-text">implies for each <span class="math notranslate nohighlight">\(\alpha\)</span></p>
 <div class="math notranslate nohighlight">
@@ -671,6 +673,9 @@ P^{\nu}_{1 \ \ \sigma \alpha}
   = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} P^{\chi}_{0 \ \ \sigma} 
   = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma}
 \]</div>
+<p class="sd-card-text">or</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{P}^{\nu}_{1\ \ \sigma \alpha} = - \widetilde{M}^{\nu}_{1\ \ \sigma \alpha} \ .\]</div>
 <p class="sd-card-text"><strong>Second order.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -682,9 +687,100 @@ P^{\nu}_{1 \ \ \sigma \alpha}
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 P^{\nu}_{2 \ \ \sigma \alpha \beta} 
-  &amp; = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \nu \beta} P^{\nu}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right) = \\
-  &amp; =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \nu \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{2 \ \ \nu \alpha \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \sigma} \right) = \\
+  &amp; = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} P^{\xi}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \xi \beta} P^{\xi}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \xi \alpha \beta} P^{\xi}_{0 \ \ \sigma} \right) = \\
+  &amp; =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \xi \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} - M^{\mu}_{2 \ \ \xi \alpha \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \sigma} \right) = \\
 \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{P}^{\nu}_{2\ \ \sigma \alpha \beta} = \widetilde{M}^{\nu}_{1 \ \ \xi \alpha} \widetilde{M}^{\xi}_{1 \ \ \sigma \beta} + \widetilde{M}^{\nu}_{1 \ \ \xi \beta} \widetilde{M}^{\xi}_{1 \ \ \sigma \alpha} - \widetilde{M}^{\nu}_{2 \ \ \sigma \alpha \beta} \ .\]</div>
+<p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(n^{\rm th}\)</span>-order.</strong> Recursion formula holds</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{P}^{\nu}_{n \ \ \sigma \alpha_1 \dots \alpha_n} = \dots\]</div>
+<p class="sd-card-text"><strong>todo</strong> <em>Prove it!</em></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Expansion of <span class="math notranslate nohighlight">\(\ \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta\)</span><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \ddot{x}^\gamma + \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta = \\
+  &amp; = \ddot{x}^\gamma + \left( P^{\gamma}_{0\ \ \mu} + P^{\gamma}_{1 \ \ \mu\xi} x^{\xi} + \dots \right) \left( G^{\mu}_{0\ \ \alpha \beta} + G^{\mu}_{1\ \ \xi\alpha\beta} x^{\xi} + \dots \right) \dot{x}^\alpha \dot{x}^\beta \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Third-order.</strong> Choosing Riemann normal coordinates, <span class="math notranslate nohighlight">\(G^{\mu}_{0\ \ \alpha \beta} = 0\)</span>, so the third-order contribution reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P^{\gamma}_{0\ \ \mu} G^{\mu}_{1\ \ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi
+  &amp; = e^{\gamma}_{\ \ \mu} \left( B^{\mu}_{\ \alpha \beta \xi} + \partial_{x^{\xi}} \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) A^{\nu}_{\ \ \alpha \xi} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} A^{\sigma}_{\ \ \beta \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Using</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_{x^\xi} \Gamma^{\mu}_{\nu \sigma} &amp; = \partial_{x^\xi} q^{\rho} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} = \widetilde{e}^{\rho}_{\xi} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} \\
+  A^{\lambda}_{\ \ \alpha \beta} &amp; = -\Gamma^{\lambda}_{\phi \zeta}(P) \widetilde{e}^{\phi}_{\ \alpha} \widetilde{e}^{\zeta}_{\ \beta} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and observing that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  G^{\mu}_{1\ \ \alpha \beta \xi}
+  &amp; = B^{\mu}_{\ \ \alpha \beta \xi} + \left( \partial_{\rho} \Gamma^{\mu}_{\nu \sigma} - \Gamma^{\mu}_{\chi \sigma} \Gamma^{\chi}_{\nu \rho} - \Gamma^{\mu}_{\nu \chi} \Gamma^{\chi}_{\sigma \rho} \right) \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  &amp; = B^{\mu}_{\ \ \alpha \beta \xi} + \widetilde{K}^{\mu}_{\ \nu \sigma \rho} \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  &amp; = B^{\mu}_{\ \alpha \beta \xi} + K^{\mu}_{\ \alpha \beta \xi} \\
+  &amp; =: T^{\mu}_{\ \alpha \beta \xi}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Recalling that <span class="math notranslate nohighlight">\(T^{\mu}_{\ \alpha \beta \xi} = - \tfrac{1}{3} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right)\)</span> for Riemann normal coordinates, the polynomial expansion of the geodesics equation up to the third order reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \ddot{x}^\gamma - \frac{1}{3} e^\gamma_{\ \mu} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+  &amp; = \ddot{x}^\gamma - \frac{1}{3} \left( {R'}^{\gamma}_{\ \alpha \beta \xi} + {R'}^{\gamma}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having projected here also the upper index on the local Minkowski vector basis, and exploiting symmetry of dummy indices</p>
+<div class="math notranslate nohighlight">
+\[
+  \ddot{x}^\gamma = \frac{2}{3} {R'}^{\gamma}_{\ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi \ .
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><em>see <a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html#general-relativity-local-inertial-reference-frame"><span class="std std-ref">local inertial reference frame</span></a> and clean this and those notes</em> <strong>todo</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(B^{\mu}_{\ \alpha \lambda \gamma}\)</span> symmetric under any swap of lower indices</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(K^{\mu}_{\ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\)</span>, is symmetric under <span class="math notranslate nohighlight">\(\alpha \leftrightarrow \lambda\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T^{\mu}_{\ \alpha \lambda \gamma} = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \alpha \lambda \gamma}\)</span>, symmetric under <span class="math notranslate nohighlight">\(\alpha \leftrightarrow \lambda\)</span></p></li>
+</ul>
+<hr class="docutils" />
+<!--
+and dropping the argument $(P)$, 
+
+$$\begin{aligned}
+  & P^{\gamma}_{0\ \ \mu} G^{\mu}_{1\ \ \alpha \beta \sigma} \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+  & = e^{\gamma}_{\mu} \left[ - \frac{1}{3}( R^{\mu}_{\ \ \nu \rho \sigma} + R^{\mu}_{\ \ \sigma \rho \nu} ) + \partial_{\rho} \Gamma^{\mu}_{\nu \sigma} - \Gamma^{\mu}_{\chi \sigma} \Gamma^{\chi}_{\alpha \xi} - \Gamma^{\mu}_{\nu \chi} \Gamma_{\beta \xi}^\chi \right] 
+  \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} \widetilde{e}^{\rho}_{\ \ \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi \\
+\end{aligned}$$
+
+
+With $M^\mu{}_\alpha(x):=\partial_{x^\alpha}q^\mu(x)$ and $G^\mu{}_{\alpha\beta}(x):=\partial_\beta M^\mu{}_\alpha(x)+\Gamma^\mu_{\nu\sigma}(q(x))\,M^\nu{}_\alpha(x)\,M^\sigma{}_\beta(x)$.
+
+$$
+q^\mu=q^\mu_P+\tilde e^\mu_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+\tfrac1{24}C^\mu{}_{\alpha\beta\gamma\delta}x^\alpha x^\beta x^\gamma x^\delta+\dots
+$$
+
+$$
+M^\mu{}_\alpha=\tilde e^\mu_\alpha+A^\mu{}_{\alpha\beta}x^\beta+\tfrac12B^\mu{}_{\alpha\beta\gamma}x^\beta x^\gamma+\tfrac16C^\mu{}_{\alpha\beta\gamma\delta}x^\beta x^\gamma x^\delta+\dots
+$$
+
+$$
+\left( M^{-1} \right)^{\gamma}_{\mu} = 
+$$
+
+$$
+A^\kappa{}_{\alpha\beta}=-\Gamma^\kappa{}_{\alpha\beta},\qquad
+B^\kappa{}_{\alpha\beta\gamma}=-\partial_{(\gamma}\Gamma^\kappa{}_{\alpha\beta)}+2\,\Gamma^\kappa{}_{\lambda(\alpha}\Gamma^\lambda{}_{\beta\gamma)} ,
+$$
+-->
 </div>
 </details></div>
 <div class="section" id="expansion-of-g">

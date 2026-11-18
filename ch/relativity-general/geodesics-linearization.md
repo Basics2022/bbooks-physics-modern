@@ -110,9 +110,11 @@ M^{\mu}_{\ \ \nu}
 
 with $\widetilde{M}^{\eta}_{i\ \ \nu \alpha \dots} = \left( M^{-1}_{0} \right)^{\eta}_{\ \ \mu} M^{\mu}_{i\ \ \nu \alpha \dots}$. Let $P^{\nu}_{\ \ \sigma}$ s.t. $M^{\mu}_{\ \ \nu} P^{\nu}_{\ \ \sigma} = \delta^{\mu}_{\ \ \sigma}$, with its polynomial expansion
 
-$$
-P^{\nu}_{\ \ \sigma} = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots
-$$
+$$\begin{aligned}
+P^{\nu}_{\ \ \sigma} 
+& = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots = \\
+& = P^{\nu}_{0 \ \ \eta} \left\{ \delta^{\eta}_{\ \ \sigma} + \widetilde{P}^{\eta}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} \widetilde{P}^{\eta}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} \widetilde{P}^{\eta}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots \right\}
+\end{aligned}$$
 
 The unknown coefficients $P^{\nu}_{i \ \ \sigma}$ of the polynomial series are evaluate matching coefficients in the inverse relation.
 
@@ -121,7 +123,7 @@ The unknown coefficients $P^{\nu}_{i \ \ \sigma}$ of the polynomial series are e
 **First order.**
 
 $$
-0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu} P^{\nu}_{0 \ \ \sigma \alpha} x^\alpha
+0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{0 \ \ \sigma} x^\alpha
 $$
 
 implies for each $\alpha$ 
@@ -131,6 +133,10 @@ P^{\nu}_{1 \ \ \sigma \alpha}
   = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} P^{\chi}_{0 \ \ \sigma} 
   = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma}
 $$
+
+or
+
+$$\widetilde{P}^{\nu}_{1\ \ \sigma \alpha} = - \widetilde{M}^{\nu}_{1\ \ \sigma \alpha} \ .$$
 
 **Second order.**
 
@@ -144,12 +150,117 @@ implies
 
 $$\begin{aligned}
 P^{\nu}_{2 \ \ \sigma \alpha \beta} 
-  & = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \nu \beta} P^{\nu}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right) = \\
-  & =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \nu \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{2 \ \ \nu \alpha \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \sigma} \right) = \\
+  & = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} P^{\xi}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \xi \beta} P^{\xi}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \xi \alpha \beta} P^{\xi}_{0 \ \ \sigma} \right) = \\
+  & =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \xi \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} - M^{\mu}_{2 \ \ \xi \alpha \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \sigma} \right) = \\
+\end{aligned}$$
+
+or
+
+$$\widetilde{P}^{\nu}_{2\ \ \sigma \alpha \beta} = \widetilde{M}^{\nu}_{1 \ \ \xi \alpha} \widetilde{M}^{\xi}_{1 \ \ \sigma \beta} + \widetilde{M}^{\nu}_{1 \ \ \xi \beta} \widetilde{M}^{\xi}_{1 \ \ \sigma \alpha} - \widetilde{M}^{\nu}_{2 \ \ \sigma \alpha \beta} \ .$$
+
+**$n^{\rm th}$-order.** Recursion formula holds
+
+$$\widetilde{P}^{\nu}_{n \ \ \sigma \alpha_1 \dots \alpha_n} = \dots$$
+
+**todo** *Prove it!*
+
+```
+
+````{dropdown} Expansion of $\ \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta$
+:open:
+
+$$\begin{aligned}
+  0 
+  & = \ddot{x}^\gamma + \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta = \\
+  & = \ddot{x}^\gamma + \left( P^{\gamma}_{0\ \ \mu} + P^{\gamma}_{1 \ \ \mu\xi} x^{\xi} + \dots \right) \left( G^{\mu}_{0\ \ \alpha \beta} + G^{\mu}_{1\ \ \xi\alpha\beta} x^{\xi} + \dots \right) \dot{x}^\alpha \dot{x}^\beta \ .
+\end{aligned}$$
+
+**Third-order.** Choosing Riemann normal coordinates, $G^{\mu}_{0\ \ \alpha \beta} = 0$, so the third-order contribution reads 
+
+$$\begin{aligned}
+  P^{\gamma}_{0\ \ \mu} G^{\mu}_{1\ \ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi
+  & = e^{\gamma}_{\ \ \mu} \left( B^{\mu}_{\ \alpha \beta \xi} + \partial_{x^{\xi}} \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) A^{\nu}_{\ \ \alpha \xi} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} A^{\sigma}_{\ \ \beta \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+\end{aligned}$$
+
+Using
+
+$$\begin{aligned}
+  \partial_{x^\xi} \Gamma^{\mu}_{\nu \sigma} & = \partial_{x^\xi} q^{\rho} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} = \widetilde{e}^{\rho}_{\xi} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} \\
+  A^{\lambda}_{\ \ \alpha \beta} & = -\Gamma^{\lambda}_{\phi \zeta}(P) \widetilde{e}^{\phi}_{\ \alpha} \widetilde{e}^{\zeta}_{\ \beta} \\
+\end{aligned}$$
+
+and observing that
+
+$$\begin{aligned}
+  G^{\mu}_{1\ \ \alpha \beta \xi}
+  & = B^{\mu}_{\ \ \alpha \beta \xi} + \left( \partial_{\rho} \Gamma^{\mu}_{\nu \sigma} - \Gamma^{\mu}_{\chi \sigma} \Gamma^{\chi}_{\nu \rho} - \Gamma^{\mu}_{\nu \chi} \Gamma^{\chi}_{\sigma \rho} \right) \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  & = B^{\mu}_{\ \ \alpha \beta \xi} + \widetilde{K}^{\mu}_{\ \nu \sigma \rho} \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  & = B^{\mu}_{\ \alpha \beta \xi} + K^{\mu}_{\ \alpha \beta \xi} \\
+  & =: T^{\mu}_{\ \alpha \beta \xi}
+\end{aligned}$$
+
+Recalling that $T^{\mu}_{\ \alpha \beta \xi} = - \tfrac{1}{3} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right)$ for Riemann normal coordinates, the polynomial expansion of the geodesics equation up to the third order reads
+
+$$\begin{aligned}
+  0 
+  & = \ddot{x}^\gamma - \frac{1}{3} e^\gamma_{\ \mu} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+  & = \ddot{x}^\gamma - \frac{1}{3} \left( {R'}^{\gamma}_{\ \alpha \beta \xi} + {R'}^{\gamma}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi \ ,
+\end{aligned}$$
+
+having projected here also the upper index on the local Minkowski vector basis, and exploiting symmetry of dummy indices
+
+$$
+  \ddot{x}^\gamma = \frac{2}{3} {R'}^{\gamma}_{\ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi \ .
+$$
+
+
+
+---
+
+*see [local inertial reference frame](general-relativity:local-inertial-reference-frame) and clean this and those notes* **todo**
+
+* $B^{\mu}_{\ \alpha \lambda \gamma}$ symmetric under any swap of lower indices
+
+* $K^{\mu}_{\ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$, is symmetric under $\alpha \leftrightarrow \lambda$
+
+* $T^{\mu}_{\ \alpha \lambda \gamma} = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \alpha \lambda \gamma}$, symmetric under $\alpha \leftrightarrow \lambda$
+
+---
+
+<!--
+and dropping the argument $(P)$, 
+
+$$\begin{aligned}
+  & P^{\gamma}_{0\ \ \mu} G^{\mu}_{1\ \ \alpha \beta \sigma} \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+  & = e^{\gamma}_{\mu} \left[ - \frac{1}{3}( R^{\mu}_{\ \ \nu \rho \sigma} + R^{\mu}_{\ \ \sigma \rho \nu} ) + \partial_{\rho} \Gamma^{\mu}_{\nu \sigma} - \Gamma^{\mu}_{\chi \sigma} \Gamma^{\chi}_{\alpha \xi} - \Gamma^{\mu}_{\nu \chi} \Gamma_{\beta \xi}^\chi \right] 
+  \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} \widetilde{e}^{\rho}_{\ \ \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi \\
 \end{aligned}$$
 
 
-```
+With $M^\mu{}_\alpha(x):=\partial_{x^\alpha}q^\mu(x)$ and $G^\mu{}_{\alpha\beta}(x):=\partial_\beta M^\mu{}_\alpha(x)+\Gamma^\mu_{\nu\sigma}(q(x))\,M^\nu{}_\alpha(x)\,M^\sigma{}_\beta(x)$.
+
+$$
+q^\mu=q^\mu_P+\tilde e^\mu_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+\tfrac1{24}C^\mu{}_{\alpha\beta\gamma\delta}x^\alpha x^\beta x^\gamma x^\delta+\dots
+$$
+
+$$
+M^\mu{}_\alpha=\tilde e^\mu_\alpha+A^\mu{}_{\alpha\beta}x^\beta+\tfrac12B^\mu{}_{\alpha\beta\gamma}x^\beta x^\gamma+\tfrac16C^\mu{}_{\alpha\beta\gamma\delta}x^\beta x^\gamma x^\delta+\dots
+$$
+
+$$
+\left( M^{-1} \right)^{\gamma}_{\mu} = 
+$$
+
+$$
+A^\kappa{}_{\alpha\beta}=-\Gamma^\kappa{}_{\alpha\beta},\qquad
+B^\kappa{}_{\alpha\beta\gamma}=-\partial_{(\gamma}\Gamma^\kappa{}_{\alpha\beta)}+2\,\Gamma^\kappa{}_{\lambda(\alpha}\Gamma^\lambda{}_{\beta\gamma)} ,
+$$
+-->
+
+````
+
+
+
 
 ### 4. Expansion of $G$
 

@@ -680,7 +680,7 @@ $$\begin{aligned}
  \right\} \ ,
 \end{aligned}$$
 
-with $T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} + K^{\mu}_{\ \ \alpha \lambda \gamma}$, and $K^{\mu}_{\ \ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$. Here $B$ is symmetric under any swap of a pair of lower indices, while $K^{\mu}_{\ \ \alpha \lambda \gamma}$ is symmetric under the swap $\alpha \leftrightarrow \lambda$.
+with $T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} + K^{\mu}_{\ \ \alpha \lambda \gamma}$, and $K^{\mu}_{\ \ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$ $= \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$. Here $B$ is symmetric under any swap of a pair of lower indices, while $K^{\mu}_{\ \ \alpha \lambda \gamma}$ is symmetric under the swap $\alpha \leftrightarrow \lambda$.
 
 ````
 
@@ -693,7 +693,7 @@ $$\begin{aligned}
 ```{dropdown} Relation between $\ T \ $ and $\ R \ $
 :open:
 
-Since $K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$
+Since $\widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$, the components of the Riemann tensor can be recast as
 
 $$\begin{aligned}
   R^{\mu}_{\ \ \sigma \chi \phi} 
@@ -703,7 +703,7 @@ $$\begin{aligned}
   & = \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi}
 \end{aligned}$$
 
-Now multiplying by $ \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}$ to get $K^{\mu}_{\ \ \alpha \lambda \gamma}$, it follows
+Now multiplying by $ \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}$ to get $K^{\mu}_{\ \ \alpha \lambda \gamma}$, the projection of the lower indices on the local Minkowski reference frame follows
 
 $$\begin{aligned}
    \bar{R}^{\mu}_{\ \ \alpha \lambda \gamma}
@@ -763,8 +763,58 @@ since $(1)$ $ R_{\nu \phi \sigma \chi} + R_{\phi \nu \sigma \chi} = 0$ from {eq}
 
 ```
 
-```{dropdown} Expression of $\ B\ $ coefficients
+````{dropdown} Expression of $\ B\ $ coefficients
 :open:
+
+$$
+\bar{R}^{\mu}_{\  \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma} =
+- 3 T^{\mu}_{\ \lambda \alpha \gamma} + 3 S^{\mu}_{\ \alpha \lambda \gamma} \ ,
+$$
+
+with 
+
+* $B^{\mu}_{\ \alpha \lambda \gamma}$ symmetric under any swap of lower indices
+
+* $K^{\mu}_{\ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}$, is symmetric under $\alpha \leftrightarrow \lambda$
+
+* $T^{\mu}_{\ \alpha \lambda \gamma} = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \alpha \lambda \gamma}$, symmetric under $\alpha \leftrightarrow \lambda$
+
+* $S^{\mu}_{\ \alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \alpha \gamma \lambda} + T^{\mu}_{\ \gamma \lambda \alpha} + T^{\mu}_{\ \lambda \alpha \gamma} \right)$, symmetric under any swap of lower indices
+
+* $\bar{R}^{\mu}_{\ \alpha \lambda \gamma} = K^{\mu}_{\ \gamma \alpha \lambda} - K^{\mu}_{\ \lambda \alpha \gamma}$
+
+Since the coefficients $B^{\mu}_{\alpha \lambda \gamma}$ are symmetric under any swap of lower indices, they can be defined to set the total symmetric part of $T$ equal to zero $S^{\mu}_{\alpha \lambda \gamma} = 0$, but not all the $T$'s.
+
+$$\begin{aligned}
+ 0
+ & = S^{\mu}_{\ \alpha \lambda \gamma} = \\
+ & = \frac{1}{3} \left( T^{\mu}_{\ \alpha \gamma \lambda} + T^{\mu}_{\ \gamma \lambda \alpha} + T^{\mu}_{\ \lambda \alpha \gamma} \right) = \\
+ & = \frac{1}{3} \left( B^{\mu}_{\ \alpha \gamma \lambda} + B^{\mu}_{\ \gamma \lambda \alpha} + B^{\mu}_{\ \lambda \alpha \gamma}         
+                      + K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma} \right) = \\
+ & = B^{\mu}_{\ \alpha \gamma \lambda} + \frac{1}{3} \left( K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma}  \right)
+\end{aligned}$$
+
+and thus
+
+$$B^{\mu}_{\ \alpha \gamma \lambda} = - \frac{1}{3} \left( K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma} \right) \ .$$
+
+Thus third-order contribution to the polynomial expansion of the transformation from local to global coordinates
+
+$$q^{\mu}(x^\varphi) = q^{\mu}_P + \widetilde{e}^{\mu}_{\ \ \alpha} x^{\alpha} - \frac{1}{2} \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + o(x^4)$$
+
+reads
+
+$$\begin{aligned}
+  B^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma 
+  & = - \frac{1}{3} \left( K^{\mu}_{\ \alpha \beta \gamma} + K^{\mu}_{\ \beta \gamma \alpha} + K^{\mu}_{\ \gamma \alpha \beta} \right) x^\alpha x^\beta x^\gamma = \\
+  & = - K^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma = \\
+  & = - \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\chi}_{\gamma} \, x^\alpha x^\beta x^\gamma = \\
+  & = - \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - 2 \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\chi}_{\gamma} \, x^\alpha x^\beta x^\gamma \ ,
+\end{aligned}$$
+
+since the expression is symmetric under $\alpha \leftrightarrow \beta$.
+
+```{dropdown} Old and likely wrong
 
 From the condition $S^{\mu}_{\ \ \alpha \lambda \gamma} = 0$, it follows that
 
@@ -787,12 +837,20 @@ $$\begin{aligned}
 
 ---
 
+$$
+B^{\mu}_{\ \ \alpha \beta \gamma} = -\frac{1}{3} \left( R^{\mu}_{\ \ \nu \rho \sigma} + R^{\mu}_{\ \ \sigma \rho \nu} \right) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} \widetilde{e}^{\rho}_{\ \ \gamma}
+$$
+
+**todo** *Prove it!*
+---
+
 $$K^{\mu}_{\ \ \alpha \lambda \gamma} = \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi }$$
 
 $$\widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}$$
 
-
 ```
+
+````
 
 ```{dropdown} Relation $\ \partial_{\gamma} {\Gamma'}^{\mu}_{\beta \lambda}(P) = T^{\mu}_{\ \ \beta \lambda \gamma}$
 :open:
