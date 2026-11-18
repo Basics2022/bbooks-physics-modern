@@ -1,0 +1,948 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.7. Linearization of the geodesic equation &#8212; Modern Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-general/geodesics-linearization';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7.8. Examples" href="examples.html" />
+    <link rel="prev" title="7.6. Geodesics" href="geodesics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.svg" class="logo__image only-light" alt="Modern Physics - Home"/>
+    <script>document.write(`<img src="../../_static/logo-dark.svg" class="logo__image only-dark" alt="Modern Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Special Relativity</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/intro.html">1. Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/notes.html">2. Special Relativity - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/lorentz.html">3. Inertial reference frames and Lorentz’s transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/em.html">4. Electromagnetism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../relativity-special/rindler.html">5. “Constant” acceleration observer and Rindler coordinates</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">6. General Relativity</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="notes.html">7. General Relativity - Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">7.1. Differential Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">7.2. Einstein’s equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">7.3. Linearization of Einstein’s equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="efe-properties.html">7.4. Properties of Einstein field equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html">7.5. Local inertial reference frame and equivalence principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geodesics.html">7.6. Geodesics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.7. Linearization of the geodesic equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">7.8. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.8.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">7.8.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rays-of-light-deflection.html">7.8.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/intro.html">8. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/liouville-boltzmann.html">9. Liouville theorem and Boltzmann equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/notes.html">10. Statistical Physics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/statistics.html">11. Statistical Physics - Statistics Miscellanea</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../statistical-mechanics/ising.html">12. Ising model</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-notes.html">12.1. Ising model - Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/markov-process-notes.html">12.2. Markov processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-mechanics/ising-numerics.html">12.3. Ising model - Numerics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-mechanics/entropy.html">13. Entropy and arrow of time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/intro.html">14. Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/notes.html">15. Quantum Mechanics - Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/wave-mechanics.html">16. Wave quantum mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/angular-momentum.html">17. Angular Momentum</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-spatial.html">17.1. Spatial Angular Momentum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-spin.html">17.2. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/angular-momentum/angular-momentum-total.html">17.3. Total Angular Momentum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/density-operator.html">18. Density Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/decoherence.html">19. Decoherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/einstein-coeffs-interaction-picture.html">20. Interaction picture, perturbation theory and Einstein coefficients</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/history.html">21. Historical Approach to Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/topics.html">21.1. Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/origins.html">21.2. Origins of Matrix and Wave Quantum Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/history/timeline.html">21.3. Timeline</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/history/origin-matrix-mechanics.html">21.4. Origin of matrix mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/light-dispersion.html">21.4.1. Light dispersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/einstein-planck.html">21.4.2. Light matter interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/larmor-formula.html">21.4.3. Radiation of moving charges - Larmor’s formula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/spin.html">21.4.4. Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/heisenberg-reinterpretation.html">21.4.5. Modern reinterpretation of Heisenberg mechanics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/matrix-mechanics/electron-perturbation-numerical.html">21.4.6. Numerical simulation of the electron pertubation</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/history/origin-wave-mechanics.html">21.5. Origin of wave theory of quantum mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/de-broglie.html">21.5.1. L. de Broglie, Researches of the Quantum Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/history/schrodinger.html">21.5.2. E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/atom-models.html">22. Atomic models</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/thomson.html">22.1. Thomson model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/rutherford.html">22.2. Rutherford model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/bohr.html">22.3. Bohr model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/atom-models/sommerfeld.html">22.4. Sommerfeld model</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/analytical-mechanics-short.html">22.4.4. Analytical mechanics - short notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger.html">22.5. Schrodinger model</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-analytical-sln.html">22.5.1. Schrodinger model - Mathematical details of the analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-gallery.html">22.5.2. Schrodinger model - Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/atom-models/schrodinger-notes.html">22.5.3. Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/atom-models/dirac.html">22.6. Atomic model using Dirac equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/relativistic-qm.html">23. Relativistic Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/relativistic-qm/dirac-equation.html">23.1. Dirac equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/many-body/many-body-quantum-mechanics.html">24. Many-body systems</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/identical-systems.html">24.1. Identical systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/fock-space.html">24.2. Second quantization. Fock space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/bosons.html">24.3. Second quantization. Bosons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/fermions.html">24.4. Second quantization. Fermions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/quantum-fields.html">24.5. Quantum fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/many-body/operators.html">24.6. Operators in QFT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/many-body/electromagnetic-field-quantization.html">25. Quantization of the electromagnetic field</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quantum-mechanics/qft.html">26. Introduction to Quantum Field Theory</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/harmonic-oscillator.html">26.1. Harmonic Oscillator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/field-quantization.html">26.2. Field quantization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/photons.html">26.3. Photons - EM field quantization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/photons-coulomb.html">26.4. Photons - EM field quantization with Coulomb gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum-mechanics/qft/multi-body.html">26.5. Multi-body quantum mechanics and QFT</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantum-mechanics/qft/interactions.html">26.6. Interacting Fields</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum-mechanics/qft/interactions-perturbation.html">26.6.1. Perturbation theory</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../quantum-mechanics/qft/interactions-e-em-fields.html">26.6.2. Interaction of the electron and electromagnetic field</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quantum-mechanics/qft/interactions-e-em-fields-atom-spectrum.html">26.6.2.1. Bound electrons - Atom spectra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quantum-mechanics/qft/interactions-e-em-fields-compton.html">26.6.2.2. Free electrons - Compton scattering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantum-mechanics/analytical-mechanics.html">27. Analtycal Mechanics - Notes for Quantum Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quantum Field Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../qft/intro.html">28. Introduction to QFT</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solid State Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/intro.html">29. Introduction to Solid State Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solid-state/notes-solid-state.html">30. Notes about Solid State Physics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solid-state/semiconductors-intro.html">31. Introduction to Semiconductors</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-solids-qm.html">31.1. Introduction to the QM of Solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-equilibrium.html">31.2. Semiconductors in Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-transport-phenomena.html">31.3. Carrier Transport Phenomena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-non-equilibrium.html">31.4. Non-equilibrium Excess Carriers in Semiconductors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-junctions.html">31.5. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solid-state/semiconductors-pn-diodes.html">31.6. <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(n\)</span> Diodes</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/edit/master/ch/relativity-general/geodesics-linearization.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Basics2022/bbooks-physics-modern/issues/new?title=Issue%20on%20page%20%2Fch/relativity-general/geodesics-linearization.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ch/relativity-general/geodesics-linearization.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Linearization of the geodesic equation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.7.1. …</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-point">7.7.1.1. 0. Starting point</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-orders">7.7.1.2. 1. Counting orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-the-map-q-mu-x">7.7.1.3. 2. Expansion of the map <span class="math notranslate nohighlight">\(q^\mu(x)\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-m-and-m-1">7.7.1.4. 3. Expansion of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(M^{-1}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-g">7.7.1.5. 4. Expansion of <span class="math notranslate nohighlight">\(G\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-product-tilde-gamma-m-1-g-order-by-order">7.7.1.6. 5. The product <span class="math notranslate nohighlight">\(\tilde\Gamma=M^{-1}G\)</span> order by order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-order-by-order">7.7.1.7. 6. Results order by order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-expanded-equation">7.7.1.8. 7. Solving the expanded equation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="linearization-of-the-geodesic-equation">
+<span id="general-relativity-geodesics-linearization"></span><h1><span class="section-number">7.7. </span>Linearization of the geodesic equation<a class="headerlink" href="#linearization-of-the-geodesic-equation" title="Permalink to this heading">#</a></h1>
+<div class="section" id="id1">
+<h2><span class="section-number">7.7.1. </span>…<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="section" id="starting-point">
+<h3><span class="section-number">7.7.1.1. </span>0. Starting point<a class="headerlink" href="#starting-point" title="Permalink to this heading">#</a></h3>
+<p>The geodesic equation for <span class="math notranslate nohighlight">\(q^\mu(\lambda)=q^\mu(x(\lambda))\)</span>, with <span class="math notranslate nohighlight">\(x^\alpha\)</span> the Riemann normal coordinates at <span class="math notranslate nohighlight">\(P\)</span>, reads</p>
+<div class="math notranslate nohighlight">
+\[
+M^\mu{}_\alpha\,\ddot x^\alpha+G^\mu{}_{\alpha\beta}\,\dot x^\alpha\dot x^\beta=0 ,
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(M^\mu{}_\alpha(x):=\partial_{x^\alpha}q^\mu(x)\)</span> and <span class="math notranslate nohighlight">\(G^\mu{}_{\alpha\beta}(x):=\partial_\beta M^\mu{}_\alpha(x)+\Gamma^\mu_{\nu\sigma}(q(x))\,M^\nu{}_\alpha(x)\,M^\sigma{}_\beta(x)\)</span>.</p>
+<p>Multiplying by <span class="math notranslate nohighlight">\((M^{-1}(x))^\gamma{}_\mu\)</span> isolates the second derivative:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\;\ddot x^\gamma+(M^{-1}(x))^\gamma{}_\mu\,G^\mu{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta=0\;}
+\qquad\Longleftrightarrow\qquad
+\ddot x^\gamma+\tilde\Gamma^\gamma{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta=0,
+\qquad \tilde\Gamma:=M^{-1}G .
+\]</div>
+<p>The goal is to expand <span class="math notranslate nohighlight">\(M^{-1}\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in powers of <span class="math notranslate nohighlight">\(x\)</span> and multiply the two series.</p>
+<p><strong>Conventions.</strong> <span class="math notranslate nohighlight">\(\tilde e^\mu_\alpha\)</span> is the tetrad at <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(b^\alpha_\mu\)</span> its inverse, <span class="math notranslate nohighlight">\(b^\alpha_\mu\tilde e^\mu_\beta=\delta^\alpha_\beta\)</span>. The Riemann tensor is <span class="math notranslate nohighlight">\(R^\alpha{}_{\beta\gamma\delta}=\partial_\gamma\Gamma^\alpha_{\beta\delta}-\partial_\delta\Gamma^\alpha_{\beta\gamma}+\Gamma^\alpha_{\gamma\lambda}\Gamma^\lambda_{\beta\delta}-\Gamma^\alpha_{\delta\lambda}\Gamma^\lambda_{\beta\gamma}\)</span> (independent of the signature). All quantities at <span class="math notranslate nohighlight">\(P\)</span> are projected on the local frame, e.g.</p>
+<div class="math notranslate nohighlight">
+\[
+\Gamma^\kappa{}_{\alpha\beta}:=b^\kappa_\mu\Gamma^\mu_{\nu\sigma}(P)\tilde e^\nu_\alpha\tilde e^\sigma_\beta,\qquad
+\partial_\gamma\Gamma^\kappa{}_{\alpha\beta}:=b^\kappa_\mu\,\partial_\rho\Gamma^\mu_{\nu\sigma}(P)\,\tilde e^\rho_\gamma\tilde e^\nu_\alpha\tilde e^\sigma_\beta ,
+\]</div>
+<p>and similarly for <span class="math notranslate nohighlight">\(R^\alpha{}_{\beta\gamma\delta}\)</span> and its covariant derivatives. These frame components of <span class="math notranslate nohighlight">\(\Gamma\)</span> in the global coordinates are <em>not</em> tensors, and they all drop out of the final result.</p>
+</div>
+<div class="section" id="counting-orders">
+<h3><span class="section-number">7.7.1.2. </span>1. Counting orders<a class="headerlink" href="#counting-orders" title="Permalink to this heading">#</a></h3>
+<p>Rescale <span class="math notranslate nohighlight">\(x\to\varepsilon x\)</span> at fixed <span class="math notranslate nohighlight">\(\lambda\)</span>. Then <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\dot x\)</span> and <span class="math notranslate nohighlight">\(\ddot x\)</span> each carry one power of <span class="math notranslate nohighlight">\(\varepsilon\)</span>. This is consistent because every term of the equation contains exactly two <span class="math notranslate nohighlight">\(\lambda\)</span>-derivatives, so the counting in amplitude is independent of the counting in derivatives. In the reduced equation,</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot x\;\sim\;\varepsilon^1,\qquad \tilde\Gamma_n(x)\,\dot x\dot x\;\sim\;\varepsilon^{n+2},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tilde\Gamma_n\)</span> is the part of <span class="math notranslate nohighlight">\(\tilde\Gamma\)</span> homogeneous of degree <span class="math notranslate nohighlight">\(n\)</span> in <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Written with the constant projector <span class="math notranslate nohighlight">\(b_\mu\)</span> instead of <span class="math notranslate nohighlight">\(M^{-1}(x)\)</span>, the equation contains cross terms such as <span class="math notranslate nohighlight">\(\ddot x^\alpha x^\beta A^\mu{}_{\alpha\beta}\)</span>, which look second order. They are an artefact of <span class="math notranslate nohighlight">\(b_\mu\neq M^{-1}(x)\)</span>. Since <span class="math notranslate nohighlight">\(\ddot x\)</span> is itself of order <span class="math notranslate nohighlight">\(\ge3\)</span> on shell, these terms are really of order <span class="math notranslate nohighlight">\(\ge4\)</span>, and they are removed exactly by the factor <span class="math notranslate nohighlight">\(M^{-1}(x)\)</span>.</p>
+</div>
+<div class="section" id="expansion-of-the-map-q-mu-x">
+<h3><span class="section-number">7.7.1.3. </span>2. Expansion of the map <span class="math notranslate nohighlight">\(q^\mu(x)\)</span><a class="headerlink" href="#expansion-of-the-map-q-mu-x" title="Permalink to this heading">#</a></h3>
+<p>Normal coordinates are defined by the requirement that <span class="math notranslate nohighlight">\(x^\alpha=\lambda u^\alpha\)</span> is a geodesic for every constant <span class="math notranslate nohighlight">\(u^\alpha\)</span>. Then <span class="math notranslate nohighlight">\(\ddot x=0\)</span> and <span class="math notranslate nohighlight">\(\dot x=u\)</span>, so the equation along each ray gives <span class="math notranslate nohighlight">\(G^\mu{}_{\alpha\beta}(x)\,x^\alpha x^\beta=0\)</span>. With the degree operator <span class="math notranslate nohighlight">\(D:=x^\alpha\partial_\alpha\)</span> (so <span class="math notranslate nohighlight">\(x^\alpha x^\beta\partial_\alpha\partial_\beta=D(D-1)\)</span> and <span class="math notranslate nohighlight">\(x^\alpha M^\mu{}_\alpha=Dq^\mu\)</span>), this is</p>
+<div class="math notranslate nohighlight">
+\[
+D(D-1)\,q^\mu+\Gamma^\mu_{\nu\sigma}(q)\,Dq^\nu\,Dq^\sigma=0 .
+\]</div>
+<p>Write <span class="math notranslate nohighlight">\(q^\mu=q_P^\mu+\sum_{k\ge1}q^\mu_k\)</span>, with <span class="math notranslate nohighlight">\(q_k\)</span> homogeneous of degree <span class="math notranslate nohighlight">\(k\)</span> (so <span class="math notranslate nohighlight">\(Dq_k=k\,q_k\)</span>). The degree-<span class="math notranslate nohighlight">\(n\)</span> part of the equation is</p>
+<div class="math notranslate nohighlight">
+\[
+n(n-1)\,q_n^\mu=-\Big[\Gamma^\mu_{\nu\sigma}(q)\,Dq^\nu Dq^\sigma\Big]_{\deg n},
+\]</div>
+<p>and the right-hand side involves only <span class="math notranslate nohighlight">\(q_k\)</span> with <span class="math notranslate nohighlight">\(k\le n-1\)</span>. The recursion is therefore triangular. Explicitly,</p>
+<div class="math notranslate nohighlight">
+\[
+q^\mu=q^\mu_P+\tilde e^\mu_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+\tfrac1{24}D^\mu{}_{\alpha\beta\gamma\delta}x^\alpha x^\beta x^\gamma x^\delta+\dots
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+A^\kappa{}_{\alpha\beta}=-\Gamma^\kappa{}_{\alpha\beta},\qquad
+B^\kappa{}_{\alpha\beta\gamma}=-\partial_{(\gamma}\Gamma^\kappa{}_{\alpha\beta)}+2\,\Gamma^\kappa{}_{\lambda(\alpha}\Gamma^\lambda{}_{\beta\gamma)} ,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,B,D,\dots\)</span> are totally symmetric (Taylor coefficients of one function) and the indices are frame-projected. The next coefficient <span class="math notranslate nohighlight">\(D\)</span> follows from <span class="math notranslate nohighlight">\(n=4\)</span> of the same recursion. The first coefficient <span class="math notranslate nohighlight">\(q_1=\tilde e^\mu_\alpha x^\alpha\)</span> is the free choice of the tetrad.</p>
+</div>
+<div class="section" id="expansion-of-m-and-m-1">
+<h3><span class="section-number">7.7.1.4. </span>3. Expansion of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(M^{-1}\)</span><a class="headerlink" href="#expansion-of-m-and-m-1" title="Permalink to this heading">#</a></h3>
+<p>Differentiating <span class="math notranslate nohighlight">\(q^\mu(x)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+M^\mu{}_\alpha=\tilde e^\mu_\alpha+A^\mu{}_{\alpha\beta}x^\beta+\tfrac12B^\mu{}_{\alpha\beta\gamma}x^\beta x^\gamma+\tfrac16D^\mu{}_{\alpha\beta\gamma\delta}x^\beta x^\gamma x^\delta+\dots
+\]</div>
+<p>Factor out the value at <span class="math notranslate nohighlight">\(P\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+M^\mu{}_\alpha=\tilde e^\mu_\beta\big(\delta^\beta_\alpha+N^\beta{}_\alpha(x)\big),\qquad
+N=N_1+N_2+\dots,
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+N_1{}^\beta{}_\alpha=a^\beta{}_{\alpha\gamma}x^\gamma,\qquad
+N_2{}^\beta{}_\alpha=\tfrac12\mathsf b^\beta{}_{\alpha\gamma\delta}x^\gamma x^\delta,\qquad
+N_3{}^\beta{}_\alpha=\tfrac16\mathsf d^\beta{}_{\alpha\gamma\delta\varepsilon}x^\gamma x^\delta x^\varepsilon,
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(a=bA\)</span>, <span class="math notranslate nohighlight">\(\mathsf b=bB\)</span>, <span class="math notranslate nohighlight">\(\mathsf d=bD\)</span> (frame projections). Since <span class="math notranslate nohighlight">\(N=O(x)\)</span>, the Neumann series converges near <span class="math notranslate nohighlight">\(P\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+(M^{-1})^\gamma{}_\mu=\big[(1+N)^{-1}\big]^\gamma{}_\beta\,b^\beta_\mu=\Big[1-N_1+(N_1N_1-N_2)+\big(-N_1N_1N_1+N_1N_2+N_2N_1-N_3\big)+\dots\Big]^\gamma{}_\beta\,b^\beta_\mu .
+\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Inverse of a polynomial expansion<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+M^{\mu}_{\ \ \nu} 
+&amp; = M^{\mu}_{0 \ \ \nu} + M^{\mu}_{1\ \ \nu \alpha} x^\alpha + \frac{1}{2} M^{\mu}_{2\ \ \nu \alpha \beta} x^\alpha x^\beta + \frac{1}{6} M^{\mu}_{3\ \ \nu \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots = \\
+&amp; = M^{\mu}_{0 \ \ \eta} \left\{ \delta^{\eta}_{\ \nu} + \widetilde{M}^{\eta}_{1\ \ \nu \alpha} x^\alpha + \frac{1}{2} \widetilde{M}^{\eta}_{2\ \ \nu \alpha \beta} x^\alpha x^\beta + \frac{1}{6} \widetilde{M}^{\eta}_{3\ \ \nu \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots \right\} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\widetilde{M}^{\eta}_{i\ \ \nu \alpha \dots} = \left( M^{-1}_{0} \right)^{\eta}_{\ \ \mu} M^{\mu}_{i\ \ \nu \alpha \dots}\)</span>. Let <span class="math notranslate nohighlight">\(P^{\nu}_{\ \ \sigma}\)</span> s.t. <span class="math notranslate nohighlight">\(M^{\mu}_{\ \ \nu} P^{\nu}_{\ \ \sigma} = \delta^{\mu}_{\ \ \sigma}\)</span>, with its polynomial expansion</p>
+<div class="math notranslate nohighlight">
+\[
+P^{\nu}_{\ \ \sigma} = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots
+\]</div>
+<p class="sd-card-text">The unknown coefficients <span class="math notranslate nohighlight">\(P^{\nu}_{i \ \ \sigma}\)</span> of the polynomial series are evaluate matching coefficients in the inverse relation.</p>
+<p class="sd-card-text"><strong>Zero-th order.</strong> <span class="math notranslate nohighlight">\(\delta^{\mu}_{\ \ \sigma} = M^{\mu}_{0\ \ \nu} P^{\nu}_{0 \ \ \sigma} \)</span> implies <span class="math notranslate nohighlight">\(P^{\nu}_{0\ \ \sigma} = \left( M_0^{-1} \right)^{\nu}_{\ \ \sigma}\)</span>.</p>
+<p class="sd-card-text"><strong>First order.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu} P^{\nu}_{0 \ \ \sigma \alpha} x^\alpha
+\]</div>
+<p class="sd-card-text">implies for each <span class="math notranslate nohighlight">\(\alpha\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+P^{\nu}_{1 \ \ \sigma \alpha} 
+  = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} P^{\chi}_{0 \ \ \sigma} 
+  = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma}
+\]</div>
+<p class="sd-card-text"><strong>Second order.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+0 
+&amp; = x^\alpha x^\beta \left\{ \frac{1}{2} M^{\mu}_{0 \ \ \nu} P^{\nu}_{2 \ \ \sigma \alpha \beta} + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + \frac{1}{2} M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right\} = &amp;&amp; \text{(sym.)} \\
+&amp; = \frac{1}{2} x^\alpha x^\beta \left\{ M^{\mu}_{0 \ \ \nu} P^{\nu}_{2 \ \ \sigma \alpha \beta} + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \nu \beta} P^{\nu}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right\} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">implies</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P^{\nu}_{2 \ \ \sigma \alpha \beta} 
+  &amp; = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \nu \beta} P^{\nu}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right) = \\
+  &amp; =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} \left( M^{\mu}_{1 \ \ \nu \alpha} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \nu \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{2 \ \ \nu \alpha \beta} \left( M^{-1}_0 \right)^{\nu}_{\ \ \sigma} \right) = \\
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+<div class="section" id="expansion-of-g">
+<h3><span class="section-number">7.7.1.5. </span>4. Expansion of <span class="math notranslate nohighlight">\(G\)</span><a class="headerlink" href="#expansion-of-g" title="Permalink to this heading">#</a></h3>
+<p>Projecting on the frame, <span class="math notranslate nohighlight">\(g^\kappa{}_{\alpha\beta}(x):=b^\kappa_\mu G^\mu{}_{\alpha\beta}(x)=g_0+g_1+g_2+\dots\)</span>, with <span class="math notranslate nohighlight">\(g_n\)</span> homogeneous of degree <span class="math notranslate nohighlight">\(n\)</span>. The ingredients are</p>
+<div class="math notranslate nohighlight">
+\[
+\partial_\beta M^\mu{}_\alpha=A^\mu{}_{\alpha\beta}+B^\mu{}_{\alpha\beta\gamma}x^\gamma+\tfrac12D^\mu{}_{\alpha\beta\gamma\delta}x^\gamma x^\delta+\dots,
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Gamma^\mu_{\nu\sigma}(q(x))=\Gamma^\mu_{\nu\sigma}+\partial_\rho\Gamma^\mu_{\nu\sigma}\,\Delta q^\rho+\tfrac12\partial_\rho\partial_\tau\Gamma^\mu_{\nu\sigma}\,\Delta q^\rho\Delta q^\tau+\dots,\qquad
+\Delta q^\rho=\tilde e^\rho_\alpha x^\alpha+\tfrac12A^\rho{}_{\alpha\beta}x^\alpha x^\beta+\dots
+\]</div>
+<p>Multiplying the series order by order (all <span class="math notranslate nohighlight">\(\Gamma\)</span>’s are evaluated at <span class="math notranslate nohighlight">\(P\)</span> and projected on the frame):</p>
+<div class="math notranslate nohighlight">
+\[
+g_0{}^\kappa{}_{\alpha\beta}=A^\kappa{}_{\alpha\beta}+\Gamma^\kappa{}_{\alpha\beta}=0,
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+g_1{}^\kappa{}_{\alpha\beta}=\Big[\mathsf b^\kappa{}_{\alpha\beta\gamma}+\partial_\gamma\Gamma^\kappa{}_{\alpha\beta}-\Gamma^\kappa{}_{\lambda\beta}\Gamma^\lambda{}_{\alpha\gamma}-\Gamma^\kappa{}_{\alpha\lambda}\Gamma^\lambda{}_{\beta\gamma}\Big]x^\gamma,
+\]</div>
+<p>and <span class="math notranslate nohighlight">\(g_2\)</span> follows by collecting all products of total degree 2 (it involves <span class="math notranslate nohighlight">\(\mathsf d\)</span>, <span class="math notranslate nohighlight">\(\mathsf b\)</span>, <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(\Gamma\)</span>, <span class="math notranslate nohighlight">\(\partial\Gamma\)</span> and <span class="math notranslate nohighlight">\(\partial\partial\Gamma\)</span>). Here <span class="math notranslate nohighlight">\(g_0=0\)</span> is the statement that the quadratic coefficient <span class="math notranslate nohighlight">\(A\)</span> cancels the connection at <span class="math notranslate nohighlight">\(P\)</span>.</p>
+</div>
+<div class="section" id="the-product-tilde-gamma-m-1-g-order-by-order">
+<h3><span class="section-number">7.7.1.6. </span>5. The product <span class="math notranslate nohighlight">\(\tilde\Gamma=M^{-1}G\)</span> order by order<a class="headerlink" href="#the-product-tilde-gamma-m-1-g-order-by-order" title="Permalink to this heading">#</a></h3>
+<p>From <span class="math notranslate nohighlight">\((1+N)\,\tilde\Gamma=g\)</span> one gets the recursion</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde\Gamma_n=g_n-\sum_{k=1}^{n-1}N_k\,\tilde\Gamma_{n-k},\qquad \tilde\Gamma_0=g_0=0,
+\]</div>
+<p>that is</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde\Gamma_1=g_1,\qquad
+\tilde\Gamma_2=g_2-N_1\,g_1,\qquad
+\tilde\Gamma_3=g_3-N_1\tilde\Gamma_2-N_2\,g_1,\;\dots
+\]</div>
+<p>Equivalently, the geodesic equation expanded in <span class="math notranslate nohighlight">\(\varepsilon\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot x^\kappa=-\sum_{n\ge1}\tilde\Gamma_n{}^\kappa{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta ,\qquad
+\text{the term }n\text{ being of order }\varepsilon^{n+2}.
+\]</div>
+</div>
+<div class="section" id="results-order-by-order">
+<h3><span class="section-number">7.7.1.7. </span>6. Results order by order<a class="headerlink" href="#results-order-by-order" title="Permalink to this heading">#</a></h3>
+<p><strong>Order <span class="math notranslate nohighlight">\(\varepsilon^1\)</span>.</strong> <span class="math notranslate nohighlight">\(\;\ddot x^\alpha=0\)</span>.</p>
+<p><strong>Order <span class="math notranslate nohighlight">\(\varepsilon^2\)</span>.</strong> The only candidate is <span class="math notranslate nohighlight">\(\tilde\Gamma_0\dot x\dot x=g_0\dot x\dot x=0\)</span>, which vanishes. The second-order information is entirely in <span class="math notranslate nohighlight">\(A=-\Gamma\tilde e\tilde e\)</span>.</p>
+<p><strong>Order <span class="math notranslate nohighlight">\(\varepsilon^3\)</span>.</strong> Inserting <span class="math notranslate nohighlight">\(\mathsf b\)</span> from Section 2 into <span class="math notranslate nohighlight">\(g_1\)</span> and contracting with <span class="math notranslate nohighlight">\((u,u,x)\)</span> for <span class="math notranslate nohighlight">\(\alpha,\beta,\gamma\)</span>, all quantities combine into</p>
+<div class="math notranslate nohighlight">
+\[
+g_1(u,u,x)^\kappa=\tfrac23\Big[\partial_x\Gamma^\kappa_{uu}-\partial_u\Gamma^\kappa_{ux}+\Gamma^\kappa_{\lambda x}\Gamma^\lambda_{uu}-\Gamma^\kappa_{\lambda u}\Gamma^\lambda_{ux}\Big]=\tfrac23R^\kappa{}_{uxu}=-\tfrac23R^\kappa{}_{\beta\gamma\delta}u^\beta u^\gamma x^\delta .
+\]</div>
+<p>The non-tensorial <span class="math notranslate nohighlight">\(\Gamma\)</span> terms cancel against the <span class="math notranslate nohighlight">\(\mathsf b\)</span> term of the expansion of <span class="math notranslate nohighlight">\(q\)</span>. Since <span class="math notranslate nohighlight">\(g_1\)</span> is symmetric in <span class="math notranslate nohighlight">\((\alpha\beta)\)</span>, this fixes it completely:</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde\Gamma^\kappa{}_{\alpha\beta}\Big|_{1}=-\tfrac13\big(R^\kappa{}_{\alpha\beta\gamma}+R^\kappa{}_{\beta\alpha\gamma}\big)x^\gamma ,
+\qquad
+\boxed{\ddot x^\kappa=\tfrac23\,R^\kappa{}_{\beta\gamma\delta}\,\dot x^\beta\dot x^\gamma x^\delta+O(\varepsilon^4)} .
+\]</div>
+<p>Check: if <span class="math notranslate nohighlight">\(x\parallel\dot x\)</span> (a geodesic through <span class="math notranslate nohighlight">\(P\)</span>), the right-hand side vanishes by the antisymmetry of <span class="math notranslate nohighlight">\(R\)</span> in <span class="math notranslate nohighlight">\(\gamma\delta\)</span>.</p>
+<p><strong>Order <span class="math notranslate nohighlight">\(\varepsilon^4\)</span>.</strong> Here <span class="math notranslate nohighlight">\(\tilde\Gamma_2=g_2-N_1g_1\)</span> and the non-tensorial pieces again cancel. The result contains only <span class="math notranslate nohighlight">\(\nabla R\)</span>. It can be obtained either by the explicit multiplication, or from the following two properties:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}(x)\,x^\alpha x^\beta=0\)</span> (rays are geodesics).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nabla_\varepsilon R^\kappa{}_{\alpha\gamma\beta}\,x^\varepsilon=\partial_\gamma\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}-\partial_\beta\tilde\Gamma_2{}^\kappa{}_{\alpha\gamma}\)</span> (the curvature at degree 1; here <span class="math notranslate nohighlight">\(\partial R=\nabla R\)</span> at <span class="math notranslate nohighlight">\(P\)</span> because <span class="math notranslate nohighlight">\(\tilde\Gamma(0)=0\)</span>).</p></li>
+</ol>
+<p>Solving these (the totally symmetric part of the coefficient tensor vanishes by 1, and the rest is fixed by 2) gives</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}=\tfrac1{24}\Big[\,5\big(\nabla_x R^\kappa{}_{\alpha x\beta}+\nabla_x R^\kappa{}_{\beta x\alpha}\big)-\nabla_\beta R^\kappa{}_{x\alpha x}-\nabla_\alpha R^\kappa{}_{x\beta x}\Big],
+\]</div>
+<p>where a subscript <span class="math notranslate nohighlight">\(x\)</span> means contraction with <span class="math notranslate nohighlight">\(x^\delta\)</span>, e.g. <span class="math notranslate nohighlight">\(\nabla_xR^\kappa{}_{\alpha x\beta}=x^\varepsilon x^\delta\nabla_\varepsilon R^\kappa{}_{\alpha\delta\beta}\)</span> and <span class="math notranslate nohighlight">\(R^\kappa{}_{x\alpha x}=R^\kappa{}_{\delta\alpha\varepsilon}x^\delta x^\varepsilon\)</span>. Hence</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot x^\kappa=-\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}\,\dot x^\alpha\dot x^\beta+(\text{order }\varepsilon^5).
+\]</div>
+<p>Check: tracing over <span class="math notranslate nohighlight">\(\kappa=\alpha\)</span> gives <span class="math notranslate nohighlight">\(-\tfrac1{12}\big(2\nabla_xR_{\beta x}+\nabla_\beta R_{xx}\big)\)</span> (Ricci tensor <span class="math notranslate nohighlight">\(R_{\beta\delta}=R^\kappa{}_{\beta\kappa\delta}\)</span> and the contracted Bianchi identity), which is <span class="math notranslate nohighlight">\(\partial_\beta\ln\sqrt{|g|}\)</span> at the corresponding order in normal coordinates.</p>
+<p><strong>Order <span class="math notranslate nohighlight">\(\varepsilon^5\)</span> and beyond.</strong> <span class="math notranslate nohighlight">\(\tilde\Gamma_3\)</span> contains <span class="math notranslate nohighlight">\(\nabla\nabla R\)</span> and <span class="math notranslate nohighlight">\(R^2\)</span>, and so on. Every <span class="math notranslate nohighlight">\(\tilde\Gamma_n\)</span> is a tensor built from <span class="math notranslate nohighlight">\(R\)</span> and its covariant derivatives, because the frame components <span class="math notranslate nohighlight">\(\Gamma\)</span> cancel at each order.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>order</p></th>
+<th class="head"><p>content</p></th>
+<th class="head"><p>equation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\varepsilon^1\)</span></p></td>
+<td><p>—</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ddot x=0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\varepsilon^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tilde\Gamma_0=0\)</span></p></td>
+<td><p>no new term</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\varepsilon^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tilde\Gamma_1\propto R\,x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ddot x^\kappa=\tfrac23R^\kappa{}_{\beta\gamma\delta}\dot x^\beta\dot x^\gamma x^\delta\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\varepsilon^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tilde\Gamma_2\propto\nabla R\,xx\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ddot x=-\tilde\Gamma_2\dot x\dot x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\varepsilon^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tilde\Gamma_3\propto\nabla\nabla R,\;R^2\)</span></p></td>
+<td><p>next</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="solving-the-expanded-equation">
+<h3><span class="section-number">7.7.1.8. </span>7. Solving the expanded equation<a class="headerlink" href="#solving-the-expanded-equation" title="Permalink to this heading">#</a></h3>
+<p>Take <span class="math notranslate nohighlight">\(x(0)=x_0\)</span> and <span class="math notranslate nohighlight">\(\dot x(0)=v\)</span>, both of order <span class="math notranslate nohighlight">\(\varepsilon\)</span>. At leading order <span class="math notranslate nohighlight">\(x=x_0+v\lambda\)</span>. Inserting it in the <span class="math notranslate nohighlight">\(\varepsilon^3\)</span> equation and using <span class="math notranslate nohighlight">\(R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma v^\delta=0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot x^\kappa=\tfrac23R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma x_0^\delta,
+\qquad
+x^\kappa(\lambda)=x_0^\kappa+v^\kappa\lambda+\tfrac13R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma x_0^\delta\,\lambda^2+O(\varepsilon^4).
+\]</div>
+<p>Composing with <span class="math notranslate nohighlight">\(q^\mu(x)\)</span> from Section 2 gives <span class="math notranslate nohighlight">\(q^\mu(\lambda)\)</span> to the same order.</p>
+<p><strong>Geodesic deviation.</strong> For <span class="math notranslate nohighlight">\(x=u\lambda+\xi\)</span>, linearizing the <span class="math notranslate nohighlight">\(\varepsilon^3\)</span> equation gives
+<span class="math notranslate nohighlight">\(\ddot\xi^\alpha=\tfrac23\big[R^\alpha{}_{\beta\gamma\delta}u^\beta u^\gamma\xi^\delta+\lambda R^\alpha{}_{\beta\gamma\delta}u^\beta\dot\xi^\gamma u^\delta\big]\)</span>.
+This is not covariant: the factor <span class="math notranslate nohighlight">\(2/3\)</span> and the explicit <span class="math notranslate nohighlight">\(\lambda\)</span> term come from <span class="math notranslate nohighlight">\(\xi\)</span> being a coordinate difference. With the covariant derivative along <span class="math notranslate nohighlight">\(u\lambda\)</span>, <span class="math notranslate nohighlight">\(\frac{D\xi}{d\lambda}=\dot\xi+\tilde\Gamma_1(u,\xi)\)</span>, the extra terms cancel and</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{D^2\xi^\alpha}{d\lambda^2}=R^\alpha{}_{\beta\gamma\delta}\,u^\beta u^\gamma\xi^\delta=-R^\alpha{}_{\beta\gamma\delta}\,u^\beta\xi^\gamma u^\delta .
+\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch/relativity-general"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="geodesics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7.6. </span>Geodesics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="examples.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7.8. </span>Examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.7.1. …</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-point">7.7.1.1. 0. Starting point</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-orders">7.7.1.2. 1. Counting orders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-the-map-q-mu-x">7.7.1.3. 2. Expansion of the map <span class="math notranslate nohighlight">\(q^\mu(x)\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-m-and-m-1">7.7.1.4. 3. Expansion of <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(M^{-1}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-of-g">7.7.1.5. 4. Expansion of <span class="math notranslate nohighlight">\(G\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-product-tilde-gamma-m-1-g-order-by-order">7.7.1.6. 5. The product <span class="math notranslate nohighlight">\(\tilde\Gamma=M^{-1}G\)</span> order by order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-order-by-order">7.7.1.7. 6. Results order by order</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-expanded-equation">7.7.1.8. 7. Solving the expanded equation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
