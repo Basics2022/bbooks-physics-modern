@@ -166,7 +166,7 @@ $$\begin{aligned}
   & = \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma} = \\
   & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \mathbf{b}_{\mu} \cdot \mathbf{b}_{\nu} \partial_{x^\delta} q^{\nu} \, \eta^{\delta \gamma} = \\
   & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \, \partial_{x^\delta} q^{\xi}  \, g_{\mu \xi}\, \eta^{\delta \gamma} \ .
-\end{aligned}$$
+\end{aligned}$$ (eq-gamma-transf-q)
 
 
 Christoffel symbols w.r.t. $x^\alpha$ evaluated in $x^\alpha = 0$ thus are
@@ -842,7 +842,8 @@ $$q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^
 
 with $A^{\mu}_{\ \ \alpha \beta} = - \Gamma^{\mu}_{\ \ \nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta}$, and $B^{\mu}_{\ \ \alpha \beta \gamma} = \dots$
 
-```{dropdown} Details
+
+````{dropdown} Details
 :open:
 
 **Velocity.** The velocity w.r.t. a parameter $\lambda$ describing the worldline $\mathbf{X}\left(q^{\mu}(\lambda)\right)$ reads
@@ -862,21 +863,56 @@ $$\begin{aligned}
   & = \partial_{\lambda \lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} + \partial_\lambda x^{\alpha} \partial_{\lambda} x^\beta \partial_{x^\alpha x^\beta} q^{\mu} \ .
 \end{aligned}$$
 
-Thus the term $\Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}$ becomes
+Thus, the geodesic equation becomes
 
 $$\begin{aligned}
- \Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}
- & = \Gamma^{\mu}_{\nu \sigma} \partial_{x^\alpha} q^\mu \partial_{x^\beta} q^{\nu} \dot{x}^{\alpha} \dot{x}^{\beta} = \\
+  \mathbf{0}
+  & = \mathbf{b}_\mu \left\{ {\color{red} \ddot{q}^{\mu}} + \Gamma_{\nu \sigma}^{\mu} \dot{q}^{\nu} \dot{q}^{\sigma} \right\} = \\
+  & = \mathbf{b}_\mu \left\{ {\color{red} \ddot{x}^{\alpha} \partial_{x^\alpha} q^{\mu} + \dot{x}^\alpha \dot{x}^\beta \partial_{x^\alpha x^\beta} q^{\mu}} + \dot{x}^\alpha \dot{x}^\beta \Gamma_{\nu \sigma}^{\mu} \partial_{x^\alpha} q^{\nu} \partial_{x^\beta} q^{\sigma} \right\} \ .
 \end{aligned}$$
+
+The $\mu^{\rm th}$ component becomes
+
+$$M^{\mu}_{\ \alpha} \ddot{x}^{\alpha} + G^{\mu}_{\ \ \alpha \beta} \dot{x}^\alpha \dot{x}^\beta = 0 \ ,$$
+
+with $M^{\mu}_{\ \alpha}(x) := \partial_{x^\alpha} q^{\mu}(x)$, and $G^{\mu}_{\ \alpha \beta}(x) := \partial_\beta M^{\mu}_{\ \alpha}(x) + \Gamma^{\mu}_{\ \nu \sigma}(q(x)) M^{\nu}_{\ \alpha}(x) M^{\sigma}_{\ \beta}(x)$. Multiplying by $\left( M^{-1} \right)^{\gamma}_{\ \ \mu}$ and summing over repeated indices $\mu$ isolates the second order derivative
+
+$$\ddot{x}^\gamma + \left( M^{-1}(x) \right)^\gamma_{\ \ \mu} G^{\mu}_{\ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta = 0 \ .$$
+
+**Polynomial expansions.**
+
+````
+
+```{dropdown} Old route
 
 ---
 
-$$\begin{aligned}
-  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
-  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \, \partial_{x^\delta} q^{\xi}  \, g_{\mu \xi}\, \eta^{\delta \gamma} \ .
-\end{aligned}$$
+1. At the first order in $x$,
 
-Forcing ${\Gamma'}^{\gamma}_{\ \ \alpha \beta} = 0$, implies $$
+   $$0 = \ddot{x}^\alpha \widetilde{e}^{\mu}_{\alpha} \quad \rightarrow \quad 0 = \ddot{x}^{\alpha}$$
+
+2. At the second order in $x$
+
+   $$0 = \ddot{x}^\alpha \left( \left.\partial_{x^\beta b^\alpha} q^{\mu}\right|_{x^\varphi=0} x^\beta \right) + \dot{x}^\alpha \dot{x}^\beta \underbrace{ \left.\left( \partial_{x^\alpha x^\beta} q^{\mu} + \Gamma^{\mu}_{\nu \sigma} \partial_{x^\alpha} q^\nu \partial_{x^\beta} q^\sigma \right)\right|_{x^\varphi=0} }_{ = 0, \text{ since } {\Gamma'}^{\gamma}_{\alpha \beta}(P) = 0}$$
+
+---
+
+Useful results
+
+* Christoffel symbols as a function of the coordinates $x^\alpha$, ${\Gamma'}^{\gamma}_{\ \ \alpha \beta} = \tfrac{\partial \mathbf{b}_{\alpha}}{\partial x^{\beta}} \cdot \mathbf{b}^{\gamma}$, {eq}`eq-gamma-transf-q`
+
+   $$\begin{aligned}
+     {\Gamma'}^{\gamma}_{\ \ \alpha \beta}(x^\varphi) 
+     & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} (x^\varphi) + \partial_{x^\beta} q^{\nu}(x^\varphi) \partial_{x^\alpha} q^{\sigma}(x^\varphi) \Gamma_{\nu \sigma}^{\mu}(q^{\xi}(x^\varphi)) \right) \, \partial_{x^\delta} q^{\xi}(x^\varphi)  \, g_{\mu \xi}(q^\xi(x^\varphi)) \, \eta^{\delta \gamma} \ .
+   \end{aligned}$$
+
+* Forcing ${\Gamma'}^{\gamma}_{\ \ \alpha \beta}(P) = 0$, i.e. for $x^\varphi = 0$, for regular parametrization and non-singular points in the metrics implies
+
+   $$\begin{aligned}
+     0
+     & = \partial_{x^\alpha x^\beta} q^{\mu} (x^\varphi) + \partial_{x^\beta} q^{\nu}(x^\varphi) \, \partial_{x^\alpha} q^{\sigma}(x^\varphi) \, \Gamma_{\nu \sigma}^{\mu}(q^{\xi}(x^\varphi)) = \\
+     & = 
+   \end{aligned}$$
 
 ```
 

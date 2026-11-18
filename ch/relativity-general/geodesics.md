@@ -78,10 +78,3 @@ $$R^{\rho}_{\ \ \sigma \mu \nu} = \partial_{\mu} \Gamma^{\rho}_{\ \ \nu \sigma} 
 
 ```
 
-<!--
-The equation of the geodesics with parameters $s$ has velocity $\mathbf{U}(q^{\mu}(\lambda,s)) = \partial_{\lambda} q^{\mu} \partial_{\mu} \mathbf{X} = \partial_{\lambda} q^{\mu} \mathbf{b}_{\mu}$
-
-$$\mathbf{0} = \frac{\partial}{\partial \lambda} \mathbf{U}(\lambda, s) = \left. \left\{ \dfrac{\partial^2 q^\mu}{\partial \lambda^2} + \Gamma^{\mu}_{\nu \sigma} \dfrac{\partial q^{\nu}}{\partial \lambda} \dfrac{\partial q^{\sigma}}{\partial \lambda} \right\} \mathbf{b}_{\mu} \right|_{(\lambda,s)} \ ,$$
-
-since $\partial_\lambda \mathbf{b}_{\mu} = \partial_{\lambda} q^{\nu} \, \partial_{\nu} \mathbf{b}_{\mu} = U^\nu \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}$.
--->
