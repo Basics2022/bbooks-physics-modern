@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. General Relativity &#8212; Modern Physics</title>
+    <title>6. Introduction to General Relativity &#8212; Modern Physics</title>
   
   
   
@@ -76,6 +76,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E07F6PFC9G');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -176,7 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. General Relativity</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Introduction to General Relativity</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="notes.html">7. General Relativity - Notes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">7.1. Differential Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">7.2. Einstein’s equation</a></li>
@@ -509,7 +518,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>General Relativity</h1>
+    <h1>Introduction to General Relativity</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -523,8 +532,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="general-relativity">
-<span id="relativity-general-intro"></span><h1><span class="section-number">6. </span>General Relativity<a class="headerlink" href="#general-relativity" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-general-relativity">
+<span id="relativity-general-intro"></span><h1><span class="section-number">6. </span>Introduction to General Relativity<a class="headerlink" href="#introduction-to-general-relativity" title="Permalink to this heading">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Draft of the introduction<div class="sd-summary-down docutils">
@@ -541,17 +550,18 @@ Draft of the introduction<div class="sd-summary-down docutils">
 <li><p class="sd-card-text">how bodies and radiation (both massive and mass-less entities) move in a non-flat spacetime, along <a class="reference internal" href="geodesics.html#general-relativity-geodesics"><span class="std std-ref">geodesics</span></a></p></li>
 </ul>
 </div>
-<p class="sd-card-text"><strong>What’s not ok with Newton gravitation model?</strong> From the mathematical point of view, Newton gravitation is modeled as an instantaneous action at distance, and this is incompatible with the principles of special relativity: no information can travel in space faster than the speed of light <span class="math notranslate nohighlight">\(c\)</span> in vacuum - or, there’s a finite maximum velocity of information through space.</p>
+<p class="sd-card-text"><strong>What’s wrong with Newton’s gravitation model?</strong> From the mathematical point of view, Newton gravitation is modeled as an instantaneous action at distance, and this is incompatible with the principles of special relativity: no information can travel in space faster than the speed of light <span class="math notranslate nohighlight">\(c\)</span> in vacuum - or, there’s a finite maximum velocity of information through space.</p>
 <div class="admonition-instantaneous-action-at-distance-in-classical-mechanics admonition">
 <p class="admonition-title">Instantaneous action at distance in classical mechanics</p>
 <p class="sd-card-text">In classical mechanics,<a class="footnote-reference brackets" href="#basics-cm-gravitation" id="id1">1</a> the force at distance can be written as the spatial gradient of the gravitational potential <span class="math notranslate nohighlight">\(\phi(\vec{r}, t)\)</span>, governed by Poisson equation</p>
 <div class="math notranslate nohighlight">
 \[-\nabla^2 \phi(\vec{r},t) = 4 \pi G \rho( \vec{r}, t) \ ,\]</div>
-<p class="sd-card-text">being <span class="math notranslate nohighlight">\(G\)</span> the universal constant of gravitation, and <span class="math notranslate nohighlight">\(\rho( \vec{r}, t)\)</span> the mass density in space. This equation, and the resulting gravitational force acting on a point mass <span class="math notranslate nohighlight">\(P\)</span> with mass <span class="math notranslate nohighlight">\(m_P\)</span>, <span class="math notranslate nohighlight">\(\vec{F}_P(t) = m_P \nabla \phi( \vec{r}_P, t)\)</span> shows no time delay between the causes and the effects, being everything at time <span class="math notranslate nohighlight">\(t\)</span>. The absence of a time differential operator or a time delay - and the presence of the Laplacian operator - is the mathematical manifestation of instantaneouos action at distance: a change in <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> in <span class="math notranslate nohighlight">\(\vec{r}_0\)</span> causes an immediate change in <span class="math notranslate nohighlight">\(\phi(\vec{r},t)\)</span> in all the points of the domain, and it’s measurable at least in a neighborhood of th point <span class="math notranslate nohighlight">\(\vec{r}_0\)</span>.</p>
-<p class="sd-card-text">GR model: the geometric counterpart of the gravitational potential is forced by  mass-energy-momentum (tensor). The equations must not contain any instantaneous action at distance, and must be compatible with the principles of special relativity. This can be observed in the <a class="reference internal" href="linearized-efe.html#relativity-general-notes-einstein-equation-linearization"><span class="std std-ref">linearized Einstein field equation</span></a>, a wave function for the perturbation of the metric tensor, forced by perturbation in the mass-energy-momentum tensor, with the light speed <span class="math notranslate nohighlight">\(c\)</span> as the characteristic speed.</p>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(G\)</span> the universal constant of gravitation, and <span class="math notranslate nohighlight">\(\rho( \vec{r}, t)\)</span> the mass density in space. This equation, and the resulting gravitational force acting on a point mass <span class="math notranslate nohighlight">\(P\)</span> with mass <span class="math notranslate nohighlight">\(m_P\)</span>, <span class="math notranslate nohighlight">\(\vec{F}_P(t) = -m_P \nabla \phi( \vec{r}_P, t)\)</span> shows no time delay between the causes and the effects, being everything at time <span class="math notranslate nohighlight">\(t\)</span>. The absence of a time differential operator or a time delay - and the presence of the Laplacian operator - is the mathematical manifestation of instantaneous action at distance: a change in <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> in <span class="math notranslate nohighlight">\(\vec{r}_0\)</span> causes an immediate change in <span class="math notranslate nohighlight">\(\phi(\vec{r},t)\)</span> in all the points of the domain, and it’s measurable at least in a neighborhood of the point <span class="math notranslate nohighlight">\(\vec{r}_0\)</span>.</p>
+<p class="sd-card-text">GR model: the geometric counterpart of the gravitational potential is forced by  mass-energy-momentum (tensor). The equations must not contain any instantaneous action at distance, and must be compatible with the principles of special relativity. This can be observed in the <a class="reference internal" href="linearized-efe.html#relativity-general-notes-einstein-equation-linearization"><span class="std std-ref">linearized Einstein field equation</span></a>, a wave equation for the perturbation of the metric tensor, forced by perturbation in the mass-energy-momentum tensor, with the light speed <span class="math notranslate nohighlight">\(c\)</span> as the characteristic speed.</p>
 </div>
-<p class="sd-card-text"><strong>What Newton gravitation can’t model accurately?</strong> The first experimental verifications of GR were an accurate description of the bending of a light ray around a massive object (Eddington, 1919), the precession of the perihelion of Mercury. Other experimental tests followed: the effect of gravitation on proper-time, the existence of black holes, the existence of gravitational waves,…, <em>cosmology</em>,…</p>
+<p class="sd-card-text"><strong>What Newton gravitation cannot model accurately?</strong> The first experimental verifications of GR were an accurate description of the bending of a light ray around a massive object (Eddington, 1919), and an accurate evaluation of a missing term in the precession of the perihelion of Mercury that classical mechanics could not compute. Other experimental tests followed: the effect of gravitation on proper-time, the existence of black holes, the existence of gravitational waves,…, <em>cosmology</em>,…</p>
 <p class="sd-card-text"><strong>Einstein thought experiments.</strong><a class="footnote-reference brackets" href="#einstein-thought-wikipedia" id="id2">2</a><a class="footnote-reference brackets" href="#equivalence-classical-mechanics" id="id3">3</a></p>
+<p class="sd-card-text">…</p>
 </div>
 </details><hr class="footnotes docutils" />
 <dl class="footnote brackets">

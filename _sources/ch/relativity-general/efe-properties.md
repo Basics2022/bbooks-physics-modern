@@ -1,6 +1,8 @@
 (relativity-general:notes:einstein-equation:properties)=
 # Properties of Einstein field equation
 
+**todo**
+
 ````{dropdown} 10 independent components, due to symmetries
 :open:
 
