@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.6. Geodesics &#8212; Modern Physics</title>
+    <title>7.2. Geodesics &#8212; Modern Physics</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.7. Linearization of the geodesic equation" href="geodesics-linearization.html" />
-    <link rel="prev" title="7.5. Local inertial reference frame and equivalence principle" href="local-inertial-reference-frame-and-equivalence-principle.html" />
+    <link rel="next" title="7.3. Einstein’s equation" href="einstein-equation.html" />
+    <link rel="prev" title="7.1. Differential Geometry" href="differential-geometry.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,14 +185,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Relativity</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">6. General Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">6. Introduction to General Relativity</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="notes.html">7. General Relativity - Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="differential-geometry.html">7.1. Differential Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">7.2. Einstein’s equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">7.3. Linearization of Einstein’s equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="efe-properties.html">7.4. Properties of Einstein field equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html">7.5. Local inertial reference frame and equivalence principle</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.6. Geodesics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.2. Geodesics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="einstein-equation.html">7.3. Einstein’s equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">7.4. Linearization of Einstein’s equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="efe-properties.html">7.5. Properties of Einstein field equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html">7.6. Local inertial reference frame and equivalence principle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geodesics-linearization.html">7.7. Linearization of the geodesic equation</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">7.8. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.8.1. Schwarzschild metrics</a></li>
@@ -530,10 +530,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.6.1. …</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.6.2.1. Velocity of the geodesics deviation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.6.2.2. Acceleration of the geodesics deviation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-equation">7.2.1. Geodesics equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.2.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.2.2.1. Velocity of the geodesics deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.2.2.2. Acceleration of the geodesics deviation</a></li>
 </ul>
 </li>
 </ul>
@@ -548,12 +548,92 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="geodesics">
-<span id="general-relativity-geodesics"></span><h1><span class="section-number">7.6. </span>Geodesics<a class="headerlink" href="#geodesics" title="Permalink to this heading">#</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">7.6.1. </span>…<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<span id="general-relativity-geodesics"></span><h1><span class="section-number">7.2. </span>Geodesics<a class="headerlink" href="#geodesics" title="Permalink to this heading">#</a></h1>
+<p>A worldline is the a one-dimensional curve describing the trajectory of a point in the four-dimensional spacetime. Events in the four-dimensional spacetime can be parametrized with a set of coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}\)</span> as <span class="math notranslate nohighlight">\(X( q^{\mu} )\)</span>.<a class="footnote-reference brackets" href="#x-not-a-vector" id="id1">1</a> A worldine <span class="math notranslate nohighlight">\(\ell\)</span> can be represented with the 1-parameter equation <span class="math notranslate nohighlight">\(X_{\ell}(\lambda) = X\left( q^{\mu}_{\ell}(\lambda) \right)\)</span>.</p>
+<p>The line element in space time can be defined as <span class="math notranslate nohighlight">\(d \mathbf{X} = d \lambda \, \partial_\lambda q^{\mu} \, \partial_{\mu} X\)</span> <span class="math notranslate nohighlight">\(= d \lambda \, \partial_\lambda q^{\mu} \, \mathbf{b}_{\mu}\)</span>, with <span class="math notranslate nohighlight">\(\mathbf{b}_{\mu} = \partial_{\mu} X\)</span> the vectors of the natural basis induced by the parametrization of the spacetime. The magnitude of the line element reads</p>
+<div class="math notranslate nohighlight">
+\[ds^2 = d \mathbf{X} \cdot d \mathbf{X} = d\lambda^2 \, g_{\mu \nu}\left(q^\varphi(\lambda)\right) \, \partial_\lambda q^{\mu}(\lambda) \, \partial_\lambda q^{\nu}(\lambda) \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(g_{\mu \nu} := \mathbf{b}_{\mu} \cdot \mathbf{b}_{\nu}\)</span> the components of the metric tensor in the natural basis induced by the parametrization of space.</p>
+<div class="section" id="geodesics-equation">
+<span id="general-relativity-geodesics-equation"></span><h2><span class="section-number">7.2.1. </span>Geodesics equation<a class="headerlink" href="#geodesics-equation" title="Permalink to this heading">#</a></h2>
+<p>A geodesics between two events <span class="math notranslate nohighlight">\(P_0\)</span>, <span class="math notranslate nohighlight">\(P_1\)</span> in spacetime is the worldline connecting the events for which the <span class="math notranslate nohighlight">\(\Delta s = \int_{P_0}^{P_1} ds\)</span> is stationary. Using a parameters <span class="math notranslate nohighlight">\(\lambda\)</span> that’s affine with the arc-length, the equation of the geodesics reads</p>
+<div class="math notranslate nohighlight">
+\[\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = 0 \ .\]</div>
+<p>Defining the 4-velocity of a point <span class="math notranslate nohighlight">\(P\)</span> in spacetime as  w.r.t. the affine parameter <span class="math notranslate nohighlight">\(\lambda\)</span> - remark: an affine parameter just differs from the arc-length by an offset and a scale parameter, like a different choice of unit of measurements,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{U} = \partial_\lambda X\left( q^\mu(\lambda) \right) = \partial_\lambda q^{\mu} \, \partial_{q^{\mu}} X = \dot{q}^{\mu} \mathbf{b}_{\mu} = U^{\mu} \mathbf{b}_{\mu} \ ,\]</div>
+<p>it readily follows that a geodesics is a worldine s.t. the acceleration on that orbit is zero, <span class="math notranslate nohighlight">\(\partial_\lambda \mathbf{U} = \mathbf{0}\)</span>, as the expression of the acceleration induced by the choice of the coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} := \partial_\lambda \mathbf{U} = \partial_\lambda \left( \dot{q}^\mu \mathbf{b}_{\mu} \right) = \left\{ \ddot{q}^{\mu} + \Gamma^{\mu}_{\nu\sigma} \dot{q}^\nu \dot{q}^\sigma \right\} \mathbf{b}_{\mu} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Geodesics from variational principles<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Or move this to <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/examples.html">Math: Calculus of variations: examples</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  0
+  &amp; = \delta \int_{\lambda_0}^{\lambda_1} ds
+    = \delta \int_{\lambda_0}^{\lambda_1} \sqrt{ g_{\mu \nu}(q^\varphi(\lambda)) \, \dot{q}^{\mu}(\lambda) \dot{q}^{\nu}(\lambda) } \, d \lambda 
+    = \delta \int_{\lambda_0}^{\lambda_1} \dot{s}(\lambda) \, d \lambda 
+\end{aligned}\]</div>
+<p class="sd-card-text">Lagrange equation reads</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{d \lambda} \dfrac{\partial \mathcal{L}}{\partial \dot{q}^\xi} - \dfrac{\partial \mathcal{L}}{\partial q^\xi} = 0 \ .\]</div>
+<p class="sd-card-text">The evaluation of the derivatives gives</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \mathcal{L}}{\partial q^\xi} = \frac{1}{2} \left( g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu} \right)^{-\frac{1}{2}} \partial_{\xi} g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu} = \frac{1}{2} \dot{s}^{-1} \partial_{\xi} g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{d}{d \lambda} \frac{\partial \mathcal{L}}{\partial \dot{q}^\xi} 
+  &amp; = \dfrac{d}{d\lambda} \left[ \frac{1}{2} \left( g_{\sigma \eta} \dot{q}^{\sigma} \dot{q}^{\eta} \right)^{-\frac{1}{2}} \left( g_{\xi \nu} \dot{q}^{\nu} + g_{\mu \xi} \dot{q}^{\mu} \right) \right] = \\
+  &amp; = \dfrac{d}{d\lambda} \left[ \dot{s}^{-1} \, g_{\xi \nu} \, \dot{q}^{\nu}  \right] = \\
+  &amp; = \left( \dot{q}^\zeta \partial_{q^\zeta} \dot{s}^{-1} + \ddot{q}^\zeta \partial_{\dot{q}^\zeta} \dot{s}^{-1} \right) g_{\xi \nu} \dot{q}^{\nu} + \dot{s}^{-1} \left( \dot{q}^{\zeta} \partial_{\zeta} g_{\xi \nu} \dot{q}^{\nu} + g_{\xi \nu} \ddot{q}^{\nu} \right) = \\
+  &amp; = - \dot{s}^{-2} \ddot{s} \, g_{\xi \nu} \dot{q}^{\nu} + \dot{s}^{-1} \left( \partial_{\zeta} g_{\xi \nu} \dot{q}^{\nu} \dot{q}^{\zeta} + g_{\xi \nu} \ddot{q}^{\nu} \right) \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Putting everything together,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \dfrac{d}{d \lambda} \frac{\partial \mathcal{L}}{\partial \dot{q}^\xi} - \frac{\partial \mathcal{L}}{\partial q^\xi} = \\
+  &amp; = - \dot{s}^{-2} \ddot{s} \, g_{\xi \mu} \dot{q}^{\mu} + \dot{s}^{-1} \left( \partial_{\mu} g_{\xi \nu} \dot{q}^{\mu} \dot{q}^{\nu} + g_{\xi \mu} \ddot{q}^{\mu} \right) - \frac{1}{2} \dot{s}^{-1} \partial_{\xi} g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu} = \\
+  &amp; = - \dot{s}^{-2} \ddot{s} \, g_{\xi \mu} \dot{q}^{\mu} + \dot{s}^{-1} \left[  g_{\xi \mu} \ddot{q}^{\mu} + \left( \partial_{\mu} g_{\xi \nu} - \frac{1}{2} \partial_{\xi} g_{\mu \nu} \right) \dot{q}^{\mu} \dot{q}^{\nu} \right] = \\
+  &amp; = - \dot{s}^{-2} \ddot{s} \, g_{\xi \mu} \dot{q}^{\mu} + \dot{s}^{-1} \left\{ \, g_{\xi \mu} \ddot{q}^{\mu} + \left( \Gamma^{\sigma}_{\mu \xi} g_{\sigma \nu} + \Gamma^{\sigma}_{\mu \nu} g_{\xi \sigma} - \frac{1}{2} \Gamma_{\xi \mu}^{\sigma} g_{\sigma \nu} - \frac{1}{2} \Gamma_{\xi \nu}^{\sigma} g_{\sigma \mu} \right) \dot{q}^{\mu} \dot{q}^{\nu} \right\} = \\
+  &amp; = - \dot{s}^{-2} \ddot{s} \, g_{\xi \mu} \dot{q}^{\mu} + \dot{s}^{-1} \left\{ \, g_{\xi \mu} \ddot{q}^{\mu} + \Gamma^{\sigma}_{\mu \nu} g_{\xi \sigma} \dot{q}^{\mu} \dot{q}^{\nu} \right\} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or rearranging the indices</p>
+<div class="math notranslate nohighlight">
+\[\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = \dfrac{\ddot{s}}{\dot{s}^3} \dot{q}^{\mu} \ .\]</div>
+<p class="sd-card-text">If <span class="math notranslate nohighlight">\(\lambda\)</span> is an <strong>affine parameter</strong>, so that its relation with the arc-length is <span class="math notranslate nohighlight">\(\lambda = a s + b\)</span>, with <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> constant, then <span class="math notranslate nohighlight">\(\ddot{s} = 0\)</span>, and the <span class="math notranslate nohighlight">\(\mu^{\rm th}\)</span> components of the geodesics equation reads</p>
+<div class="math notranslate nohighlight">
+\[\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma} = 0 \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Useful results for derivatives and manipulations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial \dot{s}^2 &amp; = 2 \dot{s} \partial \dot{s} \\
+  \partial \dot{s}^n &amp; = n \dot{s}^{n-1} \partial \dot{s} = \frac{n}{2} \dot{s}^{n-2} \partial \dot{s}^2 \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_{q^{\xi}} \dot{s}^2 &amp; = \partial_{q^\xi} \left( g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu} \right) = \partial_{\xi} g_{\mu \nu} \dot{q}^\mu \dot{q}^\nu \\
+  \partial_{\dot{q}^{\xi}} \dot{s}^2 &amp; = \partial_{\dot{q}^\xi} \left( g_{\mu \nu} \dot{q}^{\mu} \dot{q}^{\nu} \right) = g_{\mu \xi} \dot{q}^\mu + g_{\xi \nu} \dot{q}^\nu  = 2 g_{\xi \mu} q^{\mu}
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\partial_{\xi} g_{\mu \nu} = \Gamma_{\xi \mu}^{\sigma} g_{\sigma \nu} + \Gamma_{\xi \nu}^{\sigma} g_{\sigma \mu}\]</div>
 </div>
+</details></div>
+</details></div>
 <div class="section" id="geodesics-deviation-equation">
-<span id="general-relativity-geodesics-deviation"></span><h2><span class="section-number">7.6.2. </span>Geodesics deviation equation<a class="headerlink" href="#geodesics-deviation-equation" title="Permalink to this heading">#</a></h2>
+<span id="general-relativity-geodesics-deviation"></span><h2><span class="section-number">7.2.2. </span>Geodesics deviation equation<a class="headerlink" href="#geodesics-deviation-equation" title="Permalink to this heading">#</a></h2>
 <p>Let a region of spacetime be parametrized by two parameters, <span class="math notranslate nohighlight">\(\mathbf{X}\left( q^{\mu}(\lambda, s) \right)\)</span>, so that</p>
 <ul>
 <li><p><strong>geodesics</strong> are constant-<span class="math notranslate nohighlight">\(s\)</span> lines parametrized by <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(\mathbf{X}(\lambda, \bar{s})\)</span>. The velocity vector is</p>
@@ -569,7 +649,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\partial_s U^{\mu} = \partial_\lambda \xi^{\mu} \ .\]</div>
 <div class="section" id="velocity-of-the-geodesics-deviation">
-<span id="general-relativity-geodesics-deviation-velocity"></span><h3><span class="section-number">7.6.2.1. </span>Velocity of the geodesics deviation<a class="headerlink" href="#velocity-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
+<span id="general-relativity-geodesics-deviation-velocity"></span><h3><span class="section-number">7.2.2.1. </span>Velocity of the geodesics deviation<a class="headerlink" href="#velocity-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
 <p>The evolution of the deviation elementary “segment” <span class="math notranslate nohighlight">\(\Delta \mathbf{X} = \Delta s \, \partial_s q^{\mu} \mathbf{b}_{\mu}\)</span> follows from the comparison of two neighboring geodesics. The velocity of the deviation is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -581,7 +661,7 @@ document.write(`
 <p>with <span class="math notranslate nohighlight">\(\partial_s \mathbf{b}_{\mu} = \partial_s q^{\nu} \partial_{\nu} \mathbf{b}_{\mu} = \partial_s q^{\nu} \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}\)</span>.</p>
 </div>
 <div class="section" id="acceleration-of-the-geodesics-deviation">
-<span id="general-relativity-geodesics-deviation-acceleration"></span><h3><span class="section-number">7.6.2.2. </span>Acceleration of the geodesics deviation<a class="headerlink" href="#acceleration-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
+<span id="general-relativity-geodesics-deviation-acceleration"></span><h3><span class="section-number">7.2.2.2. </span>Acceleration of the geodesics deviation<a class="headerlink" href="#acceleration-of-the-geodesics-deviation" title="Permalink to this heading">#</a></h3>
 <p>The acceleration of the deviation is</p>
 <div class="math notranslate nohighlight">
 \[\Delta \mathbf{A} = \Delta s \, R^{\rho}_{\ \ \sigma \mu \nu} U^{\sigma} U^{\mu} \xi^{\nu} \, \mathbf{b}_{\rho} + o(\Delta s) \ ,\]</div>
@@ -622,7 +702,13 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[R^{\rho}_{\ \ \sigma \mu \nu} = \partial_{\mu} \Gamma^{\rho}_{\ \ \nu \sigma} - \partial_{\nu} \Gamma^{\rho}_{\ \ \mu \sigma} + \Gamma^{\rho}_{\ \ \mu \lambda} \Gamma^{\lambda}_{\ \ \nu \sigma} - \Gamma^{\rho}_{\ \ \nu \lambda} \Gamma^{\lambda}_{\ \ \mu \sigma} \ .\]</div>
 </div>
-</details></div>
+</details><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="x-not-a-vector"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The function <span class="math notranslate nohighlight">\(X( q^{\mu} )\)</span> represents the events in the spacetime as points on a manifold. In general events can’t be represented as a (position) vector if the space is not flat, or if the <span class="math notranslate nohighlight">\(n\)</span>-dimensional manifold is not embedded in a <span class="math notranslate nohighlight">\(n+1\)</span>-dimensional space.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -657,20 +743,20 @@ Details<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="local-inertial-reference-frame-and-equivalence-principle.html"
+       href="differential-geometry.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.5. </span>Local inertial reference frame and equivalence principle</p>
+        <p class="prev-next-title"><span class="section-number">7.1. </span>Differential Geometry</p>
       </div>
     </a>
     <a class="right-next"
-       href="geodesics-linearization.html"
+       href="einstein-equation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.7. </span>Linearization of the geodesic equation</p>
+        <p class="prev-next-title"><span class="section-number">7.3. </span>Einstein’s equation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -689,10 +775,10 @@ Details<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.6.1. …</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.6.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.6.2.1. Velocity of the geodesics deviation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.6.2.2. Acceleration of the geodesics deviation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-equation">7.2.1. Geodesics equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodesics-deviation-equation">7.2.2. Geodesics deviation equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-of-the-geodesics-deviation">7.2.2.1. Velocity of the geodesics deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-of-the-geodesics-deviation">7.2.2.2. Acceleration of the geodesics deviation</a></li>
 </ul>
 </li>
 </ul>
