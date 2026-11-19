@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E07F6PFC9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E07F6PFC9G');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -557,14 +548,20 @@ document.write(`
 <div class="section" id="geodesics-equation">
 <span id="general-relativity-geodesics-equation"></span><h2><span class="section-number">7.2.1. </span>Geodesics equation<a class="headerlink" href="#geodesics-equation" title="Permalink to this heading">#</a></h2>
 <p>A geodesics between two events <span class="math notranslate nohighlight">\(P_0\)</span>, <span class="math notranslate nohighlight">\(P_1\)</span> in spacetime is the worldline connecting the events for which the <span class="math notranslate nohighlight">\(\Delta s = \int_{P_0}^{P_1} ds\)</span> is stationary. Using a parameters <span class="math notranslate nohighlight">\(\lambda\)</span> that’s affine with the arc-length, the equation of the geodesics reads</p>
-<div class="math notranslate nohighlight">
-\[\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = 0 \ .\]</div>
+<div class="math notranslate nohighlight" id="equation-gr-geodesics-components">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-gr-geodesics-components" title="Permalink to this equation">#</a></span>\[\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = 0 \ .\]</div>
 <p>Defining the 4-velocity of a point <span class="math notranslate nohighlight">\(P\)</span> in spacetime as  w.r.t. the affine parameter <span class="math notranslate nohighlight">\(\lambda\)</span> - remark: an affine parameter just differs from the arc-length by an offset and a scale parameter, like a different choice of unit of measurements,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{U} = \partial_\lambda X\left( q^\mu(\lambda) \right) = \partial_\lambda q^{\mu} \, \partial_{q^{\mu}} X = \dot{q}^{\mu} \mathbf{b}_{\mu} = U^{\mu} \mathbf{b}_{\mu} \ ,\]</div>
 <p>it readily follows that a geodesics is a worldine s.t. the acceleration on that orbit is zero, <span class="math notranslate nohighlight">\(\partial_\lambda \mathbf{U} = \mathbf{0}\)</span>, as the expression of the acceleration induced by the choice of the coordinates <span class="math notranslate nohighlight">\(\{ q^\mu \}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{A} := \partial_\lambda \mathbf{U} = \partial_\lambda \left( \dot{q}^\mu \mathbf{b}_{\mu} \right) = \left\{ \ddot{q}^{\mu} + \Gamma^{\mu}_{\nu\sigma} \dot{q}^\nu \dot{q}^\sigma \right\} \mathbf{b}_{\mu} \ .\]</div>
+<p>As the equation of the geodesics <a class="reference internal" href="#equation-gr-geodesics-components">(7.9)</a> is a second-order equation in the affine parameter <span class="math notranslate nohighlight">\(\lambda\)</span>, a geodesics may be uniquely defined by</p>
+<ul class="simple">
+<li><p>initial conditions on the position, setting <span class="math notranslate nohighlight">\(q^{\mu}(\lambda_0) = q^{\mu}_0\)</span>, so that the initial event is <span class="math notranslate nohighlight">\(X_0 = X\left( q^\mu_0 \right)\)</span> <strong>and</strong></p></li>
+<li><p>initial conditions on the velocity, setting <span class="math notranslate nohighlight">\(\dot{q}^\mu(\lambda_0) = v^\mu\)</span>, so that the initial velocity is <span class="math notranslate nohighlight">\(\mathbf{U}_0 = v^\mu \mathbf{b}_{\u}(\lambda_0)\)</span>.</p></li>
+</ul>
+<p>Other pairs of consistent conditions may uniquely define a geodesics.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Geodesics from variational principles<div class="sd-summary-down docutils">

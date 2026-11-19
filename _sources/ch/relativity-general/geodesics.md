@@ -16,7 +16,7 @@ with $g_{\mu \nu} := \mathbf{b}_{\mu} \cdot \mathbf{b}_{\nu}$ the components of 
 
 A geodesics between two events $P_0$, $P_1$ in spacetime is the worldline connecting the events for which the $\Delta s = \int_{P_0}^{P_1} ds$ is stationary. Using a parameters $\lambda$ that's affine with the arc-length, the equation of the geodesics reads
 
-$$\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = 0 \ .$$
+$$\ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^\nu \dot{q}^\sigma = 0 \ .$$  (gr-geodesics-components)
 
 Defining the 4-velocity of a point $P$ in spacetime as  w.r.t. the affine parameter $\lambda$ - remark: an affine parameter just differs from the arc-length by an offset and a scale parameter, like a different choice of unit of measurements,
 
@@ -26,6 +26,11 @@ it readily follows that a geodesics is a worldine s.t. the acceleration on that 
 
 $$\mathbf{A} := \partial_\lambda \mathbf{U} = \partial_\lambda \left( \dot{q}^\mu \mathbf{b}_{\mu} \right) = \left\{ \ddot{q}^{\mu} + \Gamma^{\mu}_{\nu\sigma} \dot{q}^\nu \dot{q}^\sigma \right\} \mathbf{b}_{\mu} \ .$$
 
+As the equation of the geodesics {eq}`gr-geodesics-components` is a second-order equation in the affine parameter $\lambda$, a geodesics may be uniquely defined by 
+* initial conditions on the position, setting $q^{\mu}(\lambda_0) = q^{\mu}_0$, so that the initial event is $X_0 = X\left( q^\mu_0 \right)$ **and**
+* initial conditions on the velocity, setting $\dot{q}^\mu(\lambda_0) = v^\mu$, so that the initial velocity is $\mathbf{U}_0 = v^\mu \mathbf{b}_{\u}(\lambda_0)$.
+
+Other pairs of consistent conditions may uniquely define a geodesics.
 
 ````{dropdown} Geodesics from variational principles
 :open:
