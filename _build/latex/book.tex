@@ -85,7 +85,7 @@
         
 
 \title{Modern Physics}
-\date{Nov 11, 2026}
+\date{Nov 19, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -372,8 +372,8 @@ having used Cartesian coordinates,
 \begin{split}d s^2 = d \mathbf{X} \cdot d \mathbf{X} = \left( dX_{\alpha} \mathbf{E}^{\alpha} \right) \cdot \left( dX^{\beta} \mathbf{E}_{\beta} \right) = c^2 \, d t^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2 = c^2 \, dt^2 - |d \vec{r}|^2 \end{split}
 \end{equation*}
 
-\section{Kinematics of point}
-\label{\detokenize{ch/relativity-special/notes:kinematics-of-point}}
+\section{Kinematics of a point}
+\label{\detokenize{ch/relativity-special/notes:kinematics-of-a-point}}\label{\detokenize{ch/relativity-special/notes:relativity-special-notes-kinematics-point}}
 \sphinxAtStartPar
 \sphinxstylestrong{Proper time.} For a co\sphinxhyphen{}moving observer, \(d \vec{r}' = \vec{0}\), and \(t'\) is commonly indicated with \(\tau\), and its differential is invariant itself, being the product of a constant (\(c\) is a universal constant in special relativity) and an invariant quantity.
 \begin{equation*}
@@ -404,7 +404,7 @@ with \(\gamma(w) = \frac{1}{\sqrt{1 - w^2}}\).
 \begin{split}\mathbf{U}(\tau) := \mathbf{X}'(\tau) = \dfrac{d}{d \tau} \left( X^{\alpha}(\tau) \mathbf{E}_{\alpha} \right) = \dfrac{d t}{d \tau} (c t \mathbf{E}_0 + x^i(t) \mathbf{E}_i) = \gamma(v/c) \left( c \mathbf{E}_0 + \dot{x}^i(t) \mathbf{E}_i \right) = \gamma(v/c) \left( c \mathbf{E}_0 + \vec{v} \right)\end{split}
 \end{equation*}
 \sphinxAtStartPar
-or
+or \sphinxhyphen{} with the notation abuse of using the same symbol \(\mathbf{U}\) for the function representing the derivative of \(\mathbf{X}\) w.r.t. two different variables \sphinxhyphen{}
 \begin{equation*}
 \begin{split}\mathbf{U}(s) := \mathbf{X}'(s) = \dfrac{d t}{ ds } \dfrac{d}{dt} \mathbf{X}(t) = \dots = \gamma(v/c) \left( \mathbf{E}_0 + \frac{\vec{v}}{c} \right) \ .\end{split}
 \end{equation*}
@@ -418,9 +418,74 @@ Using \(s\) as the parameter, \(\mathbf{U}\) is non\sphinxhyphen{}dimensional, a
 Using \(\tau\) as the parameter, \(\mathbf{U}\) has physical dimension of a velocity and pseudo\sphinxhyphen{}norm = \(c\).
 \end{sphinxadmonition}
 
-\sphinxAtStartPar
-\sphinxstylestrong{4\sphinxhyphen{}acceleration} \(\mathbf{X}''(\tau)\) or \(\mathbf{X}''(s)\), \sphinxstylestrong{todo}
+\begin{sphinxadmonition}{note}{Orthogonality condition between 4\sphinxhyphen{}velocity and 4\sphinxhyphen{}acceleration}
 
+\sphinxAtStartPar
+As \(\mathbf{U}(\tau) \cdot \mathbf{U}(\tau) = c^2\) constant, then its derivative is identically zero, i.e.
+\begin{equation}\label{equation:ch/relativity-special/notes:eq:relativity:kinematics:vel-acc-orthogonality}
+\begin{split}\mathbf{U} \cdot \mathbf{A} = 0 \ .\end{split}
+\end{equation}\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{4\sphinxhyphen{}acceleration} \(\mathbf{X}''(\tau)\) or \(\mathbf{X}''(s)\).
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{A}(\tau) := \mathbf{U}'(\tau) = \mathbf{X}''(\tau) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or using reference frame time \(t\) as independent variable
+\begin{equation*}
+\begin{split}\mathbf{A} = \gamma^4 \frac{\vec{v}}{c} \cdot\vec{a} \, \mathbf{E}_0 + \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} \ .\end{split}
+\end{equation*}\subsubsection*{Details. Relation between 4\sphinxhyphen{}dimensional and 3+1 dimensional representation}
+
+\sphinxAtStartPar
+Let’s write the acceleration as a function of the independent variable \(t\), the inertial frame time coordinate,
+\begin{equation*}
+\begin{split}\mathbf{A} = \frac{d \mathbf{U}}{d \tau} = \frac{d t}{d \tau} \frac{d}{dt} \left( c \gamma \mathbf{E}_0 + \gamma v_i \mathbf{E}_i \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The time component reads
+\begin{equation*}
+\begin{split} A^0 = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} \end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  A^0 
+  & = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma c \right) = \\
+  & = \gamma c \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} = \\
+  & = \gamma c \left( - \frac{1}{2} \right) \left( 1 - \frac{| \vec{v} |^2}{c^2} \right)^{-\frac{3}{2}} \left( - 2 \frac{\vec{v} \cdot \vec{a}}{c^2} \right) = \\
+  & = \gamma^4 \frac{\vec{v} \cdot \vec{a}}{c} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Space components read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  A^i & = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \\
+  \vec{A}^{(3)}
+  & = \gamma^2 \vec{a} + \gamma^4 \frac{\vec{v}}{c} \frac{\vec{v}}{c} \cdot \vec{a} = \\
+  & = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\}  \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  A^i 
+  & = \frac{d t}{d \tau} \frac{d}{dt} \left( \gamma v_i \right) = \\
+  & = \gamma \left\{ \frac{d}{dt} \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} v_i + \left( 1 - \frac{\vec{v} \cdot \vec{v}}{c^2} \right)^{-\frac{1}{2}} \frac{d v_i}{dt} \right\} = \\
+  & = \gamma^4  \frac{v_i}{c}\frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 a_i \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{A}^{(3)}
+  & = \gamma^4  \frac{\vec{v}}{c} \frac{\vec{v} \cdot \vec{a}}{c} + \gamma^2 \vec{a} = \\
+  & = \gamma^4 \left\{ \frac{\vec{v}}{c} \frac{\vec{v}\cdot\vec{a}}{c} + \left( 1 - \frac{|\vec{v}|^2}{c^2} \right) \vec{a} \right\} = \\
+  & = \gamma^4 \left\{ \vec{a} + \left( \frac{\vec{v}}{c} \otimes \frac{\vec{v}}{c} - \frac{| \vec{v} |^2}{c^2} \mathbb{I} \right) \cdot \vec{a} \right\} \ . 
+\end{aligned}\end{split}
+\end{equation*}
 
 \section{Dynamics of a point mass}
 \label{\detokenize{ch/relativity-special/notes:dynamics-of-a-point-mass}}
@@ -1420,88 +1485,73 @@ Equation of motion of a point charge in a EM field,
 This section covers the kinematics of uniformly accelerated motion in Special Relativity, the construction of the reference frame of an accelerated observer, the derivation of Rindler coordinates, and their geometric properties (metric, Christoffel symbols, geodesics, zero Riemann curvature tensor, and the Newtonian/classical limit).
 
 
-\bigskip\hrule\bigskip
-
-
-
-\section{3+1 and 4D Kinematics of an Accelerated Point}
-\label{\detokenize{ch/relativity-special/rindler:and-4d-kinematics-of-an-accelerated-point}}
-
-\subsection{4\sphinxhyphen{}Vector Definitions in an Inertial Frame}
-\label{\detokenize{ch/relativity-special/rindler:vector-definitions-in-an-inertial-frame}}
+\section{3+1 and 4D Kinematics of a point}
+\label{\detokenize{ch/relativity-special/rindler:and-4d-kinematics-of-a-point}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-kinematics-point}}
 \sphinxAtStartPar
-Consider an inertial reference frame with Cartesian basis vectors \(\{\underline{E}_\mu\}\) such that \(\underline{E}_\mu \cdot \underline{E}_\nu = \eta_{\mu\nu} = \text{diag}(1, -1, -1, -1)\).
+See {\hyperref[\detokenize{ch/relativity-special/notes:relativity-special-notes-kinematics-point}]{\sphinxcrossref{\DUrole{std,std-ref}{Kinematics of a point}}}}.
+
+
+\section{Uniformly accelerated point}
+\label{\detokenize{ch/relativity-special/rindler:uniformly-accelerated-point}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-point-uniform-acceleration}}
+\sphinxAtStartPar
+Consider motion of a point \(P\) in (the flat) space time along one spatial direction, parametrized with proper\sphinxhyphen{}time \(\tau_P\),
+\begin{equation*}
+\begin{split}\mathbf{X}_P(\tau_P) = X^\mu_P(\tau_P) \mathbf{E}_{\mu} =  ct_P(\tau_P) \mathbf{E}_0 + x_P(\tau_P) \mathbf{E}_1 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with constant proper acceleration magnitude \(\alpha_P\) such that \(\mathbf{A}_P \cdot \mathbf{A}_P = -\alpha_P^2\), being \(\mathbf{A}(\tau) = \mathbf{X}''(\tau)\). Assuming initial conditions at \(\tau = 0\), with
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{4\sphinxhyphen{}position:}
+position \(\mathbf{X}_P(\tau_P=0) = x_{P0} \mathbf{E}_1\),
 \begin{equation*}
-\begin{split}\underline{X}(\tau) = X^\mu(\tau) \underline{E}_\mu = c t \underline{E}_0 + x_i \underline{E}_i\end{split}
+\begin{split}(c t, x)|_{\tau_P=0} = (0, x_{P0}) \ ,\end{split}
 \end{equation*}
-\sphinxAtStartPar
-where \(\tau\) is the proper time defined by:
-\begin{equation*}
-\begin{split}c^2 d\tau^2 = c^2 dt^2 - |d\vec{x}|^2 = c^2 \left(1 - \frac{|\vec{v}|^2}{c^2}\right) dt^2 \implies d\tau = \gamma^{-1} dt\end{split}
-\end{equation*}
-\sphinxAtStartPar
-with \(\gamma = \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-1/2}\).
-
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{4\sphinxhyphen{}velocity:}
+zero 3\sphinxhyphen{}dimensional velocity
 \begin{equation*}
-\begin{split}\underline{U} = \frac{d\underline{X}}{d\tau} = \frac{dt}{d\tau} \frac{d\underline{X}}{dt} = c \gamma \underline{E}_0 + \gamma v_i \underline{E}_i\end{split}
+\begin{split}0 = v(\tau_P = 0) = \left.\frac{d x}{dt}\right|_{\tau_P=0} = \left.\frac{d x}{d \tau}\right|_{\tau_P=0} \left.\frac{d \tau}{d t}\right|_{\tau_P=0} = U^1_P(\tau=0) \underbrace{ \gamma(v=0) }_{ = 1} = U_P^1(0) \ , \end{split}
 \end{equation*}
 \sphinxAtStartPar
-which satisfies \(\underline{U} \cdot \underline{U} = c^2\).
+being \(\tfrac{d x_P}{d \tau_P} = U^1_P\) the component \(1\) of the 4\sphinxhyphen{}velocity, and \(\tfrac{d}{\tau_P}{d t_P} = \gamma^{-1}\). The time component of the velocity is \(U^0 = c\), so that the initial condition for the 4\sphinxhyphen{}velocity is \(\mathbf{U}_P(\tau_P = 0) = c \mathbf{E}_0\).
 
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{4\sphinxhyphen{}acceleration:}
-\begin{equation*}
-\begin{split}\underline{A} = \frac{d\underline{U}}{d\tau} = \gamma \frac{d\underline{U}}{dt}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Expanding component\sphinxhyphen{}wise:
-\begin{equation*}
-\begin{split}\frac{d}{dt}(\gamma c) = c \frac{d\gamma}{dt} = c \left(-\frac{1}{2}\right) \left(1 - \frac{|\vec{v}|^2}{c^2}\right)^{-3/2} \left(-2 \vec{v} \cdot \frac{d\vec{v}}{dt}\right) \frac{1}{c^2} = \frac{\gamma^3}{c} (\vec{v} \cdot \vec{a})\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\frac{d}{dt}(\gamma v_i) = \gamma^3 \frac{1}{c^2} (\vec{v} \cdot \vec{a}) v_i + \gamma a_i\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Combining these gives:
-\begin{equation*}
-\begin{split}\underline{A} = \left( \frac{\gamma^4}{c} (\vec{v} \cdot \vec{a}), \, \gamma^2 \vec{a} + \frac{\gamma^4}{c^2} \vec{v} (\vec{v} \cdot \vec{a}) \right)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Using the longitudinal/transverse decomposition of acceleration:
-\begin{equation*}
-\begin{split}\underline{A} = \gamma^4 \left\{ \frac{\vec{v} \cdot \vec{a}}{c}, \, \frac{\vec{v}}{c} \left(\frac{\vec{v}}{c} \cdot \vec{a}\right) + \left(1 - \frac{|\vec{v}|^2}{c^2}\right) \vec{a}_\perp \right\}\end{split}
-\end{equation*}
 \end{itemize}
 
-
-\bigskip\hrule\bigskip
-
-
-
-\section{Uniformly Accelerated Trajectory}
-\label{\detokenize{ch/relativity-special/rindler:uniformly-accelerated-trajectory}}
 \sphinxAtStartPar
-Consider motion along one spatial direction (\(x\)) with constant proper acceleration magnitude \(\alpha_p\) such that \(\underline{A} \cdot \underline{A} = -\alpha_p^2\).
-
-\sphinxAtStartPar
-Assuming initial conditions at \(\tau = 0\):
+The solution of the condition about the constant proper acceleration magnitude
 \begin{equation*}
-\begin{split}(c t, x)|_{\tau=0} = (0, x_{P0}), \quad v(0) = 0\end{split}
+\begin{split}-\alpha_P^2 = \mathbf{A}_P \cdot \mathbf{A}_P = \left( A^0 \right)^2 - \left( A^1 \right)^2 = \left( X^{0''} \right)^2 - \left( X^{1 ''} \right)^2 \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-The solution to the equations of motion yields hyperbolic motion:
+compatible with the initial conditions and with the orthogonality condition \eqref{equation:ch/relativity-special/notes:eq:relativity:kinematics:vel-acc-orthogonality} \(\mathbf{A} \cdot \mathbf{U} = 0\) is
 \begin{equation*}
-\begin{split}c t(\tau) = \frac{c^2}{\alpha_p} \sinh\left(\frac{\alpha_p \tau}{c}\right)\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}x(\tau) = \frac{c^2}{\alpha_p} \cosh\left(\frac{\alpha_p \tau}{c}\right) - \frac{c^2}{\alpha_p} + x_{P0}\end{split}
+\begin{split}\left\{ \begin{aligned}
+  c t(\tau) & = \frac{c^2}{\alpha_P} \sinh\left(\frac{\alpha_p \tau}{c}\right) \\
+  x(\tau)   & = \frac{c^2}{\alpha_P} \cosh\left(\frac{\alpha_p \tau}{c}\right) - \frac{c^2}{\alpha_P} + x_{P0}
+\end{aligned} \right.\end{split}
 \end{equation*}
+\sphinxAtStartPar
+or using the vector notation
+\begin{equation*}
+\begin{split}
+\mathbf{X}_P(\tau) = \frac{c^2}{\alpha_P} \sinh\left(\frac{\alpha_p \tau}{c}\right) \, \mathbf{E}_0 
++ \left[ \frac{c^2}{\alpha_P} \cosh\left(\frac{\alpha_p \tau}{c}\right) - \frac{c^2}{\alpha_P} + x_{P0} \right] \, \mathbf{E}_1 \ .
+\end{split}
+\end{equation*}\subsubsection*{Details}
+
+\sphinxAtStartPar
+4\sphinxhyphen{}position, 4\sphinxhyphen{}velocity and 4\sphinxhyphen{}acceleration
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{X} & = \frac{c^2}{\alpha} \sinh \left( \frac{\alpha \tau}{c} \right) \mathbf{E}_0 + \left[ \frac{c^2}{\alpha} \cosh \left( \frac{\alpha \tau}{c} \right) - \frac{c^2}{\alpha} + x_{P0} \right] \mathbf{E}_1 \\
+  \mathbf{X}'  = \mathbf{U} & = c \cosh \frac{\alpha \tau}{c} \, \mathbf{E}_0 + c \sinh \left( \frac{\alpha \tau}{c} \right) \, \mathbf{E}_1 \\
+  \mathbf{X}'' = \mathbf{A} & = \alpha \sinh \frac{\alpha \tau}{c} \, \mathbf{E}_0 + \alpha \cosh \left( \frac{\alpha \tau}{c} \right) \, \mathbf{E}_1 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Orthogonality \(\mathbf{U} \cdot \mathbf{A} = 0\) immediately follows from \(\mathbf{E}_0 \cdot \mathbf{E}_0 = 1\), \(\mathbf{E}_1 \cdot \mathbf{E} = -1\). Constant magnitude of proper acceleration follows from the identity \(\cosh^2 x - \sinh^2 x = 1\).
+
 \sphinxAtStartPar
 Choosing \(x_{P0} = \frac{c^2}{\alpha_p}\), this simplifies to:
 \begin{equation*}
@@ -1513,101 +1563,106 @@ Choosing \(x_{P0} = \frac{c^2}{\alpha_p}\), this simplifies to:
 
 
 \section{Construction of the Accelerated Observer Frame \& Rindler Coordinates}
-\label{\detokenize{ch/relativity-special/rindler:construction-of-the-accelerated-observer-frame-rindler-coordinates}}
+\label{\detokenize{ch/relativity-special/rindler:construction-of-the-accelerated-observer-frame-rindler-coordinates}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-construction}}
 \sphinxAtStartPar
 An accelerated observer \(P\) builds a local coordinate system using:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Proper time standard (\(\tau\)):} Measuring time along their worldline using their own clock.
+\sphinxstylestrong{Proper time standard (\(\tau\))}, measuring time along their worldline using their own clock.
 
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Orthogonal local frame:} Constructing an instantaneous rest frame basis \(\{\underline{e}_0(\tau), \underline{e}_1(\tau)\}\):
+\sphinxstylestrong{Orthogonal local frame}, constructing an instantaneous rest frame basis \(\{\mathbf{e}_0(\tau), \mathbf{e}_1(\tau)\}\):
 \begin{equation*}
-\begin{split}\underline{e}_0(\tau) = \frac{\underline{U}}{c} = \cosh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \sinh\left(\frac{g \tau}{c}\right) \underline{E}_1\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\underline{e}_1(\tau) = \sinh\left(\frac{g \tau}{c}\right) \underline{E}_0 + \cosh\left(\frac{g \tau}{c}\right) \underline{E}_1\end{split}
+\begin{split}\begin{aligned}
+   \mathbf{e}_0(\tau) & = \frac{\mathbf{U}}{c} = \cosh\left(\frac{g \tau}{c}\right) \mathbf{E}_0 + \sinh\left(\frac{g \tau}{c}\right) \mathbf{E}_1$$ \\
+   \mathbf{e}_1(\tau) & = \sinh\left(\frac{g \tau}{c}\right) \mathbf{E}_0 + \cosh\left(\frac{g \tau}{c}\right) \mathbf{E}_1 \ ,
+   \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-where \(g = \alpha_p\). Note that \(\underline{e}_0 \cdot \underline{e}_0 = 1\), \(\underline{e}_1 \cdot \underline{e}_1 = -1\), and \(\underline{e}_0 \cdot \underline{e}_1 = 0\).
+here with \(g = \alpha_P\). This orthogonal local frame is locally Minkowski, i.e. \(\mathbf{e}_0 \cdot \mathbf{e}_0 = 1\), \(\mathbf{e}_1 \cdot \mathbf{e}_1 = -1\), and \(\mathbf{e}_0 \cdot \mathbf{e}_1 = 0\).
 
 \end{enumerate}
 
 
-\subsection{Coordinate Assignment for Event \protect\(Q\protect\)}
-\label{\detokenize{ch/relativity-special/rindler:coordinate-assignment-for-event-q}}
+\subsection{Generic event \protect\(Q\protect\)}
+\label{\detokenize{ch/relativity-special/rindler:generic-event-q}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-construction-generic-event}}
 \sphinxAtStartPar
-An event \(Q\) at spatial distance \(z\) along the observer’s instantaneous spatial axis \(\underline{e}_1(\tau)\) has the spacetime position:
+An event \(Q\) at spatial distance \(z\) along the observer’s instantaneous spatial axis \(\mathbf{e}_1(\tau)\) has the spacetime position:
 \begin{equation*}
-\begin{split}\underline{X}_Q(\tau, z) = \underline{X}_P(\tau) + z \, \underline{e}_1(\tau)\end{split}
+\begin{split}\mathbf{X}_Q(\tau, z) = \mathbf{X}_P(\tau) + z \, \mathbf{e}_1(\tau)\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Expanding in the Minkowski background frame \(\{\underline{E}_0, \underline{E}_1\}\):
-\begin{equation*}
-\begin{split}\underline{X}_Q = \underline{E}_0 \left( \frac{c^2}{g} \sinh\frac{g\tau}{c} + z \sinh\frac{g\tau}{c} \right) + \underline{E}_1 \left( \frac{c^2}{g} \cosh\frac{g\tau}{c} + z \cosh\frac{g\tau}{c} \right)\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\underline{X}_Q = \left( \frac{c^2}{g} + z \right) \sinh\left(\frac{g\tau}{c}\right) \underline{E}_0 + \left( \frac{c^2}{g} + z \right) \cosh\left(\frac{g\tau}{c}\right) \underline{E}_1\end{split}
-\end{equation*}
+or using the inertial reference frame \(\{\mathbf{E}_0, \mathbf{E}_1\}\):
+\begin{equation}\label{equation:ch/relativity-special/rindler:eq:rindler:generic-events}
+\begin{split}\begin{aligned}
+  \mathbf{X}_Q
+  & = \mathbf{E}_0 \left( \frac{c^2}{g} \sinh\frac{g\tau}{c} + z \sinh\frac{g\tau}{c} \right) + \mathbf{E}_1 \left( \frac{c^2}{g} \cosh\frac{g\tau}{c} + z \cosh\frac{g\tau}{c} \right) = \\
+  & = \left( \frac{c^2}{g} + z \right) \sinh\left(\frac{g\tau}{c}\right) \mathbf{E}_0 + \left( \frac{c^2}{g} + z \right) \cosh\left(\frac{g\tau}{c}\right) \mathbf{E}_1 = \\
+  & = ct_Q \mathbf{E}_0 + x_Q \mathbf{E}_1 \ .
+\end{aligned}\end{split}
+\end{equation}
 
-\subsection{Definition of Rindler Coordinates \protect\((\eta, \bar{\xi})\protect\)}
-\label{\detokenize{ch/relativity-special/rindler:definition-of-rindler-coordinates-eta-bar-xi}}
+\subsection{Definition of Rindler Coordinates \protect\((\eta, \xi)\protect\)}
+\label{\detokenize{ch/relativity-special/rindler:definition-of-rindler-coordinates-eta-xi}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-construction-rindler-coords-def}}
 \sphinxAtStartPar
-Define the transformed coordinates:
+The definition of the set of coordinates \(( \eta, \xi )\),
+\begin{equation}\label{equation:ch/relativity-special/rindler:eq:rindler:def}
+\begin{split}\xi = \frac{c^2}{g} + z, \quad \eta = \frac{g \tau}{c} \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+and the expression \eqref{equation:ch/relativity-special/rindler:eq:rindler:generic-events} of the generic evnet \(Q\), maps the orthogonal coordinates of the inertial reference frame \((ct, x)\) to Rindler coordinates \((\eta, \xi)\):
 \begin{equation*}
-\begin{split}\bar{\xi} = \frac{c^2}{g} + z, \quad \eta = \frac{g \tau}{c}\end{split}
+\begin{split}\begin{cases} c t = \xi \sinh \eta \\ x = \xi \cosh \eta \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-This maps Minkowski coordinates \((ct, x)\) to Rindler coordinates \((\eta, \bar{\xi})\):
-\begin{equation*}
-\begin{split}\begin{cases} c t = \bar{\xi} \sinh \eta \\ x = \bar{\xi} \cosh \eta \end{cases}\end{split}
-\end{equation*}
+Curves of \sphinxstylestrong{constant coordinate} \(\xi = \xi_k\) are \sphinxstylestrong{hyperbolas} in the coordinates \((ct, x)\) of the inertial reference frame, \(x^2 - c^2 t^2 = \xi_k^2\), and are the trajectories of observers maintaining constant acceleration \(\alpha = c^2 / \xi_k\), with initial 4\sphinxhyphen{}position \(\mathbf{X}_0 = \xi \mathbf{E}_1\), and 4\sphinxhyphen{}velocity \(\mathbf{U}_0 = c \mathbf{E}_0\).
+
 \sphinxAtStartPar
-Curves of constant spatial coordinate \(\bar{\xi} = \bar{\xi}_k\) represent hyperbolas (\(x^2 - c^2 t^2 = \bar{\xi}_k^2\)) corresponding to observers maintaining constant acceleration \(\alpha = c^2 / \bar{\xi}_k\).
+Curves with \sphinxstylestrong{constant coordinate} \(\eta\) are straight lines using the coordinates \((ct, x)\), \(x = \frac{c t}{\tanh \eta}\). As \(\tanh\eta \in [-1, 1]\), Rindler coordinates can only describe the right\sphinxhyphen{}most region of the \((ct,x)\) plane between the two \sphinxstylestrong{horizons} \(x = ct\), and \(x  = -ct\). (or can they also describe the left\sphinxhyphen{}most region? Anyways, they can’t describe the upper and lower regions).
 
 
-\bigskip\hrule\bigskip
-
-
-
-\section{Metric Tensor in Rindler Coordinates}
-\label{\detokenize{ch/relativity-special/rindler:metric-tensor-in-rindler-coordinates}}
+\section{Metric tensor in Rindler coordinates}
+\label{\detokenize{ch/relativity-special/rindler:metric-tensor-in-rindler-coordinates}}\label{\detokenize{ch/relativity-special/rindler:relativity-special-rindler-construction-metric-tensor}}
 \sphinxAtStartPar
 Differentials of the coordinate transformation are given by:
 \begin{equation*}
-\begin{split}c dt = \cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}dx = \sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta\end{split}
+\begin{split}\left\{ \begin{aligned}
+  c dt & = \cosh\eta \, d\xi + \xi \sinh\eta \, d\eta \\
+  dx   & = \sinh\eta \, d\xi + \xi \cosh\eta \, d\eta \\
+\end{aligned}\right.\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Substituting these into the flat Minkowski line element \(ds^2 = c^2 dt^2 - dx^2\):
 \begin{equation*}
-\begin{split}ds^2 = (\cosh\eta \, d\bar{\xi} + \bar{\xi} \sinh\eta \, d\eta)^2 - (\sinh\eta \, d\bar{\xi} + \bar{\xi} \cosh\eta \, d\eta)^2\end{split}
+\begin{split}ds^2 = (\cosh\eta \, d\xi + \xi \sinh\eta \, d\eta)^2 - (\sinh\eta \, d\xi + \xi \cosh\eta \, d\eta)^2\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}ds^2 = \bar{\xi}^2 d\eta^2 - d\bar{\xi}^2\end{split}
+\begin{split}ds^2 = \xi^2 d\eta^2 - d\xi^2\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Alternatively, writing the metric in terms of proper time \(\tau\) and local spatial coordinate \(z\):
+Alternatively, writing the metric in terms of proper time \(\tau\) and local spatial coordinate \(z\), using the relations \eqref{equation:ch/relativity-special/rindler:eq:rindler:def}, the worldline element becomes
 \begin{equation*}
-\begin{split}ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2\end{split}
+\begin{split}ds^2 = \left(1 + \frac{gz}{c^2}\right)^2 c^2 d\tau^2 - dz^2 \ .\end{split}
 \end{equation*}
 
 \subsection{Natural Basis Vectors and Dual Metric Components}
-\label{\detokenize{ch/relativity-special/rindler:natural-basis-vectors-and-dual-metric-components}}
+\label{\detokenize{ch/relativity-special/rindler:natural-basis-vectors-and-dual-metric-components}}\label{\detokenize{ch/relativity-special/rindler:id1}}
 \sphinxAtStartPar
-The natural basis vectors \(\underline{b}_\eta = \partial_\eta \underline{X}\) and \(\underline{b}_{\bar{\xi}} = \partial_{\bar{\xi}} \underline{X}\) are:
+The natural basis vectors \(\mathbf{b}_\eta = \partial_\eta \mathbf{X}\) and \(\mathbf{b}_{\xi} = \partial_{\xi} \mathbf{X}\) are:
 \begin{equation*}
-\begin{split}\underline{b}_\eta = \bar{\xi} \cosh\eta \, \underline{E}_0 + \bar{\xi} \sinh\eta \, \underline{E}_1\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\underline{b}_{\bar{\xi}} = \sinh\eta \, \underline{E}_0 + \cosh\eta \, \underline{E}_1\end{split}
+\begin{split}\begin{aligned}
+  \mathbf{b}_\eta  & = \xi \cosh\eta \, \mathbf{E}_0 + \xi \sinh\eta \, \mathbf{E}_1 \\
+  \mathbf{b}_{\xi} & = \sinh\eta \, \mathbf{E}_0 + \cosh\eta \, \mathbf{E}_1 \\
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-The metric components \(g_{\mu\nu} = \underline{b}_\mu \cdot \underline{b}_\nu\) are:
+The metric components \(g_{\mu\nu} = \mathbf{b}_\mu \cdot \mathbf{b}_\nu\) are:
 \begin{equation*}
-\begin{split}g_{\eta\eta} = \bar{\xi}^2, \quad g_{\bar{\xi}\bar{\xi}} = -1, \quad g_{\eta\bar{\xi}} = 0\end{split}
+\begin{split}g_{\eta\eta} = \xi^2, \quad g_{\xi\xi} = -1, \quad g_{\eta\xi} = 0\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}\mathbf{g} = \begin{pmatrix} \bar{\xi}^2 & 0 \\ 0 & -1 \end{pmatrix}, \quad \mathbf{g}^{-1} = \begin{pmatrix} \frac{1}{\bar{\xi}^2} & 0 \\ 0 & -1 \end{pmatrix}\end{split}
+\begin{split}\mathbf{g} = \begin{pmatrix} \xi^2 & 0 \\ 0 & -1 \end{pmatrix}, \quad \mathbf{g}^{-1} = \begin{pmatrix} \frac{1}{\xi^2} & 0 \\ 0 & -1 \end{pmatrix}\end{split}
 \end{equation*}
 
 \bigskip\hrule\bigskip
@@ -1620,40 +1675,49 @@ The metric components \(g_{\mu\nu} = \underline{b}_\mu \cdot \underline{b}_\nu\)
 \subsection{Derivatives of Basis Vectors}
 \label{\detokenize{ch/relativity-special/rindler:derivatives-of-basis-vectors}}
 \sphinxAtStartPar
-Calculating derivatives of the natural basis vectors with respect to coordinates \((\bar{\xi}, \eta)\):
+Calculating derivatives of the natural basis vectors with respect to coordinates \((\xi, \eta)\):
 \begin{equation*}
-\begin{split}\partial_{\bar{\xi}} \underline{b}_{\bar{\xi}} = 0\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\partial_\eta \underline{b}_{\bar{\xi}} = \cosh\eta \, \underline{E}_0 + \sinh\eta \, \underline{E}_1 = \frac{1}{\bar{\xi}} \underline{b}_\eta\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\partial_\eta \underline{b}_\eta = \bar{\xi} \sinh\eta \, \underline{E}_0 + \bar{\xi} \cosh\eta \, \underline{E}_1 = \bar{\xi} \, \underline{b}_{\bar{\xi}}\end{split}
+\begin{split}\begin{aligned}
+  \partial_{\xi} \mathbf{b}_{\xi} & = 0 \\
+  \partial_\eta  \mathbf{b}_{\xi} & = \cosh\eta \, \mathbf{E}_0 + \sinh\eta \, \mathbf{E}_1 = \frac{1}{\xi} \mathbf{b}_\eta \\
+  \partial_\eta  \mathbf{b}_\eta  & = \xi \sinh\eta \, \mathbf{E}_0 + \xi \cosh\eta \, \mathbf{E}_1 = \xi \, \mathbf{b}_{\xi} \\
+\end{aligned}\end{split}
 \end{equation*}
 
 \subsection{Non\sphinxhyphen{}Zero Christoffel Symbols}
 \label{\detokenize{ch/relativity-special/rindler:non-zero-christoffel-symbols}}
 \sphinxAtStartPar
-From \(\partial_\mu \underline{b}_\nu = \Gamma^\lambda_{\mu\nu} \underline{b}_\lambda\), the non\sphinxhyphen{}zero Christoffel symbols are:
+From \(\partial_\mu \mathbf{b}_\nu = \Gamma^\lambda_{\mu\nu} \mathbf{b}_\lambda\), the non\sphinxhyphen{}zero Christoffel symbols are:
 \begin{equation*}
-\begin{split}\Gamma^\eta_{\eta \bar{\xi}} = \Gamma^\eta_{\bar{\xi} \eta} = \frac{1}{\bar{\xi}}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\Gamma^{\bar{\xi}}_{\eta\eta} = \bar{\xi}\end{split}
+\begin{split}\begin{aligned}
+  \Gamma^\eta_{\eta \xi} = \Gamma^\eta_{\xi \eta} = \frac{1}{\xi} \\
+  \Gamma^{\xi}_{\eta\eta} = \xi \\
+\end{aligned}\end{split}
 \end{equation*}
 
 \subsection{Curvature (Zero Riemann Tensor)}
 \label{\detokenize{ch/relativity-special/rindler:curvature-zero-riemann-tensor}}
 \sphinxAtStartPar
-Calculating the Riemann curvature tensor components using \(R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}\):
+Using Rindler coordinates, the Riemann tensor of the flat spacetime is still zero \(R^{\rho}_{\ \ \sigma \mu \nu} = 0\).
+\subsubsection*{Details}
+
+\sphinxAtStartPar
+Calculating the Riemann curvature tensor components using
 \begin{equation*}
-\begin{split}R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \partial_{\bar{\xi}}\Gamma^{\bar{\xi}}_{\eta\eta} - \partial_\eta \Gamma^{\bar{\xi}}_{\bar{\xi}\eta} + \Gamma^{\bar{\xi}}_{\bar{\xi}\lambda}\Gamma^\lambda_{\eta\eta} - \Gamma^{\bar{\xi}}_{\eta\lambda}\Gamma^\lambda_{\bar{\xi}\eta}\end{split}
+\begin{split}R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho{}_{\nu\sigma} - \partial_\nu \Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+gives
+\begin{equation*}
+\begin{split}R^{\xi}{}_{\eta\xi\eta} = \partial_{\xi}\Gamma^{\xi}_{\eta\eta} - \partial_\eta \Gamma^{\xi}_{\xi\eta} + \Gamma^{\xi}_{\xi\lambda}\Gamma^\lambda_{\eta\eta} - \Gamma^{\xi}_{\eta\lambda}\Gamma^\lambda_{\xi\eta}\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}R^{\bar{\xi}}{}_{\eta\bar{\xi}\eta} = \frac{\partial}{\partial\bar{\xi}}(\bar{\xi}) - 0 + 0 - \left(\Gamma^{\bar{\xi}}_{\eta\eta}\Gamma^\eta_{\bar{\xi}\eta}\right) = 1 - \left(\bar{\xi} \cdot \frac{1}{\bar{\xi}}\right) = 0\end{split}
+\begin{split}R^{\xi}{}_{\eta\xi\eta} = \frac{\partial}{\partial\xi}(\xi) - 0 + 0 - \left(\Gamma^{\xi}_{\eta\eta}\Gamma^\eta_{\xi\eta}\right) = 1 - \left(\xi \cdot \frac{1}{\xi}\right) = 0\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Thus, all components of the Riemann tensor vanish (\(R^\rho{}_{\sigma\mu\nu} = 0\)), confirming that the Rindler frame describes \sphinxstylestrong{flat spacetime} in non\sphinxhyphen{}inertial coordinates.
 
-
-\bigskip\hrule\bigskip
-
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Justify the reason why all the other components are not evaluated
 
 
 \section{Geodesics in Rindler Coordinates}
@@ -1665,9 +1729,9 @@ The geodesic equations are given by:
 \end{equation*}
 \sphinxAtStartPar
 where dots denote derivatives with respect to an affine parameter (e.g., proper time \(s\)).
-Writing explicit components for \(\bar{\xi}\) and \(\eta\):
+Writing explicit components for \(\xi\) and \(\eta\):
 \begin{equation*}
-\begin{split}\begin{cases} \ddot{\bar{\xi}} + \Gamma^{\bar{\xi}}_{\eta\eta} \dot{\eta}^2 = 0 \implies \ddot{\bar{\xi}} + \bar{\xi} \dot{\eta}^2 = 0 \\ \ddot{\eta} + 2 \Gamma^\eta_{\bar{\xi}\eta} \dot{\bar{\xi}}\dot{\eta} = 0 \implies \ddot{\eta} + \frac{2}{\bar{\xi}} \dot{\bar{\xi}}\dot{\eta} = 0 \end{cases}\end{split}
+\begin{split}\begin{cases} \ddot{\xi} + \Gamma^{\xi}_{\eta\eta} \dot{\eta}^2 = 0 \implies \ddot{\xi} + \xi \dot{\eta}^2 = 0 \\ \ddot{\eta} + 2 \Gamma^\eta_{\xi\eta} \dot{\xi}\dot{\eta} = 0 \implies \ddot{\eta} + \frac{2}{\xi} \dot{\xi}\dot{\eta} = 0 \end{cases}\end{split}
 \end{equation*}
 
 \bigskip\hrule\bigskip
@@ -1684,7 +1748,7 @@ For low speeds (\(v \ll c\)) and small spatial extents around the observer line 
 \sphinxAtStartPar
 \sphinxstylestrong{Coordinate expansion:}
 \begin{equation*}
-\begin{split}\bar{\xi} = \frac{c^2}{g} + z \implies 1 + \frac{gz}{c^2} \approx 1\end{split}
+\begin{split}\xi = \frac{c^2}{g} + z \implies 1 + \frac{gz}{c^2} \approx 1\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\tau = \frac{c}{g} \eta \implies \eta \ll 1\end{split}
 \end{equation*}
@@ -1702,7 +1766,7 @@ Matching with the weak static field limit metric \(g_{00} = 1 + \frac{2\Phi}{c^2
 \item {} 
 \sphinxAtStartPar
 \sphinxstylestrong{Geodesic / Acceleration Equation:}
-Substituting \(\bar{\xi} = \frac{c^2}{g} + z\) into the spatial geodesic equation with \(\dot{\eta} \approx \frac{g}{c} \dot{t}\):
+Substituting \(\xi = \frac{c^2}{g} + z\) into the spatial geodesic equation with \(\dot{\eta} \approx \frac{g}{c} \dot{t}\):
 \begin{equation*}
 \begin{split}\ddot{z} + \left(\frac{c^2}{g} + z\right) \left(\frac{g}{c}\right)^2 = 0 \implies \ddot{z} + g + \frac{g^2 z}{c^2} = 0\end{split}
 \end{equation*}
@@ -1725,7 +1789,66 @@ This recovers the expected non\sphinxhyphen{}relativistic inertial force (appare
 
 
 \chapter{General Relativity}
-\label{\detokenize{ch/relativity-general/intro:general-relativity}}\label{\detokenize{ch/relativity-general/intro:relativity-general-intro}}\label{\detokenize{ch/relativity-general/intro::doc}}
+\label{\detokenize{ch/relativity-general/intro:general-relativity}}\label{\detokenize{ch/relativity-general/intro:relativity-general-intro}}\label{\detokenize{ch/relativity-general/intro::doc}}\subsubsection*{Draft of the introduction}
+
+\sphinxAtStartPar
+\sphinxstylestrong{What’s general relativity?} A geometric theory of gravitation: gravitation is an evidence of bending of spacetime.
+
+\begin{sphinxadmonition}{note}{GR in summary}
+
+\sphinxAtStartPar
+GR can be viewed as a geometric theory of gravitation, describing the coupling between mass\sphinxhyphen{}energy and spacetime:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+how mass (and energy\sphinxhyphen{}momentum in general) deforms the spacetime, summarized in {\hyperref[\detokenize{ch/relativity-general/einstein-equation:relativity-general-notes-einstein-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{Einstein field equations}}}}
+
+\item {} 
+\sphinxAtStartPar
+how bodies and radiation (both massive and mass\sphinxhyphen{}less entities) move in a non\sphinxhyphen{}flat spacetime, along {\hyperref[\detokenize{ch/relativity-general/geodesics:general-relativity-geodesics}]{\sphinxcrossref{\DUrole{std,std-ref}{geodesics}}}}
+
+\end{itemize}
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{What’s not ok with Newton gravitation model?} From the mathematical point of view, Newton gravitation is modeled as an instantaneous action at distance, and this is incompatible with the principles of special relativity: no information can travel in space faster than the speed of light \(c\) in vacuum \sphinxhyphen{} or, there’s a finite maximum velocity of information through space.
+
+\begin{sphinxadmonition}{note}{Instantaneous action at distance in classical mechanics}
+
+\sphinxAtStartPar
+In classical mechanics,%
+\begin{footnote}[1]\sphinxAtStartFootnote
+\sphinxhref{https://basics2022.github.io/bbooks-physics-mechanics/ch/actions-examples.html?highlight=gravitation\#gravitation}{Basics: Classical Mechanics: Gravitation in classical mechanics}.
+%
+\end{footnote} the force at distance can be written as the spatial gradient of the gravitational potential \(\phi(\vec{r}, t)\), governed by Poisson equation
+\begin{equation*}
+\begin{split}-\nabla^2 \phi(\vec{r},t) = 4 \pi G \rho( \vec{r}, t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(G\) the universal constant of gravitation, and \(\rho( \vec{r}, t)\) the mass density in space. This equation, and the resulting gravitational force acting on a point mass \(P\) with mass \(m_P\), \(\vec{F}_P(t) = m_P \nabla \phi( \vec{r}_P, t)\) shows no time delay between the causes and the effects, being everything at time \(t\). The absence of a time differential operator or a time delay \sphinxhyphen{} and the presence of the Laplacian operator \sphinxhyphen{} is the mathematical manifestation of instantaneouos action at distance: a change in \(\rho(\vec{r},t)\) in \(\vec{r}_0\) causes an immediate change in \(\phi(\vec{r},t)\) in all the points of the domain, and it’s measurable at least in a neighborhood of th point \(\vec{r}_0\).
+
+\sphinxAtStartPar
+GR model: the geometric counterpart of the gravitational potential is forced by  mass\sphinxhyphen{}energy\sphinxhyphen{}momentum (tensor). The equations must not contain any instantaneous action at distance, and must be compatible with the principles of special relativity. This can be observed in the {\hyperref[\detokenize{ch/relativity-general/linearized-efe:relativity-general-notes-einstein-equation-linearization}]{\sphinxcrossref{\DUrole{std,std-ref}{linearized Einstein field equation}}}}, a wave function for the perturbation of the metric tensor, forced by perturbation in the mass\sphinxhyphen{}energy\sphinxhyphen{}momentum tensor, with the light speed \(c\) as the characteristic speed.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{What Newton gravitation can’t model accurately?} The first experimental verifications of GR were an accurate description of the bending of a light ray around a massive object (Eddington, 1919), the precession of the perihelion of Mercury. Other experimental tests followed: the effect of gravitation on proper\sphinxhyphen{}time, the existence of black holes, the existence of gravitational waves,…, \sphinxstyleemphasis{cosmology},…
+
+\sphinxAtStartPar
+\sphinxstylestrong{Einstein thought experiments.}%
+\begin{footnote}[2]\sphinxAtStartFootnote
+\sphinxhref{https://en.wikipedia.org/wiki/Einstein\%27s\_thought\_experiments}{List of some Einstein thought experiments on Wikipedia}.
+%
+\end{footnote}%
+\begin{footnote}[3]\sphinxAtStartFootnote
+\sphinxhref{https://basics2022.github.io/bbooks-physics-mechanics/ch/dynamics-equivalence-principle.html}{Equivalence principle in classical mechanics}. Short discussion about elevator thought experiment and free fall in a gravitational field as the natural state of motion (indistinguishible from uniform linear motion w.r.t. an inertial reference frame).
+%
+\end{footnote}
+
+
+\bigskip\hrule\bigskip
+
+
 \sphinxstepscope
 
 
@@ -1808,10 +1931,10 @@ Let \(\mathbf{X}(q^k)\) a parametrization of points in a \(n\)\sphinxhyphen{}dim
 and thus \(\partial_k \mathbf{b}^m = - \Gamma_{kl}^{m} \mathbf{b}^l\).
 
 \sphinxAtStartPar
-\sphinxstylestrong{Derivatives of the metric tensor.} Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it’s easy to prove
-\begin{equation*}
+\sphinxstylestrong{Derivatives of the metric tensor \sphinxhyphen{} metric  compatibility.} Using the definition of the covariant components of the metric tensor and the derivatives of the vectors of the natural basis, it’s easy to prove
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:metric-compatibility}
 \begin{split}\partial_c g_{ab} = \Gamma_{ac}^{d} g_{db} + \Gamma_{bc}^{d} g_{ad}\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 Using the property \(g_{ab} g^{bc} = \delta_{a^c}\), from its derivatives \(\partial_d\),
 \begin{equation*}
@@ -1944,11 +2067,10 @@ Ricci’s tensor is defined as the contraction of the first and third indices of
 \subsubsection{Properties}
 \label{\detokenize{ch/relativity-general/differential-geometry:properties}}\label{\detokenize{ch/relativity-general/differential-geometry:relativity-general-notes-differential-geometry-curvature-tensor-properties}}\begin{itemize}
 \item {} 
-\sphinxAtStartPar
-\(R_{abcd} = - R_{abdc}\)
-
 \end{itemize}
-\subsubsection*{Proof}
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:1}
+\begin{split}R_{abcd} = - R_{abdc}\end{split}
+\end{equation}\subsubsection*{Proof}
 
 \sphinxAtStartPar
 By direct inspection of the expression of the components of the curvature tensor,
@@ -1959,31 +2081,67 @@ By direct inspection of the expression of the components of the curvature tensor
 and the symmetry of the Christoffel symbols, \(\Gamma_{ab}^c = \Gamma_{ba}^c\).
 \begin{itemize}
 \item {} 
-\sphinxAtStartPar
-\(R_{abcd} = - R_{bacd}\)
-
-\item {} 
-\sphinxAtStartPar
-\(R_{abcd} + R_{acdb} + R_{adbc} = 0\)
-
-\item {} 
-\sphinxAtStartPar
-\(R_{abcd} = R_{cdab}\)
-
-\item {} 
-\sphinxAtStartPar
-\(R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0\) (Second Bianchi identity)
-
 \end{itemize}
-\subsubsection*{Proof}
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:2}
+\begin{split} R_{abcd} = - R_{bacd}\end{split}
+\end{equation}\subsubsection*{Proof}
+
+\sphinxAtStartPar
+Let’s derive a useful result first, and then use it to prove the desired identity. Differentiating the metric compatibility \eqref{equation:ch/relativity-general/differential-geometry:eq:metric-compatibility}, \(\partial_{\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\sigma \mu} g_{\xi \nu} + \Gamma^{\xi}_{\sigma \nu} g_{\xi \mu}\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  R_{\phi \sigma \eta \nu; \chi} 
-  & = \left( g_{\phi \xi} R^{\xi}_{\ \ \sigma \eta \nu} \right)_{;\chi} = \\
-  & = g_{\phi \xi} \left( \partial_{\eta} \Gamma_{\sigma \nu}^{\xi} - \partial_{\nu} \Gamma_{\eta \sigma}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \eta}^{\xi} - \Gamma_{\eta \sigma}^{\mu} \Gamma_{\mu \nu}^{\xi}\right)_{; \chi} = \\
-  & = 
+  \partial_{\chi \sigma} g_{\mu \nu}
+  & = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\nu \xi} + \Gamma^{\xi}_{\sigma \mu} \partial_{\chi} g_{\mu \xi} = && \text{(1)} \\
+  & = g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
+    - \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ ,
 \end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+having introduced the metric compatibility in \((1)\). Thus,
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop2:dim:1}
+\begin{split}
+g_{\nu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu} + g_{\mu \xi} \partial_{\chi} \Gamma^{\xi}_{\sigma \mu}
+= \partial_{\chi \sigma} g_{\mu \nu}
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \nu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \nu} \right)
++ \Gamma^{\xi}_{\sigma \mu} \left( \Gamma_{\chi \mu}^{\phi} g_{\phi \xi} + \Gamma_{\chi \xi}^{\phi} g_{\phi \mu} \right) \ .
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+This latter result is used to prove the desired identity,
+\begin{equation*}
+\begin{split}\begin{aligned}
+R_{\rho \sigma \mu \nu} + R_{\sigma \rho \mu \nu} 
+& = g_{\rho \lambda} R^{\lambda}_{\ \ \sigma \mu \nu} + g_{\sigma \lambda} R^{\lambda}_{\ \ \rho \mu \nu} = \\
+& = g_{\rho   \lambda} \left[ \partial_{\mu} \Gamma_{\sigma \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \sigma}^{\lambda} + \Gamma_{\sigma \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \sigma}^{\phi} \Gamma_{\phi \nu}^{\lambda} \right] + \\
+& + g_{\sigma \lambda} \left[ \partial_{\mu} \Gamma_{\rho   \nu}^{\lambda} - \partial_{\nu} \Gamma_{\mu \rho  }^{\lambda} + \Gamma_{\rho   \nu}^{\phi} \Gamma_{\phi \mu}^{\lambda} - \Gamma_{\mu \rho  }^{\phi} \Gamma_{\phi \nu}^{\lambda}  \right] = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+just replacing the contributions \(g_{\rho \lambda} \partial_{\mu} \Gamma^{\lambda}_{\sigma \nu} + g_{\sigma \lambda} \partial_{\mu} \Gamma^{\lambda}_{\mu \rho}\), and \(g_{\rho \lambda} \partial_{\nu} \Gamma^{\lambda}_{\sigma \mu} + g_{\sigma \lambda} \partial_{\nu} \Gamma^{\lambda}_{\mu \rho}\) with the corresponding expressions using \eqref{equation:ch/relativity-general/differential-geometry:eq:riemann:prop2:dim:1}, and cancelling all the contributions, including the mixed second\sphinxhyphen{}order partial derivatives, \(\partial_{\mu \nu} g_{\rho \sigma} - \partial_{\nu \mu} g_{\rho \sigma}\). \(\blacksquare\)
+\begin{itemize}
+\item {} 
+\end{itemize}
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:3}
+\begin{split}R_{abcd} + R_{acdb} + R_{adbc} = 0\end{split}
+\end{equation}\begin{itemize}
+\item {} 
+\end{itemize}
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:4}
+\begin{split}R_{abcd} = R_{cdab}\end{split}
+\end{equation}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Second Bianchi identity
+\begin{equation}\label{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:5}
+\begin{split}R_{abcd;e} + R_{abde;c} + R_{abec;d} = 0\end{split}
+\end{equation}
+\end{itemize}
+\subsubsection*{Proof}
+
+
+
 \sphinxAtStartPar
 \sphinxstylestrong{todo}
 
@@ -1994,21 +2152,12 @@ and the symmetry of the Christoffel symbols, \(\Gamma_{ab}^c = \Gamma_{ba}^c\).
   \nabla_{\mu} R^{\mu}_{\ \ \nu} = \frac{1}{2} \nabla_{\nu} R \ .
 \end{split}
 \end{equation*}\subsubsection*{Proof}
-\begin{equation*}
-\begin{split}\begin{aligned}
-  R_{\sigma \nu}
-  = R^{\xi}_{\ \ \sigma \xi \nu} 
-  = \partial_{\xi} \Gamma_{\sigma \nu}^{\xi} - \partial_{\sigma} \Gamma_{\xi \nu}^{\xi} + \Gamma_{\sigma \nu}^{\mu} \Gamma_{\mu \xi}^{\xi} - \Gamma_{\xi \nu}^{\mu} \Gamma_{\mu \sigma}^{\xi} 
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}R^{\mu}_{\ \ \nu} = g^{\mu \sigma} R_{\sigma \nu}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \nabla_{\mu} R^{\mu}_{\ \ \nu}
-  & = \partial_\mu R^{\mu}_{\ \ \nu} + \Gamma_{\mu \sigma}^{\mu} R^{\sigma}_{\ \ \nu} - \Gamma_{\sigma \nu}^{\mu} R^{\sigma}_{\ \ \mu} = \\
-  & = \\ 
-\end{aligned}\end{split}
-\end{equation*}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+
+
+
 \sphinxstepscope
 
 
@@ -2331,6 +2480,9 @@ Prescribing harmonic gauge condition (de Donder), \(\partial_{\xi} \overline{h}^
 \section{Local inertial reference frame and equivalence principle}
 \label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-inertial-reference-frame-and-equivalence-principle}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle::doc}}
 \sphinxAtStartPar
+See also \sphinxhref{https://basics2022.github.io/bbooks-physics-mechanics/ch/dynamics-equivalence-principle.html}{\sphinxstylestrong{equivalence principle in classical mechanics}}.
+
+\sphinxAtStartPar
 \sphinxstylestrong{Goal.} Starting from \sphinxstyleemphasis{generic} coordinates \(q^\mu\) on spacetime, build coordinates \(x^\alpha\) around an event \(P\) in which the metric is Minkowskian up to second\sphinxhyphen{}order terms. Then show:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
@@ -2355,10 +2507,9 @@ This is the mathematical content of the \sphinxstylestrong{equivalence principle
 
 \sphinxAtStartPar
 \sphinxstylestrong{Conventions.} Signature \(\eta_{\alpha\beta}=\mathrm{diag}(+1,-1,-1,-1)\), so \(c^2\,d\tau^2=d\mathbf X\cdot d\mathbf X\). Nothing below depends on the signature. Riemann tensor:
-
-\sphinxAtStartPar
-\(R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\).
-\end{sphinxadmonition}
+\begin{equation*}
+\begin{split}R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\ .\end{split}
+\end{equation*}\end{sphinxadmonition}
 
 
 \subsection{Setting and notation}
@@ -2392,55 +2543,38 @@ It is symmetric in \(\mu\nu\) because \(\partial_\mu\mathbf b_\nu=\partial_\nu\m
 
 
 
-\subsection{Local vector basis}
-\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-vector-basis}}
+\subsection{Local vector basis \sphinxhyphen{} first order terms of local coordinates}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-vector-basis-first-order-terms-of-local-coordinates}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame-local-basis}}
 \sphinxAtStartPar
-Definition of a local basis \(\mathbf{e}_{\mu}\), s.t. \(\mathbf{e}_{\mu} \cdot \mathbf{e}_{\nu} = \eta_{\mu \nu}\).
-
-\sphinxAtStartPar
-…
-
-\sphinxAtStartPar
-Transformation of coordinates
-
-\sphinxAtStartPar
-…
-
-
-\subsection{Local set of coordinates}
-\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-set-of-coordinates}}
-\sphinxAtStartPar
-Let the vectors \(\mathbf{e}_{\mu}\) of the local basis the derivatives of the events of the spacetime w.r.t. a set of local coordinates \(\{ x^\mu \}_{\mu=0:3}\), identifying the event \(P\) with \(x^{\mu}_P = 0\)
+\sphinxstylestrong{Transformation of basis vectors.} As \(\mathbf{e}_{\alpha}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial x^\alpha}\right|_{x^\beta = 0}\), and \(\mathbf{b}_{\mu}|_P = \left.\tfrac{\partial \mathbf{X}}{\partial q^\mu}\right|_{q^{\nu}=q^{\nu}_P}\), using the rule of differentiation of composite functions on \(\mathbf{X}(x^\alpha(q^\mu))\)
 \begin{equation*}
-\begin{split}\mathbf{e}_{\mu} = \left.\frac{\partial \mathbf{X}}{\partial x^{\mu}}\right|_{x^{\nu}=0} \ .\end{split}
+\begin{split}\left.\mathbf{b}_{\mu}\right|_P = \left.\frac{\partial \mathbf{X}}{\partial q^{\mu}}\right|_{q^{\nu}_P} = \left.\frac{\partial x^{\alpha}}{\partial q^{\mu}}\right|_{q^\nu=0} \left.\frac{\partial \mathbf{X}}{\partial x^{\alpha}}\right|_{x^\beta=0} =:\left. e^{\alpha}_{\ \ \mu} \right|_P \left.\mathbf{e}_{\alpha}\right|_P \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-A polynomial expansion of the coordinates \(q^{\mu}\) as a function of the local coordinates \(x^{\alpha}\) around \(P\) (\(x^\alpha=0\) at \(P\)) reads
-\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}
-\begin{split}
-q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+O(x^4),
-\end{split}
+having defined the matrix of transformation of the vectors of the local bases in \(P\), \(e^{\alpha}_{\ \ \mu}\). The inverse transformation is defined as
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq:local-inertial:basis-transformation:inverse}
+\begin{split}\widetilde{e}^{\mu}_{\ \ \alpha} = \left. \frac{\partial q^{\mu}}{\partial x^{\alpha}} \right|_{q^{\nu}_P} \ ,\end{split}
 \end{equation}
 \sphinxAtStartPar
-where \(A\) and \(B\) are totally symmetric in their lower indices. The inverse of \(\tilde e\) is \(e^\alpha{}_\mu\):
+so that
+\begin{equation*}
+\begin{split}\widetilde{e}^{\mu}_{\ \ \alpha} e^{\alpha}_{\ \ \nu} = \frac{\partial q^{\mu}}{\partial x^{\alpha}} \frac{\partial x^{\alpha}}{\partial q^{\nu}} = \frac{\partial q^{\mu}}{\partial q^{\nu}} = \delta^{\mu}_{\nu} \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+The vectors \(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\) form a \sphinxstylestrong{local basis} (tetrad) at \(P\). Requiring \(g'_{\alpha\beta}(P) = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \eta_{\alpha\beta}\) immediately gives
 \begin{equation*}
 \begin{split}
-e^\alpha{}_\mu\,\tilde e^\mu{}_\beta=\delta^\alpha_\beta,\qquad \tilde e^\mu{}_\alpha\, e^\alpha{}_\nu=\delta^\mu_\nu .
-\end{split}
+\eta_{\alpha \beta} = \mathbf{e}_{\alpha} \cdot \mathbf{e}_{\beta} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} \mathbf{b}^{\mu} \cdot \mathbf{b}^{\nu} = \widetilde{e}^{\mu}_{\ \ \alpha} \widetilde{e}^{\nu}_{\ \ \beta} g_{\mu \nu}(P) \ , \end{split}
 \end{equation*}
-
-\subsection{First order: the tetrad}
-\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:first-order-the-tetrad}}
 \sphinxAtStartPar
-The vectors \(\mathbf e_\alpha=\partial_\alpha\mathbf X|_P=\tilde e^\mu{}_\alpha\,\mathbf b_\mu\) form a \sphinxstylestrong{local basis} (tetrad) at \(P\). Requiring \(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\) gives
+i.e.
 \begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-tetrad}
-\begin{split}
-g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta=\eta_{\alpha\beta}\quad\Longleftrightarrow\quad
-g_{\mu\nu}(P)=e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta},
-\end{split}
+\begin{split}\begin{aligned}
+  \eta_{\alpha \beta} & = g_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta \\
+  g_{\mu\nu}(P) & = e^\alpha{}_\mu\,e^\beta{}_\nu\,\eta_{\alpha\beta} \ .
+\end{aligned}\end{split}
 \end{equation}
-\sphinxAtStartPar
-and the reciprocal basis is \(\mathbf e^\alpha=e^\alpha{}_\mu\,\mathbf b^\mu\) with \(\mathbf e^\alpha\cdot\mathbf e_\beta=\delta^\alpha_\beta\).
+
 
 \begin{sphinxadmonition}{note}{How many free parameters?}
 \begin{itemize}
@@ -2482,15 +2616,71 @@ Choosing \(\mathbf u_P\) ties the frame to the observer. The \(3\) remaining par
 \(g'_{\alpha\beta}(P)=\eta_{\alpha\beta}\). The residual freedom is exactly the Lorentz group: \sphinxstylestrong{6 parameters}.
 \end{sphinxadmonition}
 \subsubsection*{Christoffel symbols and coordinate transformations}
+
+\sphinxAtStartPar
+Christoffel symbols \(\Gamma^{c}_{\ \ a b}\) are defind as the component of the derivatives of the vectors of the natural basis w.r.t. the natural basis itself, \(\tfrac{\partial \mathbf{b}_a}{\partial q^b} = \Gamma^{c}_{\ \ a b} \mathbf{b}_{c}\), or \(\Gamma^{c}_{\ \ a b} = \tfrac{\partial \mathbf{b}_a}{\partial q^b} \cdot \mathbf{b}^c = \tfrac{\partial^2 \mathbf{X}}{\partial q^a \partial q^b} \cdot \tfrac{\partial \mathbf{X}}{\partial q^d} g^{cd}\). Christoffel symbols w.r.t. the coordinates \(x^\alpha\) thus read
 \begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}
-\begin{split} \dots \end{split}
+\begin{split}\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
+  & = \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma}
+\end{aligned}\end{split}
 \end{equation}
+\sphinxAtStartPar
+with the derivatives
+\begin{equation*}
+\begin{split}\partial_{x^\beta} \mathbf{X} = \partial_{x^\beta} q^{\mu} \partial_{q^\mu} \mathbf{X} = \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \mathbf{b}_{\mu}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{x^\alpha} \partial_{x^\beta} \mathbf{X} 
+  & = \partial_{x^{\alpha}} \left\{ \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \mathbf{b}_{\mu} \right\} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + B^{\mu}_{\ \ \beta \alpha \gamma} x^{\gamma} + \dots \right) \mathbf{b}_{\mu} + \left( \widetilde{e}^{\mu}_{\beta} + A^{\mu}_{\ \ \beta \gamma} x^\gamma + \frac{1}{2} B^{\mu}_{\ \ \beta \gamma \delta} x^{\gamma} x^{\delta} + \dots \right) \widetilde{e}^{\nu}_{\alpha} \Gamma_{\nu \mu}^{\sigma} \mathbf{b}_{\sigma} = \\
+  & = \partial_{x^\alpha x^\beta} q^{\mu} \partial_{q^{\mu}} \mathbf{X} + \partial_{x^\beta} q^{\mu} \partial_{x^\alpha} q^{\nu} \partial_{q^{\mu} q^{\nu}} \mathbf{X} = \\
+  & = \partial_{x^\alpha x^\beta} q^{\mu} \mathbf{b}_{\mu} + \partial_{x^\beta} q^{\mu} \partial_{x^\alpha} q^{\nu} \Gamma_{\mu \nu}^{\sigma} \mathbf{b}_{\sigma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \mathbf{b}_{\mu}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Crystoffel symbols can thus be written as
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-q}
+\begin{split}\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta} 
+  & = \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \mathbf{b}_{\mu} \cdot \mathbf{b}_{\nu} \partial_{x^\delta} q^{\nu} \, \eta^{\delta \gamma} = \\
+  & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} + \partial_{x^\beta} q^{\nu} \partial_{x^\alpha} q^{\sigma} \Gamma_{\nu \sigma}^{\mu} \right) \, \partial_{x^\delta} q^{\xi}  \, g_{\mu \xi}\, \eta^{\delta \gamma} \ .
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+Christoffel symbols w.r.t. \(x^\alpha\) evaluated in \(x^\alpha = 0\) thus are
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-P}
+\begin{split}\begin{aligned}
+  {\Gamma'}^{\gamma}_{\ \ \alpha \beta}(P)
+  & = \left. \dfrac{\partial^2 \mathbf{X}}{\partial x^\alpha \partial x^\beta} \cdot \dfrac{\partial \mathbf{X}}{\partial x^\delta} \eta^{\delta \gamma} \right|_{x^{\varepsilon} = 0} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \Gamma^{\mu}_{\nu \sigma}(P) \right) \mathbf{b}_{\mu}(P) \cdot \mathbf{b}_{\chi}(P) \widetilde{e}^{\chi}_{\delta}\eta^{\delta \gamma} = \\
+  & = \left( A^{\mu}_{\ \ \alpha \beta} + \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \Gamma^{\mu}_{\nu \sigma}(P) \right) \, \widetilde{e}^{\chi}_{\delta}\, g_{\mu \chi}(P) \, \eta^{\delta \gamma} \ .
+\end{aligned}\end{split}
+\end{equation}
+
+\subsection{Local set of coordinates}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:local-set-of-coordinates}}\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame-local-coordinates}}
+\sphinxAtStartPar
+Exploiting the inverse transformation \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq:local-inertial:basis-transformation:inverse}, it’s possible to write a polynomial expansion around the event \(P\) of the original coordinates \(q^\mu\) as a function of the local coordinates \(x^{\alpha}\) as
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}
+\begin{split}q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^{\mu}_{\ \ \alpha \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^{\alpha} x^{\beta} x^\gamma + o\left( \left( x^\lambda \right)^3 \right) \ .\end{split}
+\end{equation}
+
+
+
+\subsection{First order: the tetrad}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:first-order-the-tetrad}}
+\sphinxAtStartPar
+Already discussed in the section about {\hyperref[\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame-local-coordinates}]{\sphinxcrossref{\DUrole{std,std-ref}{Local basis}}}}.
+
 
 \subsection{Second order, \protect\(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\protect\), and \protect\(\partial_{\gamma} g^{(x)}_{\alpha \beta} = 0\protect\)}
 \label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:second-order-gamma-x-gamma-alpha-beta-0-and-partial-gamma-g-x-alpha-beta-0}}
 \sphinxAtStartPar
 The requirement that \(\Gamma^{(x) \gamma}_{\alpha \beta} = 0\) fixes the value of the coefficients \(A^{\lambda}_{\alpha \beta}\) in the expansion \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}.
-From the transformation law \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}, using \(\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha\) and \(\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}\):
+From the transformation law \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-P}, using \(\partial_\alpha q^\mu|_P=\tilde e^\mu{}_\alpha\) and \(\partial_\alpha\partial_\beta q^\lambda|_P=A^\lambda{}_{\alpha\beta}\):
 \begin{equation*}
 \begin{split}
 \Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda\Big[\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+A^\lambda{}_{\alpha\beta}\Big].
@@ -2509,10 +2699,58 @@ The right side is symmetric in \(\alpha\beta\), as required. The solution is \sp
 \begin{split}
 q^\mu=q_P^\mu+\tilde e^\mu{}_\alpha x^\alpha-\tfrac12\,\Gamma^\mu{}_{\nu\sigma}(P)\,\tilde e^\nu{}_\alpha\tilde e^\sigma{}_\beta\,x^\alpha x^\beta+O(x^3).
 \end{split}
-\end{equation*}\subsubsection*{The same \protect\(A\protect\) removes \protect\(\partial g'\protect\)}
+\end{equation*}\subsubsection*{The same \protect\(\ A \ \protect\) removes \protect\(\ \partial g'\protect\)}
 
 \sphinxAtStartPar
-Expand \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}g\sphinxhyphen{}transf}} to first order in \(x\). The ingredients are
+A polynomial expansion of the metric tensor \(g'_{\alpha \beta}\) in the local coordinates \(x^\gamma\) reads
+\begin{equation*}
+\begin{split}g'_{\alpha \beta}(x^\gamma) = \eta_{\alpha \beta} + x^\gamma \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} + \frac{1}{2} x^\gamma x^\delta \left. \frac{\partial^2 g'_{\alpha \beta}}{\partial x^\gamma \partial x^\delta} \right|_{x^\lambda=0} + O(x^3) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(g'_{\alpha \beta}(x^\lambda = 0) = \eta_{\alpha \beta}\).
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+By direct computation
+\begin{equation*}
+\begin{split}\begin{aligned}
+  g'_{\alpha \beta}(x)
+  & = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  & = \left( \widetilde{e}^{\mu}_\alpha - \Gamma^{\mu}_{\ \ \xi \sigma}(P) \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta - \Gamma^{\nu}_{\ \ \varphi \psi}(P) \widetilde{e}^{\mu}_{\beta} \widetilde{e}^{\varphi}_{\chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda)) = \\
+  & = \left( \widetilde{e}^{\mu}_\alpha + A^{\mu}_{\alpha \phi} x^\phi + O(x^2) \right) \left( \widetilde{e}^{\nu}_\beta +  A^{\nu}_{\beta \chi} x^\chi + O(x^2) \right) g_{\mu \nu}(q^\sigma (x^\lambda))
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the first derivative evaluated in \(x^\lambda = 0\) is
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left.\frac{\partial g'_{\alpha \beta}}{\partial x^\gamma}\right|_{x^\lambda = 0} 
+  & = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{x^\gamma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) = \\
+  & = \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu}|_{q^\sigma_P} + A^{\mu}_{\alpha \gamma} \widetilde{e}^{\nu}_{\beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \gamma} \widetilde{e}^{\mu}_{\alpha} g_{\mu \nu}(P) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having used
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \left. \dfrac{\partial}{\partial x^\gamma} g_{\mu \nu}(q^\sigma(x^\alpha)) \right|_{x^\beta = 0}
+  & = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \left. \frac{\partial q^\sigma}{\partial x^\gamma}\right|_{x^\lambda=0} 
+    = \left. \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right|_{q^{\xi}_P} \widetilde{e}^{\sigma}_{\ \gamma} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Exploiting the relation \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-A}, the first derivative of the metric \(g'_{\alpha \beta}\) evaluated in \(P\) becomes identically zero,
+
+\sphinxAtStartPar
+…
+\subsubsection*{Details}
+
+\sphinxAtStartPar
+Expand \(g_{\mu \nu}(q^\sigma (x^\alpha))\) to first order in \(x\). The ingredients are
 \begin{equation*}
 \begin{split}
 \partial_\alpha q^\mu=\tilde e^\mu{}_\alpha+A^\mu{}_{\alpha\sigma}x^\sigma+O(x^2),\qquad
@@ -2523,8 +2761,7 @@ g_{\mu\nu}(q(x))=g_{\mu\nu}(P)+\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma 
 Using \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-tetrad} for the zeroth\sphinxhyphen{}order term:
 \begin{equation*}
 \begin{split}
-g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta
-+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
+g'_{\alpha\beta}(x)=\eta_{\alpha\beta}+x^\sigma\Big[\partial_\rho g_{\mu\nu}\,\tilde e^\rho{}_\sigma\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta+g_{\mu\nu}A^\mu{}_{\alpha\sigma}\tilde e^\nu{}_\beta+g_{\mu\nu}\tilde e^\mu{}_\alpha A^\nu{}_{\beta\sigma}\Big]+O(x^2).
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -2546,11 +2783,7 @@ The bracket vanishes identically by metric compatibility \sphinxcode{\sphinxupqu
 The two statements “\(\Gamma'(P)=0\)” and “\(\partial g'(P)=0\)” are equivalent \sphinxstyleemphasis{because} of \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}compat}}. This is the precise sense in which gravity is “transformed away” at a point: \(g_{\mu\nu}\) and its first derivatives, which are what the gravitational field is made of in the Newtonian limit, can both be set to their Minkowski values.
 \end{sphinxadmonition}
 
-\begin{sphinxadmonition}{note}{The term \protect\(A\,A\,x^\sigma x^\xi\protect\) is not trustworthy}
 
-\sphinxAtStartPar
-The product of the two \(A\) terms is \(O(x^2)\). At that order one also needs \(B\) (from \(\partial_\alpha q^\mu\)) and \(\partial\partial g\) (from the expansion of \(g_{\mu\nu}(q(x))\)). A consistent expansion must therefore be organised by order, which is done in the next section.
-\end{sphinxadmonition}
 
 
 \bigskip\hrule\bigskip
@@ -2560,17 +2793,17 @@ The product of the two \(A\) terms is \(O(x^2)\). At that order one also needs \
 \subsection{Third order in \protect\(q^{\mu}(x^\alpha)\protect\)}
 \label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:third-order-in-q-mu-x-alpha}}
 \sphinxAtStartPar
-The cubic coefficients \(B^\lambda{}_{\alpha\beta\gamma}\) are totally symmetric. Differentiate \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf} once more and evaluate at \(P\), where \(\Gamma'(P)=0\):
+The cubic coefficients \(B^\lambda{}_{\alpha\beta\gamma}\) are totally symmetric. Differentiate \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-P} once more and evaluate at \(P\), where \(\Gamma'(P)=0\):
 \begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-T}
 \begin{split}
 T^\gamma{}_{\alpha\beta\delta}:=\partial_\delta\Gamma'^\gamma{}_{\alpha\beta}(P)=e^\gamma{}_\lambda B^\lambda{}_{\alpha\beta\delta}+C^\gamma{}_{\alpha\beta\delta},
 \end{split}
 \end{equation}
 \sphinxAtStartPar
-where \(C\) is built only from \(\tilde e\), \(A\), \(\Gamma(P)\) and \(\partial\Gamma(P)\) (it does not depend on \(B\)). The derivative of the prefactor \(\partial x^\gamma/\partial q^\lambda\) does not contribute, because it multiplies the bracket of \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf}, which vanishes at \(P\). The only place \(B\) enters is through \(\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}\). \(T\) is symmetric in \(\alpha\beta\).
+where \(C\) is built only from \(\tilde e\), \(A\), \(\Gamma(P)\) and \(\partial\Gamma(P)\) (it does not depend on \(B\)). The derivative of the prefactor \(\partial x^\gamma/\partial q^\lambda\) does not contribute, because it multiplies the bracket of \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-P}, which vanishes at \(P\). The only place \(B\) enters is through \(\partial_\delta\partial_\alpha\partial_\beta q^\lambda=B^\lambda{}_{\alpha\beta\delta}\). \(T\) is symmetric in \(\alpha\beta\).
 
 
-\subsubsection{3.1 Decomposition of \protect\(T\protect\)}
+\subsubsection{Decomposition of \protect\(T\protect\)}
 \label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:decomposition-of-t}}
 \sphinxAtStartPar
 Define the totally symmetric part
@@ -2635,7 +2868,513 @@ with a total symmetrisation of \(C\). Then \(S=0\). The freedom in \(B\) is \sph
 \end{equation*}
 
 \subsubsection{The metric to second order}
-\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:the-metric-to-second-order}}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:the-metric-to-second-order}}\subsubsection*{Metric to the second order}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  g'_{\alpha \beta}(x)
+  & = \frac{\partial \mathbf{X}}{\partial x^\alpha} \cdot \frac{\partial \mathbf{X}}{\partial x^{\beta}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} \frac{\partial \mathbf{X}}{\partial q^{\mu}} \cdot \frac{\partial \mathbf{X}}{\partial q^{\nu}} = \\
+  & = \frac{\partial q^{\mu}}{\partial x^\alpha} \frac{\partial q^{\nu}}{\partial x^\beta} g_{\mu \nu}(q^\sigma(x^\lambda)) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Need for the second order expansion in \(x\) of \(\frac{\partial q^{\mu}}{\partial x^\alpha}\), and \(g_{\mu \nu}(q^\sigma(x^\lambda))\)
+\begin{equation*}
+\begin{split}\frac{\partial q^{\mu}}{\partial x^\alpha} = \widetilde{e}^{\mu}_{\alpha} + A^{\mu}_{\alpha \beta} x^{\beta} + \frac{1}{2} B^{\mu}_{\alpha \beta \gamma} x^{\beta} x^\gamma + o(x^2)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}g_{\mu \nu}(q^\sigma(x^\alpha)) = g_{\mu\nu}(P) + x^\alpha \left.\frac{\partial g_{\mu \nu}}{\partial x^\alpha}\right|_{x^\lambda = 0} + \frac{1}{2} x^\alpha x^\beta \left. \frac{\partial^2 g_{\mu \nu}}{\partial x^\alpha \partial x^\beta} \right|_{x^\lambda=0} + o(x^2) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the first derivative evaluated for \(x^\lambda = 0\)
+\begin{equation*}
+\begin{split}\frac{\partial g_{\mu \nu}}{\partial x^\alpha} = \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}}= \widetilde{e}^{\sigma}_{\ \alpha} \partial_{q^\sigma} g_{\mu \nu}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the second derivative in \(x^\lambda = 0\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \frac{\partial^2 g_{\mu \nu}}{\partial x^\beta \partial x^\alpha} 
+  & = \frac{\partial}{\partial x^{\beta}} \left( \frac{\partial q^{\sigma}}{\partial x^{\alpha}} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} \right) = \\
+  & = \frac{\partial^2 q^{\sigma}}{\partial x^\alpha \partial x^\beta} \frac{\partial g_{\mu \nu}}{\partial q^{\sigma}} + \frac{\partial q^{\sigma}}{\partial x^\alpha} \frac{\partial q^{\chi}}{\partial x^\beta} \frac{\partial^2 g_{\mu \nu}}{\partial q^\sigma \partial q^\chi} = \\
+  & = A^{\sigma}_{\alpha \beta} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \alpha} \widetilde{e}^{\chi}_{\ \beta} \partial_{q^\sigma q^\chi} g_{\mu \nu} 
+\end{aligned}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+Now the first terms of the polynomial expansion of the metrics \(g'_{\alpha \beta}(x)\) are
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{zero\sphinxhyphen{}th order}
+\begin{equation*}
+\begin{split}{g'}_{\alpha \beta}^{(0)} = \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) = \eta_{\alpha \beta}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{first order}
+\begin{equation*}
+\begin{split}\begin{aligned}
+   {g'}_{\alpha \beta}^{(1)} & =
+   A^{\mu}_{\alpha \phi} x^\phi \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \phi} x^\phi g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\phi \widetilde{e}^{\sigma}_{\ \phi} \partial_{q^\sigma} g_{\mu \nu} = \\
+   & = x^{\phi} \left[ A^{\mu}_{\alpha \phi} \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) + A^{\nu}_{\beta \phi} \widetilde{e}^{\mu}_{\ \alpha} g_{\mu \nu}(P) + \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+   & = x^{\phi} \widetilde{e}^{\sigma}_{\phi} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \left[ \partial_{q^\sigma} g_{\mu \nu} - \Gamma^{\xi}_{\mu \sigma}(P) g_{\xi \nu}(P) - \Gamma^{\xi}_{\nu \sigma}(P) g_{\xi \mu}(P) \right] = \\
+   & = 0 \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{second order}
+
+\end{itemize}
+\subsubsection*{Details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+   {g'}_{\alpha \beta}^{(2)} & =
+   \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} x^\lambda x^\gamma \widetilde{e}^{\nu}_{\ \beta} g_{\mu \nu}(P) +
+   \widetilde{e}^{\mu}_{\ \alpha} \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} x^\lambda x^\gamma g_{\mu \nu}(P) + \\
+   & + \frac{1}{2} \widetilde{e}^{\mu}_{\ \alpha} \widetilde{e}^{\nu}_{\ \beta} x^\lambda x^\gamma \left( A^{\sigma}_{\lambda \gamma} \partial_{q^\sigma} g_{\mu \nu} + \widetilde{e}^{\sigma}_{\ \lambda} \widetilde{e}^{\chi}_{\ \gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu}  \right) + \\
+   & + 
+   A^{\mu}_{\alpha \phi} x^\phi A^{\nu}_{\ \beta \chi} x^\chi g_{\mu \nu}(P) +
+   A^{\mu}_{\alpha \lambda} x^\lambda \widetilde{e}^{\nu}_{\ \beta} x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} + \\
+   & + \widetilde{e}^{\mu}_{\ \alpha} A^{\nu}_{\beta \lambda} x^\lambda x^\gamma \widetilde{e}^{\sigma}_{\gamma} \partial_{q^\sigma} g_{\mu \nu} = \\
+   & = x^\lambda x^\gamma \left[ \left( \frac{1}{2} B^{\mu}_{\ \alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + \frac{1}{2} B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} + A^{\mu}_{\alpha \lambda} A^{\nu}_{\beta \gamma} \right) g_{\mu \nu}  
+   + \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^\sigma q^\chi} g_{\mu \nu} \right. + \\ 
+   & + \left. \left( 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} \right] = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+With
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\partial_{q^\sigma} g_{\mu \nu} = \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu}\),
+
+\item {} 
+\sphinxAtStartPar
+and differentiating by \(\partial_{q^\chi}\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+        \partial_{q^\chi} \partial_{q^\sigma} g_{\mu \nu}
+        & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \partial_{q^\chi} g_{\xi \nu} + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \partial_{q^\chi} g_{\xi \mu} = \\
+        & = \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) = \\
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+and the coefficients \(A^\lambda{}_{\alpha\beta}=-\Gamma^\lambda{}_{\mu\nu}(P)\,\tilde e^\mu{}_\alpha\tilde e^\nu{}_\beta\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+it follows
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq:local-inertial:metric:second-order:1}
+\begin{split}\begin{aligned}
+ {g'}^{(2)}_{\alpha \beta} 
+ & = x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \left. \frac{1}{2} \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) 
+ \right. + \\
+ & \qquad + \left.
+   \frac{1}{2} 
+     \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} 
+     + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+  \right. + \\
+ & \qquad \left.
+   - \frac{1}{2} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+    \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+  + \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right) 
+ \right. + \\
+  & \qquad \left.
+  - \frac{1}{2} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right) \right. \\
+ & \qquad \Big\} = \\
+ & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \left. \left( B^{\mu}_{\alpha \lambda \gamma} \widetilde{e}^{\nu}_{\ \beta} + B^{\nu}_{\ \beta \lambda \gamma} \widetilde{e}^{\mu}_{\ \alpha} \right) 
+ \right. + \\
+ & \qquad + \left.
+     \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} 
+     + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} 
+  \right. + \\
+ & \qquad \left.
+   - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\chi \sigma} \Gamma^{\nu}_{\phi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. + \\
+ & \qquad \left.
+   - \left( \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi}
+   \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right. \\ 
+ & \qquad \Big\} = \\
+ & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \ \ \left.
+                    \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
+  & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\nu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
+ & \qquad \Big\} = \\
+ & = \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu}
+ \Big\{ \\
+  & \qquad \ \ \left.
+                    \widetilde{e}^{\nu}_{\ \beta } \left[ B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{ \sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \right] + \right. \\
+  & \qquad \left. + \widetilde{e}^{\mu}_{\ \alpha} \left[ B^{\nu}_{\ \beta  \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\nu}_{\phi \sigma} - \Gamma^{\nu}_{\phi \xi} \Gamma^{\xi}_{ \sigma \chi} - \Gamma^{\nu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \right] \right. \\
+ & \qquad \Big\}
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+Anti\sphinxhyphen{}symmetric contributions \(A^{\mu \nu}_{\gamma \lambda}\) in the brackets after swapping \(\lambda\) and \(\gamma\) or \(\mu\) and \(\nu\) has zero net\sphinxhyphen{}contribution, as \(x^\gamma x^\lambda g_{\mu \nu}\) is symmetric \sphinxhyphen{} this is the contraction of a symmetric and an anti\sphinxhyphen{}symmetric tensor \sphinxhyphen{},
+\begin{equation*}
+\begin{split}\begin{aligned}
+  x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda}
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} \left( A^{\mu \nu}_{\gamma \lambda} + A^{\mu \nu}_{\gamma \lambda} \right) = \\
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} + \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\lambda \gamma} = \\
+  & = \frac{1}{2} x^\gamma x^\lambda g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} - \frac{1}{2} x^\lambda x^\gamma g_{\mu \nu} A^{\mu \nu}_{\gamma \lambda} = 0 \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The same holds for swapping \(\sigma\) \textbackslash{}and \(\chi\) \sphinxhyphen{} \sphinxstylestrong{todo} \sphinxstyleemphasis{explicitly show that, how this follows from the terms \(\widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\)}.
+
+\sphinxAtStartPar
+This observation may lead the choice of \(B^{\mu}_{\ \alpha \lambda \gamma}\) symbols. \sphinxstylestrong{Riemann normal coordinates} follow from the choice of those \(B^{\mu}_{\ \alpha \lambda \gamma}\) that absorb and cancel the symmetric contributions.
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+The first contribution in the curly brackets can be recast as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  B^{\mu}_{\ \alpha \lambda \gamma} + \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+  & = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(K^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}\). Symbols \(K^{\mu}_{\ \ \phi \sigma \chi}\) are symmetric in \(\phi \leftrightarrow \sigma\).
+\subsubsection*{Other details}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ & \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \partial_{q^{\sigma} q^{\chi}} g_{\mu \nu} = \\
+ & = \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left[ \partial_{q^\chi} \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\mu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \nu} + \Gamma^{\phi}_{\chi\nu} g_{\phi \xi} \right) + \partial_{q^\chi} \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} + \Gamma^{\xi}_{\nu \sigma} \left( \Gamma^{\phi}_{\chi\xi} g_{\phi \mu} + \Gamma^{\phi}_{\chi\mu} g_{\phi \xi} \right) \right] = \\
+ & = \frac{1}{2} g_{\mu \nu} \left\{ \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\mu}_{\chi\xi} \right) \right. + \\ 
+ & \qquad \qquad + \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma} + \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi\xi} \right) + \\
+ & \qquad \qquad + \left. \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \left( \Gamma^{\nu}_{\phi \sigma} \Gamma^{\mu}_{\chi \xi} + \Gamma^{\mu}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \right) \right\}
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+ & \left(
+   \frac{1}{2}\widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} +
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \partial_{q^\sigma} g_{\mu \nu} = \\
+ & =  \left(
+   \frac{1}{2}\widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+   \right) \left( \Gamma^{\xi}_{\mu \sigma} g_{\xi \nu} + \Gamma^{\xi}_{\nu \sigma} g_{\xi \mu} \right) = \\
+ & = g_{\mu \nu} \left\{ \Gamma^{\mu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\nu}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\xi}_{\alpha \lambda} + 
+   \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\nu}_{\beta \lambda}   
+ \right) + \right. \\
+ & \ \qquad + \left. \Gamma^{\nu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\beta} A^{\sigma}_{\lambda \gamma} + 
+   \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\gamma} A^{\mu}_{\alpha \lambda} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} A^{\xi}_{\beta \lambda}   
+   \right) \right\} = \\
+ & = - g_{\mu \nu} \left\{ \Gamma^{\mu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\nu}_{\beta}     \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \Gamma^{\sigma}_{\phi \chi} + 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}\Gamma^{\xi   }_{\phi \chi} + 
+   \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}\Gamma^{\nu   }_{\phi \chi}   
+ \right) + \right. \\
+ & \quad \ \qquad + \left. \Gamma^{\nu}_{\xi \sigma} \left( 
+   \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\xi}_{\beta}    \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma}  \Gamma^{\sigma}_{\phi \chi} + 
+   \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda} \Gamma^{\mu   }_{\phi \chi} + 
+   \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma}\widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda} \Gamma^{\xi   }_{\phi \chi}   
+   \right) \right\} = \\
+ & = - g_{\mu \nu} \left\{
+                             \Gamma^{\mu}_{\xi \sigma} \Gamma^{\nu}_{\phi \chi} \left(
+     \widetilde{e}^{\xi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda} +
+     \widetilde{e}^{\xi}_{\beta } \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}
+   \right) \right. + \\
+ & \left. \qquad \quad \ \ + \Gamma^{\mu}_{\xi \sigma} \Gamma^{\xi}_{\phi \chi} \left( 
+     \frac{1}{2} \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} +
+     \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\chi}_{\lambda} 
+   \right) \right. + \\
+ & \left. \qquad \quad \ \ + \Gamma^{\nu}_{\xi \sigma} \Gamma^{\xi}_{\phi \chi} \left(
+     \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}
+   \right) \right\} = 
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Further details}
+
+\sphinxAtStartPar
+Collecting four types of contributions, 1) \(\Gamma^{\mu} \Gamma^{\nu}\), 2) \(\Gamma^{\mu} \Gamma^{\xi}\), 3) \(\Gamma^{\nu} \Gamma^{\xi}\), 4) terms with \(\partial \Gamma\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  (1)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\sigma \phi} \Gamma^{\nu}_{\chi \xi} \left(
+  \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\chi}_{\beta} \widetilde{e}^{\xi}_{\gamma}
+  + \frac{1}{2} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\xi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}
+  + \frac{1}{2} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\xi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+  - \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\xi}_{\beta  } \widetilde{e}^{\chi}_{\lambda}
+  - \widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\gamma} \widetilde{e}^{\xi}_{\alpha } \widetilde{e}^{\chi}_{\lambda}
+  \right) = 0 \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+by the symmetries of the metric tensor \(g_{\mu \nu}\), and Christoffel symbols \(\Gamma_{\sigma\phi}^{\mu}\) w.r.t. the lower indeices.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  (2)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+  \frac{1}{2} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+    - \frac{1}{2} \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+    - \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\chi}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\sigma}_{\lambda} 
+  \right) = \\
+  & = -\frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \left( 
+    \widetilde{e}^{\chi}_{\alpha} \widetilde{e}^{\nu}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma}  
+  + \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\chi}_{\gamma}  \widetilde{e}^{\phi}_{\alpha } \widetilde{e}^{\sigma}_{\lambda} 
+  \right) \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  (3)
+  & = g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}
+     - \frac{1}{2} \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     - \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda}
+  \right) = \\
+  & = - \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma \Gamma^{\xi}_{\phi \sigma} \Gamma^{\nu}_{\chi \xi} \left( 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\beta}  \widetilde{e}^{\phi}_{\lambda} \widetilde{e}^{\sigma}_{\gamma} + 
+     \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\chi}_{\gamma} \widetilde{e}^{\phi}_{\beta  } \widetilde{e}^{\sigma}_{\lambda}
+  \right) 
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  (4)
+  & = \frac{1}{2} g_{\mu \nu} x^\lambda x^\gamma
+     \left(  \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\nu}_{\beta} \partial_{q^\chi} \Gamma^{\mu}_{\phi \sigma} 
+     +  \widetilde{e}^{\mu}_{\alpha} \widetilde{e}^{\phi}_{\beta}  \partial_{q^\chi} \Gamma^{\nu}_{\phi \sigma}
+     \right) \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+\begin{equation*}
+\begin{split}R^\gamma{}_{\alpha\beta\delta}=\partial_\beta\Gamma^\gamma{}_{\delta\alpha}-\partial_\delta\Gamma^\gamma{}_{\beta\alpha}+\Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-\Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}R_{\lambda\alpha\beta\delta}=g_{\lambda \gamma} R^{\gamma}_{\ \alpha\beta\delta} = g_{\lambda \gamma} \partial_\beta\Gamma^\gamma{}_{\delta\alpha}-g_{\lambda \gamma} \partial_\delta\Gamma^\gamma{}_{\beta\alpha}+g_{\lambda \gamma} \Gamma^\gamma{}_{\beta\lambda}\Gamma^\lambda{}_{\delta\alpha}-g_{\lambda \gamma} \Gamma^\gamma{}_{\delta\lambda}\Gamma^\lambda{}_{\beta\alpha}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Putting everything together, from relation \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq:local-inertial:metric:second-order:1} the second\sphinxhyphen{}oder term of the polynomial expansion of the metric can be recast as
+\begin{equation*}
+\begin{split}\begin{aligned}
+ {g'}^{(2)}_{\alpha \beta}
+ = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu}
+ \left\{ 
+  \widetilde{e}^{\nu}_{\ \beta } T^{\mu}_{\ \ \alpha \lambda \gamma} + 
+  \widetilde{e}^{\nu}_{\ \alpha} T^{\mu}_{\ \ \beta  \lambda \gamma}   
+ \right\} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(T^{\mu}_{\ \alpha \lambda \gamma} := B^{\mu}_{\ \ \alpha \lambda \gamma} + K^{\mu}_{\ \ \alpha \lambda \gamma}\), and \(K^{\mu}_{\ \ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\phi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\) \(= \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\). Here \(B\) is symmetric under any swap of a pair of lower indices, while \(K^{\mu}_{\ \ \alpha \lambda \gamma}\) is symmetric under the swap \(\alpha \leftrightarrow \lambda\).
+\begin{equation*}
+\begin{split}\begin{aligned}
+ g_{\mu \nu} & = {g'}_{\alpha \beta} e_{\mu}^{\alpha} e_{\nu}^{\beta} \\
+{g'}_{\alpha \beta} & = g_{\mu \nu} \widetilde{e}_{\alpha}^{\mu} \widetilde{e}_{\beta}^{\nu} \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Relation between \protect\(\ T \ \protect\) and \protect\(\ R \ \protect\)}
+
+\sphinxAtStartPar
+Since \(\widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}\), the components of the Riemann tensor can be recast as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R^{\mu}_{\ \ \sigma \chi \phi} 
+  & = \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \partial_{\phi} \Gamma^{\mu}_{\sigma \chi} + \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} = \\
+  & =        \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} + \\
+  & - \left( \partial_{\phi} \Gamma^{\mu}_{\chi \sigma} - \Gamma^{\mu}_{\chi \xi} \Gamma^{\xi}_{\sigma \phi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}\right) = \\
+  & = \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now multiplying by \( \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}\) to get \(K^{\mu}_{\ \ \alpha \lambda \gamma}\), the projection of the lower indices on the local Minkowski reference frame follows
+\begin{equation*}
+\begin{split}\begin{aligned}
+   \bar{R}^{\mu}_{\ \ \alpha \lambda \gamma}
+   & =\widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  R^{\mu}_{\ \ \sigma \chi \phi} = \\
+   & =\widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma} \left( \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi } - \widetilde{K}^{\mu}_{\ \ \chi \sigma \phi} \right) = \\
+   & = K^{\mu}_{\ \ \gamma \alpha \lambda} - K^{\mu}_{\ \ \lambda \alpha \gamma} = \\
+   & = T^{\mu}_{\ \ \gamma \alpha \lambda} - T^{\mu}_{\ \ \lambda \alpha \gamma} \underbrace{ - B^{\mu}_{\ \ \gamma \alpha \lambda} + B^{\mu}_{\ \ \lambda \alpha \gamma} }_{=0} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \(B\) is symmetric under any swap of lower indices.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \bar{R}^{\mu}_{\ \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma}
+  & = T^{\mu}_{\ \ \gamma \alpha \lambda} - T^{\mu}_{\ \ \lambda \alpha \gamma} + T^{\mu}_{\ \ \gamma \lambda \alpha} - T^{\mu}_{\ \ \alpha \lambda \gamma} = && \left(\text{$T^{\cdot}_{\ \ \alpha \gamma \cdot} = T^{\cdot}_{\ \ \gamma \alpha \cdot}$, $\mp T^{\mu}_{\alpha \lambda \gamma}$}\right) \\
+  & = - 3 T^{\mu}_{\ \ \lambda \alpha \gamma} + \left( T^{\mu}_{\ \ \alpha \gamma \lambda} + T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma} \right) = \\
+  & = - 3 T^{\mu}_{\ \ \lambda \alpha \gamma} + 3 S^{\mu}_{\ \ \alpha \lambda \gamma} \ , 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the definition of the total symmetric part of \(T\), \(S^{\mu}_{\alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \ \alpha \gamma \lambda} + T^{\mu}_{\ \ \gamma \lambda \alpha} + T^{\mu}_{\ \ \lambda \alpha \gamma}  \right)\). This definition doesn’t include repeated contributions that would follow from the symmetry \(T^{\cdot}_{\ \ \alpha \gamma \ \cdot} = T^{\cdot}_{\ \ \gamma \alpha \ \cdot}\).
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+\sphinxstylestrong{Riemann normal coordinates} set \(S^{\mu}_{\ \ \alpha \lambda \gamma} = 0\), and thus
+\begin{equation*}
+\begin{split}T^{\mu}_{\ \ \alpha \lambda \gamma} = - \frac{1}{3} \left( \bar{R}^{\mu}_{\ \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma} \right) \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the second\sphinxhyphen{}order contribution of the polynomial exapnsion of the metrics reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+ {g'}^{(2)}_{\alpha \beta}
+ & = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu}
+ \left\{ 
+  \widetilde{e}^{\nu}_{\ \beta } T^{\mu}_{\ \ \alpha \lambda \gamma} + 
+  \widetilde{e}^{\nu}_{\ \alpha} T^{\mu}_{\ \ \beta  \lambda \gamma}   
+ \right\} = \\
+ & = \frac{1}{2} x^{\lambda} x^{\gamma} g_{\mu \nu} \left\{ 
+ - \frac{1}{3} \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( R^{\mu}_{\ \ \phi \sigma \chi} + R^{\mu}_{\ \ \sigma \phi \chi} \right)
+ - \frac{1}{3} \widetilde{e}^{\nu}_{\alpha}\widetilde{e}^{\phi}_{\beta } \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \left( R^{\mu}_{\ \ \phi \sigma \chi} + R^{\mu}_{\ \ \sigma \phi \chi} \right)
+ \right\} = \\
+ & = - \frac{1}{6} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+  \left\{ R_{\nu \phi \sigma \chi} + R_{\nu \sigma \phi \chi} + R_{\phi \nu \sigma \chi} + R_{\phi \sigma \nu \chi}
+ \right\} = && (1) \\
+ & = - \frac{1}{6} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+  \left\{ R_{\nu \sigma \phi \chi} + R_{\phi \sigma \nu \chi}
+ \right\} = && (2) \\
+ & = - \frac{1}{3} x^{\lambda} x^{\gamma} \, 
+   \widetilde{e}^{\nu}_{\beta} \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma} \,
+   R_{\nu \sigma \phi \chi} = && (3) \\
+ & = - \frac{1}{3} x^{\lambda} x^{\gamma} \, 
+   {R'}_{\beta \lambda \alpha \gamma} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \((1)\) \( R_{\nu \phi \sigma \chi} + R_{\phi \nu \sigma \chi} = 0\) from \eqref{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:2}, and symmetry is exploited in \((2)\): first the symmetry of the expression in \(\lambda \leftrightarrow \gamma\), and thus in \(\sigma \leftrightarrow \chi\) in the second term, so that the content of the curly bracket van be recast as \(R_{\nu \sigma \phi \chi} + R_{\phi \chi \nu \sigma} = 2 R_{\nu \sigma \phi \chi}\), from the property \eqref{equation:ch/relativity-general/differential-geometry:eq:riemann:prop:4} \(R_{\nu \sigma \phi \chi} = R_{\phi \chi \nu \sigma}\). In \((3)\) the Riemann tensor is represented in the local Minkowski set of coordinates.
+\subsubsection*{Expression of \protect\(\ B\ \protect\) coefficients}
+\begin{equation*}
+\begin{split}
+\bar{R}^{\mu}_{\  \alpha \lambda \gamma} + \bar{R}^{\mu}_{\ \lambda \alpha \gamma} =
+- 3 T^{\mu}_{\ \lambda \alpha \gamma} + 3 S^{\mu}_{\ \alpha \lambda \gamma} \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(B^{\mu}_{\ \alpha \lambda \gamma}\) symmetric under any swap of lower indices
+
+\item {} 
+\sphinxAtStartPar
+\(K^{\mu}_{\ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\), is symmetric under \(\alpha \leftrightarrow \lambda\)
+
+\item {} 
+\sphinxAtStartPar
+\(T^{\mu}_{\ \alpha \lambda \gamma} = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \alpha \lambda \gamma}\), symmetric under \(\alpha \leftrightarrow \lambda\)
+
+\item {} 
+\sphinxAtStartPar
+\(S^{\mu}_{\ \alpha \lambda \gamma} = \frac{1}{3} \left( T^{\mu}_{\ \alpha \gamma \lambda} + T^{\mu}_{\ \gamma \lambda \alpha} + T^{\mu}_{\ \lambda \alpha \gamma} \right)\), symmetric under any swap of lower indices
+
+\item {} 
+\sphinxAtStartPar
+\(\bar{R}^{\mu}_{\ \alpha \lambda \gamma} = K^{\mu}_{\ \gamma \alpha \lambda} - K^{\mu}_{\ \lambda \alpha \gamma}\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+Since the coefficients \(B^{\mu}_{\alpha \lambda \gamma}\) are symmetric under any swap of lower indices, they can be defined to set the total symmetric part of \(T\) equal to zero \(S^{\mu}_{\alpha \lambda \gamma} = 0\), but not all the \(T\)’s.
+\begin{equation*}
+\begin{split}\begin{aligned}
+ 0
+ & = S^{\mu}_{\ \alpha \lambda \gamma} = \\
+ & = \frac{1}{3} \left( T^{\mu}_{\ \alpha \gamma \lambda} + T^{\mu}_{\ \gamma \lambda \alpha} + T^{\mu}_{\ \lambda \alpha \gamma} \right) = \\
+ & = \frac{1}{3} \left( B^{\mu}_{\ \alpha \gamma \lambda} + B^{\mu}_{\ \gamma \lambda \alpha} + B^{\mu}_{\ \lambda \alpha \gamma}         
+                      + K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma} \right) = \\
+ & = B^{\mu}_{\ \alpha \gamma \lambda} + \frac{1}{3} \left( K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma}  \right)
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}B^{\mu}_{\ \alpha \gamma \lambda} = - \frac{1}{3} \left( K^{\mu}_{\ \alpha \gamma \lambda} + K^{\mu}_{\ \gamma \lambda \alpha} + K^{\mu}_{\ \lambda \alpha \gamma} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus third\sphinxhyphen{}order contribution to the polynomial expansion of the transformation from local to global coordinates
+\begin{equation*}
+\begin{split}q^{\mu}(x^\varphi) = q^{\mu}_P + \widetilde{e}^{\mu}_{\ \ \alpha} x^{\alpha} - \frac{1}{2} \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + o(x^4)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  B^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma 
+  & = - \frac{1}{3} \left( K^{\mu}_{\ \alpha \beta \gamma} + K^{\mu}_{\ \beta \gamma \alpha} + K^{\mu}_{\ \gamma \alpha \beta} \right) x^\alpha x^\beta x^\gamma = \\
+  & = - K^{\mu}_{\ \ \alpha \beta \gamma} x^\alpha x^\beta x^\gamma = \\
+  & = - \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\chi}_{\gamma} \, x^\alpha x^\beta x^\gamma = \\
+  & = - \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - 2 \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\beta} \widetilde{e}^{\chi}_{\gamma} \, x^\alpha x^\beta x^\gamma \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since the expression is symmetric under \(\alpha \leftrightarrow \beta\).
+\subsubsection*{Old and likely wrong}
+
+\sphinxAtStartPar
+From the condition \(S^{\mu}_{\ \ \alpha \lambda \gamma} = 0\), it follows that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  B^{\mu}_{\ \ \alpha \lambda \gamma} 
+  & = T^{\mu}_{\ \ \alpha \lambda \gamma} - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = - \frac{1}{3} \left( \bar{R}^{\mu}_{\alpha \lambda \gamma} + \bar{R}^{\mu}_{\lambda \alpha \gamma} \right) - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = - \frac{1}{3} \left( K^{\mu}_{\gamma \alpha \lambda} - K^{\mu}_{\lambda \alpha \gamma} + K^{\mu}_{\gamma \lambda \alpha} - K^{\mu}_{\alpha \lambda \gamma} \right) - K^{\mu}_{\ \ \alpha \lambda \gamma} = \\
+  & = \dots
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\begin{aligned}
+  B^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma} 
+  & = \underbrace{ T^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma}}_{=0, \text{ since } S = 0} - K^{\mu}_{\ \ \alpha \lambda \gamma} x^{\alpha} x^{\lambda} x^{\gamma} = \\
+  & = - \xi^{\sigma} \xi^{\chi} \xi^{\phi} \left[ \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right] = \\
+  & = - \xi^{\sigma} \xi^{\chi} \xi^{\phi} \left[ \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - 2 \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+\begin{equation*}
+\begin{split}
+B^{\mu}_{\ \ \alpha \beta \gamma} = -\frac{1}{3} \left( R^{\mu}_{\ \ \nu \rho \sigma} + R^{\mu}_{\ \ \sigma \rho \nu} \right) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} \widetilde{e}^{\rho}_{\ \ \gamma}
+\end{split}
+\end{equation*}\subsubsection*{\sphinxstylestrong{todo} \sphinxstyleemphasis{Prove it!}}
+\begin{equation*}
+\begin{split}K^{\mu}_{\ \ \alpha \lambda \gamma} = \widetilde{e}^{\sigma}_{\alpha} \widetilde{e}^{\chi}_{\lambda} \widetilde{e}^{\phi}_{\gamma}  \widetilde{K}^{\mu}_{\ \ \phi \sigma \chi }\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\widetilde{K}^{\mu}_{\ \ \phi \sigma \chi} := \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\sigma \chi} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi}\end{split}
+\end{equation*}\subsubsection*{Relation \protect\(\ \partial_{\gamma} {\Gamma'}^{\mu}_{\beta \lambda}(P) = T^{\mu}_{\ \ \beta \lambda \gamma}\protect\)}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Convert hand\sphinxhyphen{}written notes}
+
 \sphinxAtStartPar
 Differentiate the metric\sphinxhyphen{}compatibility relation \sphinxcode{\sphinxupquote{eq\sphinxhyphen{}compat}} (written in the primed coordinates) once more and evaluate at \(P\), where \(\Gamma'=0\), so that derivatives of \(g'\) drop out:
 \begin{equation*}
@@ -2665,6 +3404,93 @@ and the Taylor expansion of the metric is
 \boxed{\,g'_{\alpha\beta}(x)=\eta_{\alpha\beta}-\tfrac13\,R_{\alpha\gamma\beta\delta}(P)\,x^\gamma x^\delta+O(x^3)\,}
 \end{split}
 \end{equation}
+
+\subsubsection{Polynomial expansion of the geodesics}
+\label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:polynomial-expansion-of-the-geodesics}}
+\sphinxAtStartPar
+The equation of a geodesics in a region of spacetime where \(\nabla_{\nu} T^{\nu \mu } = 0\) reads
+\begin{equation*}
+\begin{split}\partial_{\lambda \lambda} \mathbf{X} = \left\{ \ddot{q}^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dot{q}^{\nu} \dot{q}^{\sigma}  \right\} \mathbf{b}_{\mu} = \mathbf{0} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\lambda\) a parameter that provides a regular parametrization of the worldline \(\mathbf{X}\left( q^{\mu} ( \lambda ) \right)\), identified with the geodesics, and \(\dot{q}^{\mu} =: \partial_\lambda q^{\mu}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Polynomial expansion} of the global coordinates \(q^{\mu}\) in local coordinates \(x^{\alpha}\)
+\begin{equation}\label{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-polynomial-expansion}
+\begin{split}q^{\mu} = q^{\mu}_P + \widetilde{e}^{\mu}_{\alpha} x^{\alpha} + \frac{1}{2} A^{\mu}_{\ \ \alpha \beta} x^\alpha x^\beta + \frac{1}{6} B^{\mu}_{\ \ \alpha \beta \gamma} x^{\alpha} x^{\beta} x^\gamma + o\left( \left( x^\lambda \right)^3 \right) \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+with \(A^{\mu}_{\ \ \alpha \beta} = - \Gamma^{\mu}_{\ \ \nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta}\), and \(B^{\mu}_{\ \ \alpha \beta \gamma} = \dots\)
+\subsubsection*{Details}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Velocity.} The velocity w.r.t. a parameter \(\lambda\) describing the worldline \(\mathbf{X}\left(q^{\mu}(\lambda)\right)\) reads
+\begin{equation*}
+\begin{split}\mathbf{U} = \partial_{\lambda} \mathbf{X} = \partial_{\lambda} q^{\mu} \, \partial_{q^{\mu}} \mathbf{X} = \partial_{\lambda} x^{\alpha} \partial_{x^{\alpha}} q^{\mu} \partial_{q^{\mu}} \mathbf{X} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The components of the velocity are
+\begin{equation*}
+\begin{split}\partial_{\lambda} q^{\mu}  = \partial_{\lambda} x^{\alpha} \partial_{x^{\alpha}} q^{\mu} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Derivative of the components of the velocity}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{\lambda} \partial_{\lambda} q^{\mu}
+  & = \partial_{\lambda} \left( \partial_{\lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} \right) = \\
+  & = \partial_{\lambda \lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} + \partial_\lambda x^{\alpha} \partial_{\lambda} \partial_{x^\alpha} q^{\mu} = \\
+  & = \partial_{\lambda \lambda} x^{\alpha} \partial_{x^\alpha} q^{\mu} + \partial_\lambda x^{\alpha} \partial_{\lambda} x^\beta \partial_{x^\alpha x^\beta} q^{\mu} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, the geodesic equation becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{0}
+  & = \mathbf{b}_\mu \left\{ {\color{red} \ddot{q}^{\mu}} + \Gamma_{\nu \sigma}^{\mu} \dot{q}^{\nu} \dot{q}^{\sigma} \right\} = \\
+  & = \mathbf{b}_\mu \left\{ {\color{red} \ddot{x}^{\alpha} \partial_{x^\alpha} q^{\mu} + \dot{x}^\alpha \dot{x}^\beta \partial_{x^\alpha x^\beta} q^{\mu}} + \dot{x}^\alpha \dot{x}^\beta \Gamma_{\nu \sigma}^{\mu} \partial_{x^\alpha} q^{\nu} \partial_{x^\beta} q^{\sigma} \right\} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The \(\mu^{\rm th}\) component becomes
+\begin{equation*}
+\begin{split}M^{\mu}_{\ \alpha} \ddot{x}^{\alpha} + G^{\mu}_{\ \ \alpha \beta} \dot{x}^\alpha \dot{x}^\beta = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(M^{\mu}_{\ \alpha}(x) := \partial_{x^\alpha} q^{\mu}(x)\), and \(G^{\mu}_{\ \alpha \beta}(x) := \partial_\beta M^{\mu}_{\ \alpha}(x) + \Gamma^{\mu}_{\ \nu \sigma}(q(x)) M^{\nu}_{\ \alpha}(x) M^{\sigma}_{\ \beta}(x)\). Multiplying by \(\left( M^{-1} \right)^{\gamma}_{\ \ \mu}\) and summing over repeated indices \(\mu\) isolates the second order derivative
+\begin{equation*}
+\begin{split}\ddot{x}^\gamma + \left( M^{-1}(x) \right)^\gamma_{\ \ \mu} G^{\mu}_{\ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta = 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Polynomial expansions.}
+\subsubsection*{Old route}
+
+\sphinxAtStartPar
+Useful results
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Christoffel symbols as a function of the coordinates \(x^\alpha\), \({\Gamma'}^{\gamma}_{\ \ \alpha \beta} = \tfrac{\partial \mathbf{b}_{\alpha}}{\partial x^{\beta}} \cdot \mathbf{b}^{\gamma}\), \eqref{equation:ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:eq-gamma-transf-q}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     {\Gamma'}^{\gamma}_{\ \ \alpha \beta}(x^\varphi) 
+     & = \left(  \partial_{x^\alpha x^\beta} q^{\mu} (x^\varphi) + \partial_{x^\beta} q^{\nu}(x^\varphi) \partial_{x^\alpha} q^{\sigma}(x^\varphi) \Gamma_{\nu \sigma}^{\mu}(q^{\xi}(x^\varphi)) \right) \, \partial_{x^\delta} q^{\xi}(x^\varphi)  \, g_{\mu \xi}(q^\xi(x^\varphi)) \, \eta^{\delta \gamma} \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+Forcing \({\Gamma'}^{\gamma}_{\ \ \alpha \beta}(P) = 0\), i.e. for \(x^\varphi = 0\), for regular parametrization and non\sphinxhyphen{}singular points in the metrics implies
+\begin{equation*}
+\begin{split}\begin{aligned}
+     0
+     & = \partial_{x^\alpha x^\beta} q^{\mu} (x^\varphi) + \partial_{x^\beta} q^{\nu}(x^\varphi) \, \partial_{x^\alpha} q^{\sigma}(x^\varphi) \, \Gamma_{\nu \sigma}^{\mu}(q^{\xi}(x^\varphi)) = \\
+     & = 
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
 
 \subsubsection{Counting check}
 \label{\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:counting-check}}\begin{itemize}
@@ -2855,6 +3681,586 @@ g_{00}=(1+a_ix^i)^2-(\boldsymbol\omega\times\mathbf x)^2+\dots
 \sphinxAtStartPar
 In flat spacetime with \(a=\text{const}\) and \(\boldsymbol\omega=0\) this is exactly the Rindler metric of Section 6.
 
+\sphinxstepscope
+
+
+\section{Geodesics}
+\label{\detokenize{ch/relativity-general/geodesics:geodesics}}\label{\detokenize{ch/relativity-general/geodesics:general-relativity-geodesics}}\label{\detokenize{ch/relativity-general/geodesics::doc}}
+
+\subsection{…}
+\label{\detokenize{ch/relativity-general/geodesics:id1}}
+
+\subsection{Geodesics deviation equation}
+\label{\detokenize{ch/relativity-general/geodesics:geodesics-deviation-equation}}\label{\detokenize{ch/relativity-general/geodesics:general-relativity-geodesics-deviation}}
+\sphinxAtStartPar
+Let a region of spacetime be parametrized by two parameters, \(\mathbf{X}\left( q^{\mu}(\lambda, s) \right)\), so that
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{geodesics} are constant\sphinxhyphen{}\(s\) lines parametrized by \(\lambda\), \(\mathbf{X}(\lambda, \bar{s})\). The velocity vector is
+\begin{equation*}
+\begin{split}\mathbf{U} = \partial_{\lambda} \mathbf{X} = \partial_{\lambda} q^{\mu} \mathbf{b}_{\mu} = U^{\mu} \mathbf{b}_{\mu}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+two neighboring geodesics are separated by
+\begin{equation*}
+\begin{split}\Delta \mathbf{X} = \mathbf{X}(\lambda, s+ds) - \mathbf{X}(\lambda, s) \sim ds \, \partial_s \mathbf{X} = ds \, \partial_s q^{\mu} \, \partial_{\mu} \mathbf{X} = ds \, \xi^{\mu} \mathbf{b}_{\mu} \ .\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Since mixed partial derivatives of a multi\sphinxhyphen{}variable function are equal, and \(U^{\mu} = \partial_{\lambda} q^{\mu}\), \(\xi^{\mu} = \partial_s q^{\mu}\), then
+\begin{equation*}
+\begin{split}\partial_s U^{\mu} = \partial_\lambda \xi^{\mu} \ .\end{split}
+\end{equation*}
+
+\subsubsection{Velocity of the geodesics deviation}
+\label{\detokenize{ch/relativity-general/geodesics:velocity-of-the-geodesics-deviation}}\label{\detokenize{ch/relativity-general/geodesics:general-relativity-geodesics-deviation-velocity}}
+\sphinxAtStartPar
+The evolution of the deviation elementary “segment” \(\Delta \mathbf{X} = \Delta s \, \partial_s q^{\mu} \mathbf{b}_{\mu}\) follows from the comparison of two neighboring geodesics. The velocity of the deviation is
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Delta \mathbf{U} 
+  & := \partial_\lambda \Delta \mathbf{X} = \\
+  & = \partial_\lambda q^{\mu}(\lambda,s+ds) \mathbf{b}_{\mu}(\lambda,s+ds) - \partial_\lambda q^{\mu}(\lambda,s) \mathbf{b}_{\mu}(\lambda,s) = \\
+  & = \Delta s \left\{ \partial_{\lambda s} q^{\mu} + \Gamma^{\mu}_{\nu \sigma} \dfrac{\partial q^{\nu}}{\partial s} \dfrac{\partial q^{\sigma}}{\partial \lambda} \right\} \mathbf{b}_{\mu} + o\left(\Delta s\right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\partial_s \mathbf{b}_{\mu} = \partial_s q^{\nu} \partial_{\nu} \mathbf{b}_{\mu} = \partial_s q^{\nu} \Gamma^{\sigma}_{\nu \mu} \mathbf{b}_{\sigma}\).
+
+
+\subsubsection{Acceleration of the geodesics deviation}
+\label{\detokenize{ch/relativity-general/geodesics:acceleration-of-the-geodesics-deviation}}\label{\detokenize{ch/relativity-general/geodesics:general-relativity-geodesics-deviation-acceleration}}
+\sphinxAtStartPar
+The acceleration of the deviation is
+\begin{equation*}
+\begin{split}\Delta \mathbf{A} = \Delta s \, R^{\rho}_{\ \ \sigma \mu \nu} U^{\sigma} U^{\mu} \xi^{\nu} \, \mathbf{b}_{\rho} + o(\Delta s) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(R^{\rho}_{\ \ \sigma \mu \nu}\) the components of the Riemann tensor in the natural basis induced by the coordinates \(q^{\mu}\).
+\subsubsection*{Details}
+
+\sphinxAtStartPar
+The acceleration of the deviation
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \Delta \mathbf{A}
+  & := \partial_{\lambda} \Delta \mathbf{U} = \\
+  & = \Delta s \Big\{
+    \underbrace{{\color{red}\partial_{\lambda \lambda s} q^{\mu}}}_{\partial_s \partial_{\lambda \lambda} q^{\mu}} + \partial_{\lambda} \Gamma^{\mu}_{\nu \sigma} \partial_s q^{\nu} \partial_\lambda q^{\sigma} + \Gamma^{\mu}_{\nu \sigma} \partial_{\lambda s} q^{\nu} \partial_\lambda q^{\sigma} + \Gamma^{\mu}_{\nu \sigma} \partial_s q^{\nu} \underbrace{ {\color{blue} \partial_{\lambda \lambda} q^{\sigma} } }_{-\Gamma^{\sigma}_{\xi \chi} \partial_\lambda q^{\xi} \partial_\lambda q^{\chi}, \ \text{geodesics}}        + \\
+  & \qquad \ \  + \left. \partial_{\lambda s} q^{\chi} \partial_\lambda q^{\nu} \Gamma^{\mu}_{\chi \nu} + \partial_s q^{\nu} \partial_\lambda q^{\sigma} \partial_{\lambda} q^{\xi} \Gamma^{\chi}_{\nu \sigma} \Gamma^{\mu}_{\xi \chi} 
+  \right\} \mathbf{b}_{\mu} + o(\Delta s) = && (1) \\
+  & = \Delta s \Big\{
+  {\color{red}
+  - \partial_{s} \Gamma^{\mu}_{\nu \sigma} \partial_\lambda q^{\nu} \partial_\lambda q^{\sigma}  }
+  {\color{red} - } \underbrace{{\color{red} \Gamma^{\mu}_{\nu \sigma} \partial_{\lambda s} q^{\nu} \partial_\lambda q^{\sigma}}}_{1}
+  {\color{red} - } \underbrace{{\color{red} \Gamma^{\mu}_{\nu \sigma} \partial_\lambda q^{\nu} \partial_{\lambda s} q^{\sigma}}}_{2}
+  + \\
+  & \qquad \quad + \left. \partial_{\lambda} \Gamma^{\mu}_{\nu \sigma} \partial_s q^{\nu} \partial_\lambda q^{\sigma} + \underbrace{ \Gamma^{\mu}_{\nu \sigma} \partial_{\lambda s} q^{\nu} \partial_\lambda q^{\sigma} }_{1} {\color{blue} - } \Gamma^{\mu}_{\nu \sigma} {\color{blue} \Gamma^{\sigma}_{\xi \chi} \partial_\lambda q^{\xi} \partial_\lambda q^{\chi} } \partial_s q^{\nu} \right. + \\
+  & \qquad \quad + \left. \underbrace{ \partial_{\lambda s} q^{\sigma} \partial_\lambda q^{\nu} \Gamma^{\mu}_{\sigma \nu} }_{2} + \partial_s q^{\nu} \partial_\lambda q^{\sigma} \partial_{\lambda} q^{\xi} \Gamma^{\chi}_{\nu \sigma} \Gamma^{\mu}_{\xi \chi} 
+  \right\} \mathbf{b}_{\mu} + o(\Delta s) = && (2) \\
+  & = \Delta s \left\{
+  - \partial_{\sigma} \Gamma^{\rho}_{\mu \nu} + \partial_{\mu} \Gamma^{\rho}_{\nu \sigma} - \Gamma^{\rho}_{\sigma \lambda} \Gamma^{\lambda}_{\mu \nu} + \Gamma^{\lambda}_{\sigma \mu} \Gamma^{\rho}_{\nu \lambda} 
+  \right\} \, \partial_s q^{\sigma} \partial_{\lambda} q^{\mu} \partial_{\lambda} q^{\nu} \,  \mathbf{b}_{\rho} + o(\Delta s) = && (3) \\
+  & = \Delta s \left\{
+     \partial_{\mu} \Gamma^{\rho}_{\nu \sigma} - \partial_{\nu} \Gamma^{\rho}_{\mu \sigma} + \Gamma^{\rho}_{\mu \lambda} \Gamma^{\lambda}_{\nu \sigma} - \Gamma^{\rho}_{\nu \lambda} \Gamma^{\lambda}_{\mu \sigma}
+  \right\} \, \partial_s q^{\nu} \partial_{\lambda} q^{\mu} \partial_{\lambda} q^{\sigma} \,  \mathbf{b}_{\rho} + o(\Delta s) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \((1)\) the geodesics equation reads \(\partial_{\lambda \lambda} q^{\mu} = - \Gamma^{\mu}_{\nu \sigma} \partial_\lambda q^{\nu} \partial_\lambda q^{\sigma}\); \((2)\) \(\partial_s \Gamma^{\mu}_{\nu \sigma} = \partial_s q^{\chi} \partial_{\chi} \Gamma^{\mu}_{\nu \sigma}\); \((3)\) symmetry allows swapping some indices to make the components of the Riemann tensor in the natural basis appear
+\begin{equation*}
+\begin{split}R^{\rho}_{\ \ \sigma \mu \nu} = \partial_{\mu} \Gamma^{\rho}_{\ \ \nu \sigma} - \partial_{\nu} \Gamma^{\rho}_{\ \ \mu \sigma} + \Gamma^{\rho}_{\ \ \mu \lambda} \Gamma^{\lambda}_{\ \ \nu \sigma} - \Gamma^{\rho}_{\ \ \nu \lambda} \Gamma^{\lambda}_{\ \ \mu \sigma} \ .\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Linearization of the geodesic equation}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:linearization-of-the-geodesic-equation}}\label{\detokenize{ch/relativity-general/geodesics-linearization:general-relativity-geodesics-linearization}}\label{\detokenize{ch/relativity-general/geodesics-linearization::doc}}
+
+\subsection{…}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:id1}}
+
+\subsubsection{0. Starting point}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:starting-point}}
+\sphinxAtStartPar
+The geodesic equation for \(q^\mu(\lambda)=q^\mu(x(\lambda))\), with \(x^\alpha\) the Riemann normal coordinates at \(P\), reads
+\begin{equation*}
+\begin{split}
+M^\mu{}_\alpha\,\ddot x^\alpha+G^\mu{}_{\alpha\beta}\,\dot x^\alpha\dot x^\beta=0 ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(M^\mu{}_\alpha(x):=\partial_{x^\alpha}q^\mu(x)\) and \(G^\mu{}_{\alpha\beta}(x):=\partial_\beta M^\mu{}_\alpha(x)+\Gamma^\mu_{\nu\sigma}(q(x))\,M^\nu{}_\alpha(x)\,M^\sigma{}_\beta(x)\).
+
+\sphinxAtStartPar
+Multiplying by \((M^{-1}(x))^\gamma{}_\mu\) isolates the second derivative:
+\begin{equation*}
+\begin{split}
+\boxed{\;\ddot x^\gamma+(M^{-1}(x))^\gamma{}_\mu\,G^\mu{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta=0\;}
+\qquad\Longleftrightarrow\qquad
+\ddot x^\gamma+\tilde\Gamma^\gamma{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta=0,
+\qquad \tilde\Gamma:=M^{-1}G .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The goal is to expand \(M^{-1}\) and \(G\) in powers of \(x\) and multiply the two series.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Conventions.} \(\tilde e^\mu_\alpha\) is the tetrad at \(P\) and \(b^\alpha_\mu\) its inverse, \(b^\alpha_\mu\tilde e^\mu_\beta=\delta^\alpha_\beta\). The Riemann tensor is \(R^\alpha{}_{\beta\gamma\delta}=\partial_\gamma\Gamma^\alpha_{\beta\delta}-\partial_\delta\Gamma^\alpha_{\beta\gamma}+\Gamma^\alpha_{\gamma\lambda}\Gamma^\lambda_{\beta\delta}-\Gamma^\alpha_{\delta\lambda}\Gamma^\lambda_{\beta\gamma}\) (independent of the signature). All quantities at \(P\) are projected on the local frame, e.g.
+\begin{equation*}
+\begin{split}
+\Gamma^\kappa{}_{\alpha\beta}:=b^\kappa_\mu\Gamma^\mu_{\nu\sigma}(P)\tilde e^\nu_\alpha\tilde e^\sigma_\beta,\qquad
+\partial_\gamma\Gamma^\kappa{}_{\alpha\beta}:=b^\kappa_\mu\,\partial_\rho\Gamma^\mu_{\nu\sigma}(P)\,\tilde e^\rho_\gamma\tilde e^\nu_\alpha\tilde e^\sigma_\beta ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and similarly for \(R^\alpha{}_{\beta\gamma\delta}\) and its covariant derivatives. These frame components of \(\Gamma\) in the global coordinates are \sphinxstyleemphasis{not} tensors, and they all drop out of the final result.
+
+
+\subsubsection{1. Counting orders}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:counting-orders}}
+\sphinxAtStartPar
+Rescale \(x\to\varepsilon x\) at fixed \(\lambda\). Then \(x\), \(\dot x\) and \(\ddot x\) each carry one power of \(\varepsilon\). This is consistent because every term of the equation contains exactly two \(\lambda\)\sphinxhyphen{}derivatives, so the counting in amplitude is independent of the counting in derivatives. In the reduced equation,
+\begin{equation*}
+\begin{split}
+\ddot x\;\sim\;\varepsilon^1,\qquad \tilde\Gamma_n(x)\,\dot x\dot x\;\sim\;\varepsilon^{n+2},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\tilde\Gamma_n\) is the part of \(\tilde\Gamma\) homogeneous of degree \(n\) in \(x\).
+
+\sphinxAtStartPar
+Written with the constant projector \(b_\mu\) instead of \(M^{-1}(x)\), the equation contains cross terms such as \(\ddot x^\alpha x^\beta A^\mu{}_{\alpha\beta}\), which look second order. They are an artefact of \(b_\mu\neq M^{-1}(x)\). Since \(\ddot x\) is itself of order \(\ge3\) on shell, these terms are really of order \(\ge4\), and they are removed exactly by the factor \(M^{-1}(x)\).
+
+
+\subsubsection{2. Expansion of the map \protect\(q^\mu(x)\protect\)}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:expansion-of-the-map-q-mu-x}}
+\sphinxAtStartPar
+Normal coordinates are defined by the requirement that \(x^\alpha=\lambda u^\alpha\) is a geodesic for every constant \(u^\alpha\). Then \(\ddot x=0\) and \(\dot x=u\), so the equation along each ray gives \(G^\mu{}_{\alpha\beta}(x)\,x^\alpha x^\beta=0\). With the degree operator \(D:=x^\alpha\partial_\alpha\) (so \(x^\alpha x^\beta\partial_\alpha\partial_\beta=D(D-1)\) and \(x^\alpha M^\mu{}_\alpha=Dq^\mu\)), this is
+\begin{equation*}
+\begin{split}
+D(D-1)\,q^\mu+\Gamma^\mu_{\nu\sigma}(q)\,Dq^\nu\,Dq^\sigma=0 .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Write \(q^\mu=q_P^\mu+\sum_{k\ge1}q^\mu_k\), with \(q_k\) homogeneous of degree \(k\) (so \(Dq_k=k\,q_k\)). The degree\sphinxhyphen{}\(n\) part of the equation is
+\begin{equation*}
+\begin{split}
+n(n-1)\,q_n^\mu=-\Big[\Gamma^\mu_{\nu\sigma}(q)\,Dq^\nu Dq^\sigma\Big]_{\deg n},
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the right\sphinxhyphen{}hand side involves only \(q_k\) with \(k\le n-1\). The recursion is therefore triangular. Explicitly,
+\begin{equation*}
+\begin{split}
+q^\mu=q^\mu_P+\tilde e^\mu_\alpha x^\alpha+\tfrac12A^\mu{}_{\alpha\beta}x^\alpha x^\beta+\tfrac16B^\mu{}_{\alpha\beta\gamma}x^\alpha x^\beta x^\gamma+\tfrac1{24}D^\mu{}_{\alpha\beta\gamma\delta}x^\alpha x^\beta x^\gamma x^\delta+\dots
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+A^\kappa{}_{\alpha\beta}=-\Gamma^\kappa{}_{\alpha\beta},\qquad
+B^\kappa{}_{\alpha\beta\gamma}=-\partial_{(\gamma}\Gamma^\kappa{}_{\alpha\beta)}+2\,\Gamma^\kappa{}_{\lambda(\alpha}\Gamma^\lambda{}_{\beta\gamma)} ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(A,B,D,\dots\) are totally symmetric (Taylor coefficients of one function) and the indices are frame\sphinxhyphen{}projected. The next coefficient \(D\) follows from \(n=4\) of the same recursion. The first coefficient \(q_1=\tilde e^\mu_\alpha x^\alpha\) is the free choice of the tetrad.
+
+
+\subsubsection{3. Expansion of \protect\(M\protect\) and \protect\(M^{-1}\protect\)}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:expansion-of-m-and-m-1}}
+\sphinxAtStartPar
+Differentiating \(q^\mu(x)\),
+\begin{equation*}
+\begin{split}
+M^\mu{}_\alpha=\tilde e^\mu_\alpha+A^\mu{}_{\alpha\beta}x^\beta+\tfrac12B^\mu{}_{\alpha\beta\gamma}x^\beta x^\gamma+\tfrac16D^\mu{}_{\alpha\beta\gamma\delta}x^\beta x^\gamma x^\delta+\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Factor out the value at \(P\):
+\begin{equation*}
+\begin{split}
+M^\mu{}_\alpha=\tilde e^\mu_\beta\big(\delta^\beta_\alpha+N^\beta{}_\alpha(x)\big),\qquad
+N=N_1+N_2+\dots,
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+N_1{}^\beta{}_\alpha=a^\beta{}_{\alpha\gamma}x^\gamma,\qquad
+N_2{}^\beta{}_\alpha=\tfrac12\mathsf b^\beta{}_{\alpha\gamma\delta}x^\gamma x^\delta,\qquad
+N_3{}^\beta{}_\alpha=\tfrac16\mathsf d^\beta{}_{\alpha\gamma\delta\varepsilon}x^\gamma x^\delta x^\varepsilon,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(a=bA\), \(\mathsf b=bB\), \(\mathsf d=bD\) (frame projections). Since \(N=O(x)\), the Neumann series converges near \(P\):
+\begin{equation*}
+\begin{split}
+(M^{-1})^\gamma{}_\mu=\big[(1+N)^{-1}\big]^\gamma{}_\beta\,b^\beta_\mu=\Big[1-N_1+(N_1N_1-N_2)+\big(-N_1N_1N_1+N_1N_2+N_2N_1-N_3\big)+\dots\Big]^\gamma{}_\beta\,b^\beta_\mu .
+\end{split}
+\end{equation*}\subsubsection*{Inverse of a polynomial expansion}
+\begin{equation*}
+\begin{split}\begin{aligned}
+M^{\mu}_{\ \ \nu} 
+& = M^{\mu}_{0 \ \ \nu} + M^{\mu}_{1\ \ \nu \alpha} x^\alpha + \frac{1}{2} M^{\mu}_{2\ \ \nu \alpha \beta} x^\alpha x^\beta + \frac{1}{6} M^{\mu}_{3\ \ \nu \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots = \\
+& = M^{\mu}_{0 \ \ \eta} \left\{ \delta^{\eta}_{\ \nu} + \widetilde{M}^{\eta}_{1\ \ \nu \alpha} x^\alpha + \frac{1}{2} \widetilde{M}^{\eta}_{2\ \ \nu \alpha \beta} x^\alpha x^\beta + \frac{1}{6} \widetilde{M}^{\eta}_{3\ \ \nu \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots \right\} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\widetilde{M}^{\eta}_{i\ \ \nu \alpha \dots} = \left( M^{-1}_{0} \right)^{\eta}_{\ \ \mu} M^{\mu}_{i\ \ \nu \alpha \dots}\). Let \(P^{\nu}_{\ \ \sigma}\) s.t. \(M^{\mu}_{\ \ \nu} P^{\nu}_{\ \ \sigma} = \delta^{\mu}_{\ \ \sigma}\), with its polynomial expansion
+\begin{equation*}
+\begin{split}\begin{aligned}
+P^{\nu}_{\ \ \sigma} 
+& = P^{\nu}_{0 \ \ \sigma} + P^{\nu}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} P^{\nu}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} P^{\nu}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots = \\
+& = P^{\nu}_{0 \ \ \eta} \left\{ \delta^{\eta}_{\ \ \sigma} + \widetilde{P}^{\eta}_{1\ \ \sigma \alpha} x^\alpha + \frac{1}{2} \widetilde{P}^{\eta}_{2\ \ \sigma \alpha \beta} x^\alpha x^\beta + \frac{1}{6} \widetilde{P}^{\eta}_{3\ \ \sigma \alpha \beta \gamma} x^\alpha x^\beta x^\gamma + \dots \right\}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The unknown coefficients \(P^{\nu}_{i \ \ \sigma}\) of the polynomial series are evaluate matching coefficients in the inverse relation.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Zero\sphinxhyphen{}th order.} \(\delta^{\mu}_{\ \ \sigma} = M^{\mu}_{0\ \ \nu} P^{\nu}_{0 \ \ \sigma} \) implies \(P^{\nu}_{0\ \ \sigma} = \left( M_0^{-1} \right)^{\nu}_{\ \ \sigma}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{First order.}
+\begin{equation*}
+\begin{split}
+0 = M^{\mu}_{0 \ \ \nu} P^{\nu}_{1 \ \ \sigma \alpha } x^\alpha + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{0 \ \ \sigma} x^\alpha
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies for each \(\alpha\)
+\begin{equation*}
+\begin{split}
+P^{\nu}_{1 \ \ \sigma \alpha} 
+  = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} P^{\chi}_{0 \ \ \sigma} 
+  = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \xi} M^{\xi}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\widetilde{P}^{\nu}_{1\ \ \sigma \alpha} = - \widetilde{M}^{\nu}_{1\ \ \sigma \alpha} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Second order.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+0 
+& = x^\alpha x^\beta \left\{ \frac{1}{2} M^{\mu}_{0 \ \ \nu} P^{\nu}_{2 \ \ \sigma \alpha \beta} + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + \frac{1}{2} M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right\} = && \text{(sym.)} \\
+& = \frac{1}{2} x^\alpha x^\beta \left\{ M^{\mu}_{0 \ \ \nu} P^{\nu}_{2 \ \ \sigma \alpha \beta} + M^{\mu}_{1 \ \ \nu \alpha} P^{\nu}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \nu \beta} P^{\nu}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \nu \alpha \beta} P^{\nu}_{0 \ \ \sigma} \right\} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+implies
+\begin{equation*}
+\begin{split}\begin{aligned}
+P^{\nu}_{2 \ \ \sigma \alpha \beta} 
+  & = - \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} P^{\xi}_{1 \ \ \sigma\beta} + M^{\mu}_{1 \ \ \xi \beta} P^{\xi}_{1 \ \ \sigma\alpha} + M^{\mu}_{2 \ \ \xi \alpha \beta} P^{\xi}_{0 \ \ \sigma} \right) = \\
+  & =   \left( M^{-1}_0 \right)^{\nu}_{\ \ \mu} \left( M^{\mu}_{1 \ \ \xi \alpha} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \beta} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} + M^{\mu}_{1 \ \ \xi \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \eta} M^{\eta}_{1 \ \ \chi \alpha} \left( M^{-1}_{0} \right)^{\chi}_{\ \ \sigma} - M^{\mu}_{2 \ \ \xi \alpha \beta} \left( M^{-1}_0 \right)^{\xi}_{\ \ \sigma} \right) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\widetilde{P}^{\nu}_{2\ \ \sigma \alpha \beta} = \widetilde{M}^{\nu}_{1 \ \ \xi \alpha} \widetilde{M}^{\xi}_{1 \ \ \sigma \beta} + \widetilde{M}^{\nu}_{1 \ \ \xi \beta} \widetilde{M}^{\xi}_{1 \ \ \sigma \alpha} - \widetilde{M}^{\nu}_{2 \ \ \sigma \alpha \beta} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{\(n^{\rm th}\)\sphinxhyphen{}order.} Recursion formula holds
+\begin{equation*}
+\begin{split}\widetilde{P}^{\nu}_{n \ \ \sigma \alpha_1 \dots \alpha_n} = \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Prove it!}
+\subsubsection*{Expansion of \protect\(\ \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta\protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \ddot{x}^\gamma + \left( M^{-1}(x) \right)^{\gamma}_{\ \ \mu} G^{\mu}_{\ \ \alpha \beta}(x) \dot{x}^\alpha \dot{x}^\beta = \\
+  & = \ddot{x}^\gamma + \left( P^{\gamma}_{0\ \ \mu} + P^{\gamma}_{1 \ \ \mu\xi} x^{\xi} + \dots \right) \left( G^{\mu}_{0\ \ \alpha \beta} + G^{\mu}_{1\ \ \xi\alpha\beta} x^{\xi} + \dots \right) \dot{x}^\alpha \dot{x}^\beta \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Third\sphinxhyphen{}order.} Choosing Riemann normal coordinates, \(G^{\mu}_{0\ \ \alpha \beta} = 0\), so the third\sphinxhyphen{}order contribution reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  P^{\gamma}_{0\ \ \mu} G^{\mu}_{1\ \ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi
+  & = e^{\gamma}_{\ \ \mu} \left( B^{\mu}_{\ \alpha \beta \xi} + \partial_{x^{\xi}} \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) A^{\nu}_{\ \ \alpha \xi} \widetilde{e}^{\sigma}_{\ \ \beta} + \Gamma^{\mu}_{\nu \sigma}(P) \widetilde{e}^{\nu}_{\ \ \alpha} A^{\sigma}_{\ \ \beta \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_{x^\xi} \Gamma^{\mu}_{\nu \sigma} & = \partial_{x^\xi} q^{\rho} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} = \widetilde{e}^{\rho}_{\xi} \partial_{q^{\rho}} \Gamma^{\mu}_{\nu \sigma} \\
+  A^{\lambda}_{\ \ \alpha \beta} & = -\Gamma^{\lambda}_{\phi \zeta}(P) \widetilde{e}^{\phi}_{\ \alpha} \widetilde{e}^{\zeta}_{\ \beta} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and observing that
+\begin{equation*}
+\begin{split}\begin{aligned}
+  G^{\mu}_{1\ \ \alpha \beta \xi}
+  & = B^{\mu}_{\ \ \alpha \beta \xi} + \left( \partial_{\rho} \Gamma^{\mu}_{\nu \sigma} - \Gamma^{\mu}_{\chi \sigma} \Gamma^{\chi}_{\nu \rho} - \Gamma^{\mu}_{\nu \chi} \Gamma^{\chi}_{\sigma \rho} \right) \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  & = B^{\mu}_{\ \ \alpha \beta \xi} + \widetilde{K}^{\mu}_{\ \nu \sigma \rho} \widetilde{e}^{\nu}_{\ \alpha} \widetilde{e}^{\sigma}_{\ \beta} \widetilde{e}^{\rho}_{\ \xi} = \\
+  & = B^{\mu}_{\ \alpha \beta \xi} + K^{\mu}_{\ \alpha \beta \xi} \\
+  & =: T^{\mu}_{\ \alpha \beta \xi}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Recalling that \(T^{\mu}_{\ \alpha \beta \xi} = - \tfrac{1}{3} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right)\) for Riemann normal coordinates, the polynomial expansion of the geodesics equation up to the third order reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \ddot{x}^\gamma - \frac{1}{3} e^\gamma_{\ \mu} \left( \bar{R}^{\mu}_{\ \alpha \beta \xi} + \bar{R}^{\mu}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi = \\
+  & = \ddot{x}^\gamma - \frac{1}{3} \left( {R'}^{\gamma}_{\ \alpha \beta \xi} + {R'}^{\gamma}_{\ \beta \alpha \xi} \right) \dot{x}^\alpha \dot{x}^\beta x^\xi \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having projected here also the upper index on the local Minkowski vector basis, and exploiting symmetry of dummy indices
+\begin{equation*}
+\begin{split}
+  \ddot{x}^\gamma = \frac{2}{3} {R'}^{\gamma}_{\ \alpha \beta \xi} \dot{x}^\alpha \dot{x}^\beta x^\xi \ .
+\end{split}
+\end{equation*}
+
+\bigskip\hrule\bigskip
+
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{see {\hyperref[\detokenize{ch/relativity-general/local-inertial-reference-frame-and-equivalence-principle:general-relativity-local-inertial-reference-frame}]{\sphinxcrossref{\DUrole{std,std-ref}{local inertial reference frame}}}} and clean this and those notes} \sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(B^{\mu}_{\ \alpha \lambda \gamma}\) symmetric under any swap of lower indices
+
+\item {} 
+\sphinxAtStartPar
+\(K^{\mu}_{\ \alpha \lambda \gamma} = \left( \partial_{\chi} \Gamma^{\mu}_{\phi \sigma} - \Gamma^{\mu}_{\phi \xi} \Gamma^{\xi}_{\chi \sigma} - \Gamma^{\mu}_{\sigma \xi} \Gamma^{\xi}_{\phi \chi} \right) \widetilde{e}^{\phi}_{\alpha} \widetilde{e}^{\sigma}_{\lambda} \widetilde{e}^{\chi}_{\gamma}\), is symmetric under \(\alpha \leftrightarrow \lambda\)
+
+\item {} 
+\sphinxAtStartPar
+\(T^{\mu}_{\ \alpha \lambda \gamma} = B^{\mu}_{\ \alpha \lambda \gamma} + K^{\mu}_{\ \alpha \lambda \gamma}\), symmetric under \(\alpha \leftrightarrow \lambda\)
+
+\end{itemize}
+
+
+\bigskip\hrule\bigskip
+
+
+
+
+
+\subsubsection{4. Expansion of \protect\(G\protect\)}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:expansion-of-g}}
+\sphinxAtStartPar
+Projecting on the frame, \(g^\kappa{}_{\alpha\beta}(x):=b^\kappa_\mu G^\mu{}_{\alpha\beta}(x)=g_0+g_1+g_2+\dots\), with \(g_n\) homogeneous of degree \(n\). The ingredients are
+\begin{equation*}
+\begin{split}
+\partial_\beta M^\mu{}_\alpha=A^\mu{}_{\alpha\beta}+B^\mu{}_{\alpha\beta\gamma}x^\gamma+\tfrac12D^\mu{}_{\alpha\beta\gamma\delta}x^\gamma x^\delta+\dots,
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\Gamma^\mu_{\nu\sigma}(q(x))=\Gamma^\mu_{\nu\sigma}+\partial_\rho\Gamma^\mu_{\nu\sigma}\,\Delta q^\rho+\tfrac12\partial_\rho\partial_\tau\Gamma^\mu_{\nu\sigma}\,\Delta q^\rho\Delta q^\tau+\dots,\qquad
+\Delta q^\rho=\tilde e^\rho_\alpha x^\alpha+\tfrac12A^\rho{}_{\alpha\beta}x^\alpha x^\beta+\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Multiplying the series order by order (all \(\Gamma\)’s are evaluated at \(P\) and projected on the frame):
+\begin{equation*}
+\begin{split}
+g_0{}^\kappa{}_{\alpha\beta}=A^\kappa{}_{\alpha\beta}+\Gamma^\kappa{}_{\alpha\beta}=0,
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+g_1{}^\kappa{}_{\alpha\beta}=\Big[\mathsf b^\kappa{}_{\alpha\beta\gamma}+\partial_\gamma\Gamma^\kappa{}_{\alpha\beta}-\Gamma^\kappa{}_{\lambda\beta}\Gamma^\lambda{}_{\alpha\gamma}-\Gamma^\kappa{}_{\alpha\lambda}\Gamma^\lambda{}_{\beta\gamma}\Big]x^\gamma,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and \(g_2\) follows by collecting all products of total degree 2 (it involves \(\mathsf d\), \(\mathsf b\), \(a\), \(\Gamma\), \(\partial\Gamma\) and \(\partial\partial\Gamma\)). Here \(g_0=0\) is the statement that the quadratic coefficient \(A\) cancels the connection at \(P\).
+
+
+\subsubsection{5. The product \protect\(\tilde\Gamma=M^{-1}G\protect\) order by order}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:the-product-tilde-gamma-m-1-g-order-by-order}}
+\sphinxAtStartPar
+From \((1+N)\,\tilde\Gamma=g\) one gets the recursion
+\begin{equation*}
+\begin{split}
+\tilde\Gamma_n=g_n-\sum_{k=1}^{n-1}N_k\,\tilde\Gamma_{n-k},\qquad \tilde\Gamma_0=g_0=0,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that is
+\begin{equation*}
+\begin{split}
+\tilde\Gamma_1=g_1,\qquad
+\tilde\Gamma_2=g_2-N_1\,g_1,\qquad
+\tilde\Gamma_3=g_3-N_1\tilde\Gamma_2-N_2\,g_1,\;\dots
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Equivalently, the geodesic equation expanded in \(\varepsilon\) is
+\begin{equation*}
+\begin{split}
+\ddot x^\kappa=-\sum_{n\ge1}\tilde\Gamma_n{}^\kappa{}_{\alpha\beta}(x)\,\dot x^\alpha\dot x^\beta ,\qquad
+\text{the term }n\text{ being of order }\varepsilon^{n+2}.
+\end{split}
+\end{equation*}
+
+\subsubsection{6. Results order by order}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:results-order-by-order}}
+\sphinxAtStartPar
+\sphinxstylestrong{Order \(\varepsilon^1\).} \(\;\ddot x^\alpha=0\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Order \(\varepsilon^2\).} The only candidate is \(\tilde\Gamma_0\dot x\dot x=g_0\dot x\dot x=0\), which vanishes. The second\sphinxhyphen{}order information is entirely in \(A=-\Gamma\tilde e\tilde e\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Order \(\varepsilon^3\).} Inserting \(\mathsf b\) from Section 2 into \(g_1\) and contracting with \((u,u,x)\) for \(\alpha,\beta,\gamma\), all quantities combine into
+\begin{equation*}
+\begin{split}
+g_1(u,u,x)^\kappa=\tfrac23\Big[\partial_x\Gamma^\kappa_{uu}-\partial_u\Gamma^\kappa_{ux}+\Gamma^\kappa_{\lambda x}\Gamma^\lambda_{uu}-\Gamma^\kappa_{\lambda u}\Gamma^\lambda_{ux}\Big]=\tfrac23R^\kappa{}_{uxu}=-\tfrac23R^\kappa{}_{\beta\gamma\delta}u^\beta u^\gamma x^\delta .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The non\sphinxhyphen{}tensorial \(\Gamma\) terms cancel against the \(\mathsf b\) term of the expansion of \(q\). Since \(g_1\) is symmetric in \((\alpha\beta)\), this fixes it completely:
+\begin{equation*}
+\begin{split}
+\tilde\Gamma^\kappa{}_{\alpha\beta}\Big|_{1}=-\tfrac13\big(R^\kappa{}_{\alpha\beta\gamma}+R^\kappa{}_{\beta\alpha\gamma}\big)x^\gamma ,
+\qquad
+\boxed{\ddot x^\kappa=\tfrac23\,R^\kappa{}_{\beta\gamma\delta}\,\dot x^\beta\dot x^\gamma x^\delta+O(\varepsilon^4)} .
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Check: if \(x\parallel\dot x\) (a geodesic through \(P\)), the right\sphinxhyphen{}hand side vanishes by the antisymmetry of \(R\) in \(\gamma\delta\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Order \(\varepsilon^4\).} Here \(\tilde\Gamma_2=g_2-N_1g_1\) and the non\sphinxhyphen{}tensorial pieces again cancel. The result contains only \(\nabla R\). It can be obtained either by the explicit multiplication, or from the following two properties:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\(\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}(x)\,x^\alpha x^\beta=0\) (rays are geodesics).
+
+\item {} 
+\sphinxAtStartPar
+\(\nabla_\varepsilon R^\kappa{}_{\alpha\gamma\beta}\,x^\varepsilon=\partial_\gamma\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}-\partial_\beta\tilde\Gamma_2{}^\kappa{}_{\alpha\gamma}\) (the curvature at degree 1; here \(\partial R=\nabla R\) at \(P\) because \(\tilde\Gamma(0)=0\)).
+
+\end{enumerate}
+
+\sphinxAtStartPar
+Solving these (the totally symmetric part of the coefficient tensor vanishes by 1, and the rest is fixed by 2) gives
+\begin{equation*}
+\begin{split}
+\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}=\tfrac1{24}\Big[\,5\big(\nabla_x R^\kappa{}_{\alpha x\beta}+\nabla_x R^\kappa{}_{\beta x\alpha}\big)-\nabla_\beta R^\kappa{}_{x\alpha x}-\nabla_\alpha R^\kappa{}_{x\beta x}\Big],
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where a subscript \(x\) means contraction with \(x^\delta\), e.g. \(\nabla_xR^\kappa{}_{\alpha x\beta}=x^\varepsilon x^\delta\nabla_\varepsilon R^\kappa{}_{\alpha\delta\beta}\) and \(R^\kappa{}_{x\alpha x}=R^\kappa{}_{\delta\alpha\varepsilon}x^\delta x^\varepsilon\). Hence
+\begin{equation*}
+\begin{split}
+\ddot x^\kappa=-\tilde\Gamma_2{}^\kappa{}_{\alpha\beta}\,\dot x^\alpha\dot x^\beta+(\text{order }\varepsilon^5).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Check: tracing over \(\kappa=\alpha\) gives \(-\tfrac1{12}\big(2\nabla_xR_{\beta x}+\nabla_\beta R_{xx}\big)\) (Ricci tensor \(R_{\beta\delta}=R^\kappa{}_{\beta\kappa\delta}\) and the contracted Bianchi identity), which is \(\partial_\beta\ln\sqrt{|g|}\) at the corresponding order in normal coordinates.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Order \(\varepsilon^5\) and beyond.} \(\tilde\Gamma_3\) contains \(\nabla\nabla R\) and \(R^2\), and so on. Every \(\tilde\Gamma_n\) is a tensor built from \(R\) and its covariant derivatives, because the frame components \(\Gamma\) cancel at each order.
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+order
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+content
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+equation
+\\
+\hline
+\sphinxAtStartPar
+\(\varepsilon^1\)
+&
+\sphinxAtStartPar
+—
+&
+\sphinxAtStartPar
+\(\ddot x=0\)
+\\
+\hline
+\sphinxAtStartPar
+\(\varepsilon^2\)
+&
+\sphinxAtStartPar
+\(\tilde\Gamma_0=0\)
+&
+\sphinxAtStartPar
+no new term
+\\
+\hline
+\sphinxAtStartPar
+\(\varepsilon^3\)
+&
+\sphinxAtStartPar
+\(\tilde\Gamma_1\propto R\,x\)
+&
+\sphinxAtStartPar
+\(\ddot x^\kappa=\tfrac23R^\kappa{}_{\beta\gamma\delta}\dot x^\beta\dot x^\gamma x^\delta\)
+\\
+\hline
+\sphinxAtStartPar
+\(\varepsilon^4\)
+&
+\sphinxAtStartPar
+\(\tilde\Gamma_2\propto\nabla R\,xx\)
+&
+\sphinxAtStartPar
+\(\ddot x=-\tilde\Gamma_2\dot x\dot x\)
+\\
+\hline
+\sphinxAtStartPar
+\(\varepsilon^5\)
+&
+\sphinxAtStartPar
+\(\tilde\Gamma_3\propto\nabla\nabla R,\;R^2\)
+&
+\sphinxAtStartPar
+next
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{7. Solving the expanded equation}
+\label{\detokenize{ch/relativity-general/geodesics-linearization:solving-the-expanded-equation}}
+\sphinxAtStartPar
+Take \(x(0)=x_0\) and \(\dot x(0)=v\), both of order \(\varepsilon\). At leading order \(x=x_0+v\lambda\). Inserting it in the \(\varepsilon^3\) equation and using \(R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma v^\delta=0\),
+\begin{equation*}
+\begin{split}
+\ddot x^\kappa=\tfrac23R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma x_0^\delta,
+\qquad
+x^\kappa(\lambda)=x_0^\kappa+v^\kappa\lambda+\tfrac13R^\kappa{}_{\beta\gamma\delta}v^\beta v^\gamma x_0^\delta\,\lambda^2+O(\varepsilon^4).
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Composing with \(q^\mu(x)\) from Section 2 gives \(q^\mu(\lambda)\) to the same order.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Geodesic deviation.} For \(x=u\lambda+\xi\), linearizing the \(\varepsilon^3\) equation gives
+\(\ddot\xi^\alpha=\tfrac23\big[R^\alpha{}_{\beta\gamma\delta}u^\beta u^\gamma\xi^\delta+\lambda R^\alpha{}_{\beta\gamma\delta}u^\beta\dot\xi^\gamma u^\delta\big]\).
+This is not covariant: the factor \(2/3\) and the explicit \(\lambda\) term come from \(\xi\) being a coordinate difference. With the covariant derivative along \(u\lambda\), \(\frac{D\xi}{d\lambda}=\dot\xi+\tilde\Gamma_1(u,\xi)\), the extra terms cancel and
+\begin{equation*}
+\begin{split}
+\frac{D^2\xi^\alpha}{d\lambda^2}=R^\alpha{}_{\beta\gamma\delta}\,u^\beta u^\gamma\xi^\delta=-R^\alpha{}_{\beta\gamma\delta}\,u^\beta\xi^\gamma u^\delta .
+\end{split}
+\end{equation*}
 \sphinxstepscope
 
 
@@ -4705,9 +6111,9 @@ L.Onsager, 1944, \sphinxurl{https://arxiv.org/html/2412.07328v1} \sphinxstyleemp
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Lattice dimensions: 32,32
 Initial conditions:
-Energy       : \PYGZhy{}24.0
-N. of spin up: 516
-Magnetization: 8
+Energy       : \PYGZhy{}16.0
+N. of spin up: 513
+Magnetization: 2
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4765,9 +6171,9 @@ Magnetization: 8
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{2eac0ef9991e071d21679eab4be7164a45921085ebb586211a7835dbc2975cff}.png}
+\noindent\sphinxincludegraphics{{6c3d6270f91ab702be3f702a3144ad7181c8c327284b31d0c61efc3642fe4a4b}.png}
 
-\noindent\sphinxincludegraphics{{c6f0836888463ae6ad98cc1c03ab8538c490718bc08b68ff9b818866226827e0}.png}
+\noindent\sphinxincludegraphics{{1469e9737c186d0cb1c9fea3ab7c4527687172246a0392094b2ca36f04165b0d}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -4831,9 +6237,9 @@ Magnetization: 8
 Text(0, 0.5, \PYGZsq{}P(M)\PYGZsq{})
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{d35f97cf9b49962ded0a806f111ba541fe3d9760e8e2be9d6f0ff09d438d336e}.png}
+\noindent\sphinxincludegraphics{{87037a984d1bbeb6462e4b95c0d7250dd7156c27634522613045866f0392f755}.png}
 
-\noindent\sphinxincludegraphics{{443c8db891a95a2afc2062838b66b66c6d810ea3d8fcbee7248b2cf5f88d6835}.png}
+\noindent\sphinxincludegraphics{{41dc143a7dfbb4e5a9a59b083a790fd2d9b3e135fd9cba84c14df17ce7f18e0b}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8428,7 +9834,7 @@ where Fermi’s Golden Rule gives the absorption rate \(W_{a \to b}\):
 \begin{sphinxuseclass}{tag_hide-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{40676585d828fcf5e72dcd277f05887830f12eb7ec97433159f5e5be89c2c591}.png}
+\noindent\sphinxincludegraphics{{f3c52226bec3717eb2e8628c2a6dc3bf04cde19f98a6ae9e6b802aad5109b82d}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 

@@ -2,18 +2,18 @@
 \contentsline {part}{I\hspace {1em}Special Relativity}{3}{part.1}%
 \contentsline {chapter}{\numberline {1}Special Relativity}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Special Relativity \sphinxhyphen {} Notes}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Kinematics of point}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Dynamics of a point mass}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Lagrangian approach}{10}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Electromagnetism}{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Classical electromagnetic theory}{12}{subsection.2.3.1}%
-\contentsline {subsubsection}{Maxwell equations}{12}{subsubsection*.4}%
-\contentsline {subsubsection}{Electromagnetic potentials}{12}{subsubsection*.5}%
-\contentsline {subsubsection}{Lorentz force}{12}{subsubsection*.6}%
-\contentsline {subsection}{\numberline {2.3.2}Electromagnetic potential}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Electromagnetic field and electromagnetic field equations}{13}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Point particle in electromagnetic field}{15}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Energy balance}{15}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.1}Kinematics of a point}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Dynamics of a point mass}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Lagrangian approach}{11}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Electromagnetism}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Classical electromagnetic theory}{13}{subsection.2.3.1}%
+\contentsline {subsubsection}{Maxwell equations}{13}{subsubsection*.4}%
+\contentsline {subsubsection}{Electromagnetic potentials}{13}{subsubsection*.5}%
+\contentsline {subsubsection}{Lorentz force}{14}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {2.3.2}Electromagnetic potential}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Electromagnetic field and electromagnetic field equations}{15}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Point particle in electromagnetic field}{16}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Energy balance}{16}{subsection.2.3.5}%
 \contentsline {chapter}{\numberline {3}Inertial reference frames and Lorentz’s transformations}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Lorentz’s transformations}{19}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Lorentz’s transformations in standard configuration}{19}{subsection.3.1.1}%
@@ -22,13 +22,12 @@
 \contentsline {section}{\numberline {3.3}Transformation of tensor components}{21}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Electromagnetism}{25}{chapter.4}%
 \contentsline {chapter}{\numberline {5}“Constant” acceleration observer and Rindler coordinates}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}3+1 and 4D Kinematics of an Accelerated Point}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}4\sphinxhyphen {}Vector Definitions in an Inertial Frame}{27}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Uniformly Accelerated Trajectory}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.1}3+1 and 4D Kinematics of a point}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Uniformly accelerated point}{27}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Construction of the Accelerated Observer Frame \& Rindler Coordinates}{28}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Coordinate Assignment for Event \(Q\)}{29}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Definition of Rindler Coordinates \((\miteta , \bar {\mitxi })\)}{29}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Metric Tensor in Rindler Coordinates}{29}{section.5.4}%
+\contentsline {subsection}{\numberline {5.3.1}Generic event \(Q\)}{29}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Definition of Rindler Coordinates \((\miteta , \mitxi )\)}{29}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Metric tensor in Rindler coordinates}{29}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Natural Basis Vectors and Dual Metric Components}{30}{subsection.5.4.1}%
 \contentsline {section}{\numberline {5.5}Christoffel Symbols \& Riemann Tensor}{30}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Derivatives of Basis Vectors}{30}{subsection.5.5.1}%
@@ -42,10 +41,10 @@
 \contentsline {section}{\numberline {7.1}Differential Geometry}{37}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Gradient, covariant derivative and directional derivative}{38}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Curvature Tensor}{39}{subsection.7.1.2}%
-\contentsline {subsubsection}{Ricci’s tensor}{40}{subsubsection*.7}%
-\contentsline {subsubsection}{Curvature scalar}{40}{subsubsection*.8}%
-\contentsline {subsubsection}{Properties}{40}{subsubsection*.9}%
-\contentsline {paragraph}{Divergence of Ricci’s tensor}{41}{paragraph*.10}%
+\contentsline {subsubsection}{Ricci’s tensor}{40}{subsubsection*.10}%
+\contentsline {subsubsection}{Curvature scalar}{40}{subsubsection*.11}%
+\contentsline {subsubsection}{Properties}{40}{subsubsection*.12}%
+\contentsline {paragraph}{Divergence of Ricci’s tensor}{41}{paragraph*.13}%
 \contentsline {section}{\numberline {7.2}Einstein’s equation}{41}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Alternative expression of Einstein’s equations}{42}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Classical limit}{42}{subsection.7.2.2}%
@@ -54,317 +53,333 @@
 \contentsline {subsection}{\numberline {7.4.1}Properties of linearized Einstein field equation}{46}{subsection.7.4.1}%
 \contentsline {section}{\numberline {7.5}Local inertial reference frame and equivalence principle}{46}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Setting and notation}{46}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Local vector basis}{47}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Local set of coordinates}{47}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}First order: the tetrad}{47}{subsection.7.5.4}%
-\contentsline {subsection}{\numberline {7.5.5}Second order, \(\mitGamma ^{(x) \mitgamma }_{\mitalpha \mitbeta } = 0\), and \(\partial _{\mitgamma } g^{(x)}_{\mitalpha \mitbeta } = 0\)}{48}{subsection.7.5.5}%
-\contentsline {subsection}{\numberline {7.5.6}Third order in \(q^{\mitmu }(x^\mitalpha )\)}{49}{subsection.7.5.6}%
-\contentsline {subsubsection}{3.1 Decomposition of \(T\)}{49}{subsubsection*.11}%
-\contentsline {subsubsection}{Riemann normal coordinates}{49}{subsubsection*.12}%
-\contentsline {subsubsection}{The metric to second order}{50}{subsubsection*.13}%
-\contentsline {subsubsection}{Counting check}{50}{subsubsection*.14}%
-\contentsline {subsubsection}{Summary: what each order does}{50}{subsubsection*.15}%
-\contentsline {subsection}{\numberline {7.5.7}The equivalence principle}{50}{subsection.7.5.7}%
-\contentsline {subsection}{\numberline {7.5.8}Example: uniformly accelerated frame in free space \sphinxhyphen {} Rindler coordinates in special relativity}{51}{subsection.7.5.8}%
-\contentsline {subsection}{\numberline {7.5.9}Extension along a worldline (Fermi normal coordinates)}{51}{subsection.7.5.9}%
-\contentsline {section}{\numberline {7.6}Examples}{52}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Schwarzschild metrics}{52}{subsection.7.6.1}%
-\contentsline {subsubsection}{Metric Ansatz \& Symmetry Assumptions}{52}{subsubsection*.16}%
-\contentsline {subsubsection}{Christoffel Symbols}{53}{subsubsection*.17}%
-\contentsline {subsubsection}{Components of the Ricci Tensor}{53}{subsubsection*.18}%
-\contentsline {subsubsection}{Solving the Differential Equations}{54}{subsubsection*.19}%
-\contentsline {subsubsection}{Determining the Integration Constant \(C\) (The Newtonian Limit)}{54}{subsubsection*.20}%
-\contentsline {subsubsection}{Special Case: Complete Vacuum (\(M = 0\))}{55}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {7.6.2}Planetary orbits in Schwarzschild spacetime}{55}{subsection.7.6.2}%
-\contentsline {subsection}{\numberline {7.6.3}Deflection of a ray of light, and Eddington measurements (1919)}{59}{subsection.7.6.3}%
-\contentsline {subsubsection}{Trajectory of zero\sphinxhyphen {}mass objects in Schwarzschild metrics}{59}{subsubsection*.22}%
-\contentsline {subsubsection}{Comparison with the laws of classical mechanics \sphinxhyphen {} Newton gravitation}{62}{subsubsection*.23}%
-\contentsline {part}{III\hspace {1em}Statistical Mechanics}{63}{part.3}%
-\contentsline {chapter}{\numberline {8}Statistical Physics}{65}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Liouville theorem and Boltzmann equation}{67}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Liouville theorem}{67}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Boltzmann equation}{68}{section.9.2}%
-\contentsline {section}{\numberline {9.3}H\sphinxhyphen {}theorem}{70}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Statistical Physics \sphinxhyphen {} Notes}{73}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Ensembles}{73}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Microcanonical ensemble}{73}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Canonical ensemble}{73}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Macrocanonical ensemble}{73}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Statistics}{73}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Boltzmann}{74}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Bose\sphinxhyphen {}Einstein}{74}{subsection.10.5.2}%
-\contentsline {subsection}{\numberline {10.5.3}Fermi\sphinxhyphen {}Dirac}{78}{subsection.10.5.3}%
-\contentsline {chapter}{\numberline {11}Statistical Physics \sphinxhyphen {} Statistics Miscellanea}{81}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Ising model}{85}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Ising model \sphinxhyphen {} Notes}{85}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Introduction}{85}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Time evolution}{85}{subsection.12.1.2}%
-\contentsline {subsubsection}{Metropolis\sphinxhyphen {}Hastings}{85}{subsubsection*.25}%
-\contentsline {section}{\numberline {12.2}Markov processes}{87}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}State transition matrix}{87}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}Properties}{87}{subsection.12.2.2}%
-\contentsline {subsubsection}{Eigenvalue \(s = 1\), and stationary state \(\ \boldsymbol \mitpi \)}{87}{subsubsection*.26}%
-\contentsline {subsubsection}{Spectrum of the transition matrix and asymptotic behavior of the system}{88}{subsubsection*.27}%
-\contentsline {subsubsection}{Detailed balance}{88}{subsubsection*.28}%
-\contentsline {section}{\numberline {12.3}Ising model \sphinxhyphen {} Numerics}{89}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}\(m \times n\) lattice}{89}{subsection.12.3.1}%
-\contentsline {chapter}{\numberline {13}Entropy and arrow of time}{99}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Box occupation example}{99}{section.13.1}%
-\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{105}{part.4}%
-\contentsline {chapter}{\numberline {14}Quantum Mechanics}{107}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Mathematical tools for quantum mechanics}{107}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Postulates of Quantum Mechanics}{108}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Non\sphinxhyphen {}relativistic Mechanics}{108}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Wave function}{108}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}Operators and Observables}{108}{subsection.14.3.2}%
-\contentsline {subsection}{\numberline {14.3.3}Space and Momentum Representation}{109}{subsection.14.3.3}%
-\contentsline {subsubsection}{Space Representation}{109}{subsubsection*.29}%
-\contentsline {subsubsection}{Momentum Representation}{110}{subsubsection*.30}%
-\contentsline {subsubsection}{From position to momentum representation}{111}{subsubsection*.31}%
-\contentsline {subsection}{\numberline {14.3.4}Schrodinger Equation}{112}{subsection.14.3.4}%
-\contentsline {subsubsection}{Stationary States}{112}{subsubsection*.32}%
-\contentsline {subsubsection}{Pictures}{112}{subsubsection*.33}%
-\contentsline {paragraph}{Schrodinger}{113}{paragraph*.34}%
-\contentsline {paragraph}{Heisenberg}{113}{paragraph*.35}%
-\contentsline {paragraph}{Interaction}{114}{paragraph*.36}%
-\contentsline {subsection}{\numberline {14.3.5}Operators}{114}{subsection.14.3.5}%
-\contentsline {subsection}{\numberline {14.3.6}Matrix Mechanics}{115}{subsection.14.3.6}%
-\contentsline {subsubsection}{Attualization of 1925 papers}{115}{subsubsection*.37}%
-\contentsline {subsection}{\numberline {14.3.7}Heisenberg Uncertainty relation}{115}{subsection.14.3.7}%
-\contentsline {section}{\numberline {14.4}Many\sphinxhyphen {}body problem}{116}{section.14.4}%
-\contentsline {chapter}{\numberline {15}Quantum Mechanics \sphinxhyphen {} Notes}{117}{chapter.15}%
-\contentsline {chapter}{\numberline {16}Wave quantum mechanics}{119}{chapter.16}%
-\contentsline {section}{\numberline {16.1}De Broglie}{119}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Schrodinger}{119}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}Derivation}{119}{subsection.16.2.1}%
-\contentsline {subsection}{\numberline {16.2.2}Energy eigen\sphinxhyphen {}states}{120}{subsection.16.2.2}%
-\contentsline {subsection}{\numberline {16.2.3}Space and momentum operators}{121}{subsection.16.2.3}%
-\contentsline {chapter}{\numberline {17}Angular Momentum}{123}{chapter.17}%
-\contentsline {section}{\numberline {17.1}Spatial Angular Momentum}{123}{section.17.1}%
-\contentsline {subsection}{\numberline {17.1.1}Eigenproblem of angular momentum operators}{125}{subsection.17.1.1}%
-\contentsline {section}{\numberline {17.2}Spin}{128}{section.17.2}%
-\contentsline {subsection}{\numberline {17.2.1}Properties of spin angular momentum operators \(\hat {S}^2\), \(\hat {S}_z\)}{128}{subsection.17.2.1}%
-\contentsline {subsection}{\numberline {17.2.2}Pauli matrices}{128}{subsection.17.2.2}%
-\contentsline {subsubsection}{Properties}{128}{subsubsection*.38}%
-\contentsline {subsubsection}{Pauli vectors}{128}{subsubsection*.39}%
-\contentsline {paragraph}{Properties}{129}{paragraph*.40}%
-\contentsline {section}{\numberline {17.3}Total Angular Momentum}{129}{section.17.3}%
-\contentsline {subsection}{\numberline {17.3.1}Eigenvalue problem of the total angular momentum for an electron}{129}{subsection.17.3.1}%
-\contentsline {chapter}{\numberline {18}Density Operator}{131}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Decoherence}{135}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Example: two\sphinxhyphen {}dimensional system interacting with a large\sphinxhyphen {}dimensional environment}{135}{section.19.1}%
-\contentsline {subsection}{\numberline {19.1.1}State of the system}{135}{subsection.19.1.1}%
-\contentsline {subsection}{\numberline {19.1.2}Evolution of the system}{135}{subsection.19.1.2}%
-\contentsline {subsection}{\numberline {19.1.3}Decoherence time}{136}{subsection.19.1.3}%
-\contentsline {chapter}{\numberline {20}Interaction picture, perturbation theory and Einstein coefficients}{137}{chapter.20}%
-\contentsline {section}{\numberline {20.1}Interaction picture}{137}{section.20.1}%
-\contentsline {section}{\numberline {20.2}Perturbation theory}{138}{section.20.2}%
-\contentsline {section}{\numberline {20.3}Einstein coefficients}{139}{section.20.3}%
-\contentsline {chapter}{\numberline {21}Historical Approach to Quantum Mechanics}{141}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Topics}{141}{section.21.1}%
-\contentsline {section}{\numberline {21.2}Origins of Matrix and Wave Quantum Mechanics}{144}{section.21.2}%
-\contentsline {subsection}{\numberline {21.2.1}Origins of Matrix Mechanics}{144}{subsection.21.2.1}%
-\contentsline {section}{\numberline {21.3}Timeline}{145}{section.21.3}%
-\contentsline {section}{\numberline {21.4}Origin of matrix mechanics}{145}{section.21.4}%
-\contentsline {subsection}{\numberline {21.4.1}Light dispersion}{146}{subsection.21.4.1}%
-\contentsline {subsubsection}{First experiences}{146}{subsubsection*.43}%
-\contentsline {subsubsection}{Classical dispersion}{146}{subsubsection*.44}%
-\contentsline {paragraph}{Drude\sphinxhyphen {}Lorentz model}{146}{paragraph*.45}%
-\contentsline {paragraph}{Einstein}{146}{paragraph*.46}%
-\contentsline {paragraph}{Ladenburg}{146}{paragraph*.47}%
-\contentsline {subsection}{\numberline {21.4.2}Light matter interaction}{147}{subsection.21.4.2}%
-\contentsline {subsubsection}{Einstein: quantum theory of radiation interacting with matter}{147}{subsubsection*.48}%
-\contentsline {subsection}{\numberline {21.4.3}Radiation of moving charges \sphinxhyphen {} Larmor’s formula}{148}{subsection.21.4.3}%
-\contentsline {subsubsection}{Green’s function solution of wave equations: Liénard\sphinxhyphen {}Wiechert potential}{148}{subsubsection*.50}%
-\contentsline {subsubsection}{Larmor formula}{152}{subsubsection*.51}%
-\contentsline {subsection}{\numberline {21.4.4}Spin}{153}{subsection.21.4.4}%
-\contentsline {subsection}{\numberline {21.4.5}Modern reinterpretation of Heisenberg mechanics}{153}{subsection.21.4.5}%
-\contentsline {subsubsection}{Heisenberg Equations of Motion in the Heisenberg Picture}{153}{subsubsection*.52}%
-\contentsline {subsubsection}{Matrix components in energy basis of the equations of motion}{155}{subsubsection*.53}%
-\contentsline {subsubsection}{Equations of motion as Hamilton’s equations}{155}{subsubsection*.54}%
-\contentsline {subsubsection}{CCR and quantization rule}{156}{subsubsection*.55}%
-\contentsline {paragraph}{Modern approach. Matrix form of the CCR}{156}{paragraph*.56}%
-\contentsline {paragraph}{From Bohr\sphinxhyphen {}Sommerfeld quantization to CCR}{156}{paragraph*.57}%
-\contentsline {subsubsection}{CCR in Energy Basis and Ladenburg Dispersion Formula}{157}{subsubsection*.58}%
-\contentsline {subsubsection}{Application: The Linear Harmonic Oscillator}{158}{subsubsection*.59}%
-\contentsline {subsubsection}{Transition Probabilities as Dipole Matrix Elements}{159}{subsubsection*.60}%
-\contentsline {subsubsection}{Perturbation Theory for Transition Probabilities in Weak Electric Fields}{159}{subsubsection*.61}%
-\contentsline {paragraph}{First\sphinxhyphen {}Order Amplitude}{159}{paragraph*.62}%
-\contentsline {paragraph}{Resonant Approximation (Rotating Wave Approximation)}{159}{paragraph*.63}%
-\contentsline {paragraph}{Second\sphinxhyphen {}Order Expansion for \(|c_n(t)|^2\)}{160}{paragraph*.64}%
-\contentsline {subsection}{\numberline {21.4.6}Numerical simulation of the electron pertubation}{160}{subsection.21.4.6}%
-\contentsline {subsubsection}{2\sphinxhyphen {}energy level system}{160}{subsubsection*.65}%
-\contentsline {subsubsection}{4\sphinxhyphen {}energy level system}{160}{subsubsection*.66}%
-\contentsline {subsubsection}{Spectra and non\sphinxhyphen {}monochromatic radiation}{161}{subsubsection*.67}%
-\contentsline {paragraph}{Pulse}{162}{paragraph*.68}%
-\contentsline {paragraph}{Broad spectrum}{163}{paragraph*.69}%
-\contentsline {section}{\numberline {21.5}Origin of wave theory of quantum mechanics}{163}{section.21.5}%
-\contentsline {subsection}{\numberline {21.5.1}L. de Broglie, Researches of the Quantum Theory}{164}{subsection.21.5.1}%
-\contentsline {subsection}{\numberline {21.5.2}E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”}{164}{subsection.21.5.2}%
-\contentsline {chapter}{\numberline {22}Atomic models}{165}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Thomson model}{165}{section.22.1}%
-\contentsline {section}{\numberline {22.2}Rutherford model}{165}{section.22.2}%
-\contentsline {section}{\numberline {22.3}Bohr model}{165}{section.22.3}%
-\contentsline {section}{\numberline {22.4}Sommerfeld model}{167}{section.22.4}%
-\contentsline {subsection}{\numberline {22.4.1}Key Postulates and Mathematical Framework}{167}{subsection.22.4.1}%
-\contentsline {subsubsection}{Elliptical Orbits}{167}{subsubsection*.70}%
-\contentsline {subsubsection}{Relativistic Correction and Energy Splitting}{168}{subsubsection*.71}%
-\contentsline {subsection}{\numberline {22.4.2}Major Achievements}{168}{subsection.22.4.2}%
-\contentsline {subsection}{\numberline {22.4.3}Limitations and Transition to Quantum Mechanics}{168}{subsection.22.4.3}%
-\contentsline {subsection}{\numberline {22.4.4}Analytical mechanics \sphinxhyphen {} short notes}{169}{subsection.22.4.4}%
-\contentsline {subsubsection}{Lagrangian and Hamiltonian mechanics}{169}{subsubsection*.72}%
-\contentsline {subsubsection}{Canonical Transformations and Hamilton\sphinxhyphen {}Jacobi Theory}{170}{subsubsection*.73}%
-\contentsline {subsubsection}{The Hamilton\sphinxhyphen {}Jacobi Equation}{171}{subsubsection*.74}%
-\contentsline {subsubsection}{Action\sphinxhyphen {}Angle Variables}{173}{subsubsection*.75}%
-\contentsline {paragraph}{Definition of Action Variables}{173}{paragraph*.76}%
-\contentsline {paragraph}{Angle Variables and Frequencies}{173}{paragraph*.77}%
-\contentsline {subsubsection}{4. The Wilson\sphinxhyphen {}Sommerfeld Quantization Postulate}{174}{subsubsection*.78}%
-\contentsline {paragraph}{The Quantization Rule}{174}{paragraph*.79}%
-\contentsline {paragraph}{Summary of Connection to Quantum Mechanics}{174}{paragraph*.80}%
-\contentsline {section}{\numberline {22.5}Schrodinger model}{174}{section.22.5}%
-\contentsline {subsection}{\numberline {22.5.1}Schrodinger model \sphinxhyphen {} Mathematical details of the analytical solution}{175}{subsection.22.5.1}%
-\contentsline {subsection}{\numberline {22.5.2}Schrodinger model \sphinxhyphen {} Gallery}{180}{subsection.22.5.2}%
-\contentsline {subsubsection}{Stationary states}{180}{subsubsection*.81}%
-\contentsline {subsubsection}{Real orbitals}{181}{subsubsection*.82}%
-\contentsline {subsubsection}{Some details}{182}{subsubsection*.83}%
-\contentsline {paragraph}{Radial and spherical factors}{182}{paragraph*.84}%
-\contentsline {subparagraph}{Radial wavefunctions, \(R_{n, \ell }(r)\)}{182}{subparagraph*.85}%
-\contentsline {subparagraph}{Polar and azimuthal wavefunctions, \(Y^{m_\ell }_{\ell }(\mittheta ,\mitphi ) = \mitTheta _{\ell , m_\ell }(\mittheta ) \mitPhi _{m_\ell }(\mitphi )\)}{182}{subparagraph*.86}%
-\contentsline {subsection}{\numberline {22.5.3}Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom}{183}{subsection.22.5.3}%
-\contentsline {subsubsection}{Hamiltonian \& Basic Definitions}{183}{subsubsection*.87}%
-\contentsline {subsubsection}{Canonical Commutation Relations (CCR)}{184}{subsubsection*.88}%
-\contentsline {subsubsection}{Commutators of Angular Momentum with Position and Momentum}{184}{subsubsection*.89}%
-\contentsline {paragraph}{Commutator \([r_a, L_b]\)}{184}{paragraph*.90}%
-\contentsline {paragraph}{Commutator \([p_a, L_b]\)}{185}{paragraph*.91}%
-\contentsline {paragraph}{Commutator \([\hat {p}^2, L_b]\)}{185}{paragraph*.92}%
-\contentsline {subsubsection}{Commutator of Coulomb Potential \(\hat {V}\) with Angular Momentum \(\hat {L}_b\)}{186}{subsubsection*.93}%
-\contentsline {section}{\numberline {22.6}Atomic model using Dirac equation}{186}{section.22.6}%
-\contentsline {chapter}{\numberline {23}Relativistic Quantum Mechanics}{187}{chapter.23}%
-\contentsline {section}{\numberline {23.1}Dirac equation}{187}{section.23.1}%
-\contentsline {subsection}{\numberline {23.1.1}Klein\sphinxhyphen {}Gordon equation for a free particle}{187}{subsection.23.1.1}%
-\contentsline {subsection}{\numberline {23.1.2}Dirac equation for a free particle}{187}{subsection.23.1.2}%
-\contentsline {subsubsection}{Elementary solutions of Dirac equation for a free particle}{188}{subsubsection*.94}%
-\contentsline {paragraph}{Dimensional Reduction to 1D and Component Decoupling}{188}{paragraph*.95}%
-\contentsline {paragraph}{Plane Wave Solutions and Component Relations}{189}{paragraph*.96}%
-\contentsline {subsection}{\numberline {23.1.3}Dirac equation for a particle in the EM field}{190}{subsection.23.1.3}%
-\contentsline {chapter}{\numberline {24}Many\sphinxhyphen {}body systems}{193}{chapter.24}%
-\contentsline {section}{\numberline {24.1}Identical systems}{193}{section.24.1}%
-\contentsline {subsection}{\numberline {24.1.1}Symmetrization and anti\sphinxhyphen {}symmetrization}{194}{subsection.24.1.1}%
-\contentsline {subsubsection}{Symmetric basis for bosons}{194}{subsubsection*.98}%
-\contentsline {subsubsection}{Anti\sphinxhyphen {}symmetric basis for fermions}{194}{subsubsection*.99}%
-\contentsline {section}{\numberline {24.2}Second quantization. Fock space}{195}{section.24.2}%
-\contentsline {subsection}{\numberline {24.2.1}Fock states}{195}{subsection.24.2.1}%
-\contentsline {section}{\numberline {24.3}Second quantization. Bosons}{195}{section.24.3}%
-\contentsline {subsection}{\numberline {24.3.1}Creation and annihilation operators}{195}{subsection.24.3.1}%
-\contentsline {subsection}{\numberline {24.3.2}Number operator}{196}{subsection.24.3.2}%
-\contentsline {subsection}{\numberline {24.3.3}Canonical commutation relations}{196}{subsection.24.3.3}%
-\contentsline {section}{\numberline {24.4}Second quantization. Fermions}{197}{section.24.4}%
-\contentsline {subsection}{\numberline {24.4.1}Creation and annihilation operators}{197}{subsection.24.4.1}%
-\contentsline {subsection}{\numberline {24.4.2}Number operator}{198}{subsection.24.4.2}%
-\contentsline {subsection}{\numberline {24.4.3}Canonical anti\sphinxhyphen {}commutation relations}{198}{subsection.24.4.3}%
-\contentsline {section}{\numberline {24.5}Quantum fields}{199}{section.24.5}%
-\contentsline {subsection}{\numberline {24.5.1}Field creation and annihilation operators}{199}{subsection.24.5.1}%
-\contentsline {subsubsection}{CCR}{200}{subsubsection*.101}%
-\contentsline {subsubsection}{One\sphinxhyphen {}particle system}{200}{subsubsection*.102}%
-\contentsline {subsubsection}{Two\sphinxhyphen {}particle system}{201}{subsubsection*.103}%
-\contentsline {paragraph}{Bosons}{201}{paragraph*.104}%
-\contentsline {subsubsection}{Many\sphinxhyphen {}body systems}{202}{subsubsection*.105}%
-\contentsline {paragraph}{Bosons}{202}{paragraph*.106}%
-\contentsline {paragraph}{Fermions}{202}{paragraph*.107}%
-\contentsline {section}{\numberline {24.6}Operators in QFT}{202}{section.24.6}%
-\contentsline {subsection}{\numberline {24.6.1}One\sphinxhyphen {}body operators}{203}{subsection.24.6.1}%
-\contentsline {subsubsection}{Space representation}{205}{subsubsection*.108}%
-\contentsline {subsection}{\numberline {24.6.2}Two\sphinxhyphen {}body operators}{206}{subsection.24.6.2}%
-\contentsline {chapter}{\numberline {25}Quantization of the electromagnetic field}{207}{chapter.25}%
-\contentsline {chapter}{\numberline {26}Introduction to Quantum Field Theory}{209}{chapter.26}%
-\contentsline {section}{\numberline {26.1}Harmonic Oscillator}{210}{section.26.1}%
-\contentsline {subsection}{\numberline {26.1.1}Classical model}{210}{subsection.26.1.1}%
-\contentsline {subsection}{\numberline {26.1.2}From classical to quantum}{210}{subsection.26.1.2}%
-\contentsline {subsubsection}{Stationary states}{210}{subsubsection*.109}%
-\contentsline {subsubsection}{Creator and annihilation operators}{212}{subsubsection*.110}%
-\contentsline {subsubsection}{Number operator}{215}{subsubsection*.111}%
-\contentsline {subsection}{\numberline {26.1.3}Classical limit}{215}{subsection.26.1.3}%
-\contentsline {subsubsection}{Coherent states}{215}{subsubsection*.112}%
-\contentsline {paragraph}{Definition}{215}{paragraph*.113}%
-\contentsline {paragraph}{Classical limit}{218}{paragraph*.114}%
-\contentsline {section}{\numberline {26.2}Field quantization}{220}{section.26.2}%
-\contentsline {subsection}{\numberline {26.2.1}Classical system}{221}{subsection.26.2.1}%
-\contentsline {subsection}{\numberline {26.2.2}From classical to quantum}{222}{subsection.26.2.2}%
-\contentsline {subsubsection}{Infinite energy}{222}{subsubsection*.115}%
-\contentsline {section}{\numberline {26.3}Photons \sphinxhyphen {} EM field quantization}{222}{section.26.3}%
-\contentsline {subsection}{\numberline {26.3.1}Classcal Electromagnetism}{223}{subsection.26.3.1}%
-\contentsline {subsection}{\numberline {26.3.2}EM field quantization}{223}{subsection.26.3.2}%
-\contentsline {subsubsection}{Fermi 1931, Introduction to QFT lessons}{223}{subsubsection*.116}%
-\contentsline {subsubsection}{EM Field in free space}{223}{subsubsection*.117}%
-\contentsline {paragraph}{Field in 1D free space}{223}{paragraph*.118}%
-\contentsline {paragraph}{In a 3D domain}{224}{paragraph*.119}%
-\contentsline {subsection}{\numberline {26.3.3}Quantum description of the EM field — classical limit}{224}{subsection.26.3.3}%
-\contentsline {subsubsection}{Try 1 — Incoherent states}{224}{subsubsection*.120}%
-\contentsline {subsubsection}{Try 2 — Coherent states}{224}{subsubsection*.121}%
-\contentsline {section}{\numberline {26.4}Photons \sphinxhyphen {} EM field quantization with Coulomb gauge}{226}{section.26.4}%
-\contentsline {subsection}{\numberline {26.4.1}Classical fields}{226}{subsection.26.4.1}%
-\contentsline {subsection}{\numberline {26.4.2}Quantization}{227}{subsection.26.4.2}%
-\contentsline {subsubsection}{Energy}{228}{subsubsection*.122}%
-\contentsline {subsubsection}{Momentum}{228}{subsubsection*.123}%
-\contentsline {subsubsection}{…}{228}{subsubsection*.124}%
-\contentsline {subsection}{\numberline {26.4.3}Classical limit}{228}{subsection.26.4.3}%
-\contentsline {subsubsection}{One\sphinxhyphen {}mode coherent state}{228}{subsubsection*.125}%
-\contentsline {section}{\numberline {26.5}Multi\sphinxhyphen {}body quantum mechanics and QFT}{231}{section.26.5}%
-\contentsline {subsection}{\numberline {26.5.1}First quantization}{231}{subsection.26.5.1}%
-\contentsline {subsection}{\numberline {26.5.2}Second quantization of the electron field}{232}{subsection.26.5.2}%
-\contentsline {subsection}{\numberline {26.5.3}Hamiltonian and state of the non\sphinxhyphen {}interacting \(e^-\) and radiation fields}{232}{subsection.26.5.3}%
-\contentsline {subsection}{\numberline {26.5.4}Bosons and fermions}{233}{subsection.26.5.4}%
-\contentsline {section}{\numberline {26.6}Interacting Fields}{233}{section.26.6}%
-\contentsline {subsection}{\numberline {26.6.1}Perturbation theory}{234}{subsection.26.6.1}%
-\contentsline {subsubsection}{0th\sphinxhyphen {}order solution}{235}{subsubsection*.126}%
-\contentsline {subsubsection}{1st\sphinxhyphen {}order solution}{235}{subsubsection*.127}%
-\contentsline {subsubsection}{Fermi golden rule}{237}{subsubsection*.128}%
-\contentsline {subsubsection}{Higher orders}{237}{subsubsection*.129}%
-\contentsline {subsection}{\numberline {26.6.2}Interaction of the electron and electromagnetic field}{238}{subsection.26.6.2}%
-\contentsline {subsubsection}{Bound electrons \sphinxhyphen {} Atom spectra}{244}{subsubsection*.130}%
-\contentsline {paragraph}{Bound electron}{244}{paragraph*.131}%
-\contentsline {paragraph}{The Hamiltonian}{244}{paragraph*.132}%
-\contentsline {paragraph}{Transition rates}{245}{paragraph*.133}%
-\contentsline {paragraph}{Absorption and emission of light by an atom}{247}{paragraph*.134}%
-\contentsline {subsubsection}{Free electrons \sphinxhyphen {} Compton scattering}{249}{subsubsection*.135}%
-\contentsline {chapter}{\numberline {27}Analtycal Mechanics \sphinxhyphen {} Notes for Quantum Mechanics}{251}{chapter.27}%
-\contentsline {section}{\numberline {27.1}Lagrange and Hamiltonian Mechanics}{251}{section.27.1}%
-\contentsline {section}{\numberline {27.2}Canonical transformations}{252}{section.27.2}%
-\contentsline {section}{\numberline {27.3}Generating functions}{254}{section.27.3}%
-\contentsline {section}{\numberline {27.4}Hamilton\sphinxhyphen {}Jacobi formulation of mechanics}{255}{section.27.4}%
-\contentsline {subsection}{\numberline {27.4.1}Action functional and type\sphinxhyphen {}2 generating function}{255}{subsection.27.4.1}%
-\contentsline {section}{\numberline {27.5}Angle\sphinxhyphen {}action variables}{255}{section.27.5}%
-\contentsline {part}{V\hspace {1em}Quantum Field Theory}{257}{part.5}%
-\contentsline {chapter}{\numberline {28}Introduction to QFT}{259}{chapter.28}%
-\contentsline {part}{VI\hspace {1em}Solid State Physics}{261}{part.6}%
-\contentsline {chapter}{\numberline {29}Introduction to Solid State Physics}{263}{chapter.29}%
-\contentsline {chapter}{\numberline {30}Notes about Solid State Physics}{265}{chapter.30}%
-\contentsline {section}{\numberline {30.1}Crystals}{265}{section.30.1}%
-\contentsline {subsection}{\numberline {30.1.1}Bloch’s theorem}{265}{subsection.30.1.1}%
-\contentsline {chapter}{\numberline {31}Introduction to Semiconductors}{267}{chapter.31}%
-\contentsline {section}{\numberline {31.1}Introduction to the QM of Solids}{267}{section.31.1}%
-\contentsline {subsection}{\numberline {31.1.1}Energy bands}{267}{subsection.31.1.1}%
-\contentsline {subsubsection}{Energy level splitting}{267}{subsubsection*.138}%
-\contentsline {subsubsection}{Kronig\sphinxhyphen {}Penny model}{269}{subsubsection*.139}%
-\contentsline {subsubsection}{Nearly free electron model}{269}{subsubsection*.141}%
-\contentsline {section}{\numberline {31.2}Semiconductors in Equilibrium}{270}{section.31.2}%
-\contentsline {subsection}{\numberline {31.2.1}Structure of a semi\sphinxhyphen {}semiconductor}{270}{subsection.31.2.1}%
-\contentsline {subsubsection}{Intrinsic semiconductor}{270}{subsubsection*.142}%
-\contentsline {subsubsection}{Doped semiconductors}{270}{subsubsection*.143}%
-\contentsline {paragraph}{\(p\)\sphinxhyphen {}type}{270}{paragraph*.144}%
-\contentsline {paragraph}{\(n\)\sphinxhyphen {}type}{270}{paragraph*.145}%
-\contentsline {paragraph}{Full ionization}{271}{paragraph*.146}%
-\contentsline {subsection}{\numberline {31.2.2}Electric charge density}{271}{subsection.31.2.2}%
-\contentsline {section}{\numberline {31.3}Carrier Transport Phenomena}{271}{section.31.3}%
-\contentsline {subsection}{\numberline {31.3.1}Currents in semiconductors}{271}{subsection.31.3.1}%
-\contentsline {subsection}{\numberline {31.3.2}Einstein relation}{272}{subsection.31.3.2}%
-\contentsline {subsection}{\numberline {31.3.3}Balance equations}{273}{subsection.31.3.3}%
-\contentsline {section}{\numberline {31.4}Non\sphinxhyphen {}equilibrium Excess Carriers in Semiconductors}{273}{section.31.4}%
-\contentsline {section}{\numberline {31.5}\(p\)\sphinxhyphen {}\(n\) Junctions}{273}{section.31.5}%
-\contentsline {subsection}{\numberline {31.5.1}Introduction to the pn Junction and its Operational Regimes}{273}{subsection.31.5.1}%
-\contentsline {subsection}{\numberline {31.5.2}The Depletion Approximation and Shockley Transport}{274}{subsection.31.5.2}%
-\contentsline {subsubsection}{Zero Bias (Thermal Equilibrium)}{274}{subsubsection*.147}%
-\contentsline {subsubsection}{Forward Bias Under Shockley Assumptions}{276}{subsubsection*.148}%
-\contentsline {subsection}{\numberline {31.5.3}Advanced Description: Quasi\sphinxhyphen {}Fermi Levels and Non\sphinxhyphen {}Equilibrium Transport}{278}{subsection.31.5.3}%
-\contentsline {section}{\numberline {31.6}\(p\)\sphinxhyphen {}\(n\) Diodes}{278}{section.31.6}%
-\contentsline {chapter}{Proof Index}{279}{section*.151}%
+\contentsline {subsection}{\numberline {7.5.2}Local vector basis \sphinxhyphen {} first order terms of local coordinates}{47}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Local set of coordinates}{48}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}First order: the tetrad}{49}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}Second order, \(\mitGamma ^{(x) \mitgamma }_{\mitalpha \mitbeta } = 0\), and \(\partial _{\mitgamma } g^{(x)}_{\mitalpha \mitbeta } = 0\)}{49}{subsection.7.5.5}%
+\contentsline {subsection}{\numberline {7.5.6}Third order in \(q^{\mitmu }(x^\mitalpha )\)}{50}{subsection.7.5.6}%
+\contentsline {subsubsection}{Decomposition of \(T\)}{50}{subsubsection*.14}%
+\contentsline {subsubsection}{Riemann normal coordinates}{51}{subsubsection*.15}%
+\contentsline {subsubsection}{The metric to second order}{51}{subsubsection*.16}%
+\contentsline {subsubsection}{Polynomial expansion of the geodesics}{58}{subsubsection*.17}%
+\contentsline {subsubsection}{Counting check}{59}{subsubsection*.18}%
+\contentsline {subsubsection}{Summary: what each order does}{59}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {7.5.7}The equivalence principle}{59}{subsection.7.5.7}%
+\contentsline {subsection}{\numberline {7.5.8}Example: uniformly accelerated frame in free space \sphinxhyphen {} Rindler coordinates in special relativity}{60}{subsection.7.5.8}%
+\contentsline {subsection}{\numberline {7.5.9}Extension along a worldline (Fermi normal coordinates)}{60}{subsection.7.5.9}%
+\contentsline {section}{\numberline {7.6}Geodesics}{61}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}…}{61}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Geodesics deviation equation}{61}{subsection.7.6.2}%
+\contentsline {subsubsection}{Velocity of the geodesics deviation}{61}{subsubsection*.20}%
+\contentsline {subsubsection}{Acceleration of the geodesics deviation}{61}{subsubsection*.21}%
+\contentsline {section}{\numberline {7.7}Linearization of the geodesic equation}{62}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}…}{62}{subsection.7.7.1}%
+\contentsline {subsubsection}{0. Starting point}{62}{subsubsection*.22}%
+\contentsline {subsubsection}{1. Counting orders}{63}{subsubsection*.23}%
+\contentsline {subsubsection}{2. Expansion of the map \(q^\mitmu (x)\)}{63}{subsubsection*.24}%
+\contentsline {subsubsection}{3. Expansion of \(M\) and \(M^{-1}\)}{63}{subsubsection*.25}%
+\contentsline {subsubsection}{4. Expansion of \(G\)}{65}{subsubsection*.26}%
+\contentsline {subsubsection}{5. The product \(\tilde \mitGamma =M^{-1}G\) order by order}{66}{subsubsection*.27}%
+\contentsline {subsubsection}{6. Results order by order}{66}{subsubsection*.28}%
+\contentsline {subsubsection}{7. Solving the expanded equation}{67}{subsubsection*.29}%
+\contentsline {section}{\numberline {7.8}Examples}{67}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Schwarzschild metrics}{67}{subsection.7.8.1}%
+\contentsline {subsubsection}{Metric Ansatz \& Symmetry Assumptions}{68}{subsubsection*.30}%
+\contentsline {subsubsection}{Christoffel Symbols}{68}{subsubsection*.31}%
+\contentsline {subsubsection}{Components of the Ricci Tensor}{69}{subsubsection*.32}%
+\contentsline {subsubsection}{Solving the Differential Equations}{69}{subsubsection*.33}%
+\contentsline {subsubsection}{Determining the Integration Constant \(C\) (The Newtonian Limit)}{70}{subsubsection*.34}%
+\contentsline {subsubsection}{Special Case: Complete Vacuum (\(M = 0\))}{70}{subsubsection*.35}%
+\contentsline {subsection}{\numberline {7.8.2}Planetary orbits in Schwarzschild spacetime}{70}{subsection.7.8.2}%
+\contentsline {subsection}{\numberline {7.8.3}Deflection of a ray of light, and Eddington measurements (1919)}{74}{subsection.7.8.3}%
+\contentsline {subsubsection}{Trajectory of zero\sphinxhyphen {}mass objects in Schwarzschild metrics}{74}{subsubsection*.36}%
+\contentsline {subsubsection}{Comparison with the laws of classical mechanics \sphinxhyphen {} Newton gravitation}{77}{subsubsection*.37}%
+\contentsline {part}{III\hspace {1em}Statistical Mechanics}{79}{part.3}%
+\contentsline {chapter}{\numberline {8}Statistical Physics}{81}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Liouville theorem and Boltzmann equation}{83}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Liouville theorem}{83}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Boltzmann equation}{84}{section.9.2}%
+\contentsline {section}{\numberline {9.3}H\sphinxhyphen {}theorem}{86}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Statistical Physics \sphinxhyphen {} Notes}{89}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Ensembles}{89}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Microcanonical ensemble}{89}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Canonical ensemble}{89}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Macrocanonical ensemble}{89}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Statistics}{89}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Boltzmann}{90}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Bose\sphinxhyphen {}Einstein}{90}{subsection.10.5.2}%
+\contentsline {subsection}{\numberline {10.5.3}Fermi\sphinxhyphen {}Dirac}{94}{subsection.10.5.3}%
+\contentsline {chapter}{\numberline {11}Statistical Physics \sphinxhyphen {} Statistics Miscellanea}{97}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Ising model}{101}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Ising model \sphinxhyphen {} Notes}{101}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Introduction}{101}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Time evolution}{101}{subsection.12.1.2}%
+\contentsline {subsubsection}{Metropolis\sphinxhyphen {}Hastings}{101}{subsubsection*.39}%
+\contentsline {section}{\numberline {12.2}Markov processes}{103}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}State transition matrix}{103}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Properties}{103}{subsection.12.2.2}%
+\contentsline {subsubsection}{Eigenvalue \(s = 1\), and stationary state \(\ \boldsymbol \mitpi \)}{103}{subsubsection*.40}%
+\contentsline {subsubsection}{Spectrum of the transition matrix and asymptotic behavior of the system}{104}{subsubsection*.41}%
+\contentsline {subsubsection}{Detailed balance}{104}{subsubsection*.42}%
+\contentsline {section}{\numberline {12.3}Ising model \sphinxhyphen {} Numerics}{105}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}\(m \times n\) lattice}{105}{subsection.12.3.1}%
+\contentsline {chapter}{\numberline {13}Entropy and arrow of time}{115}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Box occupation example}{115}{section.13.1}%
+\contentsline {part}{IV\hspace {1em}Quantum Mechanics}{121}{part.4}%
+\contentsline {chapter}{\numberline {14}Quantum Mechanics}{123}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Mathematical tools for quantum mechanics}{123}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Postulates of Quantum Mechanics}{124}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Non\sphinxhyphen {}relativistic Mechanics}{124}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Wave function}{124}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}Operators and Observables}{124}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}Space and Momentum Representation}{125}{subsection.14.3.3}%
+\contentsline {subsubsection}{Space Representation}{125}{subsubsection*.43}%
+\contentsline {subsubsection}{Momentum Representation}{126}{subsubsection*.44}%
+\contentsline {subsubsection}{From position to momentum representation}{127}{subsubsection*.45}%
+\contentsline {subsection}{\numberline {14.3.4}Schrodinger Equation}{128}{subsection.14.3.4}%
+\contentsline {subsubsection}{Stationary States}{128}{subsubsection*.46}%
+\contentsline {subsubsection}{Pictures}{128}{subsubsection*.47}%
+\contentsline {paragraph}{Schrodinger}{129}{paragraph*.48}%
+\contentsline {paragraph}{Heisenberg}{129}{paragraph*.49}%
+\contentsline {paragraph}{Interaction}{130}{paragraph*.50}%
+\contentsline {subsection}{\numberline {14.3.5}Operators}{130}{subsection.14.3.5}%
+\contentsline {subsection}{\numberline {14.3.6}Matrix Mechanics}{131}{subsection.14.3.6}%
+\contentsline {subsubsection}{Attualization of 1925 papers}{131}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {14.3.7}Heisenberg Uncertainty relation}{131}{subsection.14.3.7}%
+\contentsline {section}{\numberline {14.4}Many\sphinxhyphen {}body problem}{132}{section.14.4}%
+\contentsline {chapter}{\numberline {15}Quantum Mechanics \sphinxhyphen {} Notes}{133}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Wave quantum mechanics}{135}{chapter.16}%
+\contentsline {section}{\numberline {16.1}De Broglie}{135}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Schrodinger}{135}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Derivation}{135}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}Energy eigen\sphinxhyphen {}states}{136}{subsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.2.3}Space and momentum operators}{137}{subsection.16.2.3}%
+\contentsline {chapter}{\numberline {17}Angular Momentum}{139}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Spatial Angular Momentum}{139}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Eigenproblem of angular momentum operators}{141}{subsection.17.1.1}%
+\contentsline {section}{\numberline {17.2}Spin}{144}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Properties of spin angular momentum operators \(\hat {S}^2\), \(\hat {S}_z\)}{144}{subsection.17.2.1}%
+\contentsline {subsection}{\numberline {17.2.2}Pauli matrices}{144}{subsection.17.2.2}%
+\contentsline {subsubsection}{Properties}{144}{subsubsection*.52}%
+\contentsline {subsubsection}{Pauli vectors}{144}{subsubsection*.53}%
+\contentsline {paragraph}{Properties}{145}{paragraph*.54}%
+\contentsline {section}{\numberline {17.3}Total Angular Momentum}{145}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Eigenvalue problem of the total angular momentum for an electron}{145}{subsection.17.3.1}%
+\contentsline {chapter}{\numberline {18}Density Operator}{147}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Decoherence}{151}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Example: two\sphinxhyphen {}dimensional system interacting with a large\sphinxhyphen {}dimensional environment}{151}{section.19.1}%
+\contentsline {subsection}{\numberline {19.1.1}State of the system}{151}{subsection.19.1.1}%
+\contentsline {subsection}{\numberline {19.1.2}Evolution of the system}{151}{subsection.19.1.2}%
+\contentsline {subsection}{\numberline {19.1.3}Decoherence time}{152}{subsection.19.1.3}%
+\contentsline {chapter}{\numberline {20}Interaction picture, perturbation theory and Einstein coefficients}{153}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Interaction picture}{153}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Perturbation theory}{154}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Einstein coefficients}{155}{section.20.3}%
+\contentsline {chapter}{\numberline {21}Historical Approach to Quantum Mechanics}{157}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Topics}{157}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Origins of Matrix and Wave Quantum Mechanics}{160}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}Origins of Matrix Mechanics}{160}{subsection.21.2.1}%
+\contentsline {section}{\numberline {21.3}Timeline}{161}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Origin of matrix mechanics}{161}{section.21.4}%
+\contentsline {subsection}{\numberline {21.4.1}Light dispersion}{162}{subsection.21.4.1}%
+\contentsline {subsubsection}{First experiences}{162}{subsubsection*.57}%
+\contentsline {subsubsection}{Classical dispersion}{162}{subsubsection*.58}%
+\contentsline {paragraph}{Drude\sphinxhyphen {}Lorentz model}{162}{paragraph*.59}%
+\contentsline {paragraph}{Einstein}{162}{paragraph*.60}%
+\contentsline {paragraph}{Ladenburg}{162}{paragraph*.61}%
+\contentsline {subsection}{\numberline {21.4.2}Light matter interaction}{163}{subsection.21.4.2}%
+\contentsline {subsubsection}{Einstein: quantum theory of radiation interacting with matter}{163}{subsubsection*.62}%
+\contentsline {subsection}{\numberline {21.4.3}Radiation of moving charges \sphinxhyphen {} Larmor’s formula}{164}{subsection.21.4.3}%
+\contentsline {subsubsection}{Green’s function solution of wave equations: Liénard\sphinxhyphen {}Wiechert potential}{164}{subsubsection*.64}%
+\contentsline {subsubsection}{Larmor formula}{168}{subsubsection*.65}%
+\contentsline {subsection}{\numberline {21.4.4}Spin}{169}{subsection.21.4.4}%
+\contentsline {subsection}{\numberline {21.4.5}Modern reinterpretation of Heisenberg mechanics}{169}{subsection.21.4.5}%
+\contentsline {subsubsection}{Heisenberg Equations of Motion in the Heisenberg Picture}{169}{subsubsection*.66}%
+\contentsline {subsubsection}{Matrix components in energy basis of the equations of motion}{171}{subsubsection*.67}%
+\contentsline {subsubsection}{Equations of motion as Hamilton’s equations}{171}{subsubsection*.68}%
+\contentsline {subsubsection}{CCR and quantization rule}{172}{subsubsection*.69}%
+\contentsline {paragraph}{Modern approach. Matrix form of the CCR}{172}{paragraph*.70}%
+\contentsline {paragraph}{From Bohr\sphinxhyphen {}Sommerfeld quantization to CCR}{172}{paragraph*.71}%
+\contentsline {subsubsection}{CCR in Energy Basis and Ladenburg Dispersion Formula}{173}{subsubsection*.72}%
+\contentsline {subsubsection}{Application: The Linear Harmonic Oscillator}{174}{subsubsection*.73}%
+\contentsline {subsubsection}{Transition Probabilities as Dipole Matrix Elements}{175}{subsubsection*.74}%
+\contentsline {subsubsection}{Perturbation Theory for Transition Probabilities in Weak Electric Fields}{175}{subsubsection*.75}%
+\contentsline {paragraph}{First\sphinxhyphen {}Order Amplitude}{175}{paragraph*.76}%
+\contentsline {paragraph}{Resonant Approximation (Rotating Wave Approximation)}{175}{paragraph*.77}%
+\contentsline {paragraph}{Second\sphinxhyphen {}Order Expansion for \(|c_n(t)|^2\)}{176}{paragraph*.78}%
+\contentsline {subsection}{\numberline {21.4.6}Numerical simulation of the electron pertubation}{176}{subsection.21.4.6}%
+\contentsline {subsubsection}{2\sphinxhyphen {}energy level system}{176}{subsubsection*.79}%
+\contentsline {subsubsection}{4\sphinxhyphen {}energy level system}{176}{subsubsection*.80}%
+\contentsline {subsubsection}{Spectra and non\sphinxhyphen {}monochromatic radiation}{177}{subsubsection*.81}%
+\contentsline {paragraph}{Pulse}{178}{paragraph*.82}%
+\contentsline {paragraph}{Broad spectrum}{179}{paragraph*.83}%
+\contentsline {section}{\numberline {21.5}Origin of wave theory of quantum mechanics}{179}{section.21.5}%
+\contentsline {subsection}{\numberline {21.5.1}L. de Broglie, Researches of the Quantum Theory}{180}{subsection.21.5.1}%
+\contentsline {subsection}{\numberline {21.5.2}E. Schrodinger, “An Undulatory Theory of the Mechanics of Atoms and Molecules”}{180}{subsection.21.5.2}%
+\contentsline {chapter}{\numberline {22}Atomic models}{181}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Thomson model}{181}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Rutherford model}{181}{section.22.2}%
+\contentsline {section}{\numberline {22.3}Bohr model}{181}{section.22.3}%
+\contentsline {section}{\numberline {22.4}Sommerfeld model}{183}{section.22.4}%
+\contentsline {subsection}{\numberline {22.4.1}Key Postulates and Mathematical Framework}{183}{subsection.22.4.1}%
+\contentsline {subsubsection}{Elliptical Orbits}{183}{subsubsection*.84}%
+\contentsline {subsubsection}{Relativistic Correction and Energy Splitting}{184}{subsubsection*.85}%
+\contentsline {subsection}{\numberline {22.4.2}Major Achievements}{184}{subsection.22.4.2}%
+\contentsline {subsection}{\numberline {22.4.3}Limitations and Transition to Quantum Mechanics}{184}{subsection.22.4.3}%
+\contentsline {subsection}{\numberline {22.4.4}Analytical mechanics \sphinxhyphen {} short notes}{185}{subsection.22.4.4}%
+\contentsline {subsubsection}{Lagrangian and Hamiltonian mechanics}{185}{subsubsection*.86}%
+\contentsline {subsubsection}{Canonical Transformations and Hamilton\sphinxhyphen {}Jacobi Theory}{186}{subsubsection*.87}%
+\contentsline {subsubsection}{The Hamilton\sphinxhyphen {}Jacobi Equation}{187}{subsubsection*.88}%
+\contentsline {subsubsection}{Action\sphinxhyphen {}Angle Variables}{189}{subsubsection*.89}%
+\contentsline {paragraph}{Definition of Action Variables}{189}{paragraph*.90}%
+\contentsline {paragraph}{Angle Variables and Frequencies}{189}{paragraph*.91}%
+\contentsline {subsubsection}{4. The Wilson\sphinxhyphen {}Sommerfeld Quantization Postulate}{190}{subsubsection*.92}%
+\contentsline {paragraph}{The Quantization Rule}{190}{paragraph*.93}%
+\contentsline {paragraph}{Summary of Connection to Quantum Mechanics}{190}{paragraph*.94}%
+\contentsline {section}{\numberline {22.5}Schrodinger model}{190}{section.22.5}%
+\contentsline {subsection}{\numberline {22.5.1}Schrodinger model \sphinxhyphen {} Mathematical details of the analytical solution}{191}{subsection.22.5.1}%
+\contentsline {subsection}{\numberline {22.5.2}Schrodinger model \sphinxhyphen {} Gallery}{196}{subsection.22.5.2}%
+\contentsline {subsubsection}{Stationary states}{196}{subsubsection*.95}%
+\contentsline {subsubsection}{Real orbitals}{197}{subsubsection*.96}%
+\contentsline {subsubsection}{Some details}{198}{subsubsection*.97}%
+\contentsline {paragraph}{Radial and spherical factors}{198}{paragraph*.98}%
+\contentsline {subparagraph}{Radial wavefunctions, \(R_{n, \ell }(r)\)}{198}{subparagraph*.99}%
+\contentsline {subparagraph}{Polar and azimuthal wavefunctions, \(Y^{m_\ell }_{\ell }(\mittheta ,\mitphi ) = \mitTheta _{\ell , m_\ell }(\mittheta ) \mitPhi _{m_\ell }(\mitphi )\)}{198}{subparagraph*.100}%
+\contentsline {subsection}{\numberline {22.5.3}Auxiliary Results on Operators for the Schrödinger Model of the Hydrogen Atom}{199}{subsection.22.5.3}%
+\contentsline {subsubsection}{Hamiltonian \& Basic Definitions}{199}{subsubsection*.101}%
+\contentsline {subsubsection}{Canonical Commutation Relations (CCR)}{200}{subsubsection*.102}%
+\contentsline {subsubsection}{Commutators of Angular Momentum with Position and Momentum}{200}{subsubsection*.103}%
+\contentsline {paragraph}{Commutator \([r_a, L_b]\)}{200}{paragraph*.104}%
+\contentsline {paragraph}{Commutator \([p_a, L_b]\)}{201}{paragraph*.105}%
+\contentsline {paragraph}{Commutator \([\hat {p}^2, L_b]\)}{201}{paragraph*.106}%
+\contentsline {subsubsection}{Commutator of Coulomb Potential \(\hat {V}\) with Angular Momentum \(\hat {L}_b\)}{202}{subsubsection*.107}%
+\contentsline {section}{\numberline {22.6}Atomic model using Dirac equation}{202}{section.22.6}%
+\contentsline {chapter}{\numberline {23}Relativistic Quantum Mechanics}{203}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Dirac equation}{203}{section.23.1}%
+\contentsline {subsection}{\numberline {23.1.1}Klein\sphinxhyphen {}Gordon equation for a free particle}{203}{subsection.23.1.1}%
+\contentsline {subsection}{\numberline {23.1.2}Dirac equation for a free particle}{203}{subsection.23.1.2}%
+\contentsline {subsubsection}{Elementary solutions of Dirac equation for a free particle}{204}{subsubsection*.108}%
+\contentsline {paragraph}{Dimensional Reduction to 1D and Component Decoupling}{204}{paragraph*.109}%
+\contentsline {paragraph}{Plane Wave Solutions and Component Relations}{205}{paragraph*.110}%
+\contentsline {subsection}{\numberline {23.1.3}Dirac equation for a particle in the EM field}{206}{subsection.23.1.3}%
+\contentsline {chapter}{\numberline {24}Many\sphinxhyphen {}body systems}{209}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Identical systems}{209}{section.24.1}%
+\contentsline {subsection}{\numberline {24.1.1}Symmetrization and anti\sphinxhyphen {}symmetrization}{210}{subsection.24.1.1}%
+\contentsline {subsubsection}{Symmetric basis for bosons}{210}{subsubsection*.112}%
+\contentsline {subsubsection}{Anti\sphinxhyphen {}symmetric basis for fermions}{210}{subsubsection*.113}%
+\contentsline {section}{\numberline {24.2}Second quantization. Fock space}{211}{section.24.2}%
+\contentsline {subsection}{\numberline {24.2.1}Fock states}{211}{subsection.24.2.1}%
+\contentsline {section}{\numberline {24.3}Second quantization. Bosons}{211}{section.24.3}%
+\contentsline {subsection}{\numberline {24.3.1}Creation and annihilation operators}{211}{subsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.3.2}Number operator}{212}{subsection.24.3.2}%
+\contentsline {subsection}{\numberline {24.3.3}Canonical commutation relations}{212}{subsection.24.3.3}%
+\contentsline {section}{\numberline {24.4}Second quantization. Fermions}{213}{section.24.4}%
+\contentsline {subsection}{\numberline {24.4.1}Creation and annihilation operators}{213}{subsection.24.4.1}%
+\contentsline {subsection}{\numberline {24.4.2}Number operator}{214}{subsection.24.4.2}%
+\contentsline {subsection}{\numberline {24.4.3}Canonical anti\sphinxhyphen {}commutation relations}{214}{subsection.24.4.3}%
+\contentsline {section}{\numberline {24.5}Quantum fields}{215}{section.24.5}%
+\contentsline {subsection}{\numberline {24.5.1}Field creation and annihilation operators}{215}{subsection.24.5.1}%
+\contentsline {subsubsection}{CCR}{216}{subsubsection*.115}%
+\contentsline {subsubsection}{One\sphinxhyphen {}particle system}{216}{subsubsection*.116}%
+\contentsline {subsubsection}{Two\sphinxhyphen {}particle system}{217}{subsubsection*.117}%
+\contentsline {paragraph}{Bosons}{217}{paragraph*.118}%
+\contentsline {subsubsection}{Many\sphinxhyphen {}body systems}{218}{subsubsection*.119}%
+\contentsline {paragraph}{Bosons}{218}{paragraph*.120}%
+\contentsline {paragraph}{Fermions}{218}{paragraph*.121}%
+\contentsline {section}{\numberline {24.6}Operators in QFT}{218}{section.24.6}%
+\contentsline {subsection}{\numberline {24.6.1}One\sphinxhyphen {}body operators}{219}{subsection.24.6.1}%
+\contentsline {subsubsection}{Space representation}{221}{subsubsection*.122}%
+\contentsline {subsection}{\numberline {24.6.2}Two\sphinxhyphen {}body operators}{222}{subsection.24.6.2}%
+\contentsline {chapter}{\numberline {25}Quantization of the electromagnetic field}{223}{chapter.25}%
+\contentsline {chapter}{\numberline {26}Introduction to Quantum Field Theory}{225}{chapter.26}%
+\contentsline {section}{\numberline {26.1}Harmonic Oscillator}{226}{section.26.1}%
+\contentsline {subsection}{\numberline {26.1.1}Classical model}{226}{subsection.26.1.1}%
+\contentsline {subsection}{\numberline {26.1.2}From classical to quantum}{226}{subsection.26.1.2}%
+\contentsline {subsubsection}{Stationary states}{226}{subsubsection*.123}%
+\contentsline {subsubsection}{Creator and annihilation operators}{228}{subsubsection*.124}%
+\contentsline {subsubsection}{Number operator}{231}{subsubsection*.125}%
+\contentsline {subsection}{\numberline {26.1.3}Classical limit}{231}{subsection.26.1.3}%
+\contentsline {subsubsection}{Coherent states}{231}{subsubsection*.126}%
+\contentsline {paragraph}{Definition}{231}{paragraph*.127}%
+\contentsline {paragraph}{Classical limit}{234}{paragraph*.128}%
+\contentsline {section}{\numberline {26.2}Field quantization}{236}{section.26.2}%
+\contentsline {subsection}{\numberline {26.2.1}Classical system}{237}{subsection.26.2.1}%
+\contentsline {subsection}{\numberline {26.2.2}From classical to quantum}{238}{subsection.26.2.2}%
+\contentsline {subsubsection}{Infinite energy}{238}{subsubsection*.129}%
+\contentsline {section}{\numberline {26.3}Photons \sphinxhyphen {} EM field quantization}{238}{section.26.3}%
+\contentsline {subsection}{\numberline {26.3.1}Classcal Electromagnetism}{239}{subsection.26.3.1}%
+\contentsline {subsection}{\numberline {26.3.2}EM field quantization}{239}{subsection.26.3.2}%
+\contentsline {subsubsection}{Fermi 1931, Introduction to QFT lessons}{239}{subsubsection*.130}%
+\contentsline {subsubsection}{EM Field in free space}{239}{subsubsection*.131}%
+\contentsline {paragraph}{Field in 1D free space}{239}{paragraph*.132}%
+\contentsline {paragraph}{In a 3D domain}{240}{paragraph*.133}%
+\contentsline {subsection}{\numberline {26.3.3}Quantum description of the EM field — classical limit}{240}{subsection.26.3.3}%
+\contentsline {subsubsection}{Try 1 — Incoherent states}{240}{subsubsection*.134}%
+\contentsline {subsubsection}{Try 2 — Coherent states}{240}{subsubsection*.135}%
+\contentsline {section}{\numberline {26.4}Photons \sphinxhyphen {} EM field quantization with Coulomb gauge}{242}{section.26.4}%
+\contentsline {subsection}{\numberline {26.4.1}Classical fields}{242}{subsection.26.4.1}%
+\contentsline {subsection}{\numberline {26.4.2}Quantization}{243}{subsection.26.4.2}%
+\contentsline {subsubsection}{Energy}{244}{subsubsection*.136}%
+\contentsline {subsubsection}{Momentum}{244}{subsubsection*.137}%
+\contentsline {subsubsection}{…}{244}{subsubsection*.138}%
+\contentsline {subsection}{\numberline {26.4.3}Classical limit}{244}{subsection.26.4.3}%
+\contentsline {subsubsection}{One\sphinxhyphen {}mode coherent state}{244}{subsubsection*.139}%
+\contentsline {section}{\numberline {26.5}Multi\sphinxhyphen {}body quantum mechanics and QFT}{247}{section.26.5}%
+\contentsline {subsection}{\numberline {26.5.1}First quantization}{247}{subsection.26.5.1}%
+\contentsline {subsection}{\numberline {26.5.2}Second quantization of the electron field}{248}{subsection.26.5.2}%
+\contentsline {subsection}{\numberline {26.5.3}Hamiltonian and state of the non\sphinxhyphen {}interacting \(e^-\) and radiation fields}{248}{subsection.26.5.3}%
+\contentsline {subsection}{\numberline {26.5.4}Bosons and fermions}{249}{subsection.26.5.4}%
+\contentsline {section}{\numberline {26.6}Interacting Fields}{249}{section.26.6}%
+\contentsline {subsection}{\numberline {26.6.1}Perturbation theory}{250}{subsection.26.6.1}%
+\contentsline {subsubsection}{0th\sphinxhyphen {}order solution}{251}{subsubsection*.140}%
+\contentsline {subsubsection}{1st\sphinxhyphen {}order solution}{251}{subsubsection*.141}%
+\contentsline {subsubsection}{Fermi golden rule}{253}{subsubsection*.142}%
+\contentsline {subsubsection}{Higher orders}{253}{subsubsection*.143}%
+\contentsline {subsection}{\numberline {26.6.2}Interaction of the electron and electromagnetic field}{254}{subsection.26.6.2}%
+\contentsline {subsubsection}{Bound electrons \sphinxhyphen {} Atom spectra}{260}{subsubsection*.144}%
+\contentsline {paragraph}{Bound electron}{260}{paragraph*.145}%
+\contentsline {paragraph}{The Hamiltonian}{260}{paragraph*.146}%
+\contentsline {paragraph}{Transition rates}{261}{paragraph*.147}%
+\contentsline {paragraph}{Absorption and emission of light by an atom}{263}{paragraph*.148}%
+\contentsline {subsubsection}{Free electrons \sphinxhyphen {} Compton scattering}{265}{subsubsection*.149}%
+\contentsline {chapter}{\numberline {27}Analtycal Mechanics \sphinxhyphen {} Notes for Quantum Mechanics}{267}{chapter.27}%
+\contentsline {section}{\numberline {27.1}Lagrange and Hamiltonian Mechanics}{267}{section.27.1}%
+\contentsline {section}{\numberline {27.2}Canonical transformations}{268}{section.27.2}%
+\contentsline {section}{\numberline {27.3}Generating functions}{270}{section.27.3}%
+\contentsline {section}{\numberline {27.4}Hamilton\sphinxhyphen {}Jacobi formulation of mechanics}{271}{section.27.4}%
+\contentsline {subsection}{\numberline {27.4.1}Action functional and type\sphinxhyphen {}2 generating function}{271}{subsection.27.4.1}%
+\contentsline {section}{\numberline {27.5}Angle\sphinxhyphen {}action variables}{271}{section.27.5}%
+\contentsline {part}{V\hspace {1em}Quantum Field Theory}{273}{part.5}%
+\contentsline {chapter}{\numberline {28}Introduction to QFT}{275}{chapter.28}%
+\contentsline {part}{VI\hspace {1em}Solid State Physics}{277}{part.6}%
+\contentsline {chapter}{\numberline {29}Introduction to Solid State Physics}{279}{chapter.29}%
+\contentsline {chapter}{\numberline {30}Notes about Solid State Physics}{281}{chapter.30}%
+\contentsline {section}{\numberline {30.1}Crystals}{281}{section.30.1}%
+\contentsline {subsection}{\numberline {30.1.1}Bloch’s theorem}{281}{subsection.30.1.1}%
+\contentsline {chapter}{\numberline {31}Introduction to Semiconductors}{283}{chapter.31}%
+\contentsline {section}{\numberline {31.1}Introduction to the QM of Solids}{283}{section.31.1}%
+\contentsline {subsection}{\numberline {31.1.1}Energy bands}{283}{subsection.31.1.1}%
+\contentsline {subsubsection}{Energy level splitting}{283}{subsubsection*.152}%
+\contentsline {subsubsection}{Kronig\sphinxhyphen {}Penny model}{285}{subsubsection*.153}%
+\contentsline {subsubsection}{Nearly free electron model}{285}{subsubsection*.155}%
+\contentsline {section}{\numberline {31.2}Semiconductors in Equilibrium}{286}{section.31.2}%
+\contentsline {subsection}{\numberline {31.2.1}Structure of a semi\sphinxhyphen {}semiconductor}{286}{subsection.31.2.1}%
+\contentsline {subsubsection}{Intrinsic semiconductor}{286}{subsubsection*.156}%
+\contentsline {subsubsection}{Doped semiconductors}{286}{subsubsection*.157}%
+\contentsline {paragraph}{\(p\)\sphinxhyphen {}type}{286}{paragraph*.158}%
+\contentsline {paragraph}{\(n\)\sphinxhyphen {}type}{286}{paragraph*.159}%
+\contentsline {paragraph}{Full ionization}{287}{paragraph*.160}%
+\contentsline {subsection}{\numberline {31.2.2}Electric charge density}{287}{subsection.31.2.2}%
+\contentsline {section}{\numberline {31.3}Carrier Transport Phenomena}{287}{section.31.3}%
+\contentsline {subsection}{\numberline {31.3.1}Currents in semiconductors}{287}{subsection.31.3.1}%
+\contentsline {subsection}{\numberline {31.3.2}Einstein relation}{288}{subsection.31.3.2}%
+\contentsline {subsection}{\numberline {31.3.3}Balance equations}{289}{subsection.31.3.3}%
+\contentsline {section}{\numberline {31.4}Non\sphinxhyphen {}equilibrium Excess Carriers in Semiconductors}{289}{section.31.4}%
+\contentsline {section}{\numberline {31.5}\(p\)\sphinxhyphen {}\(n\) Junctions}{289}{section.31.5}%
+\contentsline {subsection}{\numberline {31.5.1}Introduction to the pn Junction and its Operational Regimes}{289}{subsection.31.5.1}%
+\contentsline {subsection}{\numberline {31.5.2}The Depletion Approximation and Shockley Transport}{290}{subsection.31.5.2}%
+\contentsline {subsubsection}{Zero Bias (Thermal Equilibrium)}{290}{subsubsection*.161}%
+\contentsline {subsubsection}{Forward Bias Under Shockley Assumptions}{292}{subsubsection*.162}%
+\contentsline {subsection}{\numberline {31.5.3}Advanced Description: Quasi\sphinxhyphen {}Fermi Levels and Non\sphinxhyphen {}Equilibrium Transport}{294}{subsection.31.5.3}%
+\contentsline {section}{\numberline {31.6}\(p\)\sphinxhyphen {}\(n\) Diodes}{294}{section.31.6}%
+\contentsline {chapter}{Proof Index}{295}{section*.165}%

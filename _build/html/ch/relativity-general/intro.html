@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/relativity-general/intro';</script>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -190,10 +192,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="linearized-efe.html">7.3. Linearization of Einstein’s equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="efe-properties.html">7.4. Properties of Einstein field equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local-inertial-reference-frame-and-equivalence-principle.html">7.5. Local inertial reference frame and equivalence principle</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">7.6. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.6.1. Schwarzschild metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">7.6.2. Planetary orbits in Schwarzschild spacetime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rays-of-light-deflection.html">7.6.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geodesics.html">7.6. Geodesics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geodesics-linearization.html">7.7. Linearization of the geodesic equation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">7.8. Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-metric.html">7.8.1. Schwarzschild metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="schwarzschild-orbits.html">7.8.2. Planetary orbits in Schwarzschild spacetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rays-of-light-deflection.html">7.8.3. Deflection of a ray of light, and Eddington measurements (1919)</a></li>
 </ul>
 </li>
 </ul>
@@ -530,6 +534,46 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="general-relativity">
 <span id="relativity-general-intro"></span><h1><span class="section-number">6. </span>General Relativity<a class="headerlink" href="#general-relativity" title="Permalink to this heading">#</a></h1>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Draft of the introduction<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>What’s general relativity?</strong> A geometric theory of gravitation: gravitation is an evidence of bending of spacetime.</p>
+<div class="admonition-gr-in-summary admonition">
+<p class="admonition-title">GR in summary</p>
+<p class="sd-card-text">GR can be viewed as a geometric theory of gravitation, describing the coupling between mass-energy and spacetime:</p>
+<ul class="simple">
+<li><p class="sd-card-text">how mass (and energy-momentum in general) deforms the spacetime, summarized in <a class="reference internal" href="einstein-equation.html#relativity-general-notes-einstein-equation"><span class="std std-ref">Einstein field equations</span></a></p></li>
+<li><p class="sd-card-text">how bodies and radiation (both massive and mass-less entities) move in a non-flat spacetime, along <a class="reference internal" href="geodesics.html#general-relativity-geodesics"><span class="std std-ref">geodesics</span></a></p></li>
+</ul>
+</div>
+<p class="sd-card-text"><strong>What’s not ok with Newton gravitation model?</strong> From the mathematical point of view, Newton gravitation is modeled as an instantaneous action at distance, and this is incompatible with the principles of special relativity: no information can travel in space faster than the speed of light <span class="math notranslate nohighlight">\(c\)</span> in vacuum - or, there’s a finite maximum velocity of information through space.</p>
+<div class="admonition-instantaneous-action-at-distance-in-classical-mechanics admonition">
+<p class="admonition-title">Instantaneous action at distance in classical mechanics</p>
+<p class="sd-card-text">In classical mechanics,<a class="footnote-reference brackets" href="#basics-cm-gravitation" id="id1">1</a> the force at distance can be written as the spatial gradient of the gravitational potential <span class="math notranslate nohighlight">\(\phi(\vec{r}, t)\)</span>, governed by Poisson equation</p>
+<div class="math notranslate nohighlight">
+\[-\nabla^2 \phi(\vec{r},t) = 4 \pi G \rho( \vec{r}, t) \ ,\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(G\)</span> the universal constant of gravitation, and <span class="math notranslate nohighlight">\(\rho( \vec{r}, t)\)</span> the mass density in space. This equation, and the resulting gravitational force acting on a point mass <span class="math notranslate nohighlight">\(P\)</span> with mass <span class="math notranslate nohighlight">\(m_P\)</span>, <span class="math notranslate nohighlight">\(\vec{F}_P(t) = m_P \nabla \phi( \vec{r}_P, t)\)</span> shows no time delay between the causes and the effects, being everything at time <span class="math notranslate nohighlight">\(t\)</span>. The absence of a time differential operator or a time delay - and the presence of the Laplacian operator - is the mathematical manifestation of instantaneouos action at distance: a change in <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> in <span class="math notranslate nohighlight">\(\vec{r}_0\)</span> causes an immediate change in <span class="math notranslate nohighlight">\(\phi(\vec{r},t)\)</span> in all the points of the domain, and it’s measurable at least in a neighborhood of th point <span class="math notranslate nohighlight">\(\vec{r}_0\)</span>.</p>
+<p class="sd-card-text">GR model: the geometric counterpart of the gravitational potential is forced by  mass-energy-momentum (tensor). The equations must not contain any instantaneous action at distance, and must be compatible with the principles of special relativity. This can be observed in the <a class="reference internal" href="linearized-efe.html#relativity-general-notes-einstein-equation-linearization"><span class="std std-ref">linearized Einstein field equation</span></a>, a wave function for the perturbation of the metric tensor, forced by perturbation in the mass-energy-momentum tensor, with the light speed <span class="math notranslate nohighlight">\(c\)</span> as the characteristic speed.</p>
+</div>
+<p class="sd-card-text"><strong>What Newton gravitation can’t model accurately?</strong> The first experimental verifications of GR were an accurate description of the bending of a light ray around a massive object (Eddington, 1919), the precession of the perihelion of Mercury. Other experimental tests followed: the effect of gravitation on proper-time, the existence of black holes, the existence of gravitational waves,…, <em>cosmology</em>,…</p>
+<p class="sd-card-text"><strong>Einstein thought experiments.</strong><a class="footnote-reference brackets" href="#einstein-thought-wikipedia" id="id2">2</a><a class="footnote-reference brackets" href="#equivalence-classical-mechanics" id="id3">3</a></p>
+</div>
+</details><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="basics-cm-gravitation"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://basics2022.github.io/bbooks-physics-mechanics/ch/actions-examples.html?highlight=gravitation#gravitation">Basics: Classical Mechanics: Gravitation in classical mechanics</a>.</p>
+</dd>
+<dt class="label" id="einstein-thought-wikipedia"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Einstein%27s_thought_experiments">List of some Einstein thought experiments on Wikipedia</a>.</p>
+</dd>
+<dt class="label" id="equivalence-classical-mechanics"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><a class="reference external" href="https://basics2022.github.io/bbooks-physics-mechanics/ch/dynamics-equivalence-principle.html">Equivalence principle in classical mechanics</a>. Short discussion about elevator thought experiment and free fall in a gravitational field as the natural state of motion (indistinguishible from uniform linear motion w.r.t. an inertial reference frame).</p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
